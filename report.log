@@ -1,8 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.9)  8 APR 2016 10:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.9)  8 APR 2016 14:33
 entering extended mode
 **report.tex
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\report.tex
-"
+
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\report.
+tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -15,8 +16,8 @@ ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
 
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\tudelft-re
-port.cls"
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\tudelft
+-report.cls"
 Document Class: tudelft-report 2013/10/30 v1.1 TU Delft report class
 ("D:\Programs (slower)\MiKTeX\tex\latex\base\book.cls"
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
@@ -1298,8 +1299,9 @@ Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 406.
 
 Package hyperref Info: Option `colorlinks' set `true' on input line 507.
-) ("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\mcode.st
-y"
+)
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\mcode.s
+ty"
 -- Package: `mcode' 2.5 <2014/03/06> --
 Package: mcode 2014/03/06 2.5
  - settings optimized for display (colour formating)
@@ -1562,8 +1564,8 @@ LaTeX Info: Redefining \labelcpageref on input line 2230.
 Package cleveref Info: `listings' support loaded on input line 2950.
 Package cleveref Info: `subfig' support loaded on input line 2983.
 )
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\report.aux
-")
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\report.
+aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
 LaTeX Font Info:    ... okay on input line 89.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
@@ -1587,7 +1589,6 @@ File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 LaTeX Font Info:    ... okay on input line 89.
 LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 89.
 LaTeX Font Info:    Try loading font information for FMS+futm on input line 89.
-
 
 (C:\Users\Stacha\AppData\Roaming\MiKTeX\2.9\tex\latex\fourier\fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
@@ -1686,10 +1687,10 @@ LaTeX Info: Redefining \ref on input line 89.
 LaTeX Info: Redefining \pageref on input line 89.
 LaTeX Info: Redefining \nameref on input line 89.
 
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\report.out
-")
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\report.out
-")
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\report.
+out")
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\report.
+out")
 \@outlinefile=\write6
  ABD: EveryShipout initializing macros
 \c@lstlisting=\count186
@@ -1768,11 +1769,11 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 
 {C:/Users/Stacha/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Documen
-ts/TUDelft Master/Thesis/00. Documentation_Report/Report/cover_mars_4.jpg> <D:/
-Documents/TUDelft Master/Thesis/00. Documentation_Report/Report/cover/front.pdf
->]
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\preface.te
-x"
+ts/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/cover_mars_4.jpg> <
+D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/cover/fro
+nt.pdf>]
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\preface
+.tex"
 LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <10> not available
 (Font)              Font shape `T1/futs/b/sc' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <24.88> not available
@@ -1783,8 +1784,8 @@ although it is yet undefined on input line 4.
 
 
 ]
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\report.toc
-"
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\report.
+toc"
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 2.
 Package acronym Info: Label `acro:TSI' newly defined as it shall be overridden
@@ -1815,7 +1816,6 @@ LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
 (Font)              scaled to size 5.51999pt on input line 29.
 LaTeX Font Info:    Try loading font information for U+msa on input line 29.
-
 ("D:\Programs (slower)\MiKTeX\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1844,16 +1844,16 @@ although it is yet undefined on input line 29.
 [3
 
 ] [4]
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\report.nls
-")
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\abbreviati
-ons.tex") [5
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\report.
+nls")
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\abbrevi
+ations.tex") [5
 
 
 
 ]
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\introducti
-on.tex"
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\introdu
+ction.tex"
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <96> not available
 (Font)              Font shape `T1/futs/b/sc' tried instead on input line 1.
@@ -1900,32 +1900,33 @@ LaTeX Warning: Reference `ch:software' on page 1 undefined on input line 6.
 LaTeX Warning: Reference `ch:findef' on page 1 undefined on input line 6.
 
 )
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\problembac
-kground.tex" [1
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\problem
+background.tex" [1
 
 
 ]
 Chapter 2.
 )
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\models.tex
-" [2
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\models.
+tex" [2
 
 ]
 Chapter 3.
 )
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\optimisati
-on.tex" [3
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\optimis
+ation.tex" [3
 
 ]
 Chapter 4.
 )
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\standardin
-tegrationmethods.tex" [4
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\standar
+dintegrationmethods.tex" [4
 
 ]
 Chapter 5.
-) ("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\tsi.tex"
-[5
+)
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\tsi.tex
+" [5
 
 ]
 Chapter 6.
@@ -2384,8 +2385,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 981--982
  []
 
 [20])
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\programopt
-imisationtool.tex" [21]
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\program
+optimisationtool.tex" [21]
 Chapter 7.
 Package acronym Info: Label `acro:RKF45' newly defined as it shall be overridde
 n
@@ -2407,8 +2408,8 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.25598pt on input line 24.
  [22
 
- <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/Report/figures/so
-ftware/tudatBlock.png>]
+ <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/figures
+/software/tudatBlock.png>]
 Package acronym Info: Label `acro:ESA' newly defined as it shall be overridden
 although it is yet undefined on input line 34.
 Package acronym Info: Label `acro:ACT' newly defined as it shall be overridden
@@ -2427,8 +2428,8 @@ Package pdftex.def Info: figures/software/pagmoBlock.png used on input line 38.
 (pdftex.def)             Requested size: 134.44063pt x 110.91171pt.
 Package acronym Info: Label `acro:SQP' newly defined as it shall be overridden
 although it is yet undefined on input line 45.
- [23 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/Report/figure
-s/software/pagmoBlock.png>]
+ [23 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/fig
+ures/software/pagmoBlock.png>]
 <figures/software/temperatureData.png, id=744, 421.575pt x 316.18124pt>
 File: figures/software/temperatureData.png Graphic file (type png)
 
@@ -2553,10 +2554,10 @@ File: figures/software/lnPlotDataDen.png Graphic file (type png)
 Package pdftex.def Info: figures/software/lnPlotDataDen.png used on input line 
 150.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
- [25 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/Report/figure
-s/software/temperatureData.png (PNG copy)>] [26 <D:/Documents/TUDelft Master/Th
-esis/00. Documentation_Report/Report/figures/software/densityData.png (PNG copy
-)>]
+ [25 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/fig
+ures/software/temperatureData.png (PNG copy)>] [26 <D:/Documents/TUDelft Master
+/Thesis/00. Documentation_Report/00.thesis/figures/software/densityData.png (PN
+G copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 224--224
 []|\T1/futs/m/n/10 2.287
  []
@@ -2631,8 +2632,8 @@ Package pdftex.def Info: figures/launcher_methods/dragcoeff_whitehead2004mars.j
 pg used on input line 260.
 (pdftex.def)             Requested size: 448.1309pt x 267.59514pt.
 
-[27 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/Report/figures
-/software/temperatureDataSplit5.png>]
+[27 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/figu
+res/software/temperatureDataSplit5.png>]
 <figures/software/dragCoeffFit.png, id=807, 421.575pt x 316.18124pt>
 File: figures/software/dragCoeffFit.png Graphic file (type png)
 
@@ -2640,8 +2641,8 @@ File: figures/software/dragCoeffFit.png Graphic file (type png)
 Package pdftex.def Info: figures/software/dragCoeffFit.png used on input line 2
 87.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
- [28 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/Report/figure
-s/software/completePolyFitTempSplit5.png (PNG copy)>]
+ [28 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/fig
+ures/software/completePolyFitTempSplit5.png (PNG copy)>]
 <figures/software/RK_Propagator.png, id=830, 784.73175pt x 500.46976pt>
 File: figures/software/RK_Propagator.png Graphic file (type png)
 
@@ -2653,8 +2654,8 @@ Package pdftex.def Info: figures/software/RK_Propagator.png used on input line
 
 LaTeX Warning: Float too large for page by 15.65628pt on input line 305.
 
-[29 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/Report/figures
-/software/lnPlotDataDen.png (PNG copy)>]
+[29 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/figu
+res/software/lnPlotDataDen.png (PNG copy)>]
 <figures/software/TSI_Propagator.png, id=845, 790.152pt x 542.62724pt>
 File: figures/software/TSI_Propagator.png Graphic file (type png)
 
@@ -2682,9 +2683,9 @@ Package pdftex.def Info: figures/software/optimiser.png used on input line 328.
 LaTeX Warning: Float too large for page by 15.65628pt on input line 331.
 
 )
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\verificati
-onandvalidation.tex" [30 <D:/Documents/TUDelft Master/Thesis/00. Documentation_
-Report/Report/figures/software/completeExpPolyFitDen.png (PNG copy)>]
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\verific
+ationandvalidation.tex" [30 <D:/Documents/TUDelft Master/Thesis/00. Documentati
+on_Report/00.thesis/figures/software/completeExpPolyFitDen.png (PNG copy)>]
 
 LaTeX Warning: Text page 31 contains only floats.
 
@@ -2692,15 +2693,15 @@ LaTeX Warning: Text page 31 contains only floats.
 Overfull \vbox (2.66083pt too high) has occurred while \output is active []
 
 
-[31 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/Report/figures
-/software/completeExpFitDen.png (PNG copy)> <D:/Documents/TUDelft Master/Thesis
-/00. Documentation_Report/Report/figures/launcher_methods/dragcoeff_whitehead20
-04mars.jpg>] [32 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/R
-eport/figures/software/dragCoeffFit.png (PNG copy)>] [33 <D:/Documents/TUDelft 
-Master/Thesis/00. Documentation_Report/Report/figures/software/RK_Propagator.pn
-g>] [34 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/Report/fig
-ures/software/TSI_Propagator.png>] [35 <D:/Documents/TUDelft Master/Thesis/00. 
-Documentation_Report/Report/figures/software/optimiser.png>]
+[31 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/figu
+res/software/completeExpFitDen.png (PNG copy)> <D:/Documents/TUDelft Master/The
+sis/00. Documentation_Report/00.thesis/figures/launcher_methods/dragcoeff_white
+head2004mars.jpg>] [32 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Re
+port/00.thesis/figures/software/dragCoeffFit.png (PNG copy)>] [33 <D:/Documents
+/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/figures/software/RK_P
+ropagator.png>] [34 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Repor
+t/00.thesis/figures/software/TSI_Propagator.png>] [35 <D:/Documents/TUDelft Mas
+ter/Thesis/00. Documentation_Report/00.thesis/figures/software/optimiser.png>]
 Chapter 8.
 
 Underfull \hbox (badness 10000) in paragraph at lines 31--32
@@ -2715,24 +2716,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 [36
 
 ])
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\results.te
-x" [37]
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\results
+.tex" [37]
 Chapter 9.
 )
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\analysis.t
-ex" [38
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\analysi
+s.tex" [38
 
 ]
 Chapter 10.
 )
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\conclusion
-sandrecommendations.tex" [39
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\conclus
+ionsandrecommendations.tex" [39
 
 ]
 Chapter 11.
 )
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\appendixA-
-marsGRAM-inputFile.tex" [40
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\appendi
+xA-marsGRAM-inputFile.tex" [40
 
 ]
 Appendix A.
@@ -2742,8 +2743,8 @@ File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ) [41
 
 ] [42] [43])
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\appendixB-
-fittingProcessAndResults.tex" [44]
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\appendi
+xB-fittingProcessAndResults.tex" [44]
 Appendix B.
 <figures/software/temperatureDataSplit6.png, id=1155, 337.26pt x 252.945pt>
 File: figures/software/temperatureDataSplit6.png Graphic file (type png)
@@ -2794,9 +2795,9 @@ File: figures/software/completePolyFitDenSplit3.png Graphic file (type png)
 Package pdftex.def Info: figures/software/completePolyFitDenSplit3.png used on 
 input line 64.
 (pdftex.def)             Requested size: 403.31508pt x 302.49327pt.
- [46 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/Report/figure
-s/software/temperatureDataSplit6.png> <D:/Documents/TUDelft Master/Thesis/00. D
-ocumentation_Report/Report/figures/software/temperatureDataSplit7.png>]
+ [46 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/fig
+ures/software/temperatureDataSplit6.png> <D:/Documents/TUDelft Master/Thesis/00
+. Documentation_Report/00.thesis/figures/software/temperatureDataSplit7.png>]
 
 LaTeX Warning: Text page 47 contains only floats.
 
@@ -2804,10 +2805,11 @@ LaTeX Warning: Text page 47 contains only floats.
 Overfull \vbox (3.94742pt too high) has occurred while \output is active []
 
 
-[47 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/Report/figures
-/software/completePolyFitTempSplit7.png (PNG copy)> <D:/Documents/TUDelft Maste
-r/Thesis/00. Documentation_Report/Report/figures/software/densityDataSplit2.png
->] <figures/software/section3PolyFitDen.png, id=1189, 421.575pt x 316.18124pt>
+[47 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/figu
+res/software/completePolyFitTempSplit7.png (PNG copy)> <D:/Documents/TUDelft Ma
+ster/Thesis/00. Documentation_Report/00.thesis/figures/software/densityDataSpli
+t2.png>]
+<figures/software/section3PolyFitDen.png, id=1189, 421.575pt x 316.18124pt>
 File: figures/software/section3PolyFitDen.png Graphic file (type png)
 
 <use figures/software/section3PolyFitDen.png>
@@ -2823,9 +2825,9 @@ Package pdftex.def Info: figures/software/ExpAtmFitDenZoom.png used on input li
 ne 82.
 (pdftex.def)             Requested size: 403.31508pt x 302.49327pt.
 )
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\appendixC-
-programFileDefinitions.tex" [48 <D:/Documents/TUDelft Master/Thesis/00. Documen
-tation_Report/Report/figures/software/densityDataSplit3.png>]
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\appendi
+xC-programFileDefinitions.tex" [48 <D:/Documents/TUDelft Master/Thesis/00. Docu
+mentation_Report/00.thesis/figures/software/densityDataSplit3.png>]
 
 LaTeX Warning: Text page 49 contains only floats.
 
@@ -2833,11 +2835,11 @@ LaTeX Warning: Text page 49 contains only floats.
 Overfull \vbox (3.94646pt too high) has occurred while \output is active []
 
 
-[49 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/Report/figures
-/software/completePolyFitDenSplit3.png (PNG copy)> <D:/Documents/TUDelft Master
-/Thesis/00. Documentation_Report/Report/figures/software/section3PolyFitDen.png
- (PNG copy)>] [50 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/
-Report/figures/software/ExpAtmFitDenZoom.png (PNG copy)>]
+[49 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/figu
+res/software/completePolyFitDenSplit3.png (PNG copy)> <D:/Documents/TUDelft Mas
+ter/Thesis/00. Documentation_Report/00.thesis/figures/software/section3PolyFitD
+en.png (PNG copy)>] [50 <D:/Documents/TUDelft Master/Thesis/00. Documentation_R
+eport/00.thesis/figures/software/ExpAtmFitDenZoom.png (PNG copy)>]
 Appendix C.
 
 Overfull \hbox (0.50835pt too wide) in paragraph at lines 10--22
@@ -2845,8 +2847,8 @@ Overfull \hbox (0.50835pt too wide) in paragraph at lines 10--22
  []
 
 )
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\report.bbl
-" [51
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\report.
+bbl" [51
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 132--140
@@ -2872,8 +2874,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--140
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
 
-("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\Report\report.aux
-")
+("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\report.
+aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `report.out' has not changed.
@@ -2882,11 +2884,14 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
  ) 
 Here is how much of TeX's memory you used:
  27592 strings out of 493921
- 485940 string characters out of 3147280
+ 486099 string characters out of 3147280
  822478 words of memory out of 3000000
  29768 multiletter control sequences out of 15000+200000
  169609 words of font info for 158 fonts, out of 3000000 for 9000
@@ -2905,7 +2910,7 @@ r)/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><D:/Programs (slower)/MiKTeX/font
 s/type1/adobe/utopia/putr8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/adobe/
 utopia/putri8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/urw/courier/ucrr8a.
 pfb>
-Output written on report.pdf (57 pages, 1287959 bytes).
+Output written on report.pdf (57 pages, 1287964 bytes).
 PDF statistics:
  1369 PDF objects out of 1440 (max. 8388607)
  442 named destinations out of 1000 (max. 500000)
