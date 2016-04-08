@@ -1,0 +1,47 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Research framework for the literature study (a) and the thesis work (b, c \& d)\relax }}{3}{figure.caption.24}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Left: Lunar Ascent Module, Right: Apollo Command and Service Module\relax }}{9}{figure.caption.33}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A number of rocket concepts visualized. a) Two stage solid rocket by Lockheed Martin \cite {stephenson2002}, b) Single stage mono-liquid rocket by Firestar Technologies \cite {mungas2012}, c) Two stage gel rocket by \ac {TRW} \cite {stephenson2002} and d) Two stage bi-liquid rocket by Boeing and Northrop Grumman \cite {trinidad2012}\relax }}{14}{figure.caption.49}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Two stage bi-liquid baseline \ac {MAV} with descriptions of different components \cite {trinidad2012}\relax }}{15}{figure.caption.54}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Construction of the mutation vector in a two-dimensional case \cite {storn1997differential}\relax }}{20}{figure.caption.57}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Construction of the trial vector in a 7-dimensional case \cite {storn1997differential}\relax }}{20}{figure.caption.58}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The first step of \ac {MBH} where (a) first a random initial point $x$ (red dot) is generated after which (b) the local minimum $x^{*}$ (dark yellow point) is found through the use of a local optimiser. The local optimisation is visualized by a solid arrow.$x^{*}$ becomes $x_{current}$ if the local optimum is feasible.\relax }}{22}{figure.caption.59}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The second step of \ac {MBH} where (a) $x_{current}$ is perturbed within a uniform probability distribution creating (b) a new initial point $x'$ (purple dot). The perturbation is visualized by a dashed arrow.\relax }}{23}{figure.caption.60}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The third step of \ac {MBH} where (a) the new local minimum $x^{*}$ (orange dot) is compared to the current local minimum $x_{current}$ and is set as $x_{current}$ if it is better. Then (b) the second step repeats from the new $x_{current}$ creating a new perturbed point $x'$ (dark blue dot).\relax }}{23}{figure.caption.61}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces (a) A new local optimum is found (magenta dot), but (b) it is not better than the current optimum (orange dot), which is why it is disregarded visualized by the dotted arrow.\relax }}{23}{figure.caption.62}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces The process is repeated for another initial guess (yellow dot). In this case, the current funnel contains the global minimum, however the process is still repeated until one of the cut-off criteria has been met.\relax }}{24}{figure.caption.63}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Comparison of single-step (left) and multi-step (right) methods for an eccentricity of 0.1 \cite {montenbruck1992}\relax }}{27}{figure.caption.72}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Principle of \ac {RK4} for a single parameter \cite {noomen2013int}\relax }}{32}{figure.caption.74}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces (Left)Graphical definition of the spherical coordinate system. The angles are all defined positive in the direction of the arrow\cite {mooij1994motion} (Right) Graphical definition of the force model \cite {fanning1996model}\relax }}{35}{figure.caption.76}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Drag coefficient as a function of Mach number \cite {whitehead2004mars}\relax }}{35}{figure.caption.78}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Constrained landing area on Mars between the $30^{\circ }$N and $30^{\circ }$S line. In that area, black land has an elevation above +0.5 km w.r.t. the MOLA geoid and the grey areas are lower thermal inertial constrained areas\relax }}{41}{figure.caption.80}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Locations of the eight potential landing sites withing the constrained area\relax }}{41}{figure.caption.81}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Graphical representation for Earth-Mars Hohmann transfer burns\relax }}{43}{figure.caption.82}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Graphical representation of the four different high energy transfer orbit possibilities based on an arbitrary ellipse crossing both orbits\cite {wakker2010}\relax }}{43}{figure.caption.83}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Example of continuous low-thrust trajectory\cite {wertz2009}\relax }}{44}{figure.caption.84}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Example of a segmented low-thrust interplanetary trajectory: the Dawn spacecraft\cite {wakker2010}\relax }}{44}{figure.caption.85}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Definition of the Kepler elements in 2D (left) and 3D (right) \cite {noomen2013basic,akcasu2013}\relax }}{45}{figure.caption.87}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Definition of the perturbing accelerations \cite {wakker2010}\relax }}{46}{figure.caption.89}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Graphical definition of the Mars-centred inertial reference frame \cite {mooij2013fd}\relax }}{53}{figure.caption.92}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Graphical definition of the Mars-centred Mars-fixed reference frame \cite {mooij2013fd}\relax }}{53}{figure.caption.93}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Graphical definition of the Vertical reference frame compared to the Mars-centred inertial frame \cite {mooij2013fd}\relax }}{54}{figure.caption.94}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Graphical example of a Body-fixed reference frame used on the Apollo Command and Service module\relax }}{54}{figure.caption.95}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Propulsion frame relative to the body frame \cite {mooij1994motion}\relax }}{55}{figure.caption.96}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces General rotation around the x-axis \cite {mooij2013stat}\relax }}{56}{figure.caption.97}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Relation between the \ac {MCI} and the Gaussian body frame \cite {wakker2010}\relax }}{58}{figure.caption.98}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Relation between spherical position coordinates and Cartesian position coordinates \cite {noomen2013basic}\relax }}{59}{figure.caption.99}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces atan2 function evaluation conditions\relax }}{59}{figure.caption.100}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces Definition of the Kepler elements in 2D (left) and 3D (right) \cite {noomen2013basic,akcasu2013}\relax }}{60}{figure.caption.101}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Research framework for the literature study (a) and the thesis work (b, c \& d)\relax }}{69}{figure.caption.108}
+\contentsfinish 

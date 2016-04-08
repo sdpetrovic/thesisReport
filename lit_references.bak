@@ -1,0 +1,99 @@
+% This file was created with JabRef 2.10.
+% Encoding: Cp1252
+
+
+@InCollection{helton2003,
+  Title                    = {Latin hypercube sampling and the progagation of uncertainty in analysis of complex systems},
+  Author                   = {J.C. Helton, F.J. Davis},
+  Booktitle                = {Reliability Engineering and System Safety 81},
+  Publisher                = {Elsevier},
+  Year                     = {2003},
+  Pages                    = {23-69},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+
+@InBook{,
+  Title                    = {Nelder-Mead Method},
+  Author                   = {J.H. Mathews, K.K. Fink},
+  Chapter                  = {8 Numerical Optimization, Nelder-Mead Method},
+  Pages                    = {430-436},
+  Publisher                = {Prentice-Hall Inc.},
+  Year                     = {2004},
+  Edition                  = {4},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+
+@InCollection{mckay1979,
+  Title                    = {A Comparison of Three Methods for Selecting Values of Input Variables in the Analysis of Output From a Computer Code},
+  Author                   = {M.D. Mckay, R.J. Beckman \& W.J. Conover},
+  Booktitle                = {Technometrics},
+  Publisher                = {Department of Mathematics, TExas Tech University},
+  Year                     = {2012},
+  Number                   = {1},
+  Pages                    = {55-61},
+  Volume                   = {42},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+
+@MastersThesis{musegaas2012,
+  Title                    = {Optimization of Space Trajectories Including Multiple Gravity Assists and Deep Space Maneuvers},
+  Author                   = {P. Musegaas},
+  School                   = {Delft University of Technology},
+  Year                     = {2012},
+  Month                    = {December},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+
+@Misc{noomen2013,
+  Title                    = {ae4-878.optimistion.v4-7},
+
+  Author                   = {R. Noomen},
+  Month                    = {October},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+
+@Misc{olufse,
+  Title                    = {Nelder Mead},
+
+  Author                   = {M. Olufse},
+  Note                     = {Presentation},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10},
+  Url                      = {http://www4.ncsu.edu/~msolufse/}
+}
+
+@InCollection{stein1987,
+  Title                    = {Large Sample Properties of Simulations Using Latin Hypercube Sampling},
+  Author                   = {M. Stein},
+  Booktitle                = {Technometrics},
+  Publisher                = {Department of Statistics, University of Chicago},
+  Year                     = {1987},
+  Number                   = {2},
+  Volume                   = {29},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+
+@Electronic{wiki_latin,
+  Title                    = {Latin hypercube sampling},
+  Month                    = {January},
+  Url                      = {https://en.wikipedia.org/wiki/Latin_hypercube_sampling},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+

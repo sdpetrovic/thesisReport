@@ -1,0 +1,149 @@
+%merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (72) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (0) allowed
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{9}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \textit  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Scott}\ and\ \citenamefont
+  {Martini}(2008)}]{scott2008high}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont
+  {Scott}}\ and\ \bibinfo {author} {\bibfnamefont {M.~C.}\ \bibnamefont
+  {Martini}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{High speed
+  solution of spacecraft trajectory problems using Taylor series
+  integration}},}\ }in\ \href {\doibase 10.2514/6.2008-6957} {\emph {\bibinfo
+  {booktitle} {AIAA/AAS Astrodynamics Specialist Conference and Exhibit,
+  Honolulu, Hawaii}}}\ (\bibinfo {year} {2008})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jorba}\ and\ \citenamefont
+  {Zou}(2005)}]{jorba2005software}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Jorba}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Zou}},\
+  }\bibfield  {title} {\textit {\bibinfo {title} {{A Software Package for the
+  Numerical Integration of ODEs by Means of High-Order Taylor Methods}},}\ }in\
+  \href {\doibase 10.1080/10586458.2005.10128904} {\emph {\bibinfo {booktitle}
+  {Experimental Mathematics}}},\ Vol.~\bibinfo {volume} {14}\ (\bibinfo
+  {publisher} {Taylor \& Francis},\ \bibinfo {year} {2005})\ pp.\ \bibinfo
+  {pages} {99--117}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dirkx}\ \emph {et~al.}(2016)\citenamefont {Dirkx},
+  \citenamefont {Kumar}, \citenamefont {Doornbos}, \citenamefont {Mooij},\ and\
+  \citenamefont {Noomen}}]{dirkx2016tudat}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Dirkx}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Kumar}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Doornbos}}, \bibinfo
+  {author} {\bibfnamefont {E.}~\bibnamefont {Mooij}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Noomen}},\ }\href {tudat.tudelft.nl}
+  {\textit {\bibinfo {title} {{TUDAT}},}\ } (\bibinfo {year} {2016}),\ \bibinfo
+  {note} {[online database], URL: tudat.tudelft.nl [cited 8 March 2016] (Only
+  available from the TU Delft network)}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Qing}(2009)}]{qing2009differential}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Qing}},\ }\href
+  {http://ieeexplore.ieee.org/xpl/bkabstractplus.jsp?bkn=5361052} {\emph
+  {\bibinfo {title} {{Differential Evolution: Fundamentals and Applications in
+  Electrical Engineering}}}}\ (\bibinfo  {publisher} {John Wiley \& Sons,
+  Singapore},\ \bibinfo {year} {2009})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Izzo}(2012)}]{izzo2012pygmo}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Izzo}},\ }\bibfield  {title} {\textit {\bibinfo {title} {Py{GMO} and
+  {P}y{KEP}: {O}pen source tools for massively parallel optimization in
+  astrodynamics (the case of interplanetary trajectory optimization)},}\ }in\
+  \href
+  {http://www.esa.int/gsp/ACT/doc/MAD/pub/ACT-RPR-MAD-2012-(ICATT)PyKEP-PaGMO-SOCIS.pdf}
+  {\emph {\bibinfo {booktitle} {5th {I}nternational {C}onference on
+  {A}strodynamics {T}ools and {T}echniques ({ICATT})}}}\ (\bibinfo {year}
+  {2012})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gill}\ \emph {et~al.}(2002)\citenamefont {Gill},
+  \citenamefont {Murray},\ and\ \citenamefont {Saunders}}]{gill2002snopt}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~E.}\ \bibnamefont
+  {Gill}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Murray}}, \ and\
+  \bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont {Saunders}},\
+  }\bibfield  {title} {\textit {\bibinfo {title} {{SNOPT: An SQP algorithm for
+  large-scale constrained optimization}},}\ }in\ \href {\doibase
+  10.1137/S1052623499350013} {\emph {\bibinfo {booktitle} {SIAM journal on
+  optimization}}},\ Vol.~\bibinfo {volume} {12}\ (\bibinfo {year} {2002})\ pp.\
+  \bibinfo {pages} {979--1006}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gill}\ \emph {et~al.}(2008)\citenamefont {Gill},
+  \citenamefont {Murray},\ and\ \citenamefont {Saunders}}]{gill2006user}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~E.}\ \bibnamefont
+  {Gill}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Murray}}, \ and\
+  \bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont {Saunders}},\ }\href
+  {http://web.stanford.edu/group/SOL/guides/sndoc7.pdf} {\textit {\bibinfo
+  {title} {{Users guide for SNOPT version 7 - Software for large-scale
+  nonlinear programming}},}\ } (\bibinfo {year} {2008}),\ \bibinfo {note}
+  {[online database], URL: http://web.stanford.edu/group/SOL/guides/ [cited 23
+  October 2015]}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Justh}\ and\ \citenamefont
+  {Justus}(2008)}]{justus2008utilizing}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~L.}\ \bibnamefont
+  {Justh}}\ and\ \bibinfo {author} {\bibfnamefont {C.~G.}\ \bibnamefont
+  {Justus}},\ }\href
+  {https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-1-PB.pdf?sequence=1}
+  {\textit {\bibinfo {title} {{Utilizing Mars global reference atmospheric
+  model (Mars-GRAM 2005) to evaluate entry probe mission sites}},}\ }\bibinfo
+  {howpublished} {Presentation} (\bibinfo {year} {2008}),\ \bibinfo {note}
+  {[online database], URL:
+  https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-1-PB.pdf?sequence=1
+  [cited 10 December 2015]}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Whitehead}(2004)}]{whitehead2004mars}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
+  {Whitehead}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Mars Ascent
+  Propulsion Trades with Trajectory Analysis}},}\ }in\ \href {\doibase
+  10.2514/6.2004-4069} {\emph {\bibinfo {booktitle} {40th AIAA/ASME/SAE/ASEE
+  Joint Propulsion Conference and Exhibit}}}\ (\bibinfo  {publisher} {American
+  Institude of Aeronautics and Astronautics},\ \bibinfo {year}
+  {2004})\BibitemShut {NoStop}%
+\end{thebibliography}%

@@ -1,0 +1,114 @@
+\chapter{Mars atmospheric model} %Last updated: 29-1-2016
+\label{ch:mars-atm-mod}
+During the ascent the \ac{MAV} will pass through the Martian atmosphere, which will result in a drag force opposite to the velocity direction. This drag force $D=f(\rho,V,a)$ where $\rho$ is the air density, $V$ the vehicle velocity and $a$ is the speed of sound ($D=f(\rho,V,C_{D})$, $C_{D}=f(M,\alpha)$ and $M=f(a,V)$). The speed of sound can be written as \Cref{eq:speedofsound} for an ideal gas, where $\gamma_{a}$ is the adiabatic index (or isentropic expansion factor) of the Martian atmosphere, $R_{a}$ is the molar gas constant, $T_{a}$ is the absolute temperature and $M_{a}$ is the molar mass of the Martian atmosphere.
+
+\nomenclature[G1]{$\gamma_{a}$}{Adiabatic index \nomunit{-}}
+\nomenclature[Ra1]{$R^{*}_{a}$}{Molar gas constant \nomunit{J/(mol$\cdot$K)}}
+\nomenclature[Ra1]{$R_{a}$}{Specific gas constant for Mars \nomunit{J/(kg$\cdot$K)}}
+\nomenclature[Ra2]{$T_{a}$}{Absolute temperature \nomunit{K}}
+\nomenclature[R8]{$M_{a}$}{Molar mass of the Martian atmosphere \nomunit{kg/mol}}
+
+\begin{equation} \label{eq:speedofsound}
+a=\sqrt{\gamma_{a}R_{a}T_{a}} \qquad \text{where} \qquad R_{a}=\dfrac{R^{*}_{a}}{M_{a}}
+\end{equation}
+
+The temperature depends on the altitude and should be provided by the atmospheric model. Both $\gamma_{a}$ and $M_{a}$ depend on the composition of the atmosphere.  According to \cite{williams2015} the atmosphere has a volumetric composition of 95.32\% Carbon dioxide, 2.7\% Nitrogen, 1.6\% Argon, 0.13\% Oxygen and 0.08\% Carbon monoxide. This results in a mean molecular mass of 0.04334 kg/mol for the Martian atmosphere. Also, in \cite{ho2002radio} the adiabatic index $\gamma_{a}$ is assumed to have a constant value of $\sim$1.35 for Mars.\\
+
+Now the only two variables that are required from the atmospheric model are the density $\rho$ and the absolute temperature $T_{a}$ at a certain point in the atmosphere. Another method would be to write the speed of sound as a function of the air density and the pressure $p_{a}$ (instead of absolute temperature). In this case the expression for $a$ is provided by \Cref{eq:speedofsoundpressure}.  
+
+\begin{equation} \label{eq:speedofsoundpressure}
+a=\sqrt{\dfrac{\gamma_{a}p_{a}}{\rho}}
+\end{equation}
+
+
+It would be an asset if the speed of sound can be provided directly, because this alleviates the uncertainty caused by the adiabatic index $\gamma_{a}$. In this chapter the atmospheric models that were used in reference research will be described in \Cref{sec:difatmod} and the preferred atmospheric model will be determined in \Cref{sec:chosatmmod}. Finally, \Cref{sec:interpol} will describe different interpolation methods.
+
+
+
+\section{Reference atmospheric models}
+\label{sec:difatmod}
+During the simulation of the \ac{MAV} launch, the reference research mentioned in \Cref{ch:missher} used different models and assumptions. It is useful to understand which atmospheric model was used and why. It is also important to determine why a certain model would be appropriate to use in this thesis problem. The reference research and their models are provided in \Cref{tab:marsascent_refres_atm}. It is interesting to see that either an exponential density model was used, or a model called Mars-\ac{GRAM}. Another model (not mentioned before) is the EMCD model, which is a European Mars atmospheric model. However, because this model is not available at \ac{JPL} this model will not be discussed.
+
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Mars atmospheric models used in reference research.}
+\label{tab:marsascent_refres_atm}
+\begin{tabular}{|p{3cm}|l|p{7cm}|}
+\hline 
+\textbf{Author} &	\textbf{Year} & \textbf{Atmospheric model used} \\ \hline \hline
+Fanning and Pierson \cite{fanning1996model} & 1996 & Exponential density model (scale height 11.17 km) and constant $C_{D}$ ($\approx$0.88)\\ \hline
+Desai et al. \cite{desai1998} & 1998 & Mars-\ac{GRAM} \\ \hline
+Whitehead \cite{whitehead2004mars,whitehead2005} & 2004 & Exponential fit to Viking density data (scale height 8.3  km) and constant $a$ (250 m/s) \\ \hline
+%Di Sotto et al. \cite{di2007system}  & 2007 & Unknown\\ \hline
+Trinidad et al. \cite{trinidad2012} & 2012 & 2010 Mars-\ac{GRAM} \\ \hline
+%E. Dumont et al. & Ongoing &  \\ \hline
+
+%& & & \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Exponential atmosphere}
+\label{subsec:expatm}
+The exponential density model is based on the assumption that the density decreases exponentially with increasing altitude. Also, in an exponential atmosphere model, the temperature is constant (which means that the speed of sound is constant, see \Cref{eq:speedofsound}). For a given altitude $h$ the local density can be directly computed using \Cref{eq:expdensity} \cite{fanning1996model}. Here, $\rho_{0}$ is the atmospheric density at zero elevation and $H_{s}$ is the scale height.
+
+\nomenclature[G6]{$\rho_{0}$}{Atmospheric density at zero altitude \nomunit{kg/m$^{3}$}}
+\nomenclature[R4]{$H_{s}$}{Scale height \nomunit{m}}
+
+\begin{equation} \label{eq:expdensity}
+\rho=\rho_{0}exp\left(-\dfrac{h}{H_{s}}\right)
+\end{equation}
+
+Similarly, the pressure can be assumed to decrease exponentially with increased altitude as well, as shown by \Cref{eq:exppressure}. Here $p_{0}$ is the atmospheric pressure at zero elevation.
+
+\nomenclature[R8]{$p_{0}$}{Atmospheric pressure at zero elevation\nomunit{Pa}}
+
+\begin{equation} \label{eq:exppressure}
+p=p_{0}exp\left(-\dfrac{h}{H_{s}}\right)
+\end{equation}
+
+In \Cref{eq:speedofsound,eq:speedofsoundpressure,eq:expdensity,eq:exppressure}  the same $H_{s}$ is used, which means that a constant temperature is assumed and also results in a constant speed of sound (\cite{williams2015} mentions a scale height of 11.1 km). However, a range of temperatures can be taken into account by using different scale heights for both density and pressure. The scale height can also be changed to simulate different seasons. For each season a different scale height can be selected to simulate the change in atmospheric conditions. Using this method, both pressure and density can be evaluated directly for every point in the trajectory, however some accuracy is lost due to all the assumptions.\\
+
+
+\subsection{Mars-\ac{GRAM}}
+\label{subsec:marsgram}
+Mars-\ac{GRAM} is a more sophisticated model that can be used for high-fidelity simulations \cite{justus2008utilizing}\footnote{NASA website: \url{https://see.msfc.nasa.gov/model-Marsgram} [Accessed 14 December 2015]}. The model is based on NASA Ames Mars General Circulation Model (for altitudes between 0-80 km) and Mars Thermospheric General Circulation model (for altitude above 80 km). It can provide density, temperature and pressure data (among other data) \cite{justus2005aerocapture}. It can be set for different atmospheric conditions and also different seasons. In \cite{justus2005aerocapture} the 2005 version of the model was validated against Thermal Emission Spectrometer data. The results for both density and temperature are provided and show that Mars-\ac{GRAM} is within $\pm$ 10\% difference from the spectrometer data for temperature data between an altitude of 0-60 km and for density between an altitude of 0-40 km. After 40 km the density differences increase to a maximum difference of ~35\% at an altitude of 60 km. This is still very accurate. However, since it is such a detailed model, each evaluation requires considerable cpu time and also computes unnecessary data, or overhead. One option to reduce the cpu time would be to only evaluate Mars-\ac{GRAM} once at the beginning of a new optimisation, from now on referred to as the limited Mars-\ac{GRAM} option. In that case a detailed table will be generated at the beginning of the simulation, and during the simulation the different required values will be acquired through interpolation (more information on interpolation methods will be provided in \Cref{sec:interpol}). Another option would be to use a hybrid form of both the exponential atmosphere model and Mars-\ac{GRAM}. Mars-\ac{GRAM} could for instance be used to determine the scale height and then the exponential model could determine the density and pressure at each path point.
+
+
+%\section{Atmospheric model heritage}
+%\label{sec:atmodher}
+
+\section{Chosen atmospheric model}
+\label{sec:chosatmmod}
+It was already mentioned that the two main output requirements are either $a$ and $\rho$, or $T_{a}$ and $\rho$, or $p_{a}$ and $\rho$. Two other requirements are the speed at which the model can be evaluated for the current path point and the accuracy at which this is done. Finally, the model should be available to use in the thesis problem. With these requirements, a trade-off table was created to compare both models and determine the most appropriate one, see \Cref{tab:atm_trade_off}. Every requirement is assigned a weight depending on how important the requirement is. Then the different models are either green (1), yellow (0.5) or red (0) for every requirement. This results in a final score. It can be seen that the limited Mars-\ac{GRAM} model fits best with the set requirements and is therefore the preferred model to be used in the thesis problem.
+
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Atmospheric model trade-off table.}
+\label{tab:atm_trade_off}
+\begin{tabular}{|l||l|l|l|l|l|l|l||l|}
+\hline 
+ &	\bm{$\rho$} & \bm{$p_{a}$} & \bm{$T_{a}$} & \bm{$a$} & \textbf{Evaluation speed} & \textbf{Accuracy} & \textbf{Availability} & \textbf{Score}\\ \hline 
+\textit{Weight} & \textit{5} & \textit{2} & \textit{4} & \textit{1} & \textit{3} & \textit{4} & \textit{5} & \\ \hline \hline
+\textbf{Exponential} & \cellcolor{green} & \cellcolor{green} & \cellcolor{red} & \cellcolor{red} & \cellcolor{green} & \cellcolor{red} & \cellcolor{green} & 15\\ \hline
+\textbf{Mars-\ac{GRAM}} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{red} & \cellcolor{red} & \cellcolor{green} & \cellcolor{green} & 20 \\ \hline
+\textbf{Limited Mars-\ac{GRAM}} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{red} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & 23  \\ \hline
+\textbf{Hybrid} & \cellcolor{green} & \cellcolor{green} & \cellcolor{red} & \cellcolor{red} & \cellcolor{green} & \cellcolor{yellow} & \cellcolor{green} & 17\\ \hline
+
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\section{Interpolation methods}
+\label{sec:interpol}
+In \Cref{sec:chosatmmod} it was determined that a limited Mars-\ac{GRAM} option will best suit this thesis problem. This model involves the generation of an atmospheric table with altitude, temperature, pressure and density (and can also include latitude and longitude data) at the start of the simulation. It could however be that during the simulation the information corresponding to a certain altitude is not directly available from the table. In that case the value will have to be interpolated, and because the pressure, temperature and density all correlate to a certain altitude value this interpolation is 1-dimensional. This does assume that the atmosphere is constant on every altitude regardless of the latitude and longitude. Including the longitude and latitude as well will change the problem to a 3-dimensional interpolation problem, which requires multivariate interpolation \cite{sagliano2015real}. There are many different interpolation methods, however in this case the generated table can be very precise, which again means that the interpolation method does not require to be very accurate. One of the simplest methods is the linear interpolation. This method has been used before in the determination of atmospheric parameter values \cite{mooij2011passivity} and can even be used in a 3-dimensional interpolation problem \cite{sagliano2015real}. Using a simple integration method during the simulation will result in a lower cpu time compared to more precise or more complex methods. Another reason to use linear interpolation is that often different layers of the atmosphere display linear behaviour in the change of temperature, pressure and density values. Therefore, at this point (multivariate) linear interpolation is chosen. \\
+Linear interpolation is based on the idea that there exists a linear relation between two (or more) data points. The equation for a 1-dimensional linear interpolation can be expressed as shown by \Cref{eq:linint}. In this example the altitude $h_{t}$ is the current altitude and is known. This altitude lies between altitude $h_{1}$ and $h_{2}$ with their corresponding temperature values $T_{1}$ and $T_{2}$. $T_{t}$ is the desired temperature value at the current time and altitude.
+
+\begin{equation} \label{eq:linint}
+T_{t}=T_{1}+\left(\dfrac{h_{t}-h_{1}}{h_{2}-h_{1}}\right)\left(T_{2}-T_{1}\right)
+\end{equation}  
+
+This process can be repeated three times in case of the 3-dimensional problem. 

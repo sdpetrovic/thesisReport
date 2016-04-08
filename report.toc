@@ -1,0 +1,48 @@
+\select@language {english}
+\contentsline {chapter}{Abbreviations}{v}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Problem background}{2}{chapter.2}
+\contentsline {chapter}{\numberline {3}Models}{3}{chapter.3}
+\contentsline {chapter}{\numberline {4}Optimisation}{4}{chapter.4}
+\contentsline {chapter}{\numberline {5}Standard integration methods}{5}{chapter.5}
+\contentsline {chapter}{\numberline {6}Taylor series integration}{6}{chapter.6}
+\contentsline {section}{\numberline {6.1}General theory}{6}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Workings of \ac {TSI}}{6}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Step-size}{6}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Associated equations}{6}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Auxiliary equations}{7}{subsection.6.2.1}
+\contentsline {subsubsection}{Gravitational acceleration}{7}{equation.6.2.5}
+\contentsline {subsubsection}{Transformation angles}{8}{equation.6.2.7}
+\contentsline {subsubsection}{Drag acceleration}{9}{equation.6.2.10}
+\contentsline {subsection}{\numberline {6.2.2}Recurrence relations and auxiliary functions}{10}{subsection.6.2.2}
+\contentsline {chapter}{\numberline {7}Program optimisation tool}{22}{chapter.7}
+\contentsline {section}{\numberline {7.1}Existing software}{22}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}\ac {Tudat}}{22}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Eigen}{23}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Boost}{23}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}\ac {PaGMO}}{23}{subsection.7.1.4}
+\contentsline {subsection}{\numberline {7.1.5}\ac {SNOPT}}{24}{subsection.7.1.5}
+\contentsline {subsection}{\numberline {7.1.6}Mars-\ac {GRAM}}{24}{subsection.7.1.6}
+\contentsline {section}{\numberline {7.2}Developed software}{24}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Atmospheric table function fit}{24}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Drag coefficient graph function fit}{27}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}\ac {RK4} and \ac {RKF} propagator}{28}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}\ac {TSI} propagator}{29}{subsection.7.2.4}
+\contentsline {subsection}{\numberline {7.2.5}Optimiser}{30}{subsection.7.2.5}
+\contentsline {chapter}{\numberline {8}Verification and validation}{36}{chapter.8}
+\contentsline {section}{\numberline {8.1}Interpolation}{36}{section.8.1}
+\contentsline {section}{\numberline {8.2}\acs {RK4} and \acs {RKF} integrators}{36}{section.8.2}
+\contentsline {section}{\numberline {8.3}\acl {TSI}}{37}{section.8.3}
+\contentsline {section}{\numberline {8.4}Complete trajectory propagation}{37}{section.8.4}
+\contentsline {section}{\numberline {8.5}Optimiser}{37}{section.8.5}
+\contentsline {section}{\numberline {8.6}Complete optimisation tool}{37}{section.8.6}
+\contentsline {chapter}{\numberline {9}Results}{38}{chapter.9}
+\contentsline {chapter}{\numberline {10}Analysis}{39}{chapter.10}
+\contentsline {chapter}{\numberline {11}Conclusions and recommendations}{40}{chapter.11}
+\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{41}{appendix.A}
+\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{45}{appendix.B}
+\contentsline {section}{\numberline {B.1}Temperature}{45}{section.B.1}
+\contentsline {section}{\numberline {B.2}Density}{45}{section.B.2}
+\contentsline {chapter}{\numberline {C}Program file definitions}{51}{appendix.C}
+\contentsline {chapter}{Bibliography}{52}{appendix*.55}
+\contentsfinish 

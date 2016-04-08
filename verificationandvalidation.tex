@@ -1,0 +1,57 @@
+\chapter{Verification and validation} %Last updated 10-03-2016
+\label{ch:verificationandvalidation}
+Verification is the process of determining whether a program meets the requirements or not. Is it working the way it is suppose to? As soon as it works and produces output (verified), these outputs can be compared to other data from which it is known that it is correct. This is called validation. If a program is verified and validated, the outputs should be correct. Fortunately, all the existing software has already been validated, which means that they only still have to be verified to make sure everything is working properly on the simulation computer. Each of the software packages comes with tests which can be used to do this. If all the tests are passed it means that the software is verified for the computer and ready to use. Since \ac{Tudat} shipped with Eigen and Boost, the \ac{Tudat} test files also test these libraries. All the test were passed, which means that the \ac{Tudat}, Eigen and Boost libraries are working properly. However, because the integrators are an intricate part of this thesis, it was decided to perform a separate verification for the Runge-Kutta integrators. This verification is described in \Cref{sec:rkandrkfver}. Similarly, \ac{PaGMO} was verified using its test files.
+
+\textbf{\textcolor{red}{SNOPT verification still has to be done and added!! As soon as I can get it to work....}}
+
+ Mars-\ac{GRAM} also came with its own verification test, where three delivered output files had to be replicated. These verification tests were also successful. 
+
+
+\section{Interpolation}
+\label{sec:intver}
+
+
+\section{\acs{RK4} and \acs{RKF} integrators}
+\label{sec:rkandrkfver}
+The tutorial page of the \ac{Tudat} website \citep{dirkx2016tudat} offers two integration tutorials: one involving \ac{RK4} and another involving variable step-size Runge-Kutta methods including \ac{RKF45}. The objective of the tutorial is to get familiar with the different integration methods available in \ac{Tudat}. At the same time, a small data table has to be reproduced, which also serves as a verification test. For each of the integrators the same problem was addressed: the computation of the velocity of a falling body after a certain amount of time assuming no drag. The results that had to be reproduced are presented in \Cref{tab:intverdat}.
+
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Verification data for the standard integrators}
+\label{tab:intverdat}
+\begin{tabular}{|l|l|l|l|l|}
+\hline 
+\textbf{End time [s]} & 1.0	& 5.0 & 15.0 & 25.0 \\ \hline 
+\textbf{Velocity [m/s]} & -9.81 & -49.05 & -147.15 & -245.25 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+The first script was written using the instructions from the tutorial and is called numericalintegrators.cpp. This script uses the rungeKutta4Integrator.h header file and the RungeKutta4IntegratorXd function from this header file. This function requires three inputs: the state derivative function (problem specific), en initial time and the initial state. Using the .integrateTo extension the end state at a certain end time can be integrated. This requires the end time and the step-size. For \ac{RK4} the step-size is constant. This resulted in the same values as presented in \Cref{tab:intverdat}.\\
+
+The second script was used to test the variable step-size integrators (including \ac{RKF45}). This script is called rungekuttavariable.cpp and uses the rungeKuttaCoefficients.h and rungeKuttaVariableStepSizeIntegrator.h header files. In this case the RungeKuttaVariableStepSizeIntegratorXd function was used which requires the Runge-Kutta coefficients (from the respective header file), the state derivative function, the initial time, initial state, zero minimum step-size, infinite maximum step-size, relative tolerance and the absolute tolerance as inputs. In this case the integration can be done in individual steps using .performIntegrationStep with the current step-size as the only input. The current step-size is computed in the integration method itself, but in this case it is checked to make sure that the step-size does not take the function beyond the specified end time. The integration steps are then repeated until the end time is met. Running this script resulted in the same results as presented in \Cref{tab:intverdat} as well. \\
+
+These results, combined with the fact that the test files for these two methods produced no errors is proof that they are working accordingly. Thus it can be said that the standard integration methods used in this thesis are verified and ready for use in the optimisation tool. However, during the development of the trajectory propagation tools, the entire tool (including the integrators) will be verified again to determine the performance of the integrators.
+
+
+
+
+
+
+\section{\acl{TSI}}
+\label{sec:tsiverval}
+
+\section{Complete trajectory propagation}
+\label{sec:propverval}
+
+
+
+\section{Optimiser}
+\label{sec:optver}
+
+
+\section{Complete optimisation tool}
+\label{sec:opttoolverval}
+
+

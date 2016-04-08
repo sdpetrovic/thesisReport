@@ -1,0 +1,3680 @@
+% This file was created with JabRef 2.10.
+% Encoding: Cp1252
+
+
+@InProceedings{abdelkhalik2007,
+  Title                    = {{N-Impulse Orbit Transfer Using Genetic Algorithms}},
+  Author                   = {Abdelkhalik, Ossama and Mortari, Daniele},
+  Booktitle                = {Journal of Spacecraft and Rockets},
+  Year                     = {2007},
+  Number                   = {2},
+  Pages                    = {456--460},
+  Volume                   = {44},
+
+  Doi                      = {10.2514/1.24701},
+  Journal                  = {Journal of Spacecraft and Rockets},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.30},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/1.24701}
+}
+
+@InProceedings{addis2011,
+  Title                    = {A global optimization method for the design of space trajectories},
+  Author                   = {Addis, Bernardetta and Cassioli, Andrea and Locatelli, Marco and Schoen, Fabio},
+  Booktitle                = {Computational Optimization and Applications},
+  Year                     = {2011},
+  Month                    = {April},
+  Number                   = {3},
+  Pages                    = {635-652},
+  Publisher                = {Springer},
+  Volume                   = {48},
+
+  Journal                  = {Computational Optimization and Applications},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.30},
+  Url                      = {http://download.springer.com/static/pdf/14/art%253A10.1007%252Fs10589-009-9261-6.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10589-009-9261-6&token2=exp=1438206462~acl=%2Fstatic%2Fpdf%2F14%2Fart%25253A10.1007%25252Fs10589-009-9261-6.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1007%252Fs10589-009-9261-6*~hmac=be2e5d58daf4b2ce8a7df87f3e6688883e46e6c30dcb7d1476edb963be63eaba}
+}
+
+@Electronic{addis2008global,
+  Title                    = {{Global Optimization for the Design of Space Trajectories}},
+  Author                   = {Addis, Bernardetta and Cassioli, Andrea and Locatelli, Marco and Schoen, Fabio},
+  HowPublished             = {DB FILE 2008/11/2150},
+  Note                     = {[online database], URL: http://www.optimization-online.org/ [cited 23 October 2015]},
+  Organization             = {Optimization Online},
+  Url                      = {http://www.optimization-online.org/DB_FILE/2008/11/2150.pdf},
+  Year                     = {2008},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.23}
+}
+
+@Electronic{rocketdyne2006electric,
+  Title                    = {Electric propulsion data sheet},
+  Author                   = {{Aerojet Rocketdyne}},
+  HowPublished             = {Website},
+  Month                    = {May},
+  Note                     = {Data sheet},
+  Organization             = {{Aerojet Rocketdyne}},
+  Url                      = {https://www.rocket.com/propulsion-systems/electric-propulsion},
+  Year                     = {2006},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.25}
+}
+
+@Misc{akcasu2013,
+  Title                    = {Solar time using gps technology},
+
+  Author                   = {O. E. Akcasu and I. Akcay},
+  HowPublished             = {Lonestar Inventions, L.P., Austin, TX, U.S. Patent},
+  Month                    = {May},
+  Note                     = {Patent application, Docket No. WO 2013070518 A1, filed 2 Nov. 2012},
+  Year                     = {2013},
+
+  Number                   = {WO 2013070518 A1},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.13},
+  Url                      = {http://www.google.com/patents/WO2013070518A1?cl=en},
+  Yearfiled                = {2012}
+}
+
+@Misc{akerboom2013,
+  Title                    = {DelFFi Delta \& Phi: Two Nanosatellites for Formation Flying in Low-Earth Orbit},
+
+  Author                   = {M.H.G. Akerboom and M. Deklerck and J.R. Hess and F. Paredis and S.D. Petrovic and A.D.T. Rijndorp and A. Schulz and M.G. Talboom and R.L.P. Wildvank and A. Cervone and O. Stroosma and D. Dirkx},
+  HowPublished             = {Bachelor Thesis Report, Delft University of Technology},
+  Month                    = {July},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.11}
+}
+
+@Misc{alkalai2010moonrise,
+  Title                    = {{MoonMoon: Sample Return from the South Pole-Aitken Basin}},
+
+  Author                   = {L. Alkalai and B. Jolliff and D. Papanastassiou},
+  HowPublished             = {Presentation},
+  Month                    = {June},
+  Note                     = {International Planetary Probe Workshop, Barcelona, Spain},
+  Year                     = {2010},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.16},
+  Url                      = {solarsystem.nasa.gov/docs/pr516.pdf}
+}
+
+@InProceedings{alkalai2013orion,
+  Title                    = {{Orion/MoonRise: A proposed human and robotic sample return mission from the Lunar South Pole-Aitken Basin}},
+  Author                   = {Alkalai, Leon and Solish, Benjamin and Elliott, James and McElrath, Tim and Mueller, Jessica and Parker, Julian},
+  Booktitle                = {Aerospace Conference, 2013 IEEE},
+  Year                     = {2013},
+  Organization             = {IEEE},
+  Pages                    = {1--10},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.16},
+  Url                      = {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6496978}
+}
+
+@InProceedings{almeidaprado1996optimal,
+  Title                    = {{Optimal Rendezvous Maneuvers for Space Vehicles}},
+  Author                   = {de Almeida Prado, Antonio Fernando},
+  Booktitle                = {Revista Brasileira de Ciencias Mecanicas/Journal of the Brazilian Society of Mechanical Sciences},
+  Year                     = {1996},
+  Number                   = {3},
+  Pages                    = {297--301},
+  Volume                   = {18},
+
+  Journal                  = {Revista Brasileira de Ciencias Mecanicas/Journal of the Brazilian Society of Mechanical Sciences},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.20},
+  Url                      = {http://www2.dem.inpe.br/prado/rbcmrend.PDF}
+}
+
+@InProceedings{anderson2013status,
+  Title                    = {{The status of spacecraft bus and platform technology development under the NASA ISPT program}},
+  Author                   = {Anderson, David J and Munk, Michelle M and Pencil, Eric and Dankanich, John and Glaab, Louis and Peterson, Todd},
+  Booktitle                = {Aerospace Conference, 2013 IEEE},
+  Year                     = {2013},
+  Organization             = {IEEE},
+  Pages                    = {1--16},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.10},
+  Url                      = {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6496879}
+}
+
+@InProceedings{anderson2011propulsion,
+  Title                    = {{Propulsion Technology Development for Sample Return Missions under NASAs ISPT Program}},
+  Author                   = {Anderson, David J and Pencil, Eric and Vento, Daniel and Dankanich, John and Munk, Michelle and Hahne, David},
+  Booktitle                = {47th AIAA/ASME/SAE/ASEE Joint Propulsion Conference \& Exhibit},
+  Year                     = {2011},
+
+  Doi                      = {10.2514/6.2011-5766},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.10},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2011-5766}
+}
+
+@InProceedings{archinal2011report,
+  Title                    = {{Report of the IAU working group on cartographic coordinates and rotational elements: 2009}},
+  Author                   = {Archinal, Brent Allen and Ahearn, MF and Bowell, E and Conrad, A and Consolmagno, Guy J and Courtin, R and Fukushima, Toshio and Hestroffer, Daniel and Hilton, James Lindsay and Krasinsky, George A and others},
+  Booktitle                = {Celestial Mechanics and Dynamical Astronomy},
+  Year                     = {2011},
+  Number                   = {2},
+  Pages                    = {101--135},
+  Volume                   = {109},
+
+  Doi                      = {10.1007/s10569-010-9320-4},
+  Journal                  = {Celestial Mechanics and Dynamical Astronomy},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.08},
+  Url                      = {http://aa.usno.navy.mil/publications/reports/Archinaletal2011a.pdf}
+}
+
+@Electronic{bachman2014naif,
+  Title                    = {{NAIF SPICE toolkit hypertext documentation, required reading documents, reference frames}},
+  Author                   = {N.J. Bachman},
+  HowPublished             = {website},
+  Month                    = {July},
+  Note                     = {[online database], URL: http://naif.jpl.nasa.gov/pub/naif/ [cited 18 December 2015]},
+  Organization             = {NASA Jet Propulsion Laboratory},
+  Url                      = {http://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/frames.html},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.18}
+}
+
+@InProceedings{bai2010analysis,
+  Title                    = {{Analysis of Particle Swarm Optimization Algorithm}},
+  Author                   = {Qinghai Bai},
+  Booktitle                = {Computer and Information Science},
+  Year                     = {2010},
+  Number                   = {1},
+  Pages                    = {180--184},
+  Volume                   = {3},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.01.12},
+  Url                      = {http://www.ccsenet.org/journal/index.php/cis/article/viewFile/5131/4314}
+}
+
+@PhdThesis{balesdent2011multidisciplinary,
+  Title                    = {{Multidisciplinary Design Optimization of Launch Vehicles}},
+  Author                   = {Balesdent, Mathieu},
+  School                   = {Ecole Centrale de Nantes},
+  Year                     = {2011},
+  Month                    = {January},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.13},
+  Url                      = {https://tel.archives-ouvertes.fr/tel-00659362/document}
+}
+
+@Book{barlow2008mars,
+  Title                    = {{Mars: An Introduction to its Interior, Surface and Atmosphere}},
+  Author                   = {N.B. Barlow},
+  Publisher                = {Cambridge University Press, Cambridge},
+  Year                     = {2008},
+  Volume                   = {8},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.19},
+  Url                      = {https://books.google.com/books?id=o25Bojs7FMkC&pg=PA57&lpg=PA57&dq=mars+geoid+radius&source=bl&ots=IWgaBmw7ka&sig=uWnod8NQhHvL0bj7C-qRb163Bpc&hl=nl&sa=X&ved=0ahUKEwiF8orA4J3JAhWONogKHZFJB_sQ6AEIQTAE#v=onepage&q=mars%20geoid%20radius&f=false}
+}
+
+@Book{battin1999introduction,
+  Title                    = {{An introduction to the mathematics and methods of Astrodynamics}},
+  Author                   = {R.H. Battin},
+  Publisher                = {AIAA},
+  Year                     = {1999},
+  Note                     = {Revised version, available at JPL library},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.03}
+}
+
+@PhdThesis{berry2004,
+  Title                    = {{A Variable-Step Double-Integration Multi-Step Integrator}},
+  Author                   = {Berry, Matthew M},
+  School                   = {Virginia Polytechnic Institute and State University},
+  Year                     = {2004},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.04},
+  Url                      = {http://scholar.lib.vt.edu/theses/available/etd-04282004-071227/unrestricted/dissertation.pdf}
+}
+
+@InProceedings{bertrand2001electric,
+  Title                    = {Electric transfer optimization for Mars sample return mission},
+  Author                   = {Bertrand, Regis and Bernussou, Jacques and Geffroy, Sophie and Epenoy, Richard},
+  Booktitle                = {Acta Astronautica},
+  Year                     = {2001},
+  Number                   = {5},
+  Pages                    = {651--660},
+  Volume                   = {48},
+
+  Journal                  = {Acta Astronautica},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.19},
+  Url                      = {http://ac.els-cdn.com/S0094576501000145/1-s2.0-S0094576501000145-main.pdf?_tid=e74ed48a-768a-11e5-82b1-00000aab0f27&acdnat=1445277646_168d1c9c61b796a9224dd1c4ee2e3306}
+}
+
+@Article{betts1998,
+  Title                    = {Survey of numerical methods for trajectory optimization},
+  Author                   = {Betts, John T},
+  Journal                  = {Journal of guidance, control, and dynamics},
+  Year                     = {1998},
+  Number                   = {2},
+  Pages                    = {193-207},
+  Volume                   = {21},
+
+  Doi                      = {10.2514/2.4231},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.30},
+  Url                      = {http://arc.aiaa.org/doi/abs/10.2514/2.4231}
+}
+
+@InProceedings{bhowmik2010,
+  Title                    = {{Dynamic Programming--Its Principles, Applications, Strengths, and Limitations}},
+  Author                   = {Bhowmik, Biswajit},
+  Booktitle                = {International Journal of Engineering Science and Technology},
+  Year                     = {2010},
+  Number                   = {9},
+  Pages                    = {4822--4826},
+  Volume                   = {2},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.01.12},
+  Url                      = {http://www.academia.edu/2875080/Dynamic_Programming_Its_Principles_Applications_Strengths_and_Limitations}
+}
+
+@Electronic{blau2011,
+  Title                    = {MSL - Aeroshell and Heat Shield},
+  Author                   = {P. Blau},
+  HowPublished             = {Website},
+  Organization             = {Spaceflight 101},
+  Url                      = {http://www.spaceflight101.com/msl-aeroshell-and-heat-shield.html},
+  Year                     = {2011},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.25}
+}
+
+@Electronic{wiki_change5,
+  Title                    = {ChaReport Test Mission},
+  Author                   = {Patrick Blau},
+  HowPublished             = {Website},
+  Organization             = {Spaceflight 101},
+  Url                      = {http://www.spaceflight101.com/change-5-test-mission.html},
+  Year                     = {2011},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.25}
+}
+
+@Electronic{boeing2015boeing,
+  Title                    = {Boeing Satellites},
+  Author                   = {Boeing},
+  HowPublished             = {Website},
+  Organization             = {Boeing},
+  Url                      = {http://www.boeing.com/space/boeing-satellite-family/index.page},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.18}
+}
+
+@InProceedings{boggs1995,
+  Title                    = {{Sequential Quadratic Programming}},
+  Author                   = {P.T. Boggs and J.W. Tolle},
+  Booktitle                = {Acta Numerica},
+  Year                     = {1995},
+  Pages                    = {1-51},
+  Publisher                = {Cambridge University Press},
+  Volume                   = {4},
+
+  Doi                      = {10.1017/S0962492900002518},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.29},
+  Url                      = {http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=1771148&fileId=S0962492900002518}
+}
+
+@Article{bonnefond2006,
+  Title                    = {Soft-landing: the key building block for exploration},
+  Author                   = {F. Bonnefond and P. Tran and J. Bertand and J. Bolz and E. Ferreira and D. Wilde},
+  Journal                  = {57th International Astronautical Congress},
+  Year                     = {2006},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@MastersThesis{boudestijn2014,
+  Title                    = {{Development of a Low-Thrust Earth-Centrered Transfer Optimizer for the Prelimiary Mission Design Phase}},
+  Author                   = {E. Boudestijn},
+  School                   = {Delft University of Technology},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.30},
+  Url                      = {http://repository.tudelft.nl/view/ir/uuid:a6f1539b-d6b0-4995-9bca-777a277e1295/}
+}
+
+@InProceedings{bouilly2006,
+  Title                    = {Ablative thermal protections for atmospheric entry. An overview of past missions and needs for future programmes},
+  Author                   = {Bouilly, J-M and Dariol, L and Leleu, F},
+  Booktitle                = {Thermal Protection Systems and Hot Structures},
+  Year                     = {2006},
+  Pages                    = {26},
+  Volume                   = {631},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.24}
+}
+
+@Book{boyd2004,
+  Title                    = {{Convex Optimization}},
+  Author                   = {S. Boyd and L. Vandenberghe},
+  Publisher                = {Cambridge University Press, New York},
+  Year                     = {2004},
+  Edition                  = {1},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.29},
+  Url                      = {http://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf}
+}
+
+@Electronic{luna16_esp,
+  Title                    = {Luna 16},
+  Author                   = {Br73},
+  Note                     = {In Italien},
+  Url                      = {http://www.br73.net/luna_16.htm},
+  Year                     = {2000},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.24}
+}
+
+@Electronic{braeunig2013,
+  Title                    = {Interplanetary flight},
+  Author                   = {R.A. Braeunig},
+  HowPublished             = {website},
+  Url                      = {http://www.braeunig.us/space/interpl.htm},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.31}
+}
+
+@InProceedings{braun2006,
+  Title                    = {Mars Exploration Entry, Descent and Landing Challenges},
+  Author                   = {Braun, Robert D and Manning, Robert M},
+  Booktitle                = {Aerospace Conference, 2006 IEEE},
+  Year                     = {2006},
+  Organization             = {IEEE},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.17}
+}
+
+@Electronic{wiki_apollo,
+  Title                    = {{Apollo Program Summary Report}},
+  Author                   = {Charles A. Brooks and Sivram Prasad},
+  HowPublished             = {website},
+  Month                    = {August},
+  Note                     = {[online database], URL: http://history.nasa.gov/apsr/apsr.htm [cited 15 October 2015]},
+  Organization             = {NASA},
+  Url                      = {http://history.nasa.gov/apsr/apsr.htm},
+  Year                     = {2011},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.24}
+}
+
+@Electronic{brown2009nasa,
+  Title                    = {NASA Chooses three finalists for future space science mission to venus, an asteroid or the moon},
+  Author                   = {Dwayne Brown},
+  HowPublished             = {Website},
+  Month                    = {December},
+  Organization             = {NASA},
+  Url                      = {www.nasa.gov/home/hqnews/2009/dec/HQ_09-296_New_Frontiers_Candidates.html},
+  Year                     = {2009},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.16}
+}
+
+@Misc{brown2012,
+  Title                    = {Mars Science Laboratory Landing Press Kit},
+
+  Author                   = {D. Brown and S. Cole and G. WebG. Webster.C. Agle},
+  Month                    = {July},
+  Note                     = {NASA},
+  Year                     = {2012},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.18}
+}
+
+@Electronic{busetti2003simulated,
+  Title                    = {Simulated annealing overview},
+
+  Address                  = {Rome},
+  Author                   = {F. Busetti},
+  Note                     = {[online database], URL: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.66.5018 [cited 13 December 2015]},
+  Organization             = {J.P. Morgan},
+  Url                      = {http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.66.5018&rep=rep1&type=pdf},
+  Year                     = {2003},
+
+  Doi                      = {10.1.1.66.5018},
+  Owner                    = {Stacha},
+  Timestamp                = {2016.02.01}
+}
+
+@Electronic{capcom_fr,
+  Title                    = {Annexe 15 Les Sondes Eplorent La Lune partie 2},
+  Author                   = {D. Capdevila},
+  Note                     = {In French},
+  Url                      = {http://www.capcomespace.net/dossiers/espace_sovietique/index.htm},
+  Year                     = {2001},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.24}
+}
+
+@Electronic{christy2015,
+  Title                    = {Luna - Exploring the Moon},
+  Author                   = {R. Christy},
+  Url                      = {http://www.zarya.info/Diaries/Luna/Luna.php},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.24}
+}
+
+@Article{clark2009,
+  Title                    = {Supersonic inflatable aerodynamic decelerators for use on future robotic missions to Mars},
+  Author                   = {Clark, Ian G and Hutchings, Allison L and Tanner, Christopher L and Braun, Robert D},
+  Journal                  = {Journal of Spacecraft and Rockets},
+  Year                     = {2009},
+  Number                   = {2},
+  Pages                    = {340-352},
+  Volume                   = {46},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@Book{coello2007evolutionary,
+  Title                    = {{Evolutionary Algorithms for solving multi-objective problems}},
+  Author                   = {C.A. Coello Coello and G.B. Lamont and D.A. Van Veldhuizen},
+  Editor                   = {D.E. Goldberg and J.R. Koza},
+  Publisher                = {Springer Science+Business Media, New York},
+  Year                     = {2007},
+  Edition                  = {2},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.01.12},
+  Url                      = {http://download.springer.com/static/pdf/103/bok%253A978-0-387-36797-2.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Fbook%2F10.1007%2F978-0-387-36797-2&token2=exp=1452642112~acl=%2Fstatic%2Fpdf%2F103%2Fbok%25253A978-0-387-36797-2.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Fbook%252F10.1007%252F978-0-387-36797-2*~hmac=cf4b0fed0ae15e2cee23a505f1728f900aaa5940000bdb2cb8d86a2743a0e169}
+}
+
+@TechReport{colozza2003comparison,
+  Title                    = {{Comparison of Mars Aircraft Propulsion Systems}},
+  Author                   = {Colozza, Anthony J},
+  Institution              = {NASA Glenn Research Center},
+  Year                     = {2003},
+  Month                    = {May},
+  Note                     = {: NASA/CR-2003-212350},
+
+  Owner                    = {Stacha},
+  Publisher                = {National Aeronautics and Space Administration, Glenn Research Center},
+  Timestamp                = {2015.11.16},
+  Url                      = {https://www.researchgate.net/profile/Anthony_Colozza/publication/24318149_Comparison_of_Mars_Aircraft_Propulsion_Systems/links/00b7d533ef3115a30d000000.pdf}
+}
+
+@Book{conway2012,
+  Title                    = {SpaceSpace Trajectory Optimization},
+  Author                   = {B.A. Conway},
+  Publisher                = {Cambridge University Press},
+  Year                     = {2010},
+
+  Address                  = {32 Avenue of the Americas, New York, USA},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.29}
+}
+
+@Article{cruz2006,
+  Title                    = {Aerodynamic decelerators for planetary exploration: past, present, and future},
+  Author                   = {Cruz, Juan R and Lingard, J Stephen},
+  Journal                  = {AIAA Paper},
+  Year                     = {2006},
+
+  Month                    = {August},
+  Pages                    = {21-24},
+  Volume                   = {6792},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.25}
+}
+
+@Electronic{david2014,
+  Title                    = {Project 'Red Dragon': Mars Sample-Return Mission could launch in 2020 with SpaceX capsule},
+  Author                   = {L. David},
+  Month                    = {March},
+  Url                      = {http://www.space.com/24984-spacex-mars-mission-red-dragon.html},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.25}
+}
+
+@InProceedings{derz2012mars,
+  Title                    = {Mars sample return mission architectures utilizing low thrust propulsion},
+  Author                   = {Derz, Uwe and Seboldt, Wolfgang},
+  Booktitle                = {Acta Astronautica},
+  Year                     = {2012},
+  Pages                    = {83--96},
+  Volume                   = {77},
+
+  Doi                      = {10.1016/j.actaastro.2012.03.017},
+  Journal                  = {Acta Astronautica},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.19},
+  Url                      = {http://ac.els-cdn.com/S0094576512000896/1-s2.0-S0094576512000896-main.pdf?_tid=3d0c33e0-7695-11e5-a2bf-00000aacb35d&acdnat=1445282085_cea9b724215c0de226ff85a9dc32acc2}
+}
+
+@Conference{desai1998,
+  Title                    = {{Mars Ascent Vehicle Flight Analysis}},
+  Author                   = {Desai, PN and Braun, RD and Engelund, WC and Cheatwood, FM and Kangas, JA},
+  Booktitle                = {7th AIAA/ASME Joint Thermophysics and Heat Transfer Conference},
+  Year                     = {1998},
+
+  Doi                      = {10.2514/6.1998-2850},
+  Journal                  = {AIAA Paper},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.28},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.1998-2850}
+}
+
+@Electronic{deuflhard1994,
+  Title                    = {{Program Descriptions of ELib}},
+  Author                   = {P. Deuflhard and U. Nowak and U. Poehle},
+  Month                    = {December},
+  Note                     = {[online database], URL: http://elib.zib.de/pub/elib/codelib/difex2/readme [cited 30 October 2015]},
+  Organization             = {Universität Bayreuth, Department of Mathematics},
+  Url                      = {http://elib.zib.de/pub/elib/codelib/difex2/readme},
+  Year                     = {1994},
+
+  Comment                  = {http://www.mathematik.uni-bayreuth.de/~rbaier/www/doc/elib_description.txt (original link does not work anymore for some reason....},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.04}
+}
+
+@Article{deveikis1970,
+  Title                    = {Static aerodynamic characteristics, pressure distributions, and ram-air inflation of attached inflatable decelerator models at Mach 3.0},
+  Author                   = {Deveikis, Wilziam D and Sawyer, James Wdyne and Li, L and Deveikis, William D and Sawyer, James Wayne},
+  Journal                  = {Citeseer},
+  Year                     = {1970},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@Conference{di2007system,
+  Title                    = {{System and GNC concept for RendezVous into elliptical Orbit for Mars Sample Return mission}},
+  Author                   = {Di Sotto, Emanuele and Bastante, Juan Carlos and Drai, Remi},
+  Booktitle                = {AIAA Guidance, Navigation, and Control Conference and Exhibit, Colorado},
+  Year                     = {2007},
+
+  Doi                      = {10.2514/6.2007-6852},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.14},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2007-6852}
+}
+
+@InProceedings{dietrich2015ascent,
+  Title                    = {{Ascent Trajectories from the Lunar Far-Side to Earth-Moon L2 Halo Orbits}},
+  Author                   = {Dietrich, Ann and Davis, Kathryn and Parker, Jeffrey},
+  Booktitle                = {Advances in Space Research},
+  Year                     = {2015},
+  Number                   = {11},
+  Organization             = {University of Colorado},
+  Pages                    = {2595--2611},
+  Publisher                = {Elsevier},
+  Volume                   = {56},
+
+  Doi                      = {10.1016/j.asr.2015.09.030},
+  Journal                  = {Advances in Space Research},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.16},
+  Url                      = {http://ac.els-cdn.com/S0273117715006912/1-s2.0-S0273117715006912-main.pdf?_tid=ef2870b2-742d-11e5-9639-00000aab0f6b&acdnat=1445017814_0b44dc7423cf779372556bd306e7d7d9}
+}
+
+@Electronic{dirkx2016tudat,
+  Title                    = {{TUDAT}},
+  Author                   = {Dominic Dirkx and Kartik Kumar and Eelco Doornbos and Erwin Mooij and Ron Noomen},
+  Note                     = {[online database], URL: tudat.tudelft.nl [cited 8 March 2016] (Only available from the TU Delft network)},
+  Organization             = {Delft University of Technology},
+  Url                      = {tudat.tudelft.nl},
+  Year                     = {2016},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.03.08}
+}
+
+@InProceedings{dormand1987,
+  Title                    = {{Families of Runge-Kutta-Nystrom formulae}},
+  Author                   = {Dormand, JR and El-Mikkawy, MEA and Prince, PJ},
+  Booktitle                = {IMA Journal of Numerical Analysis},
+  Year                     = {1987},
+  Number                   = {2},
+  Pages                    = {235-250},
+  Volume                   = {7},
+
+  Journal                  = {IMA Journal of Numerical Analysis},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.04},
+  Url                      = {http://imajna.oxfordjournals.org/content/7/2/235.full.pdf+html}
+}
+
+@Conference{dumont2015design,
+  Title                    = {{Design of a Modular Transportation System for Future Lunar Robotic Missions}},
+  Author                   = {E. Dumont},
+  Booktitle                = {30th ISTS/34th IEPC/6th NSAT Joint Conference, Kobe, Japan},
+  Year                     = {2015},
+  Month                    = {July},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.01.06}
+}
+
+@InProceedings{duxbury2014location,
+  Title                    = {{The location of Airy-0, the Mars prime meridian reference, from stereo photogrammetric processing of THEMIS IR imaging and digital elevation data}},
+  Author                   = {Duxbury, TC and Christensen, P and Smith, DE and Neumann, GA and Kirk, RL and Caplinger, MA and Albee, AA and Seregina, NV and Neukum, G and Archinal, BA},
+  Booktitle                = {Journal of Geophysical Research: Planets},
+  Year                     = {2014},
+  Month                    = {December},
+  Number                   = {12},
+  Pages                    = {2471--2486},
+  Publisher                = {John Wiley \& Sons},
+  Volume                   = {119},
+
+  Doi                      = {10.1002/2014JE004678},
+  Journal                  = {Journal of Geophysical Research: Planets},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.08},
+  Url                      = {http://authors.library.caltech.edu/55016/1/Duxbury_et_al-2014-Journal_of_Geophysical_Research__Planets.pdf}
+}
+
+@Electronic{engelhardt2012,
+  Title                    = {Is there life on Mars? A sample return mission concept},
+  Author                   = {T. Engelhardt},
+  HowPublished             = {Presentation/website},
+  Month                    = {June},
+  Url                      = {http://www.slideshare.net/ToniEngelhardt/is-there-life-on-mars-hq},
+  Year                     = {2012},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.01}
+}
+
+@Conference{englander2012automated,
+  Title                    = {{Automated Interplanetary Trajectory Planning}},
+  Author                   = {Englander, Jacob A and Conway, Bruce A and Williams, Trevor},
+  Booktitle                = {AAS/AIAA Astrodynamics Specialist Conference, Minneapolis, Minnesota},
+  Year                     = {2012},
+  Month                    = {August},
+  Pages                    = {4517--4537},
+
+  Doi                      = {10.2514/6.2012-4517},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.23},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2012-4517}
+}
+
+@Conference{englander2014tuning,
+  Title                    = {{Tuning Monotonic Basin Hopping: Improving the Efficiency of Stochastic Search as Applied to Low-Thrust Trajectory Optimization}},
+  Author                   = {Englander, Jacob A and Englander, Arnold C},
+  Booktitle                = {24th International Symposium on Space Flight Dynamics, Laurel, MD},
+  Year                     = {2014},
+  Month                    = {May},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.23},
+  Url                      = {http://issfd.org/ISSFD_2014/ISSFD24_Paper_S7-3_Englander.pdf}
+}
+
+@Conference{englander2014mars,
+  Title                    = {{Mars, Phobos, and Deimos Sample Return Enabled by ARRM Alternative Trade Study Spacecraft}},
+  Author                   = {Englander, Jacob A and Vavrina, Matthew A and Naasz, Bo and Merill, Raymond G and Qu, Min},
+  Booktitle                = {AIAA/AAS Astrodynamics Specialist Conference, San Diego, CA},
+  Year                     = {2014},
+  Month                    = {August},
+
+  Doi                      = {10.2514/6.2014-4354},
+  Journal                  = {AIAA/AAS Astrodynamics Specialist Conference},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.23},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2014-4354}
+}
+
+@Electronic{esa2015all,
+  Title                    = {All-electric propulsion and multi-satellite launch system for communication satellites},
+  Author                   = {ESA},
+  HowPublished             = {Website},
+  Note                     = {[online directory], URL: https://directory.eoportal.org/web/eoportal/satellite-missions/a/all-electric [cited 25 November 2015]},
+  Organization             = {European Space Agency},
+  Url                      = {https://directory.eoportal.org/web/eoportal/satellite-missions/a/all-electric},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.25}
+}
+
+@Electronic{esa2015where,
+  Title                    = {Where is zero degrees longitude on Mars?},
+  Author                   = {ESA},
+  HowPublished             = {Website},
+  Organization             = {ESA},
+  Url                      = {http://www.esa.int/Our_Activities/Space_Science/Mars_Express/Where_is_zero_degrees_longitude_on_Mars},
+  Year                     = {2004},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.08}
+}
+
+@Electronic{esa2003artemis,
+  Title                    = {Artemis finally reaches operational orbit},
+  Author                   = {ESA},
+  HowPublished             = {Website},
+  Month                    = {January},
+  Note                     = {News update},
+  Organization             = {ESA},
+  Url                      = {http://www.esa.int/Our_Activities/Telecommunications_Integrated_Applications/Artemis_finally_reaches_operational_orbit},
+  Year                     = {2003},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.18}
+}
+
+@TechReport{ewing1978,
+  Title                    = {Recovery systems design guide},
+  Author                   = {Ewing, EG and Bixby, HW and Knacke, TW},
+  Institution              = {DTIC Document},
+  Year                     = {1978},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.25}
+}
+
+@Electronic{ezell1978partnership,
+  Title                    = {{The Partnership: A History of the Apollo-Soyuz Test Project}},
+  Author                   = {E.C. Ezell and L.N. Ezell},
+  HowPublished             = {website},
+  Note                     = {[online database], URL: http://www.hq.nasa.gov/pao/History/SP-4209/ch3-8.htm [cited 20 October 2015]},
+  Url                      = {http://www.hq.nasa.gov/pao/History/SP-4209/ch3-8.htm},
+  Year                     = {1978},
+
+  Owner                    = {Stacha},
+  Publisher                = {National Aeronautics and Space Administration},
+  Timestamp                = {2015.10.20}
+}
+
+@InProceedings{fallon2005,
+  Title                    = {Design and development of the main parachute for the Beagle 2 Mars lander},
+  Author                   = {E.J. Fallon and R. Sinclair},
+  Booktitle                = {17 th AIAA Aerodynamic Decelerator Systems Technology Conference and Seminar},
+  Year                     = {2005},
+  Pages                    = {372-386},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.25}
+}
+
+@InProceedings{fanning1996model,
+  Title                    = {{A model comparison for optimal Mars ascent trajectories}},
+  Author                   = {J.E. Fanning and B.L. Pierson},
+  Booktitle                = {Engineering Optimization},
+  Year                     = {1996},
+  Number                   = {4},
+  Pages                    = {271--285},
+  Volume                   = {26},
+
+  Doi                      = {10.1080/03052159608941122},
+  Journal                  = {Engineering Optimization+ A35},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.15},
+  Url                      = {http://www.tandfonline.com/doi/pdf/10.1080/03052159608941122}
+}
+
+@TechReport{fehlberg1969,
+  Title                    = {{Low order classical Runge-Kutta formulas with stepwise control}},
+  Author                   = {Fehlberg, E},
+  Institution              = {Marschall Space Flight Center, NASA},
+  Year                     = {1969},
+  Note                     = {: NASA TR R-316},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.05},
+  Url                      = {http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19690021375.pdf}
+}
+
+@TechReport{fehlberg1968,
+  Title                    = {{Classical fifth-, sixth-, seventh-, and eighth-order Runge-Kutta formulas with stepsize control}},
+  Author                   = {Fehlberg, Erwin},
+  Institution              = {Marschall Space Flight Center, NASA},
+  Year                     = {1968},
+  Month                    = {October},
+  Note                     = {: NASA TR R-287},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.04},
+  Url                      = {http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19680027281.pdf}
+}
+
+@Electronic{wiki_latin,
+  Title                    = {Latin Hypercube Sampling},
+  Author                   = {Mathieu Fenniak},
+  HowPublished             = {website},
+  Url                      = {https://mathieu.fenniak.net/latin-hypercube-sampling/},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+
+@Book{feoktistov2006differential,
+  Title                    = {Differential Evolution, In Search of Solutions},
+  Author                   = {V. Feoktistov},
+  Editor                   = {D.Z. Du},
+  Publisher                = {Springer, New York},
+  Year                     = {2006},
+  Volume                   = {5},
+
+  Comment                  = {Not public},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.21},
+  Url                      = {http://download.springer.com/static/pdf/543/bok%253A978-0-387-36896-2.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Fbook%2F10.1007%2F978-0-387-36896-2&token2=exp=1445459839~acl=%2Fstatic%2Fpdf%2F543%2Fbok%25253A978-0-387-36896-2.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Fbook%252F10.1007%252F978-0-387-36896-2*~hmac=53c2165b8bf217f9946dcebe4ef5464c1aff52746bf6e21b05cdfc0380bfd390}
+}
+
+@Electronic{wiki_lm,
+  Title                    = {Apollo 17: Les plus belles images de la derniere mission lunaire},
+  Author                   = {Emeline Ferard},
+  HowPublished             = {website},
+  Month                    = {December},
+  Note                     = {In French},
+  Url                      = {http://www.maxisciences.com/programme-apollo/apollo-17-les-plus-belles-images-de-la-derniere-mission-lunaire_art27899.html},
+  Year                     = {2012},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.24}
+}
+
+@Article{frisbee2003,
+  Title                    = {Advanced space propulsion for the 21st century},
+  Author                   = {Frisbee, Robert H},
+  Journal                  = {Journal of Propulsion and Power},
+  Year                     = {2003},
+  Number                   = {6},
+  Pages                    = {1129-1154},
+  Volume                   = {19},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.29}
+}
+
+@Electronic{frost2014,
+  Title                    = {In space travel, which way is up?},
+  Author                   = {R. Frost},
+  HowPublished             = {Forum/website},
+  Month                    = {October},
+  Url                      = {http://www.quora.com/In-space-travel-which-way-is-up},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.10}
+}
+
+@InProceedings{gage1995,
+  Title                    = {Interplanetary trajectory optimization using a genetic algorithm},
+  Author                   = {Gage, PJ and Braun, RD and Kroo, IM},
+  Booktitle                = {Journal of Astronautical Sciences},
+  Year                     = {1995},
+  Number                   = {1},
+  Pages                    = {59-76},
+  Volume                   = {43},
+
+  Doi                      = {10.2514/6.1994-3773},
+  Journal                  = {Journal of the Astronautical Sciences},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.30},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.1994-3773}
+}
+
+@TechReport{galigher1969,
+  Title                    = {Aerodynamic Characteristics of Supersonic X Parachutes at Mach Numbers of 2.1 and 4.0},
+  Author                   = {Galigher, Lawrence L},
+  Institution              = {DTIC Document},
+  Year                     = {1969},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@InProceedings{gallon2013,
+  Title                    = {Low Density Supersonic Decelerator Parachute Decelerator System},
+  Author                   = {Gallon, John C and Clark, Ian G and Rivellini, Tommaso P and Adams, Douglas S and Witkowski, Allen},
+  Booktitle                = {AIAA Aerodynamic Decelerator Systems (ADS) Conference},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@Conference{garcia2010,
+  Title                    = {{Co-Optimization of Mid Lift to Drag Vehicle Concepts for Mars Atmospheric Entry}},
+  Author                   = {Garcia, Joseph A and Brown, James L and Kinney, David J and Bowles, Jeffrey V and Huynh, Loc C and Jiang, Xun J and Lau, Eric and Dupzyk, Ian C},
+  Booktitle                = {10th AIAA/ASME Joint Thermophysics and Heat Transfer Conference, Chicago, Illinois},
+  Year                     = {2010},
+  Month                    = {June},
+
+  Doi                      = {10.2514/6.2010-5052},
+  Journal                  = {AIAA Paper},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.02},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2010-5052}
+}
+
+@MastersThesis{gebbett2014multi,
+  Title                    = {{Multi-revolution, low-thrust trajectory design using Lyapunov feedback control}},
+  Author                   = {Warren Gebbett},
+  School                   = {Delft University of Technology},
+  Year                     = {2014},
+  Month                    = {January},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.30}
+}
+
+@InProceedings{geffroy1997optimal,
+  Title                    = {Optimal low-thrust transfers with constraints---generalization of averaging techniques},
+  Author                   = {Geffroy, Sophie and Epenoy, Richard},
+  Booktitle                = {Acta Astronautica},
+  Year                     = {1997},
+  Number                   = {3},
+  Pages                    = {133--149},
+  Volume                   = {41},
+
+  Journal                  = {Acta Astronautica},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.19},
+  Url                      = {http://ac.els-cdn.com/S0094576597002087/1-s2.0-S0094576597002087-main.pdf?_tid=8d10d14e-768f-11e5-a216-00000aacb361&acdnat=1445279642_324264ecca77a4fd752b67a054bc8daa}
+}
+
+@Electronic{gill2006user,
+  Title                    = {{Users guide for SNOPT version 7 - Software for large-scale nonlinear programming}},
+  Author                   = {Gill, Philip E and Murray, Walter and Saunders, Michael A},
+  Month                    = {June},
+  Note                     = {[online database], URL: http://web.stanford.edu/group/SOL/guides/ [cited 23 October 2015]},
+  Organization             = {Stanford University},
+  Url                      = {http://web.stanford.edu/group/SOL/guides/sndoc7.pdf},
+  Year                     = {2008},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.23}
+}
+
+@InProceedings{gill2002snopt,
+  Title                    = {{SNOPT: An SQP algorithm for large-scale constrained optimization}},
+  Author                   = {Gill, Philip E and Murray, Walter and Saunders, Michael A},
+  Booktitle                = {SIAM journal on optimization},
+  Year                     = {2002},
+  Number                   = {4},
+  Pages                    = {979--1006},
+  Volume                   = {12},
+
+  Doi                      = {10.1137/S1052623499350013},
+  Journal                  = {SIAM journal on optimization},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.25},
+  Url                      = {http://epubs.siam.org/doi/pdf/10.1137/S1052623499350013}
+}
+
+@MastersThesis{gomez2015optimization,
+  Title                    = {Optimization of {L}ow-{T}hrust {T}rajectories in {E}arth-{C}entered {O}rbit},
+  Author                   = {M. Gomez},
+  School                   = {Delft University of Technology},
+  Year                     = {2015},
+  Month                    = {February},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.02.01}
+}
+
+@MastersThesis{gondelach2012,
+  Title                    = {{A Hodographic-Shaping Method for Low-Thrust Trajectory Design}},
+  Author                   = {Gondelach, D.J.},
+  School                   = {Delft University of Technology},
+  Year                     = {2012},
+  Month                    = {July},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.05},
+  Url                      = {http://repository.tudelft.nl/view/ir/uuid%3A6a4f1673-88b1-4823-b2ef-9d864c84ab11/}
+}
+
+@InProceedings{gonzalez2000,
+  Title                    = {{On the numerical integration of orbital problems with high order Runge--Kutta--Nystrom methods}},
+  Author                   = {Gonzalez, Ana B and Martin, Pablo and Lopex, David J},
+  Booktitle                = {Applied numerical mathematics},
+  Year                     = {2000},
+  Number                   = {1},
+  Pages                    = {1-10},
+  Publisher                = {Elsevier},
+  Volume                   = {35},
+
+  Journal                  = {Applied numerical mathematics},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.05},
+  Url                      = {http://ac.els-cdn.com/S0168927499000458/1-s2.0-S0168927499000458-main.pdf?_tid=3648ff3c-3b7d-11e5-b313-00000aab0f6b&acdnat=1438784647_4e5fc0c634570ea9b41890dced8af495}
+}
+
+@Electronic{grahn1996radio,
+  Title                    = {{Radio observation of Kosmos-186/188 - the first automaic docking}},
+  Author                   = {S. Grahn},
+  HowPublished             = {Website},
+  Note                     = {Personal notes of Swen Grahn},
+  Url                      = {http://www.svengrahn.pp.se/trackind/K186188/K186188.html},
+  Year                     = {1996},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.20}
+}
+
+@Electronic{grant2015landing,
+  Title                    = {2020 Landing Site for Mars Rover MIssion},
+  Author                   = {J. Grant and M. Golombek},
+  HowPublished             = {Website},
+  Month                    = {August},
+  Organization             = {Jet Propulsion Laboratory},
+  Url                      = {http://marsnext.jpl.nasa.gov/},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.19}
+}
+
+@Electronic{beagle2_2014,
+  Title                    = {Beagle 2},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=2003-022C},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.26}
+}
+
+@Electronic{gemini6a_2014,
+  Title                    = {{Gemini 6A}},
+  Author                   = {E. Grayzeck},
+  HowPublished             = {Website},
+  Month                    = {August},
+  Note                     = {[online database], URL: http://nssdc.gsfc.nasa.gov/nmc/ spacecraftDisplay.do?id=1965-104A [cited 20 October 2015]},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=1965-104A},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.20}
+}
+
+@Electronic{genesis2014,
+  Title                    = {Genesis},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=2001-034A},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.25}
+}
+
+@Electronic{grayzeck2014,
+  Title                    = {Luna 16},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/masterCatalog.do?sc=1970-072A},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.24}
+}
+
+@Electronic{hayabusa2_2014,
+  Title                    = {Hayabusa 2},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=2014-076A},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.25}
+}
+
+@Electronic{hayabusa2014,
+  Title                    = {Hayabusa},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=2003-019A},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.25}
+}
+
+@Electronic{lunakhod_2014,
+  Title                    = {{Luna 21/Lunakhod 2}},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=1973-001A},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.26}
+}
+
+@Electronic{mars3_2014,
+  Title                    = {{Mars 3 Lander}},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=1971-049F},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.25}
+}
+
+@Electronic{msl_2014,
+  Title                    = {{Mars Science Laboratory (MSL)}},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=2011-070A},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.26}
+}
+
+@Electronic{pathfinder_2014,
+  Title                    = {{Mars Pathfinder}},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=1996-068A},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.26}
+}
+
+@Electronic{phoenix_2014,
+  Title                    = {{Phoenix Mars Lander}},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=2007-034A},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.26}
+}
+
+@Electronic{spirit_2014,
+  Title                    = {Spirit},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=2003-027A},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.26}
+}
+
+@Electronic{stardust2014,
+  Title                    = {{Stardust/NExT}},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=1999-003A},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.24}
+}
+
+@Electronic{viking_2014,
+  Title                    = {{Viking 1 Lander}},
+  Author                   = {E. Grayzeck},
+  Month                    = {August},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=1975-075C},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.25}
+}
+
+@Conference{grinstead2011,
+  Title                    = {Airborne Observation of the Hayabusa Sample Return Capsule Re-entry},
+  Author                   = {J. Grinstead and P. Jenniskens and A. Cassell and J. Albers and M. Winter},
+  Booktitle                = {42nd AIAA Thermophysics Conference},
+  Year                     = {2011},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.25}
+}
+
+@Conference{guernsey1998,
+  Title                    = {{Mars Ascent Propulsion System (MAPS) Technology Program: Plans and Progress}},
+  Author                   = {Guernsey, Carl S},
+  Booktitle                = {34th AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit},
+  Year                     = {1998},
+
+  Doi                      = {10.2514/6.1998-3664},
+  Journal                  = {34th AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.28},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.1998-3664}
+}
+
+@Electronic{guilhaire2013,
+  Title                    = {atan2, tricks},
+  Author                   = {B. Guihaire},
+  HowPublished             = {Blogpost/website},
+  Month                    = {November},
+  Url                      = {http://guihaire.com/code/?tag=math},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.13}
+}
+
+@Article{hadjifotinou2000numerical,
+  Title                    = {Numerical integration of satellite orbits around an oblate planet},
+  Author                   = {Hadjifotinou, KG},
+  Journal                  = {Astronomy and Astrophysics},
+  Year                     = {2000},
+  Pages                    = {328--333},
+  Volume                   = {354},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.30},
+  Url                      = {http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.391.3504&rep=rep1&type=pdf}
+}
+
+@Article{hadjifotinou1998comparison,
+  Title                    = {Comparison of numerical methods for the integration of natural satellite systems},
+  Author                   = {Hadjifotinou, KG and Gousidou-Koutita, M},
+  Journal                  = {Celestial Mechanics and Dynamical Astronomy},
+  Year                     = {1998},
+
+  Month                    = {May},
+  Number                   = {2},
+  Pages                    = {99--113},
+  Volume                   = {70},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.29},
+  Url                      = {http://download.springer.com/static/pdf/162/art%253A10.1023%252FA%253A1026475908041.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1023%2FA%3A1026475908041&token2=exp=1443562501~acl=%2Fstatic%2Fpdf%2F162%2Fart%25253A10.1023%25252FA%25253A1026475908041.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1023%252FA%253A1026475908041*~hmac=29a0262cd5848b2143ac09cfa3338ae207653fdab69afebfffe78baedf8105a8}
+}
+
+@MastersThesis{vanderham2012,
+  Title                    = {Interplanetary Trajectory Design using Dynamical Systems Theory},
+  Author                   = {L. Van der Ham},
+  School                   = {Delft University of Technology},
+  Year                     = {2012},
+  Month                    = {February},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.31}
+}
+
+@Electronic{wehart1997,
+  Title                    = {Interval Methods},
+  Author                   = {William E. Hart},
+  Month                    = {March},
+  Organization             = {Sandia National Laboratories},
+  Url                      = {http://www.cs.sandia.gov/opt/survey/interval.html},
+  Year                     = {1997},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.29}
+}
+
+@Book{harvey2007soviet,
+  Title                    = {Soviet and {R}ussian {L}unar {Exploration}},
+  Author                   = {Brian Harvey},
+  Editor                   = {John Mason},
+  Publisher                = {Springer and Praxis Publishing, Chichester, UK},
+  Year                     = {2007},
+  Edition                  = {1},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.01.31},
+  Url                      = {https://books.google.com/books?hl=nl&lr=&id=4sIiQdFo0RMC&oi=fnd&pg=PP9&dq=russian+planetary+exploration+harvey&ots=tzXe-aqXJS&sig=g5kN2v4KvClI_-n6ZtUmltly9N4#v=onepage&q&f=false}
+}
+
+@InProceedings{helton2003,
+  Title                    = {Latin hypercube sampling and the progagation of uncertainty in analysis of complex systems},
+  Author                   = {J.C. Helton and F.J. Davis},
+  Booktitle                = {Reliability Engineering and System Safety 81},
+  Year                     = {2003},
+  Pages                    = {23--69},
+  Publisher                = {Elsevier},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+
+@Article{hill2012high,
+  Title                    = {High-Fidelity Low-Thrust Trajectory Determination Research and Analysis},
+  Author                   = {Hill, Tyler},
+  Year                     = {2012},
+
+  Month                    = {June},
+  Note                     = {Bachelor Thesis!},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.01},
+  Url                      = {http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1076&context=aerosp}
+}
+
+@InProceedings{hintz2008survey,
+  Title                    = {{Survey of Orbit Element Sets}},
+  Author                   = {G. R. Hintz},
+  Booktitle                = {Journal of guidance, control, and dynamics},
+  Year                     = {2008},
+  Number                   = {3},
+  Pages                    = {785--790},
+  Volume                   = {31},
+
+  Doi                      = {10.2514/1.32237},
+  Journal                  = {Journal of guidance, control, and dynamics},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.30},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/1.32237}
+}
+
+@Electronic{hirt2011mars,
+  Title                    = {Mars Gravity Model 2011 (MGM2011)},
+  Author                   = {Christian Hirt},
+  HowPublished             = {Website},
+  Organization             = {Curtin University, Western Australian Geodesy Group},
+  Url                      = {https://geodesy.curtin.edu.au/research/models/mgm2011/},
+  Year                     = {2011},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.17}
+}
+
+@Article{hirt2012kilometer,
+  Title                    = {{Kilometer-resolution gravity field of Mars: MGM2011}},
+  Author                   = {Hirt, C. and Claessens, S.J. and Kuhn, M. and Featherstone, W.E.},
+  Journal                  = {Planetary and Space Science},
+  Year                     = {2012},
+
+  Doi                      = {10.1016/j.pss.2012.02.006},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.17},
+  Url                      = {http://geodesy.curtin.edu.au/local/docs/Hirt2012_MGM2011_PSS_av.pdf}
+}
+
+@Book{ho2002radio,
+  Title                    = {{Radio Wave Propagation Handbook for Communication on and Around Mars}},
+  Author                   = {Ho, Christian and Golshan, Nasser and Kliore, Arvydas},
+  Publisher                = {NASA Jet Propulsion Laboratory, Pasadena, CA},
+  Year                     = {2002},
+  Edition                  = {1},
+  Month                    = {March},
+  Note                     = {handbook JPL Publication 02-5},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.09},
+  Url                      = {http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20020039526.pdf}
+}
+
+@MastersThesis{hofsteenge2013,
+  Title                    = {{Computational Methods for the Long-Term Propagation of Space Debris Orbits}},
+  Author                   = {R. Hofsteenge},
+  School                   = {Delft University of Technology},
+  Year                     = {2013},
+  Month                    = {December},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.30},
+  Url                      = {http://repository.tudelft.nl/view/ir/uuid%3Aeee70164-4c99-470d-b8ee-5314ffcf63f8/}
+}
+
+@Book{horst1995handbook,
+  Title                    = {Handbook of Global Optimization},
+  Author                   = {Reinier Horst and P.M. Pardalos},
+  Publisher                = {Kluwer Academic Publishers, Boston},
+  Year                     = {1995},
+  Note                     = {available at JPL library},
+  Volume                   = {1},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.01.12},
+  Url                      = {https://books.google.com/books?id=yBDaBwAAQBAJ&printsec=frontcover&hl=nl#v=onepage&q&f=false}
+}
+
+@TechReport{houwen1998,
+  Title                    = {{Parallel St{\"o}rmer-Cowell methods for high-precision orbit computations}},
+  Author                   = {van der Houwen, Pieter J and Messina, E and de Swart, Jacques JB},
+  Institution              = {Centrum voor Wiskunde en Informatica},
+  Year                     = {1998},
+  Month                    = {July},
+  Note                     = {: MAS-R9812},
+  Number                   = {12},
+
+  Journal                  = {Report-Modelling, analysis and simulation},
+  Owner                    = {Stacha},
+  Pages                    = {1-22},
+  Timestamp                = {2015.08.05},
+  Url                      = {http://www.cwi.nl/system/files/u9/MAS-R9812.pdf}
+}
+
+@Article{hull2011optimal,
+  Title                    = {Optimal guidance for quasi-planar lunar ascent},
+  Author                   = {Hull, Davind G},
+  Journal                  = {Journal of Optimization Theory and Applications},
+  Year                     = {2011},
+  Number                   = {2},
+  Pages                    = {353--372},
+  Volume                   = {151},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.16},
+  Url                      = {http://download.springer.com/static/pdf/209/art%253A10.1007%252Fs10957-011-9884-5.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10957-011-9884-5&token2=exp=1445039665~acl=%2Fstatic%2Fpdf%2F209%2Fart%25253A10.1007%25252Fs10957-011-9884-5.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1007%252Fs10957-011-9884-5*~hmac=e53ba26a7419613866101de7978835c188d141e61cf82c1f1c3d93c94ed629b7}
+}
+
+@Electronic{hunter2012,
+  Title                    = {Quicklaunch affordable space exploration},
+  Author                   = {J. Hunter},
+  HowPublished             = {website},
+  Organization             = {Quicklaunch},
+  Url                      = {https://web.archive.org/web/20120801031606/http://quicklaunchinc.com/team/},
+  Year                     = {2012},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.29}
+}
+
+@Article{ilin2012low,
+  Title                    = {Low Thrust Trajectory Analysis (A Survey of Missions using VASIMR{\textregistered} for Flexible Space Exploration-Part 2) June 2012},
+  Author                   = {Ilin, Andrew V},
+  Year                     = {2012},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.16},
+  Url                      = {http://www.adastrarocket.com/VASIMR_for_flexible_space_exploration-2012.pdf}
+}
+
+@InProceedings{ingber1993simulated,
+  Title                    = {Simulated {A}nnealing: {P}ractice versus {T}heory},
+  Author                   = {L. Ingber},
+  Booktitle                = {Mathematical and {C}omputer {M}odelling},
+  Year                     = {1993},
+  Number                   = {11},
+  Pages                    = {20--57},
+  Publisher                = {Pergamon Press Ltd.},
+  Volume                   = {18},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.02.01},
+  Url                      = {http://ac.els-cdn.com/089571779390204C/1-s2.0-089571779390204C-main.pdf?_tid=92895462-c913-11e5-b349-00000aacb35d&acdnat=1454352340_8d9d06f081c6ff5cc0810a06e1bf8078}
+}
+
+@Misc{isbell1997,
+  Title                    = {Mars Pathfinder Landing Press Kit},
+
+  Author                   = {D. Isbell and F. O'Donnell},
+  Month                    = {July},
+  Note                     = {NASA},
+  Year                     = {1997},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.18},
+  Url                      = {http://www2.jpl.nasa.gov/files//misc/mpfland.pdf}
+}
+
+@InProceedings{iwamatsu2004,
+  Title                    = {{Basin hopping with occasional jumping}},
+  Author                   = {M. Iwamatsu and Y. Okabe},
+  Booktitle                = {Chemical Physics Letters},
+  Year                     = {2004},
+  Month                    = {December},
+  Pages                    = {396-400},
+  Publisher                = {Elsevier},
+  Volume                   = {339},
+
+  Doi                      = {10.1016/j.cplett.2004.10.032},
+  Edition                  = {4-6},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.29}
+}
+
+@Conference{izzo2012pygmo,
+  Title                    = {Py{GMO} and {P}y{KEP}: {O}pen source tools for massively parallel optimization in astrodynamics (the case of interplanetary trajectory optimization)},
+  Author                   = {D Izzo},
+  Booktitle                = {5th {I}nternational {C}onference on {A}strodynamics {T}ools and {T}echniques ({ICATT})},
+  Year                     = {2012},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.02.04},
+  Url                      = {http://www.esa.int/gsp/ACT/doc/MAD/pub/ACT-RPR-MAD-2012-(ICATT)PyKEP-PaGMO-SOCIS.pdf}
+}
+
+@Electronic{izzo2011gtoc5,
+  Title                    = {{GTOC5: results from Team 5}},
+  Author                   = {Izzo, Dario and Simoes, Luis Felismino},
+  HowPublished             = {Presentation},
+  Month                    = {September},
+  Organization             = {ESA Advanced Concepts Team},
+  Url                      = {https://www.researchgate.net/profile/Luis_Simes/publication/267569032_GTOC5_workshop_slides_for_Results_of_Team_5/links/5452bfb10cf26d5090a379dd.pdf},
+  Year                     = {2011},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.23}
+}
+
+@Conference{jamali2009packing,
+  Title                    = {{Packing identical circles in a minimized circular container by Monotonic Basin Hopping heuristic approach}},
+  Author                   = {Jalal Uddin Jamali, ARM and Grosso, A and Locatelli, M and Schoen, F},
+  Booktitle                = {ICCIT'09. 12th International Conference on Computers and Information Technology, Dhaka},
+  Year                     = {2009},
+  Month                    = {December},
+  Pages                    = {1--6},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.23},
+  Url                      = {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5407178}
+}
+
+@Electronic{jpl_missions,
+  Title                    = {All Missions},
+  Author                   = {{Jet Propulsion Laboratory}},
+  HowPublished             = {Website},
+  Organization             = {Nasa},
+  Url                      = {http://www.jpl.nasa.gov/missions/?search=&type=&missions_target=&mission_type=&launch_date=#submit},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.15}
+}
+
+@Electronic{pathfinder_jpl1997,
+  Title                    = {Mars Pathfinder},
+  Author                   = {{Jet Propulsion Laboratory}},
+  HowPublished             = {website},
+  Month                    = {July},
+  Note                     = {old Pathfinder website},
+  Organization             = {NASA},
+  Url                      = {http://mars.nasa.gov/MPF/index0.html},
+  Year                     = {1997},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@InProceedings{,
+  Title                    = {{A Software Package for the Numerical Integration of ODEs by Means of High-Order Taylor Methods}},
+  Author                   = {Angel Jorba and Maorong Zou},
+  Booktitle                = {Experimental Mathematics},
+  Year                     = {2005},
+  Number                   = {1},
+  Pages                    = {99--117},
+  Publisher                = {Taylor \& Francis},
+  Volume                   = {14},
+
+  Doi                      = {10.1080/10586458.2005.10128904},
+  Owner                    = {Stacha},
+  Timestamp                = {2016.03.29},
+  Url                      = {http://dx.doi.org/10.1080/10586458.2005.10128904}
+}
+
+@Electronic{justh2015mars,
+  Title                    = {Mars Global reference amospheric model (Mars-GRAM 2010)},
+  Author                   = {H.L. Justh},
+  HowPublished             = {Website},
+  Organization             = {NASA Space Environments and Effects Program},
+  Url                      = {https://see.msfc.nasa.gov/model-Marsgram},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.14}
+}
+
+@Electronic{justus2008utilizing,
+  Title                    = {{Utilizing Mars global reference atmospheric model (Mars-GRAM 2005) to evaluate entry probe mission sites}},
+  Author                   = {Justh, Hilary L and Justus, Carl Gerald},
+  HowPublished             = {Presentation},
+  Note                     = {[online database], URL: https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-1-PB.pdf?sequence=1 [cited 10 December 2015]},
+  Organization             = {NASA Marschall Space Flight Center},
+  Url                      = {https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-1-PB.pdf?sequence=1},
+  Year                     = {2008},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.10}
+}
+
+@Conference{justus1990mars,
+  Title                    = {{A Mars Global Reference Atmospheric Model (Mars-GRAM) for Mission Planning and Analysis}},
+  Author                   = {Justus, C.G.},
+  Booktitle                = {28th Aerospace Sciences Meeting, Reno, Nevada},
+  Year                     = {1990},
+
+  Doi                      = {10.2514/6.1990-4},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.14},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.1990-4}
+}
+
+@Conference{justus2005aerocapture,
+  Title                    = {Mars {A}erocapture and {V}alidation of {M}ars-{GRAM} with {TES} {D}ata},
+  Author                   = {C.G. Justus and Aleta Duvall and Vernon W. Keller},
+  Booktitle                = {53rd JANNAF {P}ropulsion {M}eeting/2nd {L}iquid {P}ropulsion {S}ubcommittee/{S}pacecraft {P}ropulsion {J}oint {M}eeting},
+  Year                     = {2005},
+  Month                    = {December},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.02.03},
+  Url                      = {http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20060005595.pdf}
+}
+
+@Article{kare2004,
+  Title                    = {Modular Laser Launch Architecture: Analysis and Beam Module Design},
+  Author                   = {Kare, Jordin T},
+  Journal                  = {Final Report USRA},
+  Year                     = {2004},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.29}
+}
+
+@InProceedings{kechichian2000minimum,
+  Title                    = {{Minimum-Time Constant Acceleration Orbit Transfer with First-Order Oblateness Effect}},
+  Author                   = {Kechichian, Jean Albert},
+  Booktitle                = {Journal of Guidance, Control, and Dynamics},
+  Year                     = {2000},
+  Number                   = {4},
+  Pages                    = {595--603},
+  Volume                   = {23},
+
+  Doi                      = {10.2514/2.4602},
+  Journal                  = {Journal of Guidance, Control, and Dynamics},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.01},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/2.4602}
+}
+
+@MastersThesis{kesteren2013air,
+  Title                    = {Air Launch versus Ground launch: a multidisciplinary design optimization study of expendable launch vehicle on cost and performance},
+  Author                   = {M.W. van Kesteren},
+  School                   = {Delft University of Technology},
+  Year                     = {2013},
+  Month                    = {November},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.13},
+  Url                      = {http://repository.tudelft.nl/view/ir/uuid%3A16093448-e5bf-4ee7-a895-67168fc9e2c2/}
+}
+
+@InProceedings{killinger2003artemis,
+  Title                    = {{ARTEMIS orbit raising inflight experience with ion propulsion}},
+  Author                   = {Killinger, Rainer and Kukies, Ralf and Surauer, Michael and Tomasetto, Angeo and van Holtz, Leo},
+  Booktitle                = {Acta Astronautica},
+  Year                     = {2003},
+  Number                   = {4-10},
+  Pages                    = {607--621},
+  Publisher                = {Elsevier},
+  Volume                   = {53},
+
+  Journal                  = {Acta Astronautica},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.25},
+  Url                      = {http://ac.els-cdn.com/S009457650380022X/1-s2.0-S009457650380022X-main.pdf?_tid=e160174e-939c-11e5-bc12-00000aacb35f&acdnat=1448473951_f908fceeec256f5601f114c58cd7214e}
+}
+
+@InProceedings{kim2002,
+  Title                    = {{Optimal Spacecraft Rendezvous Using Genetic Algorithms}},
+  Author                   = {Kim, Young Ha and Spencer, David B},
+  Booktitle                = {Journal of Spacecraft and Rockets},
+  Year                     = {2002},
+  Number                   = {6},
+  Pages                    = {859-865},
+  Volume                   = {39},
+
+  Doi                      = {10.2514/2.3908},
+  Journal                  = {Journal of Spacecraft and Rockets},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.30},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/2.3908}
+}
+
+@InProceedings{kluever1998direct,
+  Title                    = {{Direct Approach for Computing Near-Optimal Low-Thrust Earth-Orbit Transfers}},
+  Author                   = {Kluever, Craig A and Oleson, Steven R},
+  Booktitle                = {Journal of Spacecraft and Rockets},
+  Year                     = {1998},
+  Number                   = {4},
+  Pages                    = {509--515},
+  Volume                   = {35},
+
+  Doi                      = {10.2514/2.3360},
+  Journal                  = {Journal of Spacecraft and Rockets},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.19},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/2.3360}
+}
+
+@Electronic{knopf2015spice,
+  Title                    = {SPICE History},
+  Author                   = {W. Knopf},
+  HowPublished             = {Website},
+  Organization             = {NASA Jet Propulsion Laboratory},
+  Url                      = {https://naif.jpl.nasa.gov/naif/spicehistory.html},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.14}
+}
+
+@Article{korzun2010performance,
+  Title                    = {Performance characterization of supersonic retropropulsion for high-mass mars entry systems},
+  Author                   = {Korzun, Ashley M and Braun, Robert D},
+  Journal                  = {Journal of Spacecraft and Rockets},
+  Year                     = {2010},
+  Number                   = {5},
+  Pages                    = {836--848},
+  Volume                   = {47},
+
+  Doi                      = {10.2514/1.49803},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.02},
+  Url                      = {http://arc.aiaa.org/doi/pdfplus/10.2514/1.49803}
+}
+
+@InProceedings{korzun2008survey,
+  Title                    = {A survey of supersonic retropropulsion technology for Mars entry, descent, and landing},
+  Author                   = {Korzun, Ashley M and Cruz, Juan R and Braun, Robert D},
+  Booktitle                = {Aerospace Conference, 2008 IEEE},
+  Year                     = {2008},
+  Organization             = {IEEE},
+  Pages                    = {1--15},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.02},
+  Url                      = {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4526290}
+}
+
+@Conference{kos2006overview,
+  Title                    = {{Overview of the Development for a Suite of Low-Thrust Trajectory Analysis Tools}},
+  Author                   = {Kos, Larry D and Polsgrove, Tara and Hopkins, Randall and Thomas, Dan and Sims, Jon A},
+  Booktitle                = {AIAA/AAS Astrodynamics Specialist Conference and Exhibit},
+  Year                     = {2006},
+  Month                    = {August},
+  Publisher                = {NASA Jet Propulsion Laboratory},
+
+  Doi                      = {10.2514/6.2006-6743},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.19},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2006-6743}
+}
+
+@Article{kunovsky1994modern,
+  Title                    = {Modern Taylor Series Method},
+  Author                   = {Kunovsky, Jiri},
+  Year                     = {1994},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.30},
+  Url                      = {http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=595C646B4BC3C7668433AEBAA6DF7DDB?doi=10.1.1.54.6989&rep=rep1&type=pdf}
+}
+
+@Article{lafleur2011,
+  Title                    = {Mars entry bank profile design for terminal state optimization},
+  Author                   = {Lafleur, Jarret M and Cerimele, Christopher J},
+  Journal                  = {Journal of Spacecraft and Rockets},
+  Year                     = {2011},
+  Number                   = {6},
+  Pages                    = {1012-1024},
+  Volume                   = {48},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.25}
+}
+
+@Electronic{laufer2010,
+  Title                    = {Mars Express},
+  Author                   = {R. Laufer},
+  HowPublished             = {Website},
+  Month                    = {April},
+  Note                     = {In German},
+  Organization             = {DLR},
+  Url                      = {http://www.dlr.de/ARM/programs/EuropaMission/MExp1.shtml},
+  Year                     = {2010},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.25}
+}
+
+@Electronic{osiris2015,
+  Title                    = {OSIRIS-REx},
+  Author                   = {D. Lauretta},
+  Month                    = {July},
+  Organization             = {University of Arizona},
+  Url                      = {http://www.asteroidmission.org/},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.25}
+}
+
+@InProceedings{leary2000global,
+  Title                    = {{Global Optimization on Funneling Landscapes}},
+  Author                   = {Leary, Robert H},
+  Booktitle                = {Journal of Global Optimization},
+  Year                     = {2000},
+  Month                    = {December},
+  Number                   = {4},
+  Pages                    = {367--383},
+  Volume                   = {18},
+
+  Journal                  = {Journal of Global Optimization},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.23},
+  Url                      = {http://download.springer.com/static/pdf/769/art%253A10.1023%252FA%253A1026500301312.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1023%2FA%3A1026500301312&token2=exp=1445630543~acl=%2Fstatic%2Fpdf%2F769%2Fart%25253A10.1023%25252FA%25253A1026500301312.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1023%252FA%253A1026500301312*~hmac=c52e55a9d904a54e6b5f8dcd1cbf0303cca2e9c9d81b61bfc7b46f0abf30aa26}
+}
+
+@Conference{lee2005,
+  Title                    = {{Design and optimization of low-thrust orbit transfers}},
+  Author                   = {Lee, Seungwon and von Ailmen, P and Fink, Wolfgang and Petropoulos, Anastassios E and Terr, Richard J},
+  Booktitle                = {Aerospace Conference, 2005 IEEE},
+  Year                     = {2005},
+  Organization             = {IEEE},
+  Pages                    = {855-869},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.29},
+  Url                      = {http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1559377}
+}
+
+@InProceedings{shuang2011,
+  Title                    = {{Mars entry trajectory optimization using DOC and DCNLP}},
+  Author                   = {Li, Shuang and Peng, Yuming},
+  Booktitle                = {Advances in Space Research},
+  Year                     = {2011},
+  Month                    = {February},
+  Number                   = {3},
+  Pages                    = {440-452},
+  Publisher                = {Elsevier},
+  Volume                   = {47},
+
+  Journal                  = {Advances in Space Research},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.02},
+  Url                      = {http://ac.els-cdn.com/S027311771000606X/1-s2.0-S027311771000606X-main.pdf?_tid=a9c1a9e0-516d-11e5-ba44-00000aacb360&acdnat=1441196894_710835a728b3b08ea87858dd5ce3a27d}
+}
+
+@InProceedings{lingard2005,
+  Title                    = {Supersonic Parachutes},
+  Author                   = {Lingard, Steve},
+  Booktitle                = {3rd International Planetary Probe Workshop},
+  Year                     = {2005},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@Article{lofstrom1985,
+  Title                    = {The launch loop-a low cost earth-to-high orbit launch system},
+  Author                   = {K.H. Lofstrom},
+  Journal                  = {AIAA Paper},
+  Year                     = {1985},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.29}
+}
+
+@Electronic{wiki_cm,
+  Title                    = {Apollo-The last few miles home},
+  Author                   = {Charles H. Lowry},
+  HowPublished             = {presentation/website},
+  Month                    = {May},
+  Url                      = {https://info.aiaa.org/Regions/Western/Orange_County/ASAT%20Conference%202012/Lowry_Apollo.pdf},
+  Year                     = {2012},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.24}
+}
+
+@Electronic{luna2015,
+  Title                    = {Luna Mission},
+  Author                   = {{Lunar and Planetary Institude}},
+  Organization             = {Lunar and Planetary Institude},
+  Url                      = {http://www.lpi.usra.edu/lunar/missions/luna/},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.24}
+}
+
+@Electronic{wiki_explmars,
+  Title                    = {Luna Exploration Timeline},
+  Author                   = {{Lunar and Planetary Institude}},
+  HowPublished             = {website},
+  Organization             = {Lunar and Planetary Institude},
+  Url                      = {http://www.lpi.usra.edu/lunar/missions/},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.25}
+}
+
+@Book{macdonald2014,
+  Title                    = {The International Handbook of Space Technology},
+  Author                   = {Macdonald, Malcolm and Badescu, Viorel},
+  Publisher                = {Springer},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@Article{magalhaes1999,
+  Title                    = {Results of the Mars Pathfinder atmospheric structure investigation},
+  Author                   = {Magalhaes, Julio A and Schofield, John T and Seiff, Alvin},
+  Journal                  = {Journal of Geophysical Research: Planets (1991--2012)},
+  Year                     = {1999},
+
+  Month                    = {April},
+  Number                   = {E4},
+  Pages                    = {8943-8955},
+  Volume                   = {104},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.17}
+}
+
+@Conference{maki2012,
+  Title                    = {The Mars Science Laboratory (MSL) Hazard Avoidance Cameras (Hazcams)},
+  Author                   = {Maki, J. N. and Thiessen, D and Pourangi, A and Kobzeff, P and Scherr, L and Elliott, T and Dingizian, A and St Ange, B},
+  Booktitle                = {43rd Lunar and Planetary Science Conference},
+  Year                     = {2012},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.27},
+  Url                      = {http://www.lpi.usra.edu/meetings/lpsc2012/pdf/2828.pdf}
+}
+
+@Electronic{mppg2012,
+  Title                    = {{Summary of the Final Report}},
+  Author                   = {{Mars Program Planning Group}},
+  Month                    = {September},
+  Note                     = {[online database], URL: http://www.nasa.gov//sites/default/files/files/ [cited 14 October 2015]},
+  Url                      = {http://www.nasa.gov/sites/default/files/files/MPPG-Summary_Report-9-25-12.pdf},
+  Year                     = {2012},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.20}
+}
+
+@InProceedings{martinez1998spacecraft,
+  Title                    = {{Spacecraft Electric Propulsion - An Overview}},
+  Author                   = {Martinez-Sanchez, M and Pollard, James E},
+  Booktitle                = {Journal of Propulsion and Power},
+  Year                     = {1998},
+  Number                   = {5},
+  Pages                    = {688--699},
+  Volume                   = {14},
+
+  Doi                      = {10.2514/2.5331},
+  Journal                  = {Journal of Propulsion and Power},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.18},
+  Url                      = {http://arc.aiaa.org/doi/pdfplus/10.2514/2.5331}
+}
+
+@InBook{mathews2004,
+  Title                    = {Nelder-Mead Method},
+  Author                   = {J.H. Mathews and K.K. Fink},
+  Chapter                  = {8 Numerical Optimization, Nelder-Mead Method},
+  Pages                    = {430-436},
+  Publisher                = {Prentice-Hall Inc.},
+  Year                     = {2004},
+  Edition                  = {4},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+
+@Article{matijevic1998,
+  Title                    = {Autonomous Navigation and the Sojourner Microrover},
+  Author                   = {J. Matijevic},
+  Journal                  = {Science},
+  Year                     = {1998},
+
+  Month                    = {April},
+  Number                   = {5362},
+  Pages                    = {454},
+  Volume                   = {280},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.26}
+}
+
+@InProceedings{mattingly2004,
+  Title                    = {Continuing evolution of Mars sample return},
+  Author                   = {Mattingly, Richard and Matousek, Steve and Jordan, Frank},
+  Booktitle                = {Aerospace Conference, 2004. Proceedings. 2004 IEEE},
+  Year                     = {2004},
+  Organization             = {IEEE},
+  Volume                   = {1},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.01}
+}
+
+@Article{mattingly2003,
+  Title                    = {Mars Sample Return, Updated to a Groundbreaking Approach},
+  Author                   = {Mattingly, Richard and Matousek, Steve and Jordan, Frank},
+  Year                     = {2003},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.01}
+}
+
+@InProceedings{mattingly2011,
+  Title                    = {Mars Sample Return as a campaign},
+  Author                   = {Mattingly, Richard and May, Lisa},
+  Booktitle                = {Aerospace Conference, 2011 IEEE},
+  Year                     = {2011},
+  Organization             = {IEEE},
+  Pages                    = {1-13},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.01}
+}
+
+@InProceedings{mayer1968development,
+  Title                    = {{Development of the Gemini operational rendezvous plan}},
+  Author                   = {Mayer, JP and Parten, RP},
+  Booktitle                = {Journal of spacecraft and rockets},
+  Year                     = {1968},
+  Month                    = {September},
+  Number                   = {9},
+  Organization             = {NASA Manned Spacecraft Center},
+  Pages                    = {1023--1028},
+  Volume                   = {5},
+
+  Doi                      = {10.2514/3.29415},
+  Journal                  = {Journal of spacecraft and rockets},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.20},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/3.29415}
+}
+
+@Article{mcallister2009,
+  Title                    = {Phoenix Landing Propulsion System Performance},
+  Author                   = {McAllister, J Greg and Parish, Carey},
+  Journal                  = {paper AIAA},
+  Year                     = {2009},
+  Pages                    = {2-5},
+  Volume                   = {5264},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@InCollection{mckay1979,
+  Title                    = {A Comparison of Three Methods for Selecting Values of Input Variables in the Analysis of Output From a Computer Code},
+  Author                   = {M.D. Mckay and R.J. Beckman and W.J. Conover},
+  Booktitle                = {Technometrics},
+  Publisher                = {Department of Mathematics, TExas Tech University},
+  Year                     = {2012},
+  Number                   = {1},
+  Pages                    = {55-61},
+  Volume                   = {42},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+
+@InProceedings{meijaard1991,
+  Title                    = {{A Comparison of Numerical Integration Methods with a View to Fast Simulation of Mechanical Dynamical Systems}},
+  Author                   = {Meijaard, JP},
+  Booktitle                = {Real-Time Integration Methods for Mechanical System Simulation},
+  Year                     = {1991},
+  Pages                    = {329-343},
+  Publisher                = {Springer},
+  Volume                   = {69},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.04},
+  Url                      = {http://link.springer.com/chapter/10.1007/978-3-642-76159-1_17}
+}
+
+@Article{miele1999,
+  Title                    = {Optimal trajectories and mirror properties for round-trip Mars missions},
+  Author                   = {Miele, A and Wang, T},
+  Journal                  = {Acta Astronautica},
+  Year                     = {1999},
+  Number                   = {11},
+  Pages                    = {655-668},
+  Volume                   = {45},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.01}
+}
+
+@InProceedings{milani1987,
+  Title                    = {{Integration error over very long time spans}},
+  Author                   = {Milani, Andrea and Nobili, Anna M},
+  Booktitle                = {Celestial mechanics},
+  Year                     = {1987},
+  Month                    = {March},
+  Number                   = {1},
+  Pages                    = {1-34},
+  Publisher                = {Springer},
+  Volume                   = {43},
+
+  Doi                      = {10.1007/BF01234550},
+  Journal                  = {Celestial mechanics},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.03},
+  Url                      = {http://link.springer.com/article/10.1007/BF01234550}
+}
+
+@MastersThesis{miranda2015,
+  Title                    = {Design Optimization of Ground and Air-Launched Hybrid Rockets},
+  Author                   = {F. Miranda},
+  School                   = {Delft University of Technology},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.30},
+  Url                      = {http://repository.tudelft.nl/view/ir/uuid%3A832aa36d-041b-4896-97a7-837f91cdc5d6/}
+}
+
+@Electronic{apollo1971,
+  Title                    = {{Apollo 11 Mission Report}},
+  Author                   = {{Mission Evaluation Team}},
+  Note                     = {[online database], URL: http://history.nasa.gov/alsj/a11/ [cited 15 October 2015]},
+  Organization             = {NASA Manned Spacecraft Center},
+  Url                      = {http://history.nasa.gov/alsj/a11/A11_MissionReport.pdf},
+  Year                     = {1971},
+
+  Institution              = {NASA Manned Spacecraft Center},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.24}
+}
+
+@InProceedings{montenbruck1992,
+  Title                    = {Numerical integration methods for orbital motion},
+  Author                   = {Montenbruck, Oliver},
+  Booktitle                = {Celestial Mechanics and Dynamical Astronomy},
+  Year                     = {1992},
+  Number                   = {1},
+  Pages                    = {59-69},
+  Volume                   = {53},
+
+  Journal                  = {Celestial Mechanics and Dynamical Astronomy},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.05}
+}
+
+@InProceedings{montenbruck1992numerical,
+  Title                    = {{Numerical integration of orbital motion using Taylor series}},
+  Author                   = {O. Montenbruck},
+  Booktitle                = {Spaceflight mechanics},
+  Year                     = {1992},
+  Note                     = {Available at JPL library},
+  Pages                    = {1217--1231},
+
+  Comment                  = {From the JPL library},
+  Journal                  = {Spaceflight mechanics},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.29}
+}
+
+@Misc{mooij2013dyn,
+  Title                    = {{AE3202-week1-lecture2ab-EOM}},
+
+  Author                   = {E. Mooij},
+  HowPublished             = {Lecture slides},
+  Month                    = {February},
+  Note                     = {[Internal publication] Course: Flight Dynamics},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.10}
+}
+
+@Misc{mooij2013entry,
+  Title                    = {{Re-entry Systems}},
+
+  Author                   = {E. Mooij},
+  HowPublished             = {Reader},
+  Month                    = {September},
+  Note                     = {Lecture Notes AE4870B},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.17}
+}
+
+@Misc{mooij2013para,
+  Title                    = {{AE4-870B 9 Planetary Entry and Descent}},
+
+  Author                   = {E. Mooij},
+  HowPublished             = {Lecture slides},
+  Month                    = {October},
+  Note                     = {[Internal publication] Coruse: Re-entry systems},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.25}
+}
+
+@Misc{mooij2013stat,
+  Title                    = {{AE3202-week1-lecture1b-Frames}},
+
+  Author                   = {E. Mooij},
+  HowPublished             = {Lecture slides, Delft University of Technology},
+  Month                    = {February},
+  Note                     = {[Internal publication] Course: Flight Dynamics},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.10}
+}
+
+@Conference{mooij2011passivity,
+  Title                    = {Passivity {A}nalysis for {N}on-{L}inear, {N}on-{S}tationary {E}ntry {C}apsule: {R}otational {M}otion},
+  Author                   = {E. Mooij},
+  Booktitle                = {{AIAA} {G}uidance, {N}avigation, and {C}ontrol {C}onference, {P}orltand, {O}regon},
+  Year                     = {2011},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.02.03},
+  Url                      = {http://repository.tudelft.nl/view/ir/uuid%3A7989ec76-c86d-4516-a0cc-df6f4affac82/}
+}
+
+@Book{mooij1994motion,
+  Title                    = {The motion of a vehicle in a planetary atmosphere},
+  Author                   = {E. Mooij},
+  Publisher                = {Delft University Press},
+  Year                     = {1994},
+
+  Address                  = {Delft},
+  Month                    = {December},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.17},
+  Url                      = {http://repository.tudelft.nl/assets/uuid:e5fce5a0-7bce-4d8e-8249-e23293edbb55/LR-768.pdf}
+}
+
+@Book{morton2003mapping,
+  Title                    = {Mapping {M}ars: {S}cience, {I}magination, and the {B}irth of a {W}orld},
+  Author                   = {Oliver Morton},
+  Publisher                = {Picador, New York},
+  Year                     = {2003},
+  Edition                  = {1},
+  Note                     = {avaiable at JPL library},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.01.29},
+  Url                      = {https://books.google.com/books?hl=nl&lr=&id=-FbuqCH5h50C&oi=fnd&pg=PP2&dq=Mapping+Mars++Science,+Imagination,+and+the+Birth+of+a+World&ots=Fguf9tNipE&sig=cnZ-3RX05CZjo79Lh8gWPkkA_kw#v=onepage&q=AIRY&f=false}
+}
+
+@Booklet{mooij2013fd,
+  Title                    = {{Flight Dynamics, Lecture Notes}},
+
+  Address                  = {Delft University of Technology},
+  Author                   = {J.A. Mulder and W.H.J.J. van Staveren and J.C. van der Vaart and E. de Weerdt and A.C. in 't Veld and E. Mooij},
+  HowPublished             = {Reader},
+  Month                    = {February},
+  Note                     = {[Internal publication] Course: Flight Dynamics},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.10}
+}
+
+@InProceedings{mungas2012,
+  Title                    = {{NOFBX Single Stage to Orbit Mars Ascent Vehicle}},
+  Author                   = {Mungas, Greg and Fisher, David and Vozoff, Joanne and Villa, Marco},
+  Booktitle                = {Aerospace Conference, 2012 IEEE},
+  Year                     = {2012},
+  Organization             = {IEEE},
+  Pages                    = {1-11},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.28},
+  Url                      = {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6187299}
+}
+
+@InProceedings{murtazin2014usage,
+  Title                    = {{Usage of pre-flight data in short rendezvous mission of Soyuz-TMA spacecrafts}},
+  Author                   = {Murtazin, Rafail and Petrov, Nikolay},
+  Booktitle                = {Acta Astronautica},
+  Year                     = {2014},
+  Month                    = {January},
+  Pages                    = {71--76},
+  Volume                   = {93},
+
+  Doi                      = {10.1016/j.actaastro.2013.06.026},
+  Journal                  = {Acta Astronautica},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.19},
+  Url                      = {http://ac.els-cdn.com/S0094576513002166/1-s2.0-S0094576513002166-main.pdf?_tid=c57dafc6-76ed-11e5-9c1d-00000aab0f6b&acdnat=1445320109_43105086ac43df660a69065748414c79}
+}
+
+@Article{murtazin2012short,
+  Title                    = {{Short profile for the human spacecraft Soyuz-TMA rendezvous mission to the ISS}},
+  Author                   = {Murtazin, Rafail and Petrov, Nikolay},
+  Journal                  = {Acta Astronautica},
+  Year                     = {2012},
+  Pages                    = {77--82},
+  Volume                   = {77},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.19},
+  Url                      = {http://ac.els-cdn.com/S0094576512000914/1-s2.0-S0094576512000914-main.pdf?_tid=106ab8e0-76ed-11e5-967b-00000aacb35f&acdnat=1445319806_5e858e8e0f2a458d3ced6fdf08d87e17}
+}
+
+@MastersThesis{musegaas2012,
+  Title                    = {{Optimization of Space Trajectories Including Multiple Gravity Assists and Deep Space Maneuvers}},
+  Author                   = {P. Musegaas},
+  School                   = {Delft University of Technology},
+  Year                     = {2012},
+  Month                    = {December},
+
+  Comment                  = {file:///D:/Downloads/Musegaas2012_ThesisReport_OptimizationOfHighThrustTrajectoriesIncludingMultiple_GravityAssistsAndDeepSpaceManeuvers.pdf},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10},
+  Url                      = {http://repository.tudelft.nl/view/ir/uuid%3A02468c77-5c64-4df8-9a24-1ed7ad9d1408/}
+}
+
+@TechReport{myatt2004,
+  Title                    = {{Advanced Global Optimisation for Mission Analysis and Design}},
+  Author                   = {Myatt, DR and Becerra, Victor M and Nasuto, Slowomir J and Bishop, JM},
+  Institution              = {University of Reading},
+  Year                     = {2004},
+  Note                     = {Ariadna id 03/4101},
+
+  Journal                  = {Final Report. Ariadna id 03/4101},
+  Owner                    = {Stacha},
+  Pages                    = {4101},
+  Timestamp                = {2015.07.30},
+  Url                      = {http://www.esa.int/gsp/ACT/doc/ARI/ARI%20Study%20Report/ACT-RPT-MAD-ARI-03-4101a-GlobalOptimisation-Reading.pdf},
+  Volume                   = {3}
+}
+
+@Electronic{nasafacts2013,
+  Title                    = {Low density supersonic decelerators},
+  Author                   = {NasaFacts},
+  HowPublished             = {website},
+  Month                    = {March},
+  Note                     = {NASA fact sheet},
+  Organization             = {NASA},
+  Url                      = {https://www.nasa.gov/pdf/737628main_Final_LDSD_Fact_Sheet_3-26-13.pdf},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.25}
+}
+
+@Article{natan2002,
+  Title                    = {The status of gel propellants in year 2000},
+  Author                   = {Natan, Benveniste and Rahimi, Shai},
+  Journal                  = {International journal of energetic materials and chemical propulsion},
+  Year                     = {2002},
+  Number                   = {1-6},
+  Volume                   = {5},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.28}
+}
+
+@InProceedings{naumann2011rocket,
+  Title                    = {Rocket propulsion with gelled propellants for sounding rockets},
+  Author                   = {Naumann, Karl Wieland and Ciezki, Helmut K and Stierle, Ralf and Schmid, Konrad and Ramsel, Jurgen},
+  Booktitle                = {Proceedings of the 20th symposium on European rocket and balloon programmes and related research, Fort Lauderdale, FL},
+  Year                     = {2011},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.05},
+  Url                      = {http://www.spaceflight.esa.int/pac-symposium_archives/files/papers/s4_8naum.pdf}
+}
+
+@MastersThesis{nelson2001qualitative,
+  Title                    = {Qualitative and Quantitative assessment of optimal trajectories by implicit simulation (OTIS) and program to optimize simulated trajectories (POST)},
+  Author                   = {D. Nelson},
+  School                   = {Georgia Institude of Technology},
+  Year                     = {2001},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.01.13},
+  Url                      = {http://www.ssdl.gatech.edu/papers/mastersProjects/NelsonD-8900.pdf}
+}
+
+@Misc{noomen2013,
+  Title                    = {ae4-878.optimistion.v4-7},
+
+  Author                   = {R. Noomen},
+  HowPublished             = {Lecture slides, Delft University of Technology},
+  Month                    = {October},
+  Note                     = {[Internal publication] Course: Mission Geometry and Orbit Design},
+  Year                     = {2013},
+
+  Comment                  = {Lecture in the Mission design lecture series},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+
+@Misc{noomen2013basic,
+  Title                    = {ae4-878.basics.v4-14},
+
+  Author                   = {R. Noomen},
+  HowPublished             = {Lecture slides, Delft University of Technology},
+  Month                    = {September},
+  Note                     = {[Internal publication] Course: Mission Geometry and Orbit Design},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.10}
+}
+
+@Misc{noomen2013int,
+  Title                    = {ae4-878.integrators.v4-3},
+
+  Author                   = {R. Noomen},
+  HowPublished             = {Lecture slides, Delft University of Technology},
+  Month                    = {September},
+  Note                     = {[Internal publication] Course: Mission Geometry and Orbit Design},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.30}
+}
+
+@Misc{noomen2013orbit,
+  Title                    = {ae4-878.orbit-design.v4-7},
+
+  Author                   = {R. Noomen},
+  HowPublished             = {Lecture slides, Delft University of Technology},
+  Month                    = {December},
+  Note                     = {[Internal publication] Course: Mission Geometry and Orbit Design},
+  Year                     = {2013},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.31}
+}
+
+@Misc{noomen2011kepler,
+  Title                    = {{AE2-104, lecture hours 15+16: Kepler orbit, specialized orbits}},
+
+  Author                   = {R. Noomen},
+  HowPublished             = {Lecture slides, Delft University of Technology},
+  Month                    = {October},
+  Note                     = {[Internal publication] Course: Flight and Orbital Mechanics},
+  Year                     = {2011},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.01}
+}
+
+@Misc{olufse,
+  Title                    = {Nelder Mead},
+
+  Author                   = {M. Olufse},
+  Note                     = {Presentation},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10},
+  Url                      = {http://www4.ncsu.edu/~msolufse/}
+}
+
+@MastersThesis{pagano2010thesis,
+  Title                    = {Global {L}auncher {T}rajectory {O}ptimization for {L}unar {B}ase {S}ettlement},
+  Author                   = {A. Pagano},
+  School                   = {Delft University of Technology},
+  Year                     = {2010},
+  Month                    = {May},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.16},
+  Url                      = {http://repository.tudelft.nl/view/ir/uuid%3Afa96b280-af15-4520-b528-f93b07752e8d/}
+}
+
+@InProceedings{pagano2010global,
+  Title                    = {{Global Launcher Trajectory Optimization for Lunar Base Settlement}},
+  Author                   = {Pagano, Antonio and Mooij, Erwin},
+  Booktitle                = {AIAA/AAS Astrodynamics Specialist Conference, Toronto, Canada, 2-5 August 2010; AIAA 2010-8387},
+  Year                     = {2010},
+  Organization             = {American Institute of Aeronautics and Astronautics (AIAA)},
+
+  Doi                      = {10.2514/6.2010-8387},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.16},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2010-8387}
+}
+
+@Article{patel1998,
+  Title                    = {Mars free return trajectories},
+  Author                   = {Patel, Moonish R and Longuski, James M and Sims, Jon A},
+  Journal                  = {Journal of Spacecraft and Rockets},
+  Year                     = {1998},
+
+  Month                    = {June},
+  Number                   = {3},
+  Pages                    = {350-354},
+  Volume                   = {35},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.01}
+}
+
+@Article{pearson1975,
+  Title                    = {The orbital tower: a spacecraft launcher using the Earth's rotational energy},
+  Author                   = {J. Pearson},
+  Journal                  = {Acta Astronautica},
+  Year                     = {1975},
+  Number                   = {9},
+  Pages                    = {785-799},
+  Volume                   = {2},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.29}
+}
+
+@Article{pellegrini2014threeb,
+  Title                    = {F AND G TAYLOR SERIES SOLUTIONS TO THE CIRCULAR RESTRICTED THREE BODY PROBLEM},
+  Author                   = {Pellegrini, Etienne and Russell, Ryan P},
+  Journal                  = {AAS/AIAA Space Flight Mechanics Meeting},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.29},
+  Url                      = {https://www.researchgate.net/profile/Etienne_Pellegrini/publication/261026410_F_and_G_Taylor_Series_Solutions_to_the_Circular_Restricted_Three-Body_Problem/links/0c96053307701d14a8000000.pdf}
+}
+
+@Article{pellegrini2014f,
+  Title                    = {F and G Taylor series solutions to the Stark and Kepler problems with Sundman transformations},
+  Author                   = {Pellegrini, Etienne and Russell, Ryan P and Vittaldev, Vivek},
+  Journal                  = {Celestial Mechanics and Dynamical Astronomy},
+  Year                     = {2014},
+
+  Month                    = {March},
+  Number                   = {4},
+  Pages                    = {355--378},
+  Volume                   = {118},
+
+  Doi                      = {10.1007/s10569-014-9538-7},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.29},
+  Url                      = {http://download.springer.com/static/pdf/298/art%253A10.1007%252Fs10569-014-9538-7.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10569-014-9538-7&token2=exp=1443563316~acl=%2Fstatic%2Fpdf%2F298%2Fart%25253A10.1007%25252Fs10569-014-9538-7.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1007%252Fs10569-014-9538-7*~hmac=1447b4efac521dbc7e2e7f335d95d606aed50f2a85efdb0cc53a00728e841952}
+}
+
+@Article{pepper1968,
+  Title                    = {Development of a composite structure hypersonic parachute},
+  Author                   = {Pepper, William B},
+  Journal                  = {Journal of Spacecraft and Rockets},
+  Year                     = {1968},
+
+  Month                    = {September},
+  Number                   = {4},
+  Pages                    = {495-497},
+  Volume                   = {6},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@Conference{sanchez2015many,
+  Title                    = {Many-revolution low-thrust orbit transfer computation using equinoctial Q-law including J2 and eclipse effects},
+  Author                   = {J.M. Sanchez Perez and G.I. Varga},
+  Booktitle                = {AAS/AIAA Astrodynamics Specialist Conference, Vail, Colorado},
+  Year                     = {2015},
+  Month                    = {August},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.01.14}
+}
+
+@Article{perminov1999,
+  Title                    = {The difficult road to Mars},
+  Author                   = {V.G. Perminov},
+  Journal                  = {National Aeronautics and Space Administration Monographs in Aerospace History},
+  Year                     = {1999},
+  Number                   = {15},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.24}
+}
+
+@InProceedings{petropoulos2005refinements,
+  Title                    = {{Refinements to the Q-law for low-thrust orbit transfers}},
+  Author                   = {Petropoulos, Anastassios E},
+  Booktitle                = {Advances in the Astronautical Sciences},
+  Year                     = {2005},
+  Note                     = {available at JPL library},
+  Pages                    = {963--983},
+  Volume                   = {120},
+
+  Journal                  = {Advances in the Astronautical Sciences},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.02}
+}
+
+@Conference{petropoulos2004low,
+  Title                    = {{Low-Thrust Orbit Transfers Using Candidate Lyapunov Functions with a Mechanism for Coasting}},
+  Author                   = {Petropoulos, Anastassios E},
+  Booktitle                = {AIAA/AAS Astrodynamics Specialis Conference and Exhibit, Providence, Rhode Island},
+  Year                     = {2004},
+
+  Doi                      = {10.2514/6.2004-5089},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.01},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2004-5089}
+}
+
+@Conference{petropoulos2003simple,
+  Title                    = {Simple control laws for low-thrust orbit transfers},
+  Author                   = {A. E. Petropoulos},
+  Booktitle                = {AAS/AIAA Astrodynamics Specialists Conference, Big Sky, MT},
+  Year                     = {2003},
+  Note                     = {available at JPL library},
+
+  Journal                  = {AAS 03-630, AAS/AIAA Astrodynamics Specialists Conference, Big Sky, MT. 3-7 Aug},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.03}
+}
+
+@Article{plotard2003,
+  Title                    = {Entry system development for Martian landers},
+  Author                   = {Plotard, Patrice and Watillon, Philippe and Labaste, Vincent},
+  Journal                  = {Space Technology-Abingdon},
+  Year                     = {2003},
+  Number                   = {4},
+  Pages                    = {207-216},
+  Volume                   = {23},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.24}
+}
+
+@Conference{polk1999validation,
+  Title                    = {{Validation of the NSTAR ion propulsion system on the Deep Space One mission: overview and initial results}},
+  Author                   = {Polk, JE and Kakuda, RY and Anderson, JR and Brophy, JR and Rawlin, VK and Patterson, MJ and Sovey, J and Hamley, J},
+  Booktitle                = {35th AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit},
+  Year                     = {1999},
+  Pages                    = {2274},
+  Volume                   = {99},
+
+  Doi                      = {10.2514/6.1999-2274},
+  Journal                  = {AIAA paper},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.25},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.1999-2274}
+}
+
+@Book{price2005differential,
+  Title                    = {{Differential Evolution: A Practical Approach to Global Optimization}},
+  Author                   = {Price, Kenneth V and Storn, Rainer M and Lampinen, Jouni A},
+  Editor                   = {G. Rozenberg},
+  Publisher                = {Springer, Berlin},
+  Year                     = {2005},
+
+  Comment                  = {Only through JPL},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.21},
+  Url                      = {http://download.springer.com/static/pdf/904/bok%253A978-3-540-31306-9.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Fbook%2F10.1007%2F3-540-31306-0&token2=exp=1445467588~acl=%2Fstatic%2Fpdf%2F904%2Fbok%25253A978-3-540-31306-9.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Fbook%252F10.1007%252F3-540-31306-0*~hmac=d94bbf02164d5916ec06f5885c6ea3f58a4161130b57ab05b6a1c90abe350d8f}
+}
+
+@Book{qing2009differential,
+  Title                    = {{Differential Evolution: Fundamentals and Applications in Electrical Engineering}},
+  Author                   = {Qing, Anyong},
+  Publisher                = {John Wiley \& Sons, Singapore},
+  Year                     = {2009},
+  Month                    = {September},
+
+  Comment                  = {Not public},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.22},
+  Url                      = {http://ieeexplore.ieee.org/xpl/bkabstractplus.jsp?bkn=5361052}
+}
+
+@InProceedings{quinn1991,
+  Title                    = {{A three million year integration of the Earth's orbit}},
+  Author                   = {Quinn, Thomas R and Tremaine, Scott and Duncan, Martin},
+  Booktitle                = {The Astronomical Journal},
+  Year                     = {1991},
+  Number                   = {6},
+  Pages                    = {2287-2305},
+  Volume                   = {101},
+
+  Journal                  = {The Astronomical Journal},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.05},
+  Url                      = {http://articles.adsabs.harvard.edu/cgi-bin/nph-iarticle_query?1991AJ....101.2287Q&defaultprint=YES&filetype=.pdf}
+}
+
+@InProceedings{ramos2005,
+  Title                    = {{Variable stepsize St{\"o}rmer-Cowell methods}},
+  Author                   = {Ramos, Higinio and Vigo-Aguiar, Jesus},
+  Booktitle                = {Mathematical and Computer Modelling},
+  Year                     = {2005},
+  Number                   = {7},
+  Pages                    = {837-846},
+  Volume                   = {42},
+
+  Doi                      = {10.1016/j.mcm.2005.09.011},
+  Journal                  = {Mathematical and Computer Modelling},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.04},
+  Url                      = {http://www.researchgate.net/publication/229304876_Variable_stepsize_Stormer-Cowell_methods}
+}
+
+@InProceedings{rauwolf1996,
+  Title                    = {Near-optimal low-thrust orbit transfers generated by a genetic algorithm},
+  Author                   = {Rauwolf, Gerald A and Coverstone-Carroll, Victoria L},
+  Booktitle                = {Journal of Spacecraft and Rockets},
+  Year                     = {1996},
+  Number                   = {6},
+  Pages                    = {859-862},
+  Volume                   = {33},
+
+  Doi                      = {10.2514/3.26850},
+  Journal                  = {Journal of Spacecraft and Rockets},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.30},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/3.26850}
+}
+
+@Article{ray2011air,
+  Title                    = {Air Force satellite's epic ascent should finish soon},
+  Author                   = {J. Ray},
+  Journal                  = {Spaceflight now},
+  Year                     = {2011},
+
+  Month                    = {October},
+  Note                     = {News article},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.18},
+  Url                      = {http://spaceflightnow.com/atlas/av019/111009.html}
+}
+
+@PhdThesis{ridolfi2013space,
+  Title                    = {Space systems conceptual design: Analysis method for engineering-team suport},
+  Author                   = {G. Ridolfi},
+  School                   = {Delft University of Technology},
+  Year                     = {2013},
+  Month                    = {April},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.21},
+  Url                      = {http://repository.tudelft.nl/view/ir/uuid%3Aabb30ba0-5307-4592-aa4f-6016c0cd85f8/}
+}
+
+@Electronic{diaz2008generic,
+  Title                    = {{Generic frame definition Kernel file for ESA planetary missions}},
+  Author                   = {Jorge Diaz del Rio},
+  Month                    = {August},
+  Note                     = {[online database], URL: http://naif.jpl.nasa.gov/pub/naif/VEX/kernels/fk/RSSD0002.TF [cited 8 December 2015]},
+  Organization             = {ESA},
+  Url                      = {http://naif.jpl.nasa.gov/pub/naif/VEX/kernels/fk/RSSD0002.TF},
+  Year                     = {2008},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.12.08}
+}
+
+@Conference{romgens2011verified,
+  Title                    = {{Verified Interval Orbit Propagation in Satellite Collision Avoidance}},
+  Author                   = {Romgens, Bart A and Mooij, Erwin and Naeije, Marc C},
+  Booktitle                = {AIAA Guidance, Navigation, and Control, Portland, OR},
+  Year                     = {2011},
+  Month                    = {August},
+
+  Doi                      = {10.2514/6.2011-6653},
+  Journal                  = {AIAA Guidance, Navigation, and Control, Portland, OR},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.29},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2011-6653}
+}
+
+@Article{roth1985gaussian,
+  Title                    = {The gaussian form of the variation-of-parameter equations formulated in equinoctial elements—applications: airdrag and radiation pressure},
+  Author                   = {E.A. Roth},
+  Journal                  = {Acta Astronautica},
+  Year                     = {1985},
+  Number                   = {10},
+  Pages                    = {719--730},
+  Volume                   = {12},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.30},
+  Url                      = {http://ac.els-cdn.com/0094576585900888/1-s2.0-0094576585900888-main.pdf?_tid=132530fa-97be-11e5-8c29-00000aab0f01&acdnat=1448928012_2d5c0aefc9aa99b25d00f9581502af3a}
+}
+
+@Conference{sagliano2015real,
+  Title                    = {Real {T}ime {A}daptive {F}eedforward {G}uidance for {E}ntry {V}ehicles},
+  Author                   = {M. Sagliano and T. Oehlschlagel and S. Theil and E. Mooij},
+  Booktitle                = {3rd {CEAS} {E}uro{GNC}, {S}pecialist {C}onference on {G}uidance, {N}avigation and {C}ontrol, {T}oulouse},
+  Year                     = {2015},
+  Month                    = {April},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.02.03},
+  Url                      = {http://repository.tudelft.nl/view/ir/uuid%3A36b81e27-ac4f-43a1-8d9d-ec7dba730b63/}
+}
+
+@Electronic{wiki_hazcam,
+  Title                    = {Mars Exploration Rover Technical Data},
+  Author                   = {Rupert Scammell},
+  HowPublished             = {website},
+  Url                      = {http://hobbiton.thisside.net/rovermanual/},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.26}
+}
+
+@Electronic{schaeff2014low,
+  Title                    = {{Low Thrust Trajectory Optimization for Orbit Raising Applications}},
+  Author                   = {S. Schaeff and S.O. Erb},
+  HowPublished             = {Presentation, Second U.K. Workshop on Optimisation in Space Engineering},
+  Month                    = {March},
+  Note                     = {[online database], URL: http://www.turing-gateway.cam.ac.uk/documents/ [cited 18 October 2015]},
+  Organization             = {Astos Solutions and the European Space Agency},
+  Url                      = {http://www.turing-gateway.cam.ac.uk/documents/Schaeff.pdf},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.18}
+}
+
+@InProceedings{scott2010high,
+  Title                    = {{High-speed solution of spacecraft trajectory problems using Taylor series integration}},
+  Author                   = {Scott, James R and Martini, Michael C},
+  Booktitle                = {Journal of Spacecraft and Rockets},
+  Year                     = {2010},
+  Month                    = {January},
+  Number                   = {1},
+  Pages                    = {199--202},
+  Volume                   = {47},
+
+  Doi                      = {10.2514/1.43459},
+  Journal                  = {Journal of Spacecraft and Rockets},
+  Keywords                 = {Taylor Series Integration},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.29},
+  Url                      = {http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20110016047.pdf}
+}
+
+@Conference{scott2008high,
+  Title                    = {{High speed solution of spacecraft trajectory problems using Taylor series integration}},
+  Author                   = {Scott, James R and Martini, Michael C},
+  Booktitle                = {AIAA/AAS Astrodynamics Specialist Conference and Exhibit, Honolulu, Hawaii},
+  Year                     = {2008},
+  Month                    = {August},
+
+  Doi                      = {10.2514/6.2008-6957},
+  Journal                  = {AIAA/AAS Astrodynamics Specialist Conference and Exhibit},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.26},
+  Url                      = {http://arc.aiaa.org/doi/abs/10.2514/6.2008-6957}
+}
+
+@InProceedings{selvi2010comparative,
+  Title                    = {{Comparative Analysis of Ant Colony and Particle Swarm Optimization Techniques}},
+  Author                   = {V. Selvi and R. Umarani},
+  Booktitle                = {International Journal of Computer Applications},
+  Year                     = {2010},
+  Number                   = {4},
+  Volume                   = {5},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.01.12},
+  Url                      = {http://www.ijcaonline.org/volume5/number4/pxc3871286.pdf}
+}
+
+@Conference{sengupta2012,
+  Title                    = {{Systems Engineering and Technology Considerations of a Mars Ascent Vehicle}},
+  Author                   = {Sengupta, Anita and Kennett, Andrew and Pauken, Mike and Trinidad, Mark and Zabrensky, Ed},
+  Booktitle                = {2011 IEEE Aerospace Conference},
+  Year                     = {2012},
+  Month                    = {March},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.28},
+  Url                      = {http://trs-new.jpl.nasa.gov/dspace/bitstream/2014/43568/1/11-5008_A1b.pdf}
+}
+
+@Article{sharifi2011dynamic,
+  Title                    = {Dynamic orbit propagation in a gravitational field of an inhomogeneous attractive body using the Lagrange coefficients},
+  Author                   = {Sharifi, MA and Seif, MR},
+  Journal                  = {Advances in Space Research},
+  Year                     = {2011},
+
+  Month                    = {April},
+  Number                   = {5},
+  Pages                    = {904--913},
+  Volume                   = {48},
+
+  Doi                      = {10.1016/j.asr.2011.04.021},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.29},
+  Url                      = {http://ac.els-cdn.com/S0273117711002821/1-s2.0-S0273117711002821-main.pdf?_tid=0ebd5614-66f4-11e5-8e24-00000aacb362&acdnat=1443563591_41c03415aacb2aa1144dede201221440}
+}
+
+@Conference{sims2006implementation,
+  Title                    = {{Implementation of a Low-Thrust Trajectory Optimization Algorithm for Preliminary Design}},
+  Author                   = {Sims, Jon A and Finlayson, Paul A and Rinderle, Edward A and Vavrina, Matthew A and Kowalkowski, Theresa D},
+  Booktitle                = {AIAA/AAS Astrodynamics Specialist Conference and Exhibit, Keystone, Colorado},
+  Year                     = {2006},
+  Month                    = {August},
+  Publisher                = {NASA Jet Propulsion Laboratory},
+
+  Doi                      = {10.2514/6.2006-6746},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.19},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2006-6746}
+}
+
+@InProceedings{smith2002,
+  Title                    = {{Aerothermodynamic environment of the Beagle 2 entry capsule}},
+  Author                   = {Smith, AJ and PArnaby, GD and Matthews, AJ and Jones, TV},
+  Booktitle                = {Fourth Symposium on Aerothermodynamics for Space Vehicles},
+  Year                     = {2002},
+  Pages                    = {271},
+  Volume                   = {487},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.17}
+}
+
+@InProceedings{smith1998relationship,
+  Title                    = {{The relationship between MOLA northern hemisphere topography and the 6.1-mbar atmospheric pressure surface of Mars}},
+  Author                   = {D.E. Smith and M.T. Zuber},
+  Booktitle                = {Geophysical research letters},
+  Year                     = {1998},
+  Month                    = {December},
+  Number                   = {24},
+  Pages                    = {4397--4400},
+  Volume                   = {25},
+
+  Journal                  = {Geophysical research letters},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.19},
+  Url                      = {http://www-geodyn.mit.edu/zubersite/pdfs/Smith_25GRL1998.pdf}
+}
+
+@InProceedings{smith2001mars,
+  Title                    = {{Mars Orbiter Laser Altimeter: Experiment summary after the first year of global mapping of Mars}},
+  Author                   = {Smith, David E and Zuber, Maria T and Frey, Herbert V and Garvin, James B and Head, James W and Muhleman, Duane O and Pettengill, Gordon H and Phillips, Roger J and Solomon, Sean C and Zwally, H Jay and others},
+  Booktitle                = {Journal of Geophysical Research},
+  Year                     = {2001},
+  Number                   = {E10},
+  Pages                    = {23689--23722},
+  Volume                   = {106},
+
+  Journal                  = {Journal of Geophysical Research: Planets (1991--2012)},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.19},
+  Url                      = {http://www-geodyn.mit.edu/mola.summary.pdf}
+}
+
+@InProceedings{sobol1998,
+  Title                    = {{On quasi-Monte Carlo integrations}},
+  Author                   = {I.M. Sobol},
+  Booktitle                = {Mathematics and Computers in Simulation},
+  Year                     = {1998},
+  Month                    = {August},
+  Pages                    = {103-112},
+  Publisher                = {Elsevier},
+  Volume                   = {47},
+
+  Abstract                 = {Relations between Monte Carlo and quasi-Monte Carlo methods are analysed from both theoretical and practical points of view with special emphasis on high-dimensional integration.},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.29},
+  Url                      = {http://ac.els-cdn.com/S0378475498000962/1-s2.0-S0378475498000962-main.pdf?_tid=548a49f4-35d5-11e5-94e4-00000aacb35d&acdnat=1438162786_6e053c4dc1d068c326fc92767ad5ba3b}
+}
+
+@Article{soffen1977,
+  Title                    = {The Viking project},
+  Author                   = {Soffen, Gerald A},
+  Journal                  = {Journal of Geophysical Research},
+  Year                     = {1977},
+
+  Month                    = {September},
+  Number                   = {28},
+  Pages                    = {3959-3970},
+  Volume                   = {82},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@Article{solorzano2007,
+  Title                    = {Third-body perturbation using a single averaged model: application in nonsingular variables},
+  Author                   = {Solorzano, Carlos Renato Huaura and Prado, Antonio Fernando Bertachini de Almeida},
+  Journal                  = {Mathematical Problems in Engineering},
+  Year                     = {2007},
+  Volume                   = {2007},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.13}
+}
+
+@Misc{sostaric2010,
+  Title                    = {{The Challenge of Mars EDL (Entry, Descent, and Landing)}},
+
+  Author                   = {Sostaric, Ron},
+  HowPublished             = {Presentation},
+  Month                    = {April},
+  Note                     = {NASA Johnsono Space Center},
+  Year                     = {2010},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.25},
+  Url                      = {http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20100017668.pdf}
+}
+
+@Conference{sostaric2008lunar,
+  Title                    = {{Lunar ascent and rendezvous trajectory design}},
+  Author                   = {Sostaric, Ronald R and Merriam, Robert S},
+  Booktitle                = {31st Annual AAS Guidance and Control Conference, Breckenridge, Colorado},
+  Year                     = {2008},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.16},
+  Url                      = {http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20080009584.pdf}
+}
+
+@InCollection{stein1987,
+  Title                    = {Large Sample Properties of Simulations Using Latin Hypercube Sampling},
+  Author                   = {M. Stein},
+  Booktitle                = {Technometrics},
+  Publisher                = {Department of Statistics, University of Chicago},
+  Year                     = {1987},
+  Number                   = {2},
+  Volume                   = {29},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.10}
+}
+
+@Article{steinfeldt2006,
+  Title                    = {High mass Mars entry, descent, and landing architecture assessment},
+  Author                   = {Steinfeldt, Bradley A and Theisinger, John E and Korzun, Ashley M and Clark, Ian G and Grant, Michael J and Braun, Robert D},
+  Journal                  = {AIAA Paper},
+  Year                     = {2006},
+  Volume                   = {6684},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@InProceedings{steltzner2006,
+  Title                    = {{Mars Science Laboratory entry, descent, and landing system}},
+  Author                   = {Steltzner, Adam and Kipp, Devin and Chen, Allen and Burkhart, Dan and Guernsey, Carl and Mendeck, Gavin and Mitcheltree, Robert and Powell, Richard and Rivellini, Tommaso and Martin, Miguel San and others},
+  Booktitle                = {Aerospace Conference, 2006 IEEE},
+  Year                     = {2006},
+  Organization             = {IEEE},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.17}
+}
+
+@Conference{stephenson2002,
+  Title                    = {{Mars ascent vehicle - Concept development}},
+  Author                   = {D.D. Stephenson},
+  Booktitle                = {38th Joint Propulsion Conference and Exhibit, Indianapolos, Indiana},
+  Year                     = {2002},
+  Publisher                = {AIAA},
+  Volume                   = {4318},
+
+  Doi                      = {10.2514/6.2002-4318},
+  Journal                  = {AIAA Paper},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.28},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2002-4318}
+}
+
+@InProceedings{stephenson2006,
+  Title                    = {{Mars ascent vehicle key elements of a Mars Sample Return mission}},
+  Author                   = {Stephenson, David D and Willenberg, Harvey J},
+  Booktitle                = {Aerospace Conference, 2006 IEEE},
+  Year                     = {2006},
+  Organization             = {IEEE},
+  Pages                    = {11},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.28},
+  Url                      = {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1655737}
+}
+
+@Electronic{stone1999,
+  Title                    = {{Rice Mars}},
+  Author                   = {C. Stone},
+  HowPublished             = {presentation/website},
+  Month                    = {November},
+  Note                     = {[online database], URL: http://www.slideshare.net/cliffordstone/rice-mars-nov99 [cited 25 October 2015]},
+  Url                      = {http://www.slideshare.net/cliffordstone/rice-mars-nov99},
+  Year                     = {1999},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.28}
+}
+
+@InProceedings{storn1997differential,
+  Title                    = {{Differential Evolution - A simple and efficient heuristic for global optimization over continuous spaces}},
+  Author                   = {Storn, Rainer and Price, Kenneth},
+  Booktitle                = {Journal of global optimization},
+  Year                     = {1997},
+  Number                   = {4},
+  Pages                    = {341--359},
+  Publisher                = {Springer},
+  Volume                   = {11},
+
+  Comment                  = {Only through TUDelft},
+  Journal                  = {Journal of global optimization},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.21},
+  Url                      = {http://download.springer.com/static/pdf/382/art%253A10.1023%252FA%253A1008202821328.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1023%2FA%3A1008202821328&token2=exp=1445461359~acl=%2Fstatic%2Fpdf%2F382%2Fart%25253A10.1023%25252FA%25253A1008202821328.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1023%252FA%253A1008202821328*~hmac=8729a85dea5e42a060668510dc4fccf1ac1c694fce939a49dd18e8a7f6dfab6e}
+}
+
+@TechReport{storn1995differential,
+  Title                    = {{Differential Evolution - A simple and efficient adaptive scheme for global optimization over continuous spaces}},
+  Author                   = {Storn, Rainer and Price, Kenneth},
+  Institution              = {ICSI, USA},
+  Year                     = {1995},
+  Note                     = {TR-95-012},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.21},
+  Url                      = {http://www1.icsi.berkeley.edu/ftp/pub/techreports/1995/tr-95-012.pdf}
+}
+
+@Article{strauss1967,
+  Title                    = {Superlight ablative systems for Mars lander thermal protection},
+  Author                   = {Strauss, Eric L},
+  Journal                  = {Journal of Spacecraft and Rockets},
+  Year                     = {1967},
+
+  Month                    = {October},
+  Number                   = {10},
+  Pages                    = {1304-1309},
+  Volume                   = {4},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.24}
+}
+
+@Electronic{crankshaft,
+  Title                    = {what-when-how Mars},
+  Author                   = {{The Crankshaft}},
+  HowPublished             = {website},
+  Organization             = {The Crankshaft Publishing},
+  Url                      = {http://what-when-how.com/space-science-and-technology/mars/},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.18}
+}
+
+@Electronic{martin1975,
+  Title                    = {Ablative Heat Shield Materials},
+  Author                   = {{The Martin Company}},
+  Organization             = {Martin Marietta (Lockheed Martin)},
+  Url                      = {http://www.lockheedmartin.com/content/dam/lockheed/data/space/documents/thermalprotection/SLA-561%20Product%20Information.pdf},
+  Year                     = {1975(?)},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.24}
+}
+
+@InProceedings{tito2013,
+  Title                    = {{Feasibility analysis for a manned Mars free-return mission in 2018}},
+  Author                   = {Tito, Dennis A and Anderson, Grant and Carrico, John P and Clark, Jonathan and Finger, Barry and Lantz, Gary A and Loucks, Michel E and MacCallum, Taber and Poynter, Jane and Squire, Thomas H and others},
+  Booktitle                = {Aerospace Conference, 2013 IEEE},
+  Year                     = {2013},
+  Organization             = {IEEE},
+  Pages                    = {1-18},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.01}
+}
+
+@InProceedings{trinidad2012,
+  Title                    = {{Mars Ascent Vehicle system studies and baseline conceptual design}},
+  Author                   = {Trinidad, Mark and Zabrensky, Edward and Sengupta, Anita},
+  Booktitle                = {Aerospace Conference, 2012 IEEE},
+  Year                     = {2012},
+  Organization             = {IEEE},
+  Pages                    = {1-13},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.28},
+  Url                      = {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6187297}
+}
+
+@Electronic{wiki_srm,
+  Title                    = {Sample return missions},
+  Author                   = {Unknown},
+  Month                    = {July},
+  Organization             = {Wikipedia},
+  Url                      = {https://en.wikipedia.org/wiki/Sample_return_mission},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.24}
+}
+
+@MastersThesis{vandamme2012assisted,
+  Title                    = {Assisted-{L}aunch {P}erformance {A}nalysis},
+  Author                   = {Jan Vandamme},
+  School                   = {Delft University of Technology},
+  Year                     = {2012},
+  Month                    = {December},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.02.01},
+  Url                      = {http://repository.tudelft.nl/view/ir/uuid%3A207342ce-6bfe-4256-bf44-844f955a2534/}
+}
+
+@Conference{vasile2008,
+  Title                    = {{On Testing Global Optimization Algorithms for Space Trajectory Design}},
+  Author                   = {Vasile, Massimiliano and Minisci, Edmondo and Locatelli, Marco},
+  Booktitle                = {AIAA/AAS Astrodynamics Specialist Conference and Exhibit, Honolulu, Hawaii},
+  Year                     = {2008},
+
+  Doi                      = {10.2514/6.2008-6277},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.30},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2008-6277}
+}
+
+@Book{verschuren2010design,
+  Title                    = {Designing a research project},
+  Author                   = {Verschuren, Piet and Doorewaard, Hand},
+  Publisher                = {Eleven International Publishing},
+  Year                     = {2010},
+
+  Address                  = {The Hague},
+  Edition                  = {2},
+
+  Comment                  = {Book of Research Methodologies},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.14}
+}
+
+@Electronic{viotti2015,
+  Title                    = {SpaceSpace: Aeroshell},
+  Author                   = {M. Viotti},
+  HowPublished             = {Website},
+  Organization             = {NASA},
+  Url                      = {http://mars.nasa.gov/mer/mission/spacecraft_edl_aeroshell.html},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.24}
+}
+
+@Booklet{visser2014,
+  Title                    = {{Aircraft performance optimization Course AE4447}},
+
+  Address                  = {Delft University of Technology},
+  Author                   = {H.G. Visser},
+  HowPublished             = {Reader},
+  Month                    = {January},
+  Note                     = {[Internal publication]},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.28}
+}
+
+@Electronic{wade2015r,
+  Title                    = {R-40B},
+  Author                   = {M. Wade},
+  HowPublished             = {Website},
+  Organization             = {Encyclopedia Astronautica},
+  Url                      = {http://www.astronautix.com/engines/r40b.htm},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.10}
+}
+
+@Electronic{wade2015xlr,
+  Title                    = {XLR132},
+  Author                   = {M. Wade},
+  HowPublished             = {Website},
+  Organization             = {Encyclopedia Astronautica},
+  Url                      = {http://www.astronautix.com/engines/xlr132.htm},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.10}
+}
+
+@Booklet{wakker2010,
+  Title                    = {{Astrodynamics-II Course AE4874, part 2}},
+
+  Address                  = {Delft University of Technology},
+  Author                   = {K.F. Wakker},
+  HowPublished             = {Reader},
+  Month                    = {April},
+  Note                     = {[Internal publication] Course: Astrodynamics-II},
+  Year                     = {2010},
+
+  Comment                  = {Delft University of Technology},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.31}
+}
+
+@Booklet{wakker2010astro1,
+  Title                    = {{Astrodynamics-I Course AE4874, Part 1}},
+
+  Address                  = {Delft University of Technology},
+  Author                   = {K.F. Wakker},
+  HowPublished             = {Reader},
+  Month                    = {March},
+  Note                     = {[Internal publication] Course: Astrodynamics I},
+  Year                     = {2010},
+
+  Keywords                 = {Awesome},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.30}
+}
+
+@InProceedings{wales1997global,
+  Title                    = {{Global Optimization by Basin-Hopping and the Lowest Energy Structures of Lennard-Jones Clusters Containing up to 110 Atoms}},
+  Author                   = {Wales, David J and Doye, Jonathan PK},
+  Booktitle                = {The Journal of Physical Chemistry A},
+  Year                     = {1997},
+  Number                   = {28},
+  Pages                    = {5111--5116},
+  Volume                   = {101},
+
+  Doi                      = {10.1021/jp970984n},
+  Journal                  = {The Journal of Physical Chemistry A},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.23},
+  Url                      = {http://pubs.acs.org/doi/pdfplus/10.1021/jp970984n}
+}
+
+@InProceedings{way2007,
+  Title                    = {Mars Science Laboratory: Entry, descent, and landing system performance},
+  Author                   = {Way, David W and Powel, Richard W and Chen, Allen and Steltzner, Adam D and Burkhart, P Daniel and Mendeck, Gavin F and others},
+  Booktitle                = {Aerospace Conference, 2007 IEEE},
+  Year                     = {2007},
+  Pages                    = {1-19},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.24},
+  Url                      = {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4161337}
+}
+
+@Electronic{webster2015,
+  Title                    = {'Lost' 2003 Mars Lander Found by Mars Reconnaissance Orbiter},
+  Author                   = {G. Webster},
+  Month                    = {January},
+  Organization             = {NASA},
+  Url                      = {http://www.nasa.gov/jpl/lost-2003-mars-lander-found-by-mars-reconnaissance-orbiter/#.VbTA4fntlBc},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.26}
+}
+
+@Article{wercinski1996,
+  Title                    = {Mars sample return-A direct and minimum-risk design},
+  Author                   = {Wercinski, P.F.},
+  Journal                  = {Journal of spacecraft and rockets},
+  Year                     = {1996},
+  Number                   = {3},
+  Pages                    = {381-385},
+  Volume                   = {33},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.01}
+}
+
+@Book{wertz2009,
+  Title                    = {Orbit \& Constellation Design \& Management},
+  Author                   = {J.R. Wertz},
+  Publisher                = {Microcosm Press and Springer, USA},
+  Year                     = {2009},
+  Edition                  = {2},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.09.01}
+}
+
+@Conference{whiffen2006mystic,
+  Title                    = {{Mystic: Implementation of the Static Dynamic Optimal Control Algorithm for High-Fidelity, Low-Thrust Tra jectory Design}},
+  Author                   = {Whiffen, Gregory J},
+  Booktitle                = {AIAA/AAS Astrodynamics Specialist Conference and Exhibit, Keystone, Colorado},
+  Year                     = {2006},
+  Month                    = {August},
+  Publisher                = {NASA Jet Propulsion Laboratory},
+
+  Doi                      = {10.2514/6.2006-6741},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.19},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2006-6741}
+}
+
+@Conference{whitehead1997,
+  Title                    = {{Mars ascent propulsion options for small sample return vehicles}},
+  Author                   = {J.C. Whitehead},
+  Booktitle                = {33rd AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit},
+  Year                     = {1997},
+  Month                    = {July},
+  Publisher                = {AIAA Joint Propulsion Conference and Exhibit},
+
+  Doi                      = {10.2514/6.1997-2950},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.28},
+  Url                      = {http://hydrogen-peroxide.us/uses-monoprop-steam-generation/LLNL-Mars_Ascent_Propulsion_Options_for_Small_Sample_Return_Vehicles-1997.pdf}
+}
+
+@InProceedings{whitehead2005,
+  Title                    = {{Trajectory analysis and staging trades for smaller Mars ascent vehicles}},
+  Author                   = {Whitehead, John C},
+  Booktitle                = {Journal of spacecraft and rockets},
+  Year                     = {2005},
+  Number                   = {6},
+  Pages                    = {1039-1046},
+  Volume                   = {42},
+
+  Doi                      = {10.2514/1.10680},
+  Journal                  = {Journal of spacecraft and rockets},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.28},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/1.10680}
+}
+
+@Conference{whitehead2004mars,
+  Title                    = {{Mars Ascent Propulsion Trades with Trajectory Analysis}},
+  Author                   = {J. C. Whitehead},
+  Booktitle                = {40th AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit},
+  Year                     = {2004},
+  Publisher                = {American Institude of Aeronautics and Astronautics},
+
+  Doi                      = {10.2514/6.2004-4069},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.15},
+  Url                      = {http://arc.aiaa.org/doi/pdf/10.2514/6.2004-4069}
+}
+
+@Electronic{williams2015,
+  Title                    = {{Mars Fact Sheet}},
+  Author                   = {D.R. Williams},
+  HowPublished             = {website},
+  Month                    = {August},
+  Note                     = {[online database], URL: http://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html [cited 1 November 2015]},
+  Organization             = {NASA},
+  Url                      = {http://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.17}
+}
+
+@InProceedings{witkowski2006,
+  Title                    = {Mars deployable decelerators capability roadmap summary},
+  Author                   = {Witkowski, Allen and Brown, Glen},
+  Booktitle                = {Aerospace Conference, 2006 IEEE},
+  Year                     = {2006},
+  Organization             = {IEEE},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.26}
+}
+
+@Misc{wittenberg2014rocket,
+  Title                    = {{AE4-870A: Rocket Motion}},
+
+  Author                   = {H. Wittenberg and B.A.C. Ambrosius and M.C. Naeije and E. Mooij},
+  HowPublished             = {Lecture Notes},
+  Note                     = {course: Rocket Motion},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.11.11}
+}
+
+@Electronic{wiki_genesis,
+  Title                    = {Snatching Some Sun},
+  Author                   = {Marcus Woo},
+  HowPublished             = {website},
+  Organization             = {NASA},
+  Url                      = {http://genesismission.jpl.nasa.gov/gm2/news/features/archive/snatchingsomesun.pdf},
+  Year                     = {2007},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.25}
+}
+
+@Electronic{woods2011,
+  Title                    = {{The Apollo 11 Flight Journal}},
+  Author                   = {D. Woods and K. MacTaggart and F. O'Brien},
+  HowPublished             = {Website},
+  Month                    = {March},
+  Organization             = {NASA History Devision},
+  Url                      = {http://history.nasa.gov/ap11fj/index.htm},
+  Year                     = {2011},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.11}
+}
+
+@Electronic{woods2009,
+  Title                    = {{The Apollo 8 FLight Journal}},
+  Author                   = {D. Woods and F. O'Brien},
+  HowPublished             = {Website},
+  Month                    = {May},
+  Organization             = {NASA History Devision},
+  Url                      = {http://history.nasa.gov/ap08fj/index.htm},
+  Year                     = {2009},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.11}
+}
+
+@Conference{woolley2011mars,
+  Title                    = {{Mars Sample Return - Launch and Detection Strategies for Orbital Rendezvous}},
+  Author                   = {Ryan C. Woolley and Richard L. Mattingly and Joseph E. Riedel and Erick J. Sturm},
+  Booktitle                = {AAS/AIAA Astrodynamics Specialist Conference},
+  Year                     = {2011},
+  Publisher                = {Univelt, Inc.},
+  Volume                   = {142},
+
+  Journal                  = {AAS/AIAA Astrodynamics Specialist Conference},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.20},
+  Url                      = {http://trs-new.jpl.nasa.gov/dspace/bitstream/2014/43457/1/11-1209_A1b.pdf}
+}
+
+@InProceedings{yam2011low,
+  Title                    = {{Low-thrust trajectory design as a constrained global optimization problem}},
+  Author                   = {Yam, CH and Lorenzo, DD and Izzo, D},
+  Booktitle                = {Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering},
+  Year                     = {2011},
+  Number                   = {11},
+  Pages                    = {1243--1251},
+  Volume                   = {225},
+
+  Doi                      = {10.1177/0954410011401686},
+  Journal                  = {Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering},
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.23},
+  Url                      = {http://pig.sagepub.com/content/225/11/1243.full.pdf+html}
+}
+
+@Electronic{zero2infinity_2014,
+  Title                    = {Zero2infinity will launch nanosatellites from the stratosphere},
+  Author                   = {Zero2infinity},
+  HowPublished             = {website},
+  Month                    = {October},
+  Note                     = {Press Release},
+  Organization             = {Zero2infinity},
+  Url                      = {http://media.wix.com/ugd/907796_2febcc22a075474aac947993a91918cf.pdf},
+  Year                     = {2014},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.08.29}
+}
+
+@Article{zhang2012spacecraft,
+  Title                    = {Spacecraft long-duration phasing maneuver optimization using hybrid approach},
+  Author                   = {Zhang, Jin and Wang, Xiang and Ma, Xiao-bing and Tang, Yi and Huang, Hai-bing},
+  Journal                  = {Acta Astronautica},
+  Year                     = {2012},
+  Pages                    = {132--142},
+  Volume                   = {72},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.10.20},
+  Url                      = {http://ac.els-cdn.com/S0094576511002815/1-s2.0-S0094576511002815-main.pdf?_tid=b4c57608-7776-11e5-a7d8-00000aacb35e&acdnat=1445378922_dd85ea4fa66a8c36a62c0bdaace116c3}
+}
+
+@Electronic{wiki_msrm,
+  Title                    = {Mars sample return missions},
+  Month                    = {July},
+  Organization             = {Wikipedia},
+  Url                      = {https://en.wikipedia.org/wiki/Mars_sample_return_mission},
+  Year                     = {2015},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2015.07.24}
+}
+

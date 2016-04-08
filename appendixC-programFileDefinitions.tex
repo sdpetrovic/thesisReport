@@ -1,0 +1,47 @@
+\chapter{Program file definitions} 				% Last updated 07-04-2016
+\label{app:appendixC-programFileDefinitions}
+
+Both the \ac{RKF} and \ac{TSI} propagator architectures were presented in \Cref{ch:programoptimisationtool}(\Cref{fig:RK_Propagator,fig:TSI_Propagator} respectively). These included many different operation blocks. Each block is either a separate class, a combination of a header and source file (without it being a class), a function of either of these files or a function in the main file (MAVPropagator). The different files that include several blocks are MAVPropagator.h/.cpp, TaylorSeriesIntegration.h/.cpp, ascentDragForce.h/.cpp and ascentStateDerivativeFunction.h/.cpp, where this last file is also a class. The functions that will be implemented in these files are mentioned in \Cref{tab:inclFunctions} all other blocks are described in \Cref{tab:classes}.
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Large program files and included functions.}
+\label{tab:inclFunctions}
+\begin{tabular}{|l|l|l|}
+\hline 
+\textbf{MAVPropagator} & \textbf{TaylorSeriesIntegration}  & \textbf{ascentStateDerivativeFunction}  \\ \hline 
+Update current state & Compute auxiliaries  & Compute current spherical state \\ \hline
+Integration step & Thrust acceleration in B-frame &  Compute gravitational acceleration \\ \hline
+ & Compute Taylor coefficients & Compute thrust and drag acceleration \\ \hline
+\textbf{ascentDragForce} & Store state Taylor coefficients & Transfer to inertial frame \\ \hline
+Compute speed of & Initial step-size  & Compute total acceleration \\ \cline{2-3}
+sound and Mach & Provide Taylor series expansion  & Compute mass flow rate \\ \cline{2-3}
+number & Estimate the max. trunc. error  & \\ \hline
+Compute drag force & Taylor series expansion incl. trunc. error  & \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Separate function files}
+\label{tab:classes}
+\begin{tabular}{|l|l|}
+\hline 
+\textbf{Block} & \textbf{Kind of file}  \\ \hline 
+Planet characteristics & Class \\ \hline
+Vehicle characteristics & Class \\ \hline
+Auxiliary equations, derivatives and functions & Class \\ \hline
+Current state and time & Class \\ \hline
+Basic recurrence relation & Header and source \\ \hline
+Full set of recurrence relation & Header and source \\ \hline
+Determine next step-size & Header and source \\ \hline
+Compute local air temperature & Header and source \\ \hline
+Compute local air density & Header and source \\ \hline
+Compute drag coefficient & Header and source \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+

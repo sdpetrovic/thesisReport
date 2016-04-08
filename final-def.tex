@@ -1,0 +1,137 @@
+\chapter{Final thesis topic proposal} % Last updated: 4-2-2016
+\label{ch:findef}
+The final subject definition is based on the work performed in this literature study and is an adaptation of the the original general subject introduced in \Cref{ch:oversub}. Not all the work presented in this literature study can be performed in the provided 7 months, which is why a trade-off was necessary. This topic trade-off is presented in \Cref{sec:finrefthes}. The corresponding research objective is described in more detail in \Cref{sec:resobj_fin} followed by the research perspective in \Cref{sec:respers_fin}. The research questions associated with the chosen thesis topic are presented in \Cref{sec:resques_fin} and finally \Cref{sec:resstrat_fin} will describe the research strategy.   
+
+%The updated version of this proposal is provided in \Cref{sec:finrefthes}. Also, to prepare for the thesis, an initial schedule is provided which spans the 7 months that are available for the thesis work. This schedule is based on the updated research questions and is shown in \Cref{sec:proptimesche}.
+
+
+
+\section{Final refined thesis topic}
+\label{sec:finrefthes}
+In this section the final proposal is chosen. There were several aspects of the original proposal which will have to be traded. First of all, either a high-thrust ascent trajectory optimisation or a low-thrust trajectory optimisation has to be selected. This has to be done because the work associated with combining these two aspects cannot be completed within the required 7 months. The second trade-off is whether to focus on optimisation or integration comparison. \\
+One of the most important criterion here is academic value: how (and how much) will this research contribute to the scientific community? This criterion is closely related to the second criterion, novelty: has this ever been done before? Novelty also includes the amount of previous master theses that have been written on the subject. The third criterion is challenge: is the topic challenging or is it too easy? It is also critical that the work can actually be performed within the 7 months, which is why the fourth criterion is called allocated time. And finally it is important that the work is related to the current work done at \ac{JPL} and is useful to them. Therefore this last criterion is called \ac{JPL} value. Every criterion is assigned a weight depending on how important the criterion is. Then the different topics are either green (1), yellow (0.5) or red (0) for every criterion. This results in a final score. The trade-off is provided in \Cref{tab:fin_trade_off}.
+
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Optimiser trade-off table.}
+\label{tab:fin_trade_off}
+\begin{tabular}{|p{3cm}||l|l|l|l|l||l|}
+\hline 
+ &	\textbf{Academic value} & \textbf{Novelty} & \textbf{Challenge} & \textbf{Allocated time} & \textbf{\ac{JPL} value} & \textbf{Score} \\ \hline 
+\textit{Weight} & \textit{5} & \textit{4} & \textit{2} & \textit{4} & \textit{3} & \\ \hline \hline
+\textbf{Ascent and optimisation focus} & \cellcolor{yellow} & \cellcolor{green} & \cellcolor{yellow} & \cellcolor{green} & \cellcolor{yellow} & 13 \\ \hline
+\textbf{Ascent and integration focus} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{yellow} &  18 \\ \hline
+\textbf{Orbiter and optimisation focus} & \cellcolor{green} & \cellcolor{red} & \cellcolor{yellow} & \cellcolor{yellow} & \cellcolor{green} & 11  \\ \hline
+\textbf{Orbiter and integration focus} & \cellcolor{green} & \cellcolor{yellow} & \cellcolor{green} & \cellcolor{red} & \cellcolor{green} & 12 \\ \hline
+
+\end{tabular}
+\end{center}
+\end{table}
+
+The result of the trade-off shows that a Martian ascent optimisation with the focus on integration method comparison is the most logical choice. This means that the optimisation method from \Cref{ch:optimisation} with the most potential will be used, which is \ac{MBH}. Furthermore, the two integration methods that will be compared are \ac{RKF45} and \ac{TSI}. \\
+With the topic set, the final working title can now be described as: \textbf{\textit{"\acl{MSR} \ac{MAV} ascent trajectory optimisation using Taylor Series integration"}}. 
+
+\section{Research objective}
+\label{sec:resobj_fin}
+The objective of this research is to find the optimum solution to the high-thrust \ac{MAV} launch trajectory problem by using \ac{MBH} for the optimisation for lowest \ac{GLOM} and integrating the trajectory using both \ac{RKF45} and \ac{TSI} and comparing these two integration methods.
+
+%orbital changes required for the low-thrust orbiter to rendezvous at a certain point above Mars, depending on the desired design choices, and returning the orbiter to a save orbit by using \ac{TSI} to propagate the trajectories and using \ac{DE} combined with and compared to \ac{MBH} to optimise for mass, Time of Flight (ToF), $\Delta V$,  I_{sp} and/or $\theta$. 
+
+
+%\nomenclature{$ToF$}{Time of Flight\nomunit{$s$ or $days$}}
+
+\section{Research perspective}
+\label{sec:respers_fin}
+It will be both theory-testing research (\ac{MBH} and \ac{TSI} compared with \ac{RKF45}) and problem-analysis research (optimum problem). The problem will be solved through the writing and verification of an optimisation program based on Newtonian mechanics and from a(n) (initial) mission design standpoint. It is therefore an engineering problem, and was finalised through discussions between researcher, supervisors, stakeholders (\ac{JPL}) and using the work performed in this literature study. 
+
+
+
+\section{Research questions}
+\label{sec:resques_fin}
+The main research question is: how does \ac{TSI} perform compared to \ac{RKF45} in a Mars ascent optimisation problem? The corresponding sub-questions are split up into primary and secondary sub-questions. The primary sub-questions have to be answered during the thesis work, the secondary sub-questions can be answered provided there is enough time. The primary sub-questions are listed here:\\
+
+\begin{itemize}
+\item Would \ac{TSI} be a good alternative for use in future ascent optimisation programs?
+\begin{itemize}
+\item How much more (or less) accurate is \ac{TSI} compared to the \ac{RKF45}?
+\item How much faster (or slower) is \ac{TSI} compared to \ac{RKF45}?
+\item What are the advantages and disadvantages (besides the first two sub-questions) when using \ac{TSI} in this kind of trajectory optimisation problem?
+\end{itemize}
+%\item What is the optimal \ac{MAV} ascent trajectory?
+%\begin{itemize}
+\item What is the optimal \ac{MAV} configuration and combination of launch parameters to reach the desired target orbit, based on the design choices, that results in the lowest \ac{MAV} \ac{GLOM}?
+%\end{itemize}
+\item What is the performance of \ac{MBH} in an ascent problem?
+\begin{itemize}
+\item How well do the solutions of \ac{MBH} converge in an ascent problem?
+\item What is the cpu time required by \ac{MBH} in an ascent problem?
+\end{itemize}
+\end{itemize}
+
+The secondary sub-questions are listed here:
+
+\begin{itemize}
+\item Which of the current proposed Mars 2020 landing sites would be best considering the \ac{MSR} mission.
+\begin{itemize}
+\item Which proposed landing sites provide the best optimum solution for the thesis problem?
+\item Which proposed landing sites provide the worst optimum solution for the thesis problem?
+\end{itemize}
+\end{itemize}
+
+
+\section{Research strategy}
+\label{sec:resstrat_fin}
+The first step will be to design the detailed simulation and optimisation program architecture. Then the Mars ascent simulation program will be written and validated. First for the Moon using Apollo reference data reaching a specific orbit, and then the same is done for Mars using the same conditions in \ac{JPL} software. At that time, both integrators are included and validated using reference research data and \ac{JPL} software. After this the optimiser is included as well and is then validated separately from the simulator as well. More information on the verification and validation of the software will be provided in \Cref{ch:software}. During the entire process, everything will be documented. Once the simulation program has been completely validated, the initial conditions are set and the optimisation process is started. For the candidate landing site, and each of the integrators, the lowest \ac{GLOM} condition can be found. The integrators will then be compared based on their individual results.
+
+
+
+%to optimise Martian ascent to a certain parking/rendezvous orbit starting at different launch sites, with different azimuth and launch angles w.r.t. the horizon. This would also be used to compare the \acl{TSI} with one (or a few) other integration method(s), for a small number of orbits, to see which one works best for this problem. If that works, the program should be updated such that this ascent optimisation would be able to not just optimise to a certain parking/rendezvous orbit but to also get to a specific point in that orbit (include time and $\theta$) to perform a rendezvous manoeuvre with the orbiter. For the \ac{MAV} this means that it could either directly go to the rendezvous point or first into a parking orbit (starting on the Martian surface) and then to the rendezvous orbit and point. It is assumed that during the entire ascent and manoeuvring phase the \ac{MAV} uses a high-thrust propulsion system. Then when this works, the orbiter can be added as well. Given that the orbiter, which uses a low-thrust propulsion system, is currently in a scientific orbit, optimise the rendezvous orbit and point such that both \ac{MAV} and orbiter will be at that point at the same time. After which the orbiter will have to go back to a higher orbit to not get caught in the gravity well of Mars. During each stage of the program writing it will have to be verified and validated. The validation will be done based on the results from current \ac{JPL} software used to perform orbit trajectory analyses. Once the complete program validation has been performed, the actual optimisation process can commence and the optimisation will be performed for a number of different design choices staying within the limits of the \ac{MAV} design and the orbiter design. In the end, a recommendation will be made based on the different optimised results and design choices.
+
+%\subsection{Research Method}
+%\label{subsec:resmeth_fin}
+%The research will be performed using a self-written simulation program and validated with Apollo flight data and results from simulations performed with programs used by \ac{JPL}.
+
+%\section{Proposed time schedule}
+%\label{sec:proptimesche}
+%The proposed time schedule is based on the research strategy described in \Cref{subsec:resstrat_fin}. The total time that has to be spent on the thesis project is 1176 hours, or approximately 30 weeks. This schedule does not include any specific dates yet but describes the work that will have to be done per week up to the 30th week of the thesis project. It also includes the different official meetings. The schedule is presented in \Cref{tab:prop_schedule}.
+%
+%\begin{longtable}{|p{4cm}|p{7cm}|p{1.5cm}|p{1.5cm}|}
+%\caption{Proposed time schedule thesis project}
+%\label{tab:prop_schedule}
+%\endfirsthead
+%\endhead
+%\hline 
+%\textbf{Task} 		& \textbf{Task description} & \textbf{Weeks required} & \textbf{Week number} \\ \hline \hline
+%Architecture 		& Design the optimisation program architectures & 2 & 1-2 \\ \hline
+%Kick-off 		& Kick-off session with supervisors & 0 (1 day)  & 2 \\ \hline \hline
+%Mars ascent programming phase 1	& Writing the initial Mars ascent simulation program and validating it for the Moon (specific orbit) & 2 & 3-4 \\ \hline
+%Mars ascent programming phase 2 & Translate to Mars and validate against \ac{JPL} software, first without and then including the atmosphere (specific orbit) & 2 & 5-6 \\ \hline
+%Mars ascent programming phase 3	& Including the optimisation (specific orbit) and validation of the optimisers & 2 & 7-8 \\ \hline
+%Mars ascent programming phase 4	& Including the specific point and time and validation using \ac{JPL} software & 1 & 9 \\ \hline
+%Documenting & Finish documentation on the Mars ascent simulation program & 1 & 10 \\ \hline
+%Orbiter trajectory programming phase 1	& Writing the initial Mars orbiter trajectory simulation program (non-singular Q-law) and validation of Q-law for Earth using \ac{JPL} software & 2 & 11-12  \\ \hline
+%Orbiter trajectory programming phase 2 & Include the option for a penalty function and validate using \ac{JPL} software & 2 & 13-14 \\ \hline
+%Orbiter trajectory programming phase 3 & Changing all parameters to a Mars system and validating against \ac{JPL} software & 1 & 15 \\ \hline
+%Orbiter trajectory programming phase 4 & Including the optimisation for the weights & 1 & 16 \\ \hline
+%Documenting	& Finish documentation on the Mars orbiter trajectory simulation program & 1 & 17 \\ \hline
+%Mid-term review & Mid-term review with supervisors & 0 (1 day) & 17 \\ \hline \hline
+%Combining both programs	& Combine the two programs to create the full simulation and optimisation program & 1 & 18 \\ \hline  %and validate against \ac{JPL} software
+%Different optimiser combinations & Identify the different possible combinations of the optimisers and program them as options into the simulation program & 1 & 19 \\ \hline
+%Documenting & Finish documentation on the complete program & 1 & 20 \\ \hline
+%Simulation and optimisation phase 1	& Optimising for lowest mass & 1 & 21 \\ \hline
+%Simulation and optimisation phase 2	& Optimising for lowest \ac{ToF} & 1 & 22 \\ \hline
+%Best optimiser	& Determine the best optimiser or best combination of optimisers for the thesis problem & 1 & 23 \\ \hline
+%Documenting & Finish documentation on the initial simulations and the best optimiser & 1 & 24 \\ \hline
+%Simulation and optimisation phase 3 & Complete all simulations and find optimal conditions for all mass versus \ac{ToF} for every landing site & 2 & 25-26 \\ \hline
+%Green light review & Green light review with supervisors & 0 (1 day) & 26 \\ \hline \hline
+%Documenting & Finish documentation on all results & 2 & 27-28 \\ \hline
+%Conclusions and rec. & Draw conclusions and write recommendations & 1 & 29 \\ \hline
+%Documenting & Finish the complete thesis report & 1 & 30 \\ \hline
+%Thesis hand-in & Hand in of the complete thesis report & 0 (1 day)  & 30 \\ \hline			
+%% 		&  &  &  \\ \hline
+%\end{longtable}
+
+
+
+

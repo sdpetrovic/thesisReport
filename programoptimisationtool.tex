@@ -1,0 +1,335 @@
+\chapter{Program optimisation tool} %Last updated 07                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -04-2016
+\label{ch:programoptimisationtool}
+To perform the analysis associated with this thesis, a simulation and optimisation program is used. This optimisation tool is comprised of both existing (\Cref{sec:existingsoftware}) and newly developed software (\Cref{sec:developedsoftware}). It is written in C++ and is based on the \ac{Tudat} structure. The purpose of the software is to simulate the trajectory of the \ac{MAV} and optimise this trajectory with respect to the lowest propellant mass required. This tool is written such that the performance of \ac{RKF45} and \ac{TSI} can be compared.
+
+\section{Existing software}
+\label{sec:existingsoftware}
+The use of existing software can greatly improve the performance of the final tool and save time as well. Another important reason to use existing software is that this will make it easier for other people to use and incorporate into their software as well. The existing software used for this thesis is software that is currently being used by the space department of the TU Delft and (in case of \ac{SNOPT} and Mars-\ac{GRAM}) by the mission design section at \ac{JPL}. 
+
+
+\subsection{\ac{Tudat}}
+\label{subsec:tudat}
+\ac{Tudat} is, as the name suggests, a toolbox that can be used to solve numerous astrodynamic problems \citep{dirkx2016tudat}. It was and still is being developed by students and staff of the Delft University of Technology. Specifically by the section Astrodynamics and Space missions of the Aerospace Engineering faculty. It is programmed in C++ and consists of a number of libraries. These libraries can be called upon by the user to invoke different \ac{Tudat} functionalities such as standard reference frame transformations or often used integrators. The available software is completely validated and comes with its own tests to make sure that everything is working properly. It itself uses two external libraries: Eigen and Boost. Both these libraries will be discussed in \Cref{subsec:eigen,subsec:boost} respectively. \Cref{fig:tudatBlock} shows \ac{Tudat} with the different libraries that are used within the \ac{Tudat} Bundle including the core functions (\ac{Tudat} Core).
+In this thesis, the \ac{Tudat} libraries are used for all standard mathematical and astrodynamic operations.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.3\textwidth]{figures/software/tudatBlock.png}
+\caption{\ac{Tudat} structure}
+\label{fig:tudatBlock}
+\end{figure}
+
+\subsection{Eigen}
+\label{subsec:eigen}
+Eigen is an external C++ library that was written to perform linear algebra computations \footnote{More documentation on Eigen can be found on \url{eigen.tuxfamily.org/dox/} [Accessed 8 March 2016] }. The software is free and easy to use, which is why it is widely used by the C++ community and thus also within \ac{Tudat} \citep{dirkx2016tudat}. Another advantage is that because it does not use any source files, it does not need to be build before using it. 
+The Eigen libraries contain a number of standardized matrices and vectors, each with its own characteristics. An example of an often used vector is \textit{Vector3d} (or \textit{Eigen::Vector3d}), which can for instance be used to store the Cartesian position of a satellite. Here the \textit{3} shows that it can store 3 values/parameters and the \textit{d} shows that these are of the type \textit{double}. It is mentioned on the \ac{Tudat} wiki \citep{dirkx2016tudat} that these Eigen vectors and matrices should only be used if required for linear algebra computations. For ordinary storage, the C++ arrays, vectors and matrices should be used to save both storage and computation time.
+
+
+\subsection{Boost}
+\label{subsec:boost}
+Boost is a slightly more complicated set of C++ libraries, where compared to the Eigen library, Boost first has to be compiled before being able to use all of its functionalities. Fortunately, this compiling is performed by \ac{Tudat} automatically when setting it up for the first time. Boost is described as an addition to the standard C++ libraries, thus adding more functionalities \citep{dirkx2016tudat} \footnote{More documentation on Boost can be found on \url{http://www.boost.org/} [Accessed 8 March 2016]}. Within \ac{Tudat}, Boost is used to pass free and class functions as an argument to another object and also for dynamic allocation using so-called pointers. Four libraries that are often used within \ac{Tudat} are \textit{boost::function}, \textit{boost::bind}, \textit{boost::shared\_ptr} and \textit{boost::make\_shared}. The first two libraries are used to pass functions (a function is pointed to by \textit{function} and called by \textit{bind}) and the last two are used in case of dynamic allocation (\textit{shared\_ptr} is the pointer and \textit{make\_shared} is the object creator that returns a shared pointer to the created object). 
+
+\subsection{\ac{PaGMO}}
+\label{subsec:pagmo}
+\ac{PaGMO} is a free optimisation tool developed by \ac{ESA}s \ac{ACT}. It uses parallel computations to perform the optimisation and can even optimise for multi-objective problems. Parallel computation is the act of performing multiple computations on the same machine using different CPU cores. This allows the cost function to be computed for different sets of optimisation parameters at the same time and thus reducing the total CPU time required. However, this only works if the cost function evaluations are independent, which is not always the case (e.g. Dynamic \ac{DE} described by \cite{qing2009differential}). The tool itself incorporates many different local and global optimisation methods as mentioned by \cite{izzo2012pygmo}, among which the optimisation method used in this thesis \ac{MBH}. This method has been written in \ac{PaGMO} in such a way that it can use any of the provided local optimisers. \ac{PaGMO} is written in C++ and requires the shared libraries of Boost to run \footnote{More documentation on \ac{PaGMO} can be found on \url{https://esa.github.io/pagmo/} [Accessed 9 March 2016]}. Interfaces to external libraries are also provided, which can incorporate for instance \ac{SNOPT} as a local optimisation method. In this thesis \ac{SNOPT} is used as the local optimiser for \ac{MBH} as implemented by \ac{PaGMO}. More information on \ac{SNOPT} is provided in \Cref{subsec:snopt}. For \ac{SNOPT} to be recognised by \ac{PaGMO}, it has to be installed separately. \Cref{fig:pagmoBlock} shows \ac{PaGMO} with the internally used Boost library and the externally called \ac{SNOPT} software.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.3\textwidth]{figures/software/pagmoBlock.png}
+\caption{\ac{PaGMO} structure}
+\label{fig:pagmoBlock}
+\end{figure}
+
+\subsection{\ac{SNOPT}}
+\label{subsec:snopt}
+\ac{SNOPT} was introduced by \cite{gill2002snopt} as a \ac{SQP} method. It uses the first function derivatives and is very effective with highly constrained problems such as trajectory optimisation. Because it is based on \ac{SQP} it is only able to find  the local optimum and it is thus not guaranteed that this is also the global optimum. By combining \ac{SNOPT} and \ac{MBH} the global optimum can indeed be found or approached. The tool itself does not require that many evaluations, which is why it is very useful for complex problems with many optimisation variables \citep{gill2006user}. The code for \ac{SNOPT} has been written in Fortran, but can easily be translated to C,C++ using \textit{f2c} which is provided with \ac{SNOPT} as well \footnote{More documentation on \ac{SNOPT} can be found on \url{http://www.sbsi-sol-optimize.com/asp/sol_products_snopt_desc.htm} [Accessed 9 March 2016]}. This way it can be called by \ac{PaGMO}. It should be noted that \ac{SNOPT} is not free and can only be used under a licence agreement.
+
+\subsection{Mars-\ac{GRAM}}
+\label{subsec:marsgram}
+Mars-\ac{GRAM} is a high-fidelity atmospheric model developed by NASA to simulate the global atmospheric conditions on Mars \citep{justus2008utilizing} \footnote{NASA website: \url{https://see.msfc.nasa.gov/model-Marsgram} [Accessed 9 March 2016]}. The model
+is based on NASA Ames Mars General Circulation Model (for altitudes between 0-80 km) and Mars Thermospheric General Circulation model (for altitude above 80 km). It can provide density, temperature and pressure data (among other data) with respect to the current altitude, latitude and longitude on Mars.  Seasonal variations are taken into account in the model as well, which is why different calender dates will result in different atmospheric compositions. The tool can be used within a simulation tool or as a separate executable. Unfortunately, because it is so detailed, each computation requires a lot of CPU time. This is why it was decided to use the stand-alone Mars-\ac{GRAM} executable to generate a detailed table with atmospheric data as a function of altitude, latitude and longitude at the start of the optimisation. Even generating this table required a lot of CPU time (on average a single computation using the stand-alone executable took 67.9 seconds to complete). The starting altitude was set at -0.6 km \ac{MOLA} and advanced with a step-size of 0.1 km to 320 km altitude to cover the entire range that the \ac{MAV} would have to cover. Also, the latitude and longitude were varied within 10 degrees from the launch site with a step-size of 1 degree. A Matlab script was written to extract the relevant atmospheric data from the Mars-\ac{GRAM} output files and write them into a .csv file, thus creating the required atmospheric data table. The atmospheric data in this table was then interpolated to provide an estimate of the atmospheric characteristics at every point along the ascent trajectory, which is required to compute the drag at each time step. Some of the earlier versions of Mars-\ac{GRAM} are available for free (such as the Mars-\ac{GRAM} 2005 version used in this thesis), however, the latests versions (such as the Mars-\ac{GRAM} 2010 version used as a back-up in this thesis) require a licence agreement.
+
+
+\section{Developed software}
+\label{sec:developedsoftware}
+This section of the software chapter describes the software that either had to be developed around existing software/libraries or had to be developed from scratch (the \ac{TSI} propagator). Each piece of software is accompanied by the corresponding software architecture. Every next piece of software then indirectly incorporates the previous architecture through the use of the completed tool.
+
+
+%\subsection{Interpolator}
+%\label{subsec:interpolatorsoft}
+%
+%\begin{figure}[!ht]
+%\centering
+%\includegraphics[width=0.5\textwidth]{figures/software/interpolator.png}
+%\caption{Interpolator interface architecture}
+%\label{fig:interpolator}
+%\end{figure}
+
+\subsection{Atmospheric table function fit}
+\label{subsec:atmofuncfit}
+Using Mars-\ac{GRAM} 2005, a table containing altitude, latitude and longitude dependent temperature and density data was produced. The altitude range was -0.6 to 320 km \ac{MOLA} with a step-size of 0.01 km, the latitude and longitude ranges were centred around the launch site (21.0 $^\circ$N and 74.5 $^\circ$E) with a 10 degree range in each direction and a step-size of 1 degree. The rest of the input parameters were constant and can be seen in \Cref{app:appendixA-marsGRAM-inputFile}. The temperature and density data produced is shown in \Cref{fig:temperatureData,fig:densityData} respectively for 9 latitude and longitude combinations including the launch site itself.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/software/temperatureData.png}
+\caption{Temperature data generated with Mars-\ac{GRAM} 2005 showing 9 different latitude and longitude combinations}
+\label{fig:temperatureData}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/software/densityData.png}
+\caption{Density data generated with Mars-\ac{GRAM} 2005 showing 9 different latitude and longitude combinations}
+\label{fig:densityData}
+\end{figure}
+
+Unfortunately discontinuous data tables cannot be used when integrating using \ac{TSI}, which is why both these data tables had to be fitted with continuous functions. The temperature data could not be smoothly fit with one continuous function.  Therefore, depending on the altitude range, a different approximation function is required. The condition to be met for a proper fit came from the differences in the temperature-altitude and density-altitude curves, where the maximum difference with respect to the launch site curve was taken. The requirement for the standard deviation of the polynomial curve fit was then to be (at least) one order lower than this maximum difference and that the maximum difference between the fit and the launch site curve was lower than the maximum difference. The temperature-altitude curve was split into 5 sections as roughly visualised in \Cref{fig:temperatureDataSplit5}. The number of sections come from both the shape of the curves and the requirement for accuracy and maximum order of the polynomial, which is set at 8 because otherwise the polynomial would get too long. Also, the number of sections were to be kept at a minimum. More information on the fitting process and early results is provided in \Cref{app:appendixB-fittingProcessAndResults}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/software/temperatureDataSplit5.png}
+\caption{Different temperature curve sections}
+\label{fig:temperatureDataSplit5}
+\end{figure}
+
+Each section was fit with a polynomial function of the n$^{th}$ order where the function is represented by \Cref{eq:polyGenFunct}. The last section shows a constant temperature, thus the temperature of the launch site curve was chosen to represent this final section.
+
+\begin{equation} \label{eq:polyGenFunct}
+y=p_{n}x^{n}+p_{n-1}x^{n-1}+\dots+p_{1}x+p_{0}
+\end{equation}
+
+A lower order is preferred, because then the fitted function will be simpler to evaluate and contain fewer terms. However the order has to be high enough to meet the accuracy requirements. \Cref{tab:fitDeviations} shows the orders that were required and the deviations to the launch site temperature-altitude curve. The actual corresponding parameters are provided in \Cref{tab:fitParameters}. It should be noted that the first few temperature data values were so different from the rest of the curve that it was assumed that this is a lack of the Mars-\ac{GRAM} program and were thus treated as outliers.
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Temperature curve fit data all with respect to the launch site curve (Latitude and longitude of the launch site)}
+\label{tab:fitDeviations}
+\begin{tabular}{|l|l|l|p{3cm}|p{3cm}|p{3cm}|}
+\hline 
+\textbf{Section} & \textbf{Altitude range [km MOLA]} & \textbf{Order}	& \textbf{Maximum polynomial standard deviation [K]} & \textbf{Maximum polynomial difference [K]} & \textbf{Maximum data curves difference [K]} \\ \hline 
+1 & -0.6 to 5.04 & 1 & 0.0312 & 25.8 & 0.177 \\ \hline
+2 & 5.04 to 35.53 & 2 & 0.287 & 3.90 & 0.7056 \\ \hline
+3 & 35.53 to 75.07 & 6 & 0.624 & 8.00 & 1.69 \\ \hline
+4 & 75.07 to 170.05 & 8 & 0.523 & 6.60 & 2.45 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Temperature curve fit parameters (rounded to 3 decimal points)}
+\label{tab:fitParameters}
+\begin{tabular}{|l||p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|}
+\hline 
+\textbf{Section}  & $\mathbf{p_{8}}$ & $\mathbf{p_{7}}$ & $\mathbf{p_{6}}$ & $\mathbf{p_{5}}$ & $\mathbf{p_{4}}$ & $\mathbf{p_{3}}$ & $\mathbf{p_{2}}$ & $\mathbf{p_{1}}$ & $\mathbf{p_{0}}$ \\ \hline 
+1 &  &  &  &  &  &  & & 3.415 & 194.165   \\ \hline
+2 &  &  &  &  &  & & 0.006 & -2.130 & 222.052   \\ \hline
+3  &  &  & -5.388 $\cdot$10$^{-7}$ & 1.785 $\cdot$10$^{-4}$ & -0.0243 & 1.733 & -68.294 & 1.407 $\cdot$10$^{3}$ & -1.167 $\cdot$10$^{4}$ \\ \hline
+4  & 4.1942 $\cdot$10$^{-12}$ & -4.328 $\cdot$10$^{-9}$ & 1.931 $\cdot$10$^{-6}$ & -4.862 $\cdot$10$^{-4}$ & 0.076 & -7.405 & 447.378 & -1.523 $\cdot$10$^{4}$ & 2.236 $\cdot$10$^{5}$ \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+The complete polynomial fit for the launch site curve for the temperature is shown in \Cref{fig:completePolyFitTempSplit5}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/software/completePolyFitTempSplit5.png}
+\caption{All section fits for the launch site temperature data curve}
+\label{fig:completePolyFitTempSplit5}
+\end{figure}
+
+
+
+
+The density fit was slightly more difficult because the curves are all very similar and thus result in a higher accuracy requirement for the fit. At first glance it looks like a natural logarithmic function, unfortunately an ordinary exponential did not fit the curve. This is why a more extensive exponential fit was required. The natural logarithm of the data has been plotted in \Cref{fig:lnPlotDataDen}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/software/lnPlotDataDen.png}
+\caption{Natural logarithmic plot of the density data}
+\label{fig:lnPlotDataDen}
+\end{figure}
+
+With the data represented in the logarithmic domain, again a polynomial function can be fit. The total fit would then satisfy \Cref{eq:expPoly}.
+
+\begin{equation} \label{eq:expPoly}
+y=exp\left( p_{n}x^{n}+p_{n-1}x^{n-1}+\dots+p_{1}x+p_{0}\right)
+\end{equation}
+
+
+
+% A logarithmic fit (such as an exponential atmosphere) resulted in a lower overall accuracy than the polynomial fits. In this case the curve was split into three sections, because the differences between the curves were bigger in the lower atmosphere. These sections are illustrated in \Cref{fig:densityDataSplit3}.
+%
+% \begin{figure}[!ht]
+%\centering
+%\includegraphics[width=1.0\textwidth]{figures/software/densityDataSplit3.png}
+%\caption{Different density curve sections}
+%\label{fig:densityDataSplit3}
+%\end{figure} 
+
+The same polynomial requirements as for the temperature curve were enforced for the density curve as well. However, because the polynomial is used in an exponential, some extra requirements are needed to assure the accuracy of the fit. One requirement is that the maximum difference between the final exponential fit and the normal launch site density curve is smaller than the maximum difference between all the data curves. Also, in this case the standard deviation of the difference between the exponential fit and the normal launch site curve had to be within the range of standard deviations of the difference between the different data curves. This meant that even though an 8$^{th}$ order polynomial fit could be achieved for the natural logarithmic data with the required accuracy, when converted to the exponential fit, the last two requirements were not met. Before it was mentioned that an order higher than 8 was not desirable. However, in this case, a single exponential fit could be achieved using a 10$^{th}$ order polynomial. This fit meant that the density curve did not have to be split up at all, which makes the integration slightly easier. Therefore, it was decided that a 10$^{th}$ order polynomial was acceptable in this case. The results of the fit is presented in \Cref{tab:fitDeviationsDen,tab:fitParametersDen} and the polynomial and exponential fit curves are shown in \Cref{fig:completeExpPolyFitDen,fig:completeExpFitDen} respectively.
+
+%
+% This results in the density polynomial fit data and the polynomial parameters as presented in \Cref{tab:fitDeviationsDen,tab:fitParametersDen} respectively. 
+
+%\textbf{\textcolor{red}{UPDATE THE NEXT TWO TABLE VALUES TO THE VALUES FOR DENSITY!!!}}
+
+%\begin{table}[!ht]
+%\begin{center}
+%\caption{Density curve fit data (10$^{th}$ order polynomial)}
+%\label{tab:fitDeviationsDen}
+%\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+%\hline 
+%\textbf{Maximum polynomial standard deviation [kg/m$^{3}$]} & \textbf{Maximum natural logarithmic curves difference [kg/m$^{3}$]} & \textbf{Maximum polynomial difference with natural logarithmic launch site curve [kg/m$^{3}$]} & \textbf{Maximum curves difference [kg/m$^{3}$]} & \textbf{Maximum difference with launch site curve [kg/m$^{3}$]} & \textbf{Maximum standard deviation curves difference [kg/m$^{3}$]} & \textbf{Standard deviation exponential fit difference [kg/m$^{3}$]} \\ \hline 
+%0.0501 & 0.460 & 0.160   & 3.910$\cdot$10$^{-3}$ &  2.826$\cdot$10$^{-3}$ & 2.106$\cdot$10$^{-4}$ & 1.167$\cdot$10$^{-4}$ \\ \hline
+%
+%\end{tabular}
+%\end{center}
+%\end{table}
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Density curve fit data (10$^{th}$ order polynomial) with respect to the launch site curve (Latitude and longitude of the launch site)}
+\label{tab:fitDeviationsDen}
+\begin{tabular}{|l|l|}
+\hline 
+\textbf{Maximum polynomial standard deviation [kg/m$^{3}$]} & 0.0501 \\ \hline
+
+  \textbf{Maximum polynomial difference [kg/m$^{3}$]} & 0.160 \\ \hline
+  
+   \textbf{Maximum natural logarithmic data curves difference [kg/m$^{3}$]} & 0.460 \\ \hline
+  
+    \textbf{Maximum exponential difference with launch site curve [kg/m$^{3}$]} & 2.826$\cdot$10$^{-3}$ \\ \hline
+    
+       \textbf{Maximum data curves difference [kg/m$^{3}$]} & 3.910$\cdot$10$^{-3}$ \\ \hline
+    
+      \textbf{Standard deviation exponential fit difference [kg/m$^{3}$]} & 1.167$\cdot$10$^{-4}$ \\ \hline 
+      
+           \textbf{Maximum standard deviation data curves difference [kg/m$^{3}$]} & 2.106$\cdot$10$^{-4}$ \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Density curve fit parameters (rounded to 3 decimal points)}
+\label{tab:fitParametersDen}
+\begin{tabular}{|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|}
+\hline 
+ $\mathbf{p_{10}}$ & $\mathbf{p_{9}}$ & $\mathbf{p_{8}}$ & $\mathbf{p_{7}}$ & $\mathbf{p_{6}}$ & $\mathbf{p_{5}}$ & $\mathbf{p_{4}}$ & $\mathbf{p_{3}}$ & $\mathbf{p_{2}}$ & $\mathbf{p_{1}}$ & $\mathbf{p_{0}}$ \\ \hline 
+2.287 $\cdot$10$^{-21}$  & -3.724 $\cdot$10$^{-18}$ & 2.559 $\cdot$10$^{-15}$ & -9.620 $\cdot$10$^{-13}$ & 2.146 $\cdot$10$^{-10}$ & -2.884 $\cdot$10$^{-8}$ & 2.273 $\cdot$10$^{-6}$ & -9.604 $\cdot$10$^{-5}$ & 1.414 $\cdot$10$^{-3}$ & -0.0962 & -4.172\\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+%The complete polynomial fit for the launch site curve for the density is shown in \Cref{fig:completePolyFitDen}.
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/software/completeExpPolyFitDen.png}
+\caption{Polynomial fit for the launch site density data curve}
+\label{fig:completeExpPolyFitDen}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/software/completeExpFitDen.png}
+\caption{Exponential fit for the launch site density data curve}
+\label{fig:completeExpFitDen}
+\end{figure}
+
+
+%\begin{figure}[!ht]
+%\centering
+%\includegraphics[width=1.0\textwidth]{figures/software/pressureData.png}
+%\caption{Pressure data generated with Mars-\ac{GRAM} 2005 showing 9 different latitude and longitude combinations}
+%\label{fig:pressureData}
+%\end{figure}
+
+\subsection{Drag coefficient graph function fit}
+\label{subsec:dragCoefFuncFit}
+Similar to the temperature and density curves, the relation between Mach number and drag coefficient, as depicted in \Cref{fig:dragcoeff_whitehead2004mars}, had to be modelled as a continuous function as well. Again, it could not be fitted using one continuous function, but instead had to be modelled by different functions.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/launcher_methods/dragcoeff_whitehead2004mars.jpg}
+\caption{Drag coefficient as a function of Mach number \cite{whitehead2004mars}}
+\label{fig:dragcoeff_whitehead2004mars}
+\end{figure}
+
+Fortunately, this curve is already an approximation and thus consists of linear elements only. It can be split up into 6 different sections where the first and last section are constant. Using a similar polynomial fit as before, but now for 1 order only, a linear fit could be made for each of the remaining 4 sections. The corresponding parameters are shown in \Cref{tab:dragCoeffPara} and the curve fit is shown in \Cref{fig:dragCoeffFit}.
+
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Drag coefficient curve fit parameters (rounded to 3 decimal points)}
+\label{tab:dragCoeffPara}
+\begin{tabular}{|l|l||l|l|}
+\hline 
+\textbf{Section}  & \textbf{Mach range}& $\mathbf{p_{1}}$ & $\mathbf{p_{0}}$ \\ \hline 
+2  & 0.5 to 1  & 0.400 & -2.483 $\cdot$10$^{-16}$  \\ \hline
+3  & 1 to 1.3  & 0.567 & -0.167  \\ \hline
+4  &  1.3 to 2.5 & -0.142 & 0.754 \\ \hline
+5  &  2.5 to 4 & -0.0667 & 0.567 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/software/dragCoeffFit.png}
+\caption{All section fits for the drag coefficient - Mach curve}
+\label{fig:dragCoeffFit}
+\end{figure}
+
+
+
+
+\subsection{\ac{RK4} and \ac{RKF} propagator}
+\label{subsec:rkpropagator}
+The \ac{RK4} and \ac{RKF} (or traditional) propagator architecture is described in \Cref{fig:RK_Propagator}. It starts with the current state, which is then passed on to the state derivative function. The state derivative function is used by the \ac{RK4} and \ac{RKF} integrators to determine the next state by calling the function a number of times depending on the used method. Both \ac{RK4} and \ac{RKF45} (and higher order \ac{RKF} integrators) are already available through the \ac{Tudat} libraries. \ac{RK4} can be called by including the rungeKutta4Integrator.h header file, and \ac{RKF45} can be called by including the rungeKuttaVariableStepSizeIntegrator.h header file. This integration process is repeated until the final condition is met. Within the state derivative function all the sate derivatives are updated and stored. The current position is used to update the gravitational acceleration on the \ac{MAV}, the current mass is used to determine the accelerations caused by the thrust and finally the complete state is required to determine the accelerations caused by the drag. Both the drag and thrust accelerations have to be transformed to the inertial frame using the updated angles from the current state. The function also computes the current mass flow rate, however since the thrust is constant, this does not change over time. In the state derivative function, all the transformations are governed by pre-developed functions within the \ac{Tudat} library, which includes the state transformations and the frame transformation from the body frame to the inertial frame. The transformation from the propulsion frame to the body frame is however not included in \ac{Tudat} and had to be written.
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.5\textwidth, angle = 90]{figures/software/RK_Propagator.png}
+\caption{\ac{RK4} and \ac{RKF} interface architecture}
+\label{fig:RK_Propagator}
+\end{figure}
+
+All blocks represent a different action. These actions might be performed in classes, header files and/or source files. More information on the classification of the different blocks can be found in \Cref{app:appendixC-programFileDefinitions}.
+
+\subsection{\ac{TSI} propagator}
+\label{subsec:tsipropagator}
+The \ac{TSI} propagator has a significantly different architecture compared to the traditional propagator as can be seen in \Cref{fig:TSI_Propagator}. \ac{TSI} requires an initial order and step-size to start the integration process. In this thesis it has been decided to keep the order the same throughout the entire integration. The step-size will change during the integration depending on the Taylor series evaluations. The initial state is set as the current state and is fed into the \ac{TSI} block. Within this block, first the auxiliary equations and functions are called, which were set-up for this particular problem. They are evaluated using the current state. These auxiliary equations and functions already include all the reference frame and coordinate transformations, as well as approximate atmospheric parameter functions. This is required to set-up the recurrence relations, which is where \ac{TSI} differs from the traditional propagator. Once the auxiliary equations and functions have been computed they are used to compute the Taylor coefficients through the recurrence relations set-up for the thesis problem. These coefficients are then stored for later use and are also passed to the block creating the Taylor series expansion for every state variable thus creating he updated state. The last two coefficients are then used to determine the next step-size. This continues until the final integration condition has been met. 
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.5\textwidth, angle = 90]{figures/software/TSI_Propagator.png}
+\caption{\ac{TSI} architecture}
+\label{fig:TSI_Propagator}
+\end{figure}
+
+
+\subsection{Optimiser}
+\label{subsec:optimisersoft}
+The optimisation software is a combination of the \ac{SNOPT} local optimisation tool and \ac{PaGMO}s \ac{MBH}. Even though both these tools were already available and did not have to be developed, it is still important to understand how the rest of the software interacts with the optimiser. This is why  \Cref{fig:optimiser} shows the architecture of the \ac{MBH} optimiser. It starts with the initial generation of the optimisation parameters, after which the 'Number of not improved iterations' is set to zero. This is then fed into the local optimiser, where the trajectory is integrated using the previously described tools. Once a local optimised trajectory is found, it is stored if it is better than the previous local optimised trajectory and the counter is set to zero again. If the newly found trajectory is not better than the current best the 'Number of not improved iterations' is increased by one. Once the maximum number of not improved iterations is met, the current best optimal trajectory (which is the optimum for the current "funnel") is stored and the process is repeated till the final global optimisation condition is met. At this point the global optimum is the best optimal trajectory from all the funnels computed at that time, which is then returned as the program solution.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.5\textwidth, angle = 90]{figures/software/optimiser.png}
+\caption{Optimiser interface architecture}
+\label{fig:optimiser}
+\end{figure}
+
+
+%\section{Architectures}
+%\label{sec:architecture}
