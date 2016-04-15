@@ -191,13 +191,13 @@ The equations presented in \Cref{eq:transAnglAux} require extra auxiliary equati
  
  \begin{align} \label{eq:extraTransAnglAux}
 \begin{split}
-x_{15} &= V = \sqrt{x_{21}} \\
+x_{15} &= V = \sqrt{x_{21}-V_{0}^{2}} \\
 x_{16} &= \cos x_{14}\\
 x_{17} &= x_{16}x_{15}\\
 x_{18} &= x_{20}x_{24}\\
 x_{19} &= x_{1}^{2}+x_{2}^{2}\\
 x_{20} &= r = \sqrt{x_{8}} \\
-x_{21} &= x_{4}^{2}+x_{5}^{2}+x_{6}^{2}\\
+x_{21} &= V_{total}^{2} =  x_{4}^{2}+x_{5}^{2}+x_{6}^{2}\\
 \end{split}
 &
 \begin{split}
@@ -243,7 +243,7 @@ The drag acceleration is determined in the body frame by dividing the drag force
 
  \begin{equation} \label{eq:dragAux}
 \begin{split}
-x_{27} &= D = \frac{1}{2}\rho V^{2}SC_{D} = \frac{1}{2}S x_{28}x_{15}^{2}x_{29}=\frac{1}{2}S x_{28}x_{21}x_{29}\\
+x_{27} &= D = \frac{1}{2}\rho V^{2}SC_{D} = \frac{1}{2}S x_{28}x_{15}^{2}x_{29}=\frac{1}{2}S x_{28}\left(x_{21}-V_{0}^{2}\right) x_{29}\\
 x_{28} &= \rho = e^{x_{30}} \\
 x_{29} &= C_{D} \\
 x_{30} &= P_{\rho 10}x_{31}^{10}+P_{\rho 9}x_{31}^{9}+P_{\rho 8}x_{31}^{8}+P_{\rho 7}x_{31}^{7}+P_{\rho 6}x_{31}^{6}+P_{\rho 5}x_{31}^{5}+P_{\rho 4}x_{31}^{4}+P_{\rho 3}x_{31}^{3}+P_{\rho 2}x_{31}^{2}+P_{\rho 1}x_{31}+P_{\rho 0} \\
@@ -253,7 +253,7 @@ x_{31} &= h = r-R_{MOLA} = x_{20}-R_{MOLA}
 
  \begin{equation} \label{eq:dragDerAux}
 \begin{split}
-x'_{27} &= \frac{1}{2}S\left(x_{21}\left(x_{29}x'_{28}+x_{28}x'_{29}\right)+x_{28}x_{29}x'_{21}\right) \\
+x'_{27} &= \frac{1}{2}S\left(\left(x_{21}-V_{0}^{2}\right) \left(x_{29}x'_{28}+x_{28}x'_{29}\right)+x_{28}x_{29}x'_{21}\right) \\
 x'_{28} &= x'_{30}e^{x_{30}} \\
 x'_{30} &=x'_{31} \left(10 P_{\rho 10}x_{31}^{9}+9 P_{\rho 9}x_{31}^{8}+8 P_{\rho 8}x_{31}^{7}+7 P_{\rho 7}x_{31}^{6}+6 P_{\rho 6}x_{31}^{5}+\dots \right. \\
 &  \left. \dotsc +5 P_{\rho 5}x_{31}^{4}+4 P_{\rho 4}x_{31}^{3}+3 P_{\rho 3}x_{31}^{2}+2 P_{\rho 2}x_{31}+P_{\rho 1}\right) \\
@@ -386,7 +386,7 @@ u_{23} &= \dfrac{x_{15}u_{25}-x_{25}u_{15}}{x_{25}^{2}}\\
 u_{24} &=  \dfrac{x_{6}u_{20}+x_{20}u_{6}-x_{6}x_{25}-x_{3}u_{25}}{x_{8}\sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}-\dfrac{\left(\dfrac{2x_{3}^{2}u_{25}}{x_{20}^{3}}-\dfrac{2x_{3}x_{6}}{x_{8}}\right)\left(x_{20}x_{6}-x_{3}x_{25}\right)}{2x_{8}\left(1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}\right)^{3/2}}-\dfrac{u_{8}\left(x_{20}x_{6}-x_{3}x_{25}\right)}{x_{8}^{2}\sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}\\
 u_{25} &=  \dfrac{2x_{8}u_{26}-x_{26}^{2}}{4x_{9}}\\
 u_{26} &=  2x_{21}+2\left(x_{1}u_{4}+x_{2}u_{5}+x_{3}u_{6}\right)\\
-u_{27} &= \frac{1}{2}S\left(x_{21}\left(x_{29}u_{28}+x_{28}u_{29}\right)+x_{28}x_{29}u_{21}\right) \\
+u_{27} &= \frac{1}{2}S\left(\left(x_{21}-V_{0}^{2}\right)\left(x_{29}u_{28}+x_{28}u_{29}\right)+x_{28}x_{29}u_{21}\right) \\
 u_{28} &= u_{30}e^{x_{30}} \\
 u_{29} &=\begin{cases}
 u_{29,1}=0, & \text{for } 0\leq x_{32} < 0.5\\
@@ -781,7 +781,7 @@ $w_{26,3}=$ & $ x_{3}u_{6} $ & Multiplication \\ \hline
 $w_{27,1}=$ & $ x_{29}u_{28} $ & Multiplication \\ \hline
 $w_{27,2}=$ & $ x_{28}u_{29} $ & Multiplication \\ \hline
 $w_{27,3}=$ & $ x_{28}x_{29} $ & Multiplication \\ \hline
-$w_{27,4}=$ & $ x_{21}\left(w_{27,1}+w_{27,2}\right) $ & Multiplication \\ \hline
+$w_{27,4}=$ & $ \left(x_{21}-V_{0}^{2}\right)\left(w_{27,1}+w_{27,2}\right) $ & Multiplication \\ \hline
 $w_{27,5}=$ & $ w_{27,3}u_{21} $ & Multiplication \\ \hline
 $w_{28,1}=$ & $ e^{x_{30}} $ & Exponential \\ \hline
 $w_{28,2}=$ & $ u_{30}w_{28,1} $ & Multiplication \\ \hline
@@ -954,7 +954,7 @@ U_{26} \left(k\right)&=  2X_{21}\left(k\right)+2\left(W_{26,1}\left(k\right)+W_{
 
 \begin{align} \label{eq:allRecRel3}
 \begin{split}
-U_{27} \left(k\right)&= \frac{1}{2}SW_{27,5}\left(k\right) \\
+U_{27} \left(k\right)&= \frac{1}{2}S\left(W_{27,4}\left(k\right)+ W_{27,5}\left(k\right)\right) \\
 U_{28} \left(k\right)&= W_{28,2}\left(k\right) \\
 U_{29} \left(k\right)&=\begin{cases}
 U_{29,1}\left(k\right)=0, & \text{for } 0\leq x_{32} < 0.5\\
