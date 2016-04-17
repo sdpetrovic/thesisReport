@@ -651,22 +651,46 @@ To be able to compute the initial values of the auxiliary equations ($x_{n}$) an
 \begin{center}
 \caption{Order of auxiliary equations and derivatives computations}
 \label{tab:calcOrderAuxEq}
-\begin{tabular}{|l|l||l|l||l|l|}
+\begin{tabular}{|l|l||l|l||l|l||l|l|}
 \hline 
-\textbf{Order} & \textbf{Auxiliary equation} & \textbf{Order} & \textbf{Derivative} & \textbf{Order} & \textbf{Derivative} \\ \hline 
-0 & $ x_{1}, x_{2}, x_{3}, x_{4}, x_{5}, x_{6}, x_{7} $ & 10 & $ u_{10} $ & 20 & $ u_{23}, u_{24}, u_{32} $ \\ \hline
-1 & $ x_{8}, x_{9}, x_{10}, x_{19}, x_{21}, x_{26} $ & 11 & $  u_{1}, u_{2}, u_{3}, u_{7}, u_{8}, u_{19} $ & 21 & $ u_{14}, u_{18}, u_{29} $ \\ \hline
-2 & $ x_{11}, x_{15}, x_{20} $ & 12 & $ u_{9}, u_{11} $ & 22 & $ u_{16}, u_{27} $ \\ \hline
-3 & $ x_{12}, x_{25}, x_{31} $ & 13 & $ u_{20} $ & 23 & $ u_{17} $ \\ \hline
-4 & $ x_{23}, x_{24}, x_{30}, x_{34}  $ & 14 & $ u_{12}, u_{31} $ & 24 & $ u_{22} $ \\ \hline
-5 & $ x_{14}, x_{18}, x_{28}, x_{33} $ & 15 & $ u_{30}, u_{34} $ & 25 & $ u_{13} $ \\ \hline
-6 & $ x_{16}, x_{32} $ & 16 & $ u_{28}, u_{33} $ &  &  \\ \hline
-7 & $ x_{17}, x_{29} $ & 17 & $ u_{4}, u_{5}, u_{6} $ & & \\ \hline
-8 & $ x_{22}, x_{27} $ & 18 & $ u_{21}, u_{26} $ & & \\ \hline
-9 & $ x_{13}, w_{4,2} $ & 19 & $ u_{15}, u_{25} $ & & \\ \hline
+\multicolumn{4}{c}{\textbf{Auxiliary equations}} & \multicolumn{4}{c}{\textbf{Auxiliary derivatives}} \\ \hline \hline
+\textbf{Order} & $\mathbf{x_{n}}$ &\textbf{Order} & $\mathbf{x_{n}}$ & \textbf{Order} & $\mathbf{u_{n}}$ & \textbf{Order} & $\mathbf{u_{n}}$ \\ \hline 
+0 & $ x_{1}, x_{2}, x_{3}, x_{4}, x_{5}, x_{6}, x_{7} $ & 12 & $ x_{23} $ & 18 & $ u_{10}, u_{35} $ & 30 & $ u_{44} $ \\ \hline
+1 & $ x_{8}, x_{9}, x_{10}, x_{19}, x_{21}, x_{26} $ & 13 & $ x_{14} $ & 19 & $ u_{1}, u_{2}, u_{3}, u_{7}, u_{8}, u_{19} $ & 31 & $ u_{39} $ \\ \hline
+2 & $ x_{11}, x_{20}, x_{36} $ & 14 & $ x_{16}, x_{32} $ & 20 & $ u_{9}, u_{11} $ & 32 & $ u_{40} $ \\ \hline
+3 & $ x_{12}, x_{25}, x_{31} $ & 15 & $ x_{17}, x_{29} $ & 21 & $ u_{20} $ & 33 & $ u_{42} $ \\ \hline
+4 & $ x_{24}, x_{30}, x_{34}, x_{35}, x_{37}  $ & 16 & $ x_{22}, x_{27} $ & 22 & $ u_{12}, u_{31} $ & 34 & $ u_{43} $ \\ \hline
+5 & $ x_{18}, x_{28}, x_{33}, x_{38}, x_{41} $ & 17 & $ x_{13}, w_{4,2}$ & 23 & $ u_{30}, u_{34} $ & 35 & $ u_{15} $ \\ \hline
+6 & $ x_{44} $ &  & & 24 & $ u_{28}, u_{33} $ & 36 & $ u_{23}, u_{32} $ \\ \hline
+7 & $ x_{39} $ & & & 25 & $ u_{4}, u_{5}, u_{6} $ & 37 & $ u_{14}, u_{29} $ \\ \hline
+8 & $ x_{40} $ & & & 26 & $ u_{21}, u_{26} $ & 38 & $ u_{16}, u_{27} $ \\ \hline
+9 & $ x_{42} $ & & & 27 & $ u_{25}, u_{36} $ & 39 & $ u_{17} $ \\ \hline
+10 & $ x_{43} $ & & & 28 & $ u_{24}, u_{37}, u_{41}  $ & 40 & $ u_{22} $ \\ \hline
+11 & $ x_{15} $ & & & 29 & $ u_{18}, u_{38} $ & 41 & $ u_{13} $ \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
+
+%\begin{table}[!ht]
+%\begin{center}
+%\caption{Order of auxiliary equations and derivatives computations}
+%\label{tab:calcOrderAuxEq}
+%\begin{tabular}{|l|l||l|l||l|l|}
+%\hline 
+%\textbf{Order} & \textbf{Auxiliary equation} & \textbf{Order} & \textbf{Derivative} & \textbf{Order} & \textbf{Derivative} \\ \hline 
+%0 & $ x_{1}, x_{2}, x_{3}, x_{4}, x_{5}, x_{6}, x_{7} $ & 10 & $ u_{10} $ & 20 & $ u_{23}, u_{24}, u_{32} $ \\ \hline
+%1 & $ x_{8}, x_{9}, x_{10}, x_{19}, x_{21}, x_{26} $ & 11 & $  u_{1}, u_{2}, u_{3}, u_{7}, u_{8}, u_{19} $ & 21 & $ u_{14}, u_{18}, u_{29} $ \\ \hline
+%2 & $ x_{11}, x_{15}, x_{20} $ & 12 & $ u_{9}, u_{11} $ & 22 & $ u_{16}, u_{27} $ \\ \hline
+%3 & $ x_{12}, x_{25}, x_{31} $ & 13 & $ u_{20} $ & 23 & $ u_{17} $ \\ \hline
+%4 & $ x_{23}, x_{24}, x_{30}, x_{34}  $ & 14 & $ u_{12}, u_{31} $ & 24 & $ u_{22} $ \\ \hline
+%5 & $ x_{14}, x_{18}, x_{28}, x_{33} $ & 15 & $ u_{30}, u_{34} $ & 25 & $ u_{13} $ \\ \hline
+%6 & $ x_{16}, x_{32} $ & 16 & $ u_{28}, u_{33} $ &  &  \\ \hline
+%7 & $ x_{17}, x_{29} $ & 17 & $ u_{4}, u_{5}, u_{6} $ & & \\ \hline
+%8 & $ x_{22}, x_{27} $ & 18 & $ u_{21}, u_{26} $ & & \\ \hline
+%9 & $ x_{13}, w_{4,2} $ & 19 & $ u_{15}, u_{25} $ & & \\ \hline
+%\end{tabular}
+%\end{center}
+%\end{table}
 
 The first auxiliary function was already introduced in \Cref{eq:DandTBody}, however, many more are required to be able to write the recurrence relations. All auxiliary functions are presented in \Cref{tab:auxFunc}, where the convention was used as introduced earlier. In this case, the entire equation was already written out when the auxiliary function numbers were assigned, which is why these can simply be computed in the order as presented. Of course, $w_{4,2}$ does not have to be computed again because this auxiliary function was already required to compute the derivatives of the auxiliary equations.
 
