@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.9)  18 APR 2016 09:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.9)  18 APR 2016 13:59
 entering extended mode
 **report.tex
 
@@ -1939,30 +1939,20 @@ LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <12> not available
 ] [7] [8] [9]
 Package acronym Info: Label `acro:MOLA' newly defined as it shall be overridden
 
-although it is yet undefined on input line 324.
- [10] [11] [12] [13] [14]
-Overfull \hbox (6.51375pt too wide) in alignment at lines 769--772
+although it is yet undefined on input line 325.
+ [10] [11] [12] [13]
+Overfull \hbox (6.51375pt too wide) in alignment at lines 771--774
  [] [] [] 
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 772--773
+Overfull \hbox (6.51375pt too wide) in alignment at lines 774--775
  [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 775--775
+Underfull \hbox (badness 10000) in paragraph at lines 777--777
 []|\T1/futs/b/n/10 Auxiliary
- []
-
-
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 786--786
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 787--787
-[]|\T1/futs/m/n/10 Multiplication| 
  []
 
 
@@ -2006,15 +1996,6 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 795--795
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 773--795
- [] [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 795
- []
-
-
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 796--796
 []|\T1/futs/m/n/10 Multiplication| 
  []
@@ -2022,6 +2003,15 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 796--796
 
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 797--797
 []|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (6.51375pt too wide) in alignment at lines 775--797
+ [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 797
  []
 
 
@@ -2040,12 +2030,12 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 800--800
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 802--802
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 801--801
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 803--803
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 802--802
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2075,12 +2065,12 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 808--808
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 810--810
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 809--809
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 811--811
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 810--810
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2105,11 +2095,6 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 815--815
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 795--815
- [] [] [] 
- []
-
-[15]
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 816--816
 []|\T1/futs/m/n/10 Multiplication| 
  []
@@ -2120,8 +2105,13 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 817--817
  []
 
 
+Overfull \hbox (6.51375pt too wide) in alignment at lines 797--817
+ [] [] [] 
+ []
+
+[14]
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 818--818
-[]|\T1/futs/m/n/10 Multiplication
+[]|\T1/futs/m/n/10 Multiplication| 
  []
 
 
@@ -2131,6 +2121,11 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 819--819
 
 
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 820--820
+[]|\T1/futs/m/n/10 Multiplication
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 821--821
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2140,37 +2135,17 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 822--822
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 823--823
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 824--824
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 826--826
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 825--825
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 827--827
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 830--830
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 833--833
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
-Overfull \hbox (6.51375pt too wide) in alignment at lines 815--835
- [] [] [] 
- []
-
-
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 836--836
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 829--829
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2180,8 +2155,8 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 837--837
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 838--838
-[]|\T1/futs/m/n/10 Multiplication| 
+Overfull \hbox (6.51375pt too wide) in alignment at lines 817--837
+ [] [] [] 
  []
 
 
@@ -2191,6 +2166,11 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 839--839
 
 
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 840--840
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 841--841
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2205,11 +2185,6 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 843--843
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 844--844
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 845--845
 []|\T1/futs/m/n/10 Multiplication| 
  []
@@ -2220,12 +2195,22 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 846--846
  []
 
 
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 847--847
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 848--848
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 849--849
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 850--850
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 852--852
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2235,37 +2220,32 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 853--853
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 854--854
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 855--855
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
-Overfull \hbox (6.51375pt too wide) in alignment at lines 835--855
- [] [] [] 
- []
-
-[16]
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 856--856
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 857--857
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (6.51375pt too wide) in alignment at lines 837--857
+ [] [] [] 
+ []
+
+[15]
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 858--858
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 862--862
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 859--859
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 863--863
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 861--861
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2280,7 +2260,12 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 866--866
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 867--867
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 868--868
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 869--869
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2295,21 +2280,6 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 873--873
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 874--874
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 875--875
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
-Overfull \hbox (6.51375pt too wide) in alignment at lines 855--875
- [] [] [] 
- []
-
-
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 876--876
 []|\T1/futs/m/n/10 Multiplication| 
  []
@@ -2317,6 +2287,11 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 876--876
 
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 877--877
 []|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (6.51375pt too wide) in alignment at lines 857--877
+ [] [] [] 
  []
 
 
@@ -2335,63 +2310,173 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 880--880
  []
 
 
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 881--881
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 882--882
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 891--891
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 883--883
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 892--892
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 884--884
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 893--893
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 886--886
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 875--895
- [] [] [] 
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 895--895
+[]|\T1/futs/m/n/10 Multiplication| 
  []
 
-[17]
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 896--896
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 897--897
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 898--898
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 899--899
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
-Overfull \hbox (6.51375pt too wide) in alignment at lines 895--904
+Overfull \hbox (6.51375pt too wide) in alignment at lines 877--897
  [] [] [] 
  []
 
-[18] [19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1077
+[16]
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 901--901
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 902--902
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 903--903
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 904--904
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 905--905
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 907--907
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 908--908
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 914--914
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 915--915
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (6.51375pt too wide) in alignment at lines 897--917
+ [] [] [] 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 921--921
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 922--922
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 927--927
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 928--928
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 929--929
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 930--930
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 931--931
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 932--932
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 933--933
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 934--934
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 935--935
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (6.51375pt too wide) in alignment at lines 917--937
+ [] [] [] 
+ []
+
+[17] [18] [19] [20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 1124--1125
 
  []
 
-[21])
+)
 ("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\program
 optimisationtool.tex" [22]
 Chapter 7.
 Package acronym Info: Label `acro:RKF45' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 3.
-<figures/software/tudatBlock.png, id=652, 258.36525pt x 178.86826pt>
+<figures/software/tudatBlock.png, id=653, 258.36525pt x 178.86826pt>
 File: figures/software/tudatBlock.png Graphic file (type png)
 
 <use figures/software/tudatBlock.png>
@@ -2419,7 +2504,7 @@ although it is yet undefined on input line 34.
 Package acronym Info: Label `acro:MBH' newly defined as it shall be overridden
 although it is yet undefined on input line 34.
 
-<figures/software/pagmoBlock.png, id=703, 192.72pt x 158.994pt>
+<figures/software/pagmoBlock.png, id=704, 192.72pt x 158.994pt>
 File: figures/software/pagmoBlock.png Graphic file (type png)
 
 <use figures/software/pagmoBlock.png>
@@ -2430,7 +2515,7 @@ Package acronym Info: Label `acro:SQP' newly defined as it shall be overridden
 although it is yet undefined on input line 45.
  [24 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/fig
 ures/software/pagmoBlock.png>]
-<figures/software/temperatureData.png, id=756, 421.575pt x 316.18124pt>
+<figures/software/temperatureData.png, id=757, 421.575pt x 316.18124pt>
 File: figures/software/temperatureData.png Graphic file (type png)
 
 <use figures/software/temperatureData.png>
@@ -2438,7 +2523,7 @@ Package pdftex.def Info: figures/software/temperatureData.png used on input lin
 e 75.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
 
-<figures/software/densityData.png, id=758, 421.575pt x 316.18124pt>
+<figures/software/densityData.png, id=759, 421.575pt x 316.18124pt>
 File: figures/software/densityData.png Graphic file (type png)
 
 <use figures/software/densityData.png>
@@ -2446,7 +2531,7 @@ Package pdftex.def Info: figures/software/densityData.png used on input line 82
 .
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
  [25]
-<figures/software/temperatureDataSplit5.png, id=775, 404.712pt x 266.1945pt>
+<figures/software/temperatureDataSplit5.png, id=776, 404.712pt x 266.1945pt>
 File: figures/software/temperatureDataSplit5.png Graphic file (type png)
 
 <use figures/software/temperatureDataSplit5.png>
@@ -2539,7 +2624,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--129
  []
 
 
-<figures/software/completePolyFitTempSplit5.png, id=781, 421.575pt x 316.18124p
+<figures/software/completePolyFitTempSplit5.png, id=782, 421.575pt x 316.18124p
 t>
 File: figures/software/completePolyFitTempSplit5.png Graphic file (type png)
  <use figures/software/completePolyFitTempSplit5.png>
@@ -2547,7 +2632,7 @@ Package pdftex.def Info: figures/software/completePolyFitTempSplit5.png used on
  input line 138.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
 
-<figures/software/lnPlotDataDen.png, id=783, 421.575pt x 316.18124pt>
+<figures/software/lnPlotDataDen.png, id=784, 421.575pt x 316.18124pt>
 File: figures/software/lnPlotDataDen.png Graphic file (type png)
 
 <use figures/software/lnPlotDataDen.png>
@@ -2607,7 +2692,7 @@ Overfull \hbox (32.94925pt too wide) in paragraph at lines 221--226
  [] 
  []
 
-<figures/software/completeExpPolyFitDen.png, id=804, 421.575pt x 316.18124pt>
+<figures/software/completeExpPolyFitDen.png, id=805, 421.575pt x 316.18124pt>
 File: figures/software/completeExpPolyFitDen.png Graphic file (type png)
 
 <use figures/software/completeExpPolyFitDen.png>
@@ -2615,7 +2700,7 @@ Package pdftex.def Info: figures/software/completeExpPolyFitDen.png used on inp
 ut line 234.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
 
-<figures/software/completeExpFitDen.png, id=805, 421.575pt x 316.18124pt>
+<figures/software/completeExpFitDen.png, id=806, 421.575pt x 316.18124pt>
 File: figures/software/completeExpFitDen.png Graphic file (type png)
 
 <use figures/software/completeExpFitDen.png>
@@ -2623,7 +2708,7 @@ Package pdftex.def Info: figures/software/completeExpFitDen.png used on input l
 ine 241.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
 
-<figures/launcher_methods/dragcoeff_whitehead2004mars.jpg, id=807, 796.77675pt 
+<figures/launcher_methods/dragcoeff_whitehead2004mars.jpg, id=808, 796.77675pt 
 x 475.7775pt>
 File: figures/launcher_methods/dragcoeff_whitehead2004mars.jpg Graphic file (ty
 pe jpg)
@@ -2634,7 +2719,7 @@ pg used on input line 260.
 
 [28 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/figu
 res/software/temperatureDataSplit5.png>]
-<figures/software/dragCoeffFit.png, id=819, 421.575pt x 316.18124pt>
+<figures/software/dragCoeffFit.png, id=820, 421.575pt x 316.18124pt>
 File: figures/software/dragCoeffFit.png Graphic file (type png)
 
 <use figures/software/dragCoeffFit.png>
@@ -2643,20 +2728,20 @@ Package pdftex.def Info: figures/software/dragCoeffFit.png used on input line 2
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
  [29 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/fig
 ures/software/completePolyFitTempSplit5.png (PNG copy)>]
-<figures/software/RK_Propagator.png, id=842, 784.73175pt x 500.46976pt>
+<figures/software/RK_Propagator.png, id=843, 784.73175pt x 502.87875pt>
 File: figures/software/RK_Propagator.png Graphic file (type png)
 
 <use figures/software/RK_Propagator.png>
 Package pdftex.def Info: figures/software/RK_Propagator.png used on input line 
 302.
-(pdftex.def)             Requested size: 672.19635pt x 428.71555pt.
+(pdftex.def)             Requested size: 672.19635pt x 430.77916pt.
 
 
 LaTeX Warning: Float too large for page by 15.65628pt on input line 305.
 
 [30 <D:/Documents/TUDelft Master/Thesis/00. Documentation_Report/00.thesis/figu
 res/software/lnPlotDataDen.png (PNG copy)>]
-<figures/software/TSI_Propagator.png, id=857, 790.152pt x 542.62724pt>
+<figures/software/TSI_Propagator.png, id=858, 790.152pt x 542.62724pt>
 File: figures/software/TSI_Propagator.png Graphic file (type png)
 
 <use figures/software/TSI_Propagator.png>
@@ -2671,7 +2756,7 @@ Overfull \hbox (13.50186pt too wide) in paragraph at lines 316--317
 
 LaTeX Warning: Float too large for page by 15.65628pt on input line 319.
 
-<figures/software/optimiser.png, id=864, 714.87074pt x 434.8245pt>
+<figures/software/optimiser.png, id=865, 714.87074pt x 434.8245pt>
 File: figures/software/optimiser.png Graphic file (type png)
 
 <use figures/software/optimiser.png>
@@ -2746,7 +2831,7 @@ File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ("D:\Documents\TUDelft Master\Thesis\00. Documentation_Report\00.thesis\appendi
 xB-fittingProcessAndResults.tex" [45]
 Appendix B.
-<figures/software/temperatureDataSplit6.png, id=1167, 337.26pt x 252.945pt>
+<figures/software/temperatureDataSplit6.png, id=1168, 337.26pt x 252.945pt>
 File: figures/software/temperatureDataSplit6.png Graphic file (type png)
 
 <use figures/software/temperatureDataSplit6.png>
@@ -2754,7 +2839,7 @@ Package pdftex.def Info: figures/software/temperatureDataSplit6.png used on inp
 ut line 12.
 (pdftex.def)             Requested size: 358.50609pt x 268.88463pt.
 
-<figures/software/temperatureDataSplit7.png, id=1169, 404.712pt x 266.1945pt>
+<figures/software/temperatureDataSplit7.png, id=1170, 404.712pt x 266.1945pt>
 File: figures/software/temperatureDataSplit7.png Graphic file (type png)
 
 <use figures/software/temperatureDataSplit7.png>
@@ -2762,7 +2847,7 @@ Package pdftex.def Info: figures/software/temperatureDataSplit7.png used on inp
 ut line 21.
 (pdftex.def)             Requested size: 448.1309pt x 294.76857pt.
 
-<figures/software/completePolyFitTempSplit7.png, id=1171, 421.575pt x 316.18124
+<figures/software/completePolyFitTempSplit7.png, id=1172, 421.575pt x 316.18124
 pt>
 File: figures/software/completePolyFitTempSplit7.png Graphic file (type png)
  <use figures/software/completePolyFitTempSplit7.png>
@@ -2770,7 +2855,7 @@ Package pdftex.def Info: figures/software/completePolyFitTempSplit7.png used on
  input line 30.
 (pdftex.def)             Requested size: 403.31508pt x 302.49327pt.
 
-<figures/software/densityDataSplit2.png, id=1175, 337.26pt x 252.945pt>
+<figures/software/densityDataSplit2.png, id=1176, 337.26pt x 252.945pt>
 File: figures/software/densityDataSplit2.png Graphic file (type png)
 
 <use figures/software/densityDataSplit2.png>
@@ -2778,7 +2863,7 @@ Package pdftex.def Info: figures/software/densityDataSplit2.png used on input l
 ine 46.
 (pdftex.def)             Requested size: 403.31508pt x 302.49423pt.
 
-<figures/software/densityDataSplit3.png, id=1177, 337.26pt x 252.945pt>
+<figures/software/densityDataSplit3.png, id=1178, 337.26pt x 252.945pt>
 File: figures/software/densityDataSplit3.png Graphic file (type png)
 
 <use figures/software/densityDataSplit3.png>
@@ -2788,7 +2873,7 @@ ine 55.
  [46
 
 ]
-<figures/software/completePolyFitDenSplit3.png, id=1187, 421.575pt x 316.18124p
+<figures/software/completePolyFitDenSplit3.png, id=1188, 421.575pt x 316.18124p
 t>
 File: figures/software/completePolyFitDenSplit3.png Graphic file (type png)
  <use figures/software/completePolyFitDenSplit3.png>
@@ -2809,7 +2894,7 @@ Overfull \vbox (3.94742pt too high) has occurred while \output is active []
 res/software/completePolyFitTempSplit7.png (PNG copy)> <D:/Documents/TUDelft Ma
 ster/Thesis/00. Documentation_Report/00.thesis/figures/software/densityDataSpli
 t2.png>]
-<figures/software/section3PolyFitDen.png, id=1201, 421.575pt x 316.18124pt>
+<figures/software/section3PolyFitDen.png, id=1202, 421.575pt x 316.18124pt>
 File: figures/software/section3PolyFitDen.png Graphic file (type png)
 
 <use figures/software/section3PolyFitDen.png>
@@ -2817,7 +2902,7 @@ Package pdftex.def Info: figures/software/section3PolyFitDen.png used on input
 line 73.
 (pdftex.def)             Requested size: 403.31508pt x 302.49327pt.
 
-<figures/software/ExpAtmFitDenZoom.png, id=1203, 421.575pt x 316.18124pt>
+<figures/software/ExpAtmFitDenZoom.png, id=1204, 421.575pt x 316.18124pt>
 File: figures/software/ExpAtmFitDenZoom.png Graphic file (type png)
 
 <use figures/software/ExpAtmFitDenZoom.png>
@@ -2884,13 +2969,16 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
  ) 
 Here is how much of TeX's memory you used:
- 27613 strings out of 493921
- 486510 string characters out of 3147280
- 822478 words of memory out of 3000000
- 29784 multiletter control sequences out of 15000+200000
+ 27618 strings out of 493921
+ 486595 string characters out of 3147280
+ 817478 words of memory out of 3000000
+ 29788 multiletter control sequences out of 15000+200000
  169609 words of font info for 158 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  69i,24n,74p,3171b,2354s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2907,9 +2995,9 @@ r)/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><D:/Programs (slower)/MiKTeX/font
 s/type1/adobe/utopia/putr8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/adobe/
 utopia/putri8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/urw/courier/ucrr8a.
 pfb>
-Output written on report.pdf (58 pages, 1294910 bytes).
+Output written on report.pdf (58 pages, 1304301 bytes).
 PDF statistics:
- 1382 PDF objects out of 1440 (max. 8388607)
- 447 named destinations out of 1000 (max. 500000)
+ 1383 PDF objects out of 1440 (max. 8388607)
+ 448 named destinations out of 1000 (max. 500000)
  477 words of extra memory for PDF output out of 10000 (max. 10000000)
 
