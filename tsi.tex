@@ -150,62 +150,69 @@ x'_{9}&=\dfrac{3}{2}\dfrac{x_{9}x_{8}'}{x_{8}}
  
  \subsubsection{Transformation angles}
  \label{subsubsec:tsiTransAngl}
- The angles required for the transformation to go from the body frame to the reference frame are all written as auxiliary functions defined in \Cref{eq:transAnglAux}. As was mentioned before, the angle represented by $x_{10}$ is not a function of the state and can therefore be treated as a constant. Also, $t_{0}$ is the time from the moment the inertial frame was set to the start time of the simulation and $t$ is the time from the start of the simulation till the current step, also known as current time.
+ The angles required for the transformation to go from the body frame to the reference frame are all written as auxiliary functions. The latitude and longitude can be described using the position vector in the inertial frame, however the transformation from the body frame to the vertical frame is a function of the velocity in the rotational frame. Since the position and velocity in the inertial frame are known (current state) the rotational velocity ($V_{R}$) has to be written as a function of the inertial velocity ($V_{I}$) as described in \Cref{eq:inVelToRotVel}. This operation is a simple vector operation where $V_{M}$ is the rotational velocity of Mars.
+ 
+\begin{equation} \label{eq:inVelToRotVel}
+V_{R} = \sqrt{V_{M}^{2}+V_{I}^{2}-2V_{M}V_{I} \cos\gamma_{I} \sin\chi_{I}}
+\end{equation} 
+ 
+The corresponding angles are described using auxiliary equations as defined in \Cref{eq:transAnglAux}. As was mentioned before, the angle represented by $x_{10}$ is not a function of the state and can therefore be treated as a constant within the current integration step. Also, $t_{0}$ is the time from the moment the inertial frame was set to the start time of the simulation and $t$ is the time from the start of the simulation till the current step, also known as current time. The numbering of the auxiliary equations results from the order in which they were derived.
  
  \begin{equation} \label{eq:transAnglAux}
 \begin{split}
 x_{10} &= \dot{\Omega}_{M}t_{O}-\Omega_{P} \quad \text{where} \quad t_{O}=t_{0}+t \\
 x_{11} &= \tau = \lambda - x_{10} = \arctan\left(\dfrac{x_{2}}{x_{1}}\right)-x_{10} = \text{atan2}\left(x_{2},x_{1}\right)-x_{10}\\
 x_{12} &= \delta = \arcsin\left(\dfrac{x_{3}}{r}\right) = \arcsin\left(\dfrac{x_{3}}{x_{20}}\right)\\
-x_{13} &= \chi = \arccos\left(\dfrac{r \dot{\delta}}{V \cos \gamma}\right)=\arccos\left(x_{22}\right)\\
-x_{14} &= \gamma = \arcsin\left(\dfrac{\dot{r}}{V}\right) = \arcsin\left(x_{23}\right)
+x_{38} &= \gamma_{I} = \arcsin\left(\dfrac{\dot{r}}{V_{I}}\right) = \arcsin\left(x_{37}\right)\\
+x_{40} &= \chi_{I} = \arccos\left(\dfrac{r \dot{\delta}}{V_{I} \cos \gamma_{I}}\right)=\arccos\left(x_{39}\right)\\
 \end{split}
 \end{equation} 
-
-%It can be seen that $x_{11}$, or the longitude, includes the atan2 function. It is however more useful to write the longitude as a function of either a sine or cosine. This could be achieved using \Cref{fig:sphertocart_noomen2013basic}, resulting in \Cref{eq:lambdaArccos}.
-%
-%\begin{figure}[!ht]
-%\centering
-%\includegraphics[width=0.3\textwidth]{figures/reference_frames/sphertocart_noomen2013basic.jpg}
-%\caption{Relation between spherical position coordinates and Cartesian position coordinates \citep{noomen2013basic}}
-%\label{fig:sphertocart_noomen2013basic}
-%\end{figure}   
-%
-%\begin{equation} \label{eq:lambdaArccos}
-%x_{11}=\tau=\lambda-x_{10}=acos2\left(x_{2},x_{1}\right)-x_{10}
-%\end{equation}
-%
-%Here the $acos2$ function is presented by \Cref{eq:acos2}. Please note that $acos2$ is a function as named by the author of this thesis.
-%
-%\begin{equation} \label{eq:acos2}
-%acos2(y,x)=\begin{cases}
-%\dfrac{y}{|y|}\arccos\left(\dfrac{x}{\sqrt{x^{2}+y^{2}}}\right), & \text{for } y \neq 0  \\
-%\arccos\left(\dfrac{x}{|x|}\right), &  \text{for } y=0,x \neq 0   \\
-%\text{Undefined}, &  \text{for } y=0,x=0     
-%\end{cases}
-%\end{equation}
-%
-%The new expressions for the longitude now provide the same solutions as the $atan2$ function.\\
 
 The equations presented in \Cref{eq:transAnglAux} require extra auxiliary equations which are all presented in \Cref{eq:extraTransAnglAux}.
  
  \begin{align} \label{eq:extraTransAnglAux}
 \begin{split}
-x_{15} &= V = \sqrt{x_{21}-V_{0}^{2}} \\
-x_{16} &= \cos x_{14}\\
-x_{17} &= x_{16}x_{15}\\
 x_{18} &= x_{20}x_{24}\\
 x_{19} &= x_{1}^{2}+x_{2}^{2}\\
 x_{20} &= r = \sqrt{x_{8}} \\
-x_{21} &= V_{total}^{2} =  x_{4}^{2}+x_{5}^{2}+x_{6}^{2}\\
+x_{21} &= x_{4}^{2}+x_{5}^{2}+x_{6}^{2}\\
+x_{24} &= x'_{12} = \dot{\delta} = \dfrac{x_{20}x_{6}-x_{3}x_{25}}{x_{8} \sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}\\
+x_{25} &= x'_{20}=\dot{r}=\dfrac{x_{26}}{2x_{20}}\\
+x_{26} &= x'_{8}=2x_{1}x_{4}+2x_{2}x_{5}+2x_{3}x_{6}\\
+\end{split}
+&
+\begin{split}
+x_{35} &= V_{M} = \dot{\Omega}_{M} x_{20}\cos x_{12}\\
+x_{36} &= V_{I} = \sqrt{x_{21}}\\
+x_{37} &= \dfrac{x_{25}}{36}\\
+x_{39} &= \dfrac{x_{18}}{x_{44}}\\
+x_{41} &= x_{35}x_{36}\\
+x_{42} &= \cos x_{38} \sin x_{40}\\
+x_{43} &= x_{41}x_{42}\\
+x_{44} &= x_{36} \cos x_{38}\\
+\end{split}
+\end{align}  
+
+With the required angles known, \Cref{eq:inVelToRotVel} can be written as an auxiliary function as well including the required transformation angles. These expressions are provided in \Cref{eq:rotTransAnglAux} with the extra auxiliary equations represented by \Cref{eq:rotExtraTransAnglAux}.
+
+ \begin{equation} \label{eq:rotTransAnglAux}
+\begin{split}
+x_{15} &= V_{R} = \sqrt{x_{35}^{2}+x_{21}-2x_{43}}\\
+x_{14} &= \gamma_{R} = \arcsin\left(\dfrac{\dot{r}}{V_{R}}\right) = \arcsin\left(x_{23}\right)\\
+x_{13} &= \chi_{R} = \arccos\left(\dfrac{r \dot{\delta}}{V_{R} \cos \gamma_{R}}\right)=\arccos\left(x_{22}\right)\\
+\end{split}
+\end{equation} 
+
+ 
+ \begin{align} \label{eq:rotExtraTransAnglAux}
+\begin{split}
+x_{16} &= \cos x_{14}\\
+x_{17} &= x_{16}x_{15}\\
 \end{split}
 &
 \begin{split}
 x_{22} &= \dfrac{x_{18}}{x_{17}}\\
 x_{23} &= \dfrac{x_{25}}{x_{15}}\\
-x_{24} &= x'_{12} = \dot{\delta} = \dfrac{x_{20}x_{6}-x_{3}x_{25}}{x_{8} \sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}\\
-x_{25} &= x'_{20}=\dot{r}=\dfrac{x_{26}}{2x_{20}}\\
-x_{26} &= x'_{8}=2x_{1}x_{4}+2x_{2}x_{5}+2x_{3}x_{6}
 \end{split}
 \end{align}  
 
@@ -218,33 +225,41 @@ x'_{11} &=  \dfrac{x_{1}x_{5}-x_{2}x_{4}}{x_{19}}\\
 x'_{12} &= \dot{\delta} = \dfrac{x_{20}x_{6}-x_{3}x_{25}}{x_{8} \sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}\\
 x'_{13} &= -\dfrac{x'_{22}}{\sqrt{1-x_{22}^{2}}}\\
 x'_{14} &= \dfrac{x'_{23}}{\sqrt{1-x_{23}^{2}}}\\
-x'_{15} &= \dfrac{x'_{21}}{2 x_{15}}\\
+x'_{15} &= \dfrac{2x_{35}x'_{35}+x'_{21}-2x'_{43}}{2x_{15}} \\
 x'_{16} &= -\sin x_{14}x'_{14}\\
 x'_{17} &= x_{16}x'_{15}+x_{15}x'_{16}\\
 x'_{18} &= x_{20}x'_{24}+x_{24}x_{25}\\
 x'_{19} &= 2x_{1}x_{4}+2x_{2}x_{5}\\
-\end{split}
-&
-\begin{split}
 x'_{20} &= \dot{r} = \dfrac{x_{26}}{2 x_{20}}\\
 x'_{21} &= 2x_{4}x'_{4}+2x_{5}x'_{5}+2x_{6}x'_{6}\\
 x'_{22} &= \dfrac{x_{17}x'_{18}-x_{18}x'_{17}}{x_{18}^{2}}\\
 x'_{23} &= \dfrac{x_{15}x'_{25}-x_{25}x'_{15}}{x_{25}^{2}}\\
+\end{split}
+&
+\begin{split}
 x'_{24} &= x''_{12} = \dfrac{x_{6}x'_{20}+x_{20}x'_{6}-x_{6}x_{25}-x_{3}x'_{25}}{x_{8}\sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}-\\
 &\dfrac{\left(\dfrac{2x_{3}^{2}x'_{25}}{x_{20}^{3}}-\dfrac{2x_{3}x_{6}}{x_{8}}\right)\left(x_{20}x_{6}-x_{3}x_{25}\right)}{2x_{8}\left(1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}\right)^{3/2}}-\dfrac{x'_{8}\left(x_{20}x_{6}-x_{3}x_{25}\right)}{x_{8}^{2}\sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}\\
 x'_{25} &= x''_{20} = \dfrac{2x_{8}x'_{26}-x_{26}^{2}}{4x_{9}}\\
-x'_{26} &= x''_{8} = 2x_{21}+2\left(x_{1}x'_{4}+x_{2}x'_{5}+x_{3}x'_{6}\right)
+x'_{26} &= x''_{8} = 2x_{21}+2\left(x_{1}x'_{4}+x_{2}x'_{5}+x_{3}x'_{6}\right)\\
+x'_{35} &=  \dot{\Omega}_{M}\left(\cos x_{12}x_{25}-x_{20}x_{24}\sin x_{12}\right) \\
+x'_{36} &=  \dfrac{x'_{21}}{2x_{36}} \\
+x'_{37} &= \dfrac{x_{36}x'_{25}-x_{25}x'_{36}}{x_{36}^{2}} \\
+x'_{38} &= \dfrac{x'_{37}}{\sqrt{1-x_{37}^{2}}} \\ 
+x'_{39} &= \dfrac{x_{44}x'_{18}-x_{18}x'_{44}}{x_{44}^{2}} \\
+x'_{40} &=  -\dfrac{x'_{39}}{\sqrt{1-x_{39}^{2}}}\\
+x'_{41} &= x_{36}x'_{35}+x_{35}x'_{36}\\ 
+x'_{42} &= \cos x_{38} \cos x_{40} x'_{43}-x'_{38} \sin x_{38} \sin x_{40}\\
+x'_{43} &= x_{41}x'_{42}+x_{42}x'_{41} \\ 
 \end{split}
 \end{align}
 
  \subsubsection{Drag acceleration}
  \label{subsubsec:tsiDrag}
-The drag acceleration is determined in the body frame by dividing the drag force ($D$) by the mass of the \ac{MAV} ($x_{7}$). The drag force itself is a function of the position and velocity. The auxiliary equations associated with the drag function are described in \Cref{eq:dragAux} and the corresponding derivatives are presented by \Cref{eq:dragDerAux} except for the $C_{D}$ equations. The polynomial coefficients for the density equation are provided in \Cref{tab:fitParametersDen} and are represented in \Cref{eq:dragAux} by $P_{\rho}$.
+The drag acceleration is determined in the body frame by dividing the drag force ($D$) by the mass of the \ac{MAV} ($x_{7}$). The drag force itself is a function of the position and velocity. The auxiliary equations associated with the drag function are described in \Cref{eq:dragAux} and the corresponding derivatives are presented by \Cref{eq:dragDerAux} except for the $C_{D}$ equations. The polynomial coefficients for the density equation are provided in \Cref{tab:fitParametersDen} and are represented in \Cref{eq:dragAux} by $P_{\rho}$. Please note that the drag force is a function of the velocity in the rotating frame.
 
  \begin{equation} \label{eq:dragAux}
 \begin{split}
-x_{27} &= D = \frac{1}{2}\rho V^{2}SC_{D} = \frac{1}{2}S x_{28}x_{15}^{2}x_{29}=\frac{1}{2}S x_{28}\left(x_{21}-V_{0}^{2}\right) x_{29}\\
-x_{28} &= \rho = e^{x_{30}} \\
+x_{27} &= D = \frac{1}{2}\rho V_{R}^{2}SC_{D} = \frac{1}{2}S x_{28}x_{15}^{2}x_{29}\\
 x_{29} &= C_{D} \\
 x_{30} &= P_{\rho 10}x_{31}^{10}+P_{\rho 9}x_{31}^{9}+P_{\rho 8}x_{31}^{8}+P_{\rho 7}x_{31}^{7}+P_{\rho 6}x_{31}^{6}+P_{\rho 5}x_{31}^{5}+P_{\rho 4}x_{31}^{4}+P_{\rho 3}x_{31}^{3}+P_{\rho 2}x_{31}^{2}+P_{\rho 1}x_{31}+P_{\rho 0} \\
 x_{31} &= h = r-R_{MOLA} = x_{20}-R_{MOLA}
@@ -253,7 +268,7 @@ x_{31} &= h = r-R_{MOLA} = x_{20}-R_{MOLA}
 
  \begin{equation} \label{eq:dragDerAux}
 \begin{split}
-x'_{27} &= \frac{1}{2}S\left(\left(x_{21}-V_{0}^{2}\right) \left(x_{29}x'_{28}+x_{28}x'_{29}\right)+x_{28}x_{29}x'_{21}\right) \\
+x'_{27} &= \frac{1}{2}Sx_{15}\left(x_{15} \left(x_{29}x'_{28}+x_{28}x'_{29}\right)+2x_{28}x_{29}x'_{15}\right) \\
 x'_{28} &= x'_{30}e^{x_{30}} \\
 x'_{30} &=x'_{31} \left(10 P_{\rho 10}x_{31}^{9}+9 P_{\rho 9}x_{31}^{8}+8 P_{\rho 8}x_{31}^{7}+7 P_{\rho 7}x_{31}^{6}+6 P_{\rho 6}x_{31}^{5}+\dots \right. \\
 &  \left. \dotsc +5 P_{\rho 5}x_{31}^{4}+4 P_{\rho 4}x_{31}^{3}+3 P_{\rho 3}x_{31}^{2}+2 P_{\rho 2}x_{31}+P_{\rho 1}\right) \\
@@ -347,7 +362,7 @@ To be able to determine the different auxiliary functions and eventually write t
 u_{n}=x'_{n}, \quad n=1,\dotsc,34
 \end{equation}
 
-These equations are then written as presented by \Cref{eq:unAuxEq1,eq:unAuxEq2}.
+These equations are then written as presented by \Cref{eq:unAuxEq1,eq:unAuxEq2,eq:unAuxEq3}.
 
 \begin{align} \label{eq:unAuxEq1}
 \begin{split} 
@@ -368,7 +383,7 @@ u_{11} &= \dfrac{x_{1}x_{5}-x_{2}x_{4}}{x_{19}}\\
 u_{12} &= \dot{\delta} = \dfrac{x_{20}x_{6}-x_{3}x_{25}}{x_{8} \sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}\\
 u_{13} &= -\dfrac{u_{22}}{\sqrt{1-x_{22}^{2}}}\\
 u_{14} &= \dfrac{u_{23}}{\sqrt{1-x_{23}^{2}}}\\
-u_{15} &= \dfrac{u_{21}}{2 x_{15}}\\
+u_{15} &= \dfrac{2x_{35}u_{35}+u_{21}-2u_{43}}{2x_{15}} \\
 u_{16} &= -\sin x_{14}u_{14}\\
 u_{17} &= x_{16}u_{15}+x_{15}u_{16}\\
 u_{18} &= x_{20}u_{24}+x_{24}x_{25}\\
@@ -386,7 +401,7 @@ u_{23} &= \dfrac{x_{15}u_{25}-x_{25}u_{15}}{x_{25}^{2}}\\
 u_{24} &=  \dfrac{x_{6}u_{20}+x_{20}u_{6}-x_{6}x_{25}-x_{3}u_{25}}{x_{8}\sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}-\dfrac{\left(\dfrac{2x_{3}^{2}u_{25}}{x_{20}^{3}}-\dfrac{2x_{3}x_{6}}{x_{8}}\right)\left(x_{20}x_{6}-x_{3}x_{25}\right)}{2x_{8}\left(1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}\right)^{3/2}}-\dfrac{u_{8}\left(x_{20}x_{6}-x_{3}x_{25}\right)}{x_{8}^{2}\sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}\\
 u_{25} &=  \dfrac{2x_{8}u_{26}-x_{26}^{2}}{4x_{9}}\\
 u_{26} &=  2x_{21}+2\left(x_{1}u_{4}+x_{2}u_{5}+x_{3}u_{6}\right)\\
-u_{27} &= \frac{1}{2}S\left(\left(x_{21}-V_{0}^{2}\right)\left(x_{29}u_{28}+x_{28}u_{29}\right)+x_{28}x_{29}u_{21}\right) \\
+u_{27} &=  \frac{1}{2}Sx_{15}\left(x_{15} \left(x_{29}u_{28}+x_{28}u_{29}\right)+2x_{28}x_{29}u_{15}\right) \\
 u_{28} &= u_{30}e^{x_{30}} \\
 u_{29} &=\begin{cases}
 u_{29,1}=0, & \text{for } 0\leq x_{32} < 0.5\\
@@ -412,6 +427,62 @@ u_{34,5}=0, &  \text{for }  x_{31} \geq 170.05
 \end{cases}
 \end{split}
 \end{equation}
+
+%\begin{align} \label{eq:unAuxEq3}
+%\begin{split}
+%u_{35} &=  \dot{\Omega}_{M}\left(\cos x_{12}x_{25}-x_{20}x_{24}\sin x_{12}\right) \\
+%u_{36} &=  \dfrac{u_{21}}{2x_{36}} \\
+%u_{37} &= \dfrac{x_{36}u_{25}-x_{25}u_{36}}{x_{36}^{2}} \\
+%u_{38} &= \dfrac{u_{37}}{\sqrt{1-x_{37}^{2}}} \\ 
+%\end{split}
+%&
+%\begin{split}	
+%u_{39} &= \dfrac{x_{44}u_{18}-x_{18}u_{44}}{x_{44}^{2}} \\
+%u_{40} &=  -\dfrac{u_{39}}{\sqrt{1-x_{39}^{2}}}\\
+%u_{41} &= x_{36}u_{35}+x_{35}u_{36}\\ 
+%u_{42} &= \cos x_{38} \cos x_{40} u_{43}-u_{38} \sin x_{38} \sin x_{40}\\
+%u_{43} &= x_{41}u_{42}+x_{42}u_{41} \\  
+%\end{split}
+%\end{align}
+
+\begin{align} \label{eq:unAuxEq3}
+\begin{split}
+u_{35} &=  \dot{\Omega}_{M}\left(\cos x_{12}x_{25}-x_{20}x_{24}\sin x_{12}\right) \\
+\\
+\\
+u_{36} &=  \dfrac{u_{21}}{2x_{36}} \\
+\\
+\\
+u_{37} &= \dfrac{x_{36}u_{25}-x_{25}u_{36}}{x_{36}^{2}} \\
+\\
+\\
+u_{38} &= \dfrac{u_{37}}{\sqrt{1-x_{37}^{2}}} \\ 
+\\
+\\
+u_{39} &= \dfrac{x_{44}u_{18}-x_{18}u_{44}}{x_{44}^{2}} \\
+\\
+\\
+u_{40} &=  -\dfrac{u_{39}}{\sqrt{1-x_{39}^{2}}}\\
+\\
+\\
+u_{41} &= x_{36}u_{35}+x_{35}u_{36}\\ 
+\\
+\\
+u_{42} &= \cos x_{38} \cos x_{40} u_{43}-u_{38} \sin x_{38} \sin x_{40}\\
+\\
+\\
+u_{43} &= x_{41}u_{42}+x_{42}u_{41} \\
+\\
+\\
+u_{27} &=  \frac{1}{2}Sx_{15}\left(x_{15} \left(x_{29}u_{28}+x_{28}u_{29}\right)+2x_{28}x_{29}u_{15}\right) \\  
+\\
+\\
+u_{15} &= \dfrac{2x_{35}u_{35}+u_{21}-2u_{43}}{2x_{15}} \\
+\end{split}
+&
+&
+&
+\end{align}
 
 As can be seen in \Cref{eq:unAuxEq1} $u_{4}$, $u_{5}$ and $u_{6}$ still have to be written out to include all the accelerations and the transformations. The gravitational accelerations were already written out in \Cref{eq:gravAcc}. Then using the convention established in \Cref{subsec:auxEq} the equation described in \Cref{eq:acc} can be rewritten to the form presented in \Cref{eq:accAux} where the transformation matrices are described by \Cref{eq:BPtrans,eq:IBtrans} for $\mathbb{T}_{\mathbf{BP}}$ and $\mathbb{T}_{\mathbf{IB}}$ respectively.
 
