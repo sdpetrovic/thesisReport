@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.9)  18 APR 2016 13:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.9)  18 APR 2016 16:07
 entering extended mode
 **report.tex
 
@@ -1939,25 +1939,20 @@ LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <12> not available
 ] [7] [8] [9]
 Package acronym Info: Label `acro:MOLA' newly defined as it shall be overridden
 
-although it is yet undefined on input line 325.
+although it is yet undefined on input line 326.
  [10] [11] [12] [13]
-Overfull \hbox (6.51375pt too wide) in alignment at lines 771--774
+Overfull \hbox (6.51375pt too wide) in alignment at lines 772--775
  [] [] [] 
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 774--775
+Overfull \hbox (6.51375pt too wide) in alignment at lines 775--776
  [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--777
+Underfull \hbox (badness 10000) in paragraph at lines 778--778
 []|\T1/futs/b/n/10 Auxiliary
- []
-
-
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 788--788
-[]|\T1/futs/m/n/10 Multiplication| 
  []
 
 
@@ -2006,17 +2001,17 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 797--797
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 775--797
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 798--798
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (6.51375pt too wide) in alignment at lines 776--798
  [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 797
- []
-
-
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 798--798
-[]|\T1/futs/m/n/10 Multiplication| 
+Underfull \vbox (badness 10000) detected at line 798
  []
 
 
@@ -2040,7 +2035,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 802--802
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 804--804
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 803--803
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2075,7 +2070,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 810--810
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 812--812
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 811--811
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2105,28 +2100,28 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 817--817
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 797--817
- [] [] [] 
- []
-
-[14]
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 818--818
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
+Overfull \hbox (6.51375pt too wide) in alignment at lines 798--818
+ [] [] [] 
+ []
+
+[14]
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 819--819
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 820--820
-[]|\T1/futs/m/n/10 Multiplication
+[]|\T1/futs/m/n/10 Multiplication| 
  []
 
 
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 821--821
-[]|\T1/futs/m/n/10 Multiplication| 
+[]|\T1/futs/m/n/10 Multiplication
  []
 
 
@@ -2135,7 +2130,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 822--822
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 824--824
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 823--823
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2145,23 +2140,23 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 825--825
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 829--829
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 826--826
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 837--837
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 830--830
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 817--837
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 838--838
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (6.51375pt too wide) in alignment at lines 818--838
  [] [] [] 
- []
-
-
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 839--839
-[]|\T1/futs/m/n/10 Multiplication| 
  []
 
 
@@ -2185,7 +2180,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 843--843
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 845--845
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 844--844
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2210,7 +2205,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 849--849
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 852--852
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 850--850
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2220,7 +2215,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 853--853
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 856--856
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 854--854
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2230,27 +2225,27 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 857--857
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 837--857
- [] [] [] 
- []
-
-[15]
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 858--858
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
+Overfull \hbox (6.51375pt too wide) in alignment at lines 838--858
+ [] [] [] 
+ []
+
+[15]
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 859--859
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 861--861
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 860--860
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 865--865
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 862--862
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2260,7 +2255,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 866--866
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 868--868
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 867--867
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2275,12 +2270,12 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 870--870
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 873--873
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 871--871
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 876--876
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 874--874
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2290,13 +2285,13 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 877--877
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 857--877
- [] [] [] 
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 878--878
+[]|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 878--878
-[]|\T1/futs/m/n/10 Multiplication| 
+Overfull \hbox (6.51375pt too wide) in alignment at lines 858--878
+ [] [] [] 
  []
 
 
@@ -2330,12 +2325,12 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 884--884
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 886--886
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 885--885
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 895--895
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 887--887
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2350,16 +2345,16 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 897--897
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 877--897
- [] [] [] 
- []
-
-[16]
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 901--901
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 898--898
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
 
+Overfull \hbox (6.51375pt too wide) in alignment at lines 878--898
+ [] [] [] 
+ []
+
+[16]
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 902--902
 []|\T1/futs/m/n/10 Multiplication| 
  []
@@ -2380,7 +2375,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 905--905
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 907--907
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 906--906
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2390,7 +2385,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 908--908
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 914--914
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 909--909
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2400,13 +2395,13 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 915--915
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 897--917
- [] [] [] 
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 916--916
+[]|\T1/futs/m/n/10 Multiplication| 
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 921--921
-[]|\T1/futs/m/n/10 Multiplication| 
+Overfull \hbox (6.51375pt too wide) in alignment at lines 898--918
+ [] [] [] 
  []
 
 
@@ -2415,7 +2410,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 922--922
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 927--927
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 923--923
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2460,12 +2455,17 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 935--935
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 917--937
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 936--936
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (6.51375pt too wide) in alignment at lines 918--938
  [] [] [] 
  []
 
 [17] [18] [19] [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1124--1125
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1126
 
  []
 
@@ -2977,7 +2977,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
 Here is how much of TeX's memory you used:
  27618 strings out of 493921
  486595 string characters out of 3147280
- 817478 words of memory out of 3000000
+ 818478 words of memory out of 3000000
  29788 multiletter control sequences out of 15000+200000
  169609 words of font info for 158 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -2995,7 +2995,7 @@ r)/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><D:/Programs (slower)/MiKTeX/font
 s/type1/adobe/utopia/putr8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/adobe/
 utopia/putri8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/urw/courier/ucrr8a.
 pfb>
-Output written on report.pdf (58 pages, 1304301 bytes).
+Output written on report.pdf (58 pages, 1304346 bytes).
 PDF statistics:
  1383 PDF objects out of 1440 (max. 8388607)
  448 named destinations out of 1000 (max. 500000)
