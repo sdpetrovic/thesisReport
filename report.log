@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.9)  19 APR 2016 08:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.9)  19 APR 2016 17:12
 entering extended mode
 **report.tex
 
@@ -2330,7 +2330,12 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 885--885
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 887--887
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 886--886
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 895--895
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2345,16 +2350,16 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 897--897
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 898--898
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
 Overfull \hbox (6.51375pt too wide) in alignment at lines 878--898
  [] [] [] 
  []
 
 [16]
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 901--901
+[]|\T1/futs/m/n/10 Multiplication| 
+ []
+
+
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 902--902
 []|\T1/futs/m/n/10 Multiplication| 
  []
@@ -2375,7 +2380,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 905--905
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 906--906
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 907--907
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2385,7 +2390,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 908--908
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 909--909
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 914--914
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2395,13 +2400,13 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 915--915
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 916--916
-[]|\T1/futs/m/n/10 Multiplication| 
+Overfull \hbox (6.51375pt too wide) in alignment at lines 898--918
+ [] [] [] 
  []
 
 
-Overfull \hbox (6.51375pt too wide) in alignment at lines 898--918
- [] [] [] 
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 921--921
+[]|\T1/futs/m/n/10 Multiplication| 
  []
 
 
@@ -2410,7 +2415,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 922--922
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 923--923
+Overfull \hbox (2.4844pt too wide) in paragraph at lines 927--927
 []|\T1/futs/m/n/10 Multiplication| 
  []
 
@@ -2455,12 +2460,7 @@ Overfull \hbox (2.4844pt too wide) in paragraph at lines 935--935
  []
 
 
-Overfull \hbox (2.4844pt too wide) in paragraph at lines 936--936
-[]|\T1/futs/m/n/10 Multiplication| 
- []
-
-
-Overfull \hbox (6.51375pt too wide) in alignment at lines 918--938
+Overfull \hbox (6.51375pt too wide) in alignment at lines 918--937
  [] [] [] 
  []
 
@@ -2974,7 +2974,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
 Here is how much of TeX's memory you used:
  27618 strings out of 493921
  486595 string characters out of 3147280
- 818478 words of memory out of 3000000
+ 817478 words of memory out of 3000000
  29788 multiletter control sequences out of 15000+200000
  169609 words of font info for 158 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -2992,7 +2992,7 @@ r)/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><D:/Programs (slower)/MiKTeX/font
 s/type1/adobe/utopia/putr8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/adobe/
 utopia/putri8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/urw/courier/ucrr8a.
 pfb>
-Output written on report.pdf (58 pages, 1304345 bytes).
+Output written on report.pdf (58 pages, 1304390 bytes).
 PDF statistics:
  1383 PDF objects out of 1440 (max. 8388607)
  448 named destinations out of 1000 (max. 500000)
