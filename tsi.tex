@@ -62,7 +62,7 @@ a_{z}\\
 -\mu_{M}\dfrac{y}{r^{3}}\\
 -\mu_{M}\dfrac{z}{r^{3}}\\
 \end{pmatrix}+
-\Bigg|_{\mathbf{I}}\mathbb{T}_{\mathbf{z}}\left(-\dot{\Omega}_{M}t_{O}+\Omega_{P}\right)\Bigg|_{\mathbf{R}}\mathbb{T}_{\mathbf{z}}\left(-\tau\right)\mathbb{T}_{\mathbf{y}}\left(\dfrac{\pi}{2}+\delta\right)\Bigg|_{\mathbf{V}}\mathbb{T}_{\mathbf{z}}\left(-\chi\right)\mathbb{T}_{\mathbf{y}}\left(-\gamma\right)\Bigg|_{\mathbf{B}}\left[
+\Bigg|_{\mathbf{I}}\mathbb{T}_{\mathbf{z}}\left(-\Omega_{M}t_{O}+\omega_{P}\right)\Bigg|_{\mathbf{R}}\mathbb{T}_{\mathbf{z}}\left(-\tau\right)\mathbb{T}_{\mathbf{y}}\left(\dfrac{\pi}{2}+\delta\right)\Bigg|_{\mathbf{V}}\mathbb{T}_{\mathbf{z}}\left(-\chi\right)\mathbb{T}_{\mathbf{y}}\left(-\gamma\right)\Bigg|_{\mathbf{B}}\left[
 \begin{pmatrix}
 -\dfrac{D}{m_{MAV}}\\
 0\\
@@ -150,29 +150,51 @@ x'_{9}&=\dfrac{3}{2}\dfrac{x_{9}x_{8}'}{x_{8}}
  
  \subsubsection{Transformation angles}
  \label{subsubsec:tsiTransAngl}
- The angles required for the transformation to go from the body frame to the reference frame are all written as auxiliary functions. The latitude and longitude can be described using the position vector in the inertial frame, however the transformation from the body frame to the vertical frame is a function of the velocity in the rotational frame. Since the position and velocity in the inertial frame are known (current state) the rotational velocity ($V_{R}$) has to be written as a function of the inertial velocity ($V_{I}$) as described in \Cref{eq:inVelToRotVel}. This operation is a simple vector operation where $V_{M}$ is the rotational velocity of Mars.
+ The angles required for the transformation to go from the body frame to the reference frame are all written as auxiliary functions. The latitude and longitude can be described using the position vector in the inertial frame, however the transformation from the body frame to the vertical frame is a function of the velocity in the rotational frame. Since the position and velocity in the inertial frame are known (current state) the rotational velocity ($V_{R}$) has to be written as a function of the inertial velocity ($V_{I}$) as visualised by \Cref{fig:rotational_inertial_martian_velocity} and described in \Cref{eq:inVelToRotVel}. This operation is a simple vector operation where $V_{M}$ is the local rotational velocity of Mars.
+ 
+ \begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/tsi/rotational_inertial_martian_velocity.png}
+\caption{Vector addition of rotational and Martian velocity to form the inertial velocity.}
+\label{fig:rotational_inertial_martian_velocity}
+\end{figure}
  
 \begin{equation} \label{eq:inVelToRotVel}
 V_{R} = \sqrt{V_{M}^{2}+V_{I}^{2}-2V_{M}V_{I} \cos\gamma_{I} \sin\chi_{I}}
 \end{equation} 
  
-The corresponding angles are described using auxiliary equations as defined in \Cref{eq:transAnglAux}. As was mentioned before, the angle represented by $x_{10}$ is not a function of the state and can therefore be treated as a constant within the current integration step. Also, $t_{0}$ is the time from the moment the inertial frame was set to the start time of the simulation and $t$ is the time from the start of the simulation till the current step, also known as current time. The numbering of the auxiliary equations results from the order in which they were derived.
+The corresponding angles are described using auxiliary equations as defined in \Cref{eq:transAnglAux} resulting from both \Cref{fig:rotational_inertial_martian_velocity,fig:flight_path_and_azimuth_angle}. As was mentioned before, the angle represented by $x_{10}$ is not a function of the state and can therefore be treated as a constant within the current integration step. Also, $t_{0}$ is the time from the moment the inertial frame was set to the start time of the simulation and $t$ is the time from the start of the simulation till the current step, also known as current time. The numbering of the auxiliary equations results from the order in which they were derived.
+
+ \begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/tsi/flight_path_and_azimuth_angle.png}
+\caption{Flight-path and azimuth angle definition in the rotating frame.}
+\label{fig:flight_path_and_azimuth_angle}
+\end{figure}
  
  \begin{equation} \label{eq:transAnglAux}
 \begin{split}
-x_{10} &= \dot{\Omega}_{M}t_{O}-\Omega_{P} \quad \text{where} \quad t_{O}=t_{0}+t \\
+x_{10} &= \Omega_{M}t_{O}-\omega_{P} \quad \text{where} \quad t_{O}=t_{0}+t \\
 x_{11} &= \tau = \lambda - x_{10} = \arctan\left(\dfrac{x_{2}}{x_{1}}\right)-x_{10} = \text{atan2}\left(x_{2},x_{1}\right)-x_{10}\\
 x_{12} &= \delta = \arcsin\left(\dfrac{x_{3}}{r}\right) = \arcsin\left(\dfrac{x_{3}}{x_{20}}\right)\\
 x_{38} &= \gamma_{I} = \arcsin\left(\dfrac{\dot{r}}{V_{I}}\right) = \arcsin\left(x_{37}\right)\\
-x_{40} &= \chi_{I} = \arccos\left(\dfrac{r \dot{\delta}}{V_{I} \cos \gamma_{I}}\right)=\arccos\left(x_{39}\right)\\
+x_{40} &= \chi_{I} = \arctan\left(\dfrac{\dot{\lambda}}{\dot{\delta}}\right)=\arctan\left(\dfrac{x_{45}}{x_{24}}\right)=\text{atan2}\left(x_{45},x_{24}\right)\\
 \end{split}
 \end{equation} 
+
+Here the atan2 function is described by the general equations shown in \Cref{fig:atan2_guilhaire2013}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/reference_frames/atan2_guilhaire2013.jpg}
+\caption{atan2 function evaluation conditions.}
+\label{fig:atan2_guilhaire2013}
+\end{figure}
 
 The equations presented in \Cref{eq:transAnglAux} require extra auxiliary equations which are all presented in \Cref{eq:extraTransAnglAux}.
  
  \begin{align} \label{eq:extraTransAnglAux}
 \begin{split}
-x_{18} &= x_{20}x_{24}\\
 x_{19} &= x_{1}^{2}+x_{2}^{2}\\
 x_{20} &= r = \sqrt{x_{8}} \\
 x_{21} &= x_{4}^{2}+x_{5}^{2}+x_{6}^{2}\\
@@ -182,38 +204,33 @@ x_{26} &= x'_{8}=2x_{1}x_{4}+2x_{2}x_{5}+2x_{3}x_{6}\\
 \end{split}
 &
 \begin{split}
-x_{35} &= V_{M} = \dot{\Omega}_{M} x_{20}\cos x_{12}\\
+x_{35} &= V_{M} = \Omega_{M} x_{20}\cos x_{12}\\
 x_{36} &= V_{I} = \sqrt{x_{21}}\\
 x_{37} &= \dfrac{x_{25}}{x_{36}}\\
-x_{39} &= \dfrac{x_{18}}{x_{44}}\\
 x_{41} &= x_{35}x_{36}\\
 x_{42} &= \cos x_{38} \sin x_{40}\\
 x_{43} &= x_{41}x_{42}\\
-x_{44} &= x_{36} \cos x_{38}\\
+x_{45} &= \dot{\lambda} = \dfrac{x_{1}x_{5}-x_{2}x_{4}}{x_{19}}\\
 \end{split}
 \end{align}  
 
-With the required angles known, \Cref{eq:inVelToRotVel} can be written as an auxiliary function as well including the required transformation angles. These expressions are provided in \Cref{eq:rotTransAnglAux} with the extra auxiliary equations represented by \Cref{eq:rotExtraTransAnglAux}.
+With the required angles known, \Cref{eq:inVelToRotVel} can be written as an auxiliary function as well including the required transformation angles. These expressions are provided in \Cref{eq:rotTransAnglAux} with the extra auxiliary equations represented by \Cref{eq:rotExtraTransAnglAux}. Here $\dot{\tau}$ was found by noticing that $r\dot{\tau}=r\dot{\lambda}-\Omega_{M}r\cos \delta$, also see \Cref{fig:rotational_inertial_martian_velocity,fig:flight_path_and_azimuth_angle}.
 
  \begin{equation} \label{eq:rotTransAnglAux}
 \begin{split}
 x_{15} &= V_{R} = \sqrt{x_{35}^{2}+x_{21}-2x_{43}}\\
 x_{14} &= \gamma_{R} = \arcsin\left(\dfrac{\dot{r}}{V_{R}}\right) = \arcsin\left(x_{23}\right)\\
-x_{13} &= \chi_{R} = \arccos\left(\dfrac{r \dot{\delta}}{V_{R} \cos \gamma_{R}}\right)=\arccos\left(x_{22}\right)\\
+x_{13} &= \chi_{R} = \arctan\left(\dfrac{\dot{\lambda}}{\dot{\delta}}\right)=\arctan\left(\dfrac{x_{46}}{x_{24}}\right)=\text{atan2}\left(x_{46},x_{24}\right)\\
 \end{split}
 \end{equation} 
 
  
  \begin{align} \label{eq:rotExtraTransAnglAux}
-\begin{split}
-x_{16} &= \cos x_{14}\\
-x_{17} &= x_{16}x_{15}\\
-\end{split}
+x_{16} &= \cos x_{14}
 &
-\begin{split}
-x_{22} &= \dfrac{x_{18}}{x_{17}}\\
-x_{23} &= \dfrac{x_{25}}{x_{15}}\\
-\end{split}
+x_{23} &= \dfrac{x_{25}}{x_{15}}
+&
+x_{46} &= x'_{11} = \dot{\tau} = x_{45}-\Omega_{M}\cos x_{12}
 \end{align}  
 
 The derivatives of all these auxiliary equations are shown in \Cref{eq:derTransAnglAux}.
@@ -221,36 +238,34 @@ The derivatives of all these auxiliary equations are shown in \Cref{eq:derTransA
  \begin{align} \label{eq:derTransAnglAux}
 \begin{split}
 x'_{10} &= 0 \\
-x'_{11} &=  \dfrac{x_{1}x_{5}-x_{2}x_{4}}{x_{19}}\\
+x'_{11} &=  \dot{\tau} = x_{45}-\Omega_{M}\cos\left(x_{12}\right)\\
 x'_{12} &= \dot{\delta} = \dfrac{x_{20}x_{6}-x_{3}x_{25}}{x_{8} \sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}\\
-x'_{13} &= -\dfrac{x'_{22}}{\sqrt{1-x_{22}^{2}}}\\
+x'_{13} &= \dfrac{x_{24}x'_{46}-x_{46}x'_{24}}{x_{46}^{2}x_{24}^{2}}\\
 x'_{14} &= \dfrac{x'_{23}}{\sqrt{1-x_{23}^{2}}}\\
 x'_{15} &= \dfrac{2x_{35}x'_{35}+x'_{21}-2x'_{43}}{2x_{15}} \\
 x'_{16} &= -\sin x_{14}x'_{14}\\
-x'_{17} &= x_{16}x'_{15}+x_{15}x'_{16}\\
-x'_{18} &= x_{20}x'_{24}+x_{24}x_{25}\\
 x'_{19} &= 2x_{1}x_{4}+2x_{2}x_{5}\\
 x'_{20} &= \dot{r} = \dfrac{x_{26}}{2 x_{20}}\\
 x'_{21} &= 2x_{4}x'_{4}+2x_{5}x'_{5}+2x_{6}x'_{6}\\
-x'_{22} &= \dfrac{x_{17}x'_{18}-x_{18}x'_{17}}{x_{17}^{2}}\\
 x'_{23} &= \dfrac{x_{15}x'_{25}-x_{25}x'_{15}}{x_{15}^{2}}\\
 \end{split}
 &
 \begin{split}
-x'_{24} &= x''_{12} = \dfrac{x_{6}x'_{20}+x_{20}x'_{6}-x_{6}x_{25}-x_{3}x'_{25}}{x_{8}\sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}-\\
+x'_{24} &= x''_{12} = \dfrac{x_{6}x'_{20}+x_{20}x'_{6}-x_{6}x_{25}-x_{3}
+x'_{25}}{x_{8}\sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}-\\
 &\dfrac{\left(\dfrac{2x_{3}^{2}x'_{25}}{x_{20}^{3}}-\dfrac{2x_{3}x_{6}}{x_{8}}\right)\left(x_{20}x_{6}-x_{3}x_{25}\right)}{2x_{8}\left(1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}\right)^{3/2}}-\dfrac{x'_{8}\left(x_{20}x_{6}-x_{3}x_{25}\right)}{x_{8}^{2}\sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}\\
 x'_{25} &= x''_{20} = \dfrac{2x_{8}x'_{26}-x_{26}^{2}}{4x_{9}}\\
 x'_{26} &= x''_{8} = 2x_{21}+2\left(x_{1}x'_{4}+x_{2}x'_{5}+x_{3}x'_{6}\right)\\
-x'_{35} &=  \dot{\Omega}_{M}\left(\cos x_{12}x_{25}-x_{18}\sin x_{12}\right) \\
+x'_{35} &=  \Omega_{M}\left(\cos x_{12}x_{25}-x_{18}\sin x_{12}\right) \\
 x'_{36} &=  \dfrac{x'_{21}}{2x_{36}} \\
 x'_{37} &= \dfrac{x_{36}x'_{25}-x_{25}x'_{36}}{x_{36}^{2}} \\
 x'_{38} &= \dfrac{x'_{37}}{\sqrt{1-x_{37}^{2}}} \\ 
-x'_{39} &= \dfrac{x_{44}x'_{18}-x_{18}x'_{44}}{x_{44}^{2}} \\
-x'_{40} &=  -\dfrac{x'_{39}}{\sqrt{1-x_{39}^{2}}}\\
+x'_{40} &=  \dfrac{x_{24}x'_{45}-x_{45}x'_{24}}{x_{45}^{2}x_{24}^{2}}\\
 x'_{41} &= x_{36}x'_{35}+x_{35}x'_{36}\\ 
 x'_{42} &= \cos x_{38} \cos x_{40} x'_{40}-x'_{38} \sin x_{38} \sin x_{40}\\
 x'_{43} &= x_{41}x'_{42}+x_{42}x'_{41} \\ 
-x'_{44} & = x'_{36} \cos x_{38}-x_{36} x'_{38}\sin x_{38}\\
+x'_{45} &= \dfrac{x_{19}\left(x_{1}x'_{5}-x_{2}x'_{4}\right)-x'_{19}\left(x_{1}x_{5}-x_{2}x_{4}\right)}{x_{19}^{2}}\\
+x'_{46} &= x''_{11} = x'_{45}+\Omega_{M}\sin x_{12}x_{24} \\
 \end{split}
 \end{align}
 
@@ -261,7 +276,7 @@ The drag acceleration is determined in the body frame by dividing the drag force
  \begin{equation} \label{eq:dragAux}
 \begin{split}
 x_{27} &= D = \frac{1}{2}\rho V_{R}^{2}SC_{D} = \frac{1}{2}S x_{28}x_{15}^{2}x_{29} \\
-x_{28} &= \rho = e^{30} \\
+x_{28} &= \rho = e^{x_{30}} \\
 x_{29} &= C_{D} \\
 x_{30} &= P_{\rho 10}x_{31}^{10}+P_{\rho 9}x_{31}^{9}+P_{\rho 8}x_{31}^{8}+P_{\rho 7}x_{31}^{7}+P_{\rho 6}x_{31}^{6}+P_{\rho 5}x_{31}^{5}+P_{\rho 4}x_{31}^{4}+P_{\rho 3}x_{31}^{3}+P_{\rho 2}x_{31}^{2}+P_{\rho 1}x_{31}+P_{\rho 0} \\
 x_{31} &= h = r-R_{MOLA} = x_{20}-R_{MOLA}
@@ -383,12 +398,10 @@ u_{11} &= \dfrac{x_{1}x_{5}-x_{2}x_{4}}{x_{19}}\\
 &
 \begin{split}
 u_{12} &= \dot{\delta} = \dfrac{x_{20}x_{6}-x_{3}x_{25}}{x_{8} \sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}\\
-u_{13} &= -\dfrac{u_{22}}{\sqrt{1-x_{22}^{2}}}\\
+u_{13} &= \dfrac{x_{24}u_{46}-x_{46}u_{24}}{x_{46}^{2}x_{24}^{2}}\\
 u_{14} &= \dfrac{u_{23}}{\sqrt{1-x_{23}^{2}}}\\
 u_{15} &= \dfrac{2x_{35}u_{35}+u_{21}-2u_{43}}{2x_{15}} \\
 u_{16} &= -\sin x_{14}u_{14}\\
-u_{17} &= x_{16}u_{15}+x_{15}u_{16}\\
-u_{18} &= x_{20}u_{24}+x_{24}x_{25}\\
 u_{19} &= 2x_{1}x_{4}+2x_{2}x_{5}\\
 u_{20} &= \dot{r} = \dfrac{x_{26}}{2 x_{20}}\\
 \end{split}
@@ -398,7 +411,6 @@ u_{20} &= \dot{r} = \dfrac{x_{26}}{2 x_{20}}\\
 \begin{equation} \label{eq:unAuxEq2}
 \begin{split}
 u_{21} &= 2x_{4}u_{4}+2x_{5}u_{5}+2x_{6}u_{6}\\
-u_{22} &= \dfrac{x_{17}u_{18}-x_{18}u_{17}}{x_{17}^{2}}\\
 u_{23} &= \dfrac{x_{15}u_{25}-x_{25}u_{15}}{x_{15}^{2}}\\
 u_{24} &=  \dfrac{x_{6}u_{20}+x_{20}u_{6}-x_{6}x_{25}-x_{3}u_{25}}{x_{8}\sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}-\dfrac{\left(\dfrac{2x_{3}^{2}u_{25}}{x_{20}^{3}}-\dfrac{2x_{3}x_{6}}{x_{8}}\right)\left(x_{20}x_{6}-x_{3}x_{25}\right)}{2x_{8}\left(1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}\right)^{3/2}}-\dfrac{u_{8}\left(x_{20}x_{6}-x_{3}x_{25}\right)}{x_{8}^{2}\sqrt{1-\left(\dfrac{x_{3}}{x_{20}}\right)^{2}}}\\
 u_{25} &=  \dfrac{2x_{8}u_{26}-x_{26}^{2}}{4x_{9}}\\
@@ -432,25 +444,25 @@ u_{34,5}=0, &  \text{for }  x_{31} \geq 170.05
 
 \begin{align} \label{eq:unAuxEq3}
 \begin{split}
-u_{35} &=  \dot{\Omega}_{M}\left(\cos x_{12}x_{25}-x_{18}\sin x_{12}\right) \\
+u_{35} &=  \Omega_{M}\left(\cos x_{12}x_{25}-x_{18}\sin x_{12}\right) \\
 u_{36} &=  \dfrac{u_{21}}{2x_{36}} \\
 u_{37} &= \dfrac{x_{36}u_{25}-x_{25}u_{36}}{x_{36}^{2}} \\
 u_{38} &= \dfrac{u_{37}}{\sqrt{1-x_{37}^{2}}} \\ 
 \end{split}
 &
 \begin{split}	
-u_{39} &= \dfrac{x_{44}u_{18}-x_{18}u_{44}}{x_{44}^{2}} \\
-u_{40} &=  -\dfrac{u_{39}}{\sqrt{1-x_{39}^{2}}}\\
+u_{40} &=  \dfrac{x_{24}u_{45}-x_{45}u_{24}}{x_{45}^{2}x_{24}^{2}}\\
 u_{41} &= x_{36}u_{35}+x_{35}u_{36}\\ 
-u_{42} &= \cos x_{38} \cos x_{40} u_{43}-u_{38} \sin x_{38} \sin x_{40}\\
+u_{42} &= \cos x_{38} \cos x_{40} u_{40}-u_{38} \sin x_{38} \sin x_{40}\\
 u_{43} &= x_{41}u_{42}+x_{42}u_{41} \\ 
-u_{44} & = u_{36} \cos x_{38}-x_{36} u_{38}\sin x_{38}\\ 
+u_{45} &= \dfrac{x_{19}\left(x_{1}u_{5}-x_{2}u_{4}\right)-u_{19}\left(x_{1}x_{5}-x_{2}x_{4}\right)}{x_{19}^{2}}\\
+u_{46} &= u_{45}+\Omega_{M}\sin x_{12}x_{24} \\
 \end{split}
 \end{align}
 
 %\begin{align} \label{eq:unAuxEq3}
 %\begin{split}
-%u_{35} &=  \dot{\Omega}_{M}\left(\cos x_{12}x_{25}-x_{18}\sin x_{12}\right) \\
+%u_{35} &=  \Omega_{M}\left(\cos x_{12}x_{25}-x_{18}\sin x_{12}\right) \\
 %\\
 %\\
 %u_{36} &=  \dfrac{u_{21}}{2x_{36}} \\
@@ -531,21 +543,21 @@ s\psi_{T}c\epsilon_{T} & c\psi_{T} & s\psi_{T}s\epsilon_{T}\\
 \mathbb{T}_{\mathbf{IB}}=
 \left[
 \begin{matrix}
-c\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right)\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) s\chi c\gamma    \\
-s\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right)\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) s\chi c\gamma   \\
+c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi c\gamma    \\
+s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi c\gamma   \\
 c\delta c\chi c\gamma -c\delta s\gamma    \\
 \end{matrix}  \right.
 \\
 \begin{matrix}
-c\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) s\delta s\chi -s\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) c\chi\\
-s\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) s\delta s\chi +c\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) c\chi \\
+c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\delta s\chi -s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) c\chi\\
+s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\delta s\chi +c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) c\chi \\
  -c\delta s\chi \\
 \end{matrix}
 \\
 \left.
 \begin{matrix}
-c\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right)\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) s\chi s\gamma\\
-s\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right)\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) s\chi s\gamma \\
+c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi s\gamma\\
+s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi s\gamma \\
 c\delta c\chi s\gamma -s\delta c\gamma\\
 \end{matrix}
 \right]\\
@@ -575,8 +587,8 @@ s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \righ
 %\begin{multline} \label{eq:IBtrans}
 %\mathbb{T}_{\mathbf{IB}}=
 %\begin{bmatrix}
-%c\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right)\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) s\chi c\gamma  & c\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) s\delta s\chi -s\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) c\chi & c\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right)\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) s\chi s\gamma \\
-%s\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right)\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) s\chi c\gamma  & s\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) s\delta s\chi +c\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) c\chi & s\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right)\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\left(\dot{\Omega}_{M}t_{O}-\Omega_{P}+\tau\right) s\chi s\gamma \\
+%c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi c\gamma  & c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\delta s\chi -s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) c\chi & c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi s\gamma \\
+%s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi c\gamma  & s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\delta s\chi +c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) c\chi & s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi s\gamma \\
 %c\delta c\chi c\gamma -c\delta s\gamma  & -c\delta s\chi &  c\delta c\chi s\gamma -s\delta c\gamma \\
 %\end{bmatrix}\\
 %=
@@ -802,15 +814,15 @@ $w_{4,22}=$ & $ w_{4,3}\left(w_{4,11}-w_{4,17}\right) $ & Multiplication  \\ \hl
 $w_{4,23}=$ & $ w_{4,3}\left(-w_{4,20}-w_{4,15}\right) $ &  Multiplication \\ \hline
 $w_{4,24}=$ & $ w_{4,2}\left(w_{4,22}-w_{4,18}\right) $ &  Multiplication \\ \hline
 $w_{5,1}=$ & $ \dfrac{x_{2}}{x_{9}} $ & Division  \\ \hline
-$w_{5,2}=$ & $ w_{4,8}\left(w_{4,11}-w_{4,18}\right) $ & Multiplication  \\ \hline
+$w_{5,2}=$ & $ w_{4,8}\left(w_{4,11}-w_{4,17}\right) $ & Multiplication  \\ \hline
 $w_{5,3}=$ & $ w_{4,3}w_{4,12} $ & Multiplication \\ \hline
 $w_{5,4}=$ & $ w_{4,8}w_{4,13} $ & Multiplication  \\ \hline
-$w_{5,5}=$ & $ w_{4,3}w_{4,14} $ &  Multiplication  \\ \hline
-$w_{5,6}=$ & $ w_{4,8}\left(-w_{4,21}-w_{4,16}\right) $ &  Multiplication  \\ \hline
-$w_{5,7}=$ & $ w_{4,3}w_{4,17} $ & Multiplication \\ \hline
-$w_{5,8}=$ & $ w_{4,2}\left(w_{5,3}-w_{5,2}\right) $ & Multiplication \\ \hline
+$w_{5,5}=$ & $ w_{4,3}w_{4,5} $ &  Multiplication  \\ \hline
+$w_{5,6}=$ & $ w_{4,8}\left(-w_{4,20}-w_{4,11}\right) $ &  Multiplication  \\ \hline
+$w_{5,7}=$ & $ w_{4,3}w_{4,16} $ & Multiplication \\ \hline
+$w_{5,8}=$ & $ w_{4,2}\left(w_{5,2}+w_{5,3}\right) $ & Multiplication \\ \hline
 $w_{6,1}=$ & $ \dfrac{x_{3}}{x_{9}} $ & Division \\ \hline
-$w_{6,2}=$ & $ w_{4,5}w_{4,16} $ & Multiplication \\ \hline
+$w_{6,2}=$ & $ w_{4,5}w_{4,15} $ & Multiplication \\ \hline
 $w_{6,3}=$ & $ w_{4,6}w_{4,9} $ & Multiplication \\ \hline
 $w_{6,4}=$ & $ w_{4,5}w_{4,11} $ & Multiplication \\ \hline
 $w_{6,5}=$ & $ w_{4,4}x_{16} $ & Multiplication \\ \hline
@@ -819,9 +831,6 @@ $w_{8,1}=$ & $ x_{1}x_{4} $ & Multiplication \\ \hline
 $w_{8,2}=$ & $ x_{2}x_{5} $ & Multiplication \\ \hline
 $w_{8,3}=$ & $ x_{3}x_{6} $ & Multiplication \\ \hline
 $w_{9}=$ & $ \dfrac{x_{9}u_{8}}{x_{8}} $ & Multiplication and Division \\ \hline
-$w_{11,1}=$ & $ x_{1}x_{5} $ & Multiplication \\ \hline
-$w_{11,2}=$ & $ x_{2}x_{4} $ & Multiplication \\ \hline
-$w_{11,3}=$ & $ \dfrac{w_{11,1}-w_{11,2}}{x_{19}} $ & Division \\ \hline
 $w_{12,1}=$ & $ x_{20}x_{6} $ & Multiplication \\ \hline
 $w_{12,2}=$ & $ x_{3}x_{25}$ & Multiplication \\ \hline
 $w_{12,3}=$ & $ \dfrac{x_{3}}{x_{20}} $ & Division \\ \hline
@@ -829,27 +838,21 @@ $w_{12,4}=$ & $ w_{12,3}^{2} $ & Power \\ \hline
 $w_{12,5}=$ & $ \sqrt{1-w_{12,4}} $ & Power \\ \hline
 $w_{12,6}=$ & $ x_{8}w_{12,5} $ & Multiplication \\ \hline
 $w_{12,7}=$ & $ \dfrac{w_{12,1}-w_{12,2}}{w_{12,6}} $ & Division \\ \hline
-$w_{13,1}=$ & $ x_{22}^{2} $ & Power \\ \hline
-$w_{13,2}=$ & $ \sqrt{1-w_{13,1}} $ & Power \\ \hline
-$w_{13,3}=$ & $ \dfrac{u_{22}}{w_{13,2}} $ & Division \\ \hline
+$w_{13,1}=$ & $ x_{24}u_{46} $ & Multiplication \\ \hline
+$w_{13,2}=$ & $ x_{46}u_{24} $ & Multiplication \\ \hline
+$w_{13,3}=$ & $ x_{46}^{2} $ & Power \\ \hline
+$w_{13,4}=$ & $ x_{24}^{2} $ & Power \\ \hline
+$w_{13,5}=$ & $ \dfrac{w_{13,1}-w_{13,2}}{w_{13,3}+w_{13,4}} $ & Division\\ \hline
 $w_{14,1}=$ & $ x_{23}^{2} $ & Power \\ \hline
 $w_{14,2}=$ & $ \sqrt{1-w_{14,1}} $ & Power \\ \hline
 $w_{14,3}=$ & $ \dfrac{u_{23}}{w_{14,2}} $ & Division \\ \hline
 $w_{15,1}=$ & $ x_{35}u_{35} $ & Multiplication \\ \hline 
 $w_{15,2}=$ & $ \dfrac{2w_{15,1}+u_{21}-2u_{43}}{x_{15}} $ & Division \\ \hline 
 $w_{16}=$ & $ w_{4,7}u_{14} $ & Multiplication \\ \hline
-$w_{17,1}=$ & $ x_{16}u_{15} $ & Multiplication \\ \hline
-$w_{17,2}=$ & $ x_{15}u_{16} $ & Multiplication \\ \hline
-$w_{18,1}=$ & $ x_{20}u_{24} $ & Multiplication \\ \hline
-$w_{18,2}=$ & $ x_{24}x_{25} $ & Multiplication \\ \hline
 $w_{20}=$ & $ \dfrac{x_{26}}{x_{20}} $ & Division \\ \hline
 $w_{21,1}=$ & $ x_{4}u_{4} $ & Multiplication \\ \hline
 $w_{21,2}=$ & $ x_{5}u_{5} $ & Multiplication \\ \hline
 $w_{21,3}=$ & $ x_{6}u_{6} $ & Multiplication \\ \hline
-$w_{22,1}=$ & $ x_{17}u_{18} $ & Multiplication \\ \hline
-$w_{22,2}=$ & $ x_{18}u_{17} $ & Multiplication \\ \hline
-$w_{22,3}=$ & $ x_{17}^{2} $ & Power \\ \hline
-$w_{22,4}=$ & $ \dfrac{w_{22,1}-w_{22,2}}{w_{22,3}} $ & Division \\ \hline
 $w_{23,1}=$ & $ x_{15}u_{25} $ & Multiplication \\ \hline
 $w_{23,2}=$ & $ x_{25}u_{15} $ & Multiplication \\ \hline
 $w_{23,3}=$ & $ x_{15}^{2} $ & Power  \\ \hline
@@ -858,7 +861,7 @@ $w_{24,1}=$ & $ x_{6}u_{20} $ & Multiplication \\ \hline
 $w_{24,2}=$ & $ x_{20}u_{6} $ & Multiplication \\ \hline
 $w_{24,3}=$ & $ x_{25}x_{6} $ & Multiplication \\ \hline
 $w_{24,4}=$ & $ x_{3}u_{25} $ & Multiplication \\ \hline
-$w_{24,5}=$ & $ \dfrac{w_{24,1}+w_{24,2}-w_{24,3}-w_{24,4}}{w_{12,6}} $ &  \\ \hline
+$w_{24,5}=$ & $ \dfrac{w_{24,1}+w_{24,2}-w_{24,3}-w_{24,4}}{w_{12,6}} $ & Division \\ \hline
 $w_{24,6}=$ & $ x_{3}w_{24,4} $ & Multiplication \\ \hline
 $w_{24,7}=$ & $ x_{20}^{3} $ & Power \\ \hline
 $w_{24,8}=$ & $ \dfrac{w_{8,3}}{x_{8}} $ & Division \\ \hline
@@ -910,29 +913,32 @@ $w_{37,3}=$ & $ x_{36}^{2} $ & Power \\ \hline
 $w_{37,4}=$ & $ \dfrac{w_{37,1}-w_{37,2}}{w_{37,3}} $ & Division \\ \hline 
 $w_{38,1}=$ & $ x_{37}^{2} $ & Power \\ \hline 
 $w_{38,2}=$ & $ \sqrt{1-w_{38,1}} $ & Power \\ \hline 
-$w_{38,3}=$ & $ \dfrac{u_{37}}{w_{37,3}} $ & Division \\ \hline 
-$w_{39,1}=$ & $ x_{44}u_{18} $ & Multiplication \\ \hline 
-$w_{39,2}=$ & $ x_{18}u_{44} $ & Multiplication \\ \hline 
-$w_{39,3}=$ & $ x_{44}^{2} $ & Power \\ \hline 
-$w_{39,4}=$ & $ \dfrac{w_{39,1}-w_{39,2}}{w_{39,3}} $ & Division \\ \hline 
-$w_{40,1}=$ & $ x_{39}^{2} $ & Power \\ \hline 
-$w_{40,2}=$ & $ \sqrt{1-w_{40,1}} $ & Power \\ \hline 
-$w_{40,3}=$ & $ \dfrac{u_{39}}{w_{40,2}} $ & Division \\ \hline 
+$w_{38,3}=$ & $ \dfrac{u_{37}}{w_{38,2}} $ & Division \\ \hline 
+$w_{40,1}=$ & $ x_{24}u_{45} $ & Multiplication \\ \hline 
+$w_{40,2}=$ & $ x_{45}u_{24} $ & Multiplication \\ \hline 
+$w_{40,3}=$ & $ x_{45}^{2} $ & Power \\ \hline
+$w_{40,4}=$ & $ \dfrac{w_{40,1}-w_{40,2}}{w_{40,3}+w_{13,4}} $ & Division \\ \hline
 $w_{41,1}=$ & $ x_{36}u_{35} $ & Multiplication \\ \hline 
 $w_{41,2}=$ & $ x_{35}u_{36} $ & Multiplication \\ \hline 
 $w_{42,1}=$ & $ cx_{38} $ & Cosine \\ \hline 
 $w_{42,2}=$ & $ cx_{40} $ & Cosine \\ \hline 
 $w_{42,3}=$ & $ sx_{38} $ & Sine \\ \hline 
 $w_{42,4}=$ & $ sx_{40} $ & Sine \\ \hline 
-$w_{42,5}=$ & $ w_{42,2}u_{43} $ & Multiplication \\ \hline 
+$w_{42,5}=$ & $ w_{42,2}u_{40} $ & Multiplication \\ \hline 
 $w_{42,6}=$ & $ u_{38}w_{42,3} $ & Multiplication\\ \hline 
 $w_{42,7}=$ & $ w_{42,1}w_{42,5} $ & Multiplication \\ \hline 
 $w_{42,8}=$ & $ w_{42,6}w_{42,4} $ & Multiplication \\ \hline 
 $w_{43,1}=$ & $ x_{41}u_{42} $ & Multiplication \\ \hline 
 $w_{43,2}=$ & $ x_{42}u_{41} $ & Multiplication \\ \hline 
-$w_{44,1}=$ & $ x_{36}u_{38} $ & Multiplication \\ \hline
-$w_{44,2}=$ & $ u_{36}w_{42,1} $ & Multiplication \\ \hline
-$w_{44,3}=$ & $ w_{44,1}w_{42,4} $ & Multiplication \\ \hline
+$w_{45,1}=$ & $ x_{1}u_{5} $ & Multiplication \\ \hline 
+$w_{45,2}=$ & $ x_{2}u_{4} $ & Multiplication \\ \hline 
+$w_{45,3}=$ & $ x_{1}x_{5} $ & Multiplication \\ \hline 
+$w_{45,4}=$ & $ x_{2}x_{4} $ & Multiplication \\ \hline 
+$w_{45,5}=$ & $ x_{19}^{2} $ & Power \\ \hline 
+$w_{45,6}=$ & $ x_{19}\left(w_{45,1}-w_{45,2}\right) $ & Multiplication \\ \hline 
+$w_{45,7}=$ & $ u_{19}\left(w_{45,3}-w_{45,4}\right) $ & Multiplication \\ \hline 
+$w_{45,8}=$ & $ \dfrac{w_{45,6}-w_{45,7}}{w_{45,5}} $ & Division \\ \hline 
+$w_{46}=$ & $ w_{4,4}x_{24} $ & Multiplication \\ \hline 
 % $w_{•,•}=$ & $  $ & \\ \hline 
 \end{longtable}
 
@@ -1028,8 +1034,8 @@ Using the basic recurrence relations, the auxiliary function provided in \Cref{t
 \begin{split}
 W_{8,1}\left(k\right)=x_{1}x_{4}&=\displaystyle\sum_{j=0}^{k}X_{1}\left(j\right)X_{4}\left(k-j\right)=x_{1}\dfrac{U_{4}\left(k-1\right)}{k}+x_{4}\dfrac{U_{1}\left(k-1\right)}{k}+\displaystyle\sum_{j=1}^{k-1}\dfrac{U_{1}\left(j-1\right)}{j}\dfrac{U_{4}\left(k-j-1\right)}{k-j}\\
 W_{4,1}\left(k\right)=\dfrac{x_{1}}{x_{9}}&=\dfrac{1}{x_{9}}\left[X_{1}\left(k\right)-\displaystyle\sum_{j=1}^{k}X_{9}\left(j\right)W_{4,1}\left(k-j\right)\right]=\dfrac{1}{x_{9}}\left[\dfrac{U_{1}\left(k-1\right)}{k}-\displaystyle\sum_{j=1}^{k}\dfrac{U_{9}\left(j-1\right)}{j}W_{4,1}\left(k-j\right)\right]\\
-W_{13,1}\left(k\right)=x_{22}^{2}&= \dfrac{1}{kx_{22}} \displaystyle\sum_{j=0}^{k-1}\left[2k-j\left(2+1\right)\right] X_{22}\left(k-j\right)W_{13,1}\left(j\right)\\
-&=\dfrac{1}{kx_{22}} \displaystyle\sum_{j=0}^{k-1}\left[2k-j\left(2+1\right)\right] \dfrac{U_{22}\left(k-j-1\right)}{k-j} W_{13,1}\left(j\right) \\
+W_{13,4}\left(k\right)=x_{24}^{2}&= \dfrac{1}{kx_{24}} \displaystyle\sum_{j=0}^{k-1}\left[2k-j\left(2+1\right)\right] X_{24}\left(k-j\right)W_{13,4}\left(j\right)\\
+&=\dfrac{1}{kx_{22}} \displaystyle\sum_{j=0}^{k-1}\left[2k-j\left(2+1\right)\right] \dfrac{U_{24}\left(k-j-1\right)}{k-j} W_{13,4}\left(j\right) \\
 X_{28}\left(k\right)=\dfrac{U_{28}\left(k-1\right)}{k}=e^{x_{30}}&= \dfrac{1}{k}\displaystyle\sum_{j=0}^{k-1}\left(k-j\right)X_{28}\left(j\right)X_{30}\left(k-j\right)=\dfrac{1}{k}\displaystyle\sum_{j=0}^{k-1}\left(k-j\right)\dfrac{U_{28}\left(j-1\right)}{j}\dfrac{U_{30}\left(k-j-1\right)}{k-j}\\
 &=x_{28}\dfrac{U_{30}\left(k-1\right)}{k}+\dfrac{1}{k}\displaystyle\sum_{j=1}^{k-1}\left(k-j\right)\dfrac{U_{28}\left(j-1\right)}{j}\dfrac{U_{30}\left(k-j-1\right)}{k-j}\\
 W_{4,6}\left(k\right)=\cos x_{12}&= -\dfrac{1}{k}\displaystyle\sum_{j=0}^{k}jW_{4,4}\left(k-j\right)X_{12}\left(j\right)= -\dfrac{1}{k}\displaystyle\sum_{j=1}^{k}jW_{4,4}\left(k-j\right)\dfrac{U_{12}\left(j-1\right)}{j}\\
@@ -1061,18 +1067,15 @@ U_{10} \left(k\right)&= 0 \\
 
 \begin{align} \label{eq:allRecRel2}
 \begin{split}
-U_{11} \left(k\right)&= W_{11,3}\left(k\right)\\
+U_{11} \left(k\right)&= X_{45} \left(k\right)-\Omega_{M}W_{4,7}\left(k\right) = \dfrac{U_{45} \left(k-1\right)}{k}-\Omega_{M}W_{4,7}\left(k\right) \\
 U_{12} \left(k\right)&= W_{12,7}\left(k\right)\\
-U_{13} \left(k\right)&= -W_{13,3}\left(k\right)\\
+U_{13} \left(k\right)&= W_{13,5}\left(k\right)\\
 U_{14} \left(k\right)&= W_{14,3}\left(k\right)\\
 U_{15} \left(k\right)&= \dfrac{1}{2}W_{15,2}\left(k\right)\\
 U_{16} \left(k\right)&= -W_{16}\left(k\right)\\
-U_{17} \left(k\right)&= W_{17,1}\left(k\right)+W_{17,2}\left(k\right)\\
-U_{18} \left(k\right)&= W_{18,1}\left(k\right)+W_{18,2}\left(k\right)\\
 U_{19} \left(k\right)&= 2W_{8,1}\left(k\right)+2W_{8,2}\left(k\right)\\
 U_{20} \left(k\right)&= \dfrac{1}{2}W_{20}\left(k\right)\\
 U_{21} \left(k\right)&= 2W_{21,1}\left(k\right)+2W_{21,2}\left(k\right)+2W_{21,3}\left(k\right)\\
-U_{22} \left(k\right)&= W_{22,4}\left(k\right)\\
 U_{23} \left(k\right)&= W_{23,4}\left(k\right)\\
 U_{24} \left(k\right)&=  W_{24,5}\left(k\right)-\dfrac{1}{2}W_{24,16}\left(k\right)-W_{24,17}\left(k\right)\\
 U_{25} \left(k\right)&=  \dfrac{1}{4}W_{25,3}\left(k\right)\\
@@ -1109,16 +1112,16 @@ U_{34,5}\left(k\right)=0, &  \text{for }  x_{31} \geq 170.05
 
 \begin{align} \label{eq:allRecRel4}
 \begin{split}
-U_{35} \left(k\right)&= \dot{\Omega}_{M}\left(W_{35,1}\left(k\right)-W_{35,2}\left(k\right)\right) \\ 
+U_{35} \left(k\right)&= \Omega_{M}\left(W_{35,1}\left(k\right)-W_{35,2}\left(k\right)\right) \\ 
 U_{36} \left(k\right)&= \frac{1}{2}W_{36}\left(k\right) \\
 U_{37} \left(k\right)&= W_{37,4}\left(k\right) \\
 U_{38} \left(k\right)&= W_{38,3}\left(k\right) \\
-U_{39} \left(k\right)&= W_{39,4}\left(k\right) \\
-U_{40} \left(k\right)&= -W_{40,3}\left(k\right) \\
+U_{40} \left(k\right)&= W_{40,4}\left(k\right) \\
 U_{41} \left(k\right)&= W_{41,1}\left(k\right)+W_{41,2}\left(k\right) \\
 U_{42} \left(k\right)&= W_{42,7}\left(k\right)-W_{42,8}\left(k\right) \\
 U_{43} \left(k\right)&= W_{43,1}\left(k\right)+W_{43,2}\left(k\right) \\
-U_{44} \left(k\right)&= W_{44,2}\left(k\right)-W_{44,3}\left(k\right) \\
+U_{45} \left(k\right)&= W_{45,8}\left(k\right) \\
+U_{46} \left(k\right)&= U_{45} \left(k\right)+\Omega_{M}W_{46}\left(k\right) \\
 \end{split}
 \end{align}
 
