@@ -1,4 +1,4 @@
-\chapter{Taylor series integration} %Last updated 19-04-2016
+\chapter{Taylor series integration} %Last updated 18-05-2016
 \label{ch:tsi}
 
 \section{General theory}
@@ -552,7 +552,7 @@ s\psi_{T}c\epsilon_{T} & c\psi_{T} & s\psi_{T}s\epsilon_{T}\\
 \begin{matrix}
 c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi c\gamma    \\
 s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi c\gamma   \\
-c\delta c\chi c\gamma -c\delta s\gamma    \\
+c\delta c\chi c\gamma +s\delta s\gamma    \\
 \end{matrix}  \right.
 \\
 \begin{matrix}
@@ -573,7 +573,7 @@ c\delta c\chi s\gamma -s\delta c\gamma\\
 \begin{matrix}
 c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14}    \\
 s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}    \\
-cx_{12} cx_{13} cx_{14} -cx_{12} sx_{14}   \\
+cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}   \\
 \end{matrix} \right.
 \\
 \begin{matrix}
@@ -591,20 +591,6 @@ s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \righ
 \right]\\
 \end{multline}
 
-%\begin{multline} \label{eq:IBtrans}
-%\mathbb{T}_{\mathbf{IB}}=
-%\begin{bmatrix}
-%c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi c\gamma  & c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\delta s\chi -s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) c\chi & c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi s\gamma \\
-%s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi c\gamma  & s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\delta s\chi +c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) c\chi & s\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right)\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\left(\Omega_{M}t_{O}-\omega_{P}+\tau\right) s\chi s\gamma \\
-%c\delta c\chi c\gamma -c\delta s\gamma  & -c\delta s\chi &  c\delta c\chi s\gamma -s\delta c\gamma \\
-%\end{bmatrix}\\
-%=
-%\begin{bmatrix}
-%c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} c\gamma +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  & c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13} & c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \\
-%s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  & s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} & s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \\
-%cx_{12} cx_{13} cx_{14} -cx_{12} sx_{14}  & -cx_{12} sx_{13} &  cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \\
-%\end{bmatrix}\\
-%\end{multline}
 
 Because the thrust is constant and the mass flow rate is constant as well, the first derivative of $u_{7}$ will be zero such that $u'_{7}=0$. This means that only the first derivative of the mass flow rate has to be used. Furthermore, the thrust related equations are all treated as constant as well such that the last part of \Cref{eq:accAux} can be rewritten to \Cref{eq:aTB} using \Cref{eq:BPtrans}.
 
@@ -691,7 +677,7 @@ a_{T_{B},z}\\
 \begin{matrix}
 w_{4,2} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)  + \dots  \\
 w_{4,2} \left( s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)  + \dots \\
-w_{4,2} \left(cx_{12} cx_{13} cx_{14} -cx_{12} sx_{14}  \right)  - \dots \\
+w_{4,2} \left(cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}  \right)  - \dots \\
 \end{matrix} \right.
 \\
 \begin{matrix}
@@ -729,7 +715,7 @@ u_{5}= -\mu_{M}\dfrac{x_{2}}{x_{9}}&+w_{4,2} \left( s\left(x_{10}+x_{11}\right)\
 
 \begin{equation} \label{eq:u6Com}
 \begin{split}
-u_{6}= -\mu_{M}\dfrac{x_{3}}{x_{9}}&+w_{4,2} \left(cx_{12} cx_{13} cx_{14} -cx_{12} sx_{14}  \right)  - a_{T_{B},y}cx_{12} sx_{13}  + a_{T_{B},z} \left( cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \right)
+u_{6}= -\mu_{M}\dfrac{x_{3}}{x_{9}}&+w_{4,2} \left(cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}  \right)  - a_{T_{B},y}cx_{12} sx_{13}  + a_{T_{B},z} \left( cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \right)
 \end{split}
 \end{equation}
 
@@ -806,12 +792,13 @@ $w_{5,5}=$ & $ w_{4,3}w_{4,5} $ &  Multiplication  \\ \hline
 $w_{5,6}=$ & $ w_{4,8}\left(-w_{4,20}-w_{4,11}\right) $ &  Multiplication  \\ \hline
 $w_{5,7}=$ & $ w_{4,3}w_{4,16} $ & Multiplication \\ \hline
 $w_{5,8}=$ & $ w_{4,2}\left(w_{5,2}+w_{5,3}\right) $ & Multiplication \\ \hline
+$w_{6,0}=$ & $ w_{4,4}w_{4,7} $ & Multiplication \\ \hline
 $w_{6,1}=$ & $ \dfrac{x_{3}}{x_{9}} $ & Division \\ \hline
 $w_{6,2}=$ & $ w_{4,5}w_{4,15} $ & Multiplication \\ \hline
 $w_{6,3}=$ & $ w_{4,6}w_{4,9} $ & Multiplication \\ \hline
 $w_{6,4}=$ & $ w_{4,5}w_{4,11} $ & Multiplication \\ \hline
 $w_{6,5}=$ & $ w_{4,4}x_{16} $ & Multiplication \\ \hline
-$w_{6,6}=$ & $ w_{4,2}\left(w_{6,2}-w_{4,11}\right) $ & Multiplication \\ \hline
+$w_{6,6}=$ & $ w_{4,2}\left(w_{6,2}+w_{6,0}\right) $ & Multiplication \\ \hline
 $w_{8,1}=$ & $ x_{1}x_{4} $ & Multiplication \\ \hline
 $w_{8,2}=$ & $ x_{2}x_{5} $ & Multiplication \\ \hline
 $w_{8,3}=$ & $ x_{3}x_{6} $ & Multiplication \\ \hline
