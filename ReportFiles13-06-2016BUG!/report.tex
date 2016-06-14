@@ -1,0 +1,194 @@
+\documentclass[oneside,table]{tudelft-report}
+
+% 1)Translates MATLAB code:
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+% enclose the MATLAB code by using begin/end{lstlisting}
+
+
+
+% 2)Multiple figures on one page
+\usepackage{float}
+\usepackage[caption = false]{subfig}
+\usepackage{color}
+
+% 3)Own packages
+\usepackage{graphicx}  %Used for figures
+%\usepackage{subcaption} %Used for subcaptions
+\usepackage{adjustbox} %Used to keep tables within the page
+\usepackage[justification=centering]{caption} %Used for the centering of the captions
+\usepackage{multirow} %Allows for a table entry spanding multiple rows
+\usepackage{longtable} %Allows for tables that cross multiple pages
+%\usepackage{subcaption}
+\usepackage{amsmath} %Used to make equations
+%\usepackage{mathtools} %Used for more symbols for equations
+\usepackage{gensymb} %Allows for the use of degree symbol and other generic symbols
+\usepackage{enumitem} %Used to create custom lists...
+
+\usepackage[intoc]{nomencl} \makenomenclature
+\newcommand{\nomunit}[1]{%
+\renewcommand{\nomentryend}{\hspace*{\fill}#1}}
+%Used to make a nomenclature \nomenclature{$$}{\nomunit{$$}}
+\usepackage{ifthen} % Used to create Roman and Greek list of symbols and order them
+
+
+\renewcommand{\nomgroup}[1]{
+ \ifthenelse{\equal{#1}{R}}{\item[\bfseries\sffamily\large{Roman}]}{
+ \ifthenelse{\equal{#1}{G}}{\item[\bfseries\sffamily\large{Greek}]}{
+ \ifthenelse{\equal{#1}{C}}{\item[\bfseries\sffamily\large{Constant}]}{
+ \ifthenelse{\equal{#1}{S}}{\item[\bfseries\sffamily\large{Special}]}{}}{}}{}}
+}
+
+%\renewcommand{\nomgroup}[1]{
+% \ifthenelse{\equal{#1}{R}}{\item[\bfseries\sffamily\large{Roman}]}{
+% \ifthenelse{\equal{#1}{G}}{\item[\bfseries\sffamily\large{Greek}]}{}}
+%}
+
+
+
+%\usepackage[acronym]{glossaries}  %Used to crate a glossary, in this case list of abbreviations \newglossaryentry{}{name={}}{description={}}
+%
+%\newacronym{JPL}{name={JPL}}{description={Jet Propulsion Laboratory}}
+%
+%\makeglossaries
+\usepackage[printonlyused]{acronym}  %Used to make the abbreviations list. Call = \ac{}
+
+\usepackage{multicol} %Used to make multiple column text (for e.g. the list of abbreviations)
+
+%\usepackage[ampersand]{easylist} %Used to make an easy list with different levels. But it doesn't look as cool as the normal nested list so I will not be using this package
+
+\usepackage{tablefootnote} % Used to create footnotes in tables
+
+\usepackage{bm} %Used to make capital greek letters bold in equations
+
+\usepackage{xcolor} % Used to colour table cells. In cell use \cellcolor{red} to make it red. Use \cellcolor[gray]{0.9} to make it grey but only slighly lighter (90%). !!! Had to change \documentclass{tudelft-report} to \documentclass[table]{tudelft-report} for this to work!!!
+
+%\usepackage{slashbox} % Used to make a diagonally shared cell for tables (maybe looks nice) use \backslashbox{}{} Update: looks terrible!
+
+
+
+%\usepackage{diagbox} % Used to make a diagonally shared cell for tables (maybe looks nice) use \diagbox{}{} Update: doesn't make it to the lower corner...
+%
+%\usepackage{makecell} % Used to make a digonally shared cell for tables (maybe looks nice) use \diaghead{}%{}{} Update: nope, never mind....
+
+\usepackage{hyperref} % Used to create links to websites
+\urlstyle{same}
+
+
+%\usepackage{cite} % I think this might let me select he references from a list whenever I type \cite. Awesome, it works :D. Update: nm, fucked everything up...
+
+%\usepackage[authoryear]{natbib} % Used to cite in author-year instead of a number. Update: is already mentioned in the document class...
+
+\allowdisplaybreaks
+
+\usepackage{cleveref}
+%use the \Cref command to reference instead and always have this package last!!
+
+% 4)
+
+
+\begin{document}
+
+\bibliographystyle{plain}
+
+%% Use Roman numerals for the page numbers of the title pages and table of
+%% contents.
+\frontmatter
+
+\title[Master Thesis]{Mars Sample Return ascent trajectory optimisation using Taylor Series integration}
+\author{S.D. \ Petrovic}
+\affiliation{Faculty Aerospace, Section Spaceflight}
+
+\coverimage{cover_mars_4.jpg}
+\makecover[backboxheight = 2.64in] %2.64in = 6.7056cm
+
+ 
+%% Include an optional title page.
+%\input{title}
+
+\input{preface}
+
+\tableofcontents %Crates a table of contents
+
+%\listoffigures %Creates a list of figures
+
+%\listoftables %Creates a list of tables
+
+\clearpage
+\markboth{Nomenclature}{Nomenclature}
+%\addcontentsline{toc}{chapter}{Nomenclature}
+\printnomenclature %Create the Nomenclature
+
+% if nomenclature does not work anymore go to options/configure texmaker and type .nlo -s nomencl.ist -o %.nls -t %.nlg instead of .idx to make it work again. Otherwise see: https://youtu.be/Ss1XfsaAnfs for details
+
+\clearpage
+\addcontentsline{toc}{chapter}{Abbreviations}
+\markboth{Abbreviations}{Abbreviations}
+\input{abbreviations} %Create the list of abbreviations
+
+%\printglossary[type=\acronymtype, title=Abbreviations] %Create a list of abbreviations
+
+
+%% Use Arabic numerals for the page numbers of the chapters.
+\mainmatter
+
+\input{introduction} 		% Chapter 1
+
+%\input{overview} 			% Not thesis
+
+\input{problembackground}  % For thesis
+
+\input{models}				% For thesis
+
+\input{optimisation}		% For thesis
+
+\input{standardintegrationmethods}                  % For thesis
+
+\input{tsi}				% For thesis
+
+\input{programoptimisationtool} % For thesis
+
+\input{verificationandvalidation} % For thesis
+
+\input{results} 			% For thesis
+
+\input{analysis} 			% For thesis
+
+\input{conclusionsandrecommendations} % For thesis
+
+
+%\input{heritage}			% Chapter 3
+
+%\input{reference-systems} 	% Chapter 8
+
+%\input{launcher-methods} 	% Chapter 6
+
+%\input{transfer-orbits} 	% Chapter 7
+
+%\input{mars-atm-mod} 		% Chapter 9
+
+%\input{integrators} 		% Chapter 5
+
+%\input{optimization} 		% Chapter 4
+
+%\input{final-def} 			% Chapter 11
+
+%\input{software} 			% Chapter 10
+
+%\input{prop_time_sche}   	% Chapter 12
+
+%% Use letters for the chapter numbers of the appendices.
+\appendix
+
+%\input{appendix-a}
+
+\input{appendixA-marsGRAM-inputFile}
+
+\input{appendixB-fittingProcessAndResults}
+
+\input{appendixC-programFileDefinitions}
+
+
+\bibliography{lit_references}
+
+\end{document}
+
