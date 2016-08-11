@@ -12,7 +12,11 @@
 
 \section{Associated equations}
 \label{sec:assEq}
-In order for \ac{TSI} to be implemented, the state derivatives have to be modelled as a set of continuous functions which are a function of the state only. The state is described in \Cref{eq:state}, where $m_{MAV}$ is the mass of the \ac{MAV} and the subscript $I$ refers to the inertial frame.
+In order for \ac{TSI} to be implemented, the state derivatives have to be modelled as a set of continuous functions which are a function of the state only. This can be done in different ways. In this case, three cases were tested: two Cartesian cases and one spherical case. For the Cartesian cases, the initial conditions first have to be transformed into Cartesian coordinates. The Cartesian equations themselves require reference frame transformations, which can be written in two different ways. Both cases are described in \Cref{subsec:careq}. The reason for testing the spherical case is that the initial conditions are provided in spherical coordinates and the intermediate computations can be easily interpreted and checked for errors. However, the equations are highly sensitive to singularities. The spherical equations are described in \Cref{subsec:sphereq} and already include reference frame transformations. 
+
+\subsection{Cartesian equations}
+\label{subsec:careq}
+The Cartesian state is described in \Cref{eq:state}, where $m_{MAV}$ is the mass of the \ac{MAV} and the subscript $I$ refers to the inertial frame.
 
 \begin{align} \label{eq:state}
 \mathbf{r}&=\begin{pmatrix}
@@ -48,7 +52,7 @@ The corresponding state derivatives are then described by \Cref{eq:state_derivat
 \dot{m}_{MAV}=-\dfrac{T}{g_{0}I_{sp}}
 \end{align}
 
-From this point on, the subscript $I$ is omitted, because the state and the state derivatives are always presented in the inertial frame. If variables have to be presented in any other reference frame the corresponding subscripts will be provided and explained. The accelerations in the x-, y- and z-direction have three contributing components: gravitational acceleration, drag and thrust. The gravitational acceleration can be directly expressed in the inertial frame however, the drag is presented in the body frame and the thrust is expressed in the propulsion frame. Therefore, both the drag and thrust contributions have to be transformed to the inertial frame using transformation matrices. This then results in the expression for the acceleration vector as shown by \Cref{eq:acc}.
+From this point on, the subscript $I$ is omitted, because the state and the state derivatives are always presented in the inertial frame. If variables have to be presented in any other reference frame the corresponding subscripts will be provided and explained. The accelerations in the x-, y- and z-direction have three contributing components: gravitational acceleration, drag and thrust. The gravitational acceleration can be directly expressed in the inertial frame, however the drag is presented in the body frame and the thrust is expressed in the propulsion frame. Therefore, both the drag and thrust contributions have to be transformed to the inertial frame using transformation matrices. This then results in the expression for the acceleration vector as shown by \Cref{eq:acc}. The subscript $G$ shows that the parameter is a function of the ground velocity.
 
 \begin{multline} \label{eq:acc}
 \begin{pmatrix}
@@ -62,7 +66,7 @@ a_{z}\\
 -\mu_{M}\dfrac{y}{r^{3}}\\
 -\mu_{M}\dfrac{z}{r^{3}}\\
 \end{pmatrix}+
-\Bigg|_{\mathbf{I}}\mathbb{T}_{\mathbf{z}}\left(-\Omega_{M}t_{O}+\omega_{P}\right)\Bigg|_{\mathbf{R}}\mathbb{T}_{\mathbf{z}}\left(-\tau\right)\mathbb{T}_{\mathbf{y}}\left(\dfrac{\pi}{2}+\delta\right)\Bigg|_{\mathbf{V}}\mathbb{T}_{\mathbf{z}}\left(-\chi_{R}\right)\mathbb{T}_{\mathbf{y}}\left(-\gamma_{R}\right)\Bigg|_{\mathbf{B}}\left[
+\Bigg|_{\mathbf{I}}\mathbb{T}_{\mathbf{z}}\left(-\Omega_{M}t_{O}+\omega_{P}\right)\Bigg|_{\mathbf{R}}\mathbb{T}_{\mathbf{z}}\left(-\tau\right)\mathbb{T}_{\mathbf{y}}\left(\dfrac{\pi}{2}+\delta\right)\Bigg|_{\mathbf{V}}\mathbb{T}_{\mathbf{z}}\left(-\chi_{G}\right)\mathbb{T}_{\mathbf{y}}\left(-\gamma_{G}\right)\Bigg|_{\mathbf{B}}\left[
 \begin{pmatrix}
 -\dfrac{D}{m_{MAV}}\\
 0\\
@@ -80,11 +84,8 @@ a_{z}\\
 \right]
 \end{multline}
 
-It can be seen that this set of equations is a function of the current position and many other parameters. These parameters will all have to be written as a function of the current state. This is done in \Cref{subsec:auxEq} forming auxiliary equations that need to be solved. Then the recurrence relations can be written for the state derivatives and the corresponding auxiliary equations. To avoid lengthy expressions, the set of equations presented in \Cref{eq:acc} and the auxiliary equations are represented using auxiliary functions. Each of the auxiliary functions performs one simple algebraic operation and the collection of these auxiliary functions then form the complete set of recurrence relations using the recurrence relations for the simple algebraic operations. This is all described in \Cref{subsec:recRelAuxFunc}. 
+It can be seen that this set of equations is a function of the current position and many other parameters. These parameters will all have to be written as a function of the current state. This can be done by writing them into auxiliary equations, forming extra variables that then also require the auxiliary derivatives. This works for certain parameters, such as the gravity, because these equations are already expressed in the inertial frame. However, the transformation angles are defined in different reference frames, which means that finding the proper auxiliary derivatives can be tricky sometimes. Therefore it was decided to directly write these parameters as auxiliary functions. Each of the auxiliary functions performs one simple algebraic operation and the collection of these auxiliary functions then form the complete set of recurrence relations using the recurrence relations for the simple algebraic operations. This is all described in \Cref{subsec:recRelAuxFunc}. 
 
-
-\subsection{Auxiliary equations}
-\label{subsec:auxEq}
 For the auxiliary equations, a similar notation will be used as shown by \cite{scott2008high}. Here the equations are denoted by $x_{number}$ and the corresponding derivatives $x'_{number}$. This notation will also be used for the current state and the corresponding state derivatives. This way, \Cref{eq:state} can be written as \Cref{eq:stateX} and the corresponding derivatives can be written as presented by \Cref{eq:state_derivativesX}.
 
 \begin{align} \label{eq:stateX}
@@ -120,7 +121,10 @@ x'_{6}&=\dot{V}_{z}=a_{z}=a_{g,z}+a_{D,z}+a_{T,z}
 x'_{7}=\dot{m}_{MAV}=-\dfrac{T}{g_{0}I_{sp}}
 \end{align}
 
-In this case the thrust and specific impulse are constant, which means that $x'_{7}$ is constant and any additional derivative will be zero. Also, neither one of the thrust angles is a function of the state, which means that $a_{T}$, in the body frame, is only a function of $x_{7}$ (also see \Cref{eq:acc}). However, both $a_{g}$ and $a_{D}$ are a function of the position and velocity, where $a_{D}$ is also a function of the \ac{MAV} mass. Furthermore, both the drag and thrust accelerations have to be translated to the inertial frame using five different angles. The transformation from the rotating to the inertial frame is performed using an angle that is a function of time where $t_{O}=t_{0}+t_{current}$ as shown by \Cref{eq:acc}. This leaves 4 angles that are a function of the state. $a_{g}$ will be discussed first, followed by the transformation angles and $a_{D}$ respectively. For the numbering of all the auxiliary equations goes that the order comes from the manner in which they were all written out on paper. This means that sometimes higher number parameters could contain much lower number parameters without the intermediate parameters defined yet. However, these will all be defined eventually.
+In this case the thrust and specific impulse are constant, which means that $x'_{7}$ is constant and any additional derivative will be zero. Also, neither one of the thrust angles is a function of the state, which means that $a_{T}$, in the body frame, is only a function of $x_{7}$ (also see \Cref{eq:acc}). However, both $a_{g}$ and $a_{D}$ are a function of the position and velocity, where $a_{D}$ is also a function of the \ac{MAV} mass. Only $a_{g}$ is rewritten using auxiliary equations as mentioned before. This is shown in \Cref{subsubsec:tsiGravity}.
+
+
+%For the numbering of all the auxiliary equations goes that the order comes from the manner in which they were all written out on paper. This means that sometimes higher number parameters could contain much lower number parameters without the intermediate parameters defined yet. However, these will all be defined eventually.
 
 
 \subsubsection{Gravitational acceleration}
@@ -148,29 +152,79 @@ x'_{9}&=\dfrac{3}{2}\dfrac{x_{9}x_{8}'}{x_{8}}
 \end{align}
  
  
- \subsubsection{Transformation angles}
- \label{subsubsec:tsiTransAngl}
- The angles required for the transformation to go from the body frame to the reference frame are all written as auxiliary functions. The latitude and longitude can be described using the position vector in the inertial frame, however the transformation from the body frame to the vertical frame is a function of the ground (underscore 'G') velocity in the rotational frame. Since the position and velocity in the inertial frame are known (current state) the ground velocity ($V_{G}$) has to be written as a function of the inertial velocity ($V_{I}$). For this, the velocity components have to be transformed from the inertial frame to the rotational frame (which is the inverse of the first transformation described in \Cref{eq:acc}). This transformation is shown in \Cref{eq:VItoVR} and was described in \cite{mooij1994motion}. Here, $c$ stand for cosine and $s$ stands for sine. Also, $x_{10}$ is the transformation angle from the I-frame to the R-frame and is provided in \Cref{eq:xten}, where $t_{0}$ is the time from the moment the inertial frame was set to the start time of the simulation and $t$ is the time from the start of the simulation till the current step, also known as current time.
  
- \begin{equation} \label{eq:VItoVR}
+\subsubsection{Transformation angles}
+\label{subsubsec:tsiTransAngl}
+The angles required for the transformation to go from the body frame to the reference frame all have to be written as a function of the state variables. The required angles are $\lambda$, $\delta$, $\chi_{G}$ and $\gamma_{G}$. Here $\lambda = \tau + \Omega_{M}t_{O}-\omega_{P}$. This means that instead of first transforming to the rotating frame completely and then transforming to the inertial frame, an inertial longitude angle $\lambda$ can be defined to directly transform to the inertial frame. The first two angles are the longitude and latitude and are spherical coordinates. Thus the relations for these angles can be found using the transformation from the Cartesian to the spherical system. However, the angles themselves are not required directly, because they are only used in transformation matrices. These matrices are comprised of the sines and cosines of these angles, which means that a direct relation between the state variables and the sines and cosines of the position angles can be used. These relations can be derived from \Cref{fig:sphertocart_noomen2013basic} and are described in \Cref{eq:transAngl}
+
+
+ \begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/reference_frames/sphertocart_noomen2013basic.jpg}
+\caption{Spherical position variables in an inertial Cartesian frame \citep{noomen2013basic}.}
+\label{fig:sphertocart_noomen2013basic}
+\end{figure}
+
+\begin{align} \label{eq:transAngl}
+\begin{split}
+r = \sqrt{x^{2}+y^{2}+z^{2}}\\
+\end{split}
+&
+\begin{split}
+\sin \lambda &= \dfrac{y}{\sqrt{x^{2}+y^{2}}}\\
+\cos \lambda &= \dfrac{x}{\sqrt{x^{2}+y^{2}}}\\
+\end{split}
+&
+\begin{split}
+\sin \delta &= \dfrac{z}{r}\\
+\cos \delta &= \dfrac{\sqrt{x^{2}+y^{2}}}{r}
+\end{split} 
+\end{align} 
+
+The corresponding auxiliary functions can then be described by \Cref{eq:auxFtransAngl} using the definitions provided in \Cref{eq:stateX,eq:state_derivativesX}.
+
+\begin{align} \label{eq:AuxFtransAngl}
+\begin{split}
+w_{4,1} &= x_{1}^{2}+x_{2}^{2} \\
+w_{4,2} &= w_{4,1}+x_{3}^{2} \\
+w_{4,3} &= r = \sqrt{w_{4,2}} \\
+w_{4,4} &= \sqrt{w_{4,1}} \\
+\end{split}
+&
+\begin{split}
+w_{4,5} &= s\lambda = \dfrac{x_{2}}{w_{4,4}}\\
+w_{4,6} &= c\lambda = \dfrac{x_{1}}{w_{4,4}} \\
+\end{split}
+&
+\begin{split}
+w_{4,7} &= s\delta = \dfrac{x_{3}}{w_{4,3}} \\
+w_{4,8} &= c\delta = \dfrac{w_{4,4}}{w_{4,3}}\\
+\end{split} 
+\end{align} 
+
+
+The latitude and longitude could be described using the position vector in the inertial frame, however the transformation from the body frame to the vertical frame is a function of the ground (underscore 'G') velocity in the rotational frame. Since the position and velocity in the inertial frame are known (current state), the ground velocity ($V_{G}$) can be written as a function of the inertial velocity ($V_{I}$). For this, the velocity components have to be transformed from the inertial frame to the vertical frame (which is the inverse of the first three transformations described in \Cref{eq:acc}). This transformation is shown in \Cref{eq:VItoVV} and was described in \cite{mooij1994motion}. Here, $c$ stands for cosine and $s$ stands for sine. This transformation also includes the rotational effect on the velocity due to the rotation of Mars.
+ 
+ \begin{equation} \label{eq:VItoVV}
+\mathbf{V_{V}} =  
  \begin{pmatrix}
-V_{x_{R}}\\
-V_{y_{R}}\\
-V_{z_{R}}\\
+V_{x_{V}}\\
+V_{y_{V}}\\
+V_{z_{V}}\\
 \end{pmatrix}
 =
 \left[
 \begin{matrix}
-cx_{10} & sx_{10} & 0\\
--sx_{10} & cx_{10} & 0\\
-0 & 0 & 1\\
+-c\lambda s\delta & -s\lambda s\delta & c\delta\\
+-s\lambda & c\lambda & 0\\
+-c\lambda c\delta & -s\lambda c\delta & -s\delta\\
 \end{matrix}
 \right]
 \left\lbrace
 \begin{pmatrix}
-x_{4}\\
-x_{5}\\
-x_{6}\\
+V_{x}\\
+V_{y}\\
+V_{z}\\
 \end{pmatrix}
 -
 \begin{pmatrix}
@@ -180,111 +234,190 @@ x_{6}\\
 \end{pmatrix}
 \times
 \begin{pmatrix}
-x_{1} \\
-x_{2} \\
-x_{3} \\
+x \\
+y \\
+z \\
 \end{pmatrix}
 \right\rbrace
  \end{equation}
  
-\begin{equation} \label{eq:xten}
-x_{10} = \Omega_{M}t_{O}-\omega_{P} \quad \text{where} \quad t_{O}=t_{0}+t \\
-\end{equation}
- 
-The ground velocity can now be computed using the velocity components in the R-frame as shown by \Cref{eq:VG}.
+The ground velocity can now be computed as the norm of the vertical velocity vector as shown by \Cref{eq:VG}. The transformation matrices disappear because the norm of a transformation matrix is simply 1, which means that $V_{G}=V_{V}=V_{R}$.
 
 \begin{equation} \label{eq:VG}
-x_{15} = V_{G} = \sqrt{V_{x_{G}}^{2}+V_{y_{G}}^{2}+V_{z_{G}}^{2}}
+V_{G} = \| \mathbf{V_{V}} \| = 
+\left\Vert
+\begin{pmatrix}
+V_{x}\\
+V_{y}\\
+V_{z}\\
+\end{pmatrix}
+-
+\begin{pmatrix}
+0 \\
+0 \\
+\Omega_{M} \\
+\end{pmatrix}
+\times
+\begin{pmatrix}
+x \\
+y \\
+z \\
+\end{pmatrix}
+\right\Vert 
 \end{equation}
 
-Combining \Cref{eq:VItoVR,eq:VG} results in an expression for the ground velocity as a function of the state variables as described by \Cref{eq:xfifteen}.
+\Cref{eq:VG} can be rewritten as \Cref{eq:xfifteen}.
 
 \begin{equation}\label{eq:xfifteen}
-x_{15} = \sqrt{V_{I}^{2}+\Omega_{M}^{2}\left(x_{1}^{2}+x_{2}^{2}\right)+2\Omega_{M}\left(x_{4}x_{2}-x_{5}x_{1}\right)} \quad \text{where} \quad V_{I}=\sqrt{x_{4}^{2}+x_{5}^{2}+x_{6}^{2}} \\
+V_{G} = \sqrt{\left(V_{x}+\Omega_{M}y\right)^{2}+\left(V_{y}-\Omega_{M}x\right)^{2}+V_{z}^{2}} 
 \end{equation}
+
+The corresponding auxiliary functions are provided in \Cref{eq:velocityAuxF}.
+
+\begin{align} \label{eq:velocityAuxF}
+\begin{split}
+w_{4,9} &= V_{x}+\Omega_{M}y \\
+w_{4,10} &= V_{y}-\Omega_{M}x \\
+\end{split}
+&
+\begin{split}
+w_{4,11} &= w_{4,9}^{2}+w_{4,10}^{2}+x_{6}^{2} \\
+w_{4,12} &= V_{G}=\sqrt{w_{4,11}} \\
+\end{split} 
+\end{align} 
+
+%\sqrt{V_{I}^{2}+\Omega_{M}^{2}\left(x^{2}+y^{2}\right)+2\Omega_{M}\left(V_{x}y-V_{y}x\right)} \quad \text{where} \quad V_{I}=\sqrt{V_{x}^{2}+V_{y}^{2}+V_{z}^{2}} \\
  
-The transformation angles can now be described using auxiliary equations as defined in \Cref{eq:transAnglAux} resulting from \Cref{fig:rotational_inertial_martian_velocity} and as provided by \cite{mooij1994motion}. Again, the numbering of the auxiliary equations results from the order in which they were derived.
+The spherical velocity angles can now be derifed from \Cref{fig:vertical_spherical_mooij1994motion} as described by \Cref{eq:velAngl}. These were also provided by \cite{mooij1994motion}. 
 
  \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/tsi/spherical_mooij1994motion.jpg}
-\caption{Variables in the rotational frame}
-\label{fig:rotational_inertial_martian_velocity}
+\includegraphics[width=0.7\textwidth]{figures/reference_frames/vertical_spherical_mooij1994motion.jpg}
+\caption{Spherical velocity variables in a vertical Cartesian frame \citep{mooij1994motion}.}
+\label{fig:vertical_spherical_mooij1994motion}
 \end{figure}
 
-% \begin{figure}[!ht]
-%\centering
-%\includegraphics[width=0.7\textwidth]{figures/tsi/flight_path_and_azimuth_angle.png}
-%\caption{Flight-path and azimuth angle definition in the rotating frame.}
-%\label{fig:flight_path_and_azimuth_angle}
-%\end{figure}
- 
 
-\begin{equation} \label{eq:transAnglAux}
+
+\begin{align} \label{eq:velAngl}
 \begin{split}
-x_{11} &= \tau = \arctan\left(\dfrac{y_{R}}{x_{R}}\right) = \text{atan2}\left(y_{R},x_{R}\right) \quad \text{where} \quad 
-\begin{pmatrix}
-x_{R} \\
-y_{R} \\
-\end{pmatrix} 
-= \begin{pmatrix}
-cx_{10}x_{1}+sx_{10}x_{2} \\
--sx_{10}x_{1}+cx_{10}x_{2} \\
-\end{pmatrix} \\
-x_{12} &= \delta = \arcsin\left(\dfrac{x_{3}}{r_{G}}\right) = \arcsin\left(\dfrac{x_{3}}{x_{16}}\right)\\
-x_{13} &= \chi_{G} = \arctan\left(\dfrac{V_{y_{V}}}{V_{x_{V}}}\right)=\text{atan2}\left(V_{y_{V}},V_{x_{V}}\right)\\
-x_{14} &= \gamma_{G} = -\arcsin \left(\dfrac{V_{z_{V}}}{V_{G}}\right) = -\arcsin \left(\dfrac{V_{z_{V}}}{x_{15}}\right) \\
-x_{16} &= r_{G} = \sqrt{x_{1}^{2}+x_{2}^{2}+x_{3}^{2}} \\
+\sin \chi_{G} &= \dfrac{V_{y_{V}}}{\sqrt{V_{x_{V}}^{2}+V_{y_{V}}^{2}}} \\
+\cos \chi_{G} &= \dfrac{V_{x_{V}}}{\sqrt{V_{x_{V}}^{2}+V_{y_{V}}^{2}}} \\
+\end{split}
+&
+\begin{split}
+\sin \gamma_{G} &= \dfrac{-V_{z_{V}}}{V_{G}}\\
+\cos \gamma_{G} &= \dfrac{\sqrt{V_{x_{V}}^{2}+V_{y_{V}}^{2}}}{V_{G}}\\
 \end{split} 
-\end{equation} 
+\end{align} 
 
 
+Here, $V_{x_{V}}$, $V_{y_{V}}$ and $V_{z_{V}}$ are the velocities in the vertical frame. Expressions for these variables can be obtained by rewriting \Cref{eq:VItoVV}. This then results in \Cref{eq:VV}.
 
-
-Here the atan2 function is described by the general equations shown in \Cref{fig:atan2_guilhaire2013}. Also, $V_{x_{V}}$, $V_{y_{V}}$ and $V_{z_{V}}$ are the velocities in the vertical frame. Expressions for these variables can be obtained by transforming the rotational velocity components described in \Cref{eq:VItoVR} to the V-frame using the inverse of the second transformation mentioned in \Cref{eq:acc}. This then results in \Cref{eq:VV}.
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.5\textwidth]{figures/reference_frames/atan2_guilhaire2013.jpg}
-\caption{atan2 function evaluation conditions.}
-\label{fig:atan2_guilhaire2013}
-\end{figure}
 
 \begin{equation} \label{eq:VV}
 \begin{split}
-V_{x_{V}} & = \left(x_{4}+\Omega_{M}x_{2}\right)\left(sx_{12}sx_{10}sx_{11}-cx_{10}cx_{11}sx_{12}\right)+\left(x_{5}-\Omega_{M}x_{1}\right)\left(-cx_{11}sx_{12}sx_{10}-cx_{10}sx_{12}sx_{11}\right)+x_{6}cx_{12}\\
-V_{y_{V}} & = \left(x_{4}+\Omega_{M}x_{2}\right)\left(-cx_{11}sx_{10}-cx_{10}sx_{11}\right)+\left(x_{5}-\Omega_{M}x_{1}\right)\left(cx_{10}cx_{11}-sx_{10}sx_{11}\right) \\
-V_{z_{V}} & = \left(x_{4}+\Omega_{M}x_{2}\right)\left(cx_{12}sx_{10}sx_{11}-cx_{10}cx_{11}cx_{12}\right)+\left(x_{5}-\Omega_{M}x_{1}\right)\left(-cx_{11}cx_{12}sx_{10}-cx_{10}cx_{12}sx_{11}\right)-x_{6}sx_{12} \\
+V_{x_{V}} & = -\left(V_{x}+\Omega_{M}y\right) s \delta c\lambda - \left(V_{y}-\Omega_{M}x\right) s\delta s\lambda+V_{z}c\delta \\
+V_{y_{V}} & = \left(V_{y}-\Omega_{M}x\right) c\lambda - \left(V_{x}+\Omega_{M} y \right) s\lambda \\
+V_{z_{V}} & = -\left(V_{x}+\Omega_{M}y\right)-\left(V_{y}-\Omega_{M}x\right) c\delta s\lambda - V_{z} s\delta \\
 \end{split}
 \end{equation}
 
-All these auxiliary equations have corresponding auxiliary derivatives. These are presented in \Cref{eq:derTransAnglAux}. For $x'_{13}$, $t$ stands for tangent. Also, the drag force ($D$) is represented by $x_{27}$.
+The combined auxiliary functions for \Cref{eq:velAngl,eq:VV} are described in \Cref{eq:velocityAuxF}.
 
- \begin{align} \label{eq:derTransAnglAux}
+\begin{align} \label{eq:VV}
 \begin{split}
-x'_{10} &= \Omega_{M} \\
-x'_{11} &=  \dot{\tau} = \dfrac{x_{15}sx_{13}cx_{14}}{x_{16}cx_{12}}\\
-x'_{12} &= \dot{\delta} = \dfrac{x_{15}cx_{13}cx_{14}}{x_{16}}\\
-x'_{13} &= \dot{\chi}_{G} = 2\dfrac{\Omega_{M}}{cx_{14}}\left(sx_{12}cx_{14}-cx_{12}sx_{14}cx_{13}\right)+\dfrac{x_{15}}{x_{16}}cx_{14}tx_{12}sx_{13}+\dfrac{\Omega_{M}^{2}}{x_{15}cx_{14}}x_{16}cx_{12}s_{x12}sx_{13}+\dfrac{T}{x_{15}cx_{14}x_{7}}s\psi_{T}c\epsilon_{T} \\
-x'_{14} &= \dot{\gamma}_{G} = 2\Omega_{M}cx_{12}sx_{13}+\dfrac{x_{15}}{x_{16}}cx_{14}+\dfrac{\Omega_{M}^{2}}{x_{15}}x_{16}cx_{12}\left(cx_{12}cx_{14}+sx_{14}sx_{12}cx_{13}\right)+\dfrac{T}{x_{15}x_{7}}s\epsilon_{T}-\dfrac{\mu_{M}}{x_{15}x_{16}^{2}}cx_{14} \\
-x'_{15} &= \dot{V}_{G} = \Omega_{M}^{2}x_{16}cx_{12}\left(sx_{14}cx_{12}-cx_{14}sx_{12}cx_{13}\right)+\dfrac{T}{x_{7}}c\psi_{T}c\epsilon_{T}-\dfrac{x_{27}}{x_{7}}-\dfrac{\mu_{M}}{x_{16}}sx_{14} \\
-x'_{16} &= \dot{r}_{G} = x_{15}sx_{14}\\
+w_{4,13} &= -c\lambda s\delta  = -w_{4,6}w_{4,7} \\
+w_{4,14} &= -s\delta s\lambda = -w_{4,7}w_{4,5} \\
+w_{4,15} &= -c\delta c\lambda = -w_{4,8}w_{4,6} \\
+w_{4,16} &= -c\delta s\lambda = w_{4,8}w_{4,5} \\
+\end{split}
+&
+\begin{split}
+w_{4,17} &= V_{x_{V}} = x_{6}w_{4,8}+w_{4,9}w_{4,13}+w_{4,10}w_{4,14} \\
+w_{4,18} &= V_{y_{V}} = w_{4,10}w_{4,6}-w_{4,9}w_{4,5} \\
+w_{4,19} &= V_{z_{V}} = w_{4,9}w_{4,15}-x_{6}w_{4,7}+w_{4,10}w_{4,16} \\
+w_{4,20} &= V_{x_{V}}^{2}+V_{y_{V}}^{2} = w_{4,17}^{2}+w_{4,18}^{2} \\
+w_{4,21} &= \sqrt{w_{4,20}} \\
+\end{split}
+&
+\begin{split}
+w_{4,22} &= s\chi_{G} = \dfrac{w_{4,18}}{w_{4,21}} \\
+w_{4,23} &= c\chi_{G} = \dfrac{w_{4,17}}{w_{4,21}} \\
+w_{4,24} &= s\gamma_{G} = -\dfrac{w_{4,19}}{w_{4,12}} \\
+w_{4,25} &= c\gamma_{G} = \dfrac{w_{4,21}}{w_{4,12}} \\
 \end{split}
 \end{align}
 
-All the auxiliary derivatives are a function of the auxiliary equations defined earlier. 
+
 
  \subsubsection{Drag acceleration}
  \label{subsubsec:tsiDrag}
-The drag acceleration is determined in the body frame by dividing the drag force ($D$) by the mass of the \ac{MAV} ($x_{7}$). The drag force itself is a function of the position and velocity. The auxiliary equations associated with the drag function are described in \Cref{eq:dragAux} and the corresponding derivatives are presented by \Cref{eq:dragDerAux} except for the $C_{D}$ equations. The polynomial coefficients for the density equation are provided in \Cref{tab:fitParametersDen} and are represented in \Cref{eq:dragAux} by $P_{\rho}$. Please note that the drag force is a function of the velocity in the rotating frame.
+The drag acceleration is determined in the body frame by dividing the drag force ($D$) by the mass of the \ac{MAV} ($x_{7}$). The drag force itself is a function of the position and velocity. The equations associated with the drag function are described in \Cref{eq:dragAux} and the corresponding derivatives are presented by \Cref{eq:dragDerAux} except for the $C_{D}$ equations. The polynomial coefficients for the density equation are provided in \Cref{tab:fitParametersDen} and are represented in \Cref{eq:dragAux} by $P_{\rho}$.
 
  \begin{equation} \label{eq:dragAux}
 \begin{split}
-x_{27} &= D = \frac{1}{2}\rho V_{R}^{2}SC_{D} = \frac{1}{2}S x_{28}x_{15}^{2}x_{29} \\
-x_{28} &= \rho = e^{x_{30}} \\
-x_{29} &= C_{D} \\
-x_{30} &= P_{\rho 10}x_{31}^{10}+P_{\rho 9}x_{31}^{9}+P_{\rho 8}x_{31}^{8}+P_{\rho 7}x_{31}^{7}+P_{\rho 6}x_{31}^{6}+P_{\rho 5}x_{31}^{5}+P_{\rho 4}x_{31}^{4}+P_{\rho 3}x_{31}^{3}+P_{\rho 2}x_{31}^{2}+P_{\rho 1}x_{31}+P_{\rho 0} \\
-x_{31} &= h = r_{G}-R_{MOLA} = x_{16}-R_{MOLA}
+h &= r-R_{MOLA} \\
+D &= \frac{1}{2}\rho V_{G}^{2}SC_{D}\\
+\rho &= e^{P_{\rho 10}h^{10}+P_{\rho 9}h^{9}+P_{\rho 8}h^{8}+P_{\rho 7}h^{7}+P_{\rho 6}h^{6}+P_{\rho 5}h^{5}+P_{\rho 4}h^{4}+P_{\rho 3}h^{3}+P_{\rho 2}h^{2}+P_{\rho 1}h+P_{\rho 0}} \\
+\end{split}
+\end{equation}
+
+Since the drag coefficient is a function of Mach number as by \Cref{fig:dragcoeff_whitehead2004mars} and is not a continuous function, it has to be split into 6 different sections. Each section has a separate $C_{D}-M$ relation. Before these relations can be described, three additional expressions are required which are described in \Cref{eq:cdAux}.
+
+ \begin{equation} \label{eq:cdAux}
+\begin{split}
+M &= \dfrac{V}{a} \\
+a &= \sqrt{\gamma_{a}R_{a}^{*}T_{a}} \quad \text{where} \quad R_{a}^{*}=\dfrac{R_{a}}{M_{a}} \\
+\end{split}
+\end{equation}
+
+The conditional relations shown in \Cref{eq:cdCond} describe the different equations that have to be used associated with the different sections of the drag coefficient plot. Here $P_{C_{D} number,section}$ are the polynomial fit coefficients as provided in \Cref{tab:dragCoeffPara}.
+
+\begin{equation}\label{eq:cdCond}
+C_{D}=\begin{cases}
+0.2, & \text{for } 0\leq M < 0.5\\
+P_{C_{D} 1,2}M+P_{C_{D} 0,2}, &  \text{for } 0.5\leq M < 1 \\
+P_{C_{D} 1,3}M+P_{C_{D} 0,3}, &  \text{for } 1\leq M < 1.3 \\
+P_{C_{D} 1,4}M+P_{C_{D} 0,4}, &  \text{for } 1.3\leq M < 2.5 \\
+P_{C_{D} 1,5}M+P_{C_{D} 0,5}, &  \text{for } 2.5\leq M < 4 \\
+0.3, &  \text{for } M \geq 4 
+\end{cases}\\
+\end{equation}
+
+This only leaves the temperature $T_{a}$, which is a function of the altitude $h$ in km,\ac{MOLA}. But as described in \Cref{subsec:atmofuncfit}, this parameter is split into different sections as well. The equations per section for the temperature is provided in \Cref{eq:tempCondAux}. Here $P_{T number,section}$ are the polynomial fit coefficients as provided in \Cref{tab:fitParameters}.
+
+\begin{equation}\label{eq:tempCondAux}
+T_{a}=\begin{cases}
+P_{T 1,1}h+P_{T 0,1}, & \text{for } -0.6 \leq h < 5.04  \\
+P_{T 3,2}h^{3}+P_{T 2,2}h^{2}+P_{T 1,2}h+P_{T 0,2}, &  \text{for } 5.04 \leq h < 35.53   \\
+P_{T 6,3}h^{6}+P_{T 5,3}h^{5}+P_{T 4,3}h^{4}+P_{T 3,3}h^{3}+ \dots \\
+\qquad\ \ \dotsc +P_{T 2,3}h^{2}+P_{T 1,3}h+P_{T 0,3}, &  \text{for } 35.53 \leq h < 75.07   \\
+P_{T 8,4}h^{8}+P_{T 7,4}h^{7}+P_{T 6,4}h^{6}+P_{T 5,4}h^{5} \\
+\qquad\ \ +P_{T 4,4}h^{4}+P_{T 3,4}h^{3}+P_{T 2,4}h^{2}+P_{T 1,4}h+P_{T 0,4}, &  \text{for } 75.07 \leq h < 170.05   \\
+136.5, &  \text{for }  h \geq 170.05   
+\end{cases}
+\end{equation}
+
+For both the conditional parameters $C_{D}$ and $T_{a}$  the required section has to be determined before the evaluation of the equations.
+
+ \textbf{\textcolor{red}{Rest still has to be rewritten!!}}
+
+\subsubsection{Thrust acceleration}
+\label{subsubsec:tsiDrag}
+
+\subsection{Spherical equations}
+\label{subsec:sphereq}
+ 
+ \subsubsection{Drag acceleration}
+ \label{subsubsec:tsiDrag}
+The drag acceleration is determined in the body frame by dividing the drag force ($D$) by the mass of the \ac{MAV} ($x_{7}$). The drag force itself is a function of the position and velocity. The equations associated with the drag function are described in \Cref{eq:dragAux} and the corresponding derivatives are presented by \Cref{eq:dragDerAux} except for the $C_{D}$ equations. The polynomial coefficients for the density equation are provided in \Cref{tab:fitParametersDen} and are represented in \Cref{eq:dragAux} by $P_{\rho}$.
+
+ \begin{equation} \label{eq:dragAux}
+\begin{split}
+h &= r-R_{MOLA} \\
+D &= \frac{1}{2}\rho V_{G}^{2}SC_{D}\\
+\rho &= e^{P_{\rho 10}h^{10}+P_{\rho 9}h^{9}+P_{\rho 8}h^{8}+P_{\rho 7}h^{7}+P_{\rho 6}h^{6}+P_{\rho 5}h^{5}+P_{\rho 4}h^{4}+P_{\rho 3}h^{3}+P_{\rho 2}h^{2}+P_{\rho 1}h+P_{\rho 0}} \\
 \end{split}
 \end{equation}
 
@@ -374,7 +507,8 @@ x'_{34,5}=0, &  \text{for }  x_{31} \geq 170.05
 \end{equation}
 
 
-For both the conditional parameters $C_{D}$ ($x_{29}$) and $T_{a}$ ($x_{34}$) the required section has to be determined before the evaluation of the auxiliary equations. 
+For both the conditional parameters $C_{D}$ ($x_{29}$) and $T_{a}$ ($x_{34}$) the required section has to be determined before the evaluation of the auxiliary equations.
+ 
 
 \subsection{Recurrence relations and auxiliary functions}
 \label{subsec:recRelAuxFunc}
@@ -394,25 +528,29 @@ u_{3}&=x_{6} \\
 u_{4}&=\dot{V}_{x}=a_{x}=a_{g,x}+a_{D,x}+a_{T,x}\\
 u_{5}&=\dot{V}_{y}=a_{y}=a_{g,y}+a_{D,y}+a_{T,y}\\
 u_{6}&=\dot{V}_{z}=a_{z}=a_{g,z}+a_{D,z}+a_{T,z}\\
+\end{split}
+&
+\begin{split}
 u_{7} &=\dot{m}_{MAV}=-\dfrac{T}{g_{0}I_{sp}}\\
 u_{8}&=2x_{1}x_{4}+2x_{2}x_{5}+2x_{3}x_{6}\\
 u_{9}&=\dfrac{3}{2}\dfrac{x_{9}u_{8}}{x_{8}}\\
 u_{10} &= \Omega_{M} \\
-\end{split}
-&
-\begin{split}
-u_{10} &= \Omega_{M} \\
 u_{11} &=  \dot{\tau} = \dfrac{x_{15}sx_{13}cx_{14}}{x_{16}cx_{12}}\\
+\end{split}
+\end{align}
+
+\begin{align} \label{eq:unAuxEq2}
+\begin{split} 
 u_{12} &= \dot{\delta} = \dfrac{x_{15}cx_{13}cx_{14}}{x_{16}}\\
-u_{13} &= \dot{\chi}_{G} = 2\dfrac{\Omega_{M}}{cx_{14}}\left(sx_{12}cx_{14}-cx_{12}sx_{14}cx_{13}\right)+\dfrac{x_{15}}{x_{16}}cx_{14}tx_{12}sx_{13}+\dfrac{\Omega_{M}^{2}}{x_{15}cx_{14}}x_{16}cx_{12}s_{x12}sx_{13}+\dfrac{T}{x_{15}cx_{14}x_{7}}s\psi_{T}c\epsilon_{T} \\
+u_{13} &= \dot{\chi}_{G} = 2\dfrac{\Omega_{M}}{cx_{14}}\left(sx_{12}cx_{14}-cx_{12}sx_{14}cx_{13}\right)+\dfrac{x_{15}}{x_{16}}cx_{14}tx_{12}sx_{13}+\dfrac{\Omega_{M}^{2}}{x_{15}cx_{14}}x_{16}cx_{12}s_{x12}sx_{13}-\dfrac{T}{x_{15}cx_{14}x_{7}}s\psi_{T}c\epsilon_{T} \\
 u_{14} &= \dot{\gamma}_{G} = 2\Omega_{M}cx_{12}sx_{13}+\dfrac{x_{15}}{x_{16}}cx_{14}+\dfrac{\Omega_{M}^{2}}{x_{15}}x_{16}cx_{12}\left(cx_{12}cx_{14}+sx_{14}sx_{12}cx_{13}\right)+\dfrac{T}{x_{15}x_{7}}s\epsilon_{T}-\dfrac{\mu_{M}}{x_{15}x_{16}^{2}}cx_{14} \\
-u_{15} &= \dot{V}_{G} = \Omega_{M}^{2}x_{16}cx_{12}\left(sx_{14}cx_{12}-cx_{14}sx_{12}cx_{13}\right)+\dfrac{T}{x_{7}}c\psi_{T}c\epsilon_{T}-\dfrac{x_{27}}{x_{7}}-\dfrac{\mu_{M}}{x_{16}}sx_{14} \\
+u_{15} &= \dot{V}_{G} = \Omega_{M}^{2}x_{16}cx_{12}\left(sx_{14}cx_{12}-cx_{14}sx_{12}cx_{13}\right)+\dfrac{T}{x_{7}}c\psi_{T}c\epsilon_{T}-\dfrac{x_{27}}{x_{7}}-\dfrac{\mu_{M}}{x_{16}^{2}}sx_{14} \\
 u_{16} &= \dot{r}_{G} = x_{15}sx_{14}\\
 \end{split}
 \end{align}
 
 
-\begin{equation} \label{eq:unAuxEq2}
+\begin{equation} \label{eq:unAuxEq3}
 \begin{split}
 u_{27} &=  \frac{1}{2}Sx_{15}\left(x_{15} \left(x_{29}u_{28}+x_{28}u_{29}\right)+2x_{28}x_{29}u_{15}\right) \\
 u_{28} &= u_{30}x_{28} \\
@@ -426,7 +564,7 @@ u_{29,6}=0, &  \text{for } x_{32} \geq 4
 \end{cases}\\
 u_{30} &=u_{31} \left(10 P_{\rho 10}x_{31}^{9}+9 P_{\rho 9}x_{31}^{8}+8 P_{\rho 8}x_{31}^{7}+7 P_{\rho 7}x_{31}^{6}+6 P_{\rho 6}x_{31}^{5}+5 P_{\rho 5}x_{31}^{4}\dots \right. \\
 & \left. \dotsc +4 P_{\rho 4}x_{31}^{3}+3 P_{\rho 3}x_{31}^{2}+2 P_{\rho 2}x_{31}+P_{\rho 1}\right) \\
-u_{31} &= u_{20}\\
+u_{31} &= u_{16}\\
 u_{32} &= \dfrac{x_{33}u_{15}-x_{15}u_{33}}{x_{33}^{2}}\\
 u_{33} &= \dfrac{\gamma_{a}R_{a}^{*}}{2x_{33}}u_{34} \\
 u_{34}&=\begin{cases}
@@ -760,30 +898,30 @@ $w_{9}=$ & $ \dfrac{x_{9}u_{8}}{x_{8}} $ & Multiplication and Division \\ \hline
 $w_{11,1}=$ & $ \dfrac{x_{15}}{x_{16}} $ & Division\\ \hline
 $w_{11,2}=$ & $ \dfrac{w_{4,12}}{w_{4,6}} $ & Division \\ \hline
 $w_{11,3}=$ & $ w_{11,1}w_{11,2} $ & Multiplication \\ \hline
-$w_{12,1}=$ & $ w_{4,5}w_{w4,38} $ & Multiplication \\ \hline
+$w_{12,1}=$ & $ w_{4,5}w_{4,38} $ & Multiplication \\ \hline
 $w_{12,2}=$ & $ w_{11,1}w_{12,1} $ & Multiplication \\ \hline
+$w_{13,0}=$ & $ \dfrac{x_{16}}{x_{15}} $ & Division \\ \hline
 $w_{13,1}=$ & $ w_{4,5}w_{4,11} $ & Multiplication \\ \hline
-$w_{13,2}=$ & $ \dfrac{w_{4,7}}{w_{4,38}} $ & Division \\ \hline
+$w_{13,2}=$ & $ \dfrac{w_{4,4}}{w_{4,6}} $ & Division \\ \hline
 $w_{13,3}=$ & $ \dfrac{w_{4,4}}{w_{4,38}} $ & Division \\ \hline
 $w_{13,4}=$ & $ x_{15}w_{4,38} $ & Multiplication \\ \hline
-$w_{13,5}=$ & $ w_{11,1}w_{4,12} $ & Multiplication \\ \hline
+$w_{13,5}=$ & $ w_{13,0}w_{4,12} $ & Multiplication \\ \hline
 $w_{13,6}=$ & $ w_{11,1}w_{13,3} $ & Multiplication \\ \hline
 $w_{13,7}=$ & $ \dfrac{w_{6,5}-w_{13,1}}{w_{4,38}} $ & Division \\ \hline
 $w_{13,8}=$ & $ w_{13,5}w_{13,2} $ & Multiplication \\ \hline
 $w_{13,9}=$ & $ w_{13,6}w_{6,3} $ & Multiplication \\ \hline
-$w_{13,10}=$ & $ w_{4,33}w_{13,4} $ & Multiplication \\ \hline
+$w_{13,10}=$ & $ \dfrac{w_{4,33}}{w_{13,4}} $ & Division \\ \hline
 $w_{14,1}=$ & $ x_{16}^{2} $ & Power \\ \hline
 $w_{14,2}=$ & $ w_{11,1}w_{4,38} $ & Multiplication \\ \hline
-$w_{14,3}=$ & $ w_{11,1}w_{4,6} $ & Multiplication \\ \hline
+$w_{14,3}=$ & $ w_{13,0}w_{4,6} $ & Multiplication \\ \hline
 $w_{14,4}=$ & $ w_{6,0}w_{4,5} $ & Multiplication \\ \hline
-$w_{14,5}=$ & $ \dfrac{w_{4,25}}{x_{15}} $ & Division \\ \hline
+$w_{14,5}=$ & $ \dfrac{w_{4,34}}{x_{15}} $ & Division \\ \hline
 $w_{14,6}=$ & $ \dfrac{w_{4,38}}{x_{15}} $ & Division \\ \hline
 $w_{14,7}=$ & $ w_{14,3}\left(w_{4,15}+w_{14,4}\right) $ & Multiplication \\ \hline
-$w_{14,8}=$ & $ w_{14,5}w_{4,29} $ & Multiplication \\ \hline
 $w_{14,9}=$ & $ \dfrac{w_{14,6}}{w_{14,1}} $ & Division \\ \hline
 $w_{15,1}=$ & $ x_{16}w_{4,6} $ & Multiplication \\ \hline
 $w_{15,2}=$ & $ w_{4,38}w_{4,10} $ & Multiplication \\ \hline
-$w_{15,3}=$ & $ \dfrac{w_{4,7}}{x_{16}} $ & Division \\ \hline
+$w_{15,3}=$ & $ \dfrac{w_{4,7}}{w_{14,1}} $ & Division \\ \hline
 $w_{15,4}=$ & $ w_{15,1}\left(w_{4,11}-w_{15,2}\right) $ & Multiplication \\ \hline
 $w_{16}=$ & $ x_{15}w_{4,7} $ & Multiplication  \\ \hline
 $w_{27,1}=$ & $ x_{29}u_{28} $ & Multiplication \\ \hline
@@ -941,9 +1079,9 @@ U_{10} \left(k\right)&= 0 \\
 \begin{split}
 U_{11} \left(k\right)&= W_{11,3}\left(k\right) \\
 U_{12} \left(k\right)&= W_{12,2}\left(k\right) \\
-U_{13} \left(k\right)&= 2\Omega_{M}W_{13,7}\left(k\right)+W_{13,8}\left(k\right)+\Omega_{M}^{2}W_{13,9}\left(k\right)+W_{13,10}\left(k\right) \\
-U_{14} \left(k\right)&= 2\Omega_{M}W_{6,3}\left(k\right)+W_{14,2}\left(k\right)+\Omega_{M}^{2}W_{14,7}\left(k\right)+W_{14,8}-\mu_{M}W_{14,9}\left(k\right) \\
-U_{15} \left(k\right)&= \Omega_{M}^{2}W_{15,4}\left(k\right)+W_{4,32}\left(k\right)-W_{4,0}\left(k\right)-\mu_{M}W_{15,3}\left(k\right) \\
+U_{13} \left(k\right)&= 2\Omega_{M}W_{13,7}\left(k\right)+W_{13,8}\left(k\right)+\Omega_{M}^{2}W_{13,9}\left(k\right)-W_{13,10}\left(k\right) \\
+U_{14} \left(k\right)&= 2\Omega_{M}W_{6,3}\left(k\right)+W_{14,2}\left(k\right)+\Omega_{M}^{2}W_{14,7}\left(k\right)+W_{14,5}-\mu_{M}W_{14,9}\left(k\right) \\
+U_{15} \left(k\right)&= \Omega_{M}^{2}W_{15,4}\left(k\right)+W_{4,2}\left(k\right)-\mu_{M}W_{15,3}\left(k\right) \\
 U_{16} \left(k\right)&= W_{16}\left(k\right) \\
 \end{split}
 \end{align}
@@ -961,7 +1099,7 @@ U_{29,5}\left(k\right)=P_{C_{D} 1,5}U_{32}\left(k\right), &  \text{for } 2.5\leq
 U_{29,6}\left(k\right)=0, &  \text{for } x_{32} \geq 4 
 \end{cases}\\
 U_{30} \left(k\right)&=W_{30,9}\left(k\right) \\
-U_{31} \left(k\right)&= U_{20}\left(k\right)\\
+U_{31} \left(k\right)&= U_{16}\left(k\right)\\
 U_{32} \left(k\right)&= W_{32,4}\left(k\right)\\
 U_{33} \left(k\right)&= \dfrac{\gamma_{a}R_{a}^{*}}{2}W_{33}\left(k\right) \\
 U_{34}\left(k\right)&=\begin{cases}

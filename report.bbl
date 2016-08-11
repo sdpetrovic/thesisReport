@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{10}%
+\begin{thebibliography}{11}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -60,6 +60,14 @@
   integration}},}\ }in\ \href {\doibase 10.2514/6.2008-6957} {\emph {\bibinfo
   {booktitle} {AIAA/AAS Astrodynamics Specialist Conference and Exhibit,
   Honolulu, Hawaii}}}\ (\bibinfo {year} {2008})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Noomen}(2013)}]{noomen2013basic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Noomen}},\ }\href@noop {} {\textit {\bibinfo {title}
+  {ae4-878.basics.v4-14},}\ }\bibinfo {howpublished} {Lecture slides, Delft
+  University of Technology} (\bibinfo {year} {2013}),\ \bibinfo {note}
+  {[Internal publication] Course: Mission Geometry and Orbit
+  Design}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Mooij}(1994)}]{mooij1994motion}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
