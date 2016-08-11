@@ -14,10 +14,10 @@
 \contentsline {subsubsection}{Gravitational acceleration}{7}{equation.6.2.5}
 \contentsline {subsubsection}{Transformation angles}{8}{equation.6.2.7}
 \contentsline {subsubsection}{Drag acceleration}{10}{equation.6.2.16}
-\contentsline {subsubsection}{Thrust acceleration}{11}{equation.6.2.20}
-\contentsline {subsection}{\numberline {6.2.2}Spherical equations}{11}{subsection.6.2.2}
-\contentsline {subsubsection}{Drag acceleration}{11}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Recurrence relations and auxiliary functions}{13}{subsection.6.2.3}
+\contentsline {subsubsection}{Thrust acceleration}{11}{equation.6.2.23}
+\contentsline {subsection}{\numberline {6.2.2}Spherical equations}{13}{subsection.6.2.2}
+\contentsline {subsubsection}{Drag acceleration}{13}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Recurrence relations and auxiliary functions}{15}{subsection.6.2.3}
 \contentsline {chapter}{\numberline {7}Program optimisation tool}{23}{chapter.7}
 \contentsline {section}{\numberline {7.1}Existing software}{23}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}\ac {Tudat}}{23}{subsection.7.1.1}

@@ -353,7 +353,7 @@ w_{4,25} &= c\gamma_{G} = \dfrac{w_{4,21}}{w_{4,12}} \\
 
  \subsubsection{Drag acceleration}
  \label{subsubsec:tsiDrag}
-The drag acceleration is determined in the body frame by dividing the drag force ($D$) by the mass of the \ac{MAV} ($x_{7}$). The drag force itself is a function of the position and velocity. The equations associated with the drag function are described in \Cref{eq:dragAux} and the corresponding derivatives are presented by \Cref{eq:dragDerAux} except for the $C_{D}$ equations. The polynomial coefficients for the density equation are provided in \Cref{tab:fitParametersDen} and are represented in \Cref{eq:dragAux} by $P_{\rho}$.
+The drag acceleration is determined in the body frame by dividing the drag force ($D$) by the mass of the \ac{MAV} ($x_{7}$). The drag force itself is a function of the position and velocity. The equations associated with the drag function are described in \Cref{eq:dragAux} except for the $C_{D}$ equations. The polynomial coefficients for the density equation are provided in \Cref{tab:fitParametersDen} and are represented in \Cref{eq:dragAux} by $P_{\rho}$.
 
  \begin{equation} \label{eq:dragAux}
 \begin{split}
@@ -363,14 +363,45 @@ D &= \frac{1}{2}\rho V_{G}^{2}SC_{D}\\
 \end{split}
 \end{equation}
 
+The numbering for the drag auxiliary functions start with 27 because it was added later on and because it used to be an auxiliary equation. The auxiliary functions for the density can then be described by \Cref{eq:dragAuxF}.
+
+\begin{align} \label{eq:dragAuxF}
+\begin{split}
+w_{27,1} &= h = w_{4,3} - R_{MOLA} \\
+w_{27,2} &= w_{27,1}^{2}\\
+w_{27,3} &= w_{27,1}^{3}\\
+w_{27,4} &= w_{27,1}^{4}\\
+w_{27,5} &= w_{27,1}^{5}\\
+w_{27,6} &= w_{27,1}^{6}\\
+\end{split}
+&
+\begin{split}
+w_{27,7} &= w_{27,1}^{7}\\
+w_{27,8} &= w_{27,1}^{8}\\
+w_{27,9} &= w_{27,1}^{9}\\
+w_{27,10} &= w_{27,1}^{10}\\
+w_{27,11} &= P_{\rho 10}w_{27,10}+P_{\rho 9}w_{27,9}+\dotsc +P_{\rho 1}w_{27,1}+P_{\rho 0}\\
+w_{27,12} &= \rho = e^{w_{27,11}} \\
+\end{split}
+\end{align}
+
 Since the drag coefficient is a function of Mach number as by \Cref{fig:dragcoeff_whitehead2004mars} and is not a continuous function, it has to be split into 6 different sections. Each section has a separate $C_{D}-M$ relation. Before these relations can be described, three additional expressions are required which are described in \Cref{eq:cdAux}.
 
  \begin{equation} \label{eq:cdAux}
 \begin{split}
-M &= \dfrac{V}{a} \\
+M &= \dfrac{V_{G}}{a} \\
 a &= \sqrt{\gamma_{a}R_{a}^{*}T_{a}} \quad \text{where} \quad R_{a}^{*}=\dfrac{R_{a}}{M_{a}} \\
 \end{split}
 \end{equation}
+
+Where the corresponding auxiliary functions can be described by \Cref{eq:cdAuxF}.
+
+\begin{align} \label{eq:cdAuxF}
+\begin{split}
+w_{27,14} &= a = \sqrt{\gamma_{a}R_{a}^{*}w_{27,13}}  \\
+w_{27,15} &= M = \dfrac{w_{4,12}}{27,14} \\
+\end{split}
+\end{align}
 
 The conditional relations shown in \Cref{eq:cdCond} describe the different equations that have to be used associated with the different sections of the drag coefficient plot. Here $P_{C_{D} number,section}$ are the polynomial fit coefficients as provided in \Cref{tab:dragCoeffPara}.
 
@@ -385,29 +416,257 @@ P_{C_{D} 1,5}M+P_{C_{D} 0,5}, &  \text{for } 2.5\leq M < 4 \\
 \end{cases}\\
 \end{equation}
 
-This only leaves the temperature $T_{a}$, which is a function of the altitude $h$ in km,\ac{MOLA}. But as described in \Cref{subsec:atmofuncfit}, this parameter is split into different sections as well. The equations per section for the temperature is provided in \Cref{eq:tempCondAux}. Here $P_{T number,section}$ are the polynomial fit coefficients as provided in \Cref{tab:fitParameters}.
+In this case, the auxiliary functions for $C_{D} \left( = w_{27,16}\right)$ is any of the conditional relations depending on $M \left( = w_{27,15}\right)$.
+
+This only leaves the temperature $T_{a} \left(= w_{27,13}\right)$ , which is a function of the altitude $h \left(= w_{27,1} \right) $ in km,\ac{MOLA}. But as described in \Cref{subsec:atmofuncfit}, this parameter is split into different sections as well. The equations per section for the temperature is provided in \Cref{eq:tempCondAux}. Here $P_{T number,section}$ are the polynomial fit coefficients as provided in \Cref{tab:fitParameters}.
 
 \begin{equation}\label{eq:tempCondAux}
 T_{a}=\begin{cases}
 P_{T 1,1}h+P_{T 0,1}, & \text{for } -0.6 \leq h < 5.04  \\
 P_{T 3,2}h^{3}+P_{T 2,2}h^{2}+P_{T 1,2}h+P_{T 0,2}, &  \text{for } 5.04 \leq h < 35.53   \\
-P_{T 6,3}h^{6}+P_{T 5,3}h^{5}+P_{T 4,3}h^{4}+P_{T 3,3}h^{3}+ \dots \\
+P_{T 6,3}h^{6}+P_{T 5,3}h^{5}+P_{T 4,3}h^{4}+P_{T 3,3}h^{3}+ \dotsc \\
 \qquad\ \ \dotsc +P_{T 2,3}h^{2}+P_{T 1,3}h+P_{T 0,3}, &  \text{for } 35.53 \leq h < 75.07   \\
-P_{T 8,4}h^{8}+P_{T 7,4}h^{7}+P_{T 6,4}h^{6}+P_{T 5,4}h^{5} \\
-\qquad\ \ +P_{T 4,4}h^{4}+P_{T 3,4}h^{3}+P_{T 2,4}h^{2}+P_{T 1,4}h+P_{T 0,4}, &  \text{for } 75.07 \leq h < 170.05   \\
+P_{T 8,4}h^{8}+P_{T 7,4}h^{7}+P_{T 6,4}h^{6}+P_{T 5,4}h^{5}+ \dotsc \\
+\qquad\ \ \dotsc+P_{T 4,4}h^{4}+P_{T 3,4}h^{3}+P_{T 2,4}h^{2}+P_{T 1,4}h+P_{T 0,4}, &  \text{for } 75.07 \leq h < 170.05   \\
 136.5, &  \text{for }  h \geq 170.05   
 \end{cases}
 \end{equation}
 
 For both the conditional parameters $C_{D}$ and $T_{a}$  the required section has to be determined before the evaluation of the equations.
 
- \textbf{\textcolor{red}{Rest still has to be rewritten!!}}
+The drag can now also be described as an auxiliary function as shown by \Cref{eq:dragAuxF}.
+
+\begin{align} \label{eq:dragAuxF}
+\begin{split}
+w_{27,17} &= V_{G}^{2} =  w_{4,12}^{2} \\
+w_{27,18} &= V_{G}^{2}C_{D} = w_{27,17}w_{27,16} \\
+w_{27,19} &= D = \frac{1}{2} S w_{27,18}w_{27,12} \\
+\end{split}
+\end{align}
+
+
 
 \subsubsection{Thrust acceleration}
 \label{subsubsec:tsiDrag}
+The only acceleration component still missing is the thrust acceleration. To be able to write the auxiliary functions for the thrust, \Cref{eq:acc} first has to be rewritten such that all the transformations are gathered into two transformation matrices (see \Cref{eq:accAux}). The transformation matrices are described by \Cref{eq:BPtrans,eq:IBtrans} for $\mathbb{T}_{\mathbf{BP}}$ and $\mathbb{T}_{\mathbf{IB}}$ respectively.
+
+\begin{equation} \label{eq:accAux}
+\begin{pmatrix}
+x'_{4}\\
+x'_{5}\\
+x'_{6}\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+-\mu_{M}\dfrac{x_{1}}{x_{9}}\\
+-\mu_{M}\dfrac{x_{2}}{x_{9}}\\
+-\mu_{M}\dfrac{x_{3}}{x_{9}}\\
+\end{pmatrix}+
+\mathbb{T}_{\mathbf{IB}}\left[
+\begin{pmatrix}
+-\dfrac{w_{27,19}}{x_{7}}\\
+0\\
+0\\
+\end{pmatrix}
++ 
+\mathbb{T}_{\mathbf{BP}}
+\begin{pmatrix}
+\dfrac{T}{x_{7}}\\
+0\\
+0\\
+\end{pmatrix}
+\right]
+\end{equation}
+
+
+\begin{equation} \label{eq:BPtrans}
+\mathbb{T}_{\mathbf{BP}}=
+\begin{bmatrix}
+c\psi_{T}c\epsilon_{T} & -s\psi_{T} & c\psi_{T}s\epsilon_{T}\\
+s\psi_{T}c\epsilon_{T} & c\psi_{T} & s\psi_{T}s\epsilon_{T}\\
+-s\epsilon_{T} & 0 & c\epsilon_{T}\\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation} \label{eq:IBtrans}
+\mathbb{T}_{\mathbf{IB}}=
+\left[
+\begin{matrix}
+c\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\lambda s\chi c\gamma  & c\lambda s\delta s\chi -s\lambda c\chi & c\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\lambda s\chi s\gamma \\
+s\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\lambda s\chi c\gamma & s\lambda s\delta s\chi +c\lambda c\chi & s\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\lambda s\chi s\gamma \\
+c\delta c\chi c\gamma +s\delta s\gamma &  -c\delta s\chi &  c\delta c\chi s\gamma -s\delta c\gamma \\
+\end{matrix}
+\right]\\
+\end{equation}
+
+ \textbf{\textcolor{red}{Rest still has to be rewritten!!}}
+
+%\end{matrix}  \right.
+%\\
+%\begin{matrix}
+%c\lambda s\delta s\chi -s\lambda c\chi\\
+%s\lambda s\delta s\chi +c\lambda c\chi \\
+% -c\delta s\chi \\
+%\end{matrix}
+%\\
+%\left.
+%\begin{matrix}
+%c\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\lambda s\chi s\gamma\\
+%s\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\lambda s\chi s\gamma \\
+%c\delta c\chi s\gamma -s\delta c\gamma\\
+%=
+%\left[
+%\begin{matrix}
+%c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14}    \\
+%s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}    \\
+%cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}   \\
+%\end{matrix} \right.
+%\\
+%\begin{matrix}
+%c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13} \\
+%s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \\
+%-cx_{12} sx_{13} \\
+%\end{matrix}
+%\\
+%\left.
+%\begin{matrix}
+%c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \\
+%s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \\
+% cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \\
+%\end{matrix}
+%\right]\\
+
+Because the mass flow rate is constant, and not a function of the state, the first derivative of $u_{7}$ will be zero such that $u'_{7}=0$. This means that only the first derivative of the mass flow rate has to be used and thus $u_{7}$ does not require any recurrence relations. This is not the case for the thrust accelerations because they are a function of the state (in this case $x_{7}$) and will require recurrence relations. Using an intermediate notation for the thrust accelerations in the x-, y- and z-directions, the last part of \Cref{eq:accAux} can be rewritten to \Cref{eq:aTB} using \Cref{eq:BPtrans}.
+
+\begin{equation} \label{eq:aTB}
+\mathbb{T}_{\mathbf{BP}}
+\begin{pmatrix}
+\dfrac{T}{x_{7}}\\
+0\\
+0\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+\dfrac{T}{x_{7}}c\psi_{T}c\epsilon_{T}\\
+\dfrac{T}{x_{7}}s\psi_{T}c\epsilon_{T}\\
+-\dfrac{T}{x_{7}}s\epsilon_{T}\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+a_{T_{B},x}\\
+a_{T_{B},y}\\
+a_{T_{B},z}\\
+\end{pmatrix}
+\end{equation}
+
+
+The thrust accelerations are now written in the body frame, which means that they can be combined with the drag acceleration in the body frame. This is done in \Cref{eq:DandTBody}. However, since both the thrust and drag accelerations include auxiliary equations ($x_{7}$ and $x_{27}$) the total acceleration in the body frame in the different directions have to be expressed as auxiliary functions. Each auxiliary function replaces one algebraic operation such as multiplication, division, power, exponential and trigonometric functions. Auxiliary functions will be represented by $w_{n,m}$ as per convention introduced by \cite{scott2008high}. Here $n$ stands for the associating derivative and $m$ represents the number of the auxiliary function for that particular derivative. These auxiliary functions will be used to write the different parameters into recurrence relations.
+
+\begin{equation} \label{eq:DandTBody}
+\begin{pmatrix}
+-\dfrac{x_{27}}{x_{7}}\\
+0\\
+0\\
+\end{pmatrix}
++
+\begin{pmatrix}
+a_{T_{B},x}\\
+a_{T_{B},y}\\
+a_{T_{B},z}\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+a_{T_{B},x}-\dfrac{x_{27}}{x_{7}}\\
+a_{T_{B},y}\\
+a_{T_{B},z}\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+a_{T,D_{B},x}\\
+a_{T_{B},y}\\
+a_{T_{B},z}\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+w_{4,2}\\
+w_{4,33}\\
+-w_{4,34}\\
+\end{pmatrix}
+\end{equation}
+
+Now transforming the drag and thrust accelerations from the body frame to the inertial frame using $\mathbb{T}_{\mathbf{IB}}$ results in \Cref{eq:DandTInertial}.
+
+
+\begin{multline} \label{eq:DandTInertial}
+\begin{pmatrix}
+a_{T,D_{I},x}\\
+a_{T_{I},y}\\
+a_{T_{I},z}\\
+\end{pmatrix}
+=
+\mathbb{T}_{\mathbf{IB}}
+\begin{pmatrix}
+a_{T,D_{B},x}\\
+a_{T_{B},y}\\
+a_{T_{B},z}\\
+\end{pmatrix}=
+\mathbb{T}_{\mathbf{IB}}
+\begin{pmatrix}
+w_{4,2}\\
+w_{4,33}\\
+-w_{4,34}\\
+\end{pmatrix}\\
+=
+\left(
+\begin{matrix}
+w_{4,2} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)  + \dots  \\
+w_{4,2} \left( s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)  + \dots \\
+w_{4,2} \left(cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}  \right)  - \dots \\
+\end{matrix} \right.
+\\
+\begin{matrix}
+\dotsc  w_{4,33} \left( c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13}\right)  - \dots \\
+\dotsc  w_{4,33} \left( s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \right)  - \dots \\
+\dotsc  w_{4,33} cx_{12} sx_{13} - \dots \\
+\end{matrix}
+\\
+\left.
+\begin{matrix}
+\dotsc w_{4,34} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right) \\
+\dotsc w_{4,34} \left(s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right) \\
+\dotsc w_{4,34} \left( cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \right) \\
+\end{matrix}
+\right)\\
+\end{multline}
+
+Now including the gravity components as well, the (lengthy) expressions for $u_{4}$, $u_{5}$ and $u_{6}$ become \Cref{eq:u4Com,eq:u5Com,eq:u6Com} respectively.
+
+\begin{equation} \label{eq:u4Com}
+\begin{split}
+u_{4}= -\mu_{M}\dfrac{x_{1}}{x_{9}}&+w_{4,2} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)+ \dots \\
+& \dotsc  w_{4,33} \left( c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13}\right)-\dots \\
+& \dotsc w_{4,34} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right)
+\end{split}
+\end{equation}
+
+\begin{equation} \label{eq:u5Com}
+\begin{split}
+u_{5}= -\mu_{M}\dfrac{x_{2}}{x_{9}}&+w_{4,2} \left( s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)+ \dots \\
+& \dotsc w_{4,33} \left( s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \right)- \dots \\
+& \dotsc w_{4,34} \left(s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right)
+\end{split}
+\end{equation} 
+
+\begin{equation} \label{eq:u6Com}
+\begin{split}
+u_{6}= -\mu_{M}\dfrac{x_{3}}{x_{9}}&+w_{4,2} \left(cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}  \right)  - w_{4,33}cx_{12} sx_{13}  -w_{4,34} \left( cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \right)
+\end{split}
+\end{equation}
 
 \subsection{Spherical equations}
 \label{subsec:sphereq}
+
+
  
  \subsubsection{Drag acceleration}
  \label{subsubsec:tsiDrag}
@@ -581,218 +840,7 @@ u_{34,5}=0, &  \text{for }  x_{31} \geq 170.05
 
 
 
-As can be seen in \Cref{eq:unAuxEq1} $u_{4}$, $u_{5}$ and $u_{6}$ still have to be written out to include all the accelerations and the transformations. The gravitational accelerations were already written out in \Cref{eq:gravAcc}. Then using the convention established in \Cref{subsec:auxEq} the equation described in \Cref{eq:acc} can be rewritten to the form presented in \Cref{eq:accAux} where the transformation matrices are described by \Cref{eq:BPtrans,eq:IBtrans} for $\mathbb{T}_{\mathbf{BP}}$ and $\mathbb{T}_{\mathbf{IB}}$ respectively.
 
-\begin{equation} \label{eq:accAux}
-\begin{pmatrix}
-u_{4}\\
-u_{5}\\
-u_{6}\\
-\end{pmatrix}
-=
-\begin{pmatrix}
--\mu_{M}\dfrac{x_{1}}{x_{9}}\\
--\mu_{M}\dfrac{x_{2}}{x_{9}}\\
--\mu_{M}\dfrac{x_{3}}{x_{9}}\\
-\end{pmatrix}+
-\mathbb{T}_{\mathbf{IB}}\left[
-\begin{pmatrix}
--\dfrac{x_{27}}{x_{7}}\\
-0\\
-0\\
-\end{pmatrix}
-+ 
-\mathbb{T}_{\mathbf{BP}}
-\begin{pmatrix}
-\dfrac{T}{x_{7}}\\
-0\\
-0\\
-\end{pmatrix}
-\right]
-\end{equation}
-
-
-\begin{equation} \label{eq:BPtrans}
-\mathbb{T}_{\mathbf{BP}}=
-\begin{bmatrix}
-c\psi_{T}c\epsilon_{T} & -s\psi_{T} & c\psi_{T}s\epsilon_{T}\\
-s\psi_{T}c\epsilon_{T} & c\psi_{T} & s\psi_{T}s\epsilon_{T}\\
--s\epsilon_{T} & 0 & c\epsilon_{T}\\
-\end{bmatrix}
-\end{equation}
-
-\begin{multline} \label{eq:IBtrans}
-\mathbb{T}_{\mathbf{IB}}=
-\left[
-\begin{matrix}
-c\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\lambda s\chi c\gamma    \\
-s\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\lambda s\chi c\gamma   \\
-c\delta c\chi c\gamma +s\delta s\gamma    \\
-\end{matrix}  \right.
-\\
-\begin{matrix}
-c\lambda s\delta s\chi -s\lambda c\chi\\
-s\lambda s\delta s\chi +c\lambda c\chi \\
- -c\delta s\chi \\
-\end{matrix}
-\\
-\left.
-\begin{matrix}
-c\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\lambda s\chi s\gamma\\
-s\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\lambda s\chi s\gamma \\
-c\delta c\chi s\gamma -s\delta c\gamma\\
-\end{matrix}
-\right]\\
-=
-\left[
-\begin{matrix}
-c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14}    \\
-s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}    \\
-cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}   \\
-\end{matrix} \right.
-\\
-\begin{matrix}
-c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13} \\
-s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \\
--cx_{12} sx_{13} \\
-\end{matrix}
-\\
-\left.
-\begin{matrix}
-c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \\
-s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \\
- cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \\
-\end{matrix}
-\right]\\
-\end{multline}
-
-
-Because the mass flow rate is constant, and not a function of the state, the first derivative of $u_{7}$ will be zero such that $u'_{7}=0$. This means that only the first derivative of the mass flow rate has to be used and thus $u_{7}$ does not require any recurrence relations. This is not the case for the thrust accelerations because they are a function of the state (in this case $x_{7}$) and will require recurrence relations. Using an intermediate notation for the thrust accelerations in the x-, y- and z-directions, the last part of \Cref{eq:accAux} can be rewritten to \Cref{eq:aTB} using \Cref{eq:BPtrans}.
-
-\begin{equation} \label{eq:aTB}
-\mathbb{T}_{\mathbf{BP}}
-\begin{pmatrix}
-\dfrac{T}{x_{7}}\\
-0\\
-0\\
-\end{pmatrix}
-=
-\begin{pmatrix}
-\dfrac{T}{x_{7}}c\psi_{T}c\epsilon_{T}\\
-\dfrac{T}{x_{7}}s\psi_{T}c\epsilon_{T}\\
--\dfrac{T}{x_{7}}s\epsilon_{T}\\
-\end{pmatrix}
-=
-\begin{pmatrix}
-a_{T_{B},x}\\
-a_{T_{B},y}\\
-a_{T_{B},z}\\
-\end{pmatrix}
-\end{equation}
-
-
-The thrust accelerations are now written in the body frame, which means that they can be combined with the drag acceleration in the body frame. This is done in \Cref{eq:DandTBody}. However, since both the thrust and drag accelerations include auxiliary equations ($x_{7}$ and $x_{27}$) the total acceleration in the body frame in the different directions have to be expressed as auxiliary functions. Each auxiliary function replaces one algebraic operation such as multiplication, division, power, exponential and trigonometric functions. Auxiliary functions will be represented by $w_{n,m}$ as per convention introduced by \cite{scott2008high}. Here $n$ stands for the associating derivative and $m$ represents the number of the auxiliary function for that particular derivative. These auxiliary functions will be used to write the different parameters into recurrence relations.
-
-\begin{equation} \label{eq:DandTBody}
-\begin{pmatrix}
--\dfrac{x_{27}}{x_{7}}\\
-0\\
-0\\
-\end{pmatrix}
-+
-\begin{pmatrix}
-a_{T_{B},x}\\
-a_{T_{B},y}\\
-a_{T_{B},z}\\
-\end{pmatrix}
-=
-\begin{pmatrix}
-a_{T_{B},x}-\dfrac{x_{27}}{x_{7}}\\
-a_{T_{B},y}\\
-a_{T_{B},z}\\
-\end{pmatrix}
-=
-\begin{pmatrix}
-a_{T,D_{B},x}\\
-a_{T_{B},y}\\
-a_{T_{B},z}\\
-\end{pmatrix}
-=
-\begin{pmatrix}
-w_{4,2}\\
-w_{4,33}\\
--w_{4,34}\\
-\end{pmatrix}
-\end{equation}
-
-Now transforming the drag and thrust accelerations from the body frame to the inertial frame using $\mathbb{T}_{\mathbf{IB}}$ results in \Cref{eq:DandTInertial}.
-
-
-\begin{multline} \label{eq:DandTInertial}
-\begin{pmatrix}
-a_{T,D_{I},x}\\
-a_{T_{I},y}\\
-a_{T_{I},z}\\
-\end{pmatrix}
-=
-\mathbb{T}_{\mathbf{IB}}
-\begin{pmatrix}
-a_{T,D_{B},x}\\
-a_{T_{B},y}\\
-a_{T_{B},z}\\
-\end{pmatrix}=
-\mathbb{T}_{\mathbf{IB}}
-\begin{pmatrix}
-w_{4,2}\\
-w_{4,33}\\
--w_{4,34}\\
-\end{pmatrix}\\
-=
-\left(
-\begin{matrix}
-w_{4,2} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)  + \dots  \\
-w_{4,2} \left( s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)  + \dots \\
-w_{4,2} \left(cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}  \right)  - \dots \\
-\end{matrix} \right.
-\\
-\begin{matrix}
-\dotsc  w_{4,33} \left( c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13}\right)  - \dots \\
-\dotsc  w_{4,33} \left( s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \right)  - \dots \\
-\dotsc  w_{4,33} cx_{12} sx_{13} - \dots \\
-\end{matrix}
-\\
-\left.
-\begin{matrix}
-\dotsc w_{4,34} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right) \\
-\dotsc w_{4,34} \left(s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right) \\
-\dotsc w_{4,34} \left( cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \right) \\
-\end{matrix}
-\right)\\
-\end{multline}
-
-Now including the gravity components as well, the (lengthy) expressions for $u_{4}$, $u_{5}$ and $u_{6}$ become \Cref{eq:u4Com,eq:u5Com,eq:u6Com} respectively.
-
-\begin{equation} \label{eq:u4Com}
-\begin{split}
-u_{4}= -\mu_{M}\dfrac{x_{1}}{x_{9}}&+w_{4,2} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)+ \dots \\
-& \dotsc  w_{4,33} \left( c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13}\right)-\dots \\
-& \dotsc w_{4,34} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right)
-\end{split}
-\end{equation}
-
-\begin{equation} \label{eq:u5Com}
-\begin{split}
-u_{5}= -\mu_{M}\dfrac{x_{2}}{x_{9}}&+w_{4,2} \left( s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)+ \dots \\
-& \dotsc w_{4,33} \left( s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \right)- \dots \\
-& \dotsc w_{4,34} \left(s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right)
-\end{split}
-\end{equation} 
-
-\begin{equation} \label{eq:u6Com}
-\begin{split}
-u_{6}= -\mu_{M}\dfrac{x_{3}}{x_{9}}&+w_{4,2} \left(cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}  \right)  - w_{4,33}cx_{12} sx_{13}  -w_{4,34} \left( cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \right)
-\end{split}
-\end{equation}
 
  
 %
