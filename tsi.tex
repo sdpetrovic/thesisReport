@@ -12,9 +12,9 @@
 
 \section{Associated equations}
 \label{sec:assEq}
-In order for \ac{TSI} to be implemented, the state derivatives have to be modelled as a set of continuous functions which are a function of the state only. This can be done in different ways. In this case, three cases were tested: two Cartesian cases and one spherical case. For the Cartesian cases, the initial conditions first have to be transformed into Cartesian coordinates. The Cartesian equations themselves require reference frame transformations, which can be written in two different ways. Both cases are described in \Cref{subsec:careq}. The reason for testing the spherical case is that the initial conditions are provided in spherical coordinates and the intermediate computations can be easily interpreted and checked for errors. However, the equations are highly sensitive to singularities. The spherical equations are described in \Cref{subsec:sphereq} and already include reference frame transformations. 
+In order for \ac{TSI} to be implemented, the state derivatives have to be modelled as a set of continuous functions which are a function of the state only. This can be done in different ways. In this case, three cases were tested: two Cartesian cases and one spherical case. For the Cartesian cases, the initial conditions first have to be transformed into Cartesian coordinates. The Cartesian equations themselves require reference frame transformations, which can be written in two different ways. The first case in described in in \Cref{subsec:careq} and the second in \Cref{subsec:careq2}. The reason for testing the spherical case is that the initial conditions are provided in spherical coordinates and the intermediate computations can be easily interpreted and checked for errors. However, the equations are highly sensitive to singularities. The spherical equations are described in \Cref{subsec:sphereq} and already include reference frame transformations. 
 
-\subsection{Cartesian equations}
+\subsection{Cartesian equations, first case}
 \label{subsec:careq}
 The Cartesian state is described in \Cref{eq:state}, where $m_{MAV}$ is the mass of the \ac{MAV} and the subscript $I$ refers to the inertial frame.
 
@@ -121,7 +121,11 @@ x'_{6}&=\dot{V}_{z}=a_{z}=a_{g,z}+a_{D,z}+a_{T,z}
 x'_{7}=\dot{m}_{MAV}=-\dfrac{T}{g_{0}I_{sp}}
 \end{align}
 
-In this case the thrust and specific impulse are constant, which means that $x'_{7}$ is constant and any additional derivative will be zero. Also, neither one of the thrust angles is a function of the state, which means that $a_{T}$, in the body frame, is only a function of $x_{7}$ (also see \Cref{eq:acc}). However, both $a_{g}$ and $a_{D}$ are a function of the position and velocity, where $a_{D}$ is also a function of the \ac{MAV} mass. Only $a_{g}$ is rewritten using auxiliary equations as mentioned before. This is shown in \Cref{subsubsec:tsiGravity}.
+In this case the thrust and specific impulse are constant, which means that $x'_{7}$ is constant and any additional derivative will be zero. Also, neither one of the thrust angles is a function of the state, which means that $a_{T}$, in the body frame, is only a function of $x_{7}$ (also see \Cref{eq:acc}). However, both $a_{g}$ and $a_{D}$ are a function of the position and velocity, where $a_{D}$ is also a function of the \ac{MAV} mass. Only $a_{g}$ is rewritten using auxiliary equations as mentioned before. 
+
+
+
+%This is shown in \Cref{subsubsec:tsiGravity}.
 
 
 %For the numbering of all the auxiliary equations goes that the order comes from the manner in which they were all written out on paper. This means that sometimes higher number parameters could contain much lower number parameters without the intermediate parameters defined yet. However, these will all be defined eventually.
@@ -447,7 +451,7 @@ w_{27,19} &= D = \frac{1}{2} S w_{27,18}w_{27,12} \\
 
 
 \subsubsection{Thrust acceleration}
-\label{subsubsec:tsiDrag}
+\label{subsubsec:tsiThrust}
 The only acceleration component still missing is the thrust acceleration. To be able to write the auxiliary functions for the thrust, \Cref{eq:acc} first has to be rewritten such that all the transformations are gathered into two transformation matrices (see \Cref{eq:accAux}). The transformation matrices are described by \Cref{eq:BPtrans,eq:IBtrans} for $\mathbb{T}_{\mathbf{BP}}$ and $\mathbb{T}_{\mathbf{IB}}$ respectively.
 
 \begin{equation} \label{eq:accAux}
@@ -499,7 +503,7 @@ c\delta c\chi c\gamma +s\delta s\gamma &  -c\delta s\chi &  c\delta c\chi s\gamm
 \right]\\
 \end{equation}
 
- \textbf{\textcolor{red}{Rest still has to be rewritten!!}}
+
 
 %\end{matrix}  \right.
 %\\
@@ -536,7 +540,7 @@ c\delta c\chi c\gamma +s\delta s\gamma &  -c\delta s\chi &  c\delta c\chi s\gamm
 %\end{matrix}
 %\right]\\
 
-Because the mass flow rate is constant, and not a function of the state, the first derivative of $u_{7}$ will be zero such that $u'_{7}=0$. This means that only the first derivative of the mass flow rate has to be used and thus $u_{7}$ does not require any recurrence relations. This is not the case for the thrust accelerations because they are a function of the state (in this case $x_{7}$) and will require recurrence relations. Using an intermediate notation for the thrust accelerations in the x-, y- and z-directions, the last part of \Cref{eq:accAux} can be rewritten to \Cref{eq:aTB} using \Cref{eq:BPtrans}.
+The thrust accelerations in the x-, y- and z-directions (in the body frame) can now be found by rewriting the last part of \Cref{eq:accAux} to \Cref{eq:aTB} using \Cref{eq:BPtrans}.
 
 \begin{equation} \label{eq:aTB}
 \mathbb{T}_{\mathbf{BP}}
@@ -551,16 +555,40 @@ Because the mass flow rate is constant, and not a function of the state, the fir
 \dfrac{T}{x_{7}}s\psi_{T}c\epsilon_{T}\\
 -\dfrac{T}{x_{7}}s\epsilon_{T}\\
 \end{pmatrix}
-=
-\begin{pmatrix}
-a_{T_{B},x}\\
-a_{T_{B},y}\\
-a_{T_{B},z}\\
-\end{pmatrix}
 \end{equation}
 
+%=
+%\begin{pmatrix}
+%a_{T_{B},x}\\
+%a_{T_{B},y}\\
+%a_{T_{B},z}\\
+%\end{pmatrix}
 
-The thrust accelerations are now written in the body frame, which means that they can be combined with the drag acceleration in the body frame. This is done in \Cref{eq:DandTBody}. However, since both the thrust and drag accelerations include auxiliary equations ($x_{7}$ and $x_{27}$) the total acceleration in the body frame in the different directions have to be expressed as auxiliary functions. Each auxiliary function replaces one algebraic operation such as multiplication, division, power, exponential and trigonometric functions. Auxiliary functions will be represented by $w_{n,m}$ as per convention introduced by \cite{scott2008high}. Here $n$ stands for the associating derivative and $m$ represents the number of the auxiliary function for that particular derivative. These auxiliary functions will be used to write the different parameters into recurrence relations.
+\Cref{eq:aTB} can be expressed as a collection of auxiliary functions as well. These are described in \Cref{eq:aTBAuxF}.
+
+\begin{align} \label{eq:aTBAuxF}
+\begin{split}
+w_{4,26} &= \cos \psi_{T} \\
+w_{4,27} &= \cos \epsilon_{T} \\
+w_{4,28} &= \sin \psi_{T} \\
+w_{4,29} &= \sin \epsilon_{T} \\
+w_{4,30} &= c\psi_{T} c\epsilon_{T} = w_{4,26}w_{4,27} \\
+w_{4,31} &= c\epsilon_{T} s\psi_{T} = w_{4,27}w_{4,28} \\
+w_{4,32} &= \dfrac{1}{x_{7}}\\
+\end{split}
+&
+\begin{split}
+w_{4,33} &= \dfrac{T}{x_{7}} = T w_{4,32}\\
+w_{4,34} &= \dfrac{T}{x_{7}} c\epsilon_{T} c\psi_{T} = w_{4,33}w_{4,30} \\
+w_{4,37} &= \dfrac{T}{x_{7}}c\epsilon_{T} s\psi_{T} = w_{4,33}w_{4,31} \\
+w_{4,38} &= \dfrac{T}{x_{7}} s\epsilon_{T} = w_{4,33}w_{4,29} \\
+\end{split}
+\end{align}
+
+
+The thrust accelerations are now written in the body frame, which means that they can be combined with the drag acceleration in the body frame. This is done in \Cref{eq:DandTBody}. Here, $w_{4,35}$ represents the drag acceleration in the body frame and $w_{4,36}$ is the total acceleration in the x-direction in the body frame caused by both the drag and the thrust.
+
+%However, since both the thrust and drag accelerations include auxiliary equations ($x_{7}$ and $x_{27}$) the total acceleration in the body frame in the different directions have to be expressed as auxiliary functions. Each auxiliary function replaces one algebraic operation such as multiplication, division, power, exponential and trigonometric functions. Auxiliary functions will be represented by $w_{n,m}$ as per convention introduced by \cite{scott2008high}. Here $n$ stands for the associating derivative and $m$ represents the number of the auxiliary function for that particular derivative. These auxiliary functions will be used to write the different parameters into recurrence relations.
 
 \begin{equation} \label{eq:DandTBody}
 \begin{pmatrix}
@@ -570,98 +598,359 @@ The thrust accelerations are now written in the body frame, which means that the
 \end{pmatrix}
 +
 \begin{pmatrix}
-a_{T_{B},x}\\
-a_{T_{B},y}\\
-a_{T_{B},z}\\
+w_{4,34}\\
+w_{4,37}\\
+-w_{4,38}\\
 \end{pmatrix}
 =
 \begin{pmatrix}
-a_{T_{B},x}-\dfrac{x_{27}}{x_{7}}\\
-a_{T_{B},y}\\
-a_{T_{B},z}\\
+w_{4,34}-\dfrac{x_{27}}{x_{7}}\\
+w_{4,37}\\
+-w_{4,38}\\
 \end{pmatrix}
 =
 \begin{pmatrix}
-a_{T,D_{B},x}\\
-a_{T_{B},y}\\
-a_{T_{B},z}\\
-\end{pmatrix}
-=
-\begin{pmatrix}
-w_{4,2}\\
-w_{4,33}\\
--w_{4,34}\\
+w_{4,36}\\
+w_{4,37}\\
+-w_{4,38}\\
 \end{pmatrix}
 \end{equation}
 
-Now transforming the drag and thrust accelerations from the body frame to the inertial frame using $\mathbb{T}_{\mathbf{IB}}$ results in \Cref{eq:DandTInertial}.
+\subsubsection{All accelerations combined}
+\label{subsubsec:allAcc}
+At this point the gravity accelerations are known in the inertial frame and the drag and thrust accelerations in the body frame. In order to get the final acceleration vector in the inertial frame, the drag and thrust accelerations have to be transformed from the body frame to the inertial frame using $\mathbb{T}_{\mathbf{IB}}$ resulting in \Cref{eq:DandTInertial}.
 
 
-\begin{multline} \label{eq:DandTInertial}
+
+\begin{equation} \label{eq:DandTInertial}
+\mathbb{T}_{\mathbf{IB}}
 \begin{pmatrix}
-a_{T,D_{I},x}\\
-a_{T_{I},y}\\
-a_{T_{I},z}\\
+w_{4,36}\\
+w_{4,37}\\
+-w_{4,38}\\
 \end{pmatrix}
-=
-\mathbb{T}_{\mathbf{IB}}
-\begin{pmatrix}
-a_{T,D_{B},x}\\
-a_{T_{B},y}\\
-a_{T_{B},z}\\
-\end{pmatrix}=
-\mathbb{T}_{\mathbf{IB}}
-\begin{pmatrix}
-w_{4,2}\\
-w_{4,33}\\
--w_{4,34}\\
-\end{pmatrix}\\
 =
 \left(
 \begin{matrix}
-w_{4,2} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)  + \dots  \\
-w_{4,2} \left( s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)  + \dots \\
-w_{4,2} \left(cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}  \right)  - \dots \\
-\end{matrix} \right.
-\\
-\begin{matrix}
-\dotsc  w_{4,33} \left( c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13}\right)  - \dots \\
-\dotsc  w_{4,33} \left( s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \right)  - \dots \\
-\dotsc  w_{4,33} cx_{12} sx_{13} - \dots \\
-\end{matrix}
-\\
-\left.
-\begin{matrix}
-\dotsc w_{4,34} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right) \\
-\dotsc w_{4,34} \left(s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right) \\
-\dotsc w_{4,34} \left( cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \right) \\
+w_{4,36}\left( c\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\lambda s\chi c\gamma \right)  +w_{4,37} \left( c\lambda s\delta s\chi -s\lambda c\chi\right)  -w_{4,38} \left( c\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\lambda s\chi s\gamma \right) \\
+w_{4,36} \left( s\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\lambda s\chi c\gamma \right) +w_{4,37} \left( s\lambda s\delta s\chi +c\lambda c\chi \right)  -w_{4,38} \left( s\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\lambda s\chi s\gamma \right) \\
+w_{4,36} \left( c\delta c\chi c\gamma +s\delta s\gamma\right) + w_{4,37} \left(  -c\delta s\chi \right) -w_{4,38} \left(  c\delta c\chi s\gamma -s\delta c\gamma \right) \\
 \end{matrix}
 \right)\\
-\end{multline}
+\end{equation}
 
-Now including the gravity components as well, the (lengthy) expressions for $u_{4}$, $u_{5}$ and $u_{6}$ become \Cref{eq:u4Com,eq:u5Com,eq:u6Com} respectively.
+%\begin{pmatrix}
+%a_{T,D_{I},x}\\
+%a_{T_{I},y}\\
+%a_{T_{I},z}\\
+%\end{pmatrix}
+%=
+%\mathbb{T}_{\mathbf{IB}}
+%\begin{pmatrix}
+%a_{T,D_{B},x}\\
+%a_{T_{B},y}\\
+%a_{T_{B},z}\\
+%\end{pmatrix}=
+%\left(
+%\begin{matrix}
+%w_{4,2} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)  + \dots  \\
+%w_{4,2} \left( s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)  + \dots \\
+%w_{4,2} \left(cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}  \right)  - \dots \\
+%\end{matrix} \right.
+%\\
+%\begin{matrix}
+%\dotsc  w_{4,33} \left( c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13}\right)  - \dots \\
+%\dotsc  w_{4,33} \left( s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \right)  - \dots \\
+%\dotsc  w_{4,33} cx_{12} sx_{13} - \dots \\
+%\end{matrix}
+%\\
+%\left.
+%\begin{matrix}
+%\dotsc w_{4,34} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right) \\
+%\dotsc w_{4,34} \left(s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right) \\
+%\dotsc w_{4,34} \left( cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \right) \\
+%\end{matrix}
+%\right)\\
+
+Now including the gravity components as well, the (lengthy) expressions for $x'_{4}$, $x'_{5}$ and $x'_{6}$ become \Cref{eq:u4Com,eq:u5Com,eq:u6Com} respectively.
 
 \begin{equation} \label{eq:u4Com}
 \begin{split}
-u_{4}= -\mu_{M}\dfrac{x_{1}}{x_{9}}&+w_{4,2} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)+ \dots \\
-& \dotsc  w_{4,33} \left( c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13}\right)-\dots \\
-& \dotsc w_{4,34} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right)
+x'_{4}= -\mu_{M}\dfrac{x_{1}}{x_{9}}&+w_{4,36}\left( c\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\lambda s\chi c\gamma \right)+ \dots \\
+& \dotsc  w_{4,37} \left( c\lambda s\delta s\chi -s\lambda c\chi\right)-\dots \\
+& \dotsc w_{4,38} \left( c\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\lambda s\chi s\gamma \right)
 \end{split}
 \end{equation}
 
 \begin{equation} \label{eq:u5Com}
 \begin{split}
-u_{5}= -\mu_{M}\dfrac{x_{2}}{x_{9}}&+w_{4,2} \left( s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)+ \dots \\
-& \dotsc w_{4,33} \left( s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \right)- \dots \\
-& \dotsc w_{4,34} \left(s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right)
+x'_{5}= -\mu_{M}\dfrac{x_{2}}{x_{9}}&+w_{4,36} \left( s\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\lambda s\chi c\gamma \right)+ \dots \\
+& \dotsc w_{4,37} \left( s\lambda s\delta s\chi +c\lambda c\chi \right) - \dots \\
+& \dotsc w_{4,38} \left( s\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\lambda s\chi s\gamma \right)
 \end{split}
 \end{equation} 
 
 \begin{equation} \label{eq:u6Com}
 \begin{split}
-u_{6}= -\mu_{M}\dfrac{x_{3}}{x_{9}}&+w_{4,2} \left(cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}  \right)  - w_{4,33}cx_{12} sx_{13}  -w_{4,34} \left( cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \right)
+x'_{6}= -\mu_{M}\dfrac{x_{3}}{x_{9}}&+w_{4,36} \left( c\delta c\chi c\gamma +s\delta s\gamma\right) +  w_{4,37} \left(  -c\delta s\chi \right)  -w_{4,38} \left(  c\delta c\chi s\gamma -s\delta c\gamma \right)
 \end{split}
 \end{equation}
+
+%\begin{equation} \label{eq:u4Com}
+%\begin{split}
+%x'_{4}= -\mu_{M}\dfrac{x_{1}}{x_{9}}&+w_{4,2} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)+ \dots \\
+%& \dotsc  w_{4,33} \left( c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13}\right)-\dots \\
+%& \dotsc w_{4,34} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right)
+%\end{split}
+%\end{equation}
+%
+%\begin{equation} \label{eq:u5Com}
+%\begin{split}
+%x'_{5}= -\mu_{M}\dfrac{x_{2}}{x_{9}}&+w_{4,2} \left( s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)+ \dots \\
+%& \dotsc w_{4,33} \left( s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \right)- \dots \\
+%& \dotsc w_{4,34} \left(s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right)
+%\end{split}
+%\end{equation} 
+%
+%\begin{equation} \label{eq:u6Com}
+%\begin{split}
+%x'_{6}= -\mu_{M}\dfrac{x_{3}}{x_{9}}&+w_{4,2} \left(cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}  \right)  - w_{4,33}cx_{12} sx_{13}  -w_{4,34} \left( cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \right)
+%\end{split}
+%\end{equation}
+
+These equations now have to be written as a collection of auxiliary functions for the x-, y- and z-direction in the inertial frame. The gravitational acceleration can be written as the vector shown by \Cref{eq:gravAuxF}.
+
+\begin{equation} \label{eq:gravAuxF}
+\mathbf{a_{g}} =
+\begin{pmatrix}
+-\mu_{M}\dfrac{x_{1}}{x_{9}} \\
+-\mu_{M}\dfrac{x_{2}}{x_{9}} \\
+-\mu_{M}\dfrac{x_{3}}{x_{9}} \\
+\end{pmatrix}
+= 
+\begin{pmatrix}
+w_{4,39} \\
+w_{5,1} \\
+w_{6,1} \\
+\end{pmatrix}
+\end{equation}
+
+The auxiliary derivatives ($u = x'$) can now be defined as the collection of auxiliary functions that describe the different transformations for $u_{4}, u_{5} and u_{6}$. These are shown in \Cref{eq:u4AuxF,eq:u5AuxF,eq:u6AuxF} respectively. 
+
+\begin{align} \label{eq:u4AuxF}
+\begin{split}
+w_{4,40} &= -s\delta c\chi_{G} = -w_{4,7}w_{4,23} \\
+w_{4,41} &= c\delta	s\gamma_{G} = w_{4,8}w_{4,24}\\
+w_{4,42} &= -s\lambda s\chi_{G} = -w_{4,5}w_{4,22}\\
+w_{4,43} &= -s\lambda c\chi_{G} = -w_{4,5}w_{4,23} \\
+w_{4,44} &= -c\delta c\gamma_{G} = -w_{4,8}w_{4,25} \\
+w_{4,45} &= w_{4,40} c\gamma_{G} = w_{4,40}w_{4,25} \\
+\end{split}
+&
+\begin{split}
+w_{4,46} &= w_{4,42} c\gamma_{G} = w_{4,42}w_{4,25} \\
+w_{4,47} &= -w_{4,13} s\chi_{G} = -w_{4,13}w_{4,22} \\
+w_{4,48} &= w_{4,40} s\gamma_{G} = w_{4,40}w_{4,24} \\
+w_{4,49} &= w_{4,42} s\gamma_{G} = w_{4,42}w_{4,24} \\
+w_{4,50} &= c\lambda \left(w_{4,45}+w_{4,41} \right) + w_{4,46} = 
+w_{4,6}\left(w_{4,45}+w_{4,41} \right) + w_{4,46} \\
+w_{4,51} &= c\lambda \left(w_{4,48}+w_{4,44} \right) + w_{4,49} =
+w_{4,6}\left(w_{4,48}+w_{4,44} \right) + w_{4,49} \\
+w_{4,52} &= w_{4,39} +w_{4,36}w_{4,50}+w_{4,37}\left(w_{4,47}+w_{4,43}\right)-w_{4,38}w_{4,51} \\
+u_{4} &= w_{4,52} \\
+\end{split}
+\end{align}
+
+\begin{align} \label{eq:u5AuxF}
+\begin{split}
+w_{5,2} &= c\lambda s\chi_{G} = w_{4,6}w_{4,22} \\
+w_{5,3} &= s\lambda \left(w_{4,45}+w_{4,41}\right)+w_{5,2} c\gamma_{G} = w_{4,5} \left(w_{4,45}+w_{4,41}\right) +w_{5,2} w_{4,25} \\
+w_{5,4} &= -w_{4,14} s\chi_{G}+c\lambda c\chi_{G} = -w_{4,14}w_{4,22}+w_{4,6}w_{4,23} \\
+w_{5,5} &= s\lambda \left(w_{4,48}+w_{4,44}\right) + w_{5,2} s\gamma_{G} = w_{4,5} \left(w_{4,48}+w_{4,44}\right)+w_{5,2}w_{4,24} \\
+w_{5,6} &= w_{5,1} + w_{4,36}w_{5,3}+w_{4,37}w_{5,4}-w_{4,38}w_{5,5} \\
+u_{5} &= w_{5,6} \\
+\end{split}
+\end{align}
+
+\begin{align} \label{eq:u6AuxF}
+\begin{split}
+w_{6,2} &= s\delta s\gamma_{G} = w_{4,7}w_{4,24} \\
+w_{6,3} &= c\delta s\chi_{G} = w_{4,8}w_{4,22} \\
+w_{6,4} &= -s\delta c\gamma_{G} = -w_{4,7}w_{4,25} \\
+\end{split}
+&
+\begin{split}
+w_{6,5} &= -w_{4,44} c\chi_{G} +w_{6,2} = -w_{4,44}w_{4,23}+w_{6,2} \\
+w_{6,6} &= w_{4,41} c\chi_{G} + w_{6,4} = w_{4,41}w_{4,23}+w_{6,4} \\
+w_{6,7} &= w_{6,1} + w_{4,36}w_{6,5}-w_{4,37}w_{6,3}-w_{4,38}w_{6,6} \\
+u_{6} &= w_{6,7} \\
+\end{split}
+\end{align}
+
+Also, because auxiliary equations were used for the gravitational acceleration. The corresponding auxiliary derivatives can be written as a collection of auxiliary functions as shown in \Cref{eq:u8u9AuxF}.
+
+\begin{align} \label{eq:u8u9AuxF}
+\begin{split}
+w_{8,1} &= x_{1}x_{4} \\
+w_{8,2} &= x_{2}x_{5} \\
+w_{8,3} &= x_{3}x_{6} \\
+u_{8} &= 2\left(w_{8,1}+w_{8,2}+w_{8,3}\right) \\ 
+\end{split}
+&
+\begin{split}
+w_{9,0} &= x_{9}u_{8} \\
+w_{9,1} &= \dfrac{w_{9,0}}{x_{8}} \\
+u_{9} &= 1.5 w_{9,1} \\
+\end{split}
+\end{align}
+
+Then the equations in \Cref{eq:restAuxD} complete the whole set of auxiliary derivatives.
+
+\begin{align} \label{eq:restAuxD}
+\begin{split}
+u_{1} &= x_{4} \\
+u_{2} &= x_{5} \\
+\end{split}
+&
+\begin{split}
+u_{3} &= x_{6} \\
+u_{7} &= -\dfrac{T}{g_{0}I_{sp}} \\
+\end{split}
+\end{align}
+
+ \textbf{\textcolor{red}{Rest still has to be rewritten!!}}
+ 
+\subsection{Cartesian equations, second case}
+\label{subsec:careq2}
+The second case (based on a method described by \citep{bergsma2015application}) is similar to the first case in terms of set-up of the dynamic equations, the gravitational acceleration, and the drag and thrust accelerations in the body frame. The only difference lies in the formulation of $\mathbb{T}_{\mathbf{IB}}$. Instead of using Euler angles and rotation transformation matrices, $\mathbb{T}_{\mathbf{IB}}$ can be set-up as one single matrix performing a direct transformation. This matrix is described in \Cref{eq:transMatCoef}, where $C$ stands for transformation matrix coefficient. 
+
+\begin{equation} \label{eq:transMatCoef}
+\mathbb{T}_{\mathbf{IB}} = 
+\begin{pmatrix}
+C_{1} & C_{4} & C_{7} \\
+C_{2} & C_{5} & C_{8} \\
+C_{3} & C_{6} & C_{9} \\
+\end{pmatrix}
+\end{equation}
+
+As was seen in \Cref{subsubsec:tsiTransAngl} the rotation from the vertical to the inertial frame is purely a function of the radius in the inertial frame ($\mathbf{r}$ or $\mathbf{r_{I}}$) Also, the transformation from the body frame to the vertical frame was purely a function of the ground velocity in the vertical frame ($\mathbf{V_{V}}$ or $\mathbf{V_{G_{V}}}$). Therefore, if this transformation is to be done in one transformation, the ground velocity in the inertial frame is required ($\mathbf{V_{G_{I}}}$), because it would transform directly to the inertial frame. This means that the coefficients in \Cref{eq:transMatCoef} will have to be a function of $\mathbf{r_{I}}$ and $\mathbf{V_{G_{I}}}$, where $\mathbf{V_{G_{I}}}$ is given by \Cref{eq:VGI}.
+
+\begin{equation} \label{eq:VGI}
+\mathbf{V_{G_{I}}} = 
+\begin{pmatrix}
+V_{x}\\
+V_{y}\\
+V_{z}\\
+\end{pmatrix}
+-
+\begin{pmatrix}
+0 \\
+0 \\
+\Omega_{M} \\
+\end{pmatrix}
+\times
+\begin{pmatrix}
+x \\
+y \\
+z \\
+\end{pmatrix}=
+\begin{pmatrix}
+V_{x}+\Omega_{M}y \\
+V_{y}-\Omega_{M}x \\
+V_{z} \\
+\end{pmatrix}
+\end{equation}
+
+\subsubsection{Body frame unit vectors}
+So when looking from the inertial frame, there are two state vectors: position and ground velocity. The state changes part due to the accelerations in the body frame $\mathbf{a_{B}}$, which is a vector comprised of the drag and thrust accelerations. This vector has the same length and direction in the body frame and the inertial frame. Also, any vector is simply a multiplication of the corresponding unit vector. The same holds for the velocity, which means that because the velocity in the body frame is defined through the x-axis of that frame, the unit vector of the ground velocity can be described as the unit vector in the x-direction $\mathbf{\hat{i}}$ as shown by \Cref{eq:iHat}.
+
+\begin{equation} \label{eq:iHat}
+\mathbf{\hat{i}} = \dfrac{\mathbf{V_{G_{I}}}}{\| \mathbf{V_{G_{I}}}\|}
+\end{equation}
+
+This unit vector is also shown in \Cref{fig:cartesian_transformation_mooij1994motion}.
+
+ \begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/reference_frames/cartesian_transformation_mooij1994motion.jpg}
+\caption{Definition of the body frame unit vectors based on the radius and ground velocity expressed in the inertial frame.}
+\label{fig:cartesian_transformation_mooij1994motion}
+\end{figure}
+
+In \Cref{fig:cartesian_transformation_mooij1994motion} it can be seen that the z-axis unit vector $\mathbf{\hat{k}}$ is defined in the same plane as $\mathbf{\hat{i}}$, $\mathbf{V_{G_{I}}}$ and $\mathbf{r_{I}}$ perpendicular to $\mathbf{\hat{i}}$. As a matter of fact, if the flight path angle is zero degrees, $\mathbf{\hat{k}}$ points in the same direction as the radius vector. In that case, the y-axis unit vector $\mathbf{\hat{j}}$ completes the unit frame. Since $\mathbf{\hat{j}}$ is perpendicular to the $\mathbf{\hat{i}}$-$\mathbf{\hat{k}}$ plane, it is also perpendicular to $\mathbf{V_{G_{I}}}$ and $\mathbf{r_{I}}$. Now because the radius vector is pointing through the centre of the body away from the centre of the inertial frame, the \ac{RHR} gives \Cref{eq:jHat}.
+
+
+\begin{equation} \label{eq:jHat}
+\mathbf{\hat{j}} = \dfrac{\mathbf{r_{I} \times \mathbf{V_{G_{I}}}}}{\| \mathbf{r_{I} \times \mathbf{V_{G_{I}}}} \|}
+\end{equation}
+
+Now $\mathbf{\hat{k}}$ can be computed by applying the \ac{RHR} to $\mathbf{\hat{i}}$ and $\mathbf{\hat{j}}$. This results in \Cref{eq:kHat}.
+
+\begin{equation} \label{eq:kHat}
+\mathbf{\hat{k}} = \mathbf{\hat{i}} \times \mathbf{\hat{j}}
+\end{equation}
+
+This leaves us with the unit vectors in the body frame defined as a function of the state in the inertial frame. 
+
+\subsubsection{Defining the transformation matrix coefficients}
+\label{subsubsec:filTransMat}
+Now, if the acceleration in the x-direction in the body frame is multiplied with $\mathbf{\hat{i}}$ this $a_{x_{B}}$ is redefined in the inertial frame by providing a contribution in the x-, y- and z-direction. A similar multiplication can be done for $a_{y_{B}}$ and $\mathbf{\hat{j}}$, and $a_{z_{B}}$ and $\mathbf{\hat{k}}$. In matrix form this can be represented by \Cref{eq:firstFillEx}.
+
+\begin{equation} \label{eq:firstFillEx}
+\begin{pmatrix}
+\mathbf{\hat{i}} &
+\mathbf{\hat{j}} &
+\mathbf{\hat{k}} \\
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+a_{x_{B}} \\
+a_{y_{B}} \\
+a_{z_{B}} \\
+\end{pmatrix}
+\end{equation}
+
+Comparing \Cref{eq:firstFillEx} to the expression for the transformation matrix provided by \Cref{eq:transMatCoef} it can be seen that the coefficients can now be expressed as \Cref{eq:transCoeff}.
+
+\begin{align} \label{eq:transCoeff}
+\begin{split}
+\begin{pmatrix}
+C_{1} \\
+C_{2} \\
+C_{3} \\
+\end{pmatrix}
+=
+\mathbf{\hat{i}}
+\end{split}
+&
+\begin{split}
+\begin{pmatrix}
+C_{4} \\
+C_{5} \\
+C_{6} \\
+\end{pmatrix}
+=
+\mathbf{\hat{j}}
+\end{split}
+&
+\begin{split}
+\begin{pmatrix}
+C_{7} \\
+C_{8} \\
+C_{9} \\
+\end{pmatrix}
+=
+\mathbf{\hat{k}}
+\end{split}
+\end{align}
+
+Given these definitions, the corresponding auxiliary functions can now be defined. 
+
+\subsubsection{Auxiliary functions for the second case}
+\label{subsubsec:auxFsecCase}
+
+
+ \textbf{\textcolor{red}{Rest still has to be rewritten!!}}
 
 \subsection{Spherical equations}
 \label{subsec:sphereq}

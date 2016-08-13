@@ -9,36 +9,37 @@
 \BOOKMARK [2][-]{subsection.6.1.1}{Workings of TSI}{section.6.1}% 9
 \BOOKMARK [2][-]{subsection.6.1.2}{Step-size}{section.6.1}% 10
 \BOOKMARK [1][-]{section.6.2}{Associated equations}{chapter.6}% 11
-\BOOKMARK [2][-]{subsection.6.2.1}{Cartesian equations}{section.6.2}% 12
-\BOOKMARK [2][-]{subsection.6.2.2}{Spherical equations}{section.6.2}% 13
-\BOOKMARK [2][-]{subsection.6.2.3}{Recurrence relations and auxiliary functions}{section.6.2}% 14
-\BOOKMARK [0][-]{chapter.7}{Program optimisation tool}{}% 15
-\BOOKMARK [1][-]{section.7.1}{Existing software}{chapter.7}% 16
-\BOOKMARK [2][-]{subsection.7.1.1}{Tudat}{section.7.1}% 17
-\BOOKMARK [2][-]{subsection.7.1.2}{Eigen}{section.7.1}% 18
-\BOOKMARK [2][-]{subsection.7.1.3}{Boost}{section.7.1}% 19
-\BOOKMARK [2][-]{subsection.7.1.4}{PaGMO}{section.7.1}% 20
-\BOOKMARK [2][-]{subsection.7.1.5}{SNOPT}{section.7.1}% 21
-\BOOKMARK [2][-]{subsection.7.1.6}{Mars-GRAM}{section.7.1}% 22
-\BOOKMARK [1][-]{section.7.2}{Developed software}{chapter.7}% 23
-\BOOKMARK [2][-]{subsection.7.2.1}{Atmospheric table function fit}{section.7.2}% 24
-\BOOKMARK [2][-]{subsection.7.2.2}{Drag coefficient graph function fit}{section.7.2}% 25
-\BOOKMARK [2][-]{subsection.7.2.3}{RK4 and RKF propagator}{section.7.2}% 26
-\BOOKMARK [2][-]{subsection.7.2.4}{TSI propagator}{section.7.2}% 27
-\BOOKMARK [2][-]{subsection.7.2.5}{Optimiser}{section.7.2}% 28
-\BOOKMARK [0][-]{chapter.8}{Verification and validation}{}% 29
-\BOOKMARK [1][-]{section.8.1}{Interpolation}{chapter.8}% 30
-\BOOKMARK [1][-]{section.8.2}{RK4 and RKF integrators}{chapter.8}% 31
-\BOOKMARK [1][-]{section.8.3}{Taylor Series integration}{chapter.8}% 32
-\BOOKMARK [1][-]{section.8.4}{Complete trajectory propagation}{chapter.8}% 33
-\BOOKMARK [1][-]{section.8.5}{Optimiser}{chapter.8}% 34
-\BOOKMARK [1][-]{section.8.6}{Complete optimisation tool}{chapter.8}% 35
-\BOOKMARK [0][-]{chapter.9}{Results}{}% 36
-\BOOKMARK [0][-]{chapter.10}{Analysis}{}% 37
-\BOOKMARK [0][-]{chapter.11}{Conclusions and recommendations}{}% 38
-\BOOKMARK [0][-]{appendix.A}{Mars-GRAM 2005 input file}{}% 39
-\BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 40
-\BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 41
-\BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 42
-\BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 43
-\BOOKMARK [0][-]{appendix*.57}{Bibliography}{}% 44
+\BOOKMARK [2][-]{subsection.6.2.1}{Cartesian equations, first case}{section.6.2}% 12
+\BOOKMARK [2][-]{subsection.6.2.2}{Cartesian equations, second case}{section.6.2}% 13
+\BOOKMARK [2][-]{subsection.6.2.3}{Spherical equations}{section.6.2}% 14
+\BOOKMARK [2][-]{subsection.6.2.4}{Recurrence relations and auxiliary functions}{section.6.2}% 15
+\BOOKMARK [0][-]{chapter.7}{Program optimisation tool}{}% 16
+\BOOKMARK [1][-]{section.7.1}{Existing software}{chapter.7}% 17
+\BOOKMARK [2][-]{subsection.7.1.1}{Tudat}{section.7.1}% 18
+\BOOKMARK [2][-]{subsection.7.1.2}{Eigen}{section.7.1}% 19
+\BOOKMARK [2][-]{subsection.7.1.3}{Boost}{section.7.1}% 20
+\BOOKMARK [2][-]{subsection.7.1.4}{PaGMO}{section.7.1}% 21
+\BOOKMARK [2][-]{subsection.7.1.5}{SNOPT}{section.7.1}% 22
+\BOOKMARK [2][-]{subsection.7.1.6}{Mars-GRAM}{section.7.1}% 23
+\BOOKMARK [1][-]{section.7.2}{Developed software}{chapter.7}% 24
+\BOOKMARK [2][-]{subsection.7.2.1}{Atmospheric table function fit}{section.7.2}% 25
+\BOOKMARK [2][-]{subsection.7.2.2}{Drag coefficient graph function fit}{section.7.2}% 26
+\BOOKMARK [2][-]{subsection.7.2.3}{RK4 and RKF propagator}{section.7.2}% 27
+\BOOKMARK [2][-]{subsection.7.2.4}{TSI propagator}{section.7.2}% 28
+\BOOKMARK [2][-]{subsection.7.2.5}{Optimiser}{section.7.2}% 29
+\BOOKMARK [0][-]{chapter.8}{Verification and validation}{}% 30
+\BOOKMARK [1][-]{section.8.1}{Interpolation}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.2}{RK4 and RKF integrators}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.3}{Taylor Series integration}{chapter.8}% 33
+\BOOKMARK [1][-]{section.8.4}{Complete trajectory propagation}{chapter.8}% 34
+\BOOKMARK [1][-]{section.8.5}{Optimiser}{chapter.8}% 35
+\BOOKMARK [1][-]{section.8.6}{Complete optimisation tool}{chapter.8}% 36
+\BOOKMARK [0][-]{chapter.9}{Results}{}% 37
+\BOOKMARK [0][-]{chapter.10}{Analysis}{}% 38
+\BOOKMARK [0][-]{chapter.11}{Conclusions and recommendations}{}% 39
+\BOOKMARK [0][-]{appendix.A}{Mars-GRAM 2005 input file}{}% 40
+\BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 41
+\BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 42
+\BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 43
+\BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 44
+\BOOKMARK [0][-]{appendix*.59}{Bibliography}{}% 45

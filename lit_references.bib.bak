@@ -1639,7 +1639,7 @@
   Timestamp                = {2015.08.26}
 }
 
-@InProceedings{,
+@InProceedings{jorba2005software,
   Title                    = {{A Software Package for the Numerical Integration of ODEs by Means of High-Order Taylor Methods}},
   Author                   = {Angel Jorba and Maorong Zou},
   Booktitle                = {Experimental Mathematics},
