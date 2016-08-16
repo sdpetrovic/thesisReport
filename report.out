@@ -12,7 +12,7 @@
 \BOOKMARK [2][-]{subsection.6.2.1}{Cartesian equations, first case}{section.6.2}% 12
 \BOOKMARK [2][-]{subsection.6.2.2}{Cartesian equations, second case}{section.6.2}% 13
 \BOOKMARK [2][-]{subsection.6.2.3}{Spherical equations}{section.6.2}% 14
-\BOOKMARK [2][-]{subsection.6.2.4}{Recurrence relations and auxiliary functions}{section.6.2}% 15
+\BOOKMARK [2][-]{subsection.6.2.4}{Recurrence relations}{section.6.2}% 15
 \BOOKMARK [0][-]{chapter.7}{Program optimisation tool}{}% 16
 \BOOKMARK [1][-]{section.7.1}{Existing software}{chapter.7}% 17
 \BOOKMARK [2][-]{subsection.7.1.1}{Tudat}{section.7.1}% 18
@@ -42,4 +42,8 @@
 \BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 42
 \BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 43
 \BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 44
-\BOOKMARK [0][-]{appendix*.60}{Bibliography}{}% 45
+\BOOKMARK [0][-]{appendix.D}{All Recurrence Relations}{}% 45
+\BOOKMARK [1][-]{section.D.1}{First Cartesian case: Euler angles}{appendix.D}% 46
+\BOOKMARK [1][-]{section.D.2}{Second Cartesian case: unit vectors}{appendix.D}% 47
+\BOOKMARK [1][-]{section.D.3}{Spherical case}{appendix.D}% 48
+\BOOKMARK [0][-]{appendix*.60}{Bibliography}{}% 49
