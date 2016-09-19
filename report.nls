@@ -1,0 +1,19 @@
+\begin{thenomenclature} 
+
+ \nomgroup{G}
+
+  \item [{$\eta$}]\begingroup Step multiplication factor \nomunit{-}\nomeqref {6.6}
+		\nompageref{17}
+  \item [{$\tau$}]\begingroup Local error tolerance \nomunit{-}\nomeqref {6.6}
+		\nompageref{17}
+
+ \nomgroup{R}
+
+  \item [{$T_{n,k}$}]\begingroup Truncation error \nomunit{-}\nomeqref {6.0}
+		\nompageref{15}
+  \item [{$x_{n}$}]\begingroup n$^{th}$ variable \nomunit{-}\nomeqref {6.0}
+		\nompageref{15}
+  \item [{$\mathbf{X}$}]\begingroup State vector \nomunit{-}\nomeqref {6.0}
+		\nompageref{15}
+
+\end{thenomenclature}

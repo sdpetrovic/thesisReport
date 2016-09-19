@@ -1,14 +1,92 @@
 \chapter{Taylor series integration} %Last updated 18-05-2016
 \label{ch:tsi}
+\acf{TSI} is different from the previously mentioned integrators, because it only uses the information at the current point to predict the next point. However, it does this using higher order derivatives at that point. These higher order derivatives have to be obtained as a function of the current state and the first order state derivatives. As soon as the $K^{th}$ order derivative as been found, a Taylor Series can be set up to determine the next state as a function of the chosen step-size. This is all explained and described in more detail in \Cref{sec:genTsiTheory}. In this thesis, \ac{TSI} is the main focus of the analysis. The performance with respect to the \ac{RKF} integrators is tested. In order to be able to do this for the given model, a number of equation sets can be identified which have to be written in such a format that it can be used by \ac{TSI}. These are described, and where needed derived, in \Cref{sec:assEq}.
 
 \section{General theory}
 \label{sec:genTsiTheory}
+\ac{TSI} has been used to solve ordinary differential equations since the early 1960s \citep{scott2008high}. However, the first modern implementation of \ac{TSI} in a space trajectory problem was provided by \cite{montenbruck1992numerical}. \cite{scott2008high} were able to implement this \ac{TSI} method into the SNAP trajectory propagator which is the implementation that is used in this thesis. The method is described in \Cref{subsec:workTsi} and the used step-size method is discussed in \Cref{subsec:stepSizeTsi}.
+
+
 
 \subsection{Workings of \ac{TSI}}
 \label{subsec:workTsi}
+The formulation used in this thesis is based on the one used by \cite{scott2008high}. 
+
+%In \cite{scott2008high} an example situation is used to describe the \ac{TSI} method: the thrust-less motion around a central body. For consistency the same example and formulation will be used. 
+
+
+\ac{TSI} uses the current state and its derivatives to determine the next state by computing its Taylor Series described in \Cref{eq:general_taylor}. The state vector is represented by $\mathbf{X}$ with the corresponding vector for the initial conditions $\mathbf{X}_{0}$. Each of the variables can at any point be represented by $x_{n}\left(t\right)$. For a given step-size $h$ and an order $K \in \mathbb{R}$ (chosen by the user) the updated state $x_{n}\left(t+h\right)$ can be represented by the Taylor Series with $n=1,\dots,7$ in this case (7 variables: three position, three velocity and one mass). The exact solution is obtained by adding $T_{n,K}$, which is the truncation error for the $n^{th}$ variable using K terms. 
+
+\nomenclature[Ra7]{$\mathbf{X}$}{State vector \nomunit{-}}
+\nomenclature[Ra6]{$x_{n}$}{n$^{th}$ variable \nomunit{-}}
+\nomenclature[Ra2]{$T_{n,k}$}{Truncation error \nomunit{-}}
+
+
+\begin{equation} \label{eq:general_taylor}
+x_{n}\left(t+h\right)=\displaystyle\sum_{k=0}^{K}\dfrac{x_{n}^{\left(k\right)}\left(t\right)}{k!}\left(h\right)^{k} \quad + \quad	T_{n,K}
+\end{equation}
+
+This particular \ac{TSI} method uses recurrence relations to determine the $k^{th}$ order derivatives and only requires the current state ($x_{n}$) and its first derivatives ($x'_{n} = u_{n}$). Each recurrence relation describes a certain operation in the state derivative, such as: multiplication, division, power, exponential, sines and cosines. \Cref{eq:rec_rel} shows the recurrence relations for multiplication ($w\left(t\right)=f\left(t\right)g\left(t\right)$) and division ($w\left(t\right)=\dfrac{f\left(t\right)}{g\left(t\right)}$) respectively (the other operations are described later in this chapter when they are required).
+
+\begin{equation} \label{eq:rec_rel}
+\begin{split}
+&\text{For multiplications} \quad W\left(k\right)=\displaystyle\sum_{j=0}^{k}F\left(j\right)G\left(k-j\right)\\
+&\text{For divisions} \quad W\left(k\right)=\dfrac{1}{g\left(t_{0}\right)}\left[F\left(k\right)-\displaystyle\sum_{j=1}^{k} G\left(j\right)W\left(k-j\right)\right]\\
+& Both \ with \quad W\left(k\right)=\dfrac{w^{\left(k\right)}\left(t_{0}\right)}{k!}, \quad F\left(j\right)=\dfrac{f^{\left(j\right)}\left(t_{0}\right)}{j!} \quad \text{and} \quad G\left(k-j\right)=\dfrac{g^{\left(k-j\right)}\left(t_{0}\right)}{\left(k-j\right)!}\\
+\end{split}
+\end{equation}
+
+Here, both $f\left(t\right)$ and $g\left(t\right)$ are place-holder functions and $w\left(t\right)$ is called the auxiliary function which replaces the respective operation. Sometimes, the state derivative functions can be rather complex and have many operations intertwined. One can then choose to introduce extra variables to simplify the derivatives and reduce the number of operations in that particular derivative. These extra variables together with the expression that they replace then form the auxiliary equations. A random example is shown in \Cref{eq:auxEqExample}.
+
+\begin{equation} \label{eq:auxEqExample}
+\begin{split}
+x'_{4} &= u_{4} = 2x_{1}+\dfrac{\left(x_{3}x_{1}+x_{2}x_{3}\right)}{x_{4}} \\
+x_{8} &= x_{3}x_{1}+x_{2}x_{3} \\
+\end{split}
+\end{equation}
+
+However, now that the extra variable $x_{8}$ is introduced, the derivative of the corresponding auxiliary equations has to be described as well (see \Cref{eq:auxDerExample}, which in turn will use auxiliary functions to determine the $k^{th}$ derivative of $x_{8}$.
+
+\begin{equation} \label{eq:auxDerExample}
+\begin{split}
+x'_{4} &= u_{4} = 2x_{1}+\dfrac{x_{8}}{x_{4}} \\
+x'_{8} &= u_{8} =  x'_{3}x_{1}+x_{3}x'_{1}+x'_{2}x_{3}+x_{2}x'_{3} = u_{3}x_{1}+x_{3}u_{1}+u_{2}x_{3}+x_{2}u_{3} \\
+\end{split}
+\end{equation}
+
+At this point it should be emphasised that using auxiliary equations and derivatives is a choice. It is not required to make \ac{TSI} work. Sometimes it can be easier to introduce auxiliary equations because it makes the problem more comprehensible but this could introduce errors because all auxiliary equations also require auxiliary derivatives, which might not be easy to find. In those cases it could be more useful to just leave the state derivatives as they are and write more auxiliary functions instead. This all depends on the problem and the preference of the user. 
+
+
+Now let $u_{n}^{\left(k-1\right)}=x_{n}^{k}$ for $k=1,\dots,K$, then $\dfrac{u_{n}^{\left(k-1\right)}}{\left(k-1\right)!}=\dfrac{x_{n}^{k}}{\left(k-1\right)!}$, and also $\dfrac{x_{n}^{k}}{k!}=X_{n}\left(k\right)$. Combining this results in \Cref{eq:def_u}.
+
+\begin{equation} \label{eq:def_u}
+U_{n}\left(k-1\right)=kX_{n}\left(k\right)\Rightarrow X_{n}\left(k\right)=\dfrac{U_{n}\left(k-1\right)}{k}
+\end{equation}
+
+The $X_{n}\left(k\right)$ are also known as the Taylor Series coefficients of the $n^{th}$ variable for the $k^{th}$ order derivative. Also, $U_{n}\left(k\right)$ are the recurrence relation expressions for the $n^{th}$ variable which consist of all the reduced auxiliary functions ($W\left(k\right)$) that form that derivative. 
+
+
+Using the expression described in \Cref{eq:def_u} all Taylor Series coefficients can be found. Then \Cref{eq:general_taylor} can be used to determine the next state values at time $t+h$ for the known previous parameter values at time $t$. The same can then be done to determine the values at the time-step after that using the state values at $t+h$, etc. Going through all these different time-steps results in the final integration. 
 
 \subsection{Step-size}
 \label{subsec:stepSizeTsi}
+The step-size used for \ac{TSI} can be either set as a constant value by the user or determined using a step-size controller, giving it the variable step-size properties, which is done in this thesis. The chosen step-size method was based on the recommendation of both \cite{scott2008high} and \cite{bergsma2015application} and directly uses the chosen (or preferred) local error tolerance $\tau$ to determine the next step size. This method assures that the step-size is small enough such that all variables satisfy the error condition directly. The step-size is determined using a so-called fixed-point iteration performed using \Cref{eq:fix_point_it}. The initial step-size $h_{1}$ can be chosen to be the current step-size $h$ as an easy estimate. Then the iteration is performed over $l$ until a certain required convergence is reached.
+
+\begin{equation} \label{eq:fix_point_it}
+h_{l+1}=exp\left(\dfrac{1}{K-1}ln\left[\dfrac{\tau}{\begin{vmatrix}
+X_{n}\left(K-1\right)
+\end{vmatrix}+K\begin{vmatrix}
+X_{n}\left(K\right)
+\end{vmatrix}h_{l}}\right]\right)
+\end{equation}
+
+This is then done for all variables and the smallest required step-size is chosen, which is then used to determine the next step-size through $h_{next}=\eta h_{chosen}$, where $\eta$ is the chosen step multiplication factor which has to be smaller than 1. 
+
+\nomenclature[G3]{$\eta$}{Step multiplication factor \nomunit{-}}
+\nomenclature[G6]{$\tau$}{Local error tolerance \nomunit{-}}
+
+
+
 
 \section{Associated equations}
 \label{sec:assEq}
@@ -84,9 +162,7 @@ a_{z}\\
 \right]
 \end{multline}
 
-It can be seen that this set of equations is a function of the current position and many other parameters. These parameters will all have to be written as a function of the current state. This can be done by writing them into auxiliary equations, forming extra variables that then also require the auxiliary derivatives. This works for certain parameters, such as the gravity, because these equations are already expressed in the inertial frame. However, the transformation angles are defined in different reference frames, which means that finding the proper auxiliary derivatives can be tricky sometimes. Therefore it was decided to directly write these parameters as auxiliary functions. Each of the auxiliary functions performs one simple algebraic operation and the collection of these auxiliary functions then form the complete set of recurrence relations using the recurrence relations for the simple algebraic operations. This is all described in \Cref{subsec:recRelAuxFunc}. 
-
-For the auxiliary equations, a similar notation will be used as shown by \cite{scott2008high}. Here the equations are denoted by $x_{number}$ and the corresponding derivatives $x'_{number}$. This notation will also be used for the current state and the corresponding state derivatives. This way, \Cref{eq:state} can be written as \Cref{eq:stateX} and the corresponding derivatives can be written as presented by \Cref{eq:state_derivativesX}.
+It can be seen that this set of equations is a function of the current position and many other parameters. These parameters will all have to be written as a function of the current state. This can be done by writing them into auxiliary equations, forming extra variables that then also require the auxiliary derivatives. This works for certain parameters, such as the gravity, because these equations are already expressed in the inertial frame. However, the transformation angles are defined in different reference frames, which means that finding the proper auxiliary derivatives can be tricky sometimes. Therefore it was decided to directly write these parameters as auxiliary functions. Each of the auxiliary functions performs one simple algebraic operation and the collection of these auxiliary functions then form the complete set of recurrence relations using the recurrence relations for the simple algebraic operations. For the auxiliary equations, a similar notation will be used as shown by \cite{scott2008high}. Here the equations are denoted by $x_{number}$ and the corresponding derivatives $x'_{number}$. This notation will also be used for the current state and the corresponding state derivatives. This way, \Cref{eq:state} can be written as \Cref{eq:stateX} and the corresponding derivatives can be written as presented by \Cref{eq:state_derivativesX}.
 
 \begin{align} \label{eq:stateX}
 \begin{split} 
@@ -187,7 +263,7 @@ r = \sqrt{x^{2}+y^{2}+z^{2}}\\
 
 The corresponding auxiliary functions can then be described by \Cref{eq:auxFtransAngl} using the definitions provided in \Cref{eq:stateX,eq:state_derivativesX}.
 
-\begin{align} \label{eq:AuxFtransAngl}
+\begin{align} \label{eq:auxFtransAngl}
 \begin{split}
 w_{4,1} &= x_{1}^{2}+x_{2}^{2} \\
 w_{4,2} &= w_{4,1}+x_{3}^{2} \\
@@ -323,7 +399,7 @@ Here, $V_{x_{V}}$, $V_{y_{V}}$ and $V_{z_{V}}$ are the velocities in the vertica
 \begin{split}
 V_{x_{V}} & = -\left(V_{x}+\Omega_{M}y\right) s \delta c\lambda - \left(V_{y}-\Omega_{M}x\right) s\delta s\lambda+V_{z}c\delta \\
 V_{y_{V}} & = \left(V_{y}-\Omega_{M}x\right) c\lambda - \left(V_{x}+\Omega_{M} y \right) s\lambda \\
-V_{z_{V}} & = -\left(V_{x}+\Omega_{M}y\right)-\left(V_{y}-\Omega_{M}x\right) c\delta s\lambda - V_{z} s\delta \\
+V_{z_{V}} & = -\left(V_{x}+\Omega_{M}y\right)c\delta c\lambda-\left(V_{y}-\Omega_{M}x\right) c\delta s\lambda - V_{z} s\delta \\
 \end{split}
 \end{equation}
 
@@ -1378,7 +1454,7 @@ Again, three additional auxiliary equations are required for the $C_{D}-M$ relat
 
  \begin{equation} \label{eq:cdAux}
 \begin{split}
-x_{32} &= M = \dfrac{V}{a} = \dfrac{x_{15}}{x_{33}}\\
+x_{32} &= M = \dfrac{V_{G}}{a} = \dfrac{x_{15}}{x_{33}}\\
 x_{33} &= a = \sqrt{\gamma_{a}R_{a}^{*}T_{a}} = \sqrt{\gamma_{a}R_{a}^{*}x_{34}} \quad \text{where} \quad R_{a}^{*}=\dfrac{R_{a}}{M_{a}} \\
 x_{34} &= T_{a}
 \end{split}
@@ -1482,13 +1558,13 @@ All the power relations in \Cref{eq:TCondDerAux} were already described in auxil
 \begin{equation}\label{eq:TCondAuxF}
 u_{34}=\begin{cases}
 u_{34,1}=P_{T 1,1}u_{31}, & \text{for } -0.6 \leq x_{31} < 5.04  \\
-u_{34,2}=\left(3P_{T 3,2}w_{30,2}+2P_{T 2,2}x_{31}+P_{T 1,2}\right)u_{31}, &  \text{for } 5.04\leq x_{31} < 35.53   \\
+u_{34,2}=\left(3P_{T 3,2}w_{30,2}+2P_{T 2,2}x_{31}\right)u_{31}+P_{T 1,2}u_{31}, &  \text{for } 5.04\leq x_{31} < 35.53   \\
 u_{34,3}=\left(6 P_{T 6,3}w_{30,5}+5P_{T 5,3}w_{30,4}+4P_{T 4,3}w_{30,3}+ \dots
 \right. \\
-\qquad\  \left. \dotsc +3P_{T 3,3}w_{30,2}+2P_{T 2,3}x_{31}+P_{T 1,3}\right)u_{31}, &  \text{for } 35.53\leq x_{31} < 75.07   \\
+\qquad\  \left. \dotsc +3P_{T 3,3}w_{30,2}+2P_{T 2,3}x_{31}\right)u_{31}+P_{T 1,3}u_{31}, &  \text{for } 35.53\leq x_{31} < 75.07   \\
 u_{34,4}=\left(8 P_{T 8,4}w_{30,7}+7P_{T 7,4}w_{30,6}+6P_{T 6,4}w_{30,5}
 +5P_{T 5,4}w_{30,4}+ \dots \right. \\
-\qquad\  \left. \dotsc +4P_{T 4,4}w_{30,3}+3P_{T 3,4}w_{30,2}+2P_{T 2,4}x_{31}+P_{T 1,4}\right)u_{31}, &  \text{for } 75.07\leq x_{31} < 170.05   \\
+\qquad\  \left. \dotsc +4P_{T 4,4}w_{30,3}+3P_{T 3,4}w_{30,2}+2P_{T 2,4}x_{31}\right)u_{31}+P_{T 1,4}u_{31}, &  \text{for } 75.07\leq x_{31} < 170.05   \\
 u_{34,5}=0, &  \text{for }  x_{31} \geq 170.05   
 \end{cases}
 \end{equation}
