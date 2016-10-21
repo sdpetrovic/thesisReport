@@ -1,5 +1,5 @@
-\BOOKMARK [0][-]{chapter*.11}{Nomenclature}{}% 1
-\BOOKMARK [0][-]{chapter*.11}{Abbreviations}{}% 2
+\BOOKMARK [0][-]{chapter*.8}{Nomenclature}{}% 1
+\BOOKMARK [0][-]{chapter*.8}{Abbreviations}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
 \BOOKMARK [0][-]{chapter.2}{Problem background}{}% 4
 \BOOKMARK [0][-]{chapter.3}{Models}{}% 5
@@ -9,46 +9,49 @@
 \BOOKMARK [1][-]{section.3.4}{Drag}{chapter.3}% 9
 \BOOKMARK [2][-]{subsection.3.4.1}{Atmospheric graph function fit}{section.3.4}% 10
 \BOOKMARK [2][-]{subsection.3.4.2}{Drag coefficient graph function fit}{section.3.4}% 11
-\BOOKMARK [0][-]{chapter.4}{Optimisation}{}% 12
-\BOOKMARK [0][-]{chapter.5}{Standard integration methods}{}% 13
-\BOOKMARK [0][-]{chapter.6}{Taylor series integration}{}% 14
-\BOOKMARK [1][-]{section.6.1}{General theory}{chapter.6}% 15
-\BOOKMARK [2][-]{subsection.6.1.1}{Workings of TSI}{section.6.1}% 16
-\BOOKMARK [2][-]{subsection.6.1.2}{Step-size}{section.6.1}% 17
-\BOOKMARK [1][-]{section.6.2}{Associated equations}{chapter.6}% 18
-\BOOKMARK [2][-]{subsection.6.2.1}{Cartesian equations, first case}{section.6.2}% 19
-\BOOKMARK [2][-]{subsection.6.2.2}{Cartesian equations, second case}{section.6.2}% 20
-\BOOKMARK [2][-]{subsection.6.2.3}{Spherical equations}{section.6.2}% 21
-\BOOKMARK [2][-]{subsection.6.2.4}{Recurrence relations}{section.6.2}% 22
-\BOOKMARK [0][-]{chapter.7}{Program optimisation tool}{}% 23
-\BOOKMARK [1][-]{section.7.1}{Existing software}{chapter.7}% 24
-\BOOKMARK [2][-]{subsection.7.1.1}{Tudat}{section.7.1}% 25
-\BOOKMARK [2][-]{subsection.7.1.2}{Eigen}{section.7.1}% 26
-\BOOKMARK [2][-]{subsection.7.1.3}{Boost}{section.7.1}% 27
-\BOOKMARK [2][-]{subsection.7.1.4}{PaGMO}{section.7.1}% 28
-\BOOKMARK [2][-]{subsection.7.1.5}{SNOPT}{section.7.1}% 29
-\BOOKMARK [2][-]{subsection.7.1.6}{Mars-GRAM}{section.7.1}% 30
-\BOOKMARK [1][-]{section.7.2}{Developed software}{chapter.7}% 31
-\BOOKMARK [2][-]{subsection.7.2.1}{RK4 and RKF propagator}{section.7.2}% 32
-\BOOKMARK [2][-]{subsection.7.2.2}{TSI propagator}{section.7.2}% 33
-\BOOKMARK [2][-]{subsection.7.2.3}{Optimiser}{section.7.2}% 34
-\BOOKMARK [0][-]{chapter.8}{Verification and validation}{}% 35
-\BOOKMARK [1][-]{section.8.1}{Interpolation}{chapter.8}% 36
-\BOOKMARK [1][-]{section.8.2}{RK4 and RKF integrators}{chapter.8}% 37
-\BOOKMARK [1][-]{section.8.3}{Taylor Series integration}{chapter.8}% 38
-\BOOKMARK [1][-]{section.8.4}{Complete trajectory propagation}{chapter.8}% 39
-\BOOKMARK [1][-]{section.8.5}{Optimiser}{chapter.8}% 40
-\BOOKMARK [1][-]{section.8.6}{Complete optimisation tool}{chapter.8}% 41
-\BOOKMARK [0][-]{chapter.9}{Results}{}% 42
-\BOOKMARK [0][-]{chapter.10}{Analysis}{}% 43
-\BOOKMARK [0][-]{chapter.11}{Conclusions and recommendations}{}% 44
-\BOOKMARK [0][-]{appendix.A}{Mars-GRAM 2005 input file}{}% 45
-\BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 46
-\BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 47
-\BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 48
-\BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 49
-\BOOKMARK [0][-]{appendix.D}{All Recurrence Relations}{}% 50
-\BOOKMARK [1][-]{section.D.1}{First Cartesian case: Euler angles}{appendix.D}% 51
-\BOOKMARK [1][-]{section.D.2}{Second Cartesian case: unit vectors}{appendix.D}% 52
-\BOOKMARK [1][-]{section.D.3}{Spherical case}{appendix.D}% 53
-\BOOKMARK [0][-]{appendix*.61}{Bibliography}{}% 54
+\BOOKMARK [0][-]{chapter.4}{Standard integration methods}{}% 12
+\BOOKMARK [0][-]{chapter.5}{Taylor series integration}{}% 13
+\BOOKMARK [1][-]{section.5.1}{General theory}{chapter.5}% 14
+\BOOKMARK [2][-]{subsection.5.1.1}{Workings of TSI}{section.5.1}% 15
+\BOOKMARK [2][-]{subsection.5.1.2}{Step-size}{section.5.1}% 16
+\BOOKMARK [1][-]{section.5.2}{Associated equations}{chapter.5}% 17
+\BOOKMARK [2][-]{subsection.5.2.1}{Cartesian equations, first case}{section.5.2}% 18
+\BOOKMARK [2][-]{subsection.5.2.2}{Cartesian equations, second case}{section.5.2}% 19
+\BOOKMARK [2][-]{subsection.5.2.3}{Spherical equations}{section.5.2}% 20
+\BOOKMARK [2][-]{subsection.5.2.4}{Recurrence relations}{section.5.2}% 21
+\BOOKMARK [0][-]{chapter.6}{Program simulation tool}{}% 22
+\BOOKMARK [1][-]{section.6.1}{Existing software}{chapter.6}% 23
+\BOOKMARK [2][-]{subsection.6.1.1}{Tudat}{section.6.1}% 24
+\BOOKMARK [2][-]{subsection.6.1.2}{Eigen}{section.6.1}% 25
+\BOOKMARK [2][-]{subsection.6.1.3}{Boost}{section.6.1}% 26
+\BOOKMARK [2][-]{subsection.6.1.4}{Mars-GRAM}{section.6.1}% 27
+\BOOKMARK [1][-]{section.6.2}{Developed software}{chapter.6}% 28
+\BOOKMARK [2][-]{subsection.6.2.1}{RKF propagator}{section.6.2}% 29
+\BOOKMARK [2][-]{subsection.6.2.2}{TSI propagator}{section.6.2}% 30
+\BOOKMARK [1][-]{section.6.3}{Completed simulation tool}{chapter.6}% 31
+\BOOKMARK [2][-]{subsection.6.3.1}{Initialisation}{section.6.3}% 32
+\BOOKMARK [2][-]{subsection.6.3.2}{Initial propagation}{section.6.3}% 33
+\BOOKMARK [2][-]{subsection.6.3.3}{Integrator burn phase}{section.6.3}% 34
+\BOOKMARK [2][-]{subsection.6.3.4}{Integrator coast phase}{section.6.3}% 35
+\BOOKMARK [2][-]{subsection.6.3.5}{Final circularisation}{section.6.3}% 36
+\BOOKMARK [2][-]{subsection.6.3.6}{Comparison}{section.6.3}% 37
+\BOOKMARK [0][-]{chapter.7}{Verification and validation}{}% 38
+\BOOKMARK [1][-]{section.7.1}{Interpolation}{chapter.7}% 39
+\BOOKMARK [1][-]{section.7.2}{RK4 and RKF integrators}{chapter.7}% 40
+\BOOKMARK [1][-]{section.7.3}{Taylor Series integration}{chapter.7}% 41
+\BOOKMARK [1][-]{section.7.4}{Complete trajectory propagation}{chapter.7}% 42
+\BOOKMARK [1][-]{section.7.5}{Optimiser}{chapter.7}% 43
+\BOOKMARK [1][-]{section.7.6}{Complete optimisation tool}{chapter.7}% 44
+\BOOKMARK [0][-]{chapter.8}{Results}{}% 45
+\BOOKMARK [0][-]{chapter.9}{Analysis}{}% 46
+\BOOKMARK [0][-]{chapter.10}{Conclusions and recommendations}{}% 47
+\BOOKMARK [0][-]{appendix.A}{Mars-GRAM 2005 input file}{}% 48
+\BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 49
+\BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 50
+\BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 51
+\BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 52
+\BOOKMARK [0][-]{appendix.D}{All Recurrence Relations}{}% 53
+\BOOKMARK [1][-]{section.D.1}{First Cartesian case: Euler angles}{appendix.D}% 54
+\BOOKMARK [1][-]{section.D.2}{Second Cartesian case: unit vectors}{appendix.D}% 55
+\BOOKMARK [1][-]{section.D.3}{Spherical case}{appendix.D}% 56
+\BOOKMARK [0][-]{appendix*.55}{Bibliography}{}% 57

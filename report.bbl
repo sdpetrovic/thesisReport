@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{13}%
+\begin{thebibliography}{10}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -123,47 +123,6 @@
   {\textit {\bibinfo {title} {{TUDAT}},}\ } (\bibinfo {year} {2016}),\ \bibinfo
   {note} {[online database], URL: tudat.tudelft.nl [cited 8 March 2016] (Only
   available from the TU Delft network)}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Qing}(2009)}]{qing2009differential}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Qing}},\ }\href
-  {http://ieeexplore.ieee.org/xpl/bkabstractplus.jsp?bkn=5361052} {\emph
-  {\bibinfo {title} {{Differential Evolution: Fundamentals and Applications in
-  Electrical Engineering}}}}\ (\bibinfo  {publisher} {John Wiley \& Sons,
-  Singapore},\ \bibinfo {year} {2009})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Izzo}(2012)}]{izzo2012pygmo}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
-  {Izzo}},\ }\bibfield  {title} {\textit {\bibinfo {title} {Py{GMO} and
-  {P}y{KEP}: {O}pen source tools for massively parallel optimization in
-  astrodynamics (the case of interplanetary trajectory optimization)},}\ }in\
-  \href
-  {http://www.esa.int/gsp/ACT/doc/MAD/pub/ACT-RPR-MAD-2012-(ICATT)PyKEP-PaGMO-SOCIS.pdf}
-  {\emph {\bibinfo {booktitle} {5th {I}nternational {C}onference on
-  {A}strodynamics {T}ools and {T}echniques ({ICATT})}}}\ (\bibinfo {year}
-  {2012})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Gill}\ \emph {et~al.}(2002)\citenamefont {Gill},
-  \citenamefont {Murray},\ and\ \citenamefont {Saunders}}]{gill2002snopt}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~E.}\ \bibnamefont
-  {Gill}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Murray}}, \ and\
-  \bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont {Saunders}},\
-  }\bibfield  {title} {\textit {\bibinfo {title} {{SNOPT: An SQP algorithm for
-  large-scale constrained optimization}},}\ }in\ \href {\doibase
-  10.1137/S1052623499350013} {\emph {\bibinfo {booktitle} {SIAM journal on
-  optimization}}},\ Vol.~\bibinfo {volume} {12}\ (\bibinfo {year} {2002})\ pp.\
-  \bibinfo {pages} {979--1006}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Gill}\ \emph {et~al.}(2008)\citenamefont {Gill},
-  \citenamefont {Murray},\ and\ \citenamefont {Saunders}}]{gill2006user}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~E.}\ \bibnamefont
-  {Gill}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Murray}}, \ and\
-  \bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont {Saunders}},\ }\href
-  {http://web.stanford.edu/group/SOL/guides/sndoc7.pdf} {\textit {\bibinfo
-  {title} {{Users guide for SNOPT version 7 - Software for large-scale
-  nonlinear programming}},}\ } (\bibinfo {year} {2008}),\ \bibinfo {note}
-  {[online database], URL: http://web.stanford.edu/group/SOL/guides/ [cited 23
-  October 2015]}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Justh}\ and\ \citenamefont
   {Justus}(2008)}]{justus2008utilizing}%
   \BibitemOpen
@@ -177,4 +136,12 @@
   {[online database], URL:
   https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-1-PB.pdf?sequence=1
   [cited 10 December 2015]}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wakker}(2010)}]{wakker2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Wakker}},\ }\href@noop {} {\textit {\bibinfo {title} {{Astrodynamics-II
+  Course AE4874, part 2}},}\ }\bibinfo {howpublished} {Reader},\ \bibinfo
+  {address} {Delft University of Technology} (\bibinfo {year} {2010}),\
+  \bibinfo {note} {[Internal publication] Course: Astrodynamics-II}\BibitemShut
+  {NoStop}%
 \end{thebibliography}%

@@ -1,6 +1,6 @@
 \select@language {english}
-\contentsline {chapter}{Nomenclature}{v}{chapter*.11}
-\contentsline {chapter}{Abbreviations}{vi}{chapter*.11}
+\contentsline {chapter}{Nomenclature}{v}{chapter*.8}
+\contentsline {chapter}{Abbreviations}{vi}{chapter*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Problem background}{2}{chapter.2}
 \contentsline {chapter}{\numberline {3}Models}{3}{chapter.3}
@@ -10,57 +10,60 @@
 \contentsline {section}{\numberline {3.4}Drag}{3}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Atmospheric graph function fit}{3}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Drag coefficient graph function fit}{7}{subsection.3.4.2}
-\contentsline {chapter}{\numberline {4}Optimisation}{12}{chapter.4}
-\contentsline {chapter}{\numberline {5}Standard integration methods}{13}{chapter.5}
-\contentsline {chapter}{\numberline {6}Taylor series integration}{14}{chapter.6}
-\contentsline {section}{\numberline {6.1}General theory}{14}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Workings of \ac {TSI}}{14}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Step-size}{15}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Associated equations}{16}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Cartesian equations, first case}{16}{subsection.6.2.1}
-\contentsline {subsubsection}{Gravitational acceleration}{17}{equation.6.2.11}
-\contentsline {subsubsection}{Transformation angles}{17}{equation.6.2.13}
-\contentsline {subsubsection}{Drag acceleration}{20}{equation.6.2.22}
-\contentsline {subsubsection}{Thrust acceleration}{21}{equation.6.2.29}
-\contentsline {subsubsection}{All accelerations combined}{22}{equation.6.2.35}
-\contentsline {subsection}{\numberline {6.2.2}Cartesian equations, second case}{24}{subsection.6.2.2}
-\contentsline {subsubsection}{Body frame unit vectors}{24}{equation.6.2.47}
-\contentsline {subsubsection}{Defining the transformation matrix coefficients}{25}{equation.6.2.50}
-\contentsline {subsubsection}{Auxiliary functions for the second case}{25}{equation.6.2.52}
-\contentsline {subsection}{\numberline {6.2.3}Spherical equations}{26}{subsection.6.2.3}
-\contentsline {subsubsection}{Auxiliary functions for the Spherical case}{27}{equation.6.2.62}
-\contentsline {subsubsection}{Drag acceleration as auxiliary variable}{29}{equation.6.2.70}
-\contentsline {subsection}{\numberline {6.2.4}Recurrence relations}{31}{subsection.6.2.4}
-\contentsline {chapter}{\numberline {7}Program optimisation tool}{34}{chapter.7}
-\contentsline {section}{\numberline {7.1}Existing software}{34}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}\ac {Tudat}}{34}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Eigen}{35}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}Boost}{35}{subsection.7.1.3}
-\contentsline {subsection}{\numberline {7.1.4}\ac {PaGMO}}{35}{subsection.7.1.4}
-\contentsline {subsection}{\numberline {7.1.5}\ac {SNOPT}}{36}{subsection.7.1.5}
-\contentsline {subsection}{\numberline {7.1.6}Mars-\ac {GRAM}}{36}{subsection.7.1.6}
-\contentsline {section}{\numberline {7.2}Developed software}{36}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}\ac {RK4} and \ac {RKF} propagator}{36}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}\ac {TSI} propagator}{37}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}Optimiser}{37}{subsection.7.2.3}
-\contentsline {chapter}{\numberline {8}Verification and validation}{41}{chapter.8}
-\contentsline {section}{\numberline {8.1}Interpolation}{41}{section.8.1}
-\contentsline {section}{\numberline {8.2}\acs {RK4} and \acs {RKF} integrators}{41}{section.8.2}
-\contentsline {section}{\numberline {8.3}\acl {TSI}}{42}{section.8.3}
-\contentsline {section}{\numberline {8.4}Complete trajectory propagation}{42}{section.8.4}
-\contentsline {section}{\numberline {8.5}Optimiser}{42}{section.8.5}
-\contentsline {section}{\numberline {8.6}Complete optimisation tool}{42}{section.8.6}
-\contentsline {chapter}{\numberline {9}Results}{43}{chapter.9}
-\contentsline {chapter}{\numberline {10}Analysis}{44}{chapter.10}
-\contentsline {chapter}{\numberline {11}Conclusions and recommendations}{45}{chapter.11}
-\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{46}{appendix.A}
-\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{50}{appendix.B}
-\contentsline {section}{\numberline {B.1}Temperature}{50}{section.B.1}
-\contentsline {section}{\numberline {B.2}Density}{50}{section.B.2}
-\contentsline {chapter}{\numberline {C}Program file definitions}{56}{appendix.C}
-\contentsline {chapter}{\numberline {D}All Recurrence Relations}{57}{appendix.D}
-\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{57}{section.D.1}
-\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{60}{section.D.2}
-\contentsline {section}{\numberline {D.3}Spherical case}{62}{section.D.3}
-\contentsline {chapter}{Bibliography}{65}{appendix*.61}
+\contentsline {chapter}{\numberline {4}Standard integration methods}{12}{chapter.4}
+\contentsline {chapter}{\numberline {5}Taylor series integration}{13}{chapter.5}
+\contentsline {section}{\numberline {5.1}General theory}{13}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Workings of \ac {TSI}}{13}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Step-size}{14}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Associated equations}{15}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Cartesian equations, first case}{15}{subsection.5.2.1}
+\contentsline {subsubsection}{Gravitational acceleration}{16}{equation.5.2.11}
+\contentsline {subsubsection}{Transformation angles}{16}{equation.5.2.13}
+\contentsline {subsubsection}{Drag acceleration}{19}{equation.5.2.22}
+\contentsline {subsubsection}{Thrust acceleration}{20}{equation.5.2.29}
+\contentsline {subsubsection}{All accelerations combined}{21}{equation.5.2.35}
+\contentsline {subsection}{\numberline {5.2.2}Cartesian equations, second case}{23}{subsection.5.2.2}
+\contentsline {subsubsection}{Body frame unit vectors}{23}{equation.5.2.47}
+\contentsline {subsubsection}{Defining the transformation matrix coefficients}{24}{equation.5.2.50}
+\contentsline {subsubsection}{Auxiliary functions for the second case}{24}{equation.5.2.52}
+\contentsline {subsection}{\numberline {5.2.3}Spherical equations}{25}{subsection.5.2.3}
+\contentsline {subsubsection}{Auxiliary functions for the Spherical case}{26}{equation.5.2.62}
+\contentsline {subsubsection}{Drag acceleration as auxiliary variable}{28}{equation.5.2.70}
+\contentsline {subsection}{\numberline {5.2.4}Recurrence relations}{30}{subsection.5.2.4}
+\contentsline {chapter}{\numberline {6}Program simulation tool}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}Existing software}{33}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}\ac {Tudat}}{33}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Eigen}{34}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Boost}{34}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Mars-\ac {GRAM}}{34}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Developed software}{34}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}\ac {RKF} propagator}{35}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}\ac {TSI} propagator}{35}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Completed simulation tool}{35}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Initialisation}{35}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Initial propagation}{36}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Integrator burn phase}{36}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Integrator coast phase}{36}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Final circularisation}{36}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.6}Comparison}{36}{subsection.6.3.6}
+\contentsline {chapter}{\numberline {7}Verification and validation}{39}{chapter.7}
+\contentsline {section}{\numberline {7.1}Interpolation}{39}{section.7.1}
+\contentsline {section}{\numberline {7.2}\acs {RK4} and \acs {RKF} integrators}{39}{section.7.2}
+\contentsline {section}{\numberline {7.3}\acl {TSI}}{40}{section.7.3}
+\contentsline {section}{\numberline {7.4}Complete trajectory propagation}{40}{section.7.4}
+\contentsline {section}{\numberline {7.5}Optimiser}{40}{section.7.5}
+\contentsline {section}{\numberline {7.6}Complete optimisation tool}{40}{section.7.6}
+\contentsline {chapter}{\numberline {8}Results}{41}{chapter.8}
+\contentsline {chapter}{\numberline {9}Analysis}{42}{chapter.9}
+\contentsline {chapter}{\numberline {10}Conclusions and recommendations}{43}{chapter.10}
+\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{44}{appendix.A}
+\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{48}{appendix.B}
+\contentsline {section}{\numberline {B.1}Temperature}{48}{section.B.1}
+\contentsline {section}{\numberline {B.2}Density}{48}{section.B.2}
+\contentsline {chapter}{\numberline {C}Program file definitions}{54}{appendix.C}
+\contentsline {chapter}{\numberline {D}All Recurrence Relations}{55}{appendix.D}
+\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{55}{section.D.1}
+\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{58}{section.D.2}
+\contentsline {section}{\numberline {D.3}Spherical case}{60}{section.D.3}
+\contentsline {chapter}{Bibliography}{63}{appendix*.55}
 \contentsfinish 

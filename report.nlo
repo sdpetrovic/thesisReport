@@ -1,5 +1,5 @@
-\nomenclatureentry{Ra7$\mathbf{X}$@[{$\mathbf{X}$}]\begingroup State vector \nomunit{-}\nomeqref {6.0}|nompageref}{14}
-\nomenclatureentry{Ra6$x_{n}$@[{$x_{n}$}]\begingroup n$^{th}$ variable \nomunit{-}\nomeqref {6.0}|nompageref}{14}
-\nomenclatureentry{Ra2$T_{n,k}$@[{$T_{n,k}$}]\begingroup Truncation error \nomunit{-}\nomeqref {6.0}|nompageref}{14}
-\nomenclatureentry{G3$\eta$@[{$\eta$}]\begingroup Step multiplication factor \nomunit{-}\nomeqref {6.6}|nompageref}{16}
-\nomenclatureentry{G6$\tau$@[{$\tau$}]\begingroup Local error tolerance \nomunit{-}\nomeqref {6.6}|nompageref}{16}
+\nomenclatureentry{Ra7$\mathbf{X}$@[{$\mathbf{X}$}]\begingroup State vector \nomunit{-}\nomeqref {5.0}|nompageref}{13}
+\nomenclatureentry{Ra6$x_{n}$@[{$x_{n}$}]\begingroup n$^{th}$ variable \nomunit{-}\nomeqref {5.0}|nompageref}{13}
+\nomenclatureentry{Ra2$T_{n,k}$@[{$T_{n,k}$}]\begingroup Truncation error \nomunit{-}\nomeqref {5.0}|nompageref}{13}
+\nomenclatureentry{G3$\eta$@[{$\eta$}]\begingroup Step multiplication factor \nomunit{-}\nomeqref {5.6}|nompageref}{15}
+\nomenclatureentry{G6$\tau$@[{$\tau$}]\begingroup Local error tolerance \nomunit{-}\nomeqref {5.6}|nompageref}{15}
