@@ -47,23 +47,23 @@
 \contentsline {subsection}{\numberline {6.3.5}Final circularisation}{36}{subsection.6.3.5}
 \contentsline {subsection}{\numberline {6.3.6}Comparison}{36}{subsection.6.3.6}
 \contentsline {chapter}{\numberline {7}Verification and validation}{39}{chapter.7}
-\contentsline {section}{\numberline {7.1}Interpolation}{39}{section.7.1}
-\contentsline {section}{\numberline {7.2}\acs {RK4} and \acs {RKF} integrators}{39}{section.7.2}
-\contentsline {section}{\numberline {7.3}\acl {TSI}}{40}{section.7.3}
-\contentsline {section}{\numberline {7.4}Complete trajectory propagation}{40}{section.7.4}
-\contentsline {section}{\numberline {7.5}Optimiser}{40}{section.7.5}
-\contentsline {section}{\numberline {7.6}Complete optimisation tool}{40}{section.7.6}
-\contentsline {chapter}{\numberline {8}Results}{41}{chapter.8}
-\contentsline {chapter}{\numberline {9}Analysis}{42}{chapter.9}
-\contentsline {chapter}{\numberline {10}Conclusions and recommendations}{43}{chapter.10}
-\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{44}{appendix.A}
-\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{48}{appendix.B}
-\contentsline {section}{\numberline {B.1}Temperature}{48}{section.B.1}
-\contentsline {section}{\numberline {B.2}Density}{48}{section.B.2}
-\contentsline {chapter}{\numberline {C}Program file definitions}{54}{appendix.C}
-\contentsline {chapter}{\numberline {D}All Recurrence Relations}{55}{appendix.D}
-\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{55}{section.D.1}
-\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{58}{section.D.2}
-\contentsline {section}{\numberline {D.3}Spherical case}{60}{section.D.3}
-\contentsline {chapter}{Bibliography}{63}{appendix*.55}
+\contentsline {section}{\numberline {7.1}\acs {RK4} and \acs {RKF} integrators}{39}{section.7.1}
+\contentsline {section}{\numberline {7.2}\acl {TSI}}{40}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Auxiliary equations, derivatives and functions}{40}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Computing the Taylor Series coefficients and the updated state}{40}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Next step-size}{41}{subsection.7.2.3}
+\contentsline {section}{\numberline {7.3}Complete trajectory propagation}{41}{section.7.3}
+\contentsline {chapter}{\numberline {8}Results}{42}{chapter.8}
+\contentsline {chapter}{\numberline {9}Analysis}{43}{chapter.9}
+\contentsline {chapter}{\numberline {10}Conclusions and recommendations}{44}{chapter.10}
+\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{45}{appendix.A}
+\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{49}{appendix.B}
+\contentsline {section}{\numberline {B.1}Temperature}{49}{section.B.1}
+\contentsline {section}{\numberline {B.2}Density}{49}{section.B.2}
+\contentsline {chapter}{\numberline {C}Program file definitions}{55}{appendix.C}
+\contentsline {chapter}{\numberline {D}All Recurrence Relations}{56}{appendix.D}
+\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{56}{section.D.1}
+\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{59}{section.D.2}
+\contentsline {section}{\numberline {D.3}Spherical case}{61}{section.D.3}
+\contentsline {chapter}{Bibliography}{64}{appendix*.54}
 \contentsfinish 

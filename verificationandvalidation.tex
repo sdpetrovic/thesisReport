@@ -1,19 +1,15 @@
-\chapter{Verification and validation} %Last updated 10-03-2016
+\chapter{Verification and validation} 
+%Last updated 10-03-2016
+% Updated 21-10-2016 Got rid of optimisation and added to RKF. Also wrote the TSI part but should still focus on the change in models when writing the complete tool verification and validation including the different test cases.
 \label{ch:verificationandvalidation}
-Verification is the process of determining whether a program meets the requirements or not. Is it working the way it is suppose to? As soon as it works and produces output (verified), these outputs can be compared to other data from which it is known that it is correct. This is called validation. If a program is verified and validated, the outputs should be correct. Fortunately, all the existing software has already been validated, which means that they only still have to be verified to make sure everything is working properly on the simulation computer. Each of the software packages comes with tests which can be used to do this. If all the tests are passed it means that the software is verified for the computer and ready to use. Since \ac{Tudat} shipped with Eigen and Boost, the \ac{Tudat} test files also test these libraries. All the test were passed, which means that the \ac{Tudat}, Eigen and Boost libraries are working properly. However, because the integrators are an intricate part of this thesis, it was decided to perform a separate verification for the Runge-Kutta integrators. This verification is described in \Cref{sec:rkandrkfver}. Similarly, \ac{PaGMO} was verified using its test files.
-
-\textbf{\textcolor{red}{SNOPT verification still has to be done and added!! As soon as I can get it to work....}}
+Verification is the process of determining whether a program meets the requirements or not. Is it working the way it is suppose to? As soon as it works and produces output (verified), these outputs can be compared to other data from which it is known that it is correct. This is called validation. If a program is verified and validated, the outputs should be correct. Fortunately, all the existing software has already been validated, which means that they only still have to be verified to make sure everything is working properly on the simulation computer. Each of the software packages comes with tests which can be used to do this. If all the tests are passed it means that the software is verified for the computer and ready to use. Since \ac{Tudat} shipped with Eigen and Boost, the \ac{Tudat} test files also test these libraries. All the tests were passed, which means that the \ac{Tudat}, Eigen and Boost libraries are working properly. However, because the integrators are an intricate part of this thesis, it was decided to perform a separate verification for the Runge-Kutta integrators. This verification is described in \Cref{sec:rkandrkfver}.
 
  Mars-\ac{GRAM} also came with its own verification test, where three delivered output files had to be replicated. These verification tests were also successful. 
 
 
-\section{Interpolation}
-\label{sec:intver}
-
-
 \section{\acs{RK4} and \acs{RKF} integrators}
 \label{sec:rkandrkfver}
-The tutorial page of the \ac{Tudat} website \citep{dirkx2016tudat} offers two integration tutorials: one involving \ac{RK4} and another involving variable step-size Runge-Kutta methods including \ac{RKF45}. The objective of the tutorial is to get familiar with the different integration methods available in \ac{Tudat}. At the same time, a small data table has to be reproduced, which also serves as a verification test. For each of the integrators the same problem was addressed: the computation of the velocity of a falling body after a certain amount of time assuming no drag. The results that had to be reproduced are presented in \Cref{tab:intverdat}.
+The tutorial page of the \ac{Tudat} website \citep{dirkx2016tudat} offers two integration tutorials: one involving \ac{RK4} and another involving variable step-size Runge-Kutta methods including \ac{RKF}. The objective of the tutorial is to get familiar with the different integration methods available in \ac{Tudat}. At the same time, a small data table has to be reproduced, which also serves as a verification test. For each of the integrators the same problem was addressed: the computation of the velocity of a falling body after a certain amount of time assuming no drag. The results that had to be reproduced are presented in \Cref{tab:intverdat}.
 
 
 \begin{table}[!ht]
@@ -28,30 +24,48 @@ The tutorial page of the \ac{Tudat} website \citep{dirkx2016tudat} offers two in
 \end{center}
 \end{table}
 
-The first script was written using the instructions from the tutorial and is called numericalintegrators.cpp. This script uses the rungeKutta4Integrator.h header file and the RungeKutta4IntegratorXd function from this header file. This function requires three inputs: the state derivative function (problem specific), en initial time and the initial state. Using the .integrateTo extension the end state at a certain end time can be integrated. This requires the end time and the step-size. For \ac{RK4} the step-size is constant. This resulted in the same values as presented in \Cref{tab:intverdat}.\\
+The first script was written using the instructions from the tutorial and is called numericalintegrators.cpp. This script uses the rungeKutta4Integrator.h header file and the RungeKutta4IntegratorXd function from this header file. This function requires three inputs: the state derivative function (problem specific), the initial time and the initial state. Using the .integrateTo extension the end state at a certain end time can be computed. This requires the end time and the step-size. For \ac{RK4} the step-size is constant. This resulted in the same values as presented in \Cref{tab:intverdat}.\\
 
-The second script was used to test the variable step-size integrators (including \ac{RKF45}). This script is called rungekuttavariable.cpp and uses the rungeKuttaCoefficients.h and rungeKuttaVariableStepSizeIntegrator.h header files. In this case the RungeKuttaVariableStepSizeIntegratorXd function was used which requires the Runge-Kutta coefficients (from the respective header file), the state derivative function, the initial time, initial state, zero minimum step-size, infinite maximum step-size, relative tolerance and the absolute tolerance as inputs. In this case the integration can be done in individual steps using .performIntegrationStep with the current step-size as the only input. The current step-size is computed in the integration method itself, but in this case it is checked to make sure that the step-size does not take the function beyond the specified end time. The integration steps are then repeated until the end time is met. Running this script resulted in the same results as presented in \Cref{tab:intverdat} as well. \\
+The second script was used to test the variable step-size integrators \ac{RKF}. This script is called rungekuttavariable.cpp and uses the rungeKuttaCoefficients.h and rungeKuttaVariableStepSizeIntegrator.h header files. In this case the RungeKuttaVariableStepSizeIntegratorXd function was used which requires the Runge-Kutta coefficients (from the respective header file), the state derivative function (problem specific), the initial time, initial state, zero minimum step-size, infinite maximum step-size, relative tolerance and the absolute tolerance as inputs. In this case the integration can be done in individual steps using .performIntegrationStep with the current step-size as the only input. The current step-size is computed in the integration method itself, but in this case it is checked to make sure that the step-size does not take the function beyond the specified end time. The integration steps are then repeated until the end time is met. Running this script resulted in the same results as presented in \Cref{tab:intverdat} as well. \\
 
-These results, combined with the fact that the test files for these two methods produced no errors is proof that they are working accordingly. Thus it can be said that the standard integration methods used in this thesis are verified and ready for use in the optimisation tool. However, during the development of the trajectory propagation tools, the entire tool (including the integrators) will be verified again to determine the performance of the integrators.
+These results, combined with the fact that the test files for these two methods produced no errors is proof that they are working accordingly. Thus it can be said that the standard integration methods used in this thesis are verified and ready for use in the simulation tool. However, during the development of the trajectory propagation tools, the entire tool (including the integrators) will be verified again to determine the performance of the integrators.
+
+For the actual propagation tool, the \ac{RKF} method required the state derivative function associated with this particular ascent problem. The state derivative class was constructed using the state derivative functions as described in this thesis in the Cartesian coordinate system based on equations provided by \cite{mooij1994motion}. The state is used to compute the required transformation angles first and then both the thrust and drag accelerations are transformed to the inertial frame. There they are combined with the gravitational acceleration resulting in the accelerations in the x-, y- and z-direction. This class was tested by itself by inputting certain values which would result in known outcomes. And those simple values by themselves provided the expected results. Later the state derivative function was combined with the \ac{RKF} integrator in the trajectory propagation tool and verified again as will be described in \Cref{sec:propverval}. 
 
 
-
+The verification of the state derivative class took approximately one day. 
 
 
 
 \section{\acl{TSI}}
 \label{sec:tsiverval}
+In this section, the verification and validation of the \ac{TSI} header and source file is described. This was done for each of the blocks shown in \Cref{fig:TSI_Propagator}. For the verification it was important that the running of the different classes and header/source files did not produce any obvious errors. For the validation, the results were often checked against manual calculations and expected behaviour. The verification and validation of \ac{TSI} was a very lengthy process and required many rewrites of the used equations because of mistakes in the model or mistakes in the derivations. \Cref{sec:propverval} talks a bit more about the model mistakes. This section has been divided into several subsections which showed similar issues during the verification and validation.
+
+\subsection{Auxiliary equations, derivatives and functions}
+\label{subsec:auxEqDerFunverval}
+As shown by \Cref{fig:TSI_Propagator} the first step in the \ac{TSI} is to compute the auxiliary equations, derivatives and functions. The computation, in theory, are fairly straightforward, however it is really easy to make a mistake. During the initial verification of these different classes the outcomes were checked against simple manual solutions. Thus, provided a certain input, the output was known. This was an easy way to check any coding errors. Since the early versions of the code required a lot of equations, it took a long time to go through all the equations and find all the errors and mistakes. This was initially done with the combination of Cartesian coordinates and spherical transformation angles, however, later on more efficient equations were used for separate Cartesian and spherical cases. This also made it easier to identify mistakes in the equations and understand certain issues found during the validation process. 
+
+\subsection{Computing the Taylor Series coefficients and the updated state}
+\label{subsec:TaySerCoefverval}
+Once the auxiliary classes were verified, the Taylor Series coefficients could be computed using the basic recurrence relations and the full set of recurrence relations. For the Taylor Series coefficients it is important that they show a decreasing number series for each of the coefficients. This was the desired outcome that was used for the verification of the full set of recurrence relations. The basic recurrence relations were all checked by hand calculations to determine if they indeed worked the way that they were suppose to. The verified basic recurrence relations were used to verify the full set of recurrence relations. This class consists of the equations mentioned in \Cref{app:appendixD-allRecurrenceRelations}. When writing the full set of recurrence relations, it is really easy to make mistakes and there are a lot of rules that have to be taken into account as mentioned in \Cref{ch:tsi}. Therefore, a lot of time was spend on rewriting these equations in such a way that the outcomes were what was expected. Also, a number of these recurrence relations were checked by manual calculations. An often recurring problem was that the Taylor Series coefficients would show a diverging behaviour where the coefficient would keep increasing to infinity (theoretically). This was often an indication that a writing mistake was made when setting up the full set of recurrence relations. Another easy way to identify mistakes during the validation process was to compute the next state. Should an error occur in the computation of the Taylor Series coefficients, this would usually result in very large increases in the state even if the coefficient itself would be relatively small. Then following the trail back to the smallest change in Taylor Series coefficient, often a coding or writing mistake could be identified in the full set of recurrence relations. 
+
+\subsection{Next step-size}
+\label{subsec:nextStepSizeverval}
+Fortunately, the step-size class was not a very large class and took less time to verify and validate. Provided a set of Taylor Series coefficients, the step-size class could be tested separately from the other files. The verification process was rather straight forward; the class should be able to provide a step-size estimate given the different input values. Also, when similar sets of Taylor Series coefficients were used, the output step-sizes should be rather similar. This was then also part of the validation process. A pure validation process was difficult because there were no reference Taylor series coefficients available, however an estimate for the order of the next step-size could be used. This can however still be improved. Two different step-size determination methods were tested, but in the end it was found that the direct method described by \cite{scott2008high} and \cite{bergsma2015application} showed more reasonable results and was easier to implement. Also, during the verification process, the iteration method failed to work properly which led to unusable results and the program failing. But the direct method worked very well.
+
+
+
 
 \section{Complete trajectory propagation}
 \label{sec:propverval}
 
+Each element was tested separately by activating (or deactivating) the gravity, thrust and drag as well as the rotation of Mars. In each case, simple test cases were used to verify the class, such as: vertical drops from a certain altitude, thrusting in a known direction and flying parabolic trajectories. This was all done in each of the axis directions first and then combining the different axes. First the gravity was tested, then the thrust, then a combination of these two, followed by the drag all in the non-rotating case. The same was then done for the rotating case as well. 
 
-
-\section{Optimiser}
-\label{sec:optver}
-
-
-\section{Complete optimisation tool}
-\label{sec:opttoolverval}
+%\section{Optimiser}
+%\label{sec:optver}
+%
+%
+%\section{Complete optimisation tool}
+%\label{sec:opttoolverval}
 
 
