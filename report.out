@@ -42,16 +42,22 @@
 \BOOKMARK [2][-]{subsection.7.2.2}{Computing the Taylor Series coefficients and the updated state}{section.7.2}% 42
 \BOOKMARK [2][-]{subsection.7.2.3}{Next step-size}{section.7.2}% 43
 \BOOKMARK [1][-]{section.7.3}{Complete trajectory propagation}{chapter.7}% 44
-\BOOKMARK [0][-]{chapter.8}{Results}{}% 45
-\BOOKMARK [0][-]{chapter.9}{Analysis}{}% 46
-\BOOKMARK [0][-]{chapter.10}{Conclusions and recommendations}{}% 47
-\BOOKMARK [0][-]{appendix.A}{Mars-GRAM 2005 input file}{}% 48
-\BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 49
-\BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 50
-\BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 51
-\BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 52
-\BOOKMARK [0][-]{appendix.D}{All Recurrence Relations}{}% 53
-\BOOKMARK [1][-]{section.D.1}{First Cartesian case: Euler angles}{appendix.D}% 54
-\BOOKMARK [1][-]{section.D.2}{Second Cartesian case: unit vectors}{appendix.D}% 55
-\BOOKMARK [1][-]{section.D.3}{Spherical case}{appendix.D}% 56
-\BOOKMARK [0][-]{appendix*.54}{Bibliography}{}% 57
+\BOOKMARK [2][-]{subsection.7.3.1}{Phase 1: RKF propagation}{section.7.3}% 45
+\BOOKMARK [2][-]{subsection.7.3.2}{Phase 2: both RKF and TSI}{section.7.3}% 46
+\BOOKMARK [2][-]{subsection.7.3.3}{Phase 3: three different models for TSI}{section.7.3}% 47
+\BOOKMARK [2][-]{subsection.7.3.4}{Phase 4: one final TSI model}{section.7.3}% 48
+\BOOKMARK [2][-]{subsection.7.3.5}{Phase 5: coasting and circularisation}{section.7.3}% 49
+\BOOKMARK [2][-]{subsection.7.3.6}{Phase 6: tool validation}{section.7.3}% 50
+\BOOKMARK [0][-]{chapter.8}{Results}{}% 51
+\BOOKMARK [0][-]{chapter.9}{Analysis}{}% 52
+\BOOKMARK [0][-]{chapter.10}{Conclusions and recommendations}{}% 53
+\BOOKMARK [0][-]{appendix.A}{Mars-GRAM 2005 input file}{}% 54
+\BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 55
+\BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 56
+\BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 57
+\BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 58
+\BOOKMARK [0][-]{appendix.D}{All Recurrence Relations}{}% 59
+\BOOKMARK [1][-]{section.D.1}{First Cartesian case: Euler angles}{appendix.D}% 60
+\BOOKMARK [1][-]{section.D.2}{Second Cartesian case: unit vectors}{appendix.D}% 61
+\BOOKMARK [1][-]{section.D.3}{Spherical case}{appendix.D}% 62
+\BOOKMARK [0][-]{appendix*.54}{Bibliography}{}% 63
