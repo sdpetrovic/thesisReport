@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{10}%
+\begin{thebibliography}{12}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -144,4 +144,20 @@
   {address} {Delft University of Technology} (\bibinfo {year} {2010}),\
   \bibinfo {note} {[Internal publication] Course: Astrodynamics-II}\BibitemShut
   {NoStop}%
+\bibitem [{\citenamefont {Woolley}(2015)}]{woolley2015simple}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~C.}\ \bibnamefont
+  {Woolley}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{A simple
+  analytic model for estimating Mars Ascent Vehicle mass and performance}},}\
+  }in\ \href@noop {} {\emph {\bibinfo {booktitle} {{2015 IEEE Aerospace
+  Conference}}}}\ (\bibinfo {year} {2015})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Benito}\ and\ \citenamefont
+  {Johnson}(2016)}]{benito2016trajectory}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Benito}}\ and\ \bibinfo {author} {\bibfnamefont {B.~J.}\ \bibnamefont
+  {Johnson}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Trajectory
+  Optimization for a Mars Ascent Vehicle}},}\ }in\ \href@noop {} {\emph
+  {\bibinfo {booktitle} {{AIAA/AAS Astrodynamics SPecialist Conference}}}}\
+  (\bibinfo {year} {2016})\BibitemShut {NoStop}%
 \end{thebibliography}%

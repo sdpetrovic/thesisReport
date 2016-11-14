@@ -1,0 +1,57 @@
+\chapter{Proposed sensitivity analysis} 				
+% File created 11-11-2016
+\label{app:appendixE-proposedSensitivityAnalysis}
+
+The purpose of the sensitivity analysis is to determine the effects of the different parameters on the performance and the outcome of the program. The different test cases to determine these effects are described in \Cref{tab:testCases1,tab:testCases2}. The parameter cases that I give the most priority to are mentioned in \Cref{tab:testCases1} and then in decreasing order of priority in \Cref{tab:testCases2}. The accuracy will always be compared to the nominal case. The differences are compared to the different cases per parameter. All cases are also computed for \ac{RKF} and compared to the \ac{TSI} results. For comparison purposes, a similar integration cut-off requirement is used for the different test cases (might vary per parameter though).
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Test cases for the sensitivity analysis}
+\label{tab:testCases1}
+\begin{tabular}{|p{4cm}|p{6cm}|p{6cm}|}
+\hline 
+\textbf{Influencing parameter} & \textbf{Test case(s)} & \textbf{Focus for comparison}  \\ \hline 
+Maximum \ac{TSI} order & Change the order from 2 till 30 (or higher depending on accuracy of computer). & Number of function evaluations required per order. Accuracy of the corresponding results. Speed of convergence. \\ \hline
+Error tolerance & Vary from 1$\cdot$10$^{-5}$ to 1$\cdot$10$^{-14}$ with steps of 1 order & Number of function evaluations required per error tolerance. Accuracy of the corresponding results. Speed of convergence. \\ \hline
+Initial \ac{TSI} step-size & Vary from 1$\cdot$10$^{-4}$ to 1 second. 10 steps per order. & Number of function evaluations required per step-size. Accuracy of the corresponding results. Speed of convergence. \\ \hline
+
+Launch altitude & Between -0.6 and 0.5 km \ac{MOLA}. Vary by 100 m each step. & Difference in propellant mass requirements. Difference in final state. Number of function evaluations required per altitude. \\ \hline
+Launch latitude & From -90$^{\circ}$ to 90$^{\circ}$ with 20$^{\circ}$ steps. In combination with different longitudes creating different launch positions on Mars. & Difference in propellant mass requirements. Difference in final state. Number of function evaluations required per site. Accuracy of the corresponding results. \\ \hline
+Launch longitude & From 0$^{\circ}$ to 330$^{\circ}$ with 30$^{\circ}$ steps. In combination with different longitudes creating different launch positions on Mars & Difference in propellant mass requirements. Difference in final state. Number of function evaluations required per site. Accuracy of the corresponding results. \\ \hline
+
+\ac{RKF} initiator time & Vary from 0.1 to 2 second with steps of 0.1 seconds. & Number of function evaluations required per case. Accuracy of the corresponding results. Speed of convergence. \\ \hline
+
+ 
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Test cases for the sensitivity analysis continued}
+\label{tab:testCases2}
+\begin{tabular}{|p{4cm}|p{6cm}|p{6cm}|}
+\hline 
+\textbf{Influencing parameter} & \textbf{Test case(s)} & \textbf{Focus for comparison}  \\ \hline 
+
+Launch \ac{FPA} & Vary from 0$^{\circ}$ to 90$^{\circ}$ with steps of 5$^{\circ}$. & Difference in propellant mass requirements. Difference in final state. Number of function evaluations required per angle. Accuracy of the corresponding results.  \\ \hline
+Launch heading angle & Vary from 0$^{\circ}$ to 330$^{\circ}$ with steps of 30$^{\circ}$. & Difference in propellant mass requirements. Difference in final state. Number of function evaluations required per angle. Accuracy of the corresponding results. \\ \hline
+Launch ground velocity & Vary from 1$\cdot$10$^{-6}$ to 0.1 km/s with steps of one order. & Difference in propellant mass requirements. Difference in final state. Number of function evaluations required per angle. Accuracy of the corresponding results. \\ \hline
+
+\ac{MAV} \ac{GLOM} & Test range of masses as provided in the literature study based on the different reference \ac{MAV}'s. & Difference in propellant mass requirements. Difference in final state. Accuracy of the corresponding results. \\ \hline
+Thrust & Test range of thrust values as provided in the literature study based on the different reference \ac{MAV}'s. & Difference in propellant mass requirements. Difference in final state. Accuracy of the corresponding results. \\ \hline
+Specific impulse & Test a range of solid, hybrid and liquid specific impulses corresponding to the reference \ac{MAV}'s.  & Difference in propellant mass requirements. Difference in final state. Accuracy of the corresponding results. \\ \hline
+Burn time & Selected variation from the nominal test burn time. Both less and more time. Cut-off for integration set same altitude each time reachable by lowest burn time case. & Number of function evaluations per altitude. \\ \hline
+
+Thrust elevation angle & Depending on the test case used, vary the angle by 50\% in each direction. Can be combined with the thrust azimuth angle to show combined impact. & Difference in propellant mass requirements. Difference in final state.  \\ \hline
+Thrust azimuth angle & Depending on the test case used, vary the angle by 50\% in each direction. Can be combined with the thrust elevation angle to show combined impact. & Difference in propellant mass requirements. Difference in final state. \\ \hline
+
+
+
+Final orbit altitude & Vary from 250 km \ac{MOLA} to 500 km \ac{MOLA} with steps of 25 km \ac{MOLA}. Possibly in combination with different burn times. & Difference in propellant mass requirements. Number of function evaluations per altitude. \\ \hline
+Final orbit inclination & Vary from 0$^{\circ}$ to 160$^{\circ}$ with steps of 20$^{\circ}$. & Difference in propellant mass requirements. Number of function evaluations per altitude. \\ \hline
+
+\end{tabular}
+\end{center}
+\end{table}
