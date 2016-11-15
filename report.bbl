@@ -50,6 +50,14 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{\citenamefont {Mooij}(1994)}]{mooij1994motion}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Mooij}},\ }\href
+  {http://repository.tudelft.nl/assets/uuid:e5fce5a0-7bce-4d8e-8249-e23293edbb55/LR-768.pdf}
+  {\emph {\bibinfo {title} {The motion of a vehicle in a planetary
+  atmosphere}}}\ (\bibinfo  {publisher} {Delft University Press},\ \bibinfo
+  {address} {Delft},\ \bibinfo {year} {1994})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Whitehead}(2004)}]{whitehead2004mars}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
@@ -92,14 +100,6 @@
   University of Technology} (\bibinfo {year} {2013}),\ \bibinfo {note}
   {[Internal publication] Course: Mission Geometry and Orbit
   Design}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Mooij}(1994)}]{mooij1994motion}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Mooij}},\ }\href
-  {http://repository.tudelft.nl/assets/uuid:e5fce5a0-7bce-4d8e-8249-e23293edbb55/LR-768.pdf}
-  {\emph {\bibinfo {title} {The motion of a vehicle in a planetary
-  atmosphere}}}\ (\bibinfo  {publisher} {Delft University Press},\ \bibinfo
-  {address} {Delft},\ \bibinfo {year} {1994})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Jorba}\ and\ \citenamefont
   {Zou}(2005)}]{jorba2005software}%
   \BibitemOpen

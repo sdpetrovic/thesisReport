@@ -1,5 +1,6 @@
 % Created 04-03-2016
 % Put the atmospheric graph and drag coefficient graph fit in 19-09-2016
+% 15-11-2016 add equations for state, state derivatives, gravity thrust and drag from early versions and used for RKF
 
 
 
@@ -9,15 +10,190 @@ The \ac{MAV} and the corresponding ascent can be modelled in many different ways
 
 \section{State and state derivatives}
 \label{sec:stateAndStateDerivatives}
+The general model is described in terms of the Cartesian state; position and velocity in the x-, y-, and z-direction and the mass. The notation is shown in \Cref{eq:stateModel}, where $m_{MAV}$ is the mass of the \ac{MAV} and the subscript $I$ refers to the inertial frame.
+
+\begin{align} \label{eq:stateModel}
+\mathbf{r}&=\begin{pmatrix}
+x_{I}\\
+y_{I}\\
+z_{I}\\
+\end{pmatrix}
+&
+\mathbf{V}&=\begin{pmatrix}
+V_{x_{I}} \\
+V_{y_{I}} \\
+V_{z_{I}}\\
+\end{pmatrix}
+&
+m_{MAV}&
+\end{align}
+
+In order to determine the next state, the change in the state parameters over time have to be computed. This is done by taking the time derivatives of the state as described by \Cref{eq:state_derivativesModel}.
+
+\begin{align} \label{eq:state_derivativesModel}
+\begin{split} 
+\dot{x}_{I}&=V_{x_{I}}\\
+\dot{y}_{I}&=V_{y_{I}}\\
+\dot{z}_{I}&=V_{z_{I}}
+\end{split} 
+&
+\begin{split}
+\ddot{x}_{I}&=\dot{V}_{x_{I}}=a_{x_{I}}\\
+\ddot{y}_{I}&=\dot{V}_{y_{I}}=a_{y_{I}}\\
+\ddot{z}_{I}&=\dot{V}_{z_{I}}=a_{z_{I}}
+\end{split}
+&
+\dot{m}_{MAV}=-\dfrac{T}{g_{0}I_{sp}}
+\end{align}
+
+From this point on, the subscript $I$ is omitted, because the state and the state derivatives are always presented in the inertial frame. If variables have to be presented in any other reference frame the corresponding subscripts will be provided and explained. The accelerations in the x-, y- and z-direction have three contributing components: gravitational acceleration, drag acceleration and thrust acceleration. In this model it is assumed that there is a homogeneous gravitational field acting on the point mass with a direction towards the centre of the inertial frame. The gravitational acceleration can therefore be directly expressed in the inertial frame. \\
+The drag is assumed to work in the opposite direction of the \ac{MAV} velocity vector, which in turn is assumed to be in the positive x-direction of the body frame associated with the \ac{MAV}. This way the \ac{MAV} velocity, or ground velocity, is acting through the nose of the ascent vehicle. The drag acceleration is therefore expressed in the body frame. This effect in the body frame has to be translated into an acceleration in the inertial frame. This can be done using transformation matrices. A traditional transformation matrix uses an Euler angle to rotate a coordinate frame in a certain reference frame to another. Using the proper Euler, or rotation, angles, the acceleration in the x-, y- and z-direction in the body frame can be transformed into acceleration components acting in the x-, y- and z-direction of the inertial frame. Once it is expressed in the inertial frame it can be added to the effect caused by the gravitational acceleration. \\
+It is also assumed that the nozzle of the \ac{MAV} engine can be pivoted in two different directions: the y-, and z-direction of the body frame. This means that the thrust acceleration is not acting directly in the body frame, but in what is called the propulsion frame. Because the nozzle can move in two directions, or rather pivot over two different angles, the thrust acceleration can be translated to the body frame using these two thrust angles. Once the thrust acceleration is expressed in the body frame, the same transformations that are used for the drag can be used to determine the thrust acceleration components in the inertial frame. \\
+
+Combining this in one equation then results in the expression for the acceleration vector as shown by \Cref{eq:accModel}. The subscript $G$ shows that the parameter is a function of the ground velocity. $\mathbb{T}$ stands for a transformation and the subscript determines the rotation axis. The parameter in the brackets for each transformation is the rotation angle. 
+
+\begin{multline} \label{eq:accModel}
+\begin{pmatrix}
+a_{x}\\
+a_{y}\\
+a_{z}\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+a_{x,Grav}\\
+a_{y,Grav}\\
+a_{z,Grav}\\
+\end{pmatrix}+
+\Bigg|_{\mathbf{I}}\mathbb{T}_{\mathbf{z}}\left(-\Omega_{M}t_{O}+\omega_{P}\right)\Bigg|_{\mathbf{R}}\mathbb{T}_{\mathbf{z}}\left(-\tau\right)\mathbb{T}_{\mathbf{y}}\left(\dfrac{\pi}{2}+\delta\right)\Bigg|_{\mathbf{V}}\mathbb{T}_{\mathbf{z}}\left(-\chi_{G}\right)\mathbb{T}_{\mathbf{y}}\left(-\gamma_{G}\right)\Bigg|_{\mathbf{B}}\left[
+\begin{pmatrix}
+a_{Drag}\\
+0\\
+0\\
+\end{pmatrix}
++  \right. \dots \\
+\dotsc
+ \left.
+\Bigg|_{\mathbf{B}}\mathbb{T}_{\mathbf{z}}\left(-\psi_{T}\right)\mathbb{T}_{\mathbf{y}}\left(-\epsilon_{T}\right)\Bigg|_{\mathbf{P}}
+\begin{pmatrix}
+a_{Thrust}\\
+0\\
+0\\
+\end{pmatrix}
+\right]
+\end{multline}
+
+The rotations required to go from the body frame to the inertial frame are all a function of the current state. Both thrust angles are an input value that is set by the user or the program. $-\Omega_{M}t_{O}+\omega_{P}$ represents the angle between the rotating frame and the inertial frame and consists of three parts. $\Omega_{M}$ is the rotational velocity of Mars around it's own axis, $t_{O}$ is the difference between the current time and the time at which the inertial frame was set on Mars, and $\omega_{P}$ is the angle between the x-axis of the inertial frame and the zero meridian at the time that the inertial frame was set on Mars. In this thesis the inertial frame is set at the beginning of the simulation (so at $t=0$, $t_{O}=0$) and is aligned with the rotating frame (so $\omega_{P}=0$). The transformation from the vertical to the rotating frame requires the latitude and longitude of the \ac{MAV}, which is a function of the current state. \cite{mooij1994motion} provides equations to determine the different rotation angles. These expressions can be used to compute the latitude and longitude as well as shown by \Cref{eq:latAndLong}.
+
+\begin{align} \label{eq:latAndLong}
+\begin{split} 
+r&=\sqrt{x^{2}+y^{2}+z^{2}}\\
+\delta&=\arcsin\left(\dfrac{z}{r}\right)
+\end{split} 
+&
+\begin{split}
+x_{R}&=\cos\left(\Omega_{M}t_{O}\right)x+\sin\left(\Omega_{M}t_{O}\right)y\\
+y_{R}&=-\sin\left(\Omega_{M}t_{O}\right)x+\cos\left(\Omega_{M}t_{O}\right)y\\
+\tau&=\text{atan2}\left(\dfrac{y_{R}}{x_{R}}\right)
+\end{split}
+\end{align}
+ 
+It can be seen that in order to compute the longitude in the rotating frame ($\tau$) the position of the \ac{MAV} in the rotating frame was required. This position was found by transforming the inertial position to the rotational position using $\Omega_{M}t_{O}$ as described before. Working out that transformation matrix results in the sines and cosines presented in \Cref{eq:latAndLong}.\\
+
+Similarly, the flight-path angle and the azimuth angle can be described as a function of the current state. For this, some intermediate parameters have to be computed first and are given by \Cref{eq:intermediateParameters}.
+
+\begin{equation} \label{eq:intermediateParameters}
+\begin{split}
+V_{I}=&\sqrt{V_{x}^{2}+V_{y}^{2}+V_{z}^{2}}\\
+V_{G}=&\sqrt{V_{I}^{2}+\Omega_{M}^{2}\left(x^{2}+y^{2}\right)+2\Omega_{M}\left(xy-yx\right)}\\
+V_{x,V}=&\left(V_{x}+\Omega_{M}y\right)\cdot \left(\sin\left(\delta\right)\sin\left(\Omega_{M}t_{O}\right)\sin\left(\tau\right)-\cos\left(\Omega_{M}t_{O}\right)\cos\left(\tau\right)\sin\left(\delta	\right)\right)+\\
+&\left(V_{y}-\Omega_{M}x\right)\cdot \left(-\cos\left(\tau\right)\sin\left(\delta\right)\sin\left(\Omega_{M}t_{O}\right)-\cos\left(\Omega_{M}t_{O}\right)\sin\left(\delta\right)\sin\left(\tau\right)\right)+V_{z}\cos\left(\delta\right)\\
+V_{y,V}=&\left(V_{x}+\Omega_{M}y\right)\cdot \left(-\cos\left(\tau\right)\sin\left(\Omega_{M}t_{O}\right)-\cos\left(\Omega_{M}t_{O}\right)\sin\left(\tau\right)\right)+\\
+&\left(V_{y}-\Omega_{M}x\right)\cdot \left(\cos\left(\Omega_{M}t_{O}\right)\cos\left(\tau\right)-\sin\left(\Omega_{M}t_{O}\right)\sin\left(\tau\right)\right)\\
+V_{z,V}=&\left(V_{x}+\Omega_{M}y\right)\cdot \left(\cos\left(\delta\right)\sin\left(\Omega_{M}t_{O}\right)\sin\left(\tau\right)-\cos\left(\Omega_{M}t_{O}\right)\cos\left(\tau\right)\cos\left(\delta	\right)\right)+\\
+&\left(V_{y}-\Omega_{M}x\right)\cdot \left(-\cos\left(\tau\right)\cos\left(\delta\right)\sin\left(\Omega_{M}t_{O}\right)-\cos\left(\Omega_{M}t_{O}\right)\cos\left(\delta\right)\sin\left(\tau\right)\right)-V_{z}\sin\left(\delta\right)\\
+\end{split}
+\end{equation}
+
+Then the angles can be computed using those parameters as shown by \Cref{eq:fpaAndazimuth}.
+
+
+\begin{equation} \label{eq:fpaAndazimuth}
+\begin{split}
+\chi_{G}&=\text{atan2}\left(\dfrac{V_{y,V}}{V_{x,V}}\right)\\
+\gamma_{G}&=-\arcsin\left(\dfrac{V_{z,V}}{V_{G}}\right)\\
+\end{split}
+\end{equation}
+
+In this case, a transformation from the inertial frame to the vertical frame was required to get information on the velocity in the vertical frame. This transformation is written out at sines and cosines in \Cref{eq:intermediateParameters} resulting in lengthy expressions. \\
+
+Now that the rotation angles from the body frame to the inertial frame are known, only the thrust angles and the different accelerations have yet to be defined. This is done in the next sections.
+
 
 \section{Gravity}
 \label{sec:gravityModel}
+The gravity acceleration is a function of the position of the \ac{MAV} and the standard gravitational parameter of the planet, in this case Mars. Often, irregularities in the mass distribution of a planet also have to be taken into account ($J_{2,0}$ etc.), however, because the mission time is very short and the \ac{MAV} does not even complete one revolution around Mars, these effects can be neglected. Therefore, the gravitational acceleration in the inertial frame can be represented by \Cref{eq:gravityModel}.
+
+\begin{equation} \label{eq:gravityModel}
+\begin{pmatrix}
+a_{x,Grav}\\
+a_{y,Grav}\\
+a_{z,Grav}\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+-\mu_{M}\dfrac{x}{r^{3}}\\
+-\mu_{M}\dfrac{y}{r^{3}}\\
+-\mu_{M}\dfrac{z}{r^{3}}\\
+\end{pmatrix}
+\end{equation}
+
 
 \section{Thrust}
 \label{sec:thrustModel}
+The thrust acceleration in the propulsion frame is simply the thrust divided by the current mass of the \ac{MAV}, which can be written as shown by \Cref{eq:thrustModel}.
+
+\begin{equation} \label{eq:thrustModel}
+a_{Thrust}=\dfrac{T}{m_{MAV}}
+\end{equation}
+
+However, this acceleration has to be transformed to the body frame using the thrust angles. These thrust angles are the thrust elevation ($\epsilon_{T}$) and thrust azimuth ($\psi_{T}$) angle, and are defined in \Cref{fig:propframe_mooij1994motion}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8 \textwidth]{figures/reference_frames/propframe_mooij1994motion.jpg}
+\caption{Definition of the thrust elevation and thrust azimuth angle with respect to the body frame \citep{mooij1994motion}.}
+\label{fig:propframe_mooij1994motion}
+\end{figure}
+
+These angles will not be computed, but are set as an input for the program.
+
 
 \section{Drag}
 \label{sec:dragModel}
+The drag acceleration can be represented similarly to the thrust acceleration taking into account that the drag is acting in the negative x-direction in the body frame. The acceleration can then be written as \Cref{eq:dragModel}.
+
+\begin{equation} \label{eq:dragModel}
+a_{drag}=-\dfrac{D}{m_{MAV}}
+\end{equation}
+
+Here the drag is given by \Cref{eq:dragDragModel}.
+
+\begin{equation} \label{eq:dragDragModel}
+D=\dfrac{1}{2}\rho V_{G}^{2}SC_{D}
+\end{equation}
+
+Where $S$ is the reference area of the \ac{MAV} set by the user, $\rho$ is the air density which is a function of the altitude $h\left(=r-R_{MOLA}\right)$ and $C_{D}$ is the drag coefficient of the \ac{MAV} which is a function of the Mach number. The Mach number in turn is a function of the speed of sound, which depends on the air temperature as can be seen in \Cref{eq:machAndSpeedOfSound}.
+
+ \begin{equation} \label{eq:machAndSpeedOfSound}
+\begin{split}
+M &= \dfrac{V_{G}}{a} \\
+a &= \sqrt{\gamma_{a}R_{a}^{*}T_{a}} \quad \text{where} \quad R_{a}^{*}=\dfrac{R_{a}}{M_{a}} \\
+\end{split}
+\end{equation}
+
+The air pressure and temperature change as a function of the altitude of the \ac{MAV}. This means that a pressure and temperature model of the atmosphere of Mars will have to be used to approximate these values as the ascent vehicle moves through the atmosphere. This is done through a function fit of an atmospheric model, as is described in \Cref{subsec:atmofuncfit}.\\
+
+The drag coefficient changes with the Mach number, however, this change is not constant over the entire Mach range. Therefore, this also requires a function fit in order to be used in the simulation program. This fit is presented in \Cref{subsec:dragCoefFuncFit}.
 
 \subsection{Atmospheric graph function fit}
 \label{subsec:atmofuncfit}

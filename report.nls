@@ -3,17 +3,17 @@
  \nomgroup{G}
 
   \item [{$\eta$}]\begingroup Step multiplication factor \nomunit{-}\nomeqref {5.6}
-		\nompageref{16}
+		\nompageref{19}
   \item [{$\tau$}]\begingroup Local error tolerance \nomunit{-}\nomeqref {5.6}
-		\nompageref{16}
+		\nompageref{19}
 
  \nomgroup{R}
 
   \item [{$T_{n,k}$}]\begingroup Truncation error \nomunit{-}\nomeqref {5.0}
-		\nompageref{14}
+		\nompageref{17}
   \item [{$x_{n}$}]\begingroup n$^{th}$ variable \nomunit{-}\nomeqref {5.0}
-		\nompageref{14}
+		\nompageref{17}
   \item [{$\mathbf{X}$}]\begingroup State vector \nomunit{-}\nomeqref {5.0}
-		\nompageref{14}
+		\nompageref{17}
 
 \end{thenomenclature}
