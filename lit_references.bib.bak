@@ -236,6 +236,16 @@
   Timestamp                = {2015.12.03}
 }
 
+@Conference{benito2016trajectory,
+  Title                    = {{Trajectory Optimization for a Mars Ascent Vehicle}},
+  Author                   = {Joel Benito and Breanna J. Johnson},
+  Booktitle                = {{AIAA/AAS Astrodynamics SPecialist Conference}},
+  Year                     = {2016},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.11.10}
+}
+
 @Conference{benito2016mars,
   Title                    = {{Mars Ascent Vehicle Model Simulations}},
   Author                   = {Joel Benito and Conner D. Noyes and Justin J. Keenan},
@@ -677,11 +687,12 @@
 @Electronic{dirkx2016tudat,
   Title                    = {{TUDAT}},
   Author                   = {Dominic Dirkx and Kartik Kumar and Eelco Doornbos and Erwin Mooij and Ron Noomen},
-  Note                     = {[online database], URL: tudat.tudelft.nl [cited 8 March 2016] (Only available from the TU Delft network)},
+  Note                     = {[online database], URL: tudat.tudelft.nl [cited 8 March 2016]},
   Organization             = {Delft University of Technology},
   Url                      = {tudat.tudelft.nl},
   Year                     = {2016},
 
+  Comment                  = {Previously only available from the TU Delft network},
   Owner                    = {Stacha},
   Timestamp                = {2016.03.08}
 }
@@ -2777,6 +2788,20 @@
   Url                      = {http://download.springer.com/static/pdf/904/bok%253A978-3-540-31306-9.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Fbook%2F10.1007%2F3-540-31306-0&token2=exp=1445467588~acl=%2Fstatic%2Fpdf%2F904%2Fbok%25253A978-3-540-31306-9.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Fbook%252F10.1007%252F3-540-31306-0*~hmac=d94bbf02164d5916ec06f5885c6ea3f58a4161130b57ab05b6a1c90abe350d8f}
 }
 
+@InProceedings{prince1981high,
+  Title                    = {{High order embedded Runge-Kutta formulae}},
+  Author                   = {Prince, PJ and Dormand, JR},
+  Booktitle                = {{Journal of Computational and Applied Mathematics}},
+  Year                     = {1981},
+  Number                   = {1},
+  Pages                    = {67--75},
+  Publisher                = {Elsevier},
+  Volume                   = {7},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.11.16}
+}
+
 @Book{qing2009differential,
   Title                    = {{Differential Evolution: Fundamentals and Applications in Electrical Engineering}},
   Author                   = {Qing, Anyong},
@@ -3473,6 +3498,16 @@
 
   Owner                    = {Stacha},
   Timestamp                = {2015.07.26}
+}
+
+@Conference{weeks2007comparison,
+  Title                    = {{Comparison of Fixed and Variable Time Step Trajectory Integration Methods for Cislunar Trajectories}},
+  Author                   = {Weeks, M.W. and Thrasher, S.W.},
+  Booktitle                = {{AAS/AIAA Space Flight Mechanics Meeting}},
+  Year                     = {2007},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.11.16}
 }
 
 @Article{wercinski1996,

@@ -10,56 +10,64 @@
 \BOOKMARK [2][-]{subsection.3.4.1}{Atmospheric graph function fit}{section.3.4}% 10
 \BOOKMARK [2][-]{subsection.3.4.2}{Drag coefficient graph function fit}{section.3.4}% 11
 \BOOKMARK [0][-]{chapter.4}{Standard integration methods}{}% 12
-\BOOKMARK [0][-]{chapter.5}{Taylor series integration}{}% 13
-\BOOKMARK [1][-]{section.5.1}{General theory}{chapter.5}% 14
-\BOOKMARK [2][-]{subsection.5.1.1}{Workings of TSI}{section.5.1}% 15
-\BOOKMARK [2][-]{subsection.5.1.2}{Step-size}{section.5.1}% 16
-\BOOKMARK [1][-]{section.5.2}{Associated equations}{chapter.5}% 17
-\BOOKMARK [2][-]{subsection.5.2.1}{Cartesian equations, first case}{section.5.2}% 18
-\BOOKMARK [2][-]{subsection.5.2.2}{Cartesian equations, second case}{section.5.2}% 19
-\BOOKMARK [2][-]{subsection.5.2.3}{Spherical equations}{section.5.2}% 20
-\BOOKMARK [2][-]{subsection.5.2.4}{Recurrence relations}{section.5.2}% 21
-\BOOKMARK [0][-]{chapter.6}{Program simulation tool}{}% 22
-\BOOKMARK [1][-]{section.6.1}{Existing software}{chapter.6}% 23
-\BOOKMARK [2][-]{subsection.6.1.1}{Tudat}{section.6.1}% 24
-\BOOKMARK [2][-]{subsection.6.1.2}{Eigen}{section.6.1}% 25
-\BOOKMARK [2][-]{subsection.6.1.3}{Boost}{section.6.1}% 26
-\BOOKMARK [2][-]{subsection.6.1.4}{Mars-GRAM}{section.6.1}% 27
-\BOOKMARK [1][-]{section.6.2}{Developed software}{chapter.6}% 28
-\BOOKMARK [2][-]{subsection.6.2.1}{RKF propagator}{section.6.2}% 29
-\BOOKMARK [2][-]{subsection.6.2.2}{TSI propagator}{section.6.2}% 30
-\BOOKMARK [1][-]{section.6.3}{Completed simulation tool}{chapter.6}% 31
-\BOOKMARK [2][-]{subsection.6.3.1}{Initialisation}{section.6.3}% 32
-\BOOKMARK [2][-]{subsection.6.3.2}{Initial propagation}{section.6.3}% 33
-\BOOKMARK [2][-]{subsection.6.3.3}{Integrator burn phase}{section.6.3}% 34
-\BOOKMARK [2][-]{subsection.6.3.4}{Integrator coast phase}{section.6.3}% 35
-\BOOKMARK [2][-]{subsection.6.3.5}{Final circularisation}{section.6.3}% 36
-\BOOKMARK [2][-]{subsection.6.3.6}{Comparison}{section.6.3}% 37
-\BOOKMARK [0][-]{chapter.7}{Verification and validation}{}% 38
-\BOOKMARK [1][-]{section.7.1}{RK4 and RKF integrators}{chapter.7}% 39
-\BOOKMARK [1][-]{section.7.2}{Taylor Series integration}{chapter.7}% 40
-\BOOKMARK [2][-]{subsection.7.2.1}{Auxiliary equations, derivatives and functions}{section.7.2}% 41
-\BOOKMARK [2][-]{subsection.7.2.2}{Computing the Taylor Series coefficients and the updated state}{section.7.2}% 42
-\BOOKMARK [2][-]{subsection.7.2.3}{Next step-size}{section.7.2}% 43
-\BOOKMARK [1][-]{section.7.3}{Complete trajectory propagation}{chapter.7}% 44
-\BOOKMARK [2][-]{subsection.7.3.1}{Phase 1: RKF propagation}{section.7.3}% 45
-\BOOKMARK [2][-]{subsection.7.3.2}{Phase 2: both RKF and TSI}{section.7.3}% 46
-\BOOKMARK [2][-]{subsection.7.3.3}{Phase 3: three different models for TSI}{section.7.3}% 47
-\BOOKMARK [2][-]{subsection.7.3.4}{Phase 4: one final TSI model}{section.7.3}% 48
-\BOOKMARK [2][-]{subsection.7.3.5}{Phase 5: coasting and circularisation}{section.7.3}% 49
-\BOOKMARK [2][-]{subsection.7.3.6}{Phase 6: tool validation}{section.7.3}% 50
-\BOOKMARK [0][-]{chapter.8}{Results}{}% 51
-\BOOKMARK [0][-]{chapter.9}{Analysis}{}% 52
-\BOOKMARK [0][-]{chapter.10}{Conclusions and recommendations}{}% 53
-\BOOKMARK [0][-]{appendix.A}{Mars-GRAM 2005 input file}{}% 54
-\BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 55
-\BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 56
-\BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 57
-\BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 58
-\BOOKMARK [0][-]{appendix.D}{All Recurrence Relations}{}% 59
-\BOOKMARK [1][-]{section.D.1}{First Cartesian case: Euler angles}{appendix.D}% 60
-\BOOKMARK [1][-]{section.D.2}{Second Cartesian case: unit vectors}{appendix.D}% 61
-\BOOKMARK [1][-]{section.D.3}{Spherical case}{appendix.D}% 62
-\BOOKMARK [0][-]{appendix.E}{Proposed sensitivity analysis}{}% 63
-\BOOKMARK [0][-]{appendix.F}{Proposed schedule}{}% 64
-\BOOKMARK [0][-]{appendix*.71}{Bibliography}{}% 65
+\BOOKMARK [1][-]{section.4.1}{Different integrator types}{chapter.4}% 13
+\BOOKMARK [2][-]{subsection.4.1.1}{Single-step}{section.4.1}% 14
+\BOOKMARK [2][-]{subsection.4.1.2}{Multi-step}{section.4.1}% 15
+\BOOKMARK [1][-]{section.4.2}{Chosen method for comparison}{chapter.4}% 16
+\BOOKMARK [2][-]{subsection.4.2.1}{Tudat methods}{section.4.2}% 17
+\BOOKMARK [2][-]{subsection.4.2.2}{Methods used in previous research}{section.4.2}% 18
+\BOOKMARK [2][-]{subsection.4.2.3}{Chosen method}{section.4.2}% 19
+\BOOKMARK [1][-]{section.4.3}{Workings of RKF}{chapter.4}% 20
+\BOOKMARK [0][-]{chapter.5}{Taylor series integration}{}% 21
+\BOOKMARK [1][-]{section.5.1}{General theory}{chapter.5}% 22
+\BOOKMARK [2][-]{subsection.5.1.1}{Workings of TSI}{section.5.1}% 23
+\BOOKMARK [2][-]{subsection.5.1.2}{Step-size}{section.5.1}% 24
+\BOOKMARK [1][-]{section.5.2}{Associated equations}{chapter.5}% 25
+\BOOKMARK [2][-]{subsection.5.2.1}{Cartesian equations, first case}{section.5.2}% 26
+\BOOKMARK [2][-]{subsection.5.2.2}{Cartesian equations, second case}{section.5.2}% 27
+\BOOKMARK [2][-]{subsection.5.2.3}{Spherical equations}{section.5.2}% 28
+\BOOKMARK [2][-]{subsection.5.2.4}{Recurrence relations}{section.5.2}% 29
+\BOOKMARK [0][-]{chapter.6}{Program simulation tool}{}% 30
+\BOOKMARK [1][-]{section.6.1}{Existing software}{chapter.6}% 31
+\BOOKMARK [2][-]{subsection.6.1.1}{Tudat}{section.6.1}% 32
+\BOOKMARK [2][-]{subsection.6.1.2}{Eigen}{section.6.1}% 33
+\BOOKMARK [2][-]{subsection.6.1.3}{Boost}{section.6.1}% 34
+\BOOKMARK [2][-]{subsection.6.1.4}{Mars-GRAM}{section.6.1}% 35
+\BOOKMARK [1][-]{section.6.2}{Developed software}{chapter.6}% 36
+\BOOKMARK [2][-]{subsection.6.2.1}{RKF propagator}{section.6.2}% 37
+\BOOKMARK [2][-]{subsection.6.2.2}{TSI propagator}{section.6.2}% 38
+\BOOKMARK [1][-]{section.6.3}{Completed simulation tool}{chapter.6}% 39
+\BOOKMARK [2][-]{subsection.6.3.1}{Initialisation}{section.6.3}% 40
+\BOOKMARK [2][-]{subsection.6.3.2}{Initial propagation}{section.6.3}% 41
+\BOOKMARK [2][-]{subsection.6.3.3}{Integrator burn phase}{section.6.3}% 42
+\BOOKMARK [2][-]{subsection.6.3.4}{Integrator coast phase}{section.6.3}% 43
+\BOOKMARK [2][-]{subsection.6.3.5}{Final circularisation}{section.6.3}% 44
+\BOOKMARK [2][-]{subsection.6.3.6}{Comparison}{section.6.3}% 45
+\BOOKMARK [0][-]{chapter.7}{Verification and validation}{}% 46
+\BOOKMARK [1][-]{section.7.1}{RK4 and RKF integrators}{chapter.7}% 47
+\BOOKMARK [1][-]{section.7.2}{Taylor Series integration}{chapter.7}% 48
+\BOOKMARK [2][-]{subsection.7.2.1}{Auxiliary equations, derivatives and functions}{section.7.2}% 49
+\BOOKMARK [2][-]{subsection.7.2.2}{Computing the Taylor Series coefficients and the updated state}{section.7.2}% 50
+\BOOKMARK [2][-]{subsection.7.2.3}{Next step-size}{section.7.2}% 51
+\BOOKMARK [1][-]{section.7.3}{Complete trajectory propagation}{chapter.7}% 52
+\BOOKMARK [2][-]{subsection.7.3.1}{Phase 1: RKF propagation}{section.7.3}% 53
+\BOOKMARK [2][-]{subsection.7.3.2}{Phase 2: both RKF and TSI}{section.7.3}% 54
+\BOOKMARK [2][-]{subsection.7.3.3}{Phase 3: three different models for TSI}{section.7.3}% 55
+\BOOKMARK [2][-]{subsection.7.3.4}{Phase 4: one final TSI model}{section.7.3}% 56
+\BOOKMARK [2][-]{subsection.7.3.5}{Phase 5: coasting and circularisation}{section.7.3}% 57
+\BOOKMARK [2][-]{subsection.7.3.6}{Phase 6: tool validation}{section.7.3}% 58
+\BOOKMARK [0][-]{chapter.8}{Results}{}% 59
+\BOOKMARK [0][-]{chapter.9}{Analysis}{}% 60
+\BOOKMARK [0][-]{chapter.10}{Conclusions and recommendations}{}% 61
+\BOOKMARK [0][-]{appendix.A}{Mars-GRAM 2005 input file}{}% 62
+\BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 63
+\BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 64
+\BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 65
+\BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 66
+\BOOKMARK [0][-]{appendix.D}{All Recurrence Relations}{}% 67
+\BOOKMARK [1][-]{section.D.1}{First Cartesian case: Euler angles}{appendix.D}% 68
+\BOOKMARK [1][-]{section.D.2}{Second Cartesian case: unit vectors}{appendix.D}% 69
+\BOOKMARK [1][-]{section.D.3}{Spherical case}{appendix.D}% 70
+\BOOKMARK [0][-]{appendix.E}{Proposed sensitivity analysis}{}% 71
+\BOOKMARK [0][-]{appendix.F}{Proposed schedule}{}% 72
+\BOOKMARK [0][-]{appendix*.81}{Bibliography}{}% 73

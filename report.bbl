@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{12}%
+\begin{thebibliography}{26}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -67,6 +67,145 @@
   Joint Propulsion Conference and Exhibit}}}\ (\bibinfo  {publisher} {American
   Institude of Aeronautics and Astronautics},\ \bibinfo {year}
   {2004})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hofsteenge}(2013)}]{hofsteenge2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Hofsteenge}},\ }\emph {\bibinfo {title} {{Computational Methods for the
+  Long-Term Propagation of Space Debris Orbits}}},\ \href
+  {http://repository.tudelft.nl/view/ir/uuid%3Aeee70164-4c99-470d-b8ee-5314ffcf63f8/}
+  {Master's thesis},\ \bibinfo  {school} {Delft University of Technology}
+  (\bibinfo {year} {2013})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Milani}\ and\ \citenamefont
+  {Nobili}(1987)}]{milani1987}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Milani}}\ and\ \bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
+  {Nobili}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Integration
+  error over very long time spans}},}\ }in\ \href {\doibase 10.1007/BF01234550}
+  {\emph {\bibinfo {booktitle} {Celestial mechanics}}},\ Vol.~\bibinfo {volume}
+  {43}\ (\bibinfo  {publisher} {Springer},\ \bibinfo {year} {1987})\ pp.\
+  \bibinfo {pages} {1--34}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Noomen}(2013{\natexlab{a}})}]{noomen2013int}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Noomen}},\ }\href@noop {} {\textit {\bibinfo {title}
+  {ae4-878.integrators.v4-3},}\ }\bibinfo {howpublished} {Lecture slides, Delft
+  University of Technology} (\bibinfo {year} {2013}{\natexlab{a}}),\ \bibinfo
+  {note} {[Internal publication] Course: Mission Geometry and Orbit
+  Design}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Deuflhard}\ \emph {et~al.}(1994)\citenamefont
+  {Deuflhard}, \citenamefont {Nowak},\ and\ \citenamefont
+  {Poehle}}]{deuflhard1994}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Deuflhard}}, \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont {Nowak}}, \
+  and\ \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont {Poehle}},\ }\href
+  {http://elib.zib.de/pub/elib/codelib/difex2/readme} {\textit {\bibinfo
+  {title} {{Program Descriptions of ELib}},}\ } (\bibinfo {year} {1994}),\
+  \bibinfo {note} {[online database], URL:
+  http://elib.zib.de/pub/elib/codelib/difex2/readme [cited 30 October
+  2015]}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Montenbruck}(1992{\natexlab{a}})}]{montenbruck1992}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Montenbruck}},\ }\bibfield  {title} {\textit {\bibinfo {title} {Numerical
+  integration methods for orbital motion},}\ }in\ \href@noop {} {\emph
+  {\bibinfo {booktitle} {Celestial Mechanics and Dynamical Astronomy}}},\
+  Vol.~\bibinfo {volume} {53}\ (\bibinfo {year} {1992})\ pp.\ \bibinfo {pages}
+  {59--69}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dormand}\ \emph {et~al.}(1987)\citenamefont
+  {Dormand}, \citenamefont {El-Mikkawy},\ and\ \citenamefont
+  {Prince}}]{dormand1987}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Dormand}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {El-Mikkawy}},
+  \ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Prince}},\
+  }\bibfield  {title} {\textit {\bibinfo {title} {{Families of
+  Runge-Kutta-Nystrom formulae}},}\ }in\ \href
+  {http://imajna.oxfordjournals.org/content/7/2/235.full.pdf+html} {\emph
+  {\bibinfo {booktitle} {IMA Journal of Numerical Analysis}}},\ Vol.~\bibinfo
+  {volume} {7}\ (\bibinfo {year} {1987})\ pp.\ \bibinfo {pages}
+  {235--250}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fehlberg}(1969)}]{fehlberg1969}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Fehlberg}},\ }\href
+  {http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19690021375.pdf} {\emph
+  {\bibinfo {title} {{Low order classical Runge-Kutta formulas with stepwise
+  control}}}},\ \bibinfo {type} {Tech. Rep.}\ (\bibinfo  {institution}
+  {Marschall Space Flight Center, NASA},\ \bibinfo {year} {1969})\ \bibinfo
+  {note} {: NASA TR R-316}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fehlberg}(1968)}]{fehlberg1968}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Fehlberg}},\ }\href
+  {http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19680027281.pdf} {\emph
+  {\bibinfo {title} {{Classical fifth-, sixth-, seventh-, and eighth-order
+  Runge-Kutta formulas with stepsize control}}}},\ \bibinfo {type} {Tech.
+  Rep.}\ (\bibinfo  {institution} {Marschall Space Flight Center, NASA},\
+  \bibinfo {year} {1968})\ \bibinfo {note} {: NASA TR R-287}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Berry}(2004)}]{berry2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~M.}\ \bibnamefont
+  {Berry}},\ }\emph {\bibinfo {title} {{A Variable-Step Double-Integration
+  Multi-Step Integrator}}},\ \href
+  {http://scholar.lib.vt.edu/theses/available/etd-04282004-071227/unrestricted/dissertation.pdf}
+  {Ph.D. thesis},\ \bibinfo  {school} {Virginia Polytechnic Institute and State
+  University} (\bibinfo {year} {2004})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Meijaard}(1991)}]{meijaard1991}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Meijaard}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{A Comparison
+  of Numerical Integration Methods with a View to Fast Simulation of Mechanical
+  Dynamical Systems}},}\ }in\ \href
+  {http://link.springer.com/chapter/10.1007/978-3-642-76159-1_17} {\emph
+  {\bibinfo {booktitle} {Real-Time Integration Methods for Mechanical System
+  Simulation}}},\ Vol.~\bibinfo {volume} {69}\ (\bibinfo  {publisher}
+  {Springer},\ \bibinfo {year} {1991})\ pp.\ \bibinfo {pages}
+  {329--343}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ramos}\ and\ \citenamefont
+  {Vigo-Aguiar}(2005)}]{ramos2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Ramos}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Vigo-Aguiar}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Variable
+  stepsize St{\"o}rmer-Cowell methods}},}\ }in\ \href {\doibase
+  10.1016/j.mcm.2005.09.011} {\emph {\bibinfo {booktitle} {Mathematical and
+  Computer Modelling}}},\ Vol.~\bibinfo {volume} {42}\ (\bibinfo {year}
+  {2005})\ pp.\ \bibinfo {pages} {837--846}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dirkx}\ \emph {et~al.}(2016)\citenamefont {Dirkx},
+  \citenamefont {Kumar}, \citenamefont {Doornbos}, \citenamefont {Mooij},\ and\
+  \citenamefont {Noomen}}]{dirkx2016tudat}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Dirkx}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Kumar}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Doornbos}}, \bibinfo
+  {author} {\bibfnamefont {E.}~\bibnamefont {Mooij}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Noomen}},\ }\href {tudat.tudelft.nl}
+  {\textit {\bibinfo {title} {{TUDAT}},}\ } (\bibinfo {year} {2016}),\ \bibinfo
+  {note} {[online database], URL: tudat.tudelft.nl [cited 8 March
+  2016]}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Prince}\ and\ \citenamefont
+  {Dormand}(1981)}]{prince1981high}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Prince}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Dormand}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{High order
+  embedded Runge-Kutta formulae}},}\ }in\ \href@noop {} {\emph {\bibinfo
+  {booktitle} {{Journal of Computational and Applied Mathematics}}}},\
+  Vol.~\bibinfo {volume} {7}\ (\bibinfo  {publisher} {Elsevier},\ \bibinfo
+  {year} {1981})\ pp.\ \bibinfo {pages} {67--75}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Weeks}\ and\ \citenamefont
+  {Thrasher}(2007)}]{weeks2007comparison}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Weeks}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Thrasher}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Comparison of
+  Fixed and Variable Time Step Trajectory Integration Methods for Cislunar
+  Trajectories}},}\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {{AAS/AIAA
+  Space Flight Mechanics Meeting}}}}\ (\bibinfo {year} {2007})\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Scott}\ and\ \citenamefont
   {Martini}(2008)}]{scott2008high}%
   \BibitemOpen
@@ -77,7 +216,19 @@
   integration}},}\ }in\ \href {\doibase 10.2514/6.2008-6957} {\emph {\bibinfo
   {booktitle} {AIAA/AAS Astrodynamics Specialist Conference and Exhibit,
   Honolulu, Hawaii}}}\ (\bibinfo {year} {2008})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Montenbruck}(1992)}]{montenbruck1992numerical}%
+\bibitem [{\citenamefont {Bergsma}\ and\ \citenamefont
+  {Mooij}(2016)}]{bergsma2016application}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Bergsma}}\ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Mooij}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Application of
+  Taylor-Series Integration to Reentry Problems with Wind}},}\ }in\ \href@noop
+  {} {\emph {\bibinfo {booktitle} {{Journal of Guidance, Control, and
+  Dynamics}}}}\ (\bibinfo  {publisher} {{American Institute of Aeronautics and
+  Astronautics}},\ \bibinfo {year} {2016})\ pp.\ \bibinfo {pages}
+  {2324--2335}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont
+  {Montenbruck}(1992{\natexlab{b}})}]{montenbruck1992numerical}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
   {Montenbruck}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Numerical
@@ -92,13 +243,13 @@
   Series Integration to Reentry Problems}}},\ \href@noop {} {Master's thesis},\
   \bibinfo  {school} {Delft University of Technology} (\bibinfo {year}
   {2015})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Noomen}(2013)}]{noomen2013basic}%
+\bibitem [{\citenamefont {Noomen}(2013{\natexlab{b}})}]{noomen2013basic}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
   {Noomen}},\ }\href@noop {} {\textit {\bibinfo {title}
   {ae4-878.basics.v4-14},}\ }\bibinfo {howpublished} {Lecture slides, Delft
-  University of Technology} (\bibinfo {year} {2013}),\ \bibinfo {note}
-  {[Internal publication] Course: Mission Geometry and Orbit
+  University of Technology} (\bibinfo {year} {2013}{\natexlab{b}}),\ \bibinfo
+  {note} {[Internal publication] Course: Mission Geometry and Orbit
   Design}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Jorba}\ and\ \citenamefont
   {Zou}(2005)}]{jorba2005software}%
@@ -111,18 +262,6 @@
   {Experimental Mathematics}}},\ Vol.~\bibinfo {volume} {14}\ (\bibinfo
   {publisher} {Taylor \& Francis},\ \bibinfo {year} {2005})\ pp.\ \bibinfo
   {pages} {99--117}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Dirkx}\ \emph {et~al.}(2016)\citenamefont {Dirkx},
-  \citenamefont {Kumar}, \citenamefont {Doornbos}, \citenamefont {Mooij},\ and\
-  \citenamefont {Noomen}}]{dirkx2016tudat}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
-  {Dirkx}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Kumar}},
-  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Doornbos}}, \bibinfo
-  {author} {\bibfnamefont {E.}~\bibnamefont {Mooij}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {R.}~\bibnamefont {Noomen}},\ }\href {tudat.tudelft.nl}
-  {\textit {\bibinfo {title} {{TUDAT}},}\ } (\bibinfo {year} {2016}),\ \bibinfo
-  {note} {[online database], URL: tudat.tudelft.nl [cited 8 March 2016] (Only
-  available from the TU Delft network)}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Justh}\ and\ \citenamefont
   {Justus}(2008)}]{justus2008utilizing}%
   \BibitemOpen

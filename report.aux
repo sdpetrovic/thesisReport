@@ -36,6 +36,7 @@
 \acronymused{JPL}
 \acronymused{JPL}
 \acronymused{JPL}
+\acronymused{RKF}
 \acronymused{TSI}
 \acronymused{Tudat}
 \acronymused{GRAM}
@@ -119,6 +120,7 @@
 \newacro{RF}[\AC@hyperlink{RF}{RF}]{Frame of Reference}
 \newacro{RHR}[\AC@hyperlink{RHR}{RHR}]{Right-hand-rule}
 \newacro{RKF45}[\AC@hyperlink{RKF45}{RKF45}]{Runge-Kutta-Fehlberg 4$^{th}$ $\left (5^{th}\right )$ order}
+\newacro{RKF56}[\AC@hyperlink{RKF56}{RKF56}]{Runge-Kutta-Fehlberg 5$^{th}$ $\left (6^{th}\right )$ order}
 \newacro{RKF78}[\AC@hyperlink{RKF78}{RKF78}]{Runge-Kutta-Fehlberg 7$^{th}$ $\left (8^{th}\right )$ order}
 \newacro{RKF}[\AC@hyperlink{RKF}{RKF}]{Runge-Kutta-Fehlberg}
 \newacro{RHA}[\AC@hyperlink{RHA}{RHA}]{Rover Hazard Avoidance}
@@ -315,367 +317,514 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces All section fits for the drag coefficient - Mach curve\relax }}{14}{figure.caption.30}}
 \newlabel{fig:dragCoeffFit}{{3.10}{14}{All section fits for the drag coefficient - Mach curve\relax }{figure.caption.30}{}}
 \newlabel{fig:dragCoeffFit@cref}{{[figure][10][3]3.10}{14}}
+\citation{hofsteenge2013}
+\citation{milani1987}
+\citation{noomen2013int}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Standard integration methods}{15}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{ch:standardintegrationmethods}{{4}{15}{Standard integration methods}{chapter.4}{}}
 \newlabel{ch:standardintegrationmethods@cref}{{[chapter][4][]4}{15}}
+\acronymused{s/c}
+\acronymused{s/c}
+\acronymused{TSI}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Different integrator types}{15}{section.4.1}}
+\newlabel{sec:differentIntegratorTypes}{{4.1}{15}{Different integrator types}{section.4.1}{}}
+\newlabel{sec:differentIntegratorTypes@cref}{{[section][1][4]4.1}{15}}
+\citation{noomen2013int}
+\citation{hofsteenge2013}
+\citation{deuflhard1994}
+\citation{montenbruck1992,dormand1987}
+\citation{montenbruck1992}
+\citation{fehlberg1969,fehlberg1968}
+\citation{noomen2013int}
+\citation{noomen2013int}
+\citation{noomen2013int,montenbruck1992}
+\citation{berry2004,meijaard1991}
+\citation{berry2004,ramos2005}
+\citation{dirkx2016tudat}
+\citation{prince1981high}
+\citation{weeks2007comparison}
+\newlabel{eq:integration}{{4.1}{16}{Different integrator types}{equation.4.1.1}{}}
+\newlabel{eq:integration@cref}{{[equation][1][4]4.1}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Single-step}{16}{subsection.4.1.1}}
+\newlabel{subsec:singleStep}{{4.1.1}{16}{Single-step}{subsection.4.1.1}{}}
+\newlabel{subsec:singleStep@cref}{{[subsection][1][4,1]4.1.1}{16}}
+\AC@undonewlabel{acro:RK4}
+\newlabel{acro:RK4}{{4.1.1}{16}{Single-step}{section*.31}{}}
+\newlabel{acro:RK4@cref}{{[subsection][1][4,1]4.1.1}{16}}
+\acronymused{RK4}
+\acronymused{RK4}
+\acronymused{RK4}
+\AC@undonewlabel{acro:RKN12}
+\newlabel{acro:RKN12}{{4.1.1}{16}{Single-step}{section*.32}{}}
+\newlabel{acro:RKN12@cref}{{[subsection][1][4,1]4.1.1}{16}}
+\acronymused{RKN12}
+\AC@undonewlabel{acro:RKF45}
+\newlabel{acro:RKF45}{{4.1.1}{16}{Single-step}{section*.33}{}}
+\newlabel{acro:RKF45@cref}{{[subsection][1][4,1]4.1.1}{16}}
+\acronymused{RKF45}
+\AC@undonewlabel{acro:RKF78}
+\newlabel{acro:RKF78}{{4.1.1}{16}{Single-step}{section*.34}{}}
+\newlabel{acro:RKF78@cref}{{[subsection][1][4,1]4.1.1}{16}}
+\acronymused{RKF78}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Multi-step}{16}{subsection.4.1.2}}
+\newlabel{subsec:multiStep}{{4.1.2}{16}{Multi-step}{subsection.4.1.2}{}}
+\newlabel{subsec:multiStep@cref}{{[subsection][2][4,1]4.1.2}{16}}
+\AC@undonewlabel{acro:AB4}
+\newlabel{acro:AB4}{{4.1.2}{16}{Multi-step}{section*.35}{}}
+\newlabel{acro:AB4@cref}{{[subsection][2][4,1]4.1.2}{16}}
+\acronymused{AB4}
+\acronymused{RK4}
+\AC@undonewlabel{acro:AB6}
+\newlabel{acro:AB6}{{4.1.2}{16}{Multi-step}{section*.36}{}}
+\newlabel{acro:AB6@cref}{{[subsection][2][4,1]4.1.2}{16}}
+\acronymused{AB6}
+\AC@undonewlabel{acro:ABM4}
+\newlabel{acro:ABM4}{{4.1.2}{16}{Multi-step}{section*.37}{}}
+\newlabel{acro:ABM4@cref}{{[subsection][2][4,1]4.1.2}{16}}
+\acronymused{ABM4}
+\AC@undonewlabel{acro:ABM12}
+\newlabel{acro:ABM12}{{4.1.2}{16}{Multi-step}{section*.38}{}}
+\newlabel{acro:ABM12@cref}{{[subsection][2][4,1]4.1.2}{16}}
+\acronymused{ABM12}
+\AC@undonewlabel{acro:SG}
+\newlabel{acro:SG}{{4.1.2}{16}{Multi-step}{section*.39}{}}
+\newlabel{acro:SG@cref}{{[subsection][2][4,1]4.1.2}{16}}
+\acronymused{SG}
+\AC@undonewlabel{acro:SC14}
+\newlabel{acro:SC14}{{4.1.2}{16}{Multi-step}{section*.40}{}}
+\newlabel{acro:SC14@cref}{{[subsection][2][4,1]4.1.2}{16}}
+\acronymused{SC14}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Chosen method for comparison}{16}{section.4.2}}
+\newlabel{sec:chosenMethodForComparison}{{4.2}{16}{Chosen method for comparison}{section.4.2}{}}
+\newlabel{sec:chosenMethodForComparison@cref}{{[section][2][4]4.2}{16}}
+\acronymused{TSI}
+\acronymused{TSI}
+\acronymused{TSI}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Tudat methods}{16}{subsection.4.2.1}}
+\newlabel{subsec:tudatMethods}{{4.2.1}{16}{Tudat methods}{subsection.4.2.1}{}}
+\newlabel{subsec:tudatMethods@cref}{{[subsection][1][4,2]4.2.1}{16}}
+\acronymused{Tudat}
+\acronymused{RK4}
+\AC@undonewlabel{acro:DOPRIN87}
+\newlabel{acro:DOPRIN87}{{4.2.1}{16}{Tudat methods}{section*.42}{}}
+\newlabel{acro:DOPRIN87@cref}{{[subsection][1][4,2]4.2.1}{16}}
+\acronymused{DOPRIN87}
+\acronymused{RKF}
+\citation{scott2008high}
+\citation{bergsma2016application}
+\citation{noomen2013int}
+\citation{noomen2013int}
+\acronymused{RKF}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Available \ac {Tudat} integrators \citep  {dirkx2016tudat}\relax }}{17}{table.caption.41}}
+\acronymused{Tudat}
+\newlabel{tab:tudatIntegrators}{{4.1}{17}{Available \ac {Tudat} integrators \citep {dirkx2016tudat}\relax }{table.caption.41}{}}
+\newlabel{tab:tudatIntegrators@cref}{{[table][1][4]4.1}{17}}
+\acronymused{RK4}
+\acronymused{RKF45}
+\acronymused{RKF56}
+\acronymused{RKF78}
+\acronymused{DOPRIN87}
+\AC@undonewlabel{acro:RKF56}
+\newlabel{acro:RKF56}{{4.2.1}{17}{Tudat methods}{section*.43}{}}
+\newlabel{acro:RKF56@cref}{{[subsection][1][4,2]4.2.1}{17}}
+\acronymused{RKF56}
+\acronymused{Tudat}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Methods used in previous research}{17}{subsection.4.2.2}}
+\newlabel{subsec:methodsUsedInPreviousResearch}{{4.2.2}{17}{Methods used in previous research}{subsection.4.2.2}{}}
+\newlabel{subsec:methodsUsedInPreviousResearch@cref}{{[subsection][2][4,2]4.2.2}{17}}
+\acronymused{TSI}
+\acronymused{RKF56}
+\acronymused{Tudat}
+\acronymused{RKF56}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Chosen method}{17}{subsection.4.2.3}}
+\newlabel{subsec:chosenMethod}{{4.2.3}{17}{Chosen method}{subsection.4.2.3}{}}
+\newlabel{subsec:chosenMethod@cref}{{[subsection][3][4,2]4.2.3}{17}}
+\acronymused{TSI}
+\acronymused{RKF}
+\acronymused{DOPRIN87}
+\acronymused{RK4}
+\acronymused{RKF78}
+\acronymused{TSI}
+\acronymused{RKF}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Workings of \ac {RKF}}{17}{section.4.3}}
+\newlabel{sec:rkf}{{4.3}{17}{Workings of \ac {RKF}}{section.4.3}{}}
+\newlabel{sec:rkf@cref}{{[section][3][4]4.3}{17}}
+\acronymused{RKF}
+\acronymused{RK4}
+\acronymused{RK4}
+\acronymused{RK4}
+\newlabel{eq:rk4_increment}{{4.2}{17}{Workings of \ac {RKF}}{equation.4.3.2}{}}
+\newlabel{eq:rk4_increment@cref}{{[equation][2][4]4.2}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Principle of \ac {RK4} for a single parameter \cite  {noomen2013int}.\relax }}{17}{figure.caption.44}}
+\acronymused{RK4}
+\newlabel{fig:rk4_noomen2013int}{{4.1}{17}{Principle of \ac {RK4} for a single parameter \cite {noomen2013int}.\relax }{figure.caption.44}{}}
+\newlabel{fig:rk4_noomen2013int@cref}{{[figure][1][4]4.1}{17}}
+\acronymused{RKF}
+\newlabel{eq:k}{{4.3}{18}{Workings of \ac {RKF}}{equation.4.3.3}{}}
+\newlabel{eq:k@cref}{{[equation][3][4]4.3}{18}}
+\newlabel{eq:generalRK}{{4.4}{18}{Workings of \ac {RKF}}{equation.4.3.4}{}}
+\newlabel{eq:generalRK@cref}{{[equation][4][4]4.4}{18}}
+\acronymused{RKF78}
+\acronymused{RKF78}
+\acronymused{RKF45}
 \citation{scott2008high}
 \citation{montenbruck1992numerical}
 \citation{scott2008high}
 \citation{scott2008high}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Taylor series integration}{16}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Taylor series integration}{19}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:tsi}{{5}{16}{Taylor series integration}{chapter.5}{}}
-\newlabel{ch:tsi@cref}{{[chapter][5][]5}{16}}
+\newlabel{ch:tsi}{{5}{19}{Taylor series integration}{chapter.5}{}}
+\newlabel{ch:tsi@cref}{{[chapter][5][]5}{19}}
 \acronymused{TSI}
 \acronymused{TSI}
 \acronymused{RKF}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}General theory}{16}{section.5.1}}
-\newlabel{sec:genTsiTheory}{{5.1}{16}{General theory}{section.5.1}{}}
-\newlabel{sec:genTsiTheory@cref}{{[section][1][5]5.1}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}General theory}{19}{section.5.1}}
+\newlabel{sec:genTsiTheory}{{5.1}{19}{General theory}{section.5.1}{}}
+\newlabel{sec:genTsiTheory@cref}{{[section][1][5]5.1}{19}}
 \acronymused{TSI}
 \acronymused{TSI}
 \acronymused{TSI}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Workings of \ac {TSI}}{16}{subsection.5.1.1}}
-\newlabel{subsec:workTsi}{{5.1.1}{16}{Workings of \ac {TSI}}{subsection.5.1.1}{}}
-\newlabel{subsec:workTsi@cref}{{[subsection][1][5,1]5.1.1}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Workings of \ac {TSI}}{19}{subsection.5.1.1}}
+\newlabel{subsec:workTsi}{{5.1.1}{19}{Workings of \ac {TSI}}{subsection.5.1.1}{}}
+\newlabel{subsec:workTsi@cref}{{[subsection][1][5,1]5.1.1}{19}}
 \acronymused{TSI}
-\newlabel{eq:general_taylor}{{5.1}{16}{Workings of \ac {TSI}}{equation.5.1.1}{}}
-\newlabel{eq:general_taylor@cref}{{[equation][1][5]5.1}{16}}
+\newlabel{eq:general_taylor}{{5.1}{19}{Workings of \ac {TSI}}{equation.5.1.1}{}}
+\newlabel{eq:general_taylor@cref}{{[equation][1][5]5.1}{19}}
 \acronymused{TSI}
 \citation{scott2008high}
 \citation{bergsma2015application}
-\newlabel{eq:rec_rel}{{5.2}{17}{Workings of \ac {TSI}}{equation.5.1.2}{}}
-\newlabel{eq:rec_rel@cref}{{[equation][2][5]5.2}{17}}
-\newlabel{eq:auxEqExample}{{5.3}{17}{Workings of \ac {TSI}}{equation.5.1.3}{}}
-\newlabel{eq:auxEqExample@cref}{{[equation][3][5]5.3}{17}}
-\newlabel{eq:auxDerExample}{{5.4}{17}{Workings of \ac {TSI}}{equation.5.1.4}{}}
-\newlabel{eq:auxDerExample@cref}{{[equation][4][5]5.4}{17}}
+\newlabel{eq:rec_rel}{{5.2}{20}{Workings of \ac {TSI}}{equation.5.1.2}{}}
+\newlabel{eq:rec_rel@cref}{{[equation][2][5]5.2}{20}}
+\newlabel{eq:auxEqExample}{{5.3}{20}{Workings of \ac {TSI}}{equation.5.1.3}{}}
+\newlabel{eq:auxEqExample@cref}{{[equation][3][5]5.3}{20}}
+\newlabel{eq:auxDerExample}{{5.4}{20}{Workings of \ac {TSI}}{equation.5.1.4}{}}
+\newlabel{eq:auxDerExample@cref}{{[equation][4][5]5.4}{20}}
 \acronymused{TSI}
-\newlabel{eq:def_u}{{5.5}{17}{Workings of \ac {TSI}}{equation.5.1.5}{}}
-\newlabel{eq:def_u@cref}{{[equation][5][5]5.5}{17}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Step-size}{17}{subsection.5.1.2}}
-\newlabel{subsec:stepSizeTsi}{{5.1.2}{17}{Step-size}{subsection.5.1.2}{}}
-\newlabel{subsec:stepSizeTsi@cref}{{[subsection][2][5,1]5.1.2}{17}}
+\newlabel{eq:def_u}{{5.5}{20}{Workings of \ac {TSI}}{equation.5.1.5}{}}
+\newlabel{eq:def_u@cref}{{[equation][5][5]5.5}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Step-size}{20}{subsection.5.1.2}}
+\newlabel{subsec:stepSizeTsi}{{5.1.2}{20}{Step-size}{subsection.5.1.2}{}}
+\newlabel{subsec:stepSizeTsi@cref}{{[subsection][2][5,1]5.1.2}{20}}
 \acronymused{TSI}
 \citation{scott2008high}
-\newlabel{eq:fix_point_it}{{5.6}{18}{Step-size}{equation.5.1.6}{}}
-\newlabel{eq:fix_point_it@cref}{{[equation][6][5]5.6}{18}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Associated equations}{18}{section.5.2}}
-\newlabel{sec:assEq}{{5.2}{18}{Associated equations}{section.5.2}{}}
-\newlabel{sec:assEq@cref}{{[section][2][5]5.2}{18}}
+\newlabel{eq:fix_point_it}{{5.6}{21}{Step-size}{equation.5.1.6}{}}
+\newlabel{eq:fix_point_it@cref}{{[equation][6][5]5.6}{21}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Associated equations}{21}{section.5.2}}
+\newlabel{sec:assEq}{{5.2}{21}{Associated equations}{section.5.2}{}}
+\newlabel{sec:assEq@cref}{{[section][2][5]5.2}{21}}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Cartesian equations, first case}{18}{subsection.5.2.1}}
-\newlabel{subsec:careq}{{5.2.1}{18}{Cartesian equations, first case}{subsection.5.2.1}{}}
-\newlabel{subsec:careq@cref}{{[subsection][1][5,2]5.2.1}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Cartesian equations, first case}{21}{subsection.5.2.1}}
+\newlabel{subsec:careq}{{5.2.1}{21}{Cartesian equations, first case}{subsection.5.2.1}{}}
+\newlabel{subsec:careq@cref}{{[subsection][1][5,2]5.2.1}{21}}
 \acronymused{MAV}
-\newlabel{eq:state}{{5.7}{18}{Cartesian equations, first case}{equation.5.2.7}{}}
-\newlabel{eq:state@cref}{{[equation][7][5]5.7}{18}}
-\newlabel{eq:state_derivatives}{{5.8}{18}{Cartesian equations, first case}{equation.5.2.8}{}}
-\newlabel{eq:state_derivatives@cref}{{[equation][8][5]5.8}{18}}
-\newlabel{eq:acc}{{5.9}{18}{Cartesian equations, first case}{equation.5.2.9}{}}
-\newlabel{eq:acc@cref}{{[equation][9][5]5.9}{18}}
+\newlabel{eq:state}{{5.7}{21}{Cartesian equations, first case}{equation.5.2.7}{}}
+\newlabel{eq:state@cref}{{[equation][7][5]5.7}{21}}
+\newlabel{eq:state_derivatives}{{5.8}{21}{Cartesian equations, first case}{equation.5.2.8}{}}
+\newlabel{eq:state_derivatives@cref}{{[equation][8][5]5.8}{21}}
+\newlabel{eq:acc}{{5.9}{21}{Cartesian equations, first case}{equation.5.2.9}{}}
+\newlabel{eq:acc@cref}{{[equation][9][5]5.9}{21}}
 \citation{noomen2013basic}
-\newlabel{eq:stateX}{{5.10}{19}{Cartesian equations, first case}{equation.5.2.10}{}}
-\newlabel{eq:stateX@cref}{{[equation][10][5]5.10}{19}}
-\newlabel{eq:state_derivativesX}{{5.11}{19}{Cartesian equations, first case}{equation.5.2.11}{}}
-\newlabel{eq:state_derivativesX@cref}{{[equation][11][5]5.11}{19}}
+\newlabel{eq:stateX}{{5.10}{22}{Cartesian equations, first case}{equation.5.2.10}{}}
+\newlabel{eq:stateX@cref}{{[equation][10][5]5.10}{22}}
+\newlabel{eq:state_derivativesX}{{5.11}{22}{Cartesian equations, first case}{equation.5.2.11}{}}
+\newlabel{eq:state_derivativesX@cref}{{[equation][11][5]5.11}{22}}
 \acronymused{MAV}
-\@writefile{toc}{\contentsline {subsubsection}{Gravitational acceleration}{19}{equation.5.2.11}}
-\newlabel{subsubsec:tsiGravity}{{5.2.1}{19}{Gravitational acceleration}{equation.5.2.11}{}}
-\newlabel{subsubsec:tsiGravity@cref}{{[subsection][1][5,2]5.2.1}{19}}
-\newlabel{eq:gravAcc}{{5.12}{19}{Gravitational acceleration}{equation.5.2.12}{}}
-\newlabel{eq:gravAcc@cref}{{[equation][12][5]5.12}{19}}
-\newlabel{eq:gravAux}{{5.13}{19}{Gravitational acceleration}{equation.5.2.13}{}}
-\newlabel{eq:gravAux@cref}{{[equation][13][5]5.13}{19}}
-\@writefile{toc}{\contentsline {subsubsection}{Transformation angles}{19}{equation.5.2.13}}
-\newlabel{subsubsec:tsiTransAngl}{{5.2.1}{19}{Transformation angles}{equation.5.2.13}{}}
-\newlabel{subsubsec:tsiTransAngl@cref}{{[subsection][1][5,2]5.2.1}{19}}
+\@writefile{toc}{\contentsline {subsubsection}{Gravitational acceleration}{22}{equation.5.2.11}}
+\newlabel{subsubsec:tsiGravity}{{5.2.1}{22}{Gravitational acceleration}{equation.5.2.11}{}}
+\newlabel{subsubsec:tsiGravity@cref}{{[subsection][1][5,2]5.2.1}{22}}
+\newlabel{eq:gravAcc}{{5.12}{22}{Gravitational acceleration}{equation.5.2.12}{}}
+\newlabel{eq:gravAcc@cref}{{[equation][12][5]5.12}{22}}
+\newlabel{eq:gravAux}{{5.13}{22}{Gravitational acceleration}{equation.5.2.13}{}}
+\newlabel{eq:gravAux@cref}{{[equation][13][5]5.13}{22}}
+\@writefile{toc}{\contentsline {subsubsection}{Transformation angles}{22}{equation.5.2.13}}
+\newlabel{subsubsec:tsiTransAngl}{{5.2.1}{22}{Transformation angles}{equation.5.2.13}{}}
+\newlabel{subsubsec:tsiTransAngl@cref}{{[subsection][1][5,2]5.2.1}{22}}
 \citation{mooij1994motion}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Spherical position variables in an inertial Cartesian frame \citep  {noomen2013basic}.\relax }}{20}{figure.caption.31}}
-\newlabel{fig:sphertocart_noomen2013basic}{{5.1}{20}{Spherical position variables in an inertial Cartesian frame \citep {noomen2013basic}.\relax }{figure.caption.31}{}}
-\newlabel{fig:sphertocart_noomen2013basic@cref}{{[figure][1][5]5.1}{20}}
-\newlabel{eq:transAngl}{{5.14}{20}{Transformation angles}{equation.5.2.14}{}}
-\newlabel{eq:transAngl@cref}{{[equation][14][5]5.14}{20}}
-\newlabel{eq:auxFtransAngl}{{5.15}{20}{Transformation angles}{equation.5.2.15}{}}
-\newlabel{eq:auxFtransAngl@cref}{{[equation][15][5]5.15}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Spherical position variables in an inertial Cartesian frame \citep  {noomen2013basic}.\relax }}{23}{figure.caption.45}}
+\newlabel{fig:sphertocart_noomen2013basic}{{5.1}{23}{Spherical position variables in an inertial Cartesian frame \citep {noomen2013basic}.\relax }{figure.caption.45}{}}
+\newlabel{fig:sphertocart_noomen2013basic@cref}{{[figure][1][5]5.1}{23}}
+\newlabel{eq:transAngl}{{5.14}{23}{Transformation angles}{equation.5.2.14}{}}
+\newlabel{eq:transAngl@cref}{{[equation][14][5]5.14}{23}}
+\newlabel{eq:auxFtransAngl}{{5.15}{23}{Transformation angles}{equation.5.2.15}{}}
+\newlabel{eq:auxFtransAngl@cref}{{[equation][15][5]5.15}{23}}
 \citation{mooij1994motion}
 \citation{mooij1994motion}
-\newlabel{eq:VItoVV}{{5.16}{21}{Transformation angles}{equation.5.2.16}{}}
-\newlabel{eq:VItoVV@cref}{{[equation][16][5]5.16}{21}}
-\newlabel{eq:VG}{{5.17}{21}{Transformation angles}{equation.5.2.17}{}}
-\newlabel{eq:VG@cref}{{[equation][17][5]5.17}{21}}
-\newlabel{eq:xfifteen}{{5.18}{21}{Transformation angles}{equation.5.2.18}{}}
-\newlabel{eq:xfifteen@cref}{{[equation][18][5]5.18}{21}}
-\newlabel{eq:velocityAuxF}{{5.19}{21}{Transformation angles}{equation.5.2.19}{}}
-\newlabel{eq:velocityAuxF@cref}{{[equation][19][5]5.19}{21}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Spherical velocity variables in a vertical Cartesian frame \citep  {mooij1994motion}.\relax }}{21}{figure.caption.32}}
-\newlabel{fig:vertical_spherical_mooij1994motion}{{5.2}{21}{Spherical velocity variables in a vertical Cartesian frame \citep {mooij1994motion}.\relax }{figure.caption.32}{}}
-\newlabel{fig:vertical_spherical_mooij1994motion@cref}{{[figure][2][5]5.2}{21}}
-\newlabel{eq:velAngl}{{5.20}{21}{Transformation angles}{equation.5.2.20}{}}
-\newlabel{eq:velAngl@cref}{{[equation][20][5]5.20}{21}}
-\newlabel{eq:VV}{{5.21}{22}{Transformation angles}{equation.5.2.21}{}}
-\newlabel{eq:VV@cref}{{[equation][21][5]5.21}{22}}
-\newlabel{eq:VV}{{5.22}{22}{Transformation angles}{equation.5.2.22}{}}
-\newlabel{eq:VV@cref}{{[equation][22][5]5.22}{22}}
-\@writefile{toc}{\contentsline {subsubsection}{Drag acceleration}{22}{equation.5.2.22}}
-\newlabel{subsubsec:tsiDrag}{{5.2.1}{22}{Drag acceleration}{equation.5.2.22}{}}
-\newlabel{subsubsec:tsiDrag@cref}{{[subsection][1][5,2]5.2.1}{22}}
+\newlabel{eq:VItoVV}{{5.16}{24}{Transformation angles}{equation.5.2.16}{}}
+\newlabel{eq:VItoVV@cref}{{[equation][16][5]5.16}{24}}
+\newlabel{eq:VG}{{5.17}{24}{Transformation angles}{equation.5.2.17}{}}
+\newlabel{eq:VG@cref}{{[equation][17][5]5.17}{24}}
+\newlabel{eq:xfifteen}{{5.18}{24}{Transformation angles}{equation.5.2.18}{}}
+\newlabel{eq:xfifteen@cref}{{[equation][18][5]5.18}{24}}
+\newlabel{eq:velocityAuxF}{{5.19}{24}{Transformation angles}{equation.5.2.19}{}}
+\newlabel{eq:velocityAuxF@cref}{{[equation][19][5]5.19}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Spherical velocity variables in a vertical Cartesian frame \citep  {mooij1994motion}.\relax }}{24}{figure.caption.46}}
+\newlabel{fig:vertical_spherical_mooij1994motion}{{5.2}{24}{Spherical velocity variables in a vertical Cartesian frame \citep {mooij1994motion}.\relax }{figure.caption.46}{}}
+\newlabel{fig:vertical_spherical_mooij1994motion@cref}{{[figure][2][5]5.2}{24}}
+\newlabel{eq:velAngl}{{5.20}{24}{Transformation angles}{equation.5.2.20}{}}
+\newlabel{eq:velAngl@cref}{{[equation][20][5]5.20}{24}}
+\newlabel{eq:VV}{{5.21}{25}{Transformation angles}{equation.5.2.21}{}}
+\newlabel{eq:VV@cref}{{[equation][21][5]5.21}{25}}
+\newlabel{eq:VV}{{5.22}{25}{Transformation angles}{equation.5.2.22}{}}
+\newlabel{eq:VV@cref}{{[equation][22][5]5.22}{25}}
+\@writefile{toc}{\contentsline {subsubsection}{Drag acceleration}{25}{equation.5.2.22}}
+\newlabel{subsubsec:tsiDrag}{{5.2.1}{25}{Drag acceleration}{equation.5.2.22}{}}
+\newlabel{subsubsec:tsiDrag@cref}{{[subsection][1][5,2]5.2.1}{25}}
 \acronymused{MAV}
-\newlabel{eq:drag}{{5.23}{22}{Drag acceleration}{equation.5.2.23}{}}
-\newlabel{eq:drag@cref}{{[equation][23][5]5.23}{22}}
-\newlabel{eq:dragAuxF}{{5.24}{22}{Drag acceleration}{equation.5.2.24}{}}
-\newlabel{eq:dragAuxF@cref}{{[equation][24][5]5.24}{22}}
-\newlabel{eq:cd}{{5.25}{22}{Drag acceleration}{equation.5.2.25}{}}
-\newlabel{eq:cd@cref}{{[equation][25][5]5.25}{22}}
-\newlabel{eq:cdAuxF}{{5.26}{23}{Drag acceleration}{equation.5.2.26}{}}
-\newlabel{eq:cdAuxF@cref}{{[equation][26][5]5.26}{23}}
-\newlabel{eq:cdCondC}{{5.27}{23}{Drag acceleration}{equation.5.2.27}{}}
-\newlabel{eq:cdCondC@cref}{{[equation][27][5]5.27}{23}}
+\newlabel{eq:drag}{{5.23}{25}{Drag acceleration}{equation.5.2.23}{}}
+\newlabel{eq:drag@cref}{{[equation][23][5]5.23}{25}}
+\newlabel{eq:dragAuxF}{{5.24}{25}{Drag acceleration}{equation.5.2.24}{}}
+\newlabel{eq:dragAuxF@cref}{{[equation][24][5]5.24}{25}}
+\newlabel{eq:cd}{{5.25}{25}{Drag acceleration}{equation.5.2.25}{}}
+\newlabel{eq:cd@cref}{{[equation][25][5]5.25}{25}}
+\newlabel{eq:cdAuxF}{{5.26}{26}{Drag acceleration}{equation.5.2.26}{}}
+\newlabel{eq:cdAuxF@cref}{{[equation][26][5]5.26}{26}}
+\newlabel{eq:cdCondC}{{5.27}{26}{Drag acceleration}{equation.5.2.27}{}}
+\newlabel{eq:cdCondC@cref}{{[equation][27][5]5.27}{26}}
 \acronymused{MOLA}
-\newlabel{eq:tempCondAuxC}{{5.28}{23}{Drag acceleration}{equation.5.2.28}{}}
-\newlabel{eq:tempCondAuxC@cref}{{[equation][28][5]5.28}{23}}
-\newlabel{eq:dragAuxF}{{5.29}{23}{Drag acceleration}{equation.5.2.29}{}}
-\newlabel{eq:dragAuxF@cref}{{[equation][29][5]5.29}{23}}
-\@writefile{toc}{\contentsline {subsubsection}{Thrust acceleration}{23}{equation.5.2.29}}
-\newlabel{subsubsec:tsiThrust}{{5.2.1}{23}{Thrust acceleration}{equation.5.2.29}{}}
-\newlabel{subsubsec:tsiThrust@cref}{{[subsection][1][5,2]5.2.1}{23}}
-\newlabel{eq:accAux}{{5.30}{23}{Thrust acceleration}{equation.5.2.30}{}}
-\newlabel{eq:accAux@cref}{{[equation][30][5]5.30}{23}}
-\newlabel{eq:BPtrans}{{5.31}{23}{Thrust acceleration}{equation.5.2.31}{}}
-\newlabel{eq:BPtrans@cref}{{[equation][31][5]5.31}{23}}
-\newlabel{eq:IBtrans}{{5.32}{24}{Thrust acceleration}{equation.5.2.32}{}}
-\newlabel{eq:IBtrans@cref}{{[equation][32][5]5.32}{24}}
-\newlabel{eq:aTB}{{5.33}{24}{Thrust acceleration}{equation.5.2.33}{}}
-\newlabel{eq:aTB@cref}{{[equation][33][5]5.33}{24}}
-\newlabel{eq:aTBAuxF}{{5.34}{24}{Thrust acceleration}{equation.5.2.34}{}}
-\newlabel{eq:aTBAuxF@cref}{{[equation][34][5]5.34}{24}}
-\newlabel{eq:DandTBody}{{5.35}{24}{Thrust acceleration}{equation.5.2.35}{}}
-\newlabel{eq:DandTBody@cref}{{[equation][35][5]5.35}{24}}
-\@writefile{toc}{\contentsline {subsubsection}{All accelerations combined}{24}{equation.5.2.35}}
-\newlabel{subsubsec:allAcc}{{5.2.1}{24}{All accelerations combined}{equation.5.2.35}{}}
-\newlabel{subsubsec:allAcc@cref}{{[subsection][1][5,2]5.2.1}{24}}
-\newlabel{eq:DandTInertial}{{5.36}{24}{All accelerations combined}{equation.5.2.36}{}}
-\newlabel{eq:DandTInertial@cref}{{[equation][36][5]5.36}{24}}
-\newlabel{eq:u4Com}{{5.37}{24}{All accelerations combined}{equation.5.2.37}{}}
-\newlabel{eq:u4Com@cref}{{[equation][37][5]5.37}{24}}
-\newlabel{eq:u5Com}{{5.38}{25}{All accelerations combined}{equation.5.2.38}{}}
-\newlabel{eq:u5Com@cref}{{[equation][38][5]5.38}{25}}
-\newlabel{eq:u6Com}{{5.39}{25}{All accelerations combined}{equation.5.2.39}{}}
-\newlabel{eq:u6Com@cref}{{[equation][39][5]5.39}{25}}
-\newlabel{eq:gravAuxF}{{5.40}{25}{All accelerations combined}{equation.5.2.40}{}}
-\newlabel{eq:gravAuxF@cref}{{[equation][40][5]5.40}{25}}
-\newlabel{eq:u4AuxF}{{5.41}{25}{All accelerations combined}{equation.5.2.41}{}}
-\newlabel{eq:u4AuxF@cref}{{[equation][41][5]5.41}{25}}
-\newlabel{eq:u5AuxF}{{5.42}{25}{All accelerations combined}{equation.5.2.42}{}}
-\newlabel{eq:u5AuxF@cref}{{[equation][42][5]5.42}{25}}
-\newlabel{eq:u6AuxF}{{5.43}{25}{All accelerations combined}{equation.5.2.43}{}}
-\newlabel{eq:u6AuxF@cref}{{[equation][43][5]5.43}{25}}
-\newlabel{eq:u8u9AuxF}{{5.44}{25}{All accelerations combined}{equation.5.2.44}{}}
-\newlabel{eq:u8u9AuxF@cref}{{[equation][44][5]5.44}{25}}
+\newlabel{eq:tempCondAuxC}{{5.28}{26}{Drag acceleration}{equation.5.2.28}{}}
+\newlabel{eq:tempCondAuxC@cref}{{[equation][28][5]5.28}{26}}
+\newlabel{eq:dragAuxF}{{5.29}{26}{Drag acceleration}{equation.5.2.29}{}}
+\newlabel{eq:dragAuxF@cref}{{[equation][29][5]5.29}{26}}
+\@writefile{toc}{\contentsline {subsubsection}{Thrust acceleration}{26}{equation.5.2.29}}
+\newlabel{subsubsec:tsiThrust}{{5.2.1}{26}{Thrust acceleration}{equation.5.2.29}{}}
+\newlabel{subsubsec:tsiThrust@cref}{{[subsection][1][5,2]5.2.1}{26}}
+\newlabel{eq:accAux}{{5.30}{26}{Thrust acceleration}{equation.5.2.30}{}}
+\newlabel{eq:accAux@cref}{{[equation][30][5]5.30}{26}}
+\newlabel{eq:BPtrans}{{5.31}{26}{Thrust acceleration}{equation.5.2.31}{}}
+\newlabel{eq:BPtrans@cref}{{[equation][31][5]5.31}{26}}
+\newlabel{eq:IBtrans}{{5.32}{27}{Thrust acceleration}{equation.5.2.32}{}}
+\newlabel{eq:IBtrans@cref}{{[equation][32][5]5.32}{27}}
+\newlabel{eq:aTB}{{5.33}{27}{Thrust acceleration}{equation.5.2.33}{}}
+\newlabel{eq:aTB@cref}{{[equation][33][5]5.33}{27}}
+\newlabel{eq:aTBAuxF}{{5.34}{27}{Thrust acceleration}{equation.5.2.34}{}}
+\newlabel{eq:aTBAuxF@cref}{{[equation][34][5]5.34}{27}}
+\newlabel{eq:DandTBody}{{5.35}{27}{Thrust acceleration}{equation.5.2.35}{}}
+\newlabel{eq:DandTBody@cref}{{[equation][35][5]5.35}{27}}
+\@writefile{toc}{\contentsline {subsubsection}{All accelerations combined}{27}{equation.5.2.35}}
+\newlabel{subsubsec:allAcc}{{5.2.1}{27}{All accelerations combined}{equation.5.2.35}{}}
+\newlabel{subsubsec:allAcc@cref}{{[subsection][1][5,2]5.2.1}{27}}
+\newlabel{eq:DandTInertial}{{5.36}{27}{All accelerations combined}{equation.5.2.36}{}}
+\newlabel{eq:DandTInertial@cref}{{[equation][36][5]5.36}{27}}
+\newlabel{eq:u4Com}{{5.37}{27}{All accelerations combined}{equation.5.2.37}{}}
+\newlabel{eq:u4Com@cref}{{[equation][37][5]5.37}{27}}
+\newlabel{eq:u5Com}{{5.38}{28}{All accelerations combined}{equation.5.2.38}{}}
+\newlabel{eq:u5Com@cref}{{[equation][38][5]5.38}{28}}
+\newlabel{eq:u6Com}{{5.39}{28}{All accelerations combined}{equation.5.2.39}{}}
+\newlabel{eq:u6Com@cref}{{[equation][39][5]5.39}{28}}
+\newlabel{eq:gravAuxF}{{5.40}{28}{All accelerations combined}{equation.5.2.40}{}}
+\newlabel{eq:gravAuxF@cref}{{[equation][40][5]5.40}{28}}
+\newlabel{eq:u4AuxF}{{5.41}{28}{All accelerations combined}{equation.5.2.41}{}}
+\newlabel{eq:u4AuxF@cref}{{[equation][41][5]5.41}{28}}
+\newlabel{eq:u5AuxF}{{5.42}{28}{All accelerations combined}{equation.5.2.42}{}}
+\newlabel{eq:u5AuxF@cref}{{[equation][42][5]5.42}{28}}
+\newlabel{eq:u6AuxF}{{5.43}{28}{All accelerations combined}{equation.5.2.43}{}}
+\newlabel{eq:u6AuxF@cref}{{[equation][43][5]5.43}{28}}
+\newlabel{eq:u8u9AuxF}{{5.44}{28}{All accelerations combined}{equation.5.2.44}{}}
+\newlabel{eq:u8u9AuxF@cref}{{[equation][44][5]5.44}{28}}
 \citation{bergsma2015application}
-\newlabel{eq:restAuxD}{{5.45}{26}{All accelerations combined}{equation.5.2.45}{}}
-\newlabel{eq:restAuxD@cref}{{[equation][45][5]5.45}{26}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Cartesian equations, second case}{26}{subsection.5.2.2}}
-\newlabel{subsec:careq2}{{5.2.2}{26}{Cartesian equations, second case}{subsection.5.2.2}{}}
-\newlabel{subsec:careq2@cref}{{[subsection][2][5,2]5.2.2}{26}}
-\newlabel{eq:transMatCoef}{{5.46}{26}{Cartesian equations, second case}{equation.5.2.46}{}}
-\newlabel{eq:transMatCoef@cref}{{[equation][46][5]5.46}{26}}
-\newlabel{eq:VGI}{{5.47}{26}{Cartesian equations, second case}{equation.5.2.47}{}}
-\newlabel{eq:VGI@cref}{{[equation][47][5]5.47}{26}}
-\@writefile{toc}{\contentsline {subsubsection}{Body frame unit vectors}{26}{equation.5.2.47}}
-\newlabel{eq:iHat}{{5.48}{26}{Body frame unit vectors}{equation.5.2.48}{}}
-\newlabel{eq:iHat@cref}{{[equation][48][5]5.48}{26}}
+\newlabel{eq:restAuxD}{{5.45}{29}{All accelerations combined}{equation.5.2.45}{}}
+\newlabel{eq:restAuxD@cref}{{[equation][45][5]5.45}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Cartesian equations, second case}{29}{subsection.5.2.2}}
+\newlabel{subsec:careq2}{{5.2.2}{29}{Cartesian equations, second case}{subsection.5.2.2}{}}
+\newlabel{subsec:careq2@cref}{{[subsection][2][5,2]5.2.2}{29}}
+\newlabel{eq:transMatCoef}{{5.46}{29}{Cartesian equations, second case}{equation.5.2.46}{}}
+\newlabel{eq:transMatCoef@cref}{{[equation][46][5]5.46}{29}}
+\newlabel{eq:VGI}{{5.47}{29}{Cartesian equations, second case}{equation.5.2.47}{}}
+\newlabel{eq:VGI@cref}{{[equation][47][5]5.47}{29}}
+\@writefile{toc}{\contentsline {subsubsection}{Body frame unit vectors}{29}{equation.5.2.47}}
+\newlabel{eq:iHat}{{5.48}{29}{Body frame unit vectors}{equation.5.2.48}{}}
+\newlabel{eq:iHat@cref}{{[equation][48][5]5.48}{29}}
 \AC@undonewlabel{acro:RHR}
-\newlabel{acro:RHR}{{5.2.2}{26}{Body frame unit vectors}{section*.34}{}}
-\newlabel{acro:RHR@cref}{{[subsection][2][5,2]5.2.2}{26}}
+\newlabel{acro:RHR}{{5.2.2}{29}{Body frame unit vectors}{section*.48}{}}
+\newlabel{acro:RHR@cref}{{[subsection][2][5,2]5.2.2}{29}}
 \acronymused{RHR}
-\newlabel{eq:jHat}{{5.49}{26}{Body frame unit vectors}{equation.5.2.49}{}}
-\newlabel{eq:jHat@cref}{{[equation][49][5]5.49}{26}}
+\newlabel{eq:jHat}{{5.49}{29}{Body frame unit vectors}{equation.5.2.49}{}}
+\newlabel{eq:jHat@cref}{{[equation][49][5]5.49}{29}}
 \acronymused{RHR}
-\newlabel{eq:kHat}{{5.50}{26}{Body frame unit vectors}{equation.5.2.50}{}}
-\newlabel{eq:kHat@cref}{{[equation][50][5]5.50}{26}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Definition of the body frame unit vectors based on the radius and ground velocity expressed in the inertial frame.\relax }}{27}{figure.caption.33}}
-\newlabel{fig:cartesian_transformation_mooij1994motion}{{5.3}{27}{Definition of the body frame unit vectors based on the radius and ground velocity expressed in the inertial frame.\relax }{figure.caption.33}{}}
-\newlabel{fig:cartesian_transformation_mooij1994motion@cref}{{[figure][3][5]5.3}{27}}
-\@writefile{toc}{\contentsline {subsubsection}{Defining the transformation matrix coefficients}{27}{equation.5.2.50}}
-\newlabel{subsubsec:filTransMat}{{5.2.2}{27}{Defining the transformation matrix coefficients}{equation.5.2.50}{}}
-\newlabel{subsubsec:filTransMat@cref}{{[subsection][2][5,2]5.2.2}{27}}
-\newlabel{eq:firstFillEx}{{5.51}{27}{Defining the transformation matrix coefficients}{equation.5.2.51}{}}
-\newlabel{eq:firstFillEx@cref}{{[equation][51][5]5.51}{27}}
-\newlabel{eq:transCoeff}{{5.52}{27}{Defining the transformation matrix coefficients}{equation.5.2.52}{}}
-\newlabel{eq:transCoeff@cref}{{[equation][52][5]5.52}{27}}
-\@writefile{toc}{\contentsline {subsubsection}{Auxiliary functions for the second case}{27}{equation.5.2.52}}
-\newlabel{subsubsec:auxFsecCase}{{5.2.2}{27}{Auxiliary functions for the second case}{equation.5.2.52}{}}
-\newlabel{subsubsec:auxFsecCase@cref}{{[subsection][2][5,2]5.2.2}{27}}
-\newlabel{eq:accAlTrans}{{5.53}{27}{Auxiliary functions for the second case}{equation.5.2.53}{}}
-\newlabel{eq:accAlTrans@cref}{{[equation][53][5]5.53}{27}}
+\newlabel{eq:kHat}{{5.50}{29}{Body frame unit vectors}{equation.5.2.50}{}}
+\newlabel{eq:kHat@cref}{{[equation][50][5]5.50}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Definition of the body frame unit vectors based on the radius and ground velocity expressed in the inertial frame.\relax }}{30}{figure.caption.47}}
+\newlabel{fig:cartesian_transformation_mooij1994motion}{{5.3}{30}{Definition of the body frame unit vectors based on the radius and ground velocity expressed in the inertial frame.\relax }{figure.caption.47}{}}
+\newlabel{fig:cartesian_transformation_mooij1994motion@cref}{{[figure][3][5]5.3}{30}}
+\@writefile{toc}{\contentsline {subsubsection}{Defining the transformation matrix coefficients}{30}{equation.5.2.50}}
+\newlabel{subsubsec:filTransMat}{{5.2.2}{30}{Defining the transformation matrix coefficients}{equation.5.2.50}{}}
+\newlabel{subsubsec:filTransMat@cref}{{[subsection][2][5,2]5.2.2}{30}}
+\newlabel{eq:firstFillEx}{{5.51}{30}{Defining the transformation matrix coefficients}{equation.5.2.51}{}}
+\newlabel{eq:firstFillEx@cref}{{[equation][51][5]5.51}{30}}
+\newlabel{eq:transCoeff}{{5.52}{30}{Defining the transformation matrix coefficients}{equation.5.2.52}{}}
+\newlabel{eq:transCoeff@cref}{{[equation][52][5]5.52}{30}}
+\@writefile{toc}{\contentsline {subsubsection}{Auxiliary functions for the second case}{30}{equation.5.2.52}}
+\newlabel{subsubsec:auxFsecCase}{{5.2.2}{30}{Auxiliary functions for the second case}{equation.5.2.52}{}}
+\newlabel{subsubsec:auxFsecCase@cref}{{[subsection][2][5,2]5.2.2}{30}}
+\newlabel{eq:accAlTrans}{{5.53}{30}{Auxiliary functions for the second case}{equation.5.2.53}{}}
+\newlabel{eq:accAlTrans@cref}{{[equation][53][5]5.53}{30}}
 \citation{mooij1994motion}
 \citation{mooij1994motion}
-\newlabel{eq:iHatAuxF}{{5.54}{28}{Auxiliary functions for the second case}{equation.5.2.54}{}}
-\newlabel{eq:iHatAuxF@cref}{{[equation][54][5]5.54}{28}}
-\newlabel{eq:jHatAuxF}{{5.55}{28}{Auxiliary functions for the second case}{equation.5.2.55}{}}
-\newlabel{eq:jHatAuxF@cref}{{[equation][55][5]5.55}{28}}
-\newlabel{eq:kHatAuxF}{{5.56}{28}{Auxiliary functions for the second case}{equation.5.2.56}{}}
-\newlabel{eq:kHatAuxF@cref}{{[equation][56][5]5.56}{28}}
-\newlabel{eq:finalAccAuxF}{{5.57}{28}{Auxiliary functions for the second case}{equation.5.2.57}{}}
-\newlabel{eq:finalAccAuxF@cref}{{[equation][57][5]5.57}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Spherical equations}{28}{subsection.5.2.3}}
-\newlabel{subsec:sphereq}{{5.2.3}{28}{Spherical equations}{subsection.5.2.3}{}}
-\newlabel{subsec:sphereq@cref}{{[subsection][3][5,2]5.2.3}{28}}
+\newlabel{eq:iHatAuxF}{{5.54}{31}{Auxiliary functions for the second case}{equation.5.2.54}{}}
+\newlabel{eq:iHatAuxF@cref}{{[equation][54][5]5.54}{31}}
+\newlabel{eq:jHatAuxF}{{5.55}{31}{Auxiliary functions for the second case}{equation.5.2.55}{}}
+\newlabel{eq:jHatAuxF@cref}{{[equation][55][5]5.55}{31}}
+\newlabel{eq:kHatAuxF}{{5.56}{31}{Auxiliary functions for the second case}{equation.5.2.56}{}}
+\newlabel{eq:kHatAuxF@cref}{{[equation][56][5]5.56}{31}}
+\newlabel{eq:finalAccAuxF}{{5.57}{31}{Auxiliary functions for the second case}{equation.5.2.57}{}}
+\newlabel{eq:finalAccAuxF@cref}{{[equation][57][5]5.57}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Spherical equations}{31}{subsection.5.2.3}}
+\newlabel{subsec:sphereq}{{5.2.3}{31}{Spherical equations}{subsection.5.2.3}{}}
+\newlabel{subsec:sphereq@cref}{{[subsection][3][5,2]5.2.3}{31}}
 \acronymused{MAV}
-\newlabel{eq:spherVecDef}{{5.58}{28}{Spherical equations}{equation.5.2.58}{}}
-\newlabel{eq:spherVecDef@cref}{{[equation][58][5]5.58}{28}}
-\newlabel{eq:spherVar}{{5.59}{28}{Spherical equations}{equation.5.2.59}{}}
-\newlabel{eq:spherVar@cref}{{[equation][59][5]5.59}{28}}
-\newlabel{eq:spherVarD}{{5.60}{28}{Spherical equations}{equation.5.2.60}{}}
-\newlabel{eq:spherVarD@cref}{{[equation][60][5]5.60}{28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Definition of the Spherical coordinates \citep  {mooij1994motion}.\relax }}{29}{figure.caption.35}}
-\newlabel{fig:spherical_mooij1994motion}{{5.4}{29}{Definition of the Spherical coordinates \citep {mooij1994motion}.\relax }{figure.caption.35}{}}
-\newlabel{fig:spherical_mooij1994motion@cref}{{[figure][4][5]5.4}{29}}
+\newlabel{eq:spherVecDef}{{5.58}{31}{Spherical equations}{equation.5.2.58}{}}
+\newlabel{eq:spherVecDef@cref}{{[equation][58][5]5.58}{31}}
+\newlabel{eq:spherVar}{{5.59}{31}{Spherical equations}{equation.5.2.59}{}}
+\newlabel{eq:spherVar@cref}{{[equation][59][5]5.59}{31}}
+\newlabel{eq:spherVarD}{{5.60}{31}{Spherical equations}{equation.5.2.60}{}}
+\newlabel{eq:spherVarD@cref}{{[equation][60][5]5.60}{31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Definition of the Spherical coordinates \citep  {mooij1994motion}.\relax }}{32}{figure.caption.49}}
+\newlabel{fig:spherical_mooij1994motion}{{5.4}{32}{Definition of the Spherical coordinates \citep {mooij1994motion}.\relax }{figure.caption.49}{}}
+\newlabel{fig:spherical_mooij1994motion@cref}{{[figure][4][5]5.4}{32}}
 \acronymused{TSI}
-\newlabel{eq:kinEqSp}{{5.61}{29}{Spherical equations}{equation.5.2.61}{}}
-\newlabel{eq:kinEqSp@cref}{{[equation][61][5]5.61}{29}}
-\newlabel{eq:dynEqSp}{{5.62}{29}{Spherical equations}{equation.5.2.62}{}}
-\newlabel{eq:dynEqSp@cref}{{[equation][62][5]5.62}{29}}
-\@writefile{toc}{\contentsline {subsubsection}{Auxiliary functions for the Spherical case}{29}{equation.5.2.62}}
-\newlabel{subsubsec:auxFspher}{{5.2.3}{29}{Auxiliary functions for the Spherical case}{equation.5.2.62}{}}
-\newlabel{subsubsec:auxFspher@cref}{{[subsection][3][5,2]5.2.3}{29}}
-\newlabel{eq:SpherAnglF}{{5.63}{30}{Auxiliary functions for the Spherical case}{equation.5.2.63}{}}
-\newlabel{eq:SpherAnglF@cref}{{[equation][63][5]5.63}{30}}
-\newlabel{eq:thrustAuxF}{{5.64}{30}{Auxiliary functions for the Spherical case}{equation.5.2.64}{}}
-\newlabel{eq:thrustAuxF@cref}{{[equation][64][5]5.64}{30}}
-\newlabel{eq:auxF11}{{5.65}{30}{Auxiliary functions for the Spherical case}{equation.5.2.65}{}}
-\newlabel{eq:auxF11@cref}{{[equation][65][5]5.65}{30}}
-\newlabel{eq:auxF12}{{5.66}{30}{Auxiliary functions for the Spherical case}{equation.5.2.66}{}}
-\newlabel{eq:auxF12@cref}{{[equation][66][5]5.66}{30}}
-\newlabel{eq:auxF13}{{5.67}{30}{Auxiliary functions for the Spherical case}{equation.5.2.67}{}}
-\newlabel{eq:auxF13@cref}{{[equation][67][5]5.67}{30}}
-\newlabel{eq:auxF14}{{5.68}{30}{Auxiliary functions for the Spherical case}{equation.5.2.68}{}}
-\newlabel{eq:auxF14@cref}{{[equation][68][5]5.68}{30}}
-\newlabel{eq:auxF15}{{5.69}{30}{Auxiliary functions for the Spherical case}{equation.5.2.69}{}}
-\newlabel{eq:auxF15@cref}{{[equation][69][5]5.69}{30}}
-\newlabel{eq:auxF16}{{5.70}{30}{Auxiliary functions for the Spherical case}{equation.5.2.70}{}}
-\newlabel{eq:auxF16@cref}{{[equation][70][5]5.70}{30}}
-\@writefile{toc}{\contentsline {subsubsection}{Drag acceleration as auxiliary variable}{31}{equation.5.2.70}}
-\newlabel{subsubsec:tsiDragAuxE}{{5.2.3}{31}{Drag acceleration as auxiliary variable}{equation.5.2.70}{}}
-\newlabel{subsubsec:tsiDragAuxE@cref}{{[subsection][3][5,2]5.2.3}{31}}
-\newlabel{eq:dragAux}{{5.71}{31}{Drag acceleration as auxiliary variable}{equation.5.2.71}{}}
-\newlabel{eq:dragAux@cref}{{[equation][71][5]5.71}{31}}
-\newlabel{eq:dragDerAux}{{5.72}{31}{Drag acceleration as auxiliary variable}{equation.5.2.72}{}}
-\newlabel{eq:dragDerAux@cref}{{[equation][72][5]5.72}{31}}
-\newlabel{eq:u27}{{5.73}{31}{Drag acceleration as auxiliary variable}{equation.5.2.73}{}}
-\newlabel{eq:u27@cref}{{[equation][73][5]5.73}{31}}
-\newlabel{eq:u28}{{5.74}{31}{Drag acceleration as auxiliary variable}{equation.5.2.74}{}}
-\newlabel{eq:u28@cref}{{[equation][74][5]5.74}{31}}
-\newlabel{eq:u30}{{5.75}{31}{Drag acceleration as auxiliary variable}{equation.5.2.75}{}}
-\newlabel{eq:u30@cref}{{[equation][75][5]5.75}{31}}
-\newlabel{eq:cdAux}{{5.76}{31}{Drag acceleration as auxiliary variable}{equation.5.2.76}{}}
-\newlabel{eq:cdAux@cref}{{[equation][76][5]5.76}{31}}
-\newlabel{eq:cdCond}{{5.77}{32}{Drag acceleration as auxiliary variable}{equation.5.2.77}{}}
-\newlabel{eq:cdCond@cref}{{[equation][77][5]5.77}{32}}
-\newlabel{eq:cdCondDer}{{5.78}{32}{Drag acceleration as auxiliary variable}{equation.5.2.78}{}}
-\newlabel{eq:cdCondDer@cref}{{[equation][78][5]5.78}{32}}
-\newlabel{eq:cdDerAux}{{5.79}{32}{Drag acceleration as auxiliary variable}{equation.5.2.79}{}}
-\newlabel{eq:cdDerAux@cref}{{[equation][79][5]5.79}{32}}
-\newlabel{eq:u32}{{5.80}{32}{Drag acceleration as auxiliary variable}{equation.5.2.80}{}}
-\newlabel{eq:u32@cref}{{[equation][80][5]5.80}{32}}
-\newlabel{eq:u33}{{5.81}{32}{Drag acceleration as auxiliary variable}{equation.5.2.81}{}}
-\newlabel{eq:u33@cref}{{[equation][81][5]5.81}{32}}
-\newlabel{eq:tempCondAux}{{5.82}{32}{Drag acceleration as auxiliary variable}{equation.5.2.82}{}}
-\newlabel{eq:tempCondAux@cref}{{[equation][82][5]5.82}{32}}
+\newlabel{eq:kinEqSp}{{5.61}{32}{Spherical equations}{equation.5.2.61}{}}
+\newlabel{eq:kinEqSp@cref}{{[equation][61][5]5.61}{32}}
+\newlabel{eq:dynEqSp}{{5.62}{32}{Spherical equations}{equation.5.2.62}{}}
+\newlabel{eq:dynEqSp@cref}{{[equation][62][5]5.62}{32}}
+\@writefile{toc}{\contentsline {subsubsection}{Auxiliary functions for the Spherical case}{32}{equation.5.2.62}}
+\newlabel{subsubsec:auxFspher}{{5.2.3}{32}{Auxiliary functions for the Spherical case}{equation.5.2.62}{}}
+\newlabel{subsubsec:auxFspher@cref}{{[subsection][3][5,2]5.2.3}{32}}
+\newlabel{eq:SpherAnglF}{{5.63}{33}{Auxiliary functions for the Spherical case}{equation.5.2.63}{}}
+\newlabel{eq:SpherAnglF@cref}{{[equation][63][5]5.63}{33}}
+\newlabel{eq:thrustAuxF}{{5.64}{33}{Auxiliary functions for the Spherical case}{equation.5.2.64}{}}
+\newlabel{eq:thrustAuxF@cref}{{[equation][64][5]5.64}{33}}
+\newlabel{eq:auxF11}{{5.65}{33}{Auxiliary functions for the Spherical case}{equation.5.2.65}{}}
+\newlabel{eq:auxF11@cref}{{[equation][65][5]5.65}{33}}
+\newlabel{eq:auxF12}{{5.66}{33}{Auxiliary functions for the Spherical case}{equation.5.2.66}{}}
+\newlabel{eq:auxF12@cref}{{[equation][66][5]5.66}{33}}
+\newlabel{eq:auxF13}{{5.67}{33}{Auxiliary functions for the Spherical case}{equation.5.2.67}{}}
+\newlabel{eq:auxF13@cref}{{[equation][67][5]5.67}{33}}
+\newlabel{eq:auxF14}{{5.68}{33}{Auxiliary functions for the Spherical case}{equation.5.2.68}{}}
+\newlabel{eq:auxF14@cref}{{[equation][68][5]5.68}{33}}
+\newlabel{eq:auxF15}{{5.69}{33}{Auxiliary functions for the Spherical case}{equation.5.2.69}{}}
+\newlabel{eq:auxF15@cref}{{[equation][69][5]5.69}{33}}
+\newlabel{eq:auxF16}{{5.70}{33}{Auxiliary functions for the Spherical case}{equation.5.2.70}{}}
+\newlabel{eq:auxF16@cref}{{[equation][70][5]5.70}{33}}
+\@writefile{toc}{\contentsline {subsubsection}{Drag acceleration as auxiliary variable}{34}{equation.5.2.70}}
+\newlabel{subsubsec:tsiDragAuxE}{{5.2.3}{34}{Drag acceleration as auxiliary variable}{equation.5.2.70}{}}
+\newlabel{subsubsec:tsiDragAuxE@cref}{{[subsection][3][5,2]5.2.3}{34}}
+\newlabel{eq:dragAux}{{5.71}{34}{Drag acceleration as auxiliary variable}{equation.5.2.71}{}}
+\newlabel{eq:dragAux@cref}{{[equation][71][5]5.71}{34}}
+\newlabel{eq:dragDerAux}{{5.72}{34}{Drag acceleration as auxiliary variable}{equation.5.2.72}{}}
+\newlabel{eq:dragDerAux@cref}{{[equation][72][5]5.72}{34}}
+\newlabel{eq:u27}{{5.73}{34}{Drag acceleration as auxiliary variable}{equation.5.2.73}{}}
+\newlabel{eq:u27@cref}{{[equation][73][5]5.73}{34}}
+\newlabel{eq:u28}{{5.74}{34}{Drag acceleration as auxiliary variable}{equation.5.2.74}{}}
+\newlabel{eq:u28@cref}{{[equation][74][5]5.74}{34}}
+\newlabel{eq:u30}{{5.75}{34}{Drag acceleration as auxiliary variable}{equation.5.2.75}{}}
+\newlabel{eq:u30@cref}{{[equation][75][5]5.75}{34}}
+\newlabel{eq:cdAux}{{5.76}{34}{Drag acceleration as auxiliary variable}{equation.5.2.76}{}}
+\newlabel{eq:cdAux@cref}{{[equation][76][5]5.76}{34}}
+\newlabel{eq:cdCond}{{5.77}{35}{Drag acceleration as auxiliary variable}{equation.5.2.77}{}}
+\newlabel{eq:cdCond@cref}{{[equation][77][5]5.77}{35}}
+\newlabel{eq:cdCondDer}{{5.78}{35}{Drag acceleration as auxiliary variable}{equation.5.2.78}{}}
+\newlabel{eq:cdCondDer@cref}{{[equation][78][5]5.78}{35}}
+\newlabel{eq:cdDerAux}{{5.79}{35}{Drag acceleration as auxiliary variable}{equation.5.2.79}{}}
+\newlabel{eq:cdDerAux@cref}{{[equation][79][5]5.79}{35}}
+\newlabel{eq:u32}{{5.80}{35}{Drag acceleration as auxiliary variable}{equation.5.2.80}{}}
+\newlabel{eq:u32@cref}{{[equation][80][5]5.80}{35}}
+\newlabel{eq:u33}{{5.81}{35}{Drag acceleration as auxiliary variable}{equation.5.2.81}{}}
+\newlabel{eq:u33@cref}{{[equation][81][5]5.81}{35}}
+\newlabel{eq:tempCondAux}{{5.82}{35}{Drag acceleration as auxiliary variable}{equation.5.2.82}{}}
+\newlabel{eq:tempCondAux@cref}{{[equation][82][5]5.82}{35}}
 \citation{scott2008high}
 \citation{scott2008high}
-\newlabel{eq:TCondDerAux}{{5.83}{33}{Drag acceleration as auxiliary variable}{equation.5.2.83}{}}
-\newlabel{eq:TCondDerAux@cref}{{[equation][83][5]5.83}{33}}
-\newlabel{eq:TCondAuxF}{{5.84}{33}{Drag acceleration as auxiliary variable}{equation.5.2.84}{}}
-\newlabel{eq:TCondAuxF@cref}{{[equation][84][5]5.84}{33}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Order of auxiliary equations and derivatives computations\relax }}{33}{table.caption.36}}
-\newlabel{tab:calcOrderAuxEq}{{5.1}{33}{Order of auxiliary equations and derivatives computations\relax }{table.caption.36}{}}
-\newlabel{tab:calcOrderAuxEq@cref}{{[table][1][5]5.1}{33}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Recurrence relations}{33}{subsection.5.2.4}}
-\newlabel{subsec:recRel}{{5.2.4}{33}{Recurrence relations}{subsection.5.2.4}{}}
-\newlabel{subsec:recRel@cref}{{[subsection][4][5,2]5.2.4}{33}}
-\newlabel{eq:tsCoeff}{{5.85}{33}{Recurrence relations}{equation.5.2.85}{}}
-\newlabel{eq:tsCoeff@cref}{{[equation][85][5]5.85}{33}}
-\newlabel{eq:redDer}{{5.86}{33}{Recurrence relations}{equation.5.2.86}{}}
-\newlabel{eq:redDer@cref}{{[equation][86][5]5.86}{33}}
+\newlabel{eq:TCondDerAux}{{5.83}{36}{Drag acceleration as auxiliary variable}{equation.5.2.83}{}}
+\newlabel{eq:TCondDerAux@cref}{{[equation][83][5]5.83}{36}}
+\newlabel{eq:TCondAuxF}{{5.84}{36}{Drag acceleration as auxiliary variable}{equation.5.2.84}{}}
+\newlabel{eq:TCondAuxF@cref}{{[equation][84][5]5.84}{36}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Order of auxiliary equations and derivatives computations\relax }}{36}{table.caption.50}}
+\newlabel{tab:calcOrderAuxEq}{{5.1}{36}{Order of auxiliary equations and derivatives computations\relax }{table.caption.50}{}}
+\newlabel{tab:calcOrderAuxEq@cref}{{[table][1][5]5.1}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Recurrence relations}{36}{subsection.5.2.4}}
+\newlabel{subsec:recRel}{{5.2.4}{36}{Recurrence relations}{subsection.5.2.4}{}}
+\newlabel{subsec:recRel@cref}{{[subsection][4][5,2]5.2.4}{36}}
+\newlabel{eq:tsCoeff}{{5.85}{36}{Recurrence relations}{equation.5.2.85}{}}
+\newlabel{eq:tsCoeff@cref}{{[equation][85][5]5.85}{36}}
+\newlabel{eq:redDer}{{5.86}{36}{Recurrence relations}{equation.5.2.86}{}}
+\newlabel{eq:redDer@cref}{{[equation][86][5]5.86}{36}}
 \citation{jorba2005software}
 \citation{jorba2005software}
-\newlabel{eq:UnXn}{{5.87}{34}{Recurrence relations}{equation.5.2.87}{}}
-\newlabel{eq:UnXn@cref}{{[equation][87][5]5.87}{34}}
-\newlabel{eq:recRel1}{{5.88}{34}{Recurrence relations}{equation.5.2.88}{}}
-\newlabel{eq:recRel1@cref}{{[equation][88][5]5.88}{34}}
-\newlabel{eq:recRel2}{{5.89}{34}{Recurrence relations}{equation.5.2.89}{}}
-\newlabel{eq:recRel2@cref}{{[equation][89][5]5.89}{34}}
-\newlabel{eq:recRel3}{{5.90}{34}{Recurrence relations}{equation.5.2.90}{}}
-\newlabel{eq:recRel3@cref}{{[equation][90][5]5.90}{34}}
-\newlabel{eq:recRel4}{{5.91}{34}{Recurrence relations}{equation.5.2.91}{}}
-\newlabel{eq:recRel4@cref}{{[equation][91][5]5.91}{34}}
-\newlabel{eq:recRel5}{{5.92}{34}{Recurrence relations}{equation.5.2.92}{}}
-\newlabel{eq:recRel5@cref}{{[equation][92][5]5.92}{34}}
-\newlabel{eq:recRel6}{{5.93}{34}{Recurrence relations}{equation.5.2.93}{}}
-\newlabel{eq:recRel6@cref}{{[equation][93][5]5.93}{34}}
-\newlabel{eq:recRel7}{{5.94}{34}{Recurrence relations}{equation.5.2.94}{}}
-\newlabel{eq:recRel7@cref}{{[equation][94][5]5.94}{34}}
-\newlabel{eq:Leibniz}{{5.95}{34}{Recurrence relations}{equation.5.2.95}{}}
-\newlabel{eq:Leibniz@cref}{{[equation][95][5]5.95}{34}}
-\newlabel{eq:LeibnizInt}{{5.96}{34}{Recurrence relations}{equation.5.2.96}{}}
-\newlabel{eq:LeibnizInt@cref}{{[equation][96][5]5.96}{34}}
-\newlabel{eq:TSexp}{{5.97}{34}{Recurrence relations}{equation.5.2.97}{}}
-\newlabel{eq:TSexp@cref}{{[equation][97][5]5.97}{34}}
+\newlabel{eq:UnXn}{{5.87}{37}{Recurrence relations}{equation.5.2.87}{}}
+\newlabel{eq:UnXn@cref}{{[equation][87][5]5.87}{37}}
+\newlabel{eq:recRel1}{{5.88}{37}{Recurrence relations}{equation.5.2.88}{}}
+\newlabel{eq:recRel1@cref}{{[equation][88][5]5.88}{37}}
+\newlabel{eq:recRel2}{{5.89}{37}{Recurrence relations}{equation.5.2.89}{}}
+\newlabel{eq:recRel2@cref}{{[equation][89][5]5.89}{37}}
+\newlabel{eq:recRel3}{{5.90}{37}{Recurrence relations}{equation.5.2.90}{}}
+\newlabel{eq:recRel3@cref}{{[equation][90][5]5.90}{37}}
+\newlabel{eq:recRel4}{{5.91}{37}{Recurrence relations}{equation.5.2.91}{}}
+\newlabel{eq:recRel4@cref}{{[equation][91][5]5.91}{37}}
+\newlabel{eq:recRel5}{{5.92}{37}{Recurrence relations}{equation.5.2.92}{}}
+\newlabel{eq:recRel5@cref}{{[equation][92][5]5.92}{37}}
+\newlabel{eq:recRel6}{{5.93}{37}{Recurrence relations}{equation.5.2.93}{}}
+\newlabel{eq:recRel6@cref}{{[equation][93][5]5.93}{37}}
+\newlabel{eq:recRel7}{{5.94}{37}{Recurrence relations}{equation.5.2.94}{}}
+\newlabel{eq:recRel7@cref}{{[equation][94][5]5.94}{37}}
+\newlabel{eq:Leibniz}{{5.95}{37}{Recurrence relations}{equation.5.2.95}{}}
+\newlabel{eq:Leibniz@cref}{{[equation][95][5]5.95}{37}}
+\newlabel{eq:LeibnizInt}{{5.96}{37}{Recurrence relations}{equation.5.2.96}{}}
+\newlabel{eq:LeibnizInt@cref}{{[equation][96][5]5.96}{37}}
+\newlabel{eq:TSexp}{{5.97}{37}{Recurrence relations}{equation.5.2.97}{}}
+\newlabel{eq:TSexp@cref}{{[equation][97][5]5.97}{37}}
 \citation{dirkx2016tudat}
 \citation{dirkx2016tudat}
 \citation{dirkx2016tudat}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Program simulation tool}{36}{chapter.6}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Program simulation tool}{39}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:programSimulationTool}{{6}{36}{Program simulation tool}{chapter.6}{}}
-\newlabel{ch:programSimulationTool@cref}{{[chapter][6][]6}{36}}
+\newlabel{ch:programSimulationTool}{{6}{39}{Program simulation tool}{chapter.6}{}}
+\newlabel{ch:programSimulationTool@cref}{{[chapter][6][]6}{39}}
 \acronymused{Tudat}
 \acronymused{MAV}
 \acronymused{RKF}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Existing software}{36}{section.6.1}}
-\newlabel{sec:existingsoftware}{{6.1}{36}{Existing software}{section.6.1}{}}
-\newlabel{sec:existingsoftware@cref}{{[section][1][6]6.1}{36}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Existing software}{39}{section.6.1}}
+\newlabel{sec:existingsoftware}{{6.1}{39}{Existing software}{section.6.1}{}}
+\newlabel{sec:existingsoftware@cref}{{[section][1][6]6.1}{39}}
 \acronymused{GRAM}
 \acronymused{JPL}
 \acronymused{Tudat}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}\ac {Tudat}}{36}{subsection.6.1.1}}
-\newlabel{subsec:tudat}{{6.1.1}{36}{\ac {Tudat}}{subsection.6.1.1}{}}
-\newlabel{subsec:tudat@cref}{{[subsection][1][6,1]6.1.1}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}\ac {Tudat}}{39}{subsection.6.1.1}}
+\newlabel{subsec:tudat}{{6.1.1}{39}{\ac {Tudat}}{subsection.6.1.1}{}}
+\newlabel{subsec:tudat@cref}{{[subsection][1][6,1]6.1.1}{39}}
 \acronymused{Tudat}
 \acronymused{Tudat}
 \acronymused{Tudat}
 \acronymused{Tudat}
 \acronymused{Tudat}
 \acronymused{Tudat}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces \ac {Tudat} structure\relax }}{36}{figure.caption.37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces \ac {Tudat} structure\relax }}{39}{figure.caption.51}}
 \acronymused{Tudat}
-\newlabel{fig:tudatBlock}{{6.1}{36}{\ac {Tudat} structure\relax }{figure.caption.37}{}}
-\newlabel{fig:tudatBlock@cref}{{[figure][1][6]6.1}{36}}
+\newlabel{fig:tudatBlock}{{6.1}{39}{\ac {Tudat} structure\relax }{figure.caption.51}{}}
+\newlabel{fig:tudatBlock@cref}{{[figure][1][6]6.1}{39}}
 \citation{dirkx2016tudat}
 \citation{justus2008utilizing}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Eigen}{37}{subsection.6.1.2}}
-\newlabel{subsec:eigen}{{6.1.2}{37}{Eigen}{subsection.6.1.2}{}}
-\newlabel{subsec:eigen@cref}{{[subsection][2][6,1]6.1.2}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Eigen}{40}{subsection.6.1.2}}
+\newlabel{subsec:eigen}{{6.1.2}{40}{Eigen}{subsection.6.1.2}{}}
+\newlabel{subsec:eigen@cref}{{[subsection][2][6,1]6.1.2}{40}}
 \acronymused{Tudat}
 \acronymused{Tudat}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Boost}{37}{subsection.6.1.3}}
-\newlabel{subsec:boost}{{6.1.3}{37}{Boost}{subsection.6.1.3}{}}
-\newlabel{subsec:boost@cref}{{[subsection][3][6,1]6.1.3}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Boost}{40}{subsection.6.1.3}}
+\newlabel{subsec:boost}{{6.1.3}{40}{Boost}{subsection.6.1.3}{}}
+\newlabel{subsec:boost@cref}{{[subsection][3][6,1]6.1.3}{40}}
 \acronymused{Tudat}
 \acronymused{Tudat}
 \acronymused{Tudat}
 \acronymused{GRAM}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}Mars-\ac {GRAM}}{37}{subsection.6.1.4}}
-\newlabel{subsec:marsgram}{{6.1.4}{37}{Mars-\ac {GRAM}}{subsection.6.1.4}{}}
-\newlabel{subsec:marsgram@cref}{{[subsection][4][6,1]6.1.4}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}Mars-\ac {GRAM}}{40}{subsection.6.1.4}}
+\newlabel{subsec:marsgram}{{6.1.4}{40}{Mars-\ac {GRAM}}{subsection.6.1.4}{}}
+\newlabel{subsec:marsgram@cref}{{[subsection][4][6,1]6.1.4}{40}}
 \acronymused{GRAM}
 \acronymused{GRAM}
 \acronymused{MOLA}
@@ -684,23 +833,17 @@
 \acronymused{GRAM}
 \acronymused{GRAM}
 \acronymused{GRAM}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Developed software}{37}{section.6.2}}
-\newlabel{sec:developedsoftware}{{6.2}{37}{Developed software}{section.6.2}{}}
-\newlabel{sec:developedsoftware@cref}{{[section][2][6]6.2}{37}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Developed software}{40}{section.6.2}}
+\newlabel{sec:developedsoftware}{{6.2}{40}{Developed software}{section.6.2}{}}
+\newlabel{sec:developedsoftware@cref}{{[section][2][6]6.2}{40}}
 \acronymused{TSI}
 \acronymused{RKF}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}\ac {RKF} propagator}{38}{subsection.6.2.1}}
-\newlabel{subsec:rkpropagator}{{6.2.1}{38}{\ac {RKF} propagator}{subsection.6.2.1}{}}
-\newlabel{subsec:rkpropagator@cref}{{[subsection][1][6,2]6.2.1}{38}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}\ac {RKF} propagator}{41}{subsection.6.2.1}}
+\newlabel{subsec:rkpropagator}{{6.2.1}{41}{\ac {RKF} propagator}{subsection.6.2.1}{}}
+\newlabel{subsec:rkpropagator@cref}{{[subsection][1][6,2]6.2.1}{41}}
 \acronymused{RKF}
 \acronymused{RKF}
-\AC@undonewlabel{acro:RK4}
-\newlabel{acro:RK4}{{6.2.1}{38}{\ac {RKF} propagator}{section*.38}{}}
-\newlabel{acro:RK4@cref}{{[subsection][1][6,2]6.2.1}{38}}
 \acronymused{RK4}
-\AC@undonewlabel{acro:RKF45}
-\newlabel{acro:RKF45}{{6.2.1}{38}{\ac {RKF} propagator}{section*.39}{}}
-\newlabel{acro:RKF45@cref}{{[subsection][1][6,2]6.2.1}{38}}
 \acronymused{RKF45}
 \acronymused{RKF}
 \acronymused{Tudat}
@@ -710,57 +853,51 @@
 \acronymused{Tudat}
 \acronymused{Tudat}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}\ac {TSI} propagator}{38}{subsection.6.2.2}}
-\newlabel{subsec:tsipropagator}{{6.2.2}{38}{\ac {TSI} propagator}{subsection.6.2.2}{}}
-\newlabel{subsec:tsipropagator@cref}{{[subsection][2][6,2]6.2.2}{38}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}\ac {TSI} propagator}{41}{subsection.6.2.2}}
+\newlabel{subsec:tsipropagator}{{6.2.2}{41}{\ac {TSI} propagator}{subsection.6.2.2}{}}
+\newlabel{subsec:tsipropagator@cref}{{[subsection][2][6,2]6.2.2}{41}}
 \acronymused{TSI}
 \acronymused{TSI}
 \acronymused{TSI}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Completed simulation tool}{38}{section.6.3}}
-\newlabel{sec:completedSimulationTool}{{6.3}{38}{Completed simulation tool}{section.6.3}{}}
-\newlabel{sec:completedSimulationTool@cref}{{[section][3][6]6.3}{38}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Completed simulation tool}{41}{section.6.3}}
+\newlabel{sec:completedSimulationTool}{{6.3}{41}{Completed simulation tool}{section.6.3}{}}
+\newlabel{sec:completedSimulationTool@cref}{{[section][3][6]6.3}{41}}
 \acronymused{TSI}
 \acronymused{RKF}
 \acronymused{RKF}
 \acronymused{RKF45}
-\AC@undonewlabel{acro:RKF78}
-\newlabel{acro:RKF78}{{6.3}{38}{Completed simulation tool}{section*.42}{}}
-\newlabel{acro:RKF78@cref}{{[section][3][6]6.3}{38}}
 \acronymused{RKF78}
-\AC@undonewlabel{acro:DOPRIN87}
-\newlabel{acro:DOPRIN87}{{6.3}{38}{Completed simulation tool}{section*.43}{}}
-\newlabel{acro:DOPRIN87@cref}{{[section][3][6]6.3}{38}}
 \acronymused{DOPRIN87}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Initialisation}{38}{subsection.6.3.1}}
-\newlabel{subsec:initialisation}{{6.3.1}{38}{Initialisation}{subsection.6.3.1}{}}
-\newlabel{subsec:initialisation@cref}{{[subsection][1][6,3]6.3.1}{38}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Initialisation}{41}{subsection.6.3.1}}
+\newlabel{subsec:initialisation}{{6.3.1}{41}{Initialisation}{subsection.6.3.1}{}}
+\newlabel{subsec:initialisation@cref}{{[subsection][1][6,3]6.3.1}{41}}
 \acronymused{MAV}
 \acronymused{MAV}
 \acronymused{TSI}
 \acronymused{RKF}
+\acronymused{TSI}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Initial propagation}{41}{subsection.6.3.2}}
+\newlabel{subsec:initialPropagation}{{6.3.2}{41}{Initial propagation}{subsection.6.3.2}{}}
+\newlabel{subsec:initialPropagation@cref}{{[subsection][2][6,3]6.3.2}{41}}
 \acronymused{TSI}
 \citation{wakker2010}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Initial propagation}{39}{subsection.6.3.2}}
-\newlabel{subsec:initialPropagation}{{6.3.2}{39}{Initial propagation}{subsection.6.3.2}{}}
-\newlabel{subsec:initialPropagation@cref}{{[subsection][2][6,3]6.3.2}{39}}
-\acronymused{TSI}
 \acronymused{TSI}
 \acronymused{RKF}
 \acronymused{RKF}
 \acronymused{RKF78}
 \acronymused{TSI}
 \acronymused{RKF}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Integrator burn phase}{39}{subsection.6.3.3}}
-\newlabel{subsec:integratorBurnPhase}{{6.3.3}{39}{Integrator burn phase}{subsection.6.3.3}{}}
-\newlabel{subsec:integratorBurnPhase@cref}{{[subsection][3][6,3]6.3.3}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Integrator burn phase}{42}{subsection.6.3.3}}
+\newlabel{subsec:integratorBurnPhase}{{6.3.3}{42}{Integrator burn phase}{subsection.6.3.3}{}}
+\newlabel{subsec:integratorBurnPhase@cref}{{[subsection][3][6,3]6.3.3}{42}}
 \acronymused{TSI}
 \acronymused{RKF}
 \acronymused{TSI}
 \acronymused{RKF}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}Integrator coast phase}{39}{subsection.6.3.4}}
-\newlabel{subsec:integratorCoastPhase}{{6.3.4}{39}{Integrator coast phase}{subsection.6.3.4}{}}
-\newlabel{subsec:integratorCoastPhase@cref}{{[subsection][4][6,3]6.3.4}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}Integrator coast phase}{42}{subsection.6.3.4}}
+\newlabel{subsec:integratorCoastPhase}{{6.3.4}{42}{Integrator coast phase}{subsection.6.3.4}{}}
+\newlabel{subsec:integratorCoastPhase@cref}{{[subsection][4][6,3]6.3.4}{42}}
 \acronymused{MAV}
 \acronymused{TSI}
 \acronymused{MAV}
@@ -770,17 +907,17 @@
 \acronymused{RKF}
 \acronymused{TSI}
 \acronymused{RKF}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.5}Final circularisation}{39}{subsection.6.3.5}}
-\newlabel{subsec:finalCircularisation}{{6.3.5}{39}{Final circularisation}{subsection.6.3.5}{}}
-\newlabel{subsec:finalCircularisation@cref}{{[subsection][5][6,3]6.3.5}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.5}Final circularisation}{42}{subsection.6.3.5}}
+\newlabel{subsec:finalCircularisation}{{6.3.5}{42}{Final circularisation}{subsection.6.3.5}{}}
+\newlabel{subsec:finalCircularisation@cref}{{[subsection][5][6,3]6.3.5}{42}}
 \acronymused{RKF}
 \acronymused{TSI}
 \acronymused{Tudat}
 \acronymused{RKF}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.6}Comparison}{39}{subsection.6.3.6}}
-\newlabel{subsec:comparison}{{6.3.6}{39}{Comparison}{subsection.6.3.6}{}}
-\newlabel{subsec:comparison@cref}{{[subsection][6][6,3]6.3.6}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.6}Comparison}{42}{subsection.6.3.6}}
+\newlabel{subsec:comparison}{{6.3.6}{42}{Comparison}{subsection.6.3.6}{}}
+\newlabel{subsec:comparison@cref}{{[subsection][6][6,3]6.3.6}{42}}
 \acronymused{TSI}
 \acronymused{RKF}
 \acronymused{TSI}
@@ -789,36 +926,36 @@
 \acronymused{RKF}
 \acronymused{TSI}
 \acronymused{RKF}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces \ac {RKF} interface architecture\relax }}{40}{figure.caption.40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces \ac {RKF} interface architecture\relax }}{43}{figure.caption.52}}
 \acronymused{RKF}
-\newlabel{fig:RK_Propagator}{{6.2}{40}{\ac {RKF} interface architecture\relax }{figure.caption.40}{}}
-\newlabel{fig:RK_Propagator@cref}{{[figure][2][6]6.2}{40}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces \ac {TSI} architecture\relax }}{41}{figure.caption.41}}
+\newlabel{fig:RK_Propagator}{{6.2}{43}{\ac {RKF} interface architecture\relax }{figure.caption.52}{}}
+\newlabel{fig:RK_Propagator@cref}{{[figure][2][6]6.2}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces \ac {TSI} architecture\relax }}{44}{figure.caption.53}}
 \acronymused{TSI}
-\newlabel{fig:TSI_Propagator}{{6.3}{41}{\ac {TSI} architecture\relax }{figure.caption.41}{}}
-\newlabel{fig:TSI_Propagator@cref}{{[figure][3][6]6.3}{41}}
+\newlabel{fig:TSI_Propagator}{{6.3}{44}{\ac {TSI} architecture\relax }{figure.caption.53}{}}
+\newlabel{fig:TSI_Propagator@cref}{{[figure][3][6]6.3}{44}}
 \citation{dirkx2016tudat}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Verification and validation}{42}{chapter.7}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Verification and validation}{45}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:verificationandvalidation}{{7}{42}{Verification and validation}{chapter.7}{}}
-\newlabel{ch:verificationandvalidation@cref}{{[chapter][7][]7}{42}}
+\newlabel{ch:verificationandvalidation}{{7}{45}{Verification and validation}{chapter.7}{}}
+\newlabel{ch:verificationandvalidation@cref}{{[chapter][7][]7}{45}}
 \acronymused{Tudat}
 \acronymused{Tudat}
 \acronymused{Tudat}
 \acronymused{GRAM}
 \acronymused{RK4}
 \acronymused{RKF}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}\acs {RK4} and \acs {RKF} integrators}{42}{section.7.1}}
-\newlabel{sec:rkandrkfver}{{7.1}{42}{\acs {RK4} and \acs {RKF} integrators}{section.7.1}{}}
-\newlabel{sec:rkandrkfver@cref}{{[section][1][7]7.1}{42}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}\acs {RK4} and \acs {RKF} integrators}{45}{section.7.1}}
+\newlabel{sec:rkandrkfver}{{7.1}{45}{\acs {RK4} and \acs {RKF} integrators}{section.7.1}{}}
+\newlabel{sec:rkandrkfver@cref}{{[section][1][7]7.1}{45}}
 \acronymused{Tudat}
 \acronymused{RK4}
 \acronymused{RKF}
 \acronymused{Tudat}
-\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces Verification data for the standard integrators\relax }}{42}{table.caption.44}}
-\newlabel{tab:intverdat}{{7.1}{42}{Verification data for the standard integrators\relax }{table.caption.44}{}}
-\newlabel{tab:intverdat@cref}{{[table][1][7]7.1}{42}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces Verification data for the standard integrators\relax }}{45}{table.caption.54}}
+\newlabel{tab:intverdat}{{7.1}{45}{Verification data for the standard integrators\relax }{table.caption.54}{}}
+\newlabel{tab:intverdat@cref}{{[table][1][7]7.1}{45}}
 \acronymused{RK4}
 \acronymused{RKF}
 \citation{mooij1994motion}
@@ -826,32 +963,32 @@
 \acronymused{RKF}
 \acronymused{RKF}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}\acl {TSI}}{43}{section.7.2}}
-\newlabel{sec:tsiverval}{{7.2}{43}{\acl {TSI}}{section.7.2}{}}
-\newlabel{sec:tsiverval@cref}{{[section][2][7]7.2}{43}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}\acl {TSI}}{46}{section.7.2}}
+\newlabel{sec:tsiverval}{{7.2}{46}{\acl {TSI}}{section.7.2}{}}
+\newlabel{sec:tsiverval@cref}{{[section][2][7]7.2}{46}}
 \acronymused{TSI}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Auxiliary equations, derivatives and functions}{43}{subsection.7.2.1}}
-\newlabel{subsec:auxEqDerFunverval}{{7.2.1}{43}{Auxiliary equations, derivatives and functions}{subsection.7.2.1}{}}
-\newlabel{subsec:auxEqDerFunverval@cref}{{[subsection][1][7,2]7.2.1}{43}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Auxiliary equations, derivatives and functions}{46}{subsection.7.2.1}}
+\newlabel{subsec:auxEqDerFunverval}{{7.2.1}{46}{Auxiliary equations, derivatives and functions}{subsection.7.2.1}{}}
+\newlabel{subsec:auxEqDerFunverval@cref}{{[subsection][1][7,2]7.2.1}{46}}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.2}Computing the Taylor Series coefficients and the updated state}{43}{subsection.7.2.2}}
-\newlabel{subsec:TaySerCoefverval}{{7.2.2}{43}{Computing the Taylor Series coefficients and the updated state}{subsection.7.2.2}{}}
-\newlabel{subsec:TaySerCoefverval@cref}{{[subsection][2][7,2]7.2.2}{43}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.2}Computing the Taylor Series coefficients and the updated state}{46}{subsection.7.2.2}}
+\newlabel{subsec:TaySerCoefverval}{{7.2.2}{46}{Computing the Taylor Series coefficients and the updated state}{subsection.7.2.2}{}}
+\newlabel{subsec:TaySerCoefverval@cref}{{[subsection][2][7,2]7.2.2}{46}}
 \citation{scott2008high}
 \citation{bergsma2015application}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.3}Next step-size}{44}{subsection.7.2.3}}
-\newlabel{subsec:nextStepSizeverval}{{7.2.3}{44}{Next step-size}{subsection.7.2.3}{}}
-\newlabel{subsec:nextStepSizeverval@cref}{{[subsection][3][7,2]7.2.3}{44}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}Complete trajectory propagation}{44}{section.7.3}}
-\newlabel{sec:propverval}{{7.3}{44}{Complete trajectory propagation}{section.7.3}{}}
-\newlabel{sec:propverval@cref}{{[section][3][7]7.3}{44}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.3}Next step-size}{47}{subsection.7.2.3}}
+\newlabel{subsec:nextStepSizeverval}{{7.2.3}{47}{Next step-size}{subsection.7.2.3}{}}
+\newlabel{subsec:nextStepSizeverval@cref}{{[subsection][3][7,2]7.2.3}{47}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Complete trajectory propagation}{47}{section.7.3}}
+\newlabel{sec:propverval}{{7.3}{47}{Complete trajectory propagation}{section.7.3}{}}
+\newlabel{sec:propverval@cref}{{[section][3][7]7.3}{47}}
 \acronymused{RKF}
 \acronymused{TSI}
 \acronymused{RKF}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}Phase 1: \ac {RKF} propagation}{44}{subsection.7.3.1}}
-\newlabel{subsec:phase1com}{{7.3.1}{44}{Phase 1: \ac {RKF} propagation}{subsection.7.3.1}{}}
-\newlabel{subsec:phase1com@cref}{{[subsection][1][7,3]7.3.1}{44}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}Phase 1: \ac {RKF} propagation}{47}{subsection.7.3.1}}
+\newlabel{subsec:phase1com}{{7.3.1}{47}{Phase 1: \ac {RKF} propagation}{subsection.7.3.1}{}}
+\newlabel{subsec:phase1com@cref}{{[subsection][1][7,3]7.3.1}{47}}
 \acronymused{RKF}
 \acronymused{RKF}
 \acronymused{DOPRIN87}
@@ -859,9 +996,9 @@
 \acronymused{TSI}
 \acronymused{RKF}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}Phase 2: both \ac {RKF} and \ac {TSI}}{44}{subsection.7.3.2}}
-\newlabel{subsec:phase2com}{{7.3.2}{44}{Phase 2: both \ac {RKF} and \ac {TSI}}{subsection.7.3.2}{}}
-\newlabel{subsec:phase2com@cref}{{[subsection][2][7,3]7.3.2}{44}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}Phase 2: both \ac {RKF} and \ac {TSI}}{47}{subsection.7.3.2}}
+\newlabel{subsec:phase2com}{{7.3.2}{47}{Phase 2: both \ac {RKF} and \ac {TSI}}{subsection.7.3.2}{}}
+\newlabel{subsec:phase2com@cref}{{[subsection][2][7,3]7.3.2}{47}}
 \acronymused{RKF}
 \acronymused{TSI}
 \acronymused{RKF}
@@ -872,30 +1009,30 @@
 \citation{benito2016trajectory}
 \acronymused{TSI}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.3}Phase 3: three different models for \ac {TSI}}{45}{subsection.7.3.3}}
-\newlabel{subsec:phase3com}{{7.3.3}{45}{Phase 3: three different models for \ac {TSI}}{subsection.7.3.3}{}}
-\newlabel{subsec:phase3com@cref}{{[subsection][3][7,3]7.3.3}{45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.3}Phase 3: three different models for \ac {TSI}}{48}{subsection.7.3.3}}
+\newlabel{subsec:phase3com}{{7.3.3}{48}{Phase 3: three different models for \ac {TSI}}{subsection.7.3.3}{}}
+\newlabel{subsec:phase3com@cref}{{[subsection][3][7,3]7.3.3}{48}}
 \acronymused{TSI}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.4}Phase 4: one final \ac {TSI} model}{45}{subsection.7.3.4}}
-\newlabel{subsec:phase4com}{{7.3.4}{45}{Phase 4: one final \ac {TSI} model}{subsection.7.3.4}{}}
-\newlabel{subsec:phase4com@cref}{{[subsection][4][7,3]7.3.4}{45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.4}Phase 4: one final \ac {TSI} model}{48}{subsection.7.3.4}}
+\newlabel{subsec:phase4com}{{7.3.4}{48}{Phase 4: one final \ac {TSI} model}{subsection.7.3.4}{}}
+\newlabel{subsec:phase4com@cref}{{[subsection][4][7,3]7.3.4}{48}}
 \acronymused{TSI}
 \acronymused{TSI}
 \acronymused{RKF78}
 \acronymused{TSI}
 \acronymused{TSI}
 \acronymused{RKF}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.5}Phase 5: coasting and circularisation}{45}{subsection.7.3.5}}
-\newlabel{subsec:phase5com}{{7.3.5}{45}{Phase 5: coasting and circularisation}{subsection.7.3.5}{}}
-\newlabel{subsec:phase5com@cref}{{[subsection][5][7,3]7.3.5}{45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.5}Phase 5: coasting and circularisation}{48}{subsection.7.3.5}}
+\newlabel{subsec:phase5com}{{7.3.5}{48}{Phase 5: coasting and circularisation}{subsection.7.3.5}{}}
+\newlabel{subsec:phase5com@cref}{{[subsection][5][7,3]7.3.5}{48}}
 \acronymused{TSI}
 \acronymused{TSI}
 \acronymused{RKF}
 \acronymused{RKF}
 \acronymused{MAV}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.6}Phase 6: tool validation}{45}{subsection.7.3.6}}
-\newlabel{subsec:phase6com}{{7.3.6}{45}{Phase 6: tool validation}{subsection.7.3.6}{}}
-\newlabel{subsec:phase6com@cref}{{[subsection][6][7,3]7.3.6}{45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.6}Phase 6: tool validation}{48}{subsection.7.3.6}}
+\newlabel{subsec:phase6com}{{7.3.6}{48}{Phase 6: tool validation}{subsection.7.3.6}{}}
+\newlabel{subsec:phase6com@cref}{{[subsection][6][7,3]7.3.6}{48}}
 \acronymused{RKF}
 \acronymused{TSI}
 \acronymused{RKF}
@@ -903,188 +1040,188 @@
 \acronymused{RKF}
 \acronymused{JPL}
 \AC@undonewlabel{acro:SSTO}
-\newlabel{acro:SSTO}{{7.3.6}{45}{Phase 6: tool validation}{section*.45}{}}
-\newlabel{acro:SSTO@cref}{{[subsection][6][7,3]7.3.6}{45}}
+\newlabel{acro:SSTO}{{7.3.6}{48}{Phase 6: tool validation}{section*.55}{}}
+\newlabel{acro:SSTO@cref}{{[subsection][6][7,3]7.3.6}{48}}
 \acronymused{SSTO}
 \acronymused{MAV}
-\@writefile{lot}{\contentsline {table}{\numberline {7.2}{\ignorespaces Validation case 1: \ac {SSTO} Woolley\relax }}{46}{table.caption.46}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.2}{\ignorespaces Validation case 1: \ac {SSTO} Woolley\relax }}{49}{table.caption.56}}
 \acronymused{SSTO}
-\newlabel{tab:validationCaseWoolley}{{7.2}{46}{Validation case 1: \ac {SSTO} Woolley\relax }{table.caption.46}{}}
-\newlabel{tab:validationCaseWoolley@cref}{{[table][2][7]7.2}{46}}
+\newlabel{tab:validationCaseWoolley}{{7.2}{49}{Validation case 1: \ac {SSTO} Woolley\relax }{table.caption.56}{}}
+\newlabel{tab:validationCaseWoolley@cref}{{[table][2][7]7.2}{49}}
 \acronymused{MAV}
 \acronymused{GLOM}
 \acronymused{MOLA}
 \AC@undonewlabel{acro:FPA}
-\newlabel{acro:FPA}{{7.2}{46}{Validation case 1: \ac {SSTO} Woolley\relax }{section*.47}{}}
-\newlabel{acro:FPA@cref}{{[table][2][7]7.2}{46}}
+\newlabel{acro:FPA}{{7.2}{49}{Validation case 1: \ac {SSTO} Woolley\relax }{section*.57}{}}
+\newlabel{acro:FPA@cref}{{[table][2][7]7.2}{49}}
 \acronymused{FPA}
 \acronymused{MOLA}
 \acronymused{RKF}
 \acronymused{TSI}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Case 1 3-D trajectory\relax }}{46}{figure.caption.48}}
-\newlabel{fig:PlotFigure2Zoom}{{7.1}{46}{Case 1 3-D trajectory\relax }{figure.caption.48}{}}
-\newlabel{fig:PlotFigure2Zoom@cref}{{[figure][1][7]7.1}{46}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces Case 1 2-D trajectory as seen from the x-axis\relax }}{47}{figure.caption.49}}
-\newlabel{fig:PlotFigure1SeenFromZoomXaxis}{{7.2}{47}{Case 1 2-D trajectory as seen from the x-axis\relax }{figure.caption.49}{}}
-\newlabel{fig:PlotFigure1SeenFromZoomXaxis@cref}{{[figure][2][7]7.2}{47}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces Case 1 2-D trajectory as seen from the y-axis\relax }}{47}{figure.caption.50}}
-\newlabel{fig:PlotFigure1SeenFromZoomYaxis}{{7.3}{47}{Case 1 2-D trajectory as seen from the y-axis\relax }{figure.caption.50}{}}
-\newlabel{fig:PlotFigure1SeenFromZoomYaxis@cref}{{[figure][3][7]7.3}{47}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.3}{\ignorespaces Validation case 2: \ac {SSTO} Benito\relax }}{47}{table.caption.52}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Case 1 3-D trajectory\relax }}{49}{figure.caption.58}}
+\newlabel{fig:PlotFigure2Zoom}{{7.1}{49}{Case 1 3-D trajectory\relax }{figure.caption.58}{}}
+\newlabel{fig:PlotFigure2Zoom@cref}{{[figure][1][7]7.1}{49}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces Case 1 2-D trajectory as seen from the x-axis\relax }}{50}{figure.caption.59}}
+\newlabel{fig:PlotFigure1SeenFromZoomXaxis}{{7.2}{50}{Case 1 2-D trajectory as seen from the x-axis\relax }{figure.caption.59}{}}
+\newlabel{fig:PlotFigure1SeenFromZoomXaxis@cref}{{[figure][2][7]7.2}{50}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces Case 1 2-D trajectory as seen from the y-axis\relax }}{50}{figure.caption.60}}
+\newlabel{fig:PlotFigure1SeenFromZoomYaxis}{{7.3}{50}{Case 1 2-D trajectory as seen from the y-axis\relax }{figure.caption.60}{}}
+\newlabel{fig:PlotFigure1SeenFromZoomYaxis@cref}{{[figure][3][7]7.3}{50}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.3}{\ignorespaces Validation case 2: \ac {SSTO} Benito\relax }}{50}{table.caption.62}}
 \acronymused{SSTO}
-\newlabel{tab:validationCaseBenito}{{7.3}{47}{Validation case 2: \ac {SSTO} Benito\relax }{table.caption.52}{}}
-\newlabel{tab:validationCaseBenito@cref}{{[table][3][7]7.3}{47}}
+\newlabel{tab:validationCaseBenito}{{7.3}{50}{Validation case 2: \ac {SSTO} Benito\relax }{table.caption.62}{}}
+\newlabel{tab:validationCaseBenito@cref}{{[table][3][7]7.3}{50}}
 \acronymused{MAV}
 \acronymused{GLOM}
 \acronymused{MOLA}
 \acronymused{FPA}
 \acronymused{MOLA}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces Case 1 2-D trajectory as seen from the z-axis\relax }}{48}{figure.caption.51}}
-\newlabel{fig:PlotFigure1SeenFromZoomZaxis}{{7.4}{48}{Case 1 2-D trajectory as seen from the z-axis\relax }{figure.caption.51}{}}
-\newlabel{fig:PlotFigure1SeenFromZoomZaxis@cref}{{[figure][4][7]7.4}{48}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces Case 2 3-D trajectory\relax }}{48}{figure.caption.53}}
-\newlabel{fig:2PlotFigure2Zoom}{{7.5}{48}{Case 2 3-D trajectory\relax }{figure.caption.53}{}}
-\newlabel{fig:2PlotFigure2Zoom@cref}{{[figure][5][7]7.5}{48}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.6}{\ignorespaces Case 2 2-D trajectory as seen from the x-axis\relax }}{49}{figure.caption.54}}
-\newlabel{fig:2PlotFigure1SeenFromXaxisZoom}{{7.6}{49}{Case 2 2-D trajectory as seen from the x-axis\relax }{figure.caption.54}{}}
-\newlabel{fig:2PlotFigure1SeenFromXaxisZoom@cref}{{[figure][6][7]7.6}{49}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.7}{\ignorespaces Case 2 2-D trajectory as seen from the y-axis\relax }}{49}{figure.caption.55}}
-\newlabel{fig:2PlotFigure1SeenFromYaxisZoom}{{7.7}{49}{Case 2 2-D trajectory as seen from the y-axis\relax }{figure.caption.55}{}}
-\newlabel{fig:2PlotFigure1SeenFromYaxisZoom@cref}{{[figure][7][7]7.7}{49}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.8}{\ignorespaces Case 2 2-D trajectory as seen from the z-axis\relax }}{49}{figure.caption.56}}
-\newlabel{fig:2PlotFigure1SeenFromZaxisZoom}{{7.8}{49}{Case 2 2-D trajectory as seen from the z-axis\relax }{figure.caption.56}{}}
-\newlabel{fig:2PlotFigure1SeenFromZaxisZoom@cref}{{[figure][8][7]7.8}{49}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.9}{\ignorespaces Case 2 thrust elevation and azimuth angle curve.\relax }}{50}{figure.caption.57}}
-\newlabel{fig:thrustAzimuthAndElevationDerivedFromCase2Version2}{{7.9}{50}{Case 2 thrust elevation and azimuth angle curve.\relax }{figure.caption.57}{}}
-\newlabel{fig:thrustAzimuthAndElevationDerivedFromCase2Version2@cref}{{[figure][9][7]7.9}{50}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Results}{51}{chapter.8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces Case 1 2-D trajectory as seen from the z-axis\relax }}{51}{figure.caption.61}}
+\newlabel{fig:PlotFigure1SeenFromZoomZaxis}{{7.4}{51}{Case 1 2-D trajectory as seen from the z-axis\relax }{figure.caption.61}{}}
+\newlabel{fig:PlotFigure1SeenFromZoomZaxis@cref}{{[figure][4][7]7.4}{51}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces Case 2 3-D trajectory\relax }}{51}{figure.caption.63}}
+\newlabel{fig:2PlotFigure2Zoom}{{7.5}{51}{Case 2 3-D trajectory\relax }{figure.caption.63}{}}
+\newlabel{fig:2PlotFigure2Zoom@cref}{{[figure][5][7]7.5}{51}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.6}{\ignorespaces Case 2 2-D trajectory as seen from the x-axis\relax }}{52}{figure.caption.64}}
+\newlabel{fig:2PlotFigure1SeenFromXaxisZoom}{{7.6}{52}{Case 2 2-D trajectory as seen from the x-axis\relax }{figure.caption.64}{}}
+\newlabel{fig:2PlotFigure1SeenFromXaxisZoom@cref}{{[figure][6][7]7.6}{52}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.7}{\ignorespaces Case 2 2-D trajectory as seen from the y-axis\relax }}{52}{figure.caption.65}}
+\newlabel{fig:2PlotFigure1SeenFromYaxisZoom}{{7.7}{52}{Case 2 2-D trajectory as seen from the y-axis\relax }{figure.caption.65}{}}
+\newlabel{fig:2PlotFigure1SeenFromYaxisZoom@cref}{{[figure][7][7]7.7}{52}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.8}{\ignorespaces Case 2 2-D trajectory as seen from the z-axis\relax }}{52}{figure.caption.66}}
+\newlabel{fig:2PlotFigure1SeenFromZaxisZoom}{{7.8}{52}{Case 2 2-D trajectory as seen from the z-axis\relax }{figure.caption.66}{}}
+\newlabel{fig:2PlotFigure1SeenFromZaxisZoom@cref}{{[figure][8][7]7.8}{52}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.9}{\ignorespaces Case 2 thrust elevation and azimuth angle curve.\relax }}{53}{figure.caption.67}}
+\newlabel{fig:thrustAzimuthAndElevationDerivedFromCase2Version2}{{7.9}{53}{Case 2 thrust elevation and azimuth angle curve.\relax }{figure.caption.67}{}}
+\newlabel{fig:thrustAzimuthAndElevationDerivedFromCase2Version2@cref}{{[figure][9][7]7.9}{53}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Results}{54}{chapter.8}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:results}{{8}{51}{Results}{chapter.8}{}}
-\newlabel{ch:results@cref}{{[chapter][8][]8}{51}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {9}Analysis}{52}{chapter.9}}
+\newlabel{ch:results}{{8}{54}{Results}{chapter.8}{}}
+\newlabel{ch:results@cref}{{[chapter][8][]8}{54}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Analysis}{55}{chapter.9}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:analysis}{{9}{52}{Analysis}{chapter.9}{}}
-\newlabel{ch:analysis@cref}{{[chapter][9][]9}{52}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {10}Conclusions and recommendations}{53}{chapter.10}}
+\newlabel{ch:analysis}{{9}{55}{Analysis}{chapter.9}{}}
+\newlabel{ch:analysis@cref}{{[chapter][9][]9}{55}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {10}Conclusions and recommendations}{56}{chapter.10}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:conclusionsandrecommendations}{{10}{53}{Conclusions and recommendations}{chapter.10}{}}
-\newlabel{ch:conclusionsandrecommendations@cref}{{[chapter][10][]10}{53}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{54}{appendix.A}}
+\newlabel{ch:conclusionsandrecommendations}{{10}{56}{Conclusions and recommendations}{chapter.10}{}}
+\newlabel{ch:conclusionsandrecommendations@cref}{{[chapter][10][]10}{56}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{57}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \acronymused{GRAM}
-\newlabel{app:appendixA-marsGRAM-inputFile}{{A}{54}{Mars-\ac {GRAM} 2005 input file}{appendix.A}{}}
-\newlabel{app:appendixA-marsGRAM-inputFile@cref}{{[appendix][1][2147483647]A}{54}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{58}{appendix.B}}
+\newlabel{app:appendixA-marsGRAM-inputFile}{{A}{57}{Mars-\ac {GRAM} 2005 input file}{appendix.A}{}}
+\newlabel{app:appendixA-marsGRAM-inputFile@cref}{{[appendix][1][2147483647]A}{57}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{61}{appendix.B}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:appendixB-fittingProcessAndResults}{{B}{58}{Atmospheric data fitting}{appendix.B}{}}
-\newlabel{app:appendixB-fittingProcessAndResults@cref}{{[appendix][2][2147483647]B}{58}}
-\@writefile{toc}{\contentsline {section}{\numberline {B.1}Temperature}{58}{section.B.1}}
-\newlabel{appsec:tempFit}{{B.1}{58}{Temperature}{section.B.1}{}}
-\newlabel{appsec:tempFit@cref}{{[subappendix][1][2147483647,2]B.1}{58}}
+\newlabel{app:appendixB-fittingProcessAndResults}{{B}{61}{Atmospheric data fitting}{appendix.B}{}}
+\newlabel{app:appendixB-fittingProcessAndResults@cref}{{[appendix][2][2147483647]B}{61}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.1}Temperature}{61}{section.B.1}}
+\newlabel{appsec:tempFit}{{B.1}{61}{Temperature}{section.B.1}{}}
+\newlabel{appsec:tempFit@cref}{{[subappendix][1][2147483647,2]B.1}{61}}
 \acronymused{GRAM}
-\@writefile{toc}{\contentsline {section}{\numberline {B.2}Density}{58}{section.B.2}}
-\newlabel{appsec:denFit}{{B.2}{58}{Density}{section.B.2}{}}
-\newlabel{appsec:denFit@cref}{{[subappendix][2][2147483647,2]B.2}{58}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Six different temperature curve sections\relax }}{59}{figure.caption.58}}
-\newlabel{fig:temperatureDataSplit6}{{B.1}{59}{Six different temperature curve sections\relax }{figure.caption.58}{}}
-\newlabel{fig:temperatureDataSplit6@cref}{{[figure][1][2147483647,2]B.1}{59}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces Seven different temperature curve sections\relax }}{59}{figure.caption.59}}
-\newlabel{fig:temperatureDataSplit7}{{B.2}{59}{Seven different temperature curve sections\relax }{figure.caption.59}{}}
-\newlabel{fig:temperatureDataSplit7@cref}{{[figure][2][2147483647,2]B.2}{59}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.3}{\ignorespaces All section fits for the launch site temperature data curve\relax }}{60}{figure.caption.60}}
-\newlabel{fig:completePolyFitTempSplit7}{{B.3}{60}{All section fits for the launch site temperature data curve\relax }{figure.caption.60}{}}
-\newlabel{fig:completePolyFitTempSplit7@cref}{{[figure][3][2147483647,2]B.3}{60}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.4}{\ignorespaces Two different density curve sections\relax }}{60}{figure.caption.61}}
-\newlabel{fig:densityDataSplit2}{{B.4}{60}{Two different density curve sections\relax }{figure.caption.61}{}}
-\newlabel{fig:densityDataSplit2@cref}{{[figure][4][2147483647,2]B.4}{60}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.5}{\ignorespaces Three different density curve sections\relax }}{61}{figure.caption.62}}
-\newlabel{fig:densityDataSplit3}{{B.5}{61}{Three different density curve sections\relax }{figure.caption.62}{}}
-\newlabel{fig:densityDataSplit3@cref}{{[figure][5][2147483647,2]B.5}{61}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.6}{\ignorespaces All section fits for the launch site density data curve\relax }}{62}{figure.caption.63}}
-\newlabel{fig:completePolyFitDenSplit3}{{B.6}{62}{All section fits for the launch site density data curve\relax }{figure.caption.63}{}}
-\newlabel{fig:completePolyFitDenSplit3@cref}{{[figure][6][2147483647,2]B.6}{62}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.7}{\ignorespaces Section 3 fit for the launch site density data curve\relax }}{62}{figure.caption.64}}
-\newlabel{fig:section3PolyFitDen}{{B.7}{62}{Section 3 fit for the launch site density data curve\relax }{figure.caption.64}{}}
-\newlabel{fig:section3PolyFitDen@cref}{{[figure][7][2147483647,2]B.7}{62}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.8}{\ignorespaces Zoom in of the end of section 1 with the polynomial and exponential atmospheric fits\relax }}{63}{figure.caption.65}}
-\newlabel{fig:ExpAtmFitDenZoom}{{B.8}{63}{Zoom in of the end of section 1 with the polynomial and exponential atmospheric fits\relax }{figure.caption.65}{}}
-\newlabel{fig:ExpAtmFitDenZoom@cref}{{[figure][8][2147483647,2]B.8}{63}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {C}Program file definitions}{64}{appendix.C}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.2}Density}{61}{section.B.2}}
+\newlabel{appsec:denFit}{{B.2}{61}{Density}{section.B.2}{}}
+\newlabel{appsec:denFit@cref}{{[subappendix][2][2147483647,2]B.2}{61}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Six different temperature curve sections\relax }}{62}{figure.caption.68}}
+\newlabel{fig:temperatureDataSplit6}{{B.1}{62}{Six different temperature curve sections\relax }{figure.caption.68}{}}
+\newlabel{fig:temperatureDataSplit6@cref}{{[figure][1][2147483647,2]B.1}{62}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces Seven different temperature curve sections\relax }}{62}{figure.caption.69}}
+\newlabel{fig:temperatureDataSplit7}{{B.2}{62}{Seven different temperature curve sections\relax }{figure.caption.69}{}}
+\newlabel{fig:temperatureDataSplit7@cref}{{[figure][2][2147483647,2]B.2}{62}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.3}{\ignorespaces All section fits for the launch site temperature data curve\relax }}{63}{figure.caption.70}}
+\newlabel{fig:completePolyFitTempSplit7}{{B.3}{63}{All section fits for the launch site temperature data curve\relax }{figure.caption.70}{}}
+\newlabel{fig:completePolyFitTempSplit7@cref}{{[figure][3][2147483647,2]B.3}{63}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.4}{\ignorespaces Two different density curve sections\relax }}{63}{figure.caption.71}}
+\newlabel{fig:densityDataSplit2}{{B.4}{63}{Two different density curve sections\relax }{figure.caption.71}{}}
+\newlabel{fig:densityDataSplit2@cref}{{[figure][4][2147483647,2]B.4}{63}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.5}{\ignorespaces Three different density curve sections\relax }}{64}{figure.caption.72}}
+\newlabel{fig:densityDataSplit3}{{B.5}{64}{Three different density curve sections\relax }{figure.caption.72}{}}
+\newlabel{fig:densityDataSplit3@cref}{{[figure][5][2147483647,2]B.5}{64}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.6}{\ignorespaces All section fits for the launch site density data curve\relax }}{65}{figure.caption.73}}
+\newlabel{fig:completePolyFitDenSplit3}{{B.6}{65}{All section fits for the launch site density data curve\relax }{figure.caption.73}{}}
+\newlabel{fig:completePolyFitDenSplit3@cref}{{[figure][6][2147483647,2]B.6}{65}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.7}{\ignorespaces Section 3 fit for the launch site density data curve\relax }}{65}{figure.caption.74}}
+\newlabel{fig:section3PolyFitDen}{{B.7}{65}{Section 3 fit for the launch site density data curve\relax }{figure.caption.74}{}}
+\newlabel{fig:section3PolyFitDen@cref}{{[figure][7][2147483647,2]B.7}{65}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.8}{\ignorespaces Zoom in of the end of section 1 with the polynomial and exponential atmospheric fits\relax }}{66}{figure.caption.75}}
+\newlabel{fig:ExpAtmFitDenZoom}{{B.8}{66}{Zoom in of the end of section 1 with the polynomial and exponential atmospheric fits\relax }{figure.caption.75}{}}
+\newlabel{fig:ExpAtmFitDenZoom@cref}{{[figure][8][2147483647,2]B.8}{66}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {C}Program file definitions}{67}{appendix.C}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:appendixC-programFileDefinitions}{{C}{64}{Program file definitions}{appendix.C}{}}
-\newlabel{app:appendixC-programFileDefinitions@cref}{{[appendix][3][2147483647]C}{64}}
+\newlabel{app:appendixC-programFileDefinitions}{{C}{67}{Program file definitions}{appendix.C}{}}
+\newlabel{app:appendixC-programFileDefinitions@cref}{{[appendix][3][2147483647]C}{67}}
 \acronymused{RKF}
 \acronymused{TSI}
-\@writefile{lot}{\contentsline {table}{\numberline {C.1}{\ignorespaces Large program files and included functions.\relax }}{64}{table.caption.66}}
-\newlabel{tab:inclFunctions}{{C.1}{64}{Large program files and included functions.\relax }{table.caption.66}{}}
-\newlabel{tab:inclFunctions@cref}{{[table][1][2147483647,3]C.1}{64}}
-\@writefile{lot}{\contentsline {table}{\numberline {C.2}{\ignorespaces Separate function files\relax }}{64}{table.caption.67}}
-\newlabel{tab:classes}{{C.2}{64}{Separate function files\relax }{table.caption.67}{}}
-\newlabel{tab:classes@cref}{{[table][2][2147483647,3]C.2}{64}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {D}All Recurrence Relations}{65}{appendix.D}}
+\@writefile{lot}{\contentsline {table}{\numberline {C.1}{\ignorespaces Large program files and included functions.\relax }}{67}{table.caption.76}}
+\newlabel{tab:inclFunctions}{{C.1}{67}{Large program files and included functions.\relax }{table.caption.76}{}}
+\newlabel{tab:inclFunctions@cref}{{[table][1][2147483647,3]C.1}{67}}
+\@writefile{lot}{\contentsline {table}{\numberline {C.2}{\ignorespaces Separate function files\relax }}{67}{table.caption.77}}
+\newlabel{tab:classes}{{C.2}{67}{Separate function files\relax }{table.caption.77}{}}
+\newlabel{tab:classes@cref}{{[table][2][2147483647,3]C.2}{67}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {D}All Recurrence Relations}{68}{appendix.D}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:appendixD-allRecurrenceRelations}{{D}{65}{All Recurrence Relations}{appendix.D}{}}
-\newlabel{app:appendixD-allRecurrenceRelations@cref}{{[appendix][4][2147483647]D}{65}}
-\@writefile{toc}{\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{65}{section.D.1}}
-\newlabel{sec:firCartApp}{{D.1}{65}{First Cartesian case: Euler angles}{section.D.1}{}}
-\newlabel{sec:firCartApp@cref}{{[subappendix][1][2147483647,4]D.1}{65}}
-\@writefile{lot}{\contentsline {table}{\numberline {D.1}{\ignorespaces Reduced auxiliary functions for the first Cartesian case.}}{65}{table.D.1}}
-\newlabel{tab:auxFunc1}{{D.1}{65}{Reduced auxiliary functions for the first Cartesian case}{table.D.1}{}}
-\newlabel{tab:auxFunc1@cref}{{[table][1][2147483647,4]D.1}{65}}
+\newlabel{app:appendixD-allRecurrenceRelations}{{D}{68}{All Recurrence Relations}{appendix.D}{}}
+\newlabel{app:appendixD-allRecurrenceRelations@cref}{{[appendix][4][2147483647]D}{68}}
+\@writefile{toc}{\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{68}{section.D.1}}
+\newlabel{sec:firCartApp}{{D.1}{68}{First Cartesian case: Euler angles}{section.D.1}{}}
+\newlabel{sec:firCartApp@cref}{{[subappendix][1][2147483647,4]D.1}{68}}
+\@writefile{lot}{\contentsline {table}{\numberline {D.1}{\ignorespaces Reduced auxiliary functions for the first Cartesian case.}}{68}{table.D.1}}
+\newlabel{tab:auxFunc1}{{D.1}{68}{Reduced auxiliary functions for the first Cartesian case}{table.D.1}{}}
+\newlabel{tab:auxFunc1@cref}{{[table][1][2147483647,4]D.1}{68}}
 \gdef \LT@i {\LT@entry 
     {3}{55.47911pt}\LT@entry 
     {7}{345.94325pt}\LT@entry 
     {3}{69.3055pt}}
-\newlabel{eq:allRecRel1}{{D.1}{67}{First Cartesian case: Euler angles}{equation.D.1.1}{}}
-\newlabel{eq:allRecRel1@cref}{{[equation][1][2147483647,4]D.1}{67}}
-\@writefile{toc}{\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{68}{section.D.2}}
-\newlabel{sec:secCartApp}{{D.2}{68}{Second Cartesian case: unit vectors}{section.D.2}{}}
-\newlabel{sec:secCartApp@cref}{{[subappendix][2][2147483647,4]D.2}{68}}
-\@writefile{lot}{\contentsline {table}{\numberline {D.2}{\ignorespaces Reduced auxiliary functions for the second Cartesian case.}}{68}{table.D.2}}
-\newlabel{tab:auxFunc2}{{D.2}{68}{Reduced auxiliary functions for the second Cartesian case}{table.D.2}{}}
-\newlabel{tab:auxFunc2@cref}{{[table][2][2147483647,4]D.2}{68}}
+\newlabel{eq:allRecRel1}{{D.1}{70}{First Cartesian case: Euler angles}{equation.D.1.1}{}}
+\newlabel{eq:allRecRel1@cref}{{[equation][1][2147483647,4]D.1}{70}}
+\@writefile{toc}{\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{71}{section.D.2}}
+\newlabel{sec:secCartApp}{{D.2}{71}{Second Cartesian case: unit vectors}{section.D.2}{}}
+\newlabel{sec:secCartApp@cref}{{[subappendix][2][2147483647,4]D.2}{71}}
+\@writefile{lot}{\contentsline {table}{\numberline {D.2}{\ignorespaces Reduced auxiliary functions for the second Cartesian case.}}{71}{table.D.2}}
+\newlabel{tab:auxFunc2}{{D.2}{71}{Reduced auxiliary functions for the second Cartesian case}{table.D.2}{}}
+\newlabel{tab:auxFunc2@cref}{{[table][2][2147483647,4]D.2}{71}}
 \gdef \LT@ii {\LT@entry 
     {3}{55.47911pt}\LT@entry 
     {6}{345.94325pt}\LT@entry 
     {3}{69.3055pt}}
-\newlabel{eq:allRecRel2}{{D.2}{70}{Second Cartesian case: unit vectors}{equation.D.2.2}{}}
-\newlabel{eq:allRecRel2@cref}{{[equation][2][2147483647,4]D.2}{70}}
-\@writefile{toc}{\contentsline {section}{\numberline {D.3}Spherical case}{70}{section.D.3}}
-\newlabel{sec:spherApp}{{D.3}{70}{Spherical case}{section.D.3}{}}
-\newlabel{sec:spherApp@cref}{{[subappendix][3][2147483647,4]D.3}{70}}
-\@writefile{lot}{\contentsline {table}{\numberline {D.3}{\ignorespaces Reduced auxiliary functions for the Spherical case.}}{70}{table.D.3}}
-\newlabel{tab:auxFunc3}{{D.3}{70}{Reduced auxiliary functions for the Spherical case}{table.D.3}{}}
-\newlabel{tab:auxFunc3@cref}{{[table][3][2147483647,4]D.3}{70}}
+\newlabel{eq:allRecRel2}{{D.2}{73}{Second Cartesian case: unit vectors}{equation.D.2.2}{}}
+\newlabel{eq:allRecRel2@cref}{{[equation][2][2147483647,4]D.2}{73}}
+\@writefile{toc}{\contentsline {section}{\numberline {D.3}Spherical case}{73}{section.D.3}}
+\newlabel{sec:spherApp}{{D.3}{73}{Spherical case}{section.D.3}{}}
+\newlabel{sec:spherApp@cref}{{[subappendix][3][2147483647,4]D.3}{73}}
+\@writefile{lot}{\contentsline {table}{\numberline {D.3}{\ignorespaces Reduced auxiliary functions for the Spherical case.}}{73}{table.D.3}}
+\newlabel{tab:auxFunc3}{{D.3}{73}{Reduced auxiliary functions for the Spherical case}{table.D.3}{}}
+\newlabel{tab:auxFunc3@cref}{{[table][3][2147483647,4]D.3}{73}}
 \gdef \LT@iii {\LT@entry 
     {3}{55.47911pt}\LT@entry 
     {6}{380.2733pt}\LT@entry 
     {3}{69.3055pt}}
-\newlabel{eq:allRecRel3}{{D.3}{72}{Spherical case}{equation.D.3.3}{}}
-\newlabel{eq:allRecRel3@cref}{{[equation][3][2147483647,4]D.3}{72}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {E}Proposed sensitivity analysis}{73}{appendix.E}}
+\newlabel{eq:allRecRel3}{{D.3}{75}{Spherical case}{equation.D.3.3}{}}
+\newlabel{eq:allRecRel3@cref}{{[equation][3][2147483647,4]D.3}{75}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {E}Proposed sensitivity analysis}{76}{appendix.E}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:appendixE-proposedSensitivityAnalysis}{{E}{73}{Proposed sensitivity analysis}{appendix.E}{}}
-\newlabel{app:appendixE-proposedSensitivityAnalysis@cref}{{[appendix][5][2147483647]E}{73}}
+\newlabel{app:appendixE-proposedSensitivityAnalysis}{{E}{76}{Proposed sensitivity analysis}{appendix.E}{}}
+\newlabel{app:appendixE-proposedSensitivityAnalysis@cref}{{[appendix][5][2147483647]E}{76}}
 \acronymused{RKF}
 \acronymused{TSI}
-\@writefile{lot}{\contentsline {table}{\numberline {E.1}{\ignorespaces Test cases for the sensitivity analysis\relax }}{73}{table.caption.68}}
-\newlabel{tab:testCases1}{{E.1}{73}{Test cases for the sensitivity analysis\relax }{table.caption.68}{}}
-\newlabel{tab:testCases1@cref}{{[table][1][2147483647,5]E.1}{73}}
+\@writefile{lot}{\contentsline {table}{\numberline {E.1}{\ignorespaces Test cases for the sensitivity analysis\relax }}{76}{table.caption.78}}
+\newlabel{tab:testCases1}{{E.1}{76}{Test cases for the sensitivity analysis\relax }{table.caption.78}{}}
+\newlabel{tab:testCases1@cref}{{[table][1][2147483647,5]E.1}{76}}
 \acronymused{TSI}
 \acronymused{TSI}
 \acronymused{MOLA}
 \acronymused{RKF}
-\@writefile{lot}{\contentsline {table}{\numberline {E.2}{\ignorespaces Test cases for the sensitivity analysis continued\relax }}{74}{table.caption.69}}
-\newlabel{tab:testCases2}{{E.2}{74}{Test cases for the sensitivity analysis continued\relax }{table.caption.69}{}}
-\newlabel{tab:testCases2@cref}{{[table][2][2147483647,5]E.2}{74}}
+\@writefile{lot}{\contentsline {table}{\numberline {E.2}{\ignorespaces Test cases for the sensitivity analysis continued\relax }}{77}{table.caption.79}}
+\newlabel{tab:testCases2}{{E.2}{77}{Test cases for the sensitivity analysis continued\relax }{table.caption.79}{}}
+\newlabel{tab:testCases2@cref}{{[table][2][2147483647,5]E.2}{77}}
 \acronymused{FPA}
 \acronymused{MAV}
 \acronymused{GLOM}
@@ -1095,26 +1232,40 @@
 \acronymused{MOLA}
 \acronymused{MOLA}
 \bibdata{lit_references}
-\@writefile{toc}{\contentsline {chapter}{\numberline {F}Proposed schedule}{75}{appendix.F}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {F}Proposed schedule}{78}{appendix.F}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:appendixS-proposedSchedule}{{F}{75}{Proposed schedule}{appendix.F}{}}
-\newlabel{app:appendixS-proposedSchedule@cref}{{[appendix][6][2147483647]F}{75}}
-\@writefile{lot}{\contentsline {table}{\numberline {F.1}{\ignorespaces Schedule\relax }}{75}{table.caption.70}}
-\newlabel{tab:scheduleDay}{{F.1}{75}{Schedule\relax }{table.caption.70}{}}
-\newlabel{tab:scheduleDay@cref}{{[table][1][2147483647,6]F.1}{75}}
+\newlabel{app:appendixS-proposedSchedule}{{F}{78}{Proposed schedule}{appendix.F}{}}
+\newlabel{app:appendixS-proposedSchedule@cref}{{[appendix][6][2147483647]F}{78}}
+\@writefile{lot}{\contentsline {table}{\numberline {F.1}{\ignorespaces Schedule\relax }}{78}{table.caption.80}}
+\newlabel{tab:scheduleDay}{{F.1}{78}{Schedule\relax }{table.caption.80}{}}
+\newlabel{tab:scheduleDay@cref}{{[table][1][2147483647,6]F.1}{78}}
 \acronymused{TSI}
 \bibcite{mooij1994motion}{{1}{1994}{{Mooij}}{{}}}
 \bibcite{whitehead2004mars}{{2}{2004}{{Whitehead}}{{}}}
-\bibcite{scott2008high}{{3}{2008}{{Scott\ and\ Martini}}{{}}}
-\bibcite{montenbruck1992numerical}{{4}{1992}{{Montenbruck}}{{}}}
-\bibcite{bergsma2015application}{{5}{2015}{{Bergsma}}{{}}}
-\bibcite{noomen2013basic}{{6}{2013}{{Noomen}}{{}}}
-\bibcite{jorba2005software}{{7}{2005}{{Jorba\ and\ Zou}}{{}}}
-\bibcite{dirkx2016tudat}{{8}{2016}{{Dirkx\ \emph  {et~al.}}}{{Dirkx, Kumar, Doornbos, Mooij,\ and\ Noomen}}}
-\bibcite{justus2008utilizing}{{9}{2008}{{Justh\ and\ Justus}}{{}}}
-\bibcite{wakker2010}{{10}{2010}{{Wakker}}{{}}}
-\bibcite{woolley2015simple}{{11}{2015}{{Woolley}}{{}}}
-\bibcite{benito2016trajectory}{{12}{2016}{{Benito\ and\ Johnson}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{76}{appendix*.71}}
+\bibcite{hofsteenge2013}{{3}{2013}{{Hofsteenge}}{{}}}
+\bibcite{milani1987}{{4}{1987}{{Milani\ and\ Nobili}}{{}}}
+\bibcite{noomen2013int}{{5}{2013{a}}{{Noomen}}{{}}}
+\bibcite{deuflhard1994}{{6}{1994}{{Deuflhard\ \emph  {et~al.}}}{{Deuflhard, Nowak,\ and\ Poehle}}}
+\bibcite{montenbruck1992}{{7}{1992{a}}{{Montenbruck}}{{}}}
+\bibcite{dormand1987}{{8}{1987}{{Dormand\ \emph  {et~al.}}}{{Dormand, El-Mikkawy,\ and\ Prince}}}
+\bibcite{fehlberg1969}{{9}{1969}{{Fehlberg}}{{}}}
+\bibcite{fehlberg1968}{{10}{1968}{{Fehlberg}}{{}}}
+\bibcite{berry2004}{{11}{2004}{{Berry}}{{}}}
+\bibcite{meijaard1991}{{12}{1991}{{Meijaard}}{{}}}
+\bibcite{ramos2005}{{13}{2005}{{Ramos\ and\ Vigo-Aguiar}}{{}}}
+\bibcite{dirkx2016tudat}{{14}{2016}{{Dirkx\ \emph  {et~al.}}}{{Dirkx, Kumar, Doornbos, Mooij,\ and\ Noomen}}}
+\bibcite{prince1981high}{{15}{1981}{{Prince\ and\ Dormand}}{{}}}
+\bibcite{weeks2007comparison}{{16}{2007}{{Weeks\ and\ Thrasher}}{{}}}
+\bibcite{scott2008high}{{17}{2008}{{Scott\ and\ Martini}}{{}}}
+\bibcite{bergsma2016application}{{18}{2016}{{Bergsma\ and\ Mooij}}{{}}}
+\bibcite{montenbruck1992numerical}{{19}{1992{b}}{{Montenbruck}}{{}}}
+\bibcite{bergsma2015application}{{20}{2015}{{Bergsma}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{79}{appendix*.81}}
+\bibcite{noomen2013basic}{{21}{2013{b}}{{Noomen}}{{}}}
+\bibcite{jorba2005software}{{22}{2005}{{Jorba\ and\ Zou}}{{}}}
+\bibcite{justus2008utilizing}{{23}{2008}{{Justh\ and\ Justus}}{{}}}
+\bibcite{wakker2010}{{24}{2010}{{Wakker}}{{}}}
+\bibcite{woolley2015simple}{{25}{2015}{{Woolley}}{{}}}
+\bibcite{benito2016trajectory}{{26}{2016}{{Benito\ and\ Johnson}}{{}}}
 \ttl@finishall
