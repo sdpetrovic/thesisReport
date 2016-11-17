@@ -1,2 +1,66 @@
-\chapter{Problem background} %Last updated 04-03-2016
+\chapter{Problem background}
+% Created 04-03-2016
+% Updated 17-11-2016 Came up with proper sections and everything I wanted to say in this chapter. Started writing the first sections.
+
 \label{ch:problembackground}
+The majority of this research was performed at NASA's \ac{JPL} in Pasadena, California. For that reason it was decided that the research of this thesis should focus on something related to either current research being done at \ac{JPL} or missions being flown by \ac{JPL}\footnote{All past, current and proposed \ac{JPL} missions: \url{http://www.jpl.nasa.gov/missions/} [Accessed 17 November 2016]}.   One of the focuses of \ac{JPL} these days is Mars and the exploration of the Martian system. There are currently two planned missions to Mars: InSight and Mars 2020. InSight is a mission similar to the Viking and the Phoenix missions and primarily based on the last one. It is a lander that will perform experiments on the surface of Mars at a fixed location. Mars 2020 is the next Mars rover and is based on the current Curiosity rover. It has a similar design but will carry different scientific instruments and will focus more on finding life on Mars. Mars 2020 is part of a larger \ac{JPL} effort to eventually return samples from the Martian surface back to Earth. This mission concepts has been on the drawing board for several years now, but seems to be getting closer to approval. This sample return mission, or \ac{MSR}, will consist of three different systems and is spread out over three different missions. Mars 2020 is the first step of this plan where the rover will collect samples from the surface of Mars. These samples will then be put into containment tubes and dropped on the surface of Mars. A second mission will then carry a system that will collect these samples from the surface and deliver them into a Martian orbit \citep{shotwell2016drivers}. Then a third mission, currently proposed as the Mars 2022 orbiter, will collect the sample containment sphere in orbit and eventually deliver them back to Earth \citep{woolley2011mars}. Because of the potential of the \ac{MSR} mission concept and the amount of research that can be done, the focus was put on this \ac{JPL} effort when looking at research subjects.
+
+
+
+% This will serve as a general introduction to the problem
+%JPL
+%JPL missions
+%Interesting missions
+
+\section{Chosen mission}
+\label{sec:chosenMission}
+The Mars 2020 rover is an approved mission that is currently in the design phase, and the Mars 2022 is a proposed mission that will have to be build in order to enhance the current communication capabilities between Mars and Earth. Therefore it is almost certain that these two missions will fly. However, this does not guarantee that the entire \ac{MSR} endeavour will also be realised. This is because there is no official approval yet for the second system that will actually bring the samples from the surface back to earth. However, this does not mean that no research is being done on the return system. Many designs have been envisioned over the past few years and even now engineers cannot decide on the best design. \cite{shotwell2016drivers} shows two of the proposed designs that are currently being considered. One design involves a mobile launch system based on the Curiosity rover, which will fetch the samples and then directly put them into the spherical container. Once this container is completely filled, the sphere will be placed on top of the \ac{MAV}, which the rover will be carrying on its back, and launch it into Mars orbit. The second design uses two systems, one fetch rover that will grab the samples and return them to the lander, and the lander containing the \ac{MAV}. Once the lander returns with all the samples, the sample sphere will be put on top of the \ac{MAV} and launched into orbit. There are advantages and disadvantages to both of these systems and more research is being done to determine the best option. What both of these systems have in common though is that they have to launch the sample sphere into orbit using a \ac{MAV}. An ascent on another celestial body with an atmosphere has never been attempted before, which makes it a crucial part of the \ac{MSR} campaign. This is also why in the last several years, many researchers have looked at the \ac{MAV} launch trajectory problem. 
+
+%Mars Sample Return
+%Focus on Ascent
+%Initial conditions modelled on Mars 2020 candidate landing site (maybe leave this out...)
+
+\section{Previous Mars ascent research}
+\label{sec:previousMarsAscentResearch}
+Not only \ac{JPL} but also many other institutions around the world are working on the Mars ascent problem, for instance the \ac{DLR}. A selection of reference research is provided in \Cref{tab:referenceResearch}.
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Previous and current Mars ascent trajectory research.}
+\label{tab:referenceResearch}
+\begin{tabular}{|l|l|l|}
+\hline 
+\textbf{Author} 	& \textbf{Organisation} & \textbf{Country} \\ \hline \hline
+\cite{fanning1996model} & Iowa State University & United States\\ \hline
+\cite{desai1998}& NASA Langley and \ac{JPL} & United States \\ \hline
+\cite{whitehead2004mars,whitehead2005} & Lawrence Livermore National Laboratory & United States \\ \hline
+ \cite{di2007system} & DEIMOS Engenharia and \acs{ESA} & Portugal/Europe \\ \hline
+\cite{woolley2011mars} & \ac{JPL} & United States \\ \hline
+\cite{trinidad2012} & Northrop Grumman and \ac{JPL} & United States  \\ \hline
+\cite{dumont2015design} (Ongoing)& \ac{DLR} 		& Germany \\ \hline
+\cite{woolley2015simple} (Ongoing) & \ac{JPL} & United States \\ \hline
+\cite{benito2016trajectory} (Ongoing) & \ac{JPL} & United States \\ \hline
+
+%& & & \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Most of the papers before 2015 focus on an older \ac{MAV} concept, however the newer \ac{JPL} research focuses more on a \ac{SSTO} design. This is why this thesis research will also be focusing on the ascent of a \ac{SSTO} \ac{MAV}. \\
+Many of the research that was done used either publicly available simulation software or trajectory simulation software that was developed in-house. There are several ways in which an ascent trajectory can be simulated, and these different methods of how to simulate such a launch can results in different outcomes. Therefore, a closer look was taken at the method of ascent trajectory propagation and simulation.
+
+%Previous papers on ascent
+
+\section{Research focus}
+\label{sec:researchFocus}
+In order to compute an ascent trajectory, the initial state is taken and provided perturbations the state is propagated until a final condition is met. In most of the research mentioned in \Cref{tab:referenceResearch} this was done using numerical integration methods. However, often it is not mentioned which specific methods were used. When looking at integration methods, there are a number of methods that are widely used for space related problems, such as the standard integration methods (more information on these standard integration methods can be found in \Cref{ch:standardIntegrationMethods}). In recent years however, another method, that has not generally been applied in space problems, has seen potential to increase performance resulting in faster and more accurate results. This method is called \ac{TSI} and was first used in a space trajectory problem by \cite{montenbruck1992numerical}. A few years later, a comparison between a higher order Runge-Kutta method and \ac{TSI} was performed on orbital trajectory problems by \cite{scott2008high} showing that the application of \ac{TSI} to such problems can be very beneficial. \cite{bergsma2016application} showed that \ac{TSI} shows similar improvements compared to Runge-Kutta-Fehlberg for re-entry cases, where \ac{TSI} was both faster and more accurate. However, \ac{TSI} has not yet been applied to ascent cases.
+
+ 
+
+Research to be done on ascent focussing on integrator.
+TSI chosen as research subject because of knowledge gap.
+Previous research done on TSI
+
+\section{Reference systems}
+\label{sec:referenceSystems}
+Add a section on reference systems (maybe including appendix on the transformations etc.)

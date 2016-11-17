@@ -1,7 +1,7 @@
 % Created 04-03-2016
 % Put the atmospheric graph and drag coefficient graph fit in 19-09-2016
 % 15-11-2016 add equations for state, state derivatives, gravity thrust and drag from early versions and used for RKF
-
+% 17-11-2016 Remembered that I have to include a section on the cirularisation. And included the numbers for the speed of sound contant parameters.
 
 
 \chapter{Models} 
@@ -10,6 +10,7 @@ The \ac{MAV} and the corresponding ascent can be modelled in many different ways
 
 \section{State and state derivatives}
 \label{sec:stateAndStateDerivatives}
+\textbf{\textcolor{red}{Maybe include more assumptions and corresponding explanations!!}}
 The general model is described in terms of the Cartesian state; position and velocity in the x-, y-, and z-direction and the mass. The notation is shown in \Cref{eq:stateModel}, where $m_{MAV}$ is the mass of the \ac{MAV} and the subscript $I$ refers to the inertial frame.
 
 \begin{align} \label{eq:stateModel}
@@ -191,7 +192,9 @@ a &= \sqrt{\gamma_{a}R_{a}^{*}T_{a}} \quad \text{where} \quad R_{a}^{*}=\dfrac{R
 \end{split}
 \end{equation}
 
-The air pressure and temperature change as a function of the altitude of the \ac{MAV}. This means that a pressure and temperature model of the atmosphere of Mars will have to be used to approximate these values as the ascent vehicle moves through the atmosphere. This is done through a function fit of an atmospheric model, as is described in \Cref{subsec:atmofuncfit}.\\
+Here, $R_{a}$ is the molar gas constant, $\gamma_{a}$ is the adiabetic index for Mars, which according to \cite{ho2002radio} can be set as $\sim$1.35. $M_{a}$ is the molecular mass of the Martian atmosphere and depends on it's composition. \cite{williams2015} mentions a volumetric composition of Mars which results in a mean molecular mass of 0.04334 kg/mol. This value has been used in this research to compute the speed of sound.\\
+
+The air pressure and temperature ($T_{{a}}$) change as a function of the altitude of the \ac{MAV}. This means that a pressure and temperature model of the atmosphere of Mars will have to be used to approximate these values as the ascent vehicle moves through the atmosphere. This is done through a function fit of an atmospheric model, as is described in \Cref{subsec:atmofuncfit}.\\
 
 The drag coefficient changes with the Mach number, however, this change is not constant over the entire Mach range. Therefore, this also requires a function fit in order to be used in the simulation program. This fit is presented in \Cref{subsec:dragCoefFuncFit}.
 
@@ -418,3 +421,7 @@ Fortunately, this curve is already an approximation and thus consists of linear 
 \caption{All section fits for the drag coefficient - Mach curve}
 \label{fig:dragCoeffFit}
 \end{figure}
+
+\section{Circularisation}
+\label{sec:modelCircularisation}
+\textbf{\textcolor{red}{This section still has to be added!!}}
