@@ -386,14 +386,8 @@ The same polynomial requirements as for the temperature curve were enforced for 
 
 \subsection{Drag coefficient graph function fit}
 \label{subsec:dragCoefFuncFit}
-Similar to the temperature and density curves, the relation between Mach number and drag coefficient, as depicted in \Cref{fig:dragcoeff_whitehead2004mars}, had to be modelled as a continuous function as well. Again, it could not be fitted using one continuous function, but instead had to be modelled by different functions.
+Similar to the temperature and density curves, the relation between Mach number and drag coefficient, as depicted in \Cref{fig:dragcoeff_whitehead2004mars}, had to be modelled as a continuous function as well. Again, it could not be fitted using one continuous function, but instead had to be modelled by different functions. \\
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=1.0\textwidth]{figures/launcher_methods/dragcoeff_whitehead2004mars.jpg}
-\caption{Drag coefficient as a function of Mach number \cite{whitehead2004mars}}
-\label{fig:dragcoeff_whitehead2004mars}
-\end{figure}
 
 Fortunately, this curve is already an approximation and thus consists of linear elements only. It can be split up into 6 different sections where the first and last section are constant ($C_{D}$ is 0.2 and 0.3 respectively). Using a similar polynomial fit as before, but now for 1 order only, a linear fit could be made for each of the remaining 4 sections. The corresponding parameters are shown in \Cref{tab:dragCoeffPara} and the curve fit is shown in \Cref{fig:dragCoeffFit}.
 

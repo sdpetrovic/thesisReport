@@ -1,78 +1,92 @@
-\BOOKMARK [0][-]{chapter*.8}{Nomenclature}{}% 1
-\BOOKMARK [0][-]{chapter*.8}{Abbreviations}{}% 2
+\BOOKMARK [0][-]{chapter*.10}{Nomenclature}{}% 1
+\BOOKMARK [0][-]{chapter*.10}{Abbreviations}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
 \BOOKMARK [0][-]{chapter.2}{Problem background}{}% 4
 \BOOKMARK [1][-]{section.2.1}{Chosen mission}{chapter.2}% 5
 \BOOKMARK [1][-]{section.2.2}{Previous Mars ascent research}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.3}{Research focus}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.4}{Reference systems}{chapter.2}% 8
-\BOOKMARK [0][-]{chapter.3}{Models}{}% 9
-\BOOKMARK [1][-]{section.3.1}{State and state derivatives}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.2}{Gravity}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.3}{Thrust}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.4}{Drag}{chapter.3}% 13
-\BOOKMARK [2][-]{subsection.3.4.1}{Atmospheric graph function fit}{section.3.4}% 14
-\BOOKMARK [2][-]{subsection.3.4.2}{Drag coefficient graph function fit}{section.3.4}% 15
-\BOOKMARK [1][-]{section.3.5}{Circularisation}{chapter.3}% 16
-\BOOKMARK [0][-]{chapter.4}{Standard integration methods}{}% 17
-\BOOKMARK [1][-]{section.4.1}{Different integrator types}{chapter.4}% 18
-\BOOKMARK [2][-]{subsection.4.1.1}{Single-step}{section.4.1}% 19
-\BOOKMARK [2][-]{subsection.4.1.2}{Multi-step}{section.4.1}% 20
-\BOOKMARK [1][-]{section.4.2}{Chosen method for comparison}{chapter.4}% 21
-\BOOKMARK [2][-]{subsection.4.2.1}{Tudat methods}{section.4.2}% 22
-\BOOKMARK [2][-]{subsection.4.2.2}{Methods used in previous research}{section.4.2}% 23
-\BOOKMARK [2][-]{subsection.4.2.3}{Chosen method}{section.4.2}% 24
-\BOOKMARK [1][-]{section.4.3}{Workings of RKF}{chapter.4}% 25
-\BOOKMARK [0][-]{chapter.5}{Taylor series integration}{}% 26
-\BOOKMARK [1][-]{section.5.1}{General theory}{chapter.5}% 27
-\BOOKMARK [2][-]{subsection.5.1.1}{Workings of TSI}{section.5.1}% 28
-\BOOKMARK [2][-]{subsection.5.1.2}{Step-size}{section.5.1}% 29
-\BOOKMARK [1][-]{section.5.2}{Associated equations}{chapter.5}% 30
-\BOOKMARK [2][-]{subsection.5.2.1}{Cartesian equations, first case}{section.5.2}% 31
-\BOOKMARK [2][-]{subsection.5.2.2}{Cartesian equations, second case}{section.5.2}% 32
-\BOOKMARK [2][-]{subsection.5.2.3}{Spherical equations}{section.5.2}% 33
-\BOOKMARK [2][-]{subsection.5.2.4}{Recurrence relations}{section.5.2}% 34
-\BOOKMARK [0][-]{chapter.6}{Program simulation tool}{}% 35
-\BOOKMARK [1][-]{section.6.1}{Existing software}{chapter.6}% 36
-\BOOKMARK [2][-]{subsection.6.1.1}{Tudat}{section.6.1}% 37
-\BOOKMARK [2][-]{subsection.6.1.2}{Eigen}{section.6.1}% 38
-\BOOKMARK [2][-]{subsection.6.1.3}{Boost}{section.6.1}% 39
-\BOOKMARK [2][-]{subsection.6.1.4}{Mars-GRAM}{section.6.1}% 40
-\BOOKMARK [1][-]{section.6.2}{Developed software}{chapter.6}% 41
-\BOOKMARK [2][-]{subsection.6.2.1}{RKF propagator}{section.6.2}% 42
-\BOOKMARK [2][-]{subsection.6.2.2}{TSI propagator}{section.6.2}% 43
-\BOOKMARK [1][-]{section.6.3}{Completed simulation tool}{chapter.6}% 44
-\BOOKMARK [2][-]{subsection.6.3.1}{Initialisation}{section.6.3}% 45
-\BOOKMARK [2][-]{subsection.6.3.2}{Initial propagation}{section.6.3}% 46
-\BOOKMARK [2][-]{subsection.6.3.3}{Integrator burn phase}{section.6.3}% 47
-\BOOKMARK [2][-]{subsection.6.3.4}{Integrator coast phase}{section.6.3}% 48
-\BOOKMARK [2][-]{subsection.6.3.5}{Final circularisation}{section.6.3}% 49
-\BOOKMARK [2][-]{subsection.6.3.6}{Comparison}{section.6.3}% 50
-\BOOKMARK [0][-]{chapter.7}{Verification and validation}{}% 51
-\BOOKMARK [1][-]{section.7.1}{RK4 and RKF integrators}{chapter.7}% 52
-\BOOKMARK [1][-]{section.7.2}{Taylor Series integration}{chapter.7}% 53
-\BOOKMARK [2][-]{subsection.7.2.1}{Auxiliary equations, derivatives and functions}{section.7.2}% 54
-\BOOKMARK [2][-]{subsection.7.2.2}{Computing the Taylor Series coefficients and the updated state}{section.7.2}% 55
-\BOOKMARK [2][-]{subsection.7.2.3}{Next step-size}{section.7.2}% 56
-\BOOKMARK [1][-]{section.7.3}{Complete trajectory propagation}{chapter.7}% 57
-\BOOKMARK [2][-]{subsection.7.3.1}{Phase 1: RKF propagation}{section.7.3}% 58
-\BOOKMARK [2][-]{subsection.7.3.2}{Phase 2: both RKF and TSI}{section.7.3}% 59
-\BOOKMARK [2][-]{subsection.7.3.3}{Phase 3: three different models for TSI}{section.7.3}% 60
-\BOOKMARK [2][-]{subsection.7.3.4}{Phase 4: one final TSI model}{section.7.3}% 61
-\BOOKMARK [2][-]{subsection.7.3.5}{Phase 5: coasting and circularisation}{section.7.3}% 62
-\BOOKMARK [2][-]{subsection.7.3.6}{Phase 6: tool validation}{section.7.3}% 63
-\BOOKMARK [0][-]{chapter.8}{Results}{}% 64
-\BOOKMARK [0][-]{chapter.9}{Analysis}{}% 65
-\BOOKMARK [0][-]{chapter.10}{Conclusions and recommendations}{}% 66
-\BOOKMARK [0][-]{chapter*.70}{Bibliography}{}% 67
-\BOOKMARK [0][-]{appendix.A}{Mars-GRAM 2005 input file}{}% 68
-\BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 69
-\BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 70
-\BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 71
-\BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 72
-\BOOKMARK [0][-]{appendix.D}{All Recurrence Relations}{}% 73
-\BOOKMARK [1][-]{section.D.1}{First Cartesian case: Euler angles}{appendix.D}% 74
-\BOOKMARK [1][-]{section.D.2}{Second Cartesian case: unit vectors}{appendix.D}% 75
-\BOOKMARK [1][-]{section.D.3}{Spherical case}{appendix.D}% 76
-\BOOKMARK [0][-]{appendix.E}{Proposed sensitivity analysis}{}% 77
-\BOOKMARK [0][-]{appendix.F}{Proposed schedule}{}% 78
+\BOOKMARK [1][-]{section.2.4}{MAV design}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.5}{Reference systems}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Models}{}% 10
+\BOOKMARK [1][-]{section.3.1}{State and state derivatives}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Gravity}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Thrust}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.4}{Drag}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.4.1}{Atmospheric graph function fit}{section.3.4}% 15
+\BOOKMARK [2][-]{subsection.3.4.2}{Drag coefficient graph function fit}{section.3.4}% 16
+\BOOKMARK [1][-]{section.3.5}{Circularisation}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Standard integration methods}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Different integrator types}{chapter.4}% 19
+\BOOKMARK [2][-]{subsection.4.1.1}{Single-step}{section.4.1}% 20
+\BOOKMARK [2][-]{subsection.4.1.2}{Multi-step}{section.4.1}% 21
+\BOOKMARK [1][-]{section.4.2}{Chosen method for comparison}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.2.1}{Tudat methods}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.2}{Methods used in previous research}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.3}{Chosen method}{section.4.2}% 25
+\BOOKMARK [1][-]{section.4.3}{Workings of RKF}{chapter.4}% 26
+\BOOKMARK [0][-]{chapter.5}{Taylor series integration}{}% 27
+\BOOKMARK [1][-]{section.5.1}{General theory}{chapter.5}% 28
+\BOOKMARK [2][-]{subsection.5.1.1}{Workings of TSI}{section.5.1}% 29
+\BOOKMARK [2][-]{subsection.5.1.2}{Step-size}{section.5.1}% 30
+\BOOKMARK [1][-]{section.5.2}{Associated equations}{chapter.5}% 31
+\BOOKMARK [2][-]{subsection.5.2.1}{Cartesian equations, first case}{section.5.2}% 32
+\BOOKMARK [2][-]{subsection.5.2.2}{Cartesian equations, second case}{section.5.2}% 33
+\BOOKMARK [2][-]{subsection.5.2.3}{Spherical equations}{section.5.2}% 34
+\BOOKMARK [2][-]{subsection.5.2.4}{Recurrence relations}{section.5.2}% 35
+\BOOKMARK [0][-]{chapter.6}{Program simulation tool}{}% 36
+\BOOKMARK [1][-]{section.6.1}{Existing software}{chapter.6}% 37
+\BOOKMARK [2][-]{subsection.6.1.1}{Tudat}{section.6.1}% 38
+\BOOKMARK [2][-]{subsection.6.1.2}{Eigen}{section.6.1}% 39
+\BOOKMARK [2][-]{subsection.6.1.3}{Boost}{section.6.1}% 40
+\BOOKMARK [2][-]{subsection.6.1.4}{Mars-GRAM}{section.6.1}% 41
+\BOOKMARK [1][-]{section.6.2}{Developed software}{chapter.6}% 42
+\BOOKMARK [2][-]{subsection.6.2.1}{RKF propagator}{section.6.2}% 43
+\BOOKMARK [2][-]{subsection.6.2.2}{TSI propagator}{section.6.2}% 44
+\BOOKMARK [1][-]{section.6.3}{Completed simulation tool}{chapter.6}% 45
+\BOOKMARK [2][-]{subsection.6.3.1}{Initialisation}{section.6.3}% 46
+\BOOKMARK [2][-]{subsection.6.3.2}{Initial propagation}{section.6.3}% 47
+\BOOKMARK [2][-]{subsection.6.3.3}{Integrator burn phase}{section.6.3}% 48
+\BOOKMARK [2][-]{subsection.6.3.4}{Integrator coast phase}{section.6.3}% 49
+\BOOKMARK [2][-]{subsection.6.3.5}{Final circularisation}{section.6.3}% 50
+\BOOKMARK [2][-]{subsection.6.3.6}{Comparison}{section.6.3}% 51
+\BOOKMARK [0][-]{chapter.7}{Verification and validation}{}% 52
+\BOOKMARK [1][-]{section.7.1}{RK4 and RKF integrators}{chapter.7}% 53
+\BOOKMARK [1][-]{section.7.2}{Taylor Series integration}{chapter.7}% 54
+\BOOKMARK [2][-]{subsection.7.2.1}{Auxiliary equations, derivatives and functions}{section.7.2}% 55
+\BOOKMARK [2][-]{subsection.7.2.2}{Computing the Taylor Series coefficients and the updated state}{section.7.2}% 56
+\BOOKMARK [2][-]{subsection.7.2.3}{Next step-size}{section.7.2}% 57
+\BOOKMARK [1][-]{section.7.3}{Complete trajectory propagation}{chapter.7}% 58
+\BOOKMARK [2][-]{subsection.7.3.1}{Phase 1: RKF propagation}{section.7.3}% 59
+\BOOKMARK [2][-]{subsection.7.3.2}{Phase 2: both RKF and TSI}{section.7.3}% 60
+\BOOKMARK [2][-]{subsection.7.3.3}{Phase 3: three different models for TSI}{section.7.3}% 61
+\BOOKMARK [2][-]{subsection.7.3.4}{Phase 4: one final TSI model}{section.7.3}% 62
+\BOOKMARK [2][-]{subsection.7.3.5}{Phase 5: coasting and circularisation}{section.7.3}% 63
+\BOOKMARK [2][-]{subsection.7.3.6}{Phase 6: tool validation}{section.7.3}% 64
+\BOOKMARK [0][-]{chapter.8}{Results}{}% 65
+\BOOKMARK [0][-]{chapter.9}{Analysis}{}% 66
+\BOOKMARK [0][-]{chapter.10}{Conclusions and recommendations}{}% 67
+\BOOKMARK [0][-]{chapter*.75}{Bibliography}{}% 68
+\BOOKMARK [0][-]{appendix.A}{Reference system transformations}{}% 69
+\BOOKMARK [1][-]{section.A.1}{Required reference systems}{appendix.A}% 70
+\BOOKMARK [2][-]{subsection.A.1.1}{Mars-centred inertial RF \(I-frame\)}{section.A.1}% 71
+\BOOKMARK [2][-]{subsection.A.1.2}{Mars-centred Mars-fixed RF \(R-frame\)}{section.A.1}% 72
+\BOOKMARK [2][-]{subsection.A.1.3}{Vertical RF \(V-frame\)}{section.A.1}% 73
+\BOOKMARK [2][-]{subsection.A.1.4}{Body-fixed RF \(B-frame\)}{section.A.1}% 74
+\BOOKMARK [2][-]{subsection.A.1.5}{Propulsion RF \(P-frame\)}{section.A.1}% 75
+\BOOKMARK [1][-]{section.A.2}{Transformation between reference frames}{appendix.A}% 76
+\BOOKMARK [1][-]{section.A.3}{Transformation between different coordinate systems}{appendix.A}% 77
+\BOOKMARK [2][-]{subsection.A.3.1}{Spherical and Cartesian}{section.A.3}% 78
+\BOOKMARK [2][-]{subsection.A.3.2}{Keplerian and Cartesian}{section.A.3}% 79
+\BOOKMARK [2][-]{subsection.A.3.3}{Spherical and Keplerian}{section.A.3}% 80
+\BOOKMARK [2][-]{subsection.A.3.4}{Non-singular Kepler elements}{section.A.3}% 81
+\BOOKMARK [0][-]{appendix.B}{Mars-GRAM 2005 input file}{}% 82
+\BOOKMARK [0][-]{appendix.C}{Atmospheric data fitting}{}% 83
+\BOOKMARK [1][-]{section.C.1}{Temperature}{appendix.C}% 84
+\BOOKMARK [1][-]{section.C.2}{Density}{appendix.C}% 85
+\BOOKMARK [0][-]{appendix.D}{Program file definitions}{}% 86
+\BOOKMARK [0][-]{appendix.E}{All Recurrence Relations}{}% 87
+\BOOKMARK [1][-]{section.E.1}{First Cartesian case: Euler angles}{appendix.E}% 88
+\BOOKMARK [1][-]{section.E.2}{Second Cartesian case: unit vectors}{appendix.E}% 89
+\BOOKMARK [1][-]{section.E.3}{Spherical case}{appendix.E}% 90
+\BOOKMARK [0][-]{appendix.F}{Proposed sensitivity analysis}{}% 91
+\BOOKMARK [0][-]{appendix.G}{Proposed schedule}{}% 92

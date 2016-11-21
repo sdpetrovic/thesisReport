@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{36}%
+\begin{thebibliography}{47}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -197,6 +197,128 @@
   Dynamics}}}}\ (\bibinfo  {publisher} {{American Institute of Aeronautics and
   Astronautics}},\ \bibinfo {year} {2016})\ pp.\ \bibinfo {pages}
   {2324--2335}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Whitehead}(1997)}]{whitehead1997}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Whitehead}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Mars ascent
+  propulsion options for small sample return vehicles}},}\ }in\ \href {\doibase
+  10.2514/6.1997-2950} {\emph {\bibinfo {booktitle} {33rd AIAA/ASME/SAE/ASEE
+  Joint Propulsion Conference and Exhibit}}}\ (\bibinfo  {publisher} {AIAA
+  Joint Propulsion Conference and Exhibit},\ \bibinfo {year}
+  {1997})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Guernsey}(1998)}]{guernsey1998}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~S.}\ \bibnamefont
+  {Guernsey}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Mars Ascent
+  Propulsion System (MAPS) Technology Program: Plans and Progress}},}\ }in\
+  \href {\doibase 10.2514/6.1998-3664} {\emph {\bibinfo {booktitle} {34th
+  AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit}}}\ (\bibinfo
+  {year} {1998})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stone}(1999)}]{stone1999}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Stone}},\ }\href {http://www.slideshare.net/cliffordstone/rice-mars-nov99}
+  {\textit {\bibinfo {title} {{Rice Mars}},}\ }\bibinfo {howpublished}
+  {presentation/website} (\bibinfo {year} {1999}),\ \bibinfo {note} {[online
+  database], URL: http://www.slideshare.net/cliffordstone/rice-mars-nov99
+  [cited 25 October 2015]}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stephenson}(2002)}]{stephenson2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Stephenson}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Mars ascent
+  vehicle - Concept development}},}\ }in\ \href {\doibase 10.2514/6.2002-4318}
+  {\emph {\bibinfo {booktitle} {38th Joint Propulsion Conference and Exhibit,
+  Indianapolos, Indiana}}},\ Vol.\ \bibinfo {volume} {4318}\ (\bibinfo
+  {publisher} {AIAA},\ \bibinfo {year} {2002})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stephenson}\ and\ \citenamefont
+  {Willenberg}(2006)}]{stephenson2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~D.}\ \bibnamefont
+  {Stephenson}}\ and\ \bibinfo {author} {\bibfnamefont {H.~J.}\ \bibnamefont
+  {Willenberg}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Mars ascent
+  vehicle key elements of a Mars Sample Return mission}},}\ }in\ \href
+  {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1655737} {\emph
+  {\bibinfo {booktitle} {Aerospace Conference, 2006 IEEE}}}\ (\bibinfo
+  {organization} {IEEE},\ \bibinfo {year} {2006})\ p.~\bibinfo {pages}
+  {11}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sengupta}\ \emph {et~al.}(2012)\citenamefont
+  {Sengupta}, \citenamefont {Kennett}, \citenamefont {Pauken}, \citenamefont
+  {Trinidad},\ and\ \citenamefont {Zabrensky}}]{sengupta2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Sengupta}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Kennett}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Pauken}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Trinidad}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {E.}~\bibnamefont {Zabrensky}},\ }\bibfield  {title}
+  {\textit {\bibinfo {title} {{Systems Engineering and Technology
+  Considerations of a Mars Ascent Vehicle}},}\ }in\ \href
+  {http://trs-new.jpl.nasa.gov/dspace/bitstream/2014/43568/1/11-5008_A1b.pdf}
+  {\emph {\bibinfo {booktitle} {2011 IEEE Aerospace Conference}}}\ (\bibinfo
+  {year} {2012})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mungas}\ \emph {et~al.}(2012)\citenamefont {Mungas},
+  \citenamefont {Fisher}, \citenamefont {Vozoff},\ and\ \citenamefont
+  {Villa}}]{mungas2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Mungas}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Fisher}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Vozoff}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Villa}},\ }\bibfield  {title}
+  {\textit {\bibinfo {title} {{NOFBX Single Stage to Orbit Mars Ascent
+  Vehicle}},}\ }in\ \href
+  {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6187299} {\emph
+  {\bibinfo {booktitle} {Aerospace Conference, 2012 IEEE}}}\ (\bibinfo
+  {organization} {IEEE},\ \bibinfo {year} {2012})\ pp.\ \bibinfo {pages}
+  {1--11}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{Mars Program Planning Group}}(2012)}]{mppg2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {{Mars Program Planning
+  Group}}},\ }\href
+  {http://www.nasa.gov/sites/default/files/files/MPPG-Summary_Report-9-25-12.pdf}
+  {\textit {\bibinfo {title} {{Summary of the Final Report}},}\ } (\bibinfo
+  {year} {2012}),\ \bibinfo {note} {[online database], URL:
+  http://www.nasa.gov//sites/default/files/files/ [cited 14 October
+  2015]}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vaughan}\ \emph {et~al.}(2016)\citenamefont
+  {Vaughan}, \citenamefont {Nakazono}, \citenamefont {Karp}, \citenamefont
+  {Shotwell}, \citenamefont {London}, \citenamefont {Mehra},\ and\
+  \citenamefont {Mechentel}}]{vaughan2016technology}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Vaughan}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Nakazono}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Karp}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Shotwell}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {London}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Mehra}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {F.}~\bibnamefont {Mechentel}},\ }\bibfield  {title} {\textit {\bibinfo
+  {title} {{Technology development and design of liquid bi-propellant mars
+  ascent vehicles}},}\ }in\ \href@noop {} {\emph {\bibinfo {booktitle}
+  {{Aerospace Conference, 2016 IEEE}}}}\ (\bibinfo {organization} {IEEE},\
+  \bibinfo {year} {2016})\ pp.\ \bibinfo {pages} {1--12}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Karp}\ \emph {et~al.}(2016)\citenamefont {Karp},
+  \citenamefont {Redmond}, \citenamefont {Nakazono}, \citenamefont {Vaughan},
+  \citenamefont {Shotwell}, \citenamefont {Story}, \citenamefont {Jackson},\
+  and\ \citenamefont {Young}}]{karp2016technology}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~C.}\ \bibnamefont
+  {Karp}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Redmond}},
+  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Nakazono}}, \bibinfo
+  {author} {\bibfnamefont {D.}~\bibnamefont {Vaughan}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Shotwell}}, \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Story}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Jackson}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Young}},\ }\bibfield  {title} {\textit {\bibinfo {title}
+  {{Technology development and design of a hybrid Mars ascent vehicle
+  concept}},}\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {{Aerospace
+  Conference, 2016 IEEE}}}}\ (\bibinfo {organization} {IEEE},\ \bibinfo {year}
+  {2016})\ pp.\ \bibinfo {pages} {1--10}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Shotwell}(2016)}]{shotwell2016history}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Shotwell}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{History of
+  Mars Ascent Vehicle development over the last 20 years}},}\ }in\ \href@noop
+  {} {\emph {\bibinfo {booktitle} {{Aerospace Conference, 2016 IEEE}}}}\
+  (\bibinfo {organization} {IEEE},\ \bibinfo {year} {2016})\ pp.\ \bibinfo
+  {pages} {1--11}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Mooij}(1994)}]{mooij1994motion}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont

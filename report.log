@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.13)  17 NOV 2016 18:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.13)  19 NOV 2016 12:14
 entering extended mode
 **./report.tex
 (report.tex
@@ -1670,6 +1670,24 @@ LaTeX Warning: Label `eq:dragAuxF' multiply defined.
 
 LaTeX Warning: Label `eq:dragAuxF@cref' multiply defined.
 
+
+LaTeX Warning: Label `fig:propframe_mooij1994motion' multiply defined.
+
+
+LaTeX Warning: Label `fig:propframe_mooij1994motion@cref' multiply defined.
+
+
+LaTeX Warning: Label `eq:BPtrans' multiply defined.
+
+
+LaTeX Warning: Label `eq:BPtrans@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:sphertocart_noomen2013basic' multiply defined.
+
+
+LaTeX Warning: Label `fig:sphertocart_noomen2013basic@cref' multiply defined.
+
 )
 \openout1 = `report.aux'.
 
@@ -1861,13 +1879,13 @@ Package gensymb Info: Using \textmu for \micro on input line 89.
 libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
 )
-<cover_mars_4.jpg, id=317, 578.16pt x 730.52925pt>
+<cover_mars_4.jpg, id=373, 578.16pt x 730.52925pt>
 File: cover_mars_4.jpg Graphic file (type jpg)
  <use cover_mars_4.jpg>
 Package pdftex.def Info: cover_mars_4.jpg used on input line 102.
 (pdftex.def)             Requested size: 597.50787pt x 755.01733pt.
 
-<cover/front.pdf, id=318, 615.29875pt x 854.19125pt>
+<cover/front.pdf, id=374, 615.29875pt x 854.19125pt>
 File: cover/front.pdf Graphic file (type pdf)
  <use cover/front.pdf>
 Package pdftex.def Info: cover/front.pdf used on input line 102.
@@ -1900,19 +1918,24 @@ although it is yet undefined on input line 4.
 ] (report.toc
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 2.
+Package acronym Info: Label `acro:MAV' newly defined as it shall be overridden
+although it is yet undefined on input line 9.
 Package acronym Info: Label `acro:RKF' newly defined as it shall be overridden
-although it is yet undefined on input line 26.
+although it is yet undefined on input line 27.
 Package acronym Info: Label `acro:TSI' newly defined as it shall be overridden
-although it is yet undefined on input line 29.
+although it is yet undefined on input line 30.
 Package acronym Info: Label `acro:Tudat' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 48.
+although it is yet undefined on input line 49.
 Package acronym Info: Label `acro:GRAM' newly defined as it shall be overridden
 
-although it is yet undefined on input line 51.
+although it is yet undefined on input line 52.
  [3
 
-])
+]
+Package acronym Info: Label `acro:RF' newly defined as it shall be overridden
+although it is yet undefined on input line 82.
+)
 \tf@toc=\write7
 \openout7 = `report.toc'.
 
@@ -1962,16 +1985,12 @@ LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <96> not available
 (Font)              Font shape `T1/futs/b/sc' tried instead on input line 1.
 Package acronym Info: Label `acro:MSR' newly defined as it shall be overridden
 although it is yet undefined on input line 3.
-Package acronym Info: Label `acro:MAV' newly defined as it shall be overridden
-although it is yet undefined on input line 3.
 Package acronym Info: Label `acro:GLOM' newly defined as it shall be overridden
 
 although it is yet undefined on input line 3.
 
 LaTeX Warning: Reference `ch:oversub' on page 1 undefined on input line 4.
 
-Package acronym Info: Label `acro:RF' newly defined as it shall be overridden
-although it is yet undefined on input line 5.
 
 LaTeX Warning: Reference `ch:missher' on page 1 undefined on input line 6.
 
@@ -2012,44 +2031,146 @@ LaTeX Warning: Reference `ch:findef' on page 1 undefined on input line 6.
 ]
 Chapter 2.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 6.
+(Font)              scaled to size 7.35999pt on input line 8.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 6.
+(Font)              scaled to size 6.25598pt on input line 8.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 6.
+(Font)              scaled to size 7.35999pt on input line 8.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 6.
+(Font)              scaled to size 6.25598pt on input line 8.
+
+<figures/heritage/proposedMSRmissionArchitecture_vaughan2016technology.jpg, id=
+725, 433.62pt x 266.79675pt>
+File: figures/heritage/proposedMSRmissionArchitecture_vaughan2016technology.jpg
+ Graphic file (type jpg)
+
+<use figures/heritage/proposedMSRmissionArchitecture_vaughan2016technology.jpg>
+Package pdftex.def Info: figures/heritage/proposedMSRmissionArchitecture_vaugha
+n2016technology.jpg used on input line 13.
+(pdftex.def)             Requested size: 358.50609pt x 220.5904pt.
 LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <14.4> not available
-(Font)              Font shape `T1/futs/b/sc' tried instead on input line 15.
+(Font)              Font shape `T1/futs/b/sc' tried instead on input line 25.
 Package acronym Info: Label `acro:DLR' newly defined as it shall be overridden
-although it is yet undefined on input line 25.
+although it is yet undefined on input line 35.
 [2
 
 ]
 Package acronym Info: Label `acro:SSTO' newly defined as it shall be overridden
 
-although it is yet undefined on input line 49.
-) (models.tex [3]
+although it is yet undefined on input line 59.
+ [3 <./figures/heritage/proposedMSRmissionArchitecture_vaughan2016technology.jp
+g>]
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
+[]|\T1/futs/m/n/10 two-stage rock-ets (com-par-i-son
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 90--90
+[]|\T1/futs/m/n/10 two-stage rocket (three dif-fer-ent
+ []
+
+
+Underfull \hbox (badness 6808) in paragraph at lines 96--96
+[]|[][]\T1/futs/m/n/10 Mars Pro-gram Plan-ning Group[][]
+ []
+
+
+Overfull \hbox (16.2604pt too wide) in paragraph at lines 83--102
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+
+<figures/heritage/biPropellantSSTOMAV_vaughan2016technology-And-hybridSSTOMAV_k
+arp2016technology.jpg, id=881, 227.6505pt x 118.041pt>
+File: figures/heritage/biPropellantSSTOMAV_vaughan2016technology-And-hybridSSTO
+MAV_karp2016technology.jpg Graphic file (type jpg)
+
+<use figures/heritage/biPropellantSSTOMAV_vaughan2016technology-And-hybridSSTOM
+AV_karp2016technology.jpg>
+Package pdftex.def Info: figures/heritage/biPropellantSSTOMAV_vaughan2016techno
+logy-And-hybridSSTOMAV_karp2016technology.jpg used on input line 110.
+(pdftex.def)             Requested size: 358.50609pt x 185.91193pt.
+ [4 <./figures/heritage/biPropellantSSTOMAV_vaughan2016technology-And-hybridSST
+OMAV_karp2016technology.jpg>]
+<figures/launcher_methods/baseline_liquid2_trinidad2012.jpg, id=910, 704.6325pt
+ x 296.90926pt>
+File: figures/launcher_methods/baseline_liquid2_trinidad2012.jpg Graphic file (
+type jpg)
+
+<use figures/launcher_methods/baseline_liquid2_trinidad2012.jpg>
+Package pdftex.def Info: figures/launcher_methods/baseline_liquid2_trinidad2012
+.jpg used on input line 122.
+(pdftex.def)             Requested size: 358.50609pt x 151.0638pt.
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <8> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 123.
+
+
+Package natbib Warning: Citation `baseline_liquid2_trinidad2012' on page 5 unde
+fined on input line 123.
+
+
+Package natbib Warning: Citation `whitehead2014mars' on page 5 undefined on inp
+ut line 127.
+
+
+<figures/launcher_methods/dragcoeff_whitehead2004mars.jpg, id=913, 796.77675pt 
+x 475.7775pt>
+File: figures/launcher_methods/dragcoeff_whitehead2004mars.jpg Graphic file (ty
+pe jpg)
+ <use figures/launcher_methods/dragcoeff_whitehead2004mars.jpg>
+Package pdftex.def Info: figures/launcher_methods/dragcoeff_whitehead2004mars.j
+pg used on input line 131.
+(pdftex.def)             Requested size: 448.1309pt x 267.59514pt.
+
+<figures/reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij
+1994motion.jpg, id=919, 1439.3775pt x 999.735pt>
+File: figures/reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-
+mooij1994motion.jpg Graphic file (type jpg)
+
+<use figures/reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-m
+ooij1994motion.jpg>
+Package pdftex.def Info: figures/reference_frames/allFiveReferenceFrames_mooij2
+013fd-trinidad2012-mooij1994motion.jpg used on input line 152.
+(pdftex.def)             Requested size: 448.1309pt x 311.25706pt.
+
+
+Package natbib Warning: Citation `mooij2013fd' on page 5 undefined on input lin
+e 153.
+
+[5 <./figures/launcher_methods/baseline_liquid2_trinidad2012.jpg>]) (models.tex
+[6 <./figures/launcher_methods/dragcoeff_whitehead2004mars.jpg>] [7 <./figures/
+reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij1994motio
+n.jpg>]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 50--53
 
  []
 
-[4
+[8
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
-[5]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
 
-<figures/reference_frames/propframe_mooij1994motion.jpg, id=752, 688.37175pt x 
+<figures/reference_frames/propframe_mooij1994motion.jpg, id=985, 688.37175pt x 
 449.2785pt>
 File: figures/reference_frames/propframe_mooij1994motion.jpg Graphic file (type
  jpg)
@@ -2058,7 +2179,7 @@ Package pdftex.def Info: figures/reference_frames/propframe_mooij1994motion.jpg
  used on input line 164.
 (pdftex.def)             Requested size: 358.50609pt x 233.98949pt.
 
-[6]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
@@ -2073,15 +2194,15 @@ LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <12> not available
 Package acronym Info: Label `acro:MOLA' newly defined as it shall be overridden
 
 although it is yet undefined on input line 203.
-<figures/software/temperatureData.png, id=781, 421.575pt x 316.18124pt>
+<figures/software/temperatureData.png, id=1014, 421.575pt x 316.18124pt>
 File: figures/software/temperatureData.png Graphic file (type png)
 
 <use figures/software/temperatureData.png>
 Package pdftex.def Info: figures/software/temperatureData.png used on input lin
 e 208.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
- [7 <./figures/reference_frames/propframe_mooij1994motion.jpg>]
-<figures/software/densityData.png, id=793, 421.575pt x 316.18124pt>
+ [11 <./figures/reference_frames/propframe_mooij1994motion.jpg>]
+<figures/software/densityData.png, id=1026, 421.575pt x 316.18124pt>
 File: figures/software/densityData.png Graphic file (type png)
 
 <use figures/software/densityData.png>
@@ -2089,7 +2210,7 @@ Package pdftex.def Info: figures/software/densityData.png used on input line 21
 5.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
 
-<figures/software/temperatureDataSplit5.png, id=798, 404.712pt x 266.1945pt>
+<figures/software/temperatureDataSplit5.png, id=1031, 404.712pt x 266.1945pt>
 File: figures/software/temperatureDataSplit5.png Graphic file (type png)
 
 <use figures/software/temperatureDataSplit5.png>
@@ -2131,7 +2252,7 @@ Overfull \hbox (52.32355pt too wide) in paragraph at lines 241--249
  [] 
  []
 
-[8 <./figures/software/temperatureData.png (PNG copy)>]
+[12 <./figures/software/temperatureData.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 261--261
 []|\T1/futs/m/n/10 -5.388
  []
@@ -2182,15 +2303,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--262
  []
 
 
-<figures/software/completePolyFitTempSplit5.png, id=814, 421.575pt x 316.18124p
-t>
+<figures/software/completePolyFitTempSplit5.png, id=1047, 421.575pt x 316.18124
+pt>
 File: figures/software/completePolyFitTempSplit5.png Graphic file (type png)
  <use figures/software/completePolyFitTempSplit5.png>
 Package pdftex.def Info: figures/software/completePolyFitTempSplit5.png used on
  input line 271.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
- [9 <./figures/software/densityData.png (PNG copy)>]
-<figures/software/lnPlotDataDen.png, id=821, 421.575pt x 316.18124pt>
+ [13 <./figures/software/densityData.png (PNG copy)>]
+<figures/software/lnPlotDataDen.png, id=1055, 421.575pt x 316.18124pt>
 File: figures/software/lnPlotDataDen.png Graphic file (type png)
 
 <use figures/software/lnPlotDataDen.png>
@@ -2247,7 +2368,8 @@ Overfull \hbox (32.94925pt too wide) in paragraph at lines 354--359
  [] 
  []
 
-<figures/software/completeExpPolyFitDen.png, id=827, 421.575pt x 316.18124pt>
+
+<figures/software/completeExpPolyFitDen.png, id=1061, 421.575pt x 316.18124pt>
 File: figures/software/completeExpPolyFitDen.png Graphic file (type png)
 
 <use figures/software/completeExpPolyFitDen.png>
@@ -2255,7 +2377,7 @@ Package pdftex.def Info: figures/software/completeExpPolyFitDen.png used on inp
 ut line 367.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
 
-<figures/software/completeExpFitDen.png, id=828, 421.575pt x 316.18124pt>
+<figures/software/completeExpFitDen.png, id=1062, 421.575pt x 316.18124pt>
 File: figures/software/completeExpFitDen.png Graphic file (type png)
 
 <use figures/software/completeExpFitDen.png>
@@ -2263,31 +2385,25 @@ Package pdftex.def Info: figures/software/completeExpFitDen.png used on input l
 ine 374.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
 
-<figures/launcher_methods/dragcoeff_whitehead2004mars.jpg, id=830, 796.77675pt 
-x 475.7775pt>
-File: figures/launcher_methods/dragcoeff_whitehead2004mars.jpg Graphic file (ty
-pe jpg)
- <use figures/launcher_methods/dragcoeff_whitehead2004mars.jpg>
-Package pdftex.def Info: figures/launcher_methods/dragcoeff_whitehead2004mars.j
-pg used on input line 393.
-(pdftex.def)             Requested size: 448.1309pt x 267.59514pt.
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
-[10 <./figures/software/temperatureDataSplit5.png>]
-<figures/software/dragCoeffFit.png, id=846, 421.575pt x 316.18124pt>
+ []
+
+[14 <./figures/software/temperatureDataSplit5.png>]
+<figures/software/dragCoeffFit.png, id=1076, 421.575pt x 316.18124pt>
 File: figures/software/dragCoeffFit.png Graphic file (type png)
 
 <use figures/software/dragCoeffFit.png>
 Package pdftex.def Info: figures/software/dragCoeffFit.png used on input line 4
-20.
+14.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
 ) (standardintegrationmethods.tex
-[11 <./figures/software/completePolyFitTempSplit5.png (PNG copy)>] [12 <./figur
-es/software/lnPlotDataDen.png (PNG copy)>] [13 <./figures/software/completeExpP
-olyFitDen.png (PNG copy)>] [14 <./figures/software/completeExpFitDen.png (PNG c
-opy)> <./figures/launcher_methods/dragcoeff_whitehead2004mars.jpg>] [15 <./figu
-res/software/dragCoeffFit.png (PNG copy)>]
+[15 <./figures/software/completePolyFitTempSplit5.png (PNG copy)>] [16 <./figur
+es/software/lnPlotDataDen.png (PNG copy)>] [17 <./figures/software/completeExpP
+olyFitDen.png (PNG copy)>] [18 <./figures/software/completeExpFitDen.png (PNG c
+opy)>] [19 <./figures/software/dragCoeffFit.png (PNG copy)>]
 Chapter 4.
-[16
+[20
 
 ]
 Package acronym Info: Label `acro:RK4' newly defined as it shall be overridden
@@ -2352,20 +2468,20 @@ although it is yet undefined on input line 76.
 Package acronym Info: Label `acro:RKF56' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 76.
-[17]
-<figures/integrators/rk4_noomen2013int.jpg, id=1016, 402.303pt x 215.6055pt>
+[21]
+<figures/integrators/rk4_noomen2013int.jpg, id=1246, 402.303pt x 215.6055pt>
 File: figures/integrators/rk4_noomen2013int.jpg Graphic file (type jpg)
 
 <use figures/integrators/rk4_noomen2013int.jpg>
 Package pdftex.def Info: figures/integrators/rk4_noomen2013int.jpg used on inpu
 t line 98.
 (pdftex.def)             Requested size: 134.44063pt x 72.04816pt.
- [18 <./figures/integrators/rk4_noomen2013int.jpg>]) (tsi.tex [19]
+ [22 <./figures/integrators/rk4_noomen2013int.jpg>]) (tsi.tex [23]
 Chapter 5.
-[20
+[24
 
-] [21] [22]
-<figures/reference_frames/sphertocart_noomen2013basic.jpg, id=1122, 277.035pt x
+] [25] [26]
+<figures/reference_frames/sphertocart_noomen2013basic.jpg, id=1352, 277.035pt x
  322.806pt>
 File: figures/reference_frames/sphertocart_noomen2013basic.jpg Graphic file (ty
 pe jpg)
@@ -2374,8 +2490,8 @@ Package pdftex.def Info: figures/reference_frames/sphertocart_noomen2013basic.j
 pg used on input line 243.
 (pdftex.def)             Requested size: 313.69026pt x 365.52014pt.
 
-[23] [24 <./figures/reference_frames/sphertocart_noomen2013basic.jpg>]
-<figures/reference_frames/vertical_spherical_mooij1994motion.jpg, id=1156, 526.
+[27] [28 <./figures/reference_frames/sphertocart_noomen2013basic.jpg>]
+<figures/reference_frames/vertical_spherical_mooij1994motion.jpg, id=1387, 526.
 96875pt x 397.485pt>
 File: figures/reference_frames/vertical_spherical_mooij1994motion.jpg Graphic f
 ile (type jpg)
@@ -2384,14 +2500,14 @@ ile (type jpg)
 Package pdftex.def Info: figures/reference_frames/vertical_spherical_mooij1994m
 otion.jpg used on input line 375.
 (pdftex.def)             Requested size: 313.69026pt x 236.62477pt.
- [25 <./figures/reference_frames/vertical_spherical_mooij1994motion.jpg>] [26] 
-[27]
+ [29 <./figures/reference_frames/vertical_spherical_mooij1994motion.jpg>] [30] 
+[31]
 Overfull \hbox (44.94644pt too wide) detected at line 716
 []\U/futm/m/n/10 T[] [] \FMS/futm/m/n/10 Å [] [] 
  []
 
-[28] [29]
-<figures/reference_frames/cartesian_transformation_mooij1994motion.jpg, id=1256
+[32] [33]
+<figures/reference_frames/cartesian_transformation_mooij1994motion.jpg, id=1488
 , 460.72125pt x 400.49625pt>
 File: figures/reference_frames/cartesian_transformation_mooij1994motion.jpg Gra
 phic file (type jpg)
@@ -2403,33 +2519,33 @@ j1994motion.jpg used on input line 952.
 Package acronym Info: Label `acro:RHR' newly defined as it shall be overridden
 although it is yet undefined on input line 957.
 
-[30] [31 <./figures/reference_frames/cartesian_transformation_mooij1994motion.j
+[34] [35 <./figures/reference_frames/cartesian_transformation_mooij1994motion.j
 pg>]
-<figures/tsi/spherical_mooij1994motion.jpg, id=1297, 337.26pt x 338.4645pt>
+<figures/tsi/spherical_mooij1994motion.jpg, id=1528, 337.26pt x 338.4645pt>
 File: figures/tsi/spherical_mooij1994motion.jpg Graphic file (type jpg)
 
 <use figures/tsi/spherical_mooij1994motion.jpg>
 Package pdftex.def Info: figures/tsi/spherical_mooij1994motion.jpg used on inpu
 t line 1149.
 (pdftex.def)             Requested size: 313.69026pt x 314.8152pt.
- [32] [33 <./figures/tsi/spherical_mooij1994motion.jpg>]
+ [36] [37 <./figures/tsi/spherical_mooij1994motion.jpg>]
 Overfull \hbox (18.49672pt too wide) in paragraph at lines 1347--1347
 [] 
  []
 
-[34] [35] [36] [37]) (programoptimisationtool.tex [38] [39]
+[38] [39] [40] [41]) (programoptimisationtool.tex [42] [43]
 Chapter 6.
-<figures/software/tudatBlock.png, id=1465, 258.36525pt x 178.86826pt>
+<figures/software/tudatBlock.png, id=1697, 258.36525pt x 178.86826pt>
 File: figures/software/tudatBlock.png Graphic file (type png)
 
 <use figures/software/tudatBlock.png>
 Package pdftex.def Info: figures/software/tudatBlock.png used on input line 20.
 
 (pdftex.def)             Requested size: 134.44063pt x 93.0748pt.
- [40
+ [44
 
  <./figures/software/tudatBlock.png>]
-[41] <figures/software/RK_Propagator.png, id=1524, 784.73175pt x 502.87875pt>
+[45] <figures/software/RK_Propagator.png, id=1756, 784.73175pt x 502.87875pt>
 File: figures/software/RK_Propagator.png Graphic file (type png)
 
 <use figures/software/RK_Propagator.png>
@@ -2440,7 +2556,7 @@ Package pdftex.def Info: figures/software/RK_Propagator.png used on input line
 
 LaTeX Warning: Float too large for page by 15.65628pt on input line 83.
 
-<figures/software/TSI_Propagator.png, id=1533, 790.152pt x 477.58424pt>
+<figures/software/TSI_Propagator.png, id=1765, 790.152pt x 477.58424pt>
 File: figures/software/TSI_Propagator.png Graphic file (type png)
 
 <use figures/software/TSI_Propagator.png>
@@ -2451,8 +2567,8 @@ Package pdftex.def Info: figures/software/TSI_Propagator.png used on input line
 
 LaTeX Warning: Float too large for page by 15.65628pt on input line 97.
 
-[42]) (verificationandvalidation.tex [43] [44 <./figures/software/RK_Propagator
-.png>] [45 <./figures/software/TSI_Propagator.png>]
+[46]) (verificationandvalidation.tex [47] [48 <./figures/software/RK_Propagator
+.png>] [49 <./figures/software/TSI_Propagator.png>]
 Chapter 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 30--31
@@ -2470,9 +2586,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-[46
+[50
 
-] [47] [48]
+] [51] [52]
 Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
@@ -2482,7 +2598,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-[49]
+[53]
 Package acronym Info: Label `acro:FPA' newly defined as it shall be overridden
 although it is yet undefined on input line 116.
 
@@ -2491,7 +2607,7 @@ Overfull \hbox (10.71837pt too wide) in paragraph at lines 105--125
  []
 
 
-<figures/verification/case1/PlotFigure2Zoom.png, id=1712, 1445.4pt x 785.93625p
+<figures/verification/case1/PlotFigure2Zoom.png, id=1943, 1445.4pt x 785.93625p
 t>
 File: figures/verification/case1/PlotFigure2Zoom.png Graphic file (type png)
  <use figures/verification/case1/PlotFigure2Zoom.png>
@@ -2499,7 +2615,7 @@ Package pdftex.def Info: figures/verification/case1/PlotFigure2Zoom.png used on
  input line 132.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case1/PlotFigure1SeenFromZoomXaxis.png, id=1713, 1445.4pt
+<figures/verification/case1/PlotFigure1SeenFromZoomXaxis.png, id=1944, 1445.4pt
  x 785.93625pt>
 File: figures/verification/case1/PlotFigure1SeenFromZoomXaxis.png Graphic file 
 (type png)
@@ -2509,7 +2625,7 @@ Package pdftex.def Info: figures/verification/case1/PlotFigure1SeenFromZoomXaxi
 s.png used on input line 139.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case1/PlotFigure1SeenFromZoomYaxis.png, id=1714, 1445.4pt
+<figures/verification/case1/PlotFigure1SeenFromZoomYaxis.png, id=1945, 1445.4pt
  x 785.93625pt>
 File: figures/verification/case1/PlotFigure1SeenFromZoomYaxis.png Graphic file 
 (type png)
@@ -2519,7 +2635,7 @@ Package pdftex.def Info: figures/verification/case1/PlotFigure1SeenFromZoomYaxi
 s.png used on input line 146.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case1/PlotFigure1SeenFromZoomZaxis.png, id=1715, 1445.4pt
+<figures/verification/case1/PlotFigure1SeenFromZoomZaxis.png, id=1946, 1445.4pt
  x 785.93625pt>
 File: figures/verification/case1/PlotFigure1SeenFromZoomZaxis.png Graphic file 
 (type png)
@@ -2529,7 +2645,7 @@ Package pdftex.def Info: figures/verification/case1/PlotFigure1SeenFromZoomZaxi
 s.png used on input line 153.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case2/PlotFigure2Zoom.png, id=1725, 1445.4pt x 785.93625p
+<figures/verification/case2/PlotFigure2Zoom.png, id=1956, 1445.4pt x 785.93625p
 t>
 File: figures/verification/case2/PlotFigure2Zoom.png Graphic file (type png)
  <use figures/verification/case2/PlotFigure2Zoom.png>
@@ -2537,7 +2653,7 @@ Package pdftex.def Info: figures/verification/case2/PlotFigure2Zoom.png used on
  input line 196.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case2/PlotFigure1SeenFromXaxisZoom.png, id=1726, 1445.4pt
+<figures/verification/case2/PlotFigure1SeenFromXaxisZoom.png, id=1957, 1445.4pt
  x 785.93625pt>
 File: figures/verification/case2/PlotFigure1SeenFromXaxisZoom.png Graphic file 
 (type png)
@@ -2547,7 +2663,7 @@ Package pdftex.def Info: figures/verification/case2/PlotFigure1SeenFromXaxisZoo
 m.png used on input line 203.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case2/PlotFigure1SeenFromYaxisZoom.png, id=1727, 1445.4pt
+<figures/verification/case2/PlotFigure1SeenFromYaxisZoom.png, id=1958, 1445.4pt
  x 785.93625pt>
 File: figures/verification/case2/PlotFigure1SeenFromYaxisZoom.png Graphic file 
 (type png)
@@ -2557,7 +2673,7 @@ Package pdftex.def Info: figures/verification/case2/PlotFigure1SeenFromYaxisZoo
 m.png used on input line 210.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case2/PlotFigure1SeenFromZaxisZoom.png, id=1728, 1445.4pt
+<figures/verification/case2/PlotFigure1SeenFromZaxisZoom.png, id=1959, 1445.4pt
  x 785.93625pt>
 File: figures/verification/case2/PlotFigure1SeenFromZaxisZoom.png Graphic file 
 (type png)
@@ -2568,7 +2684,7 @@ m.png used on input line 217.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
 <figures/verification/case2/thrustAzimuthAndElevationDerivedFromCase2Version2.p
-ng, id=1730, 427.5975pt x 308.65312pt>
+ng, id=1961, 427.5975pt x 308.65312pt>
 File: figures/verification/case2/thrustAzimuthAndElevationDerivedFromCase2Versi
 on2.png Graphic file (type png)
 
@@ -2577,68 +2693,276 @@ n2.png>
 Package pdftex.def Info: figures/verification/case2/thrustAzimuthAndElevationDe
 rivedFromCase2Version2.png used on input line 226.
 (pdftex.def)             Requested size: 358.50609pt x 258.78175pt.
- [50 <./figures/verification/case1/PlotFigure2Zoom.png (PNG copy)>]
+ [54 <./figures/verification/case1/PlotFigure2Zoom.png (PNG copy)>]
 
-LaTeX Warning: Text page 51 contains only floats.
+LaTeX Warning: Text page 55 contains only floats.
 
-[51 <./figures/verification/case1/PlotFigure1SeenFromZoomXaxis.png (PNG copy)> 
+[55 <./figures/verification/case1/PlotFigure1SeenFromZoomXaxis.png (PNG copy)> 
 <./figures/verification/case1/PlotFigure1SeenFromZoomYaxis.png (PNG copy)>])
-(results.tex [52 <./figures/verification/case1/PlotFigure1SeenFromZoomZaxis.png
+(results.tex [56 <./figures/verification/case1/PlotFigure1SeenFromZoomZaxis.png
  (PNG copy)> <./figures/verification/case2/PlotFigure2Zoom.png (PNG copy)>]
-[53 <./figures/verification/case2/PlotFigure1SeenFromXaxisZoom.png (PNG copy)> 
+[57 <./figures/verification/case2/PlotFigure1SeenFromXaxisZoom.png (PNG copy)> 
 <./figures/verification/case2/PlotFigure1SeenFromYaxisZoom.png (PNG copy)> <./f
 igures/verification/case2/PlotFigure1SeenFromZaxisZoom.png (PNG copy)>]
-[54 <./figures/verification/case2/thrustAzimuthAndElevationDerivedFromCase2Vers
+[58 <./figures/verification/case2/thrustAzimuthAndElevationDerivedFromCase2Vers
 ion2.png (PNG copy)>]
 Chapter 8.
-) (analysis.tex [55
+) (analysis.tex [59
 
 ]
 Chapter 9.
-) (conclusionsandrecommendations.tex [56
+) (conclusionsandrecommendations.tex [60
 
 ]
 Chapter 10.
-) (report.bbl [57
+) (report.bbl [61
 
 ]
-Overfull \hbox (89.4183pt too wide) in paragraph at lines 222--228
+Underfull \hbox (badness 10000) in paragraph at lines 220--225
+[]\T1/futs/m/n/10 C. Stone, [][]\T1/futs/m/it/10 Rice Mars, [][]\T1/futs/m/n/10
+ pre-sen-ta-tion/web-site (1999), [on-line database], URL:
+ []
+
+[62
+
+]
+Underfull \hbox (badness 5446) in paragraph at lines 275--284
+[]\T1/futs/m/n/10 Mars Pro-gram Plan-ning Group, [][]\T1/futs/m/it/10 Sum-mary 
+of the Fi-nal Re-port, [][] \T1/futs/m/n/10 (2012), [on-line database], URL:
+ []
+
+
+Overfull \hbox (89.4183pt too wide) in paragraph at lines 344--350
 []\T1/futs/m/n/10 D. Williams, [][]\T1/futs/m/it/10 Mars Fact Sheet, [][]\T1/fu
 ts/m/n/10 web-site (2015), [on-line database], URL: http://nssdc.gsfc.nasa.gov/
 planetary/factsheet/marsfact.html
  []
 
-[58
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 398--406
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 520--528
 []\T1/futs/m/n/10 H. L. Justh and C. G. Jus-tus, [][]\T1/futs/m/it/10 Uti-liz-i
 ng Mars global ref-er-ence at-mo-spheric model (Mars-GRAM
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--406
+Underfull \hbox (badness 10000) in paragraph at lines 520--528
 \T1/futs/m/it/10 2005) to eval-u-ate en-try probe mis-sion sites, [][]\T1/futs/
 m/n/10 Pre-sen-ta-tion (2008), [on-line database], URL:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--406
+Underfull \hbox (badness 10000) in paragraph at lines 520--528
 \T1/futs/m/n/10 https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-
 1-PB.pdf?sequence=1 [cited 10
  []
 
-) (appendixA-marsGRAM-inputFile.tex [59]
+) (appendixAA-referenceSystemTransformations.tex [64]
 Appendix A.
+Package acronym Info: Label `acro:MCI' newly defined as it shall be overridden
+although it is yet undefined on input line 15.
+
+Package natbib Warning: Citation `mooij2013fd' on page 65 undefined on input li
+ne 15.
+
+Package acronym Info: Label `acro:GMT' newly defined as it shall be overridden
+although it is yet undefined on input line 15.
+
+Package natbib Warning: Citation `bachman2014naif' on page 65 undefined on inpu
+t line 15.
+
+
+Package natbib Warning: Citation `diaz2008generic' on page 65 undefined on inpu
+t line 15.
+
+
+Package natbib Warning: Citation `bachman2014naif' on page 65 undefined on inpu
+t line 15.
+
+
+Package natbib Warning: Citation `diaz2008generic' on page 65 undefined on inpu
+t line 15.
+
+
+Package natbib Warning: Citation `archinal2011report' on page 65 undefined on i
+nput line 15.
+
+
+<figures/reference_frames/eci_mooij2013fd.jpg, id=2079, 478.78876pt x 444.4605p
+t>
+File: figures/reference_frames/eci_mooij2013fd.jpg Graphic file (type jpg)
+ <use figures/reference_frames/eci_mooij2013fd.jpg>
+Package pdftex.def Info: figures/reference_frames/eci_mooij2013fd.jpg used on i
+nput line 21.
+(pdftex.def)             Requested size: 224.06544pt x 208.00125pt.
+
+
+Package natbib Warning: Citation `mooij2013fd' on page 65 undefined on input li
+ne 22.
+
+Package acronym Info: Label `acro:MCMF' newly defined as it shall be overridden
+
+although it is yet undefined on input line 38.
+
+Package natbib Warning: Citation `morton2003mapping' on page 65 undefined on in
+put line 38.
+
+
+Package natbib Warning: Citation `duxbury2014location' on page 65 undefined on 
+input line 38.
+
+
+Package natbib Warning: Citation `diaz2008generic' on page 65 undefined on inpu
+t line 38.
+
+
+Package natbib Warning: Citation `archinal2011report' on page 65 undefined on i
+nput line 38.
+
+[65
+
+]
+<figures/reference_frames/ecef_mooij2013fd.jpg, id=2102, 478.1865pt x 452.892pt
+>
+File: figures/reference_frames/ecef_mooij2013fd.jpg Graphic file (type jpg)
+ <use figures/reference_frames/ecef_mooij2013fd.jpg>
+Package pdftex.def Info: figures/reference_frames/ecef_mooij2013fd.jpg used on 
+input line 53.
+(pdftex.def)             Requested size: 179.24962pt x 169.77188pt.
+
+
+Package natbib Warning: Citation `mooij2013fd' on page 66 undefined on input li
+ne 54.
+
+
+Package natbib Warning: Citation `mooij2013fd' on page 66 undefined on input li
+ne 66.
+
+[66 <./figures/reference_frames/eci_mooij2013fd.jpg> <./figures/reference_frame
+s/ecef_mooij2013fd.jpg>]
+<figures/reference_frames/vcne_mooij2013fd.jpg, id=2116, 480.5955pt x 345.6915p
+t>
+File: figures/reference_frames/vcne_mooij2013fd.jpg Graphic file (type jpg)
+ <use figures/reference_frames/vcne_mooij2013fd.jpg>
+Package pdftex.def Info: figures/reference_frames/vcne_mooij2013fd.jpg used on 
+input line 71.
+(pdftex.def)             Requested size: 224.06544pt x 161.16685pt.
+
+
+Package natbib Warning: Citation `mooij2013fd' on page 67 undefined on input li
+ne 72.
+
+
+<figures/reference_frames/baseline_liquid_trinidad2012_bframe.jpg, id=2128, 367
+.97475pt x 231.86626pt>
+File: figures/reference_frames/baseline_liquid_trinidad2012_bframe.jpg Graphic 
+file (type jpg)
+
+<use figures/reference_frames/baseline_liquid_trinidad2012_bframe.jpg>
+Package pdftex.def Info: figures/reference_frames/baseline_liquid_trinidad2012_
+bframe.jpg used on input line 99.
+(pdftex.def)             Requested size: 268.88127pt x 169.42723pt.
+File: figures/reference_frames/propframe_mooij1994motion.jpg Graphic file (type
+ jpg)
+
+<use figures/reference_frames/propframe_mooij1994motion.jpg>
+Package pdftex.def Info: figures/reference_frames/propframe_mooij1994motion.jpg
+ used on input line 116.
+(pdftex.def)             Requested size: 268.88127pt x 175.49211pt.
+
+
+Package natbib Warning: Citation `mooij2013stat' on page 67 undefined on input 
+line 126.
+
+[67 <./figures/reference_frames/vcne_mooij2013fd.jpg> <./figures/reference_fram
+es/baseline_liquid_trinidad2012_bframe.jpg>]
+<figures/reference_frames/xtrans_mooij2013stat.jpg, id=2156, 476.982pt x 384.23
+55pt>
+File: figures/reference_frames/xtrans_mooij2013stat.jpg Graphic file (type jpg)
+
+ <use figures/reference_frames/xtrans_mooij2013stat.jpg>
+Package pdftex.def Info: figures/reference_frames/xtrans_mooij2013stat.jpg used
+ on input line 135.
+(pdftex.def)             Requested size: 268.88127pt x 216.60097pt.
+
+
+Package natbib Warning: Citation `mooij2013stat' on page 68 undefined on input 
+line 136.
+
+
+Package natbib Warning: Citation `mooij2013stat' on page 68 undefined on input 
+line 140.
+
+
+Package natbib Warning: Citation `mooij2013fd' on page 68 undefined on input li
+ne 188.
+
+
+Package natbib Warning: Citation `mooij2013stat' on page 68 undefined on input 
+line 188.
+
+[68] [69 <./figures/reference_frames/xtrans_mooij2013stat.jpg>]
+
+LaTeX Warning: Reference `eq:third_b_per' on page 1 undefined on input line 323
+.
+
+
+<figures/transfer_orbits/sc_acc_wakker2010.jpg, id=2196, 307.74976pt x 311.9655
+pt>
+File: figures/transfer_orbits/sc_acc_wakker2010.jpg Graphic file (type jpg)
+ <use figures/transfer_orbits/sc_acc_wakker2010.jpg>
+Package pdftex.def Info: figures/transfer_orbits/sc_acc_wakker2010.jpg used on 
+input line 329.
+(pdftex.def)             Requested size: 134.44063pt x 136.28464pt.
+File: figures/reference_frames/sphertocart_noomen2013basic.jpg Graphic file (ty
+pe jpg)
+
+<use figures/reference_frames/sphertocart_noomen2013basic.jpg>
+Package pdftex.def Info: figures/reference_frames/sphertocart_noomen2013basic.j
+pg used on input line 392.
+(pdftex.def)             Requested size: 134.44063pt x 156.64937pt.
+ [70 <./figures/transfer_orbits/sc_acc_wakker2010.jpg>]
+<figures/reference_frames/atan2_guilhaire2013.jpg, id=2227, 218.61674pt x 142.7
+3325pt>
+File: figures/reference_frames/atan2_guilhaire2013.jpg Graphic file (type jpg)
+ <use figures/reference_frames/atan2_guilhaire2013.jpg>
+Package pdftex.def Info: figures/reference_frames/atan2_guilhaire2013.jpg used 
+on input line 437.
+(pdftex.def)             Requested size: 224.06544pt x 146.2938pt.
+ [71]
+<figures/reference_frames/kepler_noomen2013basic_akcasu2013.jpg, id=2241, 657.6
+57pt x 271.61475pt>
+File: figures/reference_frames/kepler_noomen2013basic_akcasu2013.jpg Graphic fi
+le (type jpg)
+
+<use figures/reference_frames/kepler_noomen2013basic_akcasu2013.jpg>
+Package pdftex.def Info: figures/reference_frames/kepler_noomen2013basic_akcasu
+2013.jpg used on input line 486.
+(pdftex.def)             Requested size: 448.1309pt x 185.08516pt.
+
+
+Package natbib Warning: Citation `akcasu2013' on page 72 undefined on input lin
+e 487.
+
+[72 <./figures/reference_frames/atan2_guilhaire2013.jpg> <./figures/reference_f
+rames/kepler_noomen2013basic_akcasu2013.jpg>] [73]
+
+Package natbib Warning: Citation `wakker2010astro1' on page 74 undefined on inp
+ut line 651.
+
+[74]
+Package acronym Info: Label `acro:MEE' newly defined as it shall be overridden
+although it is yet undefined on input line 682.
+) (appendixA-marsGRAM-inputFile.tex [75]
+Appendix B.
 LaTeX Font Info:    Try loading font information for TS1+pcr on input line 6.
 ("D:\Programs (slower)\MiKTeX\tex\latex\psnfss\ts1pcr.fd"
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-) [60
+) [76
 
-] [61] [62])
-(appendixB-fittingProcessAndResults.tex [63]
-Appendix B.
-<figures/software/temperatureDataSplit6.png, id=2049, 337.26pt x 252.945pt>
+] [77] [78])
+(appendixB-fittingProcessAndResults.tex [79]
+Appendix C.
+<figures/software/temperatureDataSplit6.png, id=2543, 337.26pt x 252.945pt>
 File: figures/software/temperatureDataSplit6.png Graphic file (type png)
 
 <use figures/software/temperatureDataSplit6.png>
@@ -2646,7 +2970,7 @@ Package pdftex.def Info: figures/software/temperatureDataSplit6.png used on inp
 ut line 12.
 (pdftex.def)             Requested size: 358.50609pt x 268.88463pt.
 
-<figures/software/temperatureDataSplit7.png, id=2051, 404.712pt x 266.1945pt>
+<figures/software/temperatureDataSplit7.png, id=2545, 404.712pt x 266.1945pt>
 File: figures/software/temperatureDataSplit7.png Graphic file (type png)
 
 <use figures/software/temperatureDataSplit7.png>
@@ -2654,7 +2978,7 @@ Package pdftex.def Info: figures/software/temperatureDataSplit7.png used on inp
 ut line 21.
 (pdftex.def)             Requested size: 448.1309pt x 294.76857pt.
 
-<figures/software/completePolyFitTempSplit7.png, id=2053, 421.575pt x 316.18124
+<figures/software/completePolyFitTempSplit7.png, id=2547, 421.575pt x 316.18124
 pt>
 File: figures/software/completePolyFitTempSplit7.png Graphic file (type png)
  <use figures/software/completePolyFitTempSplit7.png>
@@ -2662,7 +2986,7 @@ Package pdftex.def Info: figures/software/completePolyFitTempSplit7.png used on
  input line 30.
 (pdftex.def)             Requested size: 403.31508pt x 302.49327pt.
 
-<figures/software/densityDataSplit2.png, id=2057, 337.26pt x 252.945pt>
+<figures/software/densityDataSplit2.png, id=2551, 337.26pt x 252.945pt>
 File: figures/software/densityDataSplit2.png Graphic file (type png)
 
 <use figures/software/densityDataSplit2.png>
@@ -2670,35 +2994,35 @@ Package pdftex.def Info: figures/software/densityDataSplit2.png used on input l
 ine 46.
 (pdftex.def)             Requested size: 403.31508pt x 302.49423pt.
 
-<figures/software/densityDataSplit3.png, id=2059, 337.26pt x 252.945pt>
+<figures/software/densityDataSplit3.png, id=2553, 337.26pt x 252.945pt>
 File: figures/software/densityDataSplit3.png Graphic file (type png)
 
 <use figures/software/densityDataSplit3.png>
 Package pdftex.def Info: figures/software/densityDataSplit3.png used on input l
 ine 55.
 (pdftex.def)             Requested size: 403.31508pt x 302.49423pt.
- [64
+ [80
 
 ]
-<figures/software/completePolyFitDenSplit3.png, id=2069, 421.575pt x 316.18124p
+<figures/software/completePolyFitDenSplit3.png, id=2563, 421.575pt x 316.18124p
 t>
 File: figures/software/completePolyFitDenSplit3.png Graphic file (type png)
  <use figures/software/completePolyFitDenSplit3.png>
 Package pdftex.def Info: figures/software/completePolyFitDenSplit3.png used on 
 input line 64.
 (pdftex.def)             Requested size: 403.31508pt x 302.49327pt.
- [65 <./figures/software/temperatureDataSplit6.png> <./figures/software/tempera
+ [81 <./figures/software/temperatureDataSplit6.png> <./figures/software/tempera
 tureDataSplit7.png>]
 
-LaTeX Warning: Text page 66 contains only floats.
+LaTeX Warning: Text page 82 contains only floats.
 
 
 Overfull \vbox (3.94742pt too high) has occurred while \output is active []
 
 
-[66 <./figures/software/completePolyFitTempSplit7.png (PNG copy)> <./figures/so
+[82 <./figures/software/completePolyFitTempSplit7.png (PNG copy)> <./figures/so
 ftware/densityDataSplit2.png>]
-<figures/software/section3PolyFitDen.png, id=2083, 421.575pt x 316.18124pt>
+<figures/software/section3PolyFitDen.png, id=2577, 421.575pt x 316.18124pt>
 File: figures/software/section3PolyFitDen.png Graphic file (type png)
 
 <use figures/software/section3PolyFitDen.png>
@@ -2706,7 +3030,7 @@ Package pdftex.def Info: figures/software/section3PolyFitDen.png used on input
 line 73.
 (pdftex.def)             Requested size: 403.31508pt x 302.49327pt.
 
-<figures/software/ExpAtmFitDenZoom.png, id=2085, 421.575pt x 316.18124pt>
+<figures/software/ExpAtmFitDenZoom.png, id=2579, 421.575pt x 316.18124pt>
 File: figures/software/ExpAtmFitDenZoom.png Graphic file (type png)
 
 <use figures/software/ExpAtmFitDenZoom.png>
@@ -2714,19 +3038,19 @@ Package pdftex.def Info: figures/software/ExpAtmFitDenZoom.png used on input li
 ne 82.
 (pdftex.def)             Requested size: 403.31508pt x 302.49327pt.
 )
-(appendixC-programFileDefinitions.tex [67 <./figures/software/densityDataSplit3
+(appendixC-programFileDefinitions.tex [83 <./figures/software/densityDataSplit3
 .png>]
 
-LaTeX Warning: Text page 68 contains only floats.
+LaTeX Warning: Text page 84 contains only floats.
 
 
 Overfull \vbox (3.94646pt too high) has occurred while \output is active []
 
 
-[68 <./figures/software/completePolyFitDenSplit3.png (PNG copy)> <./figures/sof
-tware/section3PolyFitDen.png (PNG copy)>] [69 <./figures/software/ExpAtmFitDenZ
+[84 <./figures/software/completePolyFitDenSplit3.png (PNG copy)> <./figures/sof
+tware/section3PolyFitDen.png (PNG copy)>] [85 <./figures/software/ExpAtmFitDenZ
 oom.png (PNG copy)>]
-Appendix C.
+Appendix D.
 
 LaTeX Warning: Reference `ch:programoptimisationtool' on page 1 undefined on in
 put line 4.
@@ -2736,10 +3060,10 @@ Overfull \hbox (0.50835pt too wide) in paragraph at lines 10--22
  [] 
  []
 
-) (appendixD-allRecurrenceRelations.tex [70
+) (appendixD-allRecurrenceRelations.tex [86
 
 ]
-Appendix D.
+Appendix E.
 
 Overfull \hbox (22.59695pt too wide) in alignment at lines 10--13
  [] [] [] 
@@ -2949,7 +3273,7 @@ Overfull \hbox (22.59695pt too wide) in alignment at lines 56--76
  [] [] [] 
  []
 
-[71
+[87
 
 ]
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 77--77
@@ -3066,7 +3390,7 @@ Overfull \hbox (22.59695pt too wide) in alignment at lines 96--134
  [] [] [] 
  []
 
-[72] [73]
+[88] [89]
 Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
@@ -3230,7 +3554,7 @@ Overfull \hbox (22.59695pt too wide) in alignment at lines 211--231
  [] [] [] 
  []
 
-[74]
+[90]
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 233--233
 []|\T1/futs/m/n/10 Multiplication| 
  []
@@ -3275,7 +3599,7 @@ Overfull \hbox (22.59695pt too wide) in alignment at lines 231--265
  [] [] [] 
  []
 
-[75]
+[91]
 Overfull \hbox (56.927pt too wide) in alignment at lines 289--292
  [] [] [] 
  []
@@ -3489,7 +3813,7 @@ Overfull \hbox (56.927pt too wide) in alignment at lines 335--364
  [] [] [] 
  []
 
-[76]
+[92]
 Overfull \hbox (2.4844pt too wide) in paragraph at lines 365--365
 []|\T1/futs/m/n/10 Multiplication| 
  []
@@ -3514,8 +3838,8 @@ Overfull \hbox (56.927pt too wide) in alignment at lines 364--386
  [] [] [] 
  []
 
-[77]) (appendixE-proposedSensitivityAnalysis.tex [78]
-Appendix E.
+[93]) (appendixE-proposedSensitivityAnalysis.tex [94]
+Appendix F.
 
 Underfull \hbox (badness 1769) in paragraph at lines 15--15
 \T1/futs/m/n/10 re-spond-ing re-sults. Speed of con-ver-
@@ -3601,26 +3925,30 @@ Overfull \hbox (44.71313pt too wide) in paragraph at lines 34--56
  [] 
  []
 
-) (appendixS-proposedSchedule.tex [79
+) (appendixS-proposedSchedule.tex [95
 
-] [80]
-Appendix F.
+] [96]
+Appendix G.
 
 Underfull \hbox (badness 1092) in paragraph at lines 25--25
 []|\T1/futs/m/n/10 Read and ad-just in-tro-duc-tion, prob-lem back-ground and m
 od-els
  []
 
-) [81
+)
+
+Package natbib Warning: There were undefined citations.
+
+[97
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 180.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
  (report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 180.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: E2567CEF37654DA4087D6FFEAF572D8F;5350.
+(rerunfilecheck)             Checksum: 15127B8644B2A020E29E25E9DA2C14E4;6482.
 
 
 LaTeX Warning: There were undefined references.
@@ -3628,16 +3956,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
  ) 
 Here is how much of TeX's memory you used:
- 28889 strings out of 493335
- 508523 string characters out of 3139257
- 830823 words of memory out of 3000000
- 31057 multiletter control sequences out of 15000+200000
- 180849 words of font info for 167 fonts, out of 3000000 for 9000
+ 29337 strings out of 493335
+ 519935 string characters out of 3139257
+ 839716 words of memory out of 3000000
+ 31394 multiletter control sequences out of 15000+200000
+ 181279 words of font info for 169 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,21n,74p,3173b,2353s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,25n,74p,3173b,2351s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Programs (slower)/MiKTeX/fonts/enc/dvips/fontname/8r.enc}{D:/Programs (sl
 ower)/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/Users/Stacha/AppData/Roaming/MiKT
 eX/2.9/fonts/type1/public/fourier/fourier-bb.pfb><C:/Users/Stacha/AppData/Roami
@@ -3652,9 +3980,9 @@ iKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/Programs (slower)/MiKT
 eX/fonts/type1/adobe/utopia/putb8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1
 /adobe/utopia/putr8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/adobe/utopia/
 putri8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on report.pdf (87 pages, 2125403 bytes).
+Output written on report.pdf (103 pages, 3264914 bytes).
 PDF statistics:
- 2373 PDF objects out of 2487 (max. 8388607)
- 641 named destinations out of 1000 (max. 500000)
- 822 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2887 PDF objects out of 2984 (max. 8388607)
+ 733 named destinations out of 1000 (max. 500000)
+ 994 words of extra memory for PDF output out of 10000 (max. 10000000)
 
