@@ -5,6 +5,8 @@ Illegal, another \bibstyle command---line 20 of file report.aux
  :          {plain}
 I'm skipping whatever remains of this command
 Database file #1: lit_references.bib
+Warning--entry type for "bachman2014naif" isn't style-file defined
+--line 176 of file lit_references.bib
 Warning--entry type for "deuflhard1994" isn't style-file defined
 --line 645 of file lit_references.bib
 Warning--entry type for "dirkx2016tudat" isn't style-file defined
@@ -13,10 +15,14 @@ Warning--entry type for "justus2008utilizing" isn't style-file defined
 --line 1714 of file lit_references.bib
 Warning--entry type for "mppg2012" isn't style-file defined
 --line 2089 of file lit_references.bib
+Warning--entry type for "diaz2008generic" isn't style-file defined
+--line 2915 of file lit_references.bib
 Warning--entry type for "stone1999" isn't style-file defined
 --line 3278 of file lit_references.bib
 Warning--entry type for "williams2015" isn't style-file defined
 --line 3654 of file lit_references.bib
+Warning--I didn't find a database entry for "baseline_liquid2_trinidad2012"
+Warning--I didn't find a database entry for "whitehead2014mars"
 merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
 Control: key (0) 
 Control: author (72) initials jnrlst
@@ -33,4 +39,6 @@ Warning--can't use both volume and number fields in dormand1987
 Warning--can't use both volume and number fields in ramos2005
 Warning--can't use both volume and number fields in prince1981high
 Warning--can't use both volume and number fields in jorba2005software
+Warning--can't use both volume and number fields in archinal2011report
+Warning--can't use both volume and number fields in duxbury2014location
 (There was 1 error message)

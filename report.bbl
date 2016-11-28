@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{47}%
+\begin{thebibliography}{56}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -78,6 +78,22 @@
   {\emph {\bibinfo {booktitle} {AAS/AIAA Astrodynamics Specialist
   Conference}}},\ Vol.\ \bibinfo {volume} {142}\ (\bibinfo  {publisher}
   {Univelt, Inc.},\ \bibinfo {year} {2011})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vaughan}\ \emph {et~al.}(2016)\citenamefont
+  {Vaughan}, \citenamefont {Nakazono}, \citenamefont {Karp}, \citenamefont
+  {Shotwell}, \citenamefont {London}, \citenamefont {Mehra},\ and\
+  \citenamefont {Mechentel}}]{vaughan2016technology}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Vaughan}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Nakazono}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Karp}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Shotwell}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {London}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Mehra}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {F.}~\bibnamefont {Mechentel}},\ }\bibfield  {title} {\textit {\bibinfo
+  {title} {{Technology development and design of liquid bi-propellant mars
+  ascent vehicles}},}\ }in\ \href@noop {} {\emph {\bibinfo {booktitle}
+  {{Aerospace Conference, 2016 IEEE}}}}\ (\bibinfo {organization} {IEEE},\
+  \bibinfo {year} {2016})\ pp.\ \bibinfo {pages} {1--12}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Fanning}\ and\ \citenamefont
   {Pierson}(1996)}]{fanning1996model}%
   \BibitemOpen
@@ -278,22 +294,6 @@
   {year} {2012}),\ \bibinfo {note} {[online database], URL:
   http://www.nasa.gov//sites/default/files/files/ [cited 14 October
   2015]}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Vaughan}\ \emph {et~al.}(2016)\citenamefont
-  {Vaughan}, \citenamefont {Nakazono}, \citenamefont {Karp}, \citenamefont
-  {Shotwell}, \citenamefont {London}, \citenamefont {Mehra},\ and\
-  \citenamefont {Mechentel}}]{vaughan2016technology}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
-  {Vaughan}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Nakazono}},
-  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Karp}}, \bibinfo {author}
-  {\bibfnamefont {R.}~\bibnamefont {Shotwell}}, \bibinfo {author}
-  {\bibfnamefont {A.}~\bibnamefont {London}}, \bibinfo {author} {\bibfnamefont
-  {A.}~\bibnamefont {Mehra}}, \ and\ \bibinfo {author} {\bibfnamefont
-  {F.}~\bibnamefont {Mechentel}},\ }\bibfield  {title} {\textit {\bibinfo
-  {title} {{Technology development and design of liquid bi-propellant mars
-  ascent vehicles}},}\ }in\ \href@noop {} {\emph {\bibinfo {booktitle}
-  {{Aerospace Conference, 2016 IEEE}}}}\ (\bibinfo {organization} {IEEE},\
-  \bibinfo {year} {2016})\ pp.\ \bibinfo {pages} {1--12}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Karp}\ \emph {et~al.}(2016)\citenamefont {Karp},
   \citenamefont {Redmond}, \citenamefont {Nakazono}, \citenamefont {Vaughan},
   \citenamefont {Shotwell}, \citenamefont {Story}, \citenamefont {Jackson},\
@@ -319,6 +319,21 @@
   {} {\emph {\bibinfo {booktitle} {{Aerospace Conference, 2016 IEEE}}}}\
   (\bibinfo {organization} {IEEE},\ \bibinfo {year} {2016})\ pp.\ \bibinfo
   {pages} {1--11}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mulder}\ \emph {et~al.}(2013)\citenamefont {Mulder},
+  \citenamefont {van Staveren}, \citenamefont {van~der Vaart}, \citenamefont
+  {de~Weerdt}, \citenamefont {in~'t Veld},\ and\ \citenamefont
+  {Mooij}}]{mooij2013fd}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Mulder}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {van
+  Staveren}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {van~der
+  Vaart}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {de~Weerdt}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {in~'t Veld}}, \ and\
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Mooij}},\ }\href@noop {}
+  {\textit {\bibinfo {title} {{Flight Dynamics, Lecture Notes}},}\ }\bibinfo
+  {howpublished} {Reader},\ \bibinfo {address} {Delft University of Technology}
+  (\bibinfo {year} {2013}),\ \bibinfo {note} {[Internal publication] Course:
+  Flight Dynamics}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Mooij}(1994)}]{mooij1994motion}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
@@ -327,6 +342,21 @@
   {\emph {\bibinfo {title} {The motion of a vehicle in a planetary
   atmosphere}}}\ (\bibinfo  {publisher} {Delft University Press},\ \bibinfo
   {address} {Delft},\ \bibinfo {year} {1994})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mooij}(2013)}]{mooij2013stat}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Mooij}},\ }\href@noop {} {\textit {\bibinfo {title}
+  {{AE3202-week1-lecture1b-Frames}},}\ }\bibinfo {howpublished} {Lecture
+  slides, Delft University of Technology} (\bibinfo {year} {2013}),\ \bibinfo
+  {note} {[Internal publication] Course: Flight Dynamics}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Noomen}(2013{\natexlab{a}})}]{noomen2013basic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Noomen}},\ }\href@noop {} {\textit {\bibinfo {title}
+  {ae4-878.basics.v4-14},}\ }\bibinfo {howpublished} {Lecture slides, Delft
+  University of Technology} (\bibinfo {year} {2013}{\natexlab{a}}),\ \bibinfo
+  {note} {[Internal publication] Course: Mission Geometry and Orbit
+  Design}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ho}\ \emph {et~al.}(2002)\citenamefont {Ho},
   \citenamefont {Golshan},\ and\ \citenamefont {Kliore}}]{ho2002radio}%
   \BibitemOpen
@@ -365,12 +395,12 @@
   {\emph {\bibinfo {booktitle} {Celestial mechanics}}},\ Vol.~\bibinfo {volume}
   {43}\ (\bibinfo  {publisher} {Springer},\ \bibinfo {year} {1987})\ pp.\
   \bibinfo {pages} {1--34}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Noomen}(2013{\natexlab{a}})}]{noomen2013int}%
+\bibitem [{\citenamefont {Noomen}(2013{\natexlab{b}})}]{noomen2013int}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
   {Noomen}},\ }\href@noop {} {\textit {\bibinfo {title}
   {ae4-878.integrators.v4-3},}\ }\bibinfo {howpublished} {Lecture slides, Delft
-  University of Technology} (\bibinfo {year} {2013}{\natexlab{a}}),\ \bibinfo
+  University of Technology} (\bibinfo {year} {2013}{\natexlab{b}}),\ \bibinfo
   {note} {[Internal publication] Course: Mission Geometry and Orbit
   Design}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Deuflhard}\ \emph {et~al.}(1994)\citenamefont
@@ -493,14 +523,6 @@
   Series Integration to Reentry Problems}}},\ \href@noop {} {Master's thesis},\
   \bibinfo  {school} {Delft University of Technology} (\bibinfo {year}
   {2015})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Noomen}(2013{\natexlab{b}})}]{noomen2013basic}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Noomen}},\ }\href@noop {} {\textit {\bibinfo {title}
-  {ae4-878.basics.v4-14},}\ }\bibinfo {howpublished} {Lecture slides, Delft
-  University of Technology} (\bibinfo {year} {2013}{\natexlab{b}}),\ \bibinfo
-  {note} {[Internal publication] Course: Mission Geometry and Orbit
-  Design}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Jorba}\ and\ \citenamefont
   {Zou}(2005)}]{jorba2005software}%
   \BibitemOpen
@@ -525,12 +547,101 @@
   {[online database], URL:
   https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-1-PB.pdf?sequence=1
   [cited 10 December 2015]}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Wakker}(2010)}]{wakker2010}%
+\bibitem [{\citenamefont {Wakker}(2010{\natexlab{a}})}]{wakker2010}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
   {Wakker}},\ }\href@noop {} {\textit {\bibinfo {title} {{Astrodynamics-II
   Course AE4874, part 2}},}\ }\bibinfo {howpublished} {Reader},\ \bibinfo
-  {address} {Delft University of Technology} (\bibinfo {year} {2010}),\
-  \bibinfo {note} {[Internal publication] Course: Astrodynamics-II}\BibitemShut
+  {address} {Delft University of Technology} (\bibinfo {year}
+  {2010}{\natexlab{a}}),\ \bibinfo {note} {[Internal publication] Course:
+  Astrodynamics-II}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bachman}(2014)}]{bachman2014naif}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Bachman}},\ }\href
+  {http://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/frames.html}
+  {\textit {\bibinfo {title} {{NAIF SPICE toolkit hypertext documentation,
+  required reading documents, reference frames}},}\ }\bibinfo {howpublished}
+  {website} (\bibinfo {year} {2014}),\ \bibinfo {note} {[online database], URL:
+  http://naif.jpl.nasa.gov/pub/naif/ [cited 18 December 2015]}\BibitemShut
   {NoStop}%
+\bibitem [{\citenamefont {del Rio}(2008)}]{diaz2008generic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont
+  {del Rio}},\ }\href
+  {http://naif.jpl.nasa.gov/pub/naif/VEX/kernels/fk/RSSD0002.TF} {\textit
+  {\bibinfo {title} {{Generic frame definition Kernel file for ESA planetary
+  missions}},}\ } (\bibinfo {year} {2008}),\ \bibinfo {note} {[online
+  database], URL: http://naif.jpl.nasa.gov/pub/naif/VEX/kernels/fk/RSSD0002.TF
+  [cited 8 December 2015]}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Archinal}\ \emph {et~al.}(2011)\citenamefont
+  {Archinal}, \citenamefont {Ahearn}, \citenamefont {Bowell}, \citenamefont
+  {Conrad}, \citenamefont {Consolmagno}, \citenamefont {Courtin}, \citenamefont
+  {Fukushima}, \citenamefont {Hestroffer}, \citenamefont {Hilton},
+  \citenamefont {Krasinsky} \emph {et~al.}}]{archinal2011report}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~A.}\ \bibnamefont
+  {Archinal}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ahearn}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Bowell}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Conrad}}, \bibinfo {author}
+  {\bibfnamefont {G.~J.}\ \bibnamefont {Consolmagno}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Courtin}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Fukushima}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Hestroffer}}, \bibinfo {author} {\bibfnamefont {J.~L.}\
+  \bibnamefont {Hilton}}, \bibinfo {author} {\bibfnamefont {G.~A.}\
+  \bibnamefont {Krasinsky}},  \emph {et~al.},\ }\bibfield  {title} {\textit
+  {\bibinfo {title} {{Report of the IAU working group on cartographic
+  coordinates and rotational elements: 2009}},}\ }in\ \href {\doibase
+  10.1007/s10569-010-9320-4} {\emph {\bibinfo {booktitle} {Celestial Mechanics
+  and Dynamical Astronomy}}},\ Vol.\ \bibinfo {volume} {109}\ (\bibinfo {year}
+  {2011})\ pp.\ \bibinfo {pages} {101--135}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Morton}(2003)}]{morton2003mapping}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Morton}},\ }\href
+  {https://books.google.com/books?hl=nl&lr=&id=-FbuqCH5h50C&oi=fnd&pg=PP2&dq=Mapping+Mars++Science,+Imagination,+and+the+Birth+of+a+World&ots=Fguf9tNipE&sig=cnZ-3RX05CZjo79Lh8gWPkkA_kw#v=onepage&q=AIRY&f=false}
+  {\emph {\bibinfo {title} {Mapping {M}ars: {S}cience, {I}magination, and the
+  {B}irth of a {W}orld}}},\ \bibinfo {edition} {1st}\ ed.\ (\bibinfo
+  {publisher} {Picador, New York},\ \bibinfo {year} {2003})\ \bibinfo {note}
+  {avaiable at JPL library}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Duxbury}\ \emph {et~al.}(2014)\citenamefont
+  {Duxbury}, \citenamefont {Christensen}, \citenamefont {Smith}, \citenamefont
+  {Neumann}, \citenamefont {Kirk}, \citenamefont {Caplinger}, \citenamefont
+  {Albee}, \citenamefont {Seregina}, \citenamefont {Neukum},\ and\
+  \citenamefont {Archinal}}]{duxbury2014location}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Duxbury}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Christensen}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Smith}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Neumann}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Kirk}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Caplinger}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Albee}}, \bibinfo {author} {\bibfnamefont
+  {N.}~\bibnamefont {Seregina}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Neukum}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Archinal}},\ }\bibfield  {title} {\textit {\bibinfo
+  {title} {{The location of Airy-0, the Mars prime meridian reference, from
+  stereo photogrammetric processing of THEMIS IR imaging and digital elevation
+  data}},}\ }in\ \href {\doibase 10.1002/2014JE004678} {\emph {\bibinfo
+  {booktitle} {Journal of Geophysical Research: Planets}}},\ Vol.\ \bibinfo
+  {volume} {119}\ (\bibinfo  {publisher} {John Wiley \& Sons},\ \bibinfo {year}
+  {2014})\ pp.\ \bibinfo {pages} {2471--2486}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Akcasu}\ and\ \citenamefont
+  {Akcay}(2013)}]{akcasu2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~E.}\ \bibnamefont
+  {Akcasu}}\ and\ \bibinfo {author} {\bibfnamefont {I.}~\bibnamefont {Akcay}},\
+  }\href {http://www.google.com/patents/WO2013070518A1?cl=en} {\textit
+  {\bibinfo {title} {Solar time using gps technology},}\ }\bibinfo
+  {howpublished} {Lonestar Inventions, L.P., Austin, TX, U.S. Patent} (\bibinfo
+  {year} {2013}),\ \bibinfo {note} {patent application, Docket No. WO
+  2013070518 A1, filed 2 Nov. 2012}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wakker}(2010{\natexlab{b}})}]{wakker2010astro1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Wakker}},\ }\href@noop {} {\textit {\bibinfo {title} {{Astrodynamics-I
+  Course AE4874, Part 1}},}\ }\bibinfo {howpublished} {Reader},\ \bibinfo
+  {address} {Delft University of Technology} (\bibinfo {year}
+  {2010}{\natexlab{b}}),\ \bibinfo {note} {[Internal publication] Course:
+  Astrodynamics I}\BibitemShut {NoStop}%
 \end{thebibliography}%

@@ -3,6 +3,7 @@
 % Updated 17-11-2016 Came up with proper sections and everything I wanted to say in this chapter. Started writing the first sections.
 % Updated 18-11-2016 Added Research focus, MAV Design and decided not to do the Mars 2020 landing site.
 % Updated 19-11-2016 Included section on reference systems.
+% Updated 27-11-2016 Continued work on reference systems.
 
 \label{ch:problembackground}
 The majority of this research was performed at NASA's \ac{JPL} in Pasadena, California. For that reason it was decided that the research of this thesis should focus on something related to either current research being done at \ac{JPL} or missions being flown by \ac{JPL}\footnote{All past, current and proposed \ac{JPL} missions: \url{http://www.jpl.nasa.gov/missions/} [Accessed 17 November 2016]}.   One of the focuses of \ac{JPL} these days is Mars and the exploration of the Martian system. There are currently two planned missions to Mars: InSight and Mars 2020. InSight is a mission similar to the Viking and the Phoenix missions and primarily based on the last one. It is a lander that will perform experiments on the surface of Mars at a fixed location. Mars 2020 is the next Mars rover and is based on the current Curiosity rover. It has a similar design but will carry different scientific instruments and will focus more on finding life on Mars. Mars 2020 is part of a larger \ac{JPL} effort to eventually return samples from the Martian surface back to Earth. This mission concepts has been on the drawing board for several years now, but seems to be getting closer to approval. This sample return mission, or \ac{MSR}, will consist of three different systems and is spread out over three different missions as shown by the proposed mission architecture in \Cref{fig:proposedMSRmissionArchitecture_vaughan2016technology}. Mars 2020 is the first step of this plan where the rover will collect samples from the surface of Mars. These samples will then be put into containment tubes and dropped on the surface of Mars. A second mission will then carry a system that will collect these samples from the surface and deliver them into a Martian orbit \citep{shotwell2016drivers}. Then a third mission, currently proposed as the Mars 2022 orbiter, will collect the sample containment sphere in orbit and eventually deliver them back to Earth \citep{woolley2011mars}. Because of the potential of the \ac{MSR} mission concept and the amount of research that can be done, the focus was put on this \ac{JPL} effort when looking at research subjects.
@@ -189,10 +190,40 @@ More information on the different reference frames and the transformation matric
 Besides different reference frames, there are also different coordinate systems in which the state of a vehicle can be expressed. Three of the most used coordinate systems in space problems are the Cartesian, spherical and Keplerian system, and all of those systems are used in this research. 
 
 
-This also means that the state should be transformed between these different frames. 
+This also means that the state should be transformed between these different frames. An example of the position expressed both in the Cartesian system as well as the spherical system is shown in \Cref{fig:sphertocart_noomen2013basicFirst}.
 
 
-Add a section on reference systems (maybe including appendix on the transformations etc.)
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.3\textwidth]{figures/reference_frames/sphertocart_noomen2013basic.jpg}
+\caption{Position expressed in the Cartesian and the spherical system \cite{noomen2013basic}.}
+\label{fig:sphertocart_noomen2013basicFirst}
+\end{figure}
+
+From this figure the relation can be described between the two different systems. If the Cartesian coordinates are known, the spherical coordinates can be computed using \Cref{eq:cart2spher}.
+
+\begin{equation} \label{eq:cart2spher}
+\begin{split}
+r &= \sqrt{x^{2}+y^{2}+z^{2}}\\
+\delta &= \arcsin \left(\dfrac{z}{r}\right)\\
+\lambda &= \arctan \left(\dfrac{y}{x}\right)\\
+\end{split}
+\end{equation}
+
+The same calculation can be done from the spherical system to the Cartesian system. The corresponding equations for that calculation are shown in \Cref{eq:spher2cart}.
+
+\begin{equation} \label{eq:spher2cart}
+\begin{split}
+x &= r\cos\delta\cos\lambda\\
+y &= r\cos\delta\sin\lambda\\
+z &= r\sin\delta\\
+\end{split}
+\end{equation}
+
+All the coordinate transformations can be found in \Cref{app:appendixAA-referenceSystemTransformations}, which include both position and velocity vectors. These transformations are essential in defining the models and setting up the equations of motion.
+
+
+%Add a section on reference systems (maybe including appendix on the transformations etc.)
 
 
 
