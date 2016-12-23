@@ -1,0 +1,122 @@
+\chapter{Nominal case input values} 				
+% File created 21-12-2016
+\label{app:appendixF-nominalCaseInputValues}
+
+In this appendix, the input files for the two different cases are given.
+\Cref{tab:inputFileDefinition} describes the definition of the input parameters and the units.
+
+
+%\begin{table}[!ht]
+%\begin{center}
+%\caption{Description of the input parameters}
+%\label{tab:inputFileDefinition}
+%\begin{tabular}{|l|p{10cm}|}
+%\hline 
+
+
+\begin{longtable}{|l|p{10cm}|}
+\caption{Description of the input parameters}
+\label{tab:inputFileDefinition}
+\endfirsthead
+\endhead
+\hline
+
+\textbf{Parameter} & \textbf{Meaning} \\ \hline 
+desiredOrbitalAltitude & This is the altitude in km \ac{MOLA} that the \ac{MAV} should reach, so the altitude of the desired orbit. At the same time is is also a cut-off criteria for the simulation.  \\ \hline
+desiredInclinationDeg & This is the desired inclination in degrees of the target orbit. \\ \hline
+initialAltitude & This is the altitude at which the simulation starts, so the launch altitude for the \ac{MAV} in km \ac{MOLA}. \\ \hline
+initialLatitudeDeg & This is the launch latitude on Mars in degrees at the start of the simulation. \\ \hline
+initialLongitudeDeg & This is the launch longitude on Mars in degrees at the start of the simulation. \\ \hline
+FlightPathAngleDeg & This is the flight-path angle in degrees at the start of the simulation. 90 degrees is straight up and 0 degrees is horizontal. \\ \hline
+HeadingAngleDeg & This is the angle in degrees that defines the heading of the \ac{MAV} and in the simulation it is defined 0 degrees when pointing North and 90 degrees when pointing East. \\ \hline
+initialGroundVelocity & This is the ground velocity in km/s of the \ac{MAV} at the start of the simulation. Because both \ac{TSI} and \ac{RKF} have to do too many steps if the ground velocity starts at 0 km/s, it is better to give it a small initial velocity.\\ \hline
+massMAV & This is the \ac{GLOM} in kg of the \ac{MAV}.\\ \hline
+thrust & This is the nominal thrust in Newton of the \ac{MAV} engine and is a constant throughout the simulation.\\ \hline
+specificImpulse & This is the specific impulse in seconds of the \ac{MAV} engine and is a constant throughout the simulation. \\ \hline
+initialBurnTime & This is the burn time in seconds of the first burn from the start of the simulation until the coasting phase.\\ \hline
+constantThrustElevationAngle & This is the thrust elevation angle in degrees as defined in the propulsion frame and is a constant throughout the simulation. \\ \hline
+constantThrustAzimuthAngle & This is the thrust azimuth angle in degrees as defined in the propulsion frame and is a constant throughout the simulation. \\ \hline
+maxOrder & This is the order of the \ac{TSI} simulation run, or $K$. \\ \hline
+chosenLocalErrorTolerance & This is the error tolerance for both \ac{TSI} and \ac{RKF} during the actual integration and should not go below 10$^{-15}$. \\ \hline
+chosenStepSize & This is the initial step-size in seconds that \ac{TSI} starts with. It is the default first step-size of the step-size class that is updated every time from then on. \\ \hline
+setEndTime & This is a cut-off criteria and can be chosen to be a certain amount of seconds at which the simulation should stop unless one of the other cut-off criteria is met first. \\ \hline
+RKFinitiatorTime & This is the minimum time in seconds that the initiator step should be run. The initiator step is an \ac{RKF} run with an error tolerance of 10$^{-15}$ and stops when it goes beyond the initiator time. This does not mean that it is cut-off at the initiator time exactly. \\ \hline
+rotatingPlanet & If this value is 1, the rotation of Mars is taken into account during the simulation. If it is 0 the simulation is run with a non-rotating Mars such that the inertial frame and the rotating frame are the same. \\ \hline
+Gravity & If this value is 1, the Martian gravitational acceleration is taken into account. If it is 0, then this is neglected. \\ \hline
+Thrust & If this value is 1, the \ac{MAV} thrust acceleration is taken into account. If it is 0, then this is neglected. \\ \hline
+Drag & If this value is 1, the drag acceleration is taken into account. If it is 0, then this is neglected. \\ \hline
+comparison & If this value is 1, then the comparison results between \ac{TSI} and \ac{RKF} are computed after each integration. If it is 0, then this is not the case. \\ \hline
+
+\end{longtable}
+ 
+%\end{tabular}
+%\end{center}
+%\end{table}
+
+
+\section{Case 1}
+\label{sec:case1}
+
+\begin{lstlisting}
+Test case from Woolley 2015 (case 10 SSTO)
+desiredOrbitalAltitude 			= 390.0
+desiredInclinationDeg 			= 45.0
+initialAltitude 				= -0.6
+initialLatitudeDeg 				= 0.0
+initialLongitudeDeg				= 74.5
+FlightPathAngleDeg 				= 89.0
+HeadingAngleDeg 				= 90.0
+initialGroundVelocity 			= 0.00001
+massMAV 						= 267.4
+thrust 							= 3.56
+specificImpulse 				= 256
+initialBurnTime 				= 142.5
+constantThrustElevationAngle	= -0.184
+constantThrustAzimuthAngle		= -0.299
+maxOrder 						= 20
+chosenLocalErrorTolerance 		= 1e-15
+chosenStepSize 					= 0.01
+setEndTime 						= 2000.0
+RKFinitiatorTime 				= 1.0
+rotatingPlanet 					= 1
+Gravity 						= 1
+Thrust 							= 1
+Drag 							= 1
+comparison 						= 1
+
+\end{lstlisting}
+
+\pagebreak
+
+\section{Case 2}
+\label{sec:case2}
+
+\begin{lstlisting}
+Test case from Joel (hybrid) case7_3_2016_v33
+desiredOrbitalAltitude 			= 479.19000000064
+desiredInclinationDeg 			= 92.6899999999988
+initialAltitude 				= -0.6
+initialLatitudeDeg 				= 0.0
+initialLongitudeDeg 			= 90.0
+FlightPathAngleDeg 				= 89.0
+HeadingAngleDeg 				= 90.0
+initialGroundVelocity 			= 0.000001
+massMAV 						= 288.95985303149
+thrust 							= 6.01868886452604
+specificImpulse 				= 315.9
+initialBurnTime 				= 99.361911852794
+constantThrustElevationAngle	= -0.674
+constantThrustAzimuthAngle		= 0.7273
+maxOrder 						= 20
+chosenLocalErrorTolerance 		= 1e-15
+chosenStepSize					= 0.01
+setEndTime 						= 2000.0
+RKFinitiatorTime 				= 1.0
+rotatingPlanet 					= 1
+Gravity 						= 1
+Thrust 							= 1
+Drag 							= 1
+comparison 						= 1
+
+\end{lstlisting}
+

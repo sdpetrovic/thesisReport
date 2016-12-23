@@ -9,10 +9,3 @@
 \nomenclatureentry{Ra2$T_{n,k}$@[{$T_{n,k}$}]\begingroup Truncation error \nomunit{-}\nomeqref {5.0}|nompageref}{25}
 \nomenclatureentry{G3$\eta$@[{$\eta$}]\begingroup Step multiplication factor \nomunit{-}\nomeqref {5.6}|nompageref}{27}
 \nomenclatureentry{G6$\tau$@[{$\tau$}]\begingroup Local error tolerance \nomunit{-}\nomeqref {5.6}|nompageref}{27}
-\nomenclatureentry{G7$\phi$@[{$\phi$}]\begingroup General rotation angle\nomunit{rad}\nomeqref {A.0}|nompageref}{69}
-\nomenclatureentry{Ra0$\mathbf{r}$@[{$\mathbf{r}$}]\begingroup Position vector \nomunit{m}\nomeqref {A.0}|nompageref}{69}
-\nomenclatureentry{S1$\mathbb{T}$@[{$\mathbb{T}$}]\begingroup General transformation matrix\nomunit{-}\nomeqref {A.0}|nompageref}{69}
-\nomenclatureentry{R8$M$@[{$M$}]\begingroup Mean anomaly\nomunit{rad}\nomeqref {A.10}|nompageref}{73}
-\nomenclatureentry{R2$E$@[{$E$}]\begingroup Eccentric anomaly\nomunit{rad}\nomeqref {A.10}|nompageref}{73}
-\nomenclatureentry{R4$h$@[{$h$}]\begingroup Specific relative angular momentum\nomunit{m$^{2}$/s}\nomeqref {A.16}|nompageref}{74}
-\nomenclatureentry{G5$\mu$@[{$\mu$}]\begingroup Standard gravitational parameter\nomunit{m$^{3}$/s$^{2}$}\nomeqref {A.16}|nompageref}{74}

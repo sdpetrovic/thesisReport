@@ -1,6 +1,6 @@
 \select@language {english}
-\contentsline {chapter}{Nomenclature}{v}{chapter*.10}
-\contentsline {chapter}{Abbreviations}{vi}{chapter*.10}
+\contentsline {chapter}{Nomenclature}{vi}{chapter*.10}
+\contentsline {chapter}{Abbreviations}{vii}{chapter*.10}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Problem background}{2}{chapter.2}
 \contentsline {section}{\numberline {2.1}Chosen mission}{2}{section.2.1}
@@ -73,32 +73,35 @@
 \contentsline {subsection}{\numberline {7.3.4}Phase 4: one final \ac {TSI} model}{54}{subsection.7.3.4}
 \contentsline {subsection}{\numberline {7.3.5}Phase 5: coasting and circularisation}{54}{subsection.7.3.5}
 \contentsline {subsection}{\numberline {7.3.6}Phase 6: tool validation}{54}{subsection.7.3.6}
-\contentsline {chapter}{\numberline {8}Results}{60}{chapter.8}
-\contentsline {chapter}{\numberline {9}Analysis}{61}{chapter.9}
-\contentsline {chapter}{\numberline {10}Conclusions and recommendations}{62}{chapter.10}
-\contentsline {chapter}{Bibliography}{63}{chapter*.77}
-\contentsline {chapter}{\numberline {A}Reference system transformations}{66}{appendix.A}
-\contentsline {section}{\numberline {A.1}Required reference systems}{66}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}\acl {MCI} \ac {RF} (I-frame)}{66}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {A.1.2}\acl {MCMF} \ac {RF} (R-frame)}{67}{subsection.A.1.2}
-\contentsline {subsection}{\numberline {A.1.3}Vertical \ac {RF} (V-frame)}{67}{subsection.A.1.3}
-\contentsline {subsection}{\numberline {A.1.4}\acl {BF} \ac {RF} (B-frame)}{68}{subsection.A.1.4}
-\contentsline {subsection}{\numberline {A.1.5}Propulsion \ac {RF} (P-frame)}{68}{subsection.A.1.5}
-\contentsline {section}{\numberline {A.2}Transformation between reference frames}{69}{section.A.2}
-\contentsline {section}{\numberline {A.3}Transformation between different coordinate systems}{71}{section.A.3}
-\contentsline {subsection}{\numberline {A.3.1}Spherical and Cartesian}{71}{subsection.A.3.1}
-\contentsline {subsection}{\numberline {A.3.2}Keplerian and Cartesian}{72}{subsection.A.3.2}
-\contentsline {subsection}{\numberline {A.3.3}Spherical and Keplerian}{75}{subsection.A.3.3}
-\contentsline {subsection}{\numberline {A.3.4}Non-singular Kepler elements}{76}{subsection.A.3.4}
-\contentsline {chapter}{\numberline {B}Mars-\ac {GRAM} 2005 input file}{77}{appendix.B}
-\contentsline {chapter}{\numberline {C}Atmospheric data fitting}{81}{appendix.C}
-\contentsline {section}{\numberline {C.1}Temperature}{81}{section.C.1}
-\contentsline {section}{\numberline {C.2}Density}{81}{section.C.2}
-\contentsline {chapter}{\numberline {D}Program file definitions}{87}{appendix.D}
-\contentsline {chapter}{\numberline {E}All Recurrence Relations}{88}{appendix.E}
-\contentsline {section}{\numberline {E.1}First Cartesian case: Euler angles}{88}{section.E.1}
-\contentsline {section}{\numberline {E.2}Second Cartesian case: unit vectors}{91}{section.E.2}
-\contentsline {section}{\numberline {E.3}Spherical case}{93}{section.E.3}
-\contentsline {chapter}{\numberline {F}Proposed sensitivity analysis}{96}{appendix.F}
-\contentsline {chapter}{\numberline {G}Proposed schedule}{98}{appendix.G}
+\contentsline {chapter}{\numberline {8}Results and Analysis}{60}{chapter.8}
+\contentsline {section}{\numberline {8.1}Order}{60}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Optimal order}{60}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Comparison with non-rotating Mars}{61}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2}Error tolerance}{61}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Comparison with \ac {RKF78}}{61}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Comparison with non-rotating Mars}{61}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.3}Multiple runs}{61}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Comparison with \ac {RKF78}}{62}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Comparison with non-rotating Mars}{62}{subsection.8.3.2}
+\contentsline {section}{\numberline {8.4}Launch altitude}{62}{section.8.4}
+\contentsline {section}{\numberline {8.5}Launch latitude}{62}{section.8.5}
+\contentsline {section}{\numberline {8.6}Launch longitude}{63}{section.8.6}
+\contentsline {section}{\numberline {8.7}Flight-path angle}{63}{section.8.7}
+\contentsline {section}{\numberline {8.8}Heading angle}{64}{section.8.8}
+\contentsline {chapter}{\numberline {9}Conclusions and recommendations}{65}{chapter.9}
+\contentsline {chapter}{Bibliography}{66}{chapter*.77}
+\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{69}{appendix.A}
+\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{73}{appendix.B}
+\contentsline {section}{\numberline {B.1}Temperature}{73}{section.B.1}
+\contentsline {section}{\numberline {B.2}Density}{73}{section.B.2}
+\contentsline {chapter}{\numberline {C}Program file definitions}{79}{appendix.C}
+\contentsline {chapter}{\numberline {D}All Recurrence Relations}{80}{appendix.D}
+\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{80}{section.D.1}
+\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{83}{section.D.2}
+\contentsline {section}{\numberline {D.3}Spherical case}{85}{section.D.3}
+\contentsline {chapter}{\numberline {E}Nominal case input values}{88}{appendix.E}
+\contentsline {section}{\numberline {E.1}Case 1}{89}{section.E.1}
+\contentsline {section}{\numberline {E.2}Case 2}{90}{section.E.2}
+\contentsline {chapter}{\numberline {F}Proposed sensitivity analysis}{91}{appendix.F}
+\contentsline {chapter}{\numberline {G}Proposed schedule}{93}{appendix.G}
 \contentsfinish 
