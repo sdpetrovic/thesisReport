@@ -20,6 +20,41 @@ Graphs needed:
 
 - CPU time vs order case 1 and case 2
 
+% \begin{figure}[!ht]
+%\centering
+%\includegraphics[width=0.7\textwidth]{figures/results/Order/orderVsCPUcase1IncludingLiveDataCollection.png}
+%\caption{Order versus CPU time case 1 including live data collection.}
+%\label{fig:orderVsCPUcase1IncludingLiveDataCollection}
+%\end{figure}
+
+%\begin{figure}
+%\centering
+%\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1IncludingLiveDataCollection.png}\label{subfig:orderVsCPUcase1IncludingLiveDataCollection}} 
+%\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2IncludingLiveDataCollection.png}\label{subfig:orderVsCPUcase2IncludingLiveDataCollection}}
+%\caption{Order versus CPU time including live data collection \protect\subref{subfig:orderVsCPUcase1IncludingLiveDataCollection} case 1 \protect\subref{subfig:orderVsCPUcase2IncludingLiveDataCollection} case 2 } 
+%\label{fig:orderVsCPUcase1IncludingLiveDataCollection} 
+%\end{figure} 
+%
+%\begin{figure}
+%\centering
+%\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1NoDataCollection.png}\label{subfig:orderVsCPUcase1NoDataCollection}} 
+%\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2NoDataCollection.png}\label{subfig:orderVsCPUcase2NoDataCollection}}
+%\caption{Order versus CPU time without live data collection \protect\subref{subfig:orderVsCPUcase1NoDataCollection} case 1 \protect\subref{subfig:orderVsCPUcase2NoDataCollection} case 2 } 
+%\label{fig:orderVsCPUcase1NoDataCollection} 
+%\end{figure} 
+
+\begin{figure}
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1IncludingLiveDataCollection.png}\label{subfig:orderVsCPUcase1IncludingLiveDataCollection}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2IncludingLiveDataCollection.png} \label{subfig:orderVsCPUcase2IncludingLiveDataCollection}}\\
+ 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1NoDataCollection.png}\label{subfig:orderVsCPUcase1NoDataCollection}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2NoDataCollection.png}\label{subfig:orderVsCPUcase2NoDataCollection}}
+\caption{Order versus CPU time \protect\subref{subfig:orderVsCPUcase1IncludingLiveDataCollection} case 1 including live data collection, \protect\subref{subfig:orderVsCPUcase2IncludingLiveDataCollection} case 2 including live data collection, \protect\subref{subfig:orderVsCPUcase1NoDataCollection} case 1 without live data collection, \protect\subref{subfig:orderVsCPUcase2NoDataCollection} case 2 without live data collection } 
+\label{fig:orderVsCPUcase1IncludingLiveDataCollection} 
+\end{figure} 
+
+
 
 \subsection{Comparison with non-rotating Mars}
 \label{subsec:orderCompNotRot}
@@ -30,6 +65,8 @@ Graphs needed:
 
 - CPU time vs order case 1 combined \\
 - CPU time vs order case 2 combined \\
+
+
 - RKF difference in end state before circularisation combined case 1 \\ 
 - RKF difference in end state before circularisation combined case 2 \\
 - Consecutive difference in end state before cicularisation combined case 1 \\
@@ -40,6 +77,23 @@ Graphs needed:
 Tables needed:
 
 - Zoom in numbers around Order 20 to prove it is the fastest \\
+
+\begin{figure}
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1combined.png}\label{subfig:orderVsCPUcase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2combined.png}\label{subfig:orderVsCPUcase2combined}}
+\caption{Order versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:orderVsCPUcase1combined} case 1,  \protect\subref{subfig:orderVsCPUcase2combined} case 2 } 
+\label{fig:orderVsCPUcase1combined} 
+\end{figure} 
+
+\begin{figure}
+\centering
+\subfloat[]{\includegraphics[width=1.2\textwidth]{figures/results/Order/orderVsRKFAbsoluteDifferenceCase1combined.png}\label{subfig:orderVsRKFAbsoluteDifferenceCase1combined}}\\
+ 
+\subfloat[]{\includegraphics[width=1.2\textwidth]{figures/results/Order/orderVsRKFAbsoluteDifferenceCase2combined.png}\label{subfig:orderVsRKFAbsoluteDifferenceCase2combined}}
+\caption{Difference with respect to \ac{RKF} case for rotating and non-rotating Mars \protect\subref{subfig:orderVsRKFAbsoluteDifferenceCase1combined} case 1,  \protect\subref{subfig:orderVsRKFAbsoluteDifferenceCase2combined} case 2 } 
+\label{fig:orderVsRKFAbsoluteDifferenceCase1combined} 
+\end{figure}
 
 
 \section{Error tolerance}
@@ -60,6 +114,29 @@ Graphs needed:
 - Nominal case difference in end state before circularisation RKF and TSI combined case 1 \\
 - Nominal case difference in end state before circularisation RKF and TSI combined case 2 \\
 
+\begin{figure}
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase1RKFTSIpositionSmall.png}\label{subfig:errorToleranceVsConsecutiveDifferenceCase1RKFTSIpositionSmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase2RKFTSIpositionSmall.png} \label{subfig:errorToleranceVsConsecutiveDifferenceCase2RKFTSIpositionSmall}}\\
+ 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase1RKFTSIvelocitySmall.png}\label{subfig:errorToleranceVsConsecutiveDifferenceCase1RKFTSIvelocitySmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase2RKFTSIvelocitySmall.png}\label{subfig:errorToleranceVsConsecutiveDifferenceCase2RKFTSIvelocitySmall}}
+\caption{Error tolerance versus consecutive difference between end states before circularisation for \ac{TSI} and \ac{RKF} \protect\subref{subfig:errorToleranceVsConsecutiveDifferenceCase1RKFTSIpositionSmall} case 1 position, \protect\subref{subfig:errorToleranceVsConsecutiveDifferenceCase2RKFTSIpositionSmall} case 2 position, \protect\subref{subfig:errorToleranceVsConsecutiveDifferenceCase1RKFTSIvelocitySmall} case 1 velocity, \protect\subref{subfig:errorToleranceVsConsecutiveDifferenceCase2RKFTSIvelocitySmall} case 2 velocity } 
+\label{fig:errorToleranceVsConsecutiveDifferenceCase1RKFTSIpositionSmall} 
+\end{figure} 
+
+
+\begin{figure}
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIpositionSmall.png}\label{subfig:errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIpositionSmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase2RKFTSIpositionSmall.png} \label{subfig:errorToleranceVsNominalAbsoluteDifferenceCase2RKFTSIpositionSmall}}\\
+ 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIvelocitySmall.png}\label{subfig:errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIvelocitySmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase2RKFTSIvelocitySmall.png}\label{subfig:errorToleranceVsNominalAbsoluteDifferenceCase2RKFTSIvelocitySmall}}
+\caption{Error tolerance versus nominal absolute difference between end states before circularisation for \ac{TSI} and \ac{RKF} \protect\subref{subfig:errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIpositionSmall} case 1 position, \protect\subref{subfig:errorToleranceVsNominalAbsoluteDifferenceCase2RKFTSIpositionSmall} case 2 position, \protect\subref{subfig:errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIvelocitySmall} case 1 velocity, \protect\subref{subfig:errorToleranceVsNominalAbsoluteDifferenceCase2RKFTSIvelocitySmall} case 2 velocity } 
+\label{fig:errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIpositionSmall} 
+\end{figure} 
+
 Tables needed:
 
 - Either accuracy of separate coordinates or simply radius in metres \\
@@ -72,12 +149,37 @@ Compare the rotating case with the non-rotating case and see if the convergence 
 
 Graphs needed: 
 
-- CPU time vs order case 1 combined \\
-- CPU time vs order case 2 combined \\
+- CPU time vs error tolerance case 1 combined \\
+- CPU time vs error tolerance case 2 combined \\
 - Consecutive difference in end state before circularisation combined for case 1 \\
 - Consecutive difference in end state before circularisation combined for case 2 \\
 - Nominal case difference in end state before circularisation combined for case 1 \\
 - Nominal case difference in end state before circularisation combined for case 2 \\
+
+\begin{figure}
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsCPUcase1combined.png}\label{subfig:errorToleranceVsCPUcase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsCPUcase2combined.png}\label{subfig:errorToleranceVsCPUcase2combined}}
+\caption{Error tolerance versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:errorToleranceVsCPUcase1combined} case 1,  \protect\subref{subfig:errorToleranceVsCPUcase2combined} case 2 } 
+\label{fig:orderVsCPUcase1combined} 
+\end{figure} 
+
+\begin{figure}
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase1combinedSmall.png}\label{subfig:errorToleranceVsConsecutiveDifferenceCase1combinedSmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase2combinedSmall.png}\label{subfig:errorToleranceVsConsecutiveDifferenceCase2combinedSmall}}
+\caption{Error tolerance versus consecutive difference for rotating and non-rotating Mars \protect\subref{subfig:errorToleranceVsConsecutiveDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:errorToleranceVsConsecutiveDifferenceCase2combinedSmall} case 2 } 
+\label{fig:errorToleranceVsConsecutiveDifferenceCase1combinedSmall} 
+\end{figure} 
+
+\begin{figure}
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase1combinedSmall.png}\label{subfig:errorToleranceVsNominalAbsoluteDifferenceCase1combinedSmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase2combinedSmall.png}\label{subfig:errorToleranceVsNominalAbsoluteDifferenceCase2combinedSmall}}
+\caption{Error tolerance versus nominal absolute difference for rotating and non-rotating Mars \protect\subref{subfig:errorToleranceVsNominalAbsoluteDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:errorToleranceVsNominalAbsoluteDifferenceCase2combinedSmall} case 2 } 
+\label{fig:errorToleranceVsNominalAbsoluteDifferenceCase1combinedSmall} 
+\end{figure} 
+
 
 Tables needed:
 
@@ -99,6 +201,14 @@ Graphs needed:
 - Combined RKF and TSI 5000 run plot for case 1 \\
 - Combined RKF and TSI 5000 run plot for case 2 \\
 
+\begin{figure}
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/multiRun/multiRunVsCPUcase1RKFTSIsmall.png}\label{subfig:multiRunVsCPUcase1RKFTSIsmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/multiRun/multiRunVsCPUcase2RKFTSIsmall.png}\label{subfig:multiRunVsCPUcase2RKFTSIsmall}}
+\caption{Nominal runs versus CPU time comparison between \ac{RKF} and \ac{TSI} \protect\subref{subfig:multiRunVsCPUcase1RKFTSIsmall} case 1,  \protect\subref{subfig:multiRunVsCPUcase2RKFTSIsmall} case 2 } 
+\label{fig:multiRunVsCPUcase1RKFTSIsmall} 
+\end{figure} 
+
 Table needed:
 
 - Lowest CPU time for both RKF and TSI \\
@@ -114,6 +224,14 @@ Graphs needed:
 - Combined 5000 run plot rot and not rot for case 1 \\
 - Combined 5000 run plot rot and not rot for case 2 \\
 
+
+\begin{figure}
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/multiRun/multiRunVsCPUcase1combinedSmall.png}\label{subfig:multiRunVsCPUcase1combinedSmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/multiRun/multiRunVsCPUcase2combinedSmall.png}\label{subfig:multiRunVsCPUcase2combinedSmall}}
+\caption{Nominal runs versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:multiRunVsCPUcase1combinedSmall} case 1,  \protect\subref{subfig:multiRunVsCPUcase2combinedSmall} case 2 } 
+\label{fig:multiRunVsCPUcase1combinedSmall} 
+\end{figure} 
 
 
 

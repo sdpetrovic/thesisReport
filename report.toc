@@ -76,32 +76,39 @@
 \contentsline {chapter}{\numberline {8}Results and Analysis}{60}{chapter.8}
 \contentsline {section}{\numberline {8.1}Order}{60}{section.8.1}
 \contentsline {subsection}{\numberline {8.1.1}Optimal order}{60}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Comparison with non-rotating Mars}{61}{subsection.8.1.2}
-\contentsline {section}{\numberline {8.2}Error tolerance}{61}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Comparison with \ac {RKF78}}{61}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Comparison with non-rotating Mars}{61}{subsection.8.2.2}
-\contentsline {section}{\numberline {8.3}Multiple runs}{61}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Comparison with \ac {RKF78}}{62}{subsection.8.3.1}
-\contentsline {subsection}{\numberline {8.3.2}Comparison with non-rotating Mars}{62}{subsection.8.3.2}
-\contentsline {section}{\numberline {8.4}Launch altitude}{62}{section.8.4}
-\contentsline {section}{\numberline {8.5}Launch latitude}{62}{section.8.5}
-\contentsline {section}{\numberline {8.6}Launch longitude}{63}{section.8.6}
-\contentsline {section}{\numberline {8.7}Flight-path angle}{63}{section.8.7}
-\contentsline {section}{\numberline {8.8}Heading angle}{64}{section.8.8}
-\contentsline {chapter}{\numberline {9}Conclusions and recommendations}{65}{chapter.9}
-\contentsline {chapter}{Bibliography}{66}{chapter*.77}
-\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{69}{appendix.A}
-\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{73}{appendix.B}
-\contentsline {section}{\numberline {B.1}Temperature}{73}{section.B.1}
-\contentsline {section}{\numberline {B.2}Density}{73}{section.B.2}
-\contentsline {chapter}{\numberline {C}Program file definitions}{79}{appendix.C}
-\contentsline {chapter}{\numberline {D}All Recurrence Relations}{80}{appendix.D}
-\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{80}{section.D.1}
-\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{83}{section.D.2}
-\contentsline {section}{\numberline {D.3}Spherical case}{85}{section.D.3}
-\contentsline {chapter}{\numberline {E}Nominal case input values}{88}{appendix.E}
-\contentsline {section}{\numberline {E.1}Case 1}{89}{section.E.1}
-\contentsline {section}{\numberline {E.2}Case 2}{90}{section.E.2}
-\contentsline {chapter}{\numberline {F}Proposed sensitivity analysis}{91}{appendix.F}
-\contentsline {chapter}{\numberline {G}Proposed schedule}{93}{appendix.G}
+\contentsline {subsection}{\numberline {8.1.2}Comparison with non-rotating Mars}{62}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2}Error tolerance}{62}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Comparison with \ac {RKF78}}{62}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Comparison with non-rotating Mars}{62}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.3}Multiple runs}{66}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Comparison with \ac {RKF78}}{67}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Comparison with non-rotating Mars}{67}{subsection.8.3.2}
+\contentsline {section}{\numberline {8.4}Launch altitude}{68}{section.8.4}
+\contentsline {section}{\numberline {8.5}Launch latitude}{68}{section.8.5}
+\contentsline {section}{\numberline {8.6}Launch longitude}{69}{section.8.6}
+\contentsline {section}{\numberline {8.7}Flight-path angle}{69}{section.8.7}
+\contentsline {section}{\numberline {8.8}Heading angle}{70}{section.8.8}
+\contentsline {chapter}{\numberline {9}Conclusions and recommendations}{71}{chapter.9}
+\contentsline {chapter}{Bibliography}{72}{chapter*.87}
+\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{75}{appendix.A}
+\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{79}{appendix.B}
+\contentsline {section}{\numberline {B.1}Temperature}{79}{section.B.1}
+\contentsline {section}{\numberline {B.2}Density}{79}{section.B.2}
+\contentsline {chapter}{\numberline {C}Program file definitions}{85}{appendix.C}
+\contentsline {chapter}{\numberline {D}All Recurrence Relations}{86}{appendix.D}
+\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{86}{section.D.1}
+\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{89}{section.D.2}
+\contentsline {section}{\numberline {D.3}Spherical case}{91}{section.D.3}
+\contentsline {chapter}{\numberline {E}Nominal case input values}{94}{appendix.E}
+\contentsline {section}{\numberline {E.1}Case 1}{95}{section.E.1}
+\contentsline {section}{\numberline {E.2}Case 2}{96}{section.E.2}
+\contentsline {chapter}{\numberline {F}Results}{97}{appendix.F}
+\contentsline {section}{\numberline {F.1}Order}{97}{section.F.1}
+\contentsline {section}{\numberline {F.2}Error tolerance}{97}{section.F.2}
+\contentsline {section}{\numberline {F.3}Multiple runs}{97}{section.F.3}
+\contentsline {section}{\numberline {F.4}Launch altitude}{97}{section.F.4}
+\contentsline {section}{\numberline {F.5}Launch latitude}{97}{section.F.5}
+\contentsline {section}{\numberline {F.6}Launch longitude}{97}{section.F.6}
+\contentsline {section}{\numberline {F.7}Flight-path angle}{97}{section.F.7}
+\contentsline {section}{\numberline {F.8}Heading angle}{97}{section.F.8}
 \contentsfinish 
