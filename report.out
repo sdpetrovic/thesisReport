@@ -78,7 +78,7 @@
 \BOOKMARK [1][-]{section.8.7}{Flight-path angle}{chapter.8}% 78
 \BOOKMARK [1][-]{section.8.8}{Heading angle}{chapter.8}% 79
 \BOOKMARK [0][-]{chapter.9}{Conclusions and recommendations}{}% 80
-\BOOKMARK [0][-]{chapter*.87}{Bibliography}{}% 81
+\BOOKMARK [0][-]{chapter*.113}{Bibliography}{}% 81
 \BOOKMARK [0][-]{appendix.A}{Mars-GRAM 2005 input file}{}% 82
 \BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 83
 \BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 84
@@ -93,10 +93,7 @@
 \BOOKMARK [1][-]{section.E.2}{Case 2}{appendix.E}% 93
 \BOOKMARK [0][-]{appendix.F}{Results}{}% 94
 \BOOKMARK [1][-]{section.F.1}{Order}{appendix.F}% 95
-\BOOKMARK [1][-]{section.F.2}{Error tolerance}{appendix.F}% 96
-\BOOKMARK [1][-]{section.F.3}{Multiple runs}{appendix.F}% 97
-\BOOKMARK [1][-]{section.F.4}{Launch altitude}{appendix.F}% 98
-\BOOKMARK [1][-]{section.F.5}{Launch latitude}{appendix.F}% 99
-\BOOKMARK [1][-]{section.F.6}{Launch longitude}{appendix.F}% 100
-\BOOKMARK [1][-]{section.F.7}{Flight-path angle}{appendix.F}% 101
-\BOOKMARK [1][-]{section.F.8}{Heading angle}{appendix.F}% 102
+\BOOKMARK [1][-]{section.F.2}{Multiple runs}{appendix.F}% 96
+\BOOKMARK [1][-]{section.F.3}{Launch altitude}{appendix.F}% 97
+\BOOKMARK [1][-]{section.F.4}{Launch latitude}{appendix.F}% 98
+\BOOKMARK [1][-]{section.F.5}{Launch longitude}{appendix.F}% 99

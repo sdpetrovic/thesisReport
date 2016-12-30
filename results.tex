@@ -10,17 +10,64 @@ The parameters changed in this sensitivity analysis are: order, error tolerance,
 
 \section{Order}
 \label{sec:order}
-Mention what I want to discuss in this section.
+For most classic integrators the order is set and cannot be easily changed. For \ac{RKF} for instance, a whole new set of coefficients is required if a different order is desired. However, for \ac{TSI} changing the order is as simple as updating the maximum order input value. Theoretically this means that an infinite order can be chosen to get the most accurate result. The question is, is this indeed the most optimal. \Cref{subsec:optimalOrder} hopes to answer this question by looking at the CPU time. In \Cref{subsec:orderCompNotRot} a range of orders has been run for both cases. Once with the nominal conditions of a rotating Mars and once assuming a non-rotating Mars. The effect of the rotating Mars will be investigated. The cut-off criteria for case 1 was an end time of 1796 seconds for the data collection case and 789 seconds without live data collection. For case 2 the cut-off criteria was 876 second for both runs.
 
 \subsection{Optimal order}
 \label{subsec:optimalOrder}
-Show both plots of orders and then talk about the fastest order and explain what you can see. First part of graph is the number of evaluations important and last part is the amount of computations that have to be made because the number of evaluations don't change any more.
+To determine the optimal order an important criteria is that the outcome is accurate, however, what is often more important is that this accurate outcome is computed really fast. This is why, in order to find the optimum order, the CPU time is the most important criteria. In order to properly observe the effect of a different order, the nominal case is run for different orders. Thus the only difference will be the maximum order. This can be done for the two presented cases. During real-life simulations a user can choose to either collect all the data during the simulation or only store the final outcomes at the end of the simulation. Storing data during the integration requires a lot of computational power and will therefore increase the CPU time required, but this will provide the user with the desired trajectory data. Both cases with and without live data collection have been run for a specific range of orders depending on the case, and the results are shown in \Cref{fig:orderVsCPUcase1IncludingLiveDataCollection}.
+The first case was run with a maximum order ranging from 5 to 100, and the second case was run from 5 to 31 because of the behaviour observed during the first case runs. 
 
-Graphs needed:
 
-- CPU time vs order case 1 and case 2
 
-% \begin{figure}[!ht]
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1IncludingLiveDataCollection.png}\label{subfig:orderVsCPUcase1IncludingLiveDataCollection}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2IncludingLiveDataCollection.png} \label{subfig:orderVsCPUcase2IncludingLiveDataCollection}}\\
+ 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1NoDataCollection.png}\label{subfig:orderVsCPUcase1NoDataCollection}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2NoDataCollection.png}\label{subfig:orderVsCPUcase2NoDataCollection}}
+\caption{Order versus CPU time \protect\subref{subfig:orderVsCPUcase1IncludingLiveDataCollection} case 1 including live data collection, \protect\subref{subfig:orderVsCPUcase2IncludingLiveDataCollection} case 2 including live data collection, \protect\subref{subfig:orderVsCPUcase1NoDataCollection} case 1 without live data collection, \protect\subref{subfig:orderVsCPUcase2NoDataCollection} case 2 without live data collection } 
+\label{fig:orderVsCPUcase1IncludingLiveDataCollection} 
+\end{figure} 
+
+Looking at \Cref{subfig:orderVsCPUcase1IncludingLiveDataCollection} it is clear that the order versus CPU curve can be split up into two phases that have different properties that influence the CPU time. The first phase shows a rapid decrease in the CPU time until order 20 is reached, the second phase continues from that point until the final order is reached. The order has a direct relation to the chosen step-size that \ac{TSI} computes automatically because the step-size is determined by the error tolerance and the difference between the penultimate Taylor Series coefficient and the final one (as described in \Cref{subsec:stepSizeTsi}). This means that if these last two coefficients show a large difference, which can happen lower order because fewer derivatives are taken into account, the step-size will be lowered and thus increasing the number of steps. In the first phase, this large number of steps result in a high CPU time. Another factor that affects the CPU time is the number of derivatives taken into account, which is directly related to the order (10 as maximum order equals 10 derivatives that are taken into account). At a certain point, an increase in order does not affect the number of steps that much any more, resulting in a decrease of 3 to 1 steps with every order increase. The result is that the number of steps remains approximately the same but the number of derivatives that are taken into account keeps increasing. Every extra derivative means an extra computation per auxiliary equation/variable. This is what is observed in the second phase. Here the effect of adding more computations on the CPU time becomes clear, showing a corresponding increase in CPU time. This tipping point between the two phases can be observed around the lowest CPU time, where the effect of the number of steps and the number of derivative computations equal out. This is therefore the optimum order for the \ac{TSI} method. The two phases can be observed in each of the four graphs, however, because the increase of CPU time, the higher orders were not required and were thus left out in the simulations for case 2. For each of the simulation runs, the two orders which resulted in the lowest CPU time have been recorded in \Cref{tab:orderAndCPUtimes}. 
+
+\begin{table}[H]
+\begin{center}
+\caption{Lowest two orders with corresponding CPU times for each of the sub-graphs}
+\label{tab:orderAndCPUtimes}
+\begin{tabular}{|l|l|l|l|l|}
+\hline 
+\textbf{Sub-graph}  & \multicolumn{2}{c|}{\textbf{Lowest CPU time}} & \multicolumn{2}{c|}{\textbf{Second lowest CPU time}} \\ \cline{2-5}
+
+& \textbf{Order} &
+\textbf{CPU time [s]} & \textbf{Order} & \textbf{CPU time [s]} \\ \hline \hline
+
+a & 20 & 0.053162 & 21 & 0.053226 \\ \hline
+b & 25 & 0.083474 & 22 & 0.0837 \\ \hline
+c & 14 & 0.007465 & 20 & 0.007736 \\ \hline
+d & 18 & 0.008273 & 20 & 0.008314 \\ \hline
+
+
+\end{tabular}
+\end{center}
+\end{table}
+
+In the table and the graphs it can be seen that the minima are all situated around an order of 20, which is why a maximum order of 20 was set as the nominal value and used for all simulations.
+
+%a: 20 = 0.053162 s, 21 = 0.053226 s
+%b: 25 = 0.083474 s, 22 = 0.0837 s
+%c: 14 = 0.007465 s, 20 = 0.007736 s
+%d: 18 = 0.008273 s, 20 = 0.008314 s
+
+%Show both plots of orders and then talk about the fastest order and explain what you can see. First part of graph is the number of evaluations important and last part is the amount of computations that have to be made because the number of evaluations don't change any more.
+%
+%Graphs needed:
+%
+%- CPU time vs order case 1 and case 2
+
+
+% \begin{figure}[H]
 %\centering
 %\includegraphics[width=0.7\textwidth]{figures/results/Order/orderVsCPUcase1IncludingLiveDataCollection.png}
 %\caption{Order versus CPU time case 1 including live data collection.}
@@ -43,42 +90,31 @@ Graphs needed:
 %\label{fig:orderVsCPUcase1NoDataCollection} 
 %\end{figure} 
 
-\begin{figure}
-\centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1IncludingLiveDataCollection.png}\label{subfig:orderVsCPUcase1IncludingLiveDataCollection}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2IncludingLiveDataCollection.png} \label{subfig:orderVsCPUcase2IncludingLiveDataCollection}}\\
- 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1NoDataCollection.png}\label{subfig:orderVsCPUcase1NoDataCollection}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2NoDataCollection.png}\label{subfig:orderVsCPUcase2NoDataCollection}}
-\caption{Order versus CPU time \protect\subref{subfig:orderVsCPUcase1IncludingLiveDataCollection} case 1 including live data collection, \protect\subref{subfig:orderVsCPUcase2IncludingLiveDataCollection} case 2 including live data collection, \protect\subref{subfig:orderVsCPUcase1NoDataCollection} case 1 without live data collection, \protect\subref{subfig:orderVsCPUcase2NoDataCollection} case 2 without live data collection } 
-\label{fig:orderVsCPUcase1IncludingLiveDataCollection} 
-\end{figure} 
-
-
+%Tables needed:
+%
+%- Zoom in numbers around Order 20 to prove it is the fastest \\
 
 \subsection{Comparison with non-rotating Mars}
 \label{subsec:orderCompNotRot}
+For the comparison of the rotating and the non-rotating cases with a varying order it is again interesting to look at the differences in CPU time. \Cref{fig:orderVsCPUcase1combined} shows these plots for both cases when the trajectory data is not collected during the simulation. It can be seen that for case 1, on average, the non-rotating runs are faster. Also, for a non-rotating Mars the optimum order is 20 as well. The difference in CPU time is better shown by the case 2 run, where the non-rotating curve fits perfectly below the rotating curve. Here, the order 20 has again the second lowest CPU time (the lowest is order 17 with a time difference of 28 microseconds). The time difference between the curves of the rotating and non-rotating Mars can be explained by the fact that if Mars does not rotate, the rotating effects become zero, which reduces the number of computations.
+%Explain what you can see in the graph and why that is probably the case.
+%
+%Graphs needed:
+%
+%- CPU time vs order case 1 combined \\
+%- CPU time vs order case 2 combined \\
+%
+%
+%- RKF difference in end state before circularisation combined case 1 \\ 
+%- RKF difference in end state before circularisation combined case 2 \\
+%- Consecutive difference in end state before cicularisation combined case 1 \\
+%- Consecutive difference in end state before cicularisation combined case 2 \\
+%- Nominal case difference in end state before circularisation combined case 1 \\
+%- Nominal case difference in end state before circularisation combined case 2 \\
+%
 
-Explain what you can see in the graph and why that is probably the case.
 
-Graphs needed:
-
-- CPU time vs order case 1 combined \\
-- CPU time vs order case 2 combined \\
-
-
-- RKF difference in end state before circularisation combined case 1 \\ 
-- RKF difference in end state before circularisation combined case 2 \\
-- Consecutive difference in end state before cicularisation combined case 1 \\
-- Consecutive difference in end state before cicularisation combined case 2 \\
-- Nominal case difference in end state before circularisation combined case 1 \\
-- Nominal case difference in end state before circularisation combined case 2 \\
-
-Tables needed:
-
-- Zoom in numbers around Order 20 to prove it is the fastest \\
-
-\begin{figure}
+\begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1combined.png}\label{subfig:orderVsCPUcase1combined}} 
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2combined.png}\label{subfig:orderVsCPUcase2combined}}
@@ -86,11 +122,14 @@ Tables needed:
 \label{fig:orderVsCPUcase1combined} 
 \end{figure} 
 
-\begin{figure}
+As was mentioned before, the accuracy of  the results is very important. In \Cref{fig:orderVsRKFAbsoluteDifferenceCase1combined} the absolute difference between the nominal end state of \ac{RKF} before circularisation and \ac{TSI} for both the rotating and non-rotating Mars. A trend can be identified where it is shown that an order of 11 or higher will result in a difference of $\mu$m in position and nm/s in velocity. Even the lowest order of 5 results in an accuracy of less than 10 cm for position and 10 mm/s for velocity. The spikes in the first case are caused by a slight error resulting from the combination of variables that result at those specific orders. This proves that the simulator is not yet robust enough and could still use some improvements. One improvement that might solve this problem is a change in the manner in which the step-size is computed. Additional comparison plots are shown in \Cref{app:appendixG-Results}.
+
+\begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=1.2\textwidth]{figures/results/Order/orderVsRKFAbsoluteDifferenceCase1combined.png}\label{subfig:orderVsRKFAbsoluteDifferenceCase1combined}}\\
+\subfloat[]{\includegraphics[width=1.1\textwidth]{figures/results/Order/orderVsRKFAbsoluteDifferenceCase1combined.png}\label{subfig:orderVsRKFAbsoluteDifferenceCase1combined}}\\
  
-\subfloat[]{\includegraphics[width=1.2\textwidth]{figures/results/Order/orderVsRKFAbsoluteDifferenceCase2combined.png}\label{subfig:orderVsRKFAbsoluteDifferenceCase2combined}}
+ 
+\subfloat[]{\includegraphics[width=1.1\textwidth]{figures/results/Order/orderVsRKFAbsoluteDifferenceCase2combined.png}\label{subfig:orderVsRKFAbsoluteDifferenceCase2combined}}
 \caption{Difference with respect to \ac{RKF} case for rotating and non-rotating Mars \protect\subref{subfig:orderVsRKFAbsoluteDifferenceCase1combined} case 1,  \protect\subref{subfig:orderVsRKFAbsoluteDifferenceCase2combined} case 2 } 
 \label{fig:orderVsRKFAbsoluteDifferenceCase1combined} 
 \end{figure}
@@ -98,23 +137,28 @@ Tables needed:
 
 \section{Error tolerance}
 \label{sec:errorTolerance}
-Mention what I want to discuss in this section.
+The error tolerance is used to determine the required step-size during the integration. A high error tolerance (say 10$^{-5}$) will therefore provide an end result that is less accurate than a lower error tolerance (such as 10$^{-15}$). For the \ac{RKF78} provided by \ac{Tudat} the lowest accuracy that can be used is 10$^{-15}$, which is why that accuracy is used as the nominal accuracy. When a range of error tolerances is examined the accuracy of the end state and the speed of convergence can be determined. The speed of convergence follows from the consecutive differences between the end states and the accuracy of the end states comes from the comparison to the nominal case. Both these characteristics will be examined and compared for \ac{RKF} and \ac{TSI}, see \Cref{subsec:errorToleranceCompRKF}, and for the rotating and non-rotating Mars described in \Cref{subsec:errorToleranceCompNotRot}. The cut-off criteria for case 1 was 789 seconds and 876 seconds for case 2 and both cases were run without live data collection.
+
+
+%Mention what I want to discuss in this section.
 
 
 \subsection{Comparison with \ac{RKF78}}
 \label{subsec:errorToleranceCompRKF}
+The speed of convergence is important because it shows the relationship between the different error tolerances. If the differences are small it means that the change in error tolerance had a small effect. If the consecutive difference is large, it means that the solution has not yet converged. \Cref{fig:errorToleranceVsConsecutiveDifferenceCase1RKFTSIpositionSmall} shows the consecutive differences in position and velocity for the two cases for both integration methods. Here it can clearly be seen that \ac{TSI} converges much faster than \ac{RKF}. The curve of \ac{RKF} lies quite a bit higher, which means that the differences are larger, and thus it converges slower than \ac{TSI}.
 
-Show the faster convergence of end state before circularisation.
-Compare the number of function evaluations and explain why you should look at the function evaluations in such a manner. So explain that RKF does 13 function evaluations per step and TSI only does one.
 
-Graphs needed:
+%Show the faster convergence of end state before circularisation.
 
-- Consecutive difference graphs RKF and TSI combined for case 1 \\
-- Consecutive difference graphs RKF and TSI combined for case 2 \\
-- Nominal case difference in end state before circularisation RKF and TSI combined case 1 \\
-- Nominal case difference in end state before circularisation RKF and TSI combined case 2 \\
 
-\begin{figure}
+%Graphs needed:
+%
+%- Consecutive difference graphs RKF and TSI combined for case 1 \\
+%- Consecutive difference graphs RKF and TSI combined for case 2 \\
+%- Nominal case difference in end state before circularisation RKF and TSI combined case 1 \\
+%- Nominal case difference in end state before circularisation RKF and TSI combined case 2 \\
+
+\begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase1RKFTSIpositionSmall.png}\label{subfig:errorToleranceVsConsecutiveDifferenceCase1RKFTSIpositionSmall}} 
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase2RKFTSIpositionSmall.png} \label{subfig:errorToleranceVsConsecutiveDifferenceCase2RKFTSIpositionSmall}}\\
@@ -125,8 +169,9 @@ Graphs needed:
 \label{fig:errorToleranceVsConsecutiveDifferenceCase1RKFTSIpositionSmall} 
 \end{figure} 
 
+A similar comparison can be done when comparing each of the end states directly to the nominal end state. The result is a nominal absolute difference graph as presented in \Cref{fig:errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIpositionSmall} for position and velocity and both cases. Here it can be seen that the accuracy of the position at an error tolerance of 10$^{-5}$ is already in cm for \ac{TSI} whereas this accuracy is only reached at an error tolerance of 10$^{-9}$ for \ac{RKF}. For the velocity the \ac{TSI} accuracy is in the order of 10 $\mu$m at this initial error tolerance which also is reached at an error tolerance of 10$^{-9}$ using \ac{TSI}. This means that \ac{TSI} is, on average, more accurate at any given error tolerance.  
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIpositionSmall.png}\label{subfig:errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIpositionSmall}} 
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase2RKFTSIpositionSmall.png} \label{subfig:errorToleranceVsNominalAbsoluteDifferenceCase2RKFTSIpositionSmall}}\\
@@ -137,26 +182,70 @@ Graphs needed:
 \label{fig:errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIpositionSmall} 
 \end{figure} 
 
-Tables needed:
+Another important observation can be made when looking at the difference in function evaluations and CPU time for each error tolerance for both \ac{RKF} and \ac{TSI}. The values for both cases are shown in \Cref{tab:RKFvsTSIfunctionEvaluationAndCPUtime}.
 
-- Either accuracy of separate coordinates or simply radius in metres \\
-- Either accuracy of separate velocities or simply ground velocity in metres/second \\
+
+
+\begin{table}[H]
+\begin{center}
+\caption{Number of function evaluations and CPU time for \ac{RKF} and \ac{TSI}}
+\label{tab:RKFvsTSIfunctionEvaluationAndCPUtime}
+\begin{tabular}{|l|p{1.5cm}|p{1.5cm}|l|l|p{1.5cm}|p{1.5cm}|l|l|}
+\hline 
+\textbf{Error}  & \multicolumn{4}{c|}{\textbf{Case 1}} & \multicolumn{4}{c|}{\textbf{Case 2}} \\ \cline{2-9}
+
+\textbf{tolerance} & \multicolumn{2}{c|}{Number of evaluations} & \multicolumn{2}{c|}{CPU time [ms]}& \multicolumn{2}{c|}{Number of evaluations} & \multicolumn{2}{c|}{CPU time [ms]} \\ \cline{2-9}
+
+& \textbf{\ac{RKF}} &
+\textbf{\ac{TSI}} & \textbf{\ac{RKF}} & \textbf{\ac{TSI}} & \textbf{\ac{RKF}} &
+\textbf{\ac{TSI}} & \textbf{\ac{RKF}} & \textbf{\ac{TSI}} \\ \hline \hline
+
+10$^{-5}$ & 169 & 24 & 0.419 &4.703 &156 &24 &0.392 &5.353 \\ \hline
+10$^{-6}$ & 182 & 24 & 0.432 &4.57 &182 &25 &0.49 &5.518 \\ \hline
+10$^{-7}$ & 221 & 26 & 0.542 &4.769 &208 &27 &0.527 &5.823 \\ \hline
+10$^{-8}$ & 260 & 29 & 0.614 &5.272 &247 &29 &0.567 &6.354 \\ \hline
+10$^{-9}$ & 312 & 30 & 0.823 &5.571 &286 &30 &0.709 &6.439 \\ \hline
+10$^{-10}$ & 364 & 32 & 0.845 &5.685 &338 &33 &0.789 &7.083 \\ \hline
+10$^{-11}$ & 455 & 36 & 1.032 &6.227 &390 &36 &0.904 &7.454 \\ \hline
+10$^{-12}$ & 546 & 38 & 1.277 &6.506 &546 &39 &1.231 &8.02 \\ \hline
+10$^{-13}$ & 702 & 41 & 1.541 &7.062 &728 &41 &1.604 &8.627 \\ \hline
+10$^{-14}$ & 910 & 42 & 1.965 &7.227 &936 &45 &2.055 &9.538 \\ \hline
+10$^{-15}$ & 1222 & 46 & 2.666 &7.754 &1300 &47 &2.851 &9.538 \\ \hline
+
+
+\end{tabular}
+\end{center}
+\end{table}
+
+Here one evaluation is defined as running through the derivative equations once. For \ac{TSI} this means that each time step, one evaluation is performed because all desired derivatives are computed during one computational run. In the case of \ac{RKF78} however, each time step consists of 13 computational runs. \Cref{tab:RKFvsTSIfunctionEvaluationAndCPUtime} shows that for both cases the number of evaluations of \ac{RKF} are approximately one order more at the high error tolerances but almost two orders higher at the lowest tolerance compared to \ac{TSI}. This means that a decrease in error tolerance results in a large increase in number of evaluations for \ac{RKF} but a relatively small increase for \ac{TSI}. For both cases, the number of evaluations is not even doubled from the highest to the lowest tolerance, whereas the maximum number of evaluations for \ac{RKF} is 7 to 8 times more. \\
+
+This advantage however does not translate well to the CPU time where it can be seen that for most of the error tolerances \ac{RKF} is an order faster than \ac{TSI}. The similar increase in CPU time for both integrators is nevertheless still observed. An explanation for the large difference in CPU time could be that \ac{TSI} was not optimally programmed and thus results in a relatively high CPU time. Further analysis is required.
+
+%Compare the number of function evaluations and explain why you should look at the function evaluations in such a manner. So explain that RKF does 13 function evaluations per step and TSI only does one.
+
+%Tables needed:
+%
+%- Either accuracy of separate coordinates or simply radius in metres \\
+%- Either accuracy of separate velocities or simply ground velocity in metres/second \\
 
 
 \subsection{Comparison with non-rotating Mars}
 \label{subsec:errorToleranceCompNotRot}
-Compare the rotating case with the non-rotating case and see if the convergence speed is different. 
+Looking at the rotating Mars and non-rotating Mars runs, a noticeable difference in the CPU time can be observed as shown in \Cref{fig:orderVsCPUcase1combined}. In both cases the non-rotating Mars run is approximately 0.2 ms faster. This is similar to what was observed with the order runs.
 
-Graphs needed: 
 
-- CPU time vs error tolerance case 1 combined \\
-- CPU time vs error tolerance case 2 combined \\
-- Consecutive difference in end state before circularisation combined for case 1 \\
-- Consecutive difference in end state before circularisation combined for case 2 \\
-- Nominal case difference in end state before circularisation combined for case 1 \\
-- Nominal case difference in end state before circularisation combined for case 2 \\
+%Compare the rotating case with the non-rotating case and see if the convergence speed is different. 
 
-\begin{figure}
+%Graphs needed: 
+%
+%- CPU time vs error tolerance case 1 combined \\
+%- CPU time vs error tolerance case 2 combined \\
+%- Consecutive difference in end state before circularisation combined for case 1 \\
+%- Consecutive difference in end state before circularisation combined for case 2 \\
+%- Nominal case difference in end state before circularisation combined for case 1 \\
+%- Nominal case difference in end state before circularisation combined for case 2 \\
+
+\begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsCPUcase1combined.png}\label{subfig:errorToleranceVsCPUcase1combined}} 
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsCPUcase2combined.png}\label{subfig:errorToleranceVsCPUcase2combined}}
@@ -164,7 +253,10 @@ Graphs needed:
 \label{fig:orderVsCPUcase1combined} 
 \end{figure} 
 
-\begin{figure}
+The real question is, is there a noticeable difference in the convergence speed and the accuracy? This question can be answered by looking at \Cref{fig:errorToleranceVsConsecutiveDifferenceCase1combinedSmall,fig:errorToleranceVsNominalAbsoluteDifferenceCase1combinedSmall}.
+Here it can be seen that the rotation of Mars does not have a significant influence on the convergence speed nor the accuracy of the results.
+
+\begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase1combinedSmall.png}\label{subfig:errorToleranceVsConsecutiveDifferenceCase1combinedSmall}} 
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase2combinedSmall.png}\label{subfig:errorToleranceVsConsecutiveDifferenceCase2combinedSmall}}
@@ -172,7 +264,7 @@ Graphs needed:
 \label{fig:errorToleranceVsConsecutiveDifferenceCase1combinedSmall} 
 \end{figure} 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase1combinedSmall.png}\label{subfig:errorToleranceVsNominalAbsoluteDifferenceCase1combinedSmall}} 
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase2combinedSmall.png}\label{subfig:errorToleranceVsNominalAbsoluteDifferenceCase2combinedSmall}}
@@ -181,27 +273,33 @@ Graphs needed:
 \end{figure} 
 
 
-Tables needed:
-
-- Either accuracy of separate coordinates or simply radius in metres \\
-- Either accuracy of separate velocities or simply ground velocity in metres/second \\
+%Tables needed:
+%
+%- Either accuracy of separate coordinates or simply radius in metres \\
+%- Either accuracy of separate velocities or simply ground velocity in metres/second \\
 
 
 \section{Multiple runs}
 \label{sec:multipleRuns}
+In \Cref{subsec:errorToleranceCompNotRot} it was shown that in this thesis research, the \ac{TSI} turned out to be slower than \ac{RKF} for both tested cases. This in contrary to the reference research. Therefore it is a good idea to look at the differences that could occur when measuring CPU time for different runs. In this section the nominal case has been run 5000 times in sequence for both \ac{RKF} and \ac{TSI} (\Cref{subsec:timeCompRKF}) using a rotating and a non-rotating Mars (\Cref{subsec:timeCompNotRot}). If the computer and the CPU measurements would be perfect, there should be no difference in CPU time and there would simply be two lines. This, interestingly enough, is not the case.\\
 
-Mention what I want to discuss in this section.
+\noindent
+The graphs shown in this section can also be found enlarged in \Cref{app:appendixG-Results}.
 
 \subsection{Comparison with \ac{RKF78}}
 \label{subsec:timeCompRKF}
-Show that RKF is faster than TSI at the moment. Explain why this might be the case and why this was unexpected. Also explain the outliers and different patterns visible. 
+Again the notion that \ac{RKF} is faster than \ac{TSI} is confirmed when looking at \Cref{fig:multiRunVsCPUcase1RKFTSIsmall}, however for both cases there is not one single line per integrator. Instead several outliers and patterns can be observed. 
 
-Graphs needed:
+%Show that RKF is faster than TSI at the moment. Explain why this might be the case and why this was unexpected. 
+%
+%Also explain the outliers and different patterns visible. 
+%
+%Graphs needed:
+%
+%- Combined RKF and TSI 5000 run plot for case 1 \\
+%- Combined RKF and TSI 5000 run plot for case 2 \\
 
-- Combined RKF and TSI 5000 run plot for case 1 \\
-- Combined RKF and TSI 5000 run plot for case 2 \\
-
-\begin{figure}
+\begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/multiRun/multiRunVsCPUcase1RKFTSIsmall.png}\label{subfig:multiRunVsCPUcase1RKFTSIsmall}} 
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/multiRun/multiRunVsCPUcase2RKFTSIsmall.png}\label{subfig:multiRunVsCPUcase2RKFTSIsmall}}
@@ -209,29 +307,37 @@ Graphs needed:
 \label{fig:multiRunVsCPUcase1RKFTSIsmall} 
 \end{figure} 
 
-Table needed:
+For case 1 it can be seen that there were some periods where the CPU time was slightly higher. This is even clearer for case 2 where two different CPU levels can be distinguished and many random CPU times in between. The CPU time is computed using the internal clock of the computer. And it could occur that background programs are run while the integration is running. In such a case, the CPU time computed for that particular integration run can turn out to be higher than expected because the internal clock cannot differentiate between the simulation program and all other programs running at that same instance. Therefore, even if the same nominal case is run, the CPU time could still be 30\% higher or more. 
 
-- Lowest CPU time for both RKF and TSI \\
+%Table needed:
+%
+%- Lowest CPU time for both RKF and TSI \\
 
 
 
 \subsection{Comparison with non-rotating Mars}
 \label{subsec:timeCompNotRot}
-Show the notable difference between the rotating and non-rotating case. Explain why this is the case.
-
-Graphs needed:
-
-- Combined 5000 run plot rot and not rot for case 1 \\
-- Combined 5000 run plot rot and not rot for case 2 \\
+The effect of a program running in the background during a simulation run becomes even more clear when looking at the rotating and non-rotating Mars CPU times shown in \Cref{fig:multiRunVsCPUcase1combinedSmall}. 
 
 
-\begin{figure}
+%Show the notable difference between the rotating and non-rotating case. Explain why this is the case.
+%
+%Graphs needed:
+%
+%- Combined 5000 run plot rot and not rot for case 1 \\
+%- Combined 5000 run plot rot and not rot for case 2 \\
+
+
+\begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/multiRun/multiRunVsCPUcase1combinedSmall.png}\label{subfig:multiRunVsCPUcase1combinedSmall}} 
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/multiRun/multiRunVsCPUcase2combinedSmall.png}\label{subfig:multiRunVsCPUcase2combinedSmall}}
 \caption{Nominal runs versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:multiRunVsCPUcase1combinedSmall} case 1,  \protect\subref{subfig:multiRunVsCPUcase2combinedSmall} case 2 } 
 \label{fig:multiRunVsCPUcase1combinedSmall} 
 \end{figure} 
+
+Here it can be seen that, on average, the non-rotating Mars runs are fasters than the rotating Mars runs, which is similar to what has been observed before. However, in both cases there was a spike where the CPU time suddenly increased tremendously for the non-rotating runs. This shows, that at that time a program (or process) was running in the background and clearly affected the performance of the simulation a lot. This means that CPU time is not always an accurate representation of the performance of the simulation. As a matter of fact, if the same program would be run on a different computer, the CPU times could be completely different. But it would still show the same relationship between the rotating and non-rotating Mars runs as well as \ac{RKF} and \ac{TSI} and does therefore not explain why \ac{TSI} is so much slower compared to \ac{RKF}.
+
 
 
 
@@ -244,12 +350,55 @@ Graphs needed:
 
 - CPU time vs order case 1 combined \\
 - CPU time vs order case 2 combined \\
-- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
-- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
+%- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
+%- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
 - Consecutive differences end state before circularisation comb case 1 \\
 - Consecutive differences end state before circularisation comb case 2 \\
 - Differences nominal case end state before circularisation comb case 1 \\
 - Differences nominal case end state before circularisation comb case 2 \\
+
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsCPUcase1combined.png}\label{subfig:launchAltitudeVsCPUcase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsCPUcase2combined.png}\label{subfig:launchAltitudeVsCPUcase2combined}}
+\caption{Launch altitude versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:launchAltitudeVsCPUcase1combined} case 1,  \protect\subref{subfig:launchAltitudeVsCPUcase2combined} case 2 } 
+\label{fig:launchAltitudeVsCPUcase1combined} 
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsConsecutiveDifferenceCase1combinedSmall.png}\label{subfig:launchAltitudeVsConsecutiveDifferenceCase1combinedSmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsConsecutiveDifferenceCase2combinedSmall.png}\label{subfig:launchAltitudeVsConsecutiveDifferenceCase2combinedSmall}}
+\caption{Launch altitude versus consecutive difference for rotating and non-rotating Mars \protect\subref{subfig:launchAltitudeVsConsecutiveDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:launchAltitudeVsConsecutiveDifferenceCase2combinedSmall} case 2 } 
+\label{fig:launchAltitudeVsConsecutiveDifferenceCase1combinedSmall} 
+\end{figure} 
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsNominalAbsoluteDifferenceCase1combinedSmall.png}\label{subfig:launchAltitudeVsNominalAbsoluteDifferenceCase1combinedSmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsNominalAbsoluteDifferenceCase2combinedSmall.png}\label{subfig:launchAltitudeVsNominalAbsoluteDifferenceCase2combinedSmall}}
+\caption{Launch altitude versus nominal absolute difference for rotating and non-rotating Mars \protect\subref{subfig:launchAltitudeVsNominalAbsoluteDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:launchAltitudeVsNominalAbsoluteDifferenceCase2combinedSmall} case 2 } 
+\label{fig:launchAltitudeVsNominalAbsoluteDifferenceCase1combinedSmall} 
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsRadiusCase1combined.png}\label{subfig:launchAltitudeVsRadiusCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsRadiusCase2combined.png}\label{subfig:launchAltitudeVsRadiusCase2combined}}
+\caption{Launch altitude versus orbital radius for rotating and non-rotating Mars \protect\subref{subfig:launchAltitudeVsRadiusCase1combined} case 1,  \protect\subref{subfig:launchAltitudeVsRadiusCase2combined} case 2 } 
+\label{fig:launchAltitudeVsRadiusCase1combined} 
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsVelocityCase1combined.png}\label{subfig:launchAltitudeVsVelocityCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsVelocityCase2combined.png}\label{subfig:launchAltitudeVsVelocityCase2combined}}
+\caption{Launch altitude versus velocity for rotating and non-rotating Mars \protect\subref{subfig:launchAltitudeVsVelocityCase1combined} case 1,  \protect\subref{subfig:launchAltitudeVsVelocityCase2combined} case 2 } 
+\label{fig:launchAltitudeVsVelocityCase1combined} 
+\end{figure} 
 
 
 Tables needed:
@@ -273,18 +422,59 @@ Graphs needed:
 
 - CPU time vs order case 1 combined (if not random) \\
 - CPU time vs order case 2 combined (if not random) \\
-- All position graphs case 1 \\
-- All position graphs case 2 \\
-- All velocity graphs case 1 \\
-- All velocity graphs case 2 \\
+- All position graphs case 1 \\ Appendix
+- All position graphs case 2 \\ Appendix
+- All velocity graphs case 1 \\ Appendix
+- All velocity graphs case 2 \\ Appendix
 
-- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
-- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
+%- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
+%- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
 - Consecutive differences end state before circularisation comb case 1 \\
 - Consecutive differences end state before circularisation comb case 2 \\
 - Differences nominal case end state before circularisation comb case 1 \\
 - Differences nominal case end state before circularisation comb case 2 \\
 
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsCPUcase1combined.png}\label{subfig:launchLatitudeVsCPUcase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsCPUcase2combined.png}\label{subfig:launchLatitudeVsCPUcase2combined}}
+\caption{Launch latitude versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:launchLatitudeVsCPUcase1combined} case 1,  \protect\subref{subfig:launchLatitudeVsCPUcase2combined} case 2 } 
+\label{fig:launchLatitudeVsCPUcase1combined} 
+\end{figure} 
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsConsecutiveDifferenceCase1combinedSmall.png}\label{subfig:launchLatitudeVsConsecutiveDifferenceCase1combinedSmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsConsecutiveDifferenceCase2combinedSmall.png}\label{subfig:launchLatitudeVsConsecutiveDifferenceCase2combinedSmall}}
+\caption{Launch latitude versus consecutive difference for rotating and non-rotating Mars \protect\subref{subfig:launchLatitudeVsConsecutiveDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:launchLatitudeVsConsecutiveDifferenceCase2combinedSmall} case 2 } 
+\label{fig:launchLatitudeVsConsecutiveDifferenceCase1combinedSmall} 
+\end{figure} 
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsNominalAbsoluteDifferenceCase1combinedSmall.png}\label{subfig:launchLatitudeVsNominalAbsoluteDifferenceCase1combinedSmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsNominalAbsoluteDifferenceCase2combinedSmall.png}\label{subfig:launchLatitudeVsNominalAbsoluteDifferenceCase2combinedSmall}}
+\caption{Launch latitude versus nominal absolute difference for rotating and non-rotating Mars \protect\subref{subfig:launchLatitudeVsNominalAbsoluteDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:launchLatitudeVsNominalAbsoluteDifferenceCase2combinedSmall} case 2 } 
+\label{fig:launchLatitudeVsNominalAbsoluteDifferenceCase1combinedSmall} 
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsRadiusCase1combined.png}\label{subfig:launchLatitudeVsRadiusCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsRadiusCase2combined.png}\label{subfig:launchLatitudeVsRadiusCase2combined}}
+\caption{Launch latitude versus orbital radius for rotating and non-rotating Mars \protect\subref{subfig:launchLatitudeVsRadiusCase1combined} case 1,  \protect\subref{subfig:launchLatitudeVsRadiusCase2combined} case 2 } 
+\label{fig:launchLatitudeVsRadiusCase1combined} 
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsVelocityCase1combined.png}\label{subfig:launchLatitudeVsVelocityCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsVelocityCase2combined.png}\label{subfig:launchLatitudeVsVelocityCase2combined}}
+\caption{Launch latitude versus velocity for rotating and non-rotating Mars \protect\subref{subfig:launchLatitudeVsVelocityCase1combined} case 1,  \protect\subref{subfig:launchLatitudeVsVelocityCase2combined} case 2 } 
+\label{fig:launchLatitudeVsVelocityCase1combined} 
+\end{figure}
 
 Tables needed:
 
@@ -305,18 +495,61 @@ Graphs needed:
 
 - CPU time vs order case 1 combined (if not random) \\
 - CPU time vs order case 2 combined (if not random) \\
-- All position graphs case 1 \\
-- All position graphs case 2 \\
-- All velocity graphs case 1 \\
-- All velocity graphs case 2 \\
+- All position graphs case 1 \\ Appendix
+- All position graphs case 2 \\ Appendix
+- All velocity graphs case 1 \\ Appendix
+- All velocity graphs case 2 \\ Appendix
 
-- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
-- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
+%- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
+%- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
 - Consecutive differences end state before circularisation comb case 1 \\
 - Consecutive differences end state before circularisation comb case 2 \\
 - Differences nominal case end state before circularisation comb case 1 \\
 - Differences nominal case end state before circularisation comb case 2 \\
 
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsCPUcase1combined.png}\label{subfig:launchLongitudeVsCPUcase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsCPUcase2combined.png}\label{subfig:launchLongitudeVsCPUcase2combined}}
+\caption{Launch longitude versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:launchLongitudeVsCPUcase1combined} case 1,  \protect\subref{subfig:launchLongitudeVsCPUcase2combined} case 2 } 
+\label{fig:launchLongitudeVsCPUcase1combined} 
+\end{figure} 
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsConsecutiveDifferenceCase1combinedSmall.png}\label{subfig:launchLongitudeVsConsecutiveDifferenceCase1combinedSmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsConsecutiveDifferenceCase2combinedSmall.png}\label{subfig:launchLongitudeVsConsecutiveDifferenceCase2combinedSmall}}
+\caption{Launch longitude versus consecutive difference for rotating and non-rotating Mars \protect\subref{subfig:launchLongitudeVsConsecutiveDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:launchLongitudeVsConsecutiveDifferenceCase2combinedSmall} case 2 } 
+\label{fig:launchLongitudeVsConsecutiveDifferenceCase1combinedSmall} 
+\end{figure} 
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsNominalAbsoluteDifferenceCase1combinedSmall.png}\label{subfig:launchLongitudeVsNominalAbsoluteDifferenceCase1combinedSmall}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsNominalAbsoluteDifferenceCase2combinedSmall.png}\label{subfig:launchLongitudeVsNominalAbsoluteDifferenceCase2combinedSmall}}
+\caption{Launch longitude versus nominal absolute difference for rotating and non-rotating Mars \protect\subref{subfig:launchLongitudeVsNominalAbsoluteDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:launchLongitudeVsNominalAbsoluteDifferenceCase2combinedSmall} case 2 } 
+\label{fig:launchLongitudeVsNominalAbsoluteDifferenceCase1combinedSmall} 
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsRadiusCase1combined.png}\label{subfig:launchLongitudeVsRadiusCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsRadiusCase2combined.png}\label{subfig:launchLongitudeVsRadiusCase2combined}}
+\caption{Launch longitude versus orbital radius for rotating and non-rotating Mars \protect\subref{subfig:launchLongitudeVsRadiusCase1combined} case 1,  \protect\subref{subfig:launchLongitudeVsRadiusCase2combined} case 2 } 
+\label{fig:launchLongitudeVsRadiusCase1combined} 
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsVelocityCase1combined.png}\label{subfig:launchLongitudeVsVelocityCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsVelocityCase2combined.png}\label{subfig:launchLongitudeVsVelocityCase2combined}}
+\caption{Launch longitude versus velocity for rotating and non-rotating Mars \protect\subref{subfig:launchLongitudeVsVelocityCase1combined} case 1,  \protect\subref{subfig:launchLongitudeVsVelocityCase2combined} case 2 } 
+\label{fig:launchLongitudeVsVelocityCase1combined} 
+\end{figure}
 
 
 \section{Flight-path angle}
@@ -328,19 +561,57 @@ Explain why only a few runs could be done because of the huge initial effect tha
 
 Graphs needed:
 
-- CPU time vs order case 1 combined (if not random) \\
-- CPU time vs order case 2 combined (if not random) \\
-- All position graphs case 1 \\
-- All position graphs case 2 \\
-- All velocity graphs case 1 \\
-- All velocity graphs case 2 \\
+%- CPU time vs order case 1 combined (if not random) \\
+%- CPU time vs order case 2 combined (if not random) \\
+%- All position graphs case 1 \\
+%- All position graphs case 2 \\
+%- All velocity graphs case 1 \\
+%- All velocity graphs case 2 \\
 
 - Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
 - Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
-- Consecutive differences end state before circularisation comb case 1 \\
-- Consecutive differences end state before circularisation comb case 2 \\
-- Differences nominal case end state before circularisation comb case 1 \\
-- Differences nominal case end state before circularisation comb case 2 \\
+%- Consecutive differences end state before circularisation comb case 1 \\
+%- Consecutive differences end state before circularisation comb case 2 \\
+%- Differences nominal case end state before circularisation comb case 1 \\
+%- Differences nominal case end state before circularisation comb case 2 \\
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPAvsFunctionEvaluationsCase1combined.png}\label{subfig:FPAvsFunctionEvaluationsCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPAvsFunctionEvaluationsCase2combined.png}\label{subfig:FPAvsFunctionEvaluationsCase2combined}}
+\caption{Flight-path angle versus Function Evaluations for rotating and non-rotating Mars \protect\subref{subfig:FPAvsFunctionEvaluationsCase1combined} case 1,  \protect\subref{subfig:FPAvsFunctionEvaluationsCase2combined} case 2 } 
+\label{fig:FPAvsFunctionEvaluationsCase1combined} 
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPA_functionEvaluationsVsCPUcase1combined.png}\label{subfig:FPA_functionEvaluationsVsCPUcase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPA_functionEvaluationsVsCPUcase2combined.png}\label{subfig:FPA_functionEvaluationsVsCPUcase2combined}}
+\caption{Function evaluations versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:FPA_functionEvaluationsVsCPUcase1combined} case 1,  \protect\subref{subfig:FPA_functionEvaluationsVsCPUcase2combined} case 2 } 
+\label{fig:FPA_functionEvaluationsVsCPUcase1combined} 
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPAvsHeightFromLaunchSiteCase1combined.png}\label{subfig:FPAvsHeightFromLaunchSiteCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPAvsHeightFromLaunchSiteCase2combined.png}\label{subfig:FPAvsHeightFromLaunchSiteCase2combined}}
+\caption{Flight-path angle versus end height from launch site for rotating and non-rotating Mars \protect\subref{subfig:FPAvsHeightFromLaunchSiteCase1combined} case 1,  \protect\subref{subfig:FPAvsHeightFromLaunchSiteCase2combined} case 2 } 
+\label{fig:FPAvsHeightFromLaunchSiteCase1combined} 
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPAvsPropellantMassCase1combined.png}\label{subfig:FPAvsPropellantMassCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPAvsPropellantMassCase2combined.png}\label{subfig:FPAvsPropellantMassCase2combined}}
+\caption{Flight-path angle versus propellant mass required for circularisation and desired inclination change for rotating and non-rotating Mars \protect\subref{subfig:FPAvsPropellantMassCase1combined} case 1,  \protect\subref{subfig:FPAvsPropellantMassCase2combined} case 2 } 
+\label{fig:FPAvsPropellantMassCase1combined} 
+\end{figure}
+
 
 
 Tables needed:
@@ -358,19 +629,66 @@ Show for both cases the differences in x,y and z position and velocity. Do case 
 
 Graphs needed:
 
-- CPU time vs order case 1 combined (if not random) \\
-- CPU time vs order case 2 combined (if not random) \\
-- All position graphs case 1 \\
-- All position graphs case 2 \\
-- All velocity graphs case 1 \\
-- All velocity graphs case 2 \\
+%- CPU time vs order case 1 combined (if not random) \\
+%- CPU time vs order case 2 combined (if not random) \\
+%- All position graphs case 1 \\
+%- All position graphs case 2 \\
+%- All velocity graphs case 1 \\
+%- All velocity graphs case 2 \\
 
 - Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
 - Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
-- Consecutive differences end state before circularisation comb case 1 \\
-- Consecutive differences end state before circularisation comb case 2 \\
-- Differences nominal case end state before circularisation comb case 1 \\
-- Differences nominal case end state before circularisation comb case 2 \\
+%- Consecutive differences end state before circularisation comb case 1 \\
+%- Consecutive differences end state before circularisation comb case 2 \\
+%- Differences nominal case end state before circularisation comb case 1 \\
+%- Differences nominal case end state before circularisation comb case 2 \\
+
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAnglevsFunctionEvaluationsCase1combined.png}\label{subfig:headingAnglevsFunctionEvaluationsCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAnglevsFunctionEvaluationsCase2combined.png}\label{subfig:headingAnglevsFunctionEvaluationsCase2combined}}
+\caption{Heading angle versus Function Evaluations for rotating and non-rotating Mars \protect\subref{subfig:headingAnglevsFunctionEvaluationsCase1combined} case 1,  \protect\subref{subfig:headingAnglevsFunctionEvaluationsCase2combined} case 2 } 
+\label{fig:headingAnglevsFunctionEvaluationsCase1combined} 
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAngle_functionEvaluationsVsCPUcase1combined.png}\label{subfig:headingAngle_functionEvaluationsVsCPUcase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAngle_functionEvaluationsVsCPUcase2combined.png}\label{subfig:headingAngle_functionEvaluationsVsCPUcase2combined}}
+\caption{Function evaluations versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:headingAngle_functionEvaluationsVsCPUcase1combined} case 1,  \protect\subref{subfig:headingAngle_functionEvaluationsVsCPUcase2combined} case 2 } 
+\label{fig:headingAngle_functionEvaluationsVsCPUcase1combined} 
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAngleVsAltitudeCase1combined.png}\label{subfig:headingAngleVsAltitudeCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAngleVsAltitudeCase2combined.png}\label{subfig:headingAngleVsAltitudeCase2combined}}
+\caption{Heading angle versus altitude with respect to the \ac{MOLA} reference for rotating and non-rotating Mars \protect\subref{subfig:headingAngleVsAltitudeCase1combined} case 1,  \protect\subref{subfig:headingAngleVsAltitudeCase2combined} case 2 } 
+\label{fig:headingAngleVsAltitudeCase1combined} 
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAnglevsPropellantMassCase1combined.png}\label{subfig:headingAnglevsPropellantMassCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAnglevsPropellantMassCase2combined.png}\label{subfig:headingAnglevsPropellantMassCase2combined}}
+\caption{Heading angle versus propellant mass required for circularisation and desired inclination change for rotating and non-rotating Mars \protect\subref{subfig:headingAnglevsPropellantMassCase1combined} case 1,  \protect\subref{subfig:headingAnglevsPropellantMassCase2combined} case 2 } 
+\label{fig:headingAnglevsPropellantMassCase1combined} 
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAngleVsVelocityCase1combined.png}\label{subfig:headingAngleVsVelocityCase1combined}} 
+\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAngleVsVelocityCase2combined.png}\label{subfig:headingAngleVsVelocityCase2combined}}
+\caption{Heading angle versus velocity for rotating and non-rotating Mars \protect\subref{subfig:headingAngleVsVelocityCase1combined} case 1,  \protect\subref{subfig:headingAngleVsVelocityCase2combined} case 2 } 
+\label{fig:headingAngleVsVelocityCase1combined} 
+\end{figure}
 
 
 Tables needed:
