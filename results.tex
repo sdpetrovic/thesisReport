@@ -247,8 +247,8 @@ Looking at the rotating Mars and non-rotating Mars runs, a noticeable difference
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsCPUcase1combined.png}\label{subfig:errorToleranceVsCPUcase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/errorTolerance/errorToleranceVsCPUcase2combined.png}\label{subfig:errorToleranceVsCPUcase2combined}}
+\subfloat[]{\includegraphics[scale=0.5]{figures/results/errorTolerance/errorToleranceVsCPUcase1combined.png}\label{subfig:errorToleranceVsCPUcase1combined}} 
+\subfloat[]{\includegraphics[scale=0.5]{figures/results/errorTolerance/errorToleranceVsCPUcase2combined.png}\label{subfig:errorToleranceVsCPUcase2combined}}
 \caption{Error tolerance versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:errorToleranceVsCPUcase1combined} case 1,  \protect\subref{subfig:errorToleranceVsCPUcase2combined} case 2 } 
 \label{fig:orderVsCPUcase1combined} 
 \end{figure} 
@@ -412,8 +412,8 @@ In \Cref{fig:launchAltitudeVsRadiusCase1combined} the ground and inertial veloci
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsVelocityCase1combined.png}\label{subfig:launchAltitudeVsVelocityCase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsVelocityCase2combined.png}\label{subfig:launchAltitudeVsVelocityCase2combined}}
+\subfloat[]{\includegraphics[scale=0.5]{figures/results/launchAltitude/launchAltitudeVsVelocityCase1combined.png}\label{subfig:launchAltitudeVsVelocityCase1combined}} 
+\subfloat[]{\includegraphics[scale=0.5]{figures/results/launchAltitude/launchAltitudeVsVelocityCase2combined.png}\label{subfig:launchAltitudeVsVelocityCase2combined}}
 \caption{Launch altitude versus velocity for rotating and non-rotating Mars \protect\subref{subfig:launchAltitudeVsVelocityCase1combined} case 1,  \protect\subref{subfig:launchAltitudeVsVelocityCase2combined} case 2 } 
 \label{fig:launchAltitudeVsVelocityCase1combined} 
 \end{figure} 
@@ -438,25 +438,9 @@ More position and velocity graphs can be found in \Cref{app:appendixG-Results}.
 
 \section{Launch latitude}
 \label{sec:launchLatitude}
+For the latitude comparisons, the CPU time, radius and velocity are compared. Additional graphs for the end states are provided in \Cref{app:appendixG-Results}. The cut-off criteria was an end time of 789 seconds for the first case and 783 seconds for the second case. Again starting with the CPU time as shown in \Cref{fig:launchLatitudeVsCPUcase1combined}. Even though the curves from case 1 and case 2 might look different, they show the same behaviour. Starting at the equator and ending on the North-pole, both graphs show that the CPU time of the rotating and the non-rotating case converge until they are practically the same on the North-pole. This clearly shows the effect of the rotating Mars on both cases, because this effect becomes smaller with an increase in latitude.
 
-Only comparison with non-rotating Mars and simply look at the different latitudes and the effects
-Show for both cases the differences in x,y and z position and velocity. Do case 1 and 2 look similar? Why do the graphs look a certain way?
 
-Graphs needed:
-
-- CPU time vs order case 1 combined (if not random) \\
-- CPU time vs order case 2 combined (if not random) \\
-- All position graphs case 1 \\ Appendix
-- All position graphs case 2 \\ Appendix
-- All velocity graphs case 1 \\ Appendix
-- All velocity graphs case 2 \\ Appendix
-
-%- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
-%- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
-- Consecutive differences end state before circularisation comb case 1 \\
-- Consecutive differences end state before circularisation comb case 2 \\
-- Differences nominal case end state before circularisation comb case 1 \\
-- Differences nominal case end state before circularisation comb case 2 \\
 
 \begin{figure}[H]
 \centering
@@ -466,23 +450,7 @@ Graphs needed:
 \label{fig:launchLatitudeVsCPUcase1combined} 
 \end{figure} 
 
-
-\begin{figure}[H]
-\centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsConsecutiveDifferenceCase1combinedSmall.png}\label{subfig:launchLatitudeVsConsecutiveDifferenceCase1combinedSmall}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsConsecutiveDifferenceCase2combinedSmall.png}\label{subfig:launchLatitudeVsConsecutiveDifferenceCase2combinedSmall}}
-\caption{Launch latitude versus consecutive difference for rotating and non-rotating Mars \protect\subref{subfig:launchLatitudeVsConsecutiveDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:launchLatitudeVsConsecutiveDifferenceCase2combinedSmall} case 2 } 
-\label{fig:launchLatitudeVsConsecutiveDifferenceCase1combinedSmall} 
-\end{figure} 
-
-
-\begin{figure}[H]
-\centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsNominalAbsoluteDifferenceCase1combinedSmall.png}\label{subfig:launchLatitudeVsNominalAbsoluteDifferenceCase1combinedSmall}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsNominalAbsoluteDifferenceCase2combinedSmall.png}\label{subfig:launchLatitudeVsNominalAbsoluteDifferenceCase2combinedSmall}}
-\caption{Launch latitude versus nominal absolute difference for rotating and non-rotating Mars \protect\subref{subfig:launchLatitudeVsNominalAbsoluteDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:launchLatitudeVsNominalAbsoluteDifferenceCase2combinedSmall} case 2 } 
-\label{fig:launchLatitudeVsNominalAbsoluteDifferenceCase1combinedSmall} 
-\end{figure} 
+\Cref{fig:launchLatitudeVsRadiusCase1combined} shows the radius for each of the launch latitudes for both cases. Again, as expected the launch latitude does not have an effect on the non-rotating runs, however it does seem to have a large effect on the rotating runs. 
 
 \begin{figure}[H]
 \centering
@@ -492,6 +460,12 @@ Graphs needed:
 \label{fig:launchLatitudeVsRadiusCase1combined} 
 \end{figure} 
 
+\noindent
+Looking at case 1, the end radius shows a sinusoidal effect with the highest end radius at 20 degrees. It is however interesting that case 2 shows an almost mirror effect, where the maximum end radius is reached using the nominal conditions, but still a sinusoidal behaviour can be identified. The minimum end radius is reached at 50 degrees and the non-rotating end radius is crossed at a launch latitude of approximately 10 degrees. This sinusoidal effect can only be attributed to the rotating effects which is similar for both case 1 and 2. They still look different though, which is due to the fact that both trajectories are very different. Case 1 launches due East and then North and case 2 launches due East and then South, South-West. Which means that the trajectories are practically mirrored, and this is also seen in the radius graphs. \\
+
+\noindent
+These effects are also shown in the velocity curves presented in \Cref{fig:launchLatitudeVsVelocityCase1combined}. Here the ground velocity shows the expected behaviour and a similar curve is also shown by the inertial velocity. However, for case 1 the inertial velocity starts above the non-rotating velocity and then drops below. This transition happens at the maximum radius, after which the curve follows slowly recovers to towards the non-rotating values. At that crossing point, the \ac{MAV} ends up due West, however this effect is maximum at a latitude of 50 degrees and becomes smaller again as soon as the latitude reaches the North-pole.
+
 \begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLatitude/launchLatitudeVsVelocityCase1combined.png}\label{subfig:launchLatitudeVsVelocityCase1combined}} 
@@ -500,36 +474,63 @@ Graphs needed:
 \label{fig:launchLatitudeVsVelocityCase1combined} 
 \end{figure}
 
-Tables needed:
 
-- Radius and difference with nominal case in m case 1 \\
-- Radius and difference with nominal case in m case 2 \\
-- Ground velocity and difference with nominal case in m case 1 \\
-- Ground velocity and difference with nominal case in m case 2 \\
- 
+
+%Only comparison with non-rotating Mars and simply look at the different latitudes and the effects
+%Show for both cases the differences in x,y and z position and velocity. Do case 1 and 2 look similar? Why do the graphs look a certain way?
+
+%Graphs needed:
+%
+%%- CPU time vs order case 1 combined (if not random) \\
+%%- CPU time vs order case 2 combined (if not random) \\
+%- All position graphs case 1 \\ Appendix
+%- All position graphs case 2 \\ Appendix
+%- All velocity graphs case 1 \\ Appendix
+%- All velocity graphs case 2 \\ Appendix
+
+%- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
+%- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
+%- Consecutive differences end state before circularisation comb case 1 \\
+%- Consecutive differences end state before circularisation comb case 2 \\
+%- Differences nominal case end state before circularisation comb case 1 \\
+%- Differences nominal case end state before circularisation comb case 2 \\
+
+
+%Tables needed:
+%
+%- Radius and difference with nominal case in m case 1 \\
+%- Radius and difference with nominal case in m case 2 \\
+%- Ground velocity and difference with nominal case in m case 1 \\
+%- Ground velocity and difference with nominal case in m case 2 \\
+% 
 
 
 \section{Launch longitude}
 \label{sec:launchLongitude}
+For the launch longitude, the cut-off criteria was an end time of 789 seconds for case 1 and 873 seconds for case 2. The longitude ($\tau$) has been varied from 0 to 330 degrees. Both the kinematic equations described in \Cref{eq:kinEqSp} and the dynamic equations described in \Cref{eq:dynEqSp} do not depend on the longitude. This means that no differences are expected between the different longitudes. \\
 
-Only comparison with non-rotating Mars and simply look at the different longitudes and the effects
-Show for both cases the differences in x,y and z position and velocity. Do case 1 and 2 look similar? Why do the graphs look a certain way?
+\noindent
+In \Cref{fig:launchLongitudeVsCPUcase1combined} the launch longitude is plotted against the CPU time, and even though no two longitudes have the same CPU time there is still no significant difference, because the differences in CPU time can be explained by the arguments presented in \Cref{sec:multipleRuns}. 
 
-Graphs needed:
 
-- CPU time vs order case 1 combined (if not random) \\
-- CPU time vs order case 2 combined (if not random) \\
-- All position graphs case 1 \\ Appendix
-- All position graphs case 2 \\ Appendix
-- All velocity graphs case 1 \\ Appendix
-- All velocity graphs case 2 \\ Appendix
+%Only comparison with non-rotating Mars and simply look at the different longitudes and the effects
+%Show for both cases the differences in x,y and z position and velocity. Do case 1 and 2 look similar? Why do the graphs look a certain way?
+%
+%Graphs needed:
+%
+%- CPU time vs order case 1 combined (if not random) \\
+%- CPU time vs order case 2 combined (if not random) \\
+%- All position graphs case 1 \\ Appendix
+%- All position graphs case 2 \\ Appendix
+%- All velocity graphs case 1 \\ Appendix
+%- All velocity graphs case 2 \\ Appendix
 
 %- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
 %- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
-- Consecutive differences end state before circularisation comb case 1 \\
-- Consecutive differences end state before circularisation comb case 2 \\
-- Differences nominal case end state before circularisation comb case 1 \\
-- Differences nominal case end state before circularisation comb case 2 \\
+%- Consecutive differences end state before circularisation comb case 1 \\
+%- Consecutive differences end state before circularisation comb case 2 \\
+%- Differences nominal case end state before circularisation comb case 1 \\
+%- Differences nominal case end state before circularisation comb case 2 \\
 
 
 
@@ -541,23 +542,9 @@ Graphs needed:
 \label{fig:launchLongitudeVsCPUcase1combined} 
 \end{figure} 
 
+\noindent
+It is however more interesting to look at the differences in radius and velocity as shown in \Cref{fig:launchLongitudeVsRadiusCase1combined,fig:launchLongitudeVsVelocityCase1combined} respectively. Here it can be seen that for both the non-rotating as well as the rotating runs there are no noticeable differences for the end radius and end velocity of case 1. But case 2 does indeed show a difference in both graphs. As a matter of fact depending on the chosen launch longitude, the difference in end radius could be as large as 1 km (a more detailed graph with the differences between the non-rotating and rotating runs can be found in \Cref{app:appendixG-Results}, which show that case 1 also has a slight difference but at an order of metres). 
 
-\begin{figure}[H]
-\centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsConsecutiveDifferenceCase1combinedSmall.png}\label{subfig:launchLongitudeVsConsecutiveDifferenceCase1combinedSmall}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsConsecutiveDifferenceCase2combinedSmall.png}\label{subfig:launchLongitudeVsConsecutiveDifferenceCase2combinedSmall}}
-\caption{Launch longitude versus consecutive difference for rotating and non-rotating Mars \protect\subref{subfig:launchLongitudeVsConsecutiveDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:launchLongitudeVsConsecutiveDifferenceCase2combinedSmall} case 2 } 
-\label{fig:launchLongitudeVsConsecutiveDifferenceCase1combinedSmall} 
-\end{figure} 
-
-
-\begin{figure}[H]
-\centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsNominalAbsoluteDifferenceCase1combinedSmall.png}\label{subfig:launchLongitudeVsNominalAbsoluteDifferenceCase1combinedSmall}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchLongitude/launchLongitudeVsNominalAbsoluteDifferenceCase2combinedSmall.png}\label{subfig:launchLongitudeVsNominalAbsoluteDifferenceCase2combinedSmall}}
-\caption{Launch longitude versus nominal absolute difference for rotating and non-rotating Mars \protect\subref{subfig:launchLongitudeVsNominalAbsoluteDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:launchLongitudeVsNominalAbsoluteDifferenceCase2combinedSmall} case 2 } 
-\label{fig:launchLongitudeVsNominalAbsoluteDifferenceCase1combinedSmall} 
-\end{figure} 
 
 \begin{figure}[H]
 \centering
@@ -575,15 +562,23 @@ Graphs needed:
 \label{fig:launchLongitudeVsVelocityCase1combined} 
 \end{figure}
 
+\noindent
+The difference in end radius follows from a difference in velocity. Because the only difference between case 1 and case 2 is the input, these differences can be attributed to rounding errors.  It seems that different combinations of input values could create cases where the rounding errors can have a large effect. It is interesting to note that \ac{RKF} showed the same deviations.
+
 
 \section{Flight-path angle}
 \label{sec:flightPathAngle}
+Previously, the cut-off criteria was always set to be a certain end time. However, for the \ac{FPA} it is better to set the cut-off criteria as the point when the simulation reaches the zero degree \ac{FPA}. This means that not only the final altitude will be different but also the simulation run time. It is expected that a \ac{MAV} launched at a lower launch \ac{FPA} will reach the cut-off criteria earlier compared to a high flight-path angle launch. A lower simulation time will equal fewer function evaluations. This is shown in \Cref{fig:FPAvsFunctionEvaluationsCase1combined}, where it is clear that for both the rotating and the non-rotating Mars runs the number of function evaluations decrease with a decrease in \ac{FPA} for both cases. It also shows that the number of function evaluations does not differ much compared to the non-rotating runs, but the two curves do seem to diverge slightly with higher \ac{FPA}. This is expected since the simulation run time is higher as well.  
 
-Only comparison with non-rotating Mars and simply look at the different Flight-path angles and the effects
-Show for both cases the differences in x,y and z position and velocity. Do case 1 and 2 look similar? Why do the graphs look a certain way?
-Explain why only a few runs could be done because of the huge initial effect that the FPA has because of the low velocity in the beginning.
 
-Graphs needed:
+
+
+
+%Only comparison with non-rotating Mars and simply look at the different Flight-path angles and the effects
+%Show for both cases the differences in x,y and z position and velocity. Do case 1 and 2 look similar? Why do the graphs look a certain way?
+%Explain why only a few runs could be done because of the huge initial effect that the FPA has because of the low velocity in the beginning.
+%
+%Graphs needed:
 
 %- CPU time vs order case 1 combined (if not random) \\
 %- CPU time vs order case 2 combined (if not random) \\
@@ -592,8 +587,8 @@ Graphs needed:
 %- All velocity graphs case 1 \\
 %- All velocity graphs case 2 \\
 
-- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
-- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
+%- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
+%- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
 %- Consecutive differences end state before circularisation comb case 1 \\
 %- Consecutive differences end state before circularisation comb case 2 \\
 %- Differences nominal case end state before circularisation comb case 1 \\
@@ -602,56 +597,69 @@ Graphs needed:
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPAvsFunctionEvaluationsCase1combined.png}\label{subfig:FPAvsFunctionEvaluationsCase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPAvsFunctionEvaluationsCase2combined.png}\label{subfig:FPAvsFunctionEvaluationsCase2combined}}
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/FPA/FPAvsFunctionEvaluationsCase1combined.png}\label{subfig:FPAvsFunctionEvaluationsCase1combined}} 
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/FPA/FPAvsFunctionEvaluationsCase2combined.png}\label{subfig:FPAvsFunctionEvaluationsCase2combined}}
 \caption{Flight-path angle versus Function Evaluations for rotating and non-rotating Mars \protect\subref{subfig:FPAvsFunctionEvaluationsCase1combined} case 1,  \protect\subref{subfig:FPAvsFunctionEvaluationsCase2combined} case 2 } 
 \label{fig:FPAvsFunctionEvaluationsCase1combined} 
 \end{figure}
 
-
+\noindent
+This divergent behaviour can also be spotted in \Cref{fig:FPA_functionEvaluationsVsCPUcase1combined}, where the curve of the non-rotating runs is always below the rotating runs. These graphs also show that there is a clear relationship between the number of function evaluations and the required CPU time. 
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPA_functionEvaluationsVsCPUcase1combined.png}\label{subfig:FPA_functionEvaluationsVsCPUcase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPA_functionEvaluationsVsCPUcase2combined.png}\label{subfig:FPA_functionEvaluationsVsCPUcase2combined}}
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/FPA/FPA_functionEvaluationsVsCPUcase1combined.png}\label{subfig:FPA_functionEvaluationsVsCPUcase1combined}} 
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/FPA/FPA_functionEvaluationsVsCPUcase2combined.png}\label{subfig:FPA_functionEvaluationsVsCPUcase2combined}}
 \caption{Function evaluations versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:FPA_functionEvaluationsVsCPUcase1combined} case 1,  \protect\subref{subfig:FPA_functionEvaluationsVsCPUcase2combined} case 2 } 
 \label{fig:FPA_functionEvaluationsVsCPUcase1combined} 
 \end{figure}
 
+\noindent
+As was mentioned in the introduction of this section, the \ac{MAV} launching at a lower \ac{FPA} is expected to reach a lower altitude because the zero degree cut-off criteria is reached earlier in time. This is precisely what is shown in \Cref{fig:FPAvsHeightFromLaunchSiteCase1combined} where the lower \ac{FPA}'s only reach an effective altitude of a few metres, whereas the higher \ac{FPA}'s are able to reached an altitude of a few hundred kilometres. This is also due to the fact that besides the \ac{FPA} nothing else changed in between runs, which in turn means that every run uses the same thrust profile. The nominal thrust profile was set for a \ac{FPA} of 89 degrees. If the \ac{MAV} is then set at a much shallower angle at launch it means that this thrust is directed in a more horizontal direction (in comparison) and will therefore have a much larger effect on the horizontal flight profile.
+
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPAvsHeightFromLaunchSiteCase1combined.png}\label{subfig:FPAvsHeightFromLaunchSiteCase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPAvsHeightFromLaunchSiteCase2combined.png}\label{subfig:FPAvsHeightFromLaunchSiteCase2combined}}
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/FPA/FPAvsHeightFromLaunchSiteCase1combined.png}\label{subfig:FPAvsHeightFromLaunchSiteCase1combined}} 
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/FPA/FPAvsHeightFromLaunchSiteCase2combined.png}\label{subfig:FPAvsHeightFromLaunchSiteCase2combined}}
 \caption{Flight-path angle versus end height from launch site for rotating and non-rotating Mars \protect\subref{subfig:FPAvsHeightFromLaunchSiteCase1combined} case 1,  \protect\subref{subfig:FPAvsHeightFromLaunchSiteCase2combined} case 2 } 
 \label{fig:FPAvsHeightFromLaunchSiteCase1combined} 
 \end{figure}
 
 
+\noindent
+Because each of the runs is cut-off at the zero \ac{FPA}, it is interesting to look at the required propellant mass to reach a circular orbit with the desired inclination at that particular point. Please note that these circularisation burns are assumed to be impulsive and thus only results in an approximation of the required propellant mass. In \Cref{fig:FPAvsPropellantMassCase1combined} the non-rotating Mars curve is situated above the rotating Mars curve. This indicates that, even though it might not be much, the non-rotating Mars case requires more propellant mass to circularise the orbit due to the fact that it is lacking the initial boost of the rotating Mars.
+
+
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPAvsPropellantMassCase1combined.png}\label{subfig:FPAvsPropellantMassCase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/FPA/FPAvsPropellantMassCase2combined.png}\label{subfig:FPAvsPropellantMassCase2combined}}
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/FPA/FPAvsPropellantMassCase1combined.png}\label{subfig:FPAvsPropellantMassCase1combined}} 
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/FPA/FPAvsPropellantMassCase2combined.png}\label{subfig:FPAvsPropellantMassCase2combined}}
 \caption{Flight-path angle versus propellant mass required for circularisation and desired inclination change for rotating and non-rotating Mars \protect\subref{subfig:FPAvsPropellantMassCase1combined} case 1,  \protect\subref{subfig:FPAvsPropellantMassCase2combined} case 2 } 
 \label{fig:FPAvsPropellantMassCase1combined} 
 \end{figure}
 
+\noindent
+For case 1 the \ac{FPA} range was from 86.5 till 89.5 degrees, and for case 2 the range ws from 83 till 89 degrees. For both cases the minimum required propellant mass to circularise is at a \ac{FPA} of 89 degrees, which is exactly the nominal case for which the thrust profile was calibrated. It should also be said that the atmospheric effects have also not been taken into account for the calculation of the required propellant mass for the circularisation. This is therefore purely theoretical, because a circularisation at an altitude of a few metres would mean that the \ac{MAV} would hit a mountain or some other elevated area at some point. But it does show the large effect that the launch \ac{FPA} has on the trajectory.
 
 
-Tables needed:
-
-- Radius and difference with nominal case in m case 1 \\
-- Radius and difference with nominal case in m case 2 \\
-- Ground velocity and difference with nominal case in m case 1 \\
-- Ground velocity and difference with nominal case in m case 2 \\
+%
+%Tables needed:
+%
+%- Radius and difference with nominal case in m case 1 \\
+%- Radius and difference with nominal case in m case 2 \\
+%- Ground velocity and difference with nominal case in m case 1 \\
+%- Ground velocity and difference with nominal case in m case 2 \\
 
 \section{Heading angle}
 \label{sec:headingAngle}
+The final variable that is investigated is the launch heading angle. This angle defines the direction in which the \ac{MAV} is pointed at launch. In this thesis research the heading angle is defined to between 0 degrees facing North, 90 degrees due East, 180 degrees pointed South and 270 degrees due West. Again the cut-off criteria for this angle has been set at a \ac{FPA} of 0 degrees. Thus the end time and altitude are again left free. This means that the number of function evaluations will also be different as shown in \Cref{fig:headingAnglevsFunctionEvaluationsCase1combined}.
 
-Only comparison with non-rotating Mars and simply look at the different heading angles and the effects
-Show for both cases the differences in x,y and z position and velocity. Do case 1 and 2 look similar? Why do the graphs look a certain way?
 
-Graphs needed:
+%Only comparison with non-rotating Mars and simply look at the different heading angles and the effects
+%Show for both cases the differences in x,y and z position and velocity. Do case 1 and 2 look similar? Why do the graphs look a certain way?
+%
+%Graphs needed:
 
 %- CPU time vs order case 1 combined (if not random) \\
 %- CPU time vs order case 2 combined (if not random) \\
@@ -660,8 +668,8 @@ Graphs needed:
 %- All velocity graphs case 1 \\
 %- All velocity graphs case 2 \\
 
-- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
-- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
+%- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
+%- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
 %- Consecutive differences end state before circularisation comb case 1 \\
 %- Consecutive differences end state before circularisation comb case 2 \\
 %- Differences nominal case end state before circularisation comb case 1 \\
@@ -671,53 +679,71 @@ Graphs needed:
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAnglevsFunctionEvaluationsCase1combined.png}\label{subfig:headingAnglevsFunctionEvaluationsCase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAnglevsFunctionEvaluationsCase2combined.png}\label{subfig:headingAnglevsFunctionEvaluationsCase2combined}}
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/headingAngle/headingAnglevsFunctionEvaluationsCase1combined.png}\label{subfig:headingAnglevsFunctionEvaluationsCase1combined}} 
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/headingAngle/headingAnglevsFunctionEvaluationsCase2combined.png}\label{subfig:headingAnglevsFunctionEvaluationsCase2combined}}
 \caption{Heading angle versus Function Evaluations for rotating and non-rotating Mars \protect\subref{subfig:headingAnglevsFunctionEvaluationsCase1combined} case 1,  \protect\subref{subfig:headingAnglevsFunctionEvaluationsCase2combined} case 2 } 
 \label{fig:headingAnglevsFunctionEvaluationsCase1combined} 
 \end{figure}
 
+\noindent
+For case 2 it appears that the heading angle does not have any influence on the number of function evaluations required. This is expected since the rotation of Mars is not included which negates any arbitrary rotational influences. Therefore, the zero degree \ac{FPA} will be reached at the same simulation time. However, case 1 shows that sometimes the number of function evaluations is 46 (between 300 and 0 degrees) and sometimes it is 45. That could only happen if the values are close to the boundary values of the allowed precision which determines the step-size. Therefore, an end time difference of 1 $\mu$s can result in having to perform one more simulation step. 
+
 
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAngle_functionEvaluationsVsCPUcase1combined.png}\label{subfig:headingAngle_functionEvaluationsVsCPUcase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAngle_functionEvaluationsVsCPUcase2combined.png}\label{subfig:headingAngle_functionEvaluationsVsCPUcase2combined}}
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/headingAngle/headingAngle_functionEvaluationsVsCPUcase1combined.png}\label{subfig:headingAngle_functionEvaluationsVsCPUcase1combined}} 
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/headingAngle/headingAngle_functionEvaluationsVsCPUcase2combined.png}\label{subfig:headingAngle_functionEvaluationsVsCPUcase2combined}}
 \caption{Function evaluations versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:headingAngle_functionEvaluationsVsCPUcase1combined} case 1,  \protect\subref{subfig:headingAngle_functionEvaluationsVsCPUcase2combined} case 2 } 
 \label{fig:headingAngle_functionEvaluationsVsCPUcase1combined} 
 \end{figure}
 
+
+\noindent
+In \Cref{fig:headingAngleVsAltitudeCase1combined} the function evaluations are again plotted against the CPU time and here the same trend can be observed as was seen for the \ac{FPA} results.
+
+
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAngleVsAltitudeCase1combined.png}\label{subfig:headingAngleVsAltitudeCase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAngleVsAltitudeCase2combined.png}\label{subfig:headingAngleVsAltitudeCase2combined}}
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/headingAngle/headingAngleVsAltitudeCase1combined.png}\label{subfig:headingAngleVsAltitudeCase1combined}} 
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/headingAngle/headingAngleVsAltitudeCase2combined.png}\label{subfig:headingAngleVsAltitudeCase2combined}}
 \caption{Heading angle versus altitude with respect to the \ac{MOLA} reference for rotating and non-rotating Mars \protect\subref{subfig:headingAngleVsAltitudeCase1combined} case 1,  \protect\subref{subfig:headingAngleVsAltitudeCase2combined} case 2 } 
 \label{fig:headingAngleVsAltitudeCase1combined} 
 \end{figure}
 
+\noindent
+Because only the heading angle changes but the rest of the variables remain the same, it would be expected that the reached altitude of the \ac{MAV} would show a sinusoidal behaviour for both cases. When inspecting \Cref{fig:headingAnglevsPropellantMassCase1combined} this behaviour is indeed present in both cases. In fact, the curve of case 1 could effectively be moved as to create the curve at case 2. The non-rotating curves are both crossed due to the fact that the trajectory for both cases result in a flight path that heads due West in the end. It is interesting to note that the maximum altitude that can be reached lies higher in both cases than the nominal case of 90 degrees. 
+
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAnglevsPropellantMassCase1combined.png}\label{subfig:headingAnglevsPropellantMassCase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAnglevsPropellantMassCase2combined.png}\label{subfig:headingAnglevsPropellantMassCase2combined}}
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/headingAngle/headingAnglevsPropellantMassCase1combined.png}\label{subfig:headingAnglevsPropellantMassCase1combined}} 
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/headingAngle/headingAnglevsPropellantMassCase2combined.png}\label{subfig:headingAnglevsPropellantMassCase2combined}}
 \caption{Heading angle versus propellant mass required for circularisation and desired inclination change for rotating and non-rotating Mars \protect\subref{subfig:headingAnglevsPropellantMassCase1combined} case 1,  \protect\subref{subfig:headingAnglevsPropellantMassCase2combined} case 2 } 
 \label{fig:headingAnglevsPropellantMassCase1combined} 
 \end{figure}
 
+\noindent
+The reached altitude might be higher, but the propellant mass required to reach the desired orbit inclination and circularise the orbit at that altitude might be very high as well. In fact, \Cref{fig:headingAngleVsVelocityCase1combined} shows that there are only two local minima when it comes to propellant use. And one of these local minima is the global minimum at 90 degrees for which the nominal case was adjusted. These second minima were however a bit unexpected at first. For the first case it lies at 180 degrees and the second case at 270 degrees. When taking a closer look it becomes clear that these are the cases where the \ac{MAV} is able to get into the same orbit but then passing over the equator from North to South in case 1 and from South to North in case 2. Effectively thus not requiring much energy for the change in inclination.\\
+
+\noindent
+This same behaviour can be seen in the inertial velocity curves for both cases shown in \Cref{fig:headingAngleVsVelocityCase1combined}. 
 
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAngleVsVelocityCase1combined.png}\label{subfig:headingAngleVsVelocityCase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/headingAngle/headingAngleVsVelocityCase2combined.png}\label{subfig:headingAngleVsVelocityCase2combined}}
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/headingAngle/headingAngleVsVelocityCase1combined.png}\label{subfig:headingAngleVsVelocityCase1combined}} 
+\subfloat[]{\includegraphics[scale = 0.5]{figures/results/headingAngle/headingAngleVsVelocityCase2combined.png}\label{subfig:headingAngleVsVelocityCase2combined}}
 \caption{Heading angle versus velocity for rotating and non-rotating Mars \protect\subref{subfig:headingAngleVsVelocityCase1combined} case 1,  \protect\subref{subfig:headingAngleVsVelocityCase2combined} case 2 } 
 \label{fig:headingAngleVsVelocityCase1combined} 
 \end{figure}
 
+\noindent
+Here the ground velocity and non-rotating velocities are an exact mirror of the radius curves and the inertial velocity curve shows two maxima. These velocity maxima do not however correspond exactly to the optimal propellant masses found. This is because the inclination change also requires some propellant.
 
-Tables needed:
-
-- Radius and difference with nominal case in m case 1 \\
-- Radius and difference with nominal case in m case 2 \\
-- Ground velocity and difference with nominal case in m case 1 \\
-- Ground velocity and difference with nominal case in m case 2 \\
+%Tables needed:
+%
+%- Radius and difference with nominal case in m case 1 \\
+%- Radius and difference with nominal case in m case 2 \\
+%- Ground velocity and difference with nominal case in m case 1 \\
+%- Ground velocity and difference with nominal case in m case 2 \\

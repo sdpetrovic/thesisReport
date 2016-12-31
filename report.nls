@@ -6,27 +6,15 @@
 		\nompageref{25}
   \item [{$\eta$}]\begingroup Step multiplication factor \nomunit{-}\nomeqref {5.6}
 		\nompageref{30}
-  \item [{$\mu$}]\begingroup Standard gravitational parameter\nomunit{m$^{3}$/s$^{2}$}\nomeqref {A.16}
-		\nompageref{83}
   \item [{$\tau$}]\begingroup Local error tolerance \nomunit{-}\nomeqref {5.6}
 		\nompageref{30}
-  \item [{$\phi$}]\begingroup General rotation angle\nomunit{rad}\nomeqref {A.0}
-		\nompageref{78}
   \item [{$\Phi$}]\begingroup Increment function\nomunit{-}\nomeqref {4.0}
 		\nompageref{25}
 
  \nomgroup{R}
 
-  \item [{$E$}]\begingroup Eccentric anomaly\nomunit{rad}\nomeqref {A.10}
-		\nompageref{81}
   \item [{$h$}]\begingroup (Current) step-size\nomunit{s}\nomeqref {4.0}
 		\nompageref{25}
-  \item [{$h$}]\begingroup Specific relative angular momentum\nomunit{m$^{2}$/s}\nomeqref {A.16}
-		\nompageref{83}
-  \item [{$M$}]\begingroup Mean anomaly\nomunit{rad}\nomeqref {A.10}
-		\nompageref{81}
-  \item [{$\mathbf{r}$}]\begingroup Position vector \nomunit{m}\nomeqref {A.0}
-		\nompageref{78}
   \item [{$t_{0}$}]\begingroup Initial time\nomunit{s}\nomeqref {4.1}
 		\nompageref{25}
   \item [{$T_{n,k}$}]\begingroup Truncation error \nomunit{-}\nomeqref {5.0}
@@ -39,10 +27,5 @@
 		\nompageref{28}
   \item [{$\mathbf{X}$}]\begingroup State vector \nomunit{-}\nomeqref {5.0}
 		\nompageref{28}
-
- \nomgroup{S}
-
-  \item [{$\mathbb{T}$}]\begingroup General transformation matrix\nomunit{-}\nomeqref {A.0}
-		\nompageref{78}
 
 \end{thenomenclature}
