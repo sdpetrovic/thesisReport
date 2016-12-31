@@ -343,13 +343,18 @@ Here it can be seen that, on average, the non-rotating Mars runs are fasters tha
 
 \section{Launch altitude}
 \label{sec:launchAltitude}
+From now on only the rotating runs and the non-rotating runs will be compared. This can be done because \ac{TSI} has proven to be accurate compared to \ac{RKF} producing similar results. Thus it is only interesting to look at the effect of the different parameters on the performance of \ac{TSI}. In this case the effect on CPU time, consecutive difference and absolute difference will be investigated as well as effect on end radius and end velocity before cirularisation. Here the cut-off criteria for case 1 was an end time of 789 seconds and 856 seconds for case 2.\\
 
-Only comparison with non-rotating Mars and simply look at the different altitudes and the effects
+\noindent
+In \Cref{fig:launchAltitudeVsCPUcase1combined} the launch altitude is plotted against the CPU time. This has been done for the altitude range from the candidate altitude of -0.6 km \ac{MOLA} to the maximum altitude where the \ac{MAV} could be launched from; 0.5 km \ac{MOLA}. In this case, no clear pattern can be observed due to the large differences in CPU time. Therefore it can be concluded that the launch altitude in this particular range does not have an effect on the CPU time.
 
-Graphs needed:
-
-- CPU time vs order case 1 combined \\
-- CPU time vs order case 2 combined \\
+%
+%Only comparison with non-rotating Mars and simply look at the different altitudes and the effects
+%
+%Graphs needed:
+%
+%- CPU time vs order case 1 combined \\
+%- CPU time vs order case 2 combined \\
 %- Circularisation propellant mass comb case 1 (if different end conditions were used then once with comb and once just the case 1) \\
 %- Circularisation propellant mass comb case 2 (if different end conditions were used then once with comb and once just the case 2) \\
 - Consecutive differences end state before circularisation comb case 1 \\
@@ -367,6 +372,9 @@ Graphs needed:
 \label{fig:launchAltitudeVsCPUcase1combined} 
 \end{figure} 
 
+\noindent
+Randomness can also be observed when looking at the consecutive difference for the rotating runs in \Cref{fig:launchAltitudeVsConsecutiveDifferenceCase1combinedSmall}. Here the z-position and z-velocity show some slight deviations for case 1, and in the curves of case 2 the rotating states all show deviations. However, it is interesting to notice that no deviations are observed for the non-rotating runs, which means that all the deviations are caused by rotating effects. A similar behaviour can be observed in the nominal absolute difference graphs presented in \Cref{fig:launchAltitudeVsNominalAbsoluteDifferenceCase1combinedSmall}. Here case 1 shows almost no deviations except for the z-position and z-velocity. However, again large deviations can be observed for case 2. These deviations can be caused by the fact that for case 2 the \ac{MAV} is launched due East but quickly heads South therefore going against the rotation of Mars and creating variations that are not observed for the non-rotating Mars.
+
 \begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsConsecutiveDifferenceCase1combinedSmall.png}\label{subfig:launchAltitudeVsConsecutiveDifferenceCase1combinedSmall}} 
@@ -374,6 +382,7 @@ Graphs needed:
 \caption{Launch altitude versus consecutive difference for rotating and non-rotating Mars \protect\subref{subfig:launchAltitudeVsConsecutiveDifferenceCase1combinedSmall} case 1,  \protect\subref{subfig:launchAltitudeVsConsecutiveDifferenceCase2combinedSmall} case 2 } 
 \label{fig:launchAltitudeVsConsecutiveDifferenceCase1combinedSmall} 
 \end{figure} 
+
 
 
 \begin{figure}[H]
@@ -384,6 +393,11 @@ Graphs needed:
 \label{fig:launchAltitudeVsNominalAbsoluteDifferenceCase1combinedSmall} 
 \end{figure} 
 
+\noindent
+Another example of the effect of the rotating Mars can be seen in the radius graphs in \Cref{fig:launchAltitudeVsRadiusCase1combined}. Because in both case 1 and 2 the \ac{MAV} is launched due East on the equator it is able to get an initial $\Delta$V boost. This increase in velocity compared to the non-rotating results in a final radius that is higher than the non-rotating Mars runs for both case 1 and case 2. It can also be observed that the radius of the final orbit increases with an increase in launch altitude. This could be a direct effect of both the drag and the gravitational acceleration, because the atmosphere becomes less dense and the gravitational acceleration becomes smaller the further away from the surface the \ac{MAV} is.
+
+
+
 \begin{figure}[H]
 \centering
 \subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsRadiusCase1combined.png}\label{subfig:launchAltitudeVsRadiusCase1combined}} 
@@ -391,6 +405,10 @@ Graphs needed:
 \caption{Launch altitude versus orbital radius for rotating and non-rotating Mars \protect\subref{subfig:launchAltitudeVsRadiusCase1combined} case 1,  \protect\subref{subfig:launchAltitudeVsRadiusCase2combined} case 2 } 
 \label{fig:launchAltitudeVsRadiusCase1combined} 
 \end{figure} 
+
+\noindent 
+In \Cref{fig:launchAltitudeVsRadiusCase1combined} the ground and inertial velocity for both cases and both rotating and non-rotating Mars have been plotted. These are the end velocities of the \ac{MAV} before circularisation. And because an increase in final radius was observed, a decrease in end velocity was expected and this is indeed observed for both cases. 
+
 
 \begin{figure}[H]
 \centering
@@ -400,13 +418,19 @@ Graphs needed:
 \label{fig:launchAltitudeVsVelocityCase1combined} 
 \end{figure} 
 
+\noindent
+When comparing ground velocity it would be expected that the rotating Mars run would show a lower velocity because Mars is actually rotating with the \ac{MAV}. This effectively lowers the speed at which the \ac{MAV} travels as observed from the Martian surface. This is indeed seen in both cases. What is also noticeable is that there is fortunately no velocity difference between the inertial and ground velocity for the non-rotating case, which means that the rotation of Mars was indeed zero and the program is working properly. There is however a large difference between the ground and inertial velocity for the rotating runs, which is precisely the effective velocity boost from the rotating Mars.\\
 
-Tables needed:
+\noindent
+Finally it is interesting to notice the difference in end velocities between case 1 and case 2. Case 1 has an inertial velocity which is higher than the ground velocity and also the velocity for the non-rotating run. This is what one would expect for a \ac{MAV} that is launched due East. However, case 2 also launches due East and shows an inertial velocity for the rotating run which is lower than all other velocities. This can be explained by taking to account that these are all final velocities before the circularisation and remembering the trajectory profile of both cases as presented in \Cref{ch:verificationandvalidation}. The trajectory of case 1 takes the \ac{MAV} slightly North after launch, whereas in case 2 the trajectory goes South and even slightly West. This means that it is moving against the rotation of Mars and thus effectively loses some velocity when compared to both the ground velocity as well as the velocity in the non-rotating run. This effect was therefore expected.
+More position and velocity graphs can be found in \Cref{app:appendixG-Results}.
 
-- Radius and difference with nominal case in m case 1 \\
-- Radius and difference with nominal case in m case 2 \\
-- Ground velocity and difference with nominal case in m case 1 \\
-- Ground velocity and difference with nominal case in m case 2 \\
+%Tables needed:
+%
+%- Radius and difference with nominal case in m case 1 \\
+%- Radius and difference with nominal case in m case 2 \\
+%- Ground velocity and difference with nominal case in m case 1 \\
+%- Ground velocity and difference with nominal case in m case 2 \\
 
 
 

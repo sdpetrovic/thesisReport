@@ -84,28 +84,28 @@
 \contentsline {subsection}{\numberline {8.3.1}Comparison with \ac {RKF78}}{67}{subsection.8.3.1}
 \contentsline {subsection}{\numberline {8.3.2}Comparison with non-rotating Mars}{68}{subsection.8.3.2}
 \contentsline {section}{\numberline {8.4}Launch altitude}{69}{section.8.4}
-\contentsline {section}{\numberline {8.5}Launch latitude}{71}{section.8.5}
-\contentsline {section}{\numberline {8.6}Launch longitude}{73}{section.8.6}
+\contentsline {section}{\numberline {8.5}Launch latitude}{72}{section.8.5}
+\contentsline {section}{\numberline {8.6}Launch longitude}{74}{section.8.6}
 \contentsline {section}{\numberline {8.7}Flight-path angle}{76}{section.8.7}
-\contentsline {section}{\numberline {8.8}Heading angle}{77}{section.8.8}
-\contentsline {chapter}{\numberline {9}Conclusions and recommendations}{80}{chapter.9}
-\contentsline {chapter}{Bibliography}{81}{chapter*.113}
-\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{84}{appendix.A}
-\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{88}{appendix.B}
-\contentsline {section}{\numberline {B.1}Temperature}{88}{section.B.1}
-\contentsline {section}{\numberline {B.2}Density}{88}{section.B.2}
-\contentsline {chapter}{\numberline {C}Program file definitions}{94}{appendix.C}
-\contentsline {chapter}{\numberline {D}All Recurrence Relations}{95}{appendix.D}
-\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{95}{section.D.1}
-\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{98}{section.D.2}
-\contentsline {section}{\numberline {D.3}Spherical case}{100}{section.D.3}
-\contentsline {chapter}{\numberline {E}Nominal case input values}{103}{appendix.E}
-\contentsline {section}{\numberline {E.1}Case 1}{104}{section.E.1}
-\contentsline {section}{\numberline {E.2}Case 2}{105}{section.E.2}
-\contentsline {chapter}{\numberline {F}Results}{106}{appendix.F}
-\contentsline {section}{\numberline {F.1}Order}{106}{section.F.1}
-\contentsline {section}{\numberline {F.2}Multiple runs}{108}{section.F.2}
-\contentsline {section}{\numberline {F.3}Launch altitude}{110}{section.F.3}
-\contentsline {section}{\numberline {F.4}Launch latitude}{112}{section.F.4}
-\contentsline {section}{\numberline {F.5}Launch longitude}{114}{section.F.5}
+\contentsline {section}{\numberline {8.8}Heading angle}{78}{section.8.8}
+\contentsline {chapter}{\numberline {9}Conclusions and recommendations}{81}{chapter.9}
+\contentsline {chapter}{Bibliography}{82}{chapter*.113}
+\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{85}{appendix.A}
+\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{89}{appendix.B}
+\contentsline {section}{\numberline {B.1}Temperature}{89}{section.B.1}
+\contentsline {section}{\numberline {B.2}Density}{89}{section.B.2}
+\contentsline {chapter}{\numberline {C}Program file definitions}{95}{appendix.C}
+\contentsline {chapter}{\numberline {D}All Recurrence Relations}{96}{appendix.D}
+\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{96}{section.D.1}
+\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{99}{section.D.2}
+\contentsline {section}{\numberline {D.3}Spherical case}{101}{section.D.3}
+\contentsline {chapter}{\numberline {E}Nominal case input values}{104}{appendix.E}
+\contentsline {section}{\numberline {E.1}Case 1}{105}{section.E.1}
+\contentsline {section}{\numberline {E.2}Case 2}{106}{section.E.2}
+\contentsline {chapter}{\numberline {F}Results}{107}{appendix.F}
+\contentsline {section}{\numberline {F.1}Order}{107}{section.F.1}
+\contentsline {section}{\numberline {F.2}Multiple runs}{109}{section.F.2}
+\contentsline {section}{\numberline {F.3}Launch altitude}{111}{section.F.3}
+\contentsline {section}{\numberline {F.4}Launch latitude}{113}{section.F.4}
+\contentsline {section}{\numberline {F.5}Launch longitude}{115}{section.F.5}
 \contentsfinish 
