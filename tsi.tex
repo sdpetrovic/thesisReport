@@ -23,7 +23,7 @@ The formulation used in this thesis is based on the one used by \cite{scott2008h
 
 
 \begin{equation} \label{eq:general_taylor}
-x_{n}\left(t+h\right)=\displaystyle\sum_{k=0}^{K}\dfrac{x_{n}^{\left(k\right)}\left(t\right)}{k!}\left(h\right)^{k} \quad + \quad	T_{n,K}
+x_{n}\left(t+h\right)=\displaystyle\sum_{k=0}^{K}\dfrac{x_{n}^{\left(k\right)}\left(t\right)}{k!}h^{k} \quad + \quad	T_{n,K}
 \end{equation}
 
 This particular \ac{TSI} method uses recurrence relations to determine the $k^{th}$ order derivatives and only requires the current state ($x_{n}$) and its first derivatives ($x'_{n} = u_{n}$). Each recurrence relation describes a certain operation in the state derivative, such as: multiplication, division, power, exponential, sines and cosines. \Cref{eq:rec_rel} shows the recurrence relations for multiplication ($w\left(t\right)=f\left(t\right)g\left(t\right)$) and division ($w\left(t\right)=\dfrac{f\left(t\right)}{g\left(t\right)}$) respectively (the other operations are described later in this chapter when they are required).

@@ -1,2 +1,47 @@
-\chapter{Conclusions and recommendations} %Last updated 04-03-2016
+\chapter{Conclusions and recommendations} 
+%Created 04-03-2016
+%First addition 02-01-2017
 \label{ch:conclusionsandrecommendations}
+During the course of this research, many different aspects of \ac{TSI} have been investigated. With each phase new conclusions were drawn, even during the programming and setting up the integrator. All these conclusions are described in \Cref{sec:conclusions}. However, which each conclusion also came a sense of what could still be improved and added. All the recommendations that came out of that process are described in \Cref{sec:recommendations}.
+
+
+\section{Conclusions}
+\label{sec:conclusions}
+The conclusions can be divided up into three different parts. The first part are the conclusions drawn as the \ac{TSI} method was worked out and programmed. During this phase, some of the advantages and disadvantages of this method became clear and are discussed in \Cref{subsec:taylorSeriesAsAnIntegrator}. Then one of the main aspects of this research is described in \Cref{subsec:TSIcomparedToRKF78}, where the conclusions are presented with respect to the comparison between \ac{TSI} and \ac{RKF}. And finally, a sensitivity analysis was performed on \ac{TSI} using some of the different variables that the program requires as input. The conclusions from this analysis are presented in \Cref{subsec:sensitivityAnalysis}.
+
+\subsection{Taylor Series as an integrator}
+\label{subsec:taylorSeriesAsAnIntegrator}
+Setting up the \ac{TSI} turned out to be more difficult than anticipated, because it requires all the written out equations for the model. These include the equations to simulate the atmosphere and equations to compute the drag coefficient. All the equations involved also require the first derivatives, and each of these derivatives has to be divided up into auxiliary functions. In this process of setting up all these equations, it is really easy to make mistakes. In this theses, the basic recurrence relations were simply programmed into a single class such that each of the recurrence relations for the auxiliary derivatives and functions could call those basic functions. But in the end it still took a long time to set up. Because the auxiliary derivatives and functions are intertwined, adding an extra perturbation for example could be as simple as adding a few more equations, or as difficult as rewriting some of these equations. It is therefore easier to include as many perturbations when designing the integrator such that during the actual simulation one can simply specify the desired perturbation that have to be taken into account. This would make the program itself less problem specific. \\
+
+\noindent
+Once the program was all set-up, a step-size handling procedure had to be included to deal with the different sections in the temperature and drag coefficient model. This was needed to make sure that \ac{TSI} did not continue into the next section without changing the section properties. The step-size handling procedure was easily implemented and is able to determine when a next section is reached and change the step-size such that the previous step ends at the start of the next section. The atmospheric and drag coefficient models were set-up at the start of the thesis research and at that time a certain number of sections were fitted as to get the best representation of the corresponding model. However, during the development of \ac{TSI} it became clear that it would be better to have a model with fewer sections. The reason for having more than 1 sections was because this limited the order of the polynomial that had to be fitted. But every time a new section is reached, \ac{TSI} has to limit a step-size to pass over that boundary. Therefore it would be better to have large order polynomial fits and fewer sections. Fortunately, this model change can effortlessly be implemented in the simulation program by simply updating the polynomial coefficient matrices, which are an input of the integrator. 
+Because \ac{TSI} has this ability to readily update the step-size to meet a certain section boundary condition, it means that it can also freely cope with discontinuities.  \\
+Another advantage is that \ac{TSI} can theoretically have any desired order. This theoretically unlimited order is however limited by the computer accuracy, because at a certain point the higher orders disappear into the rounding errors.\\
+And finally, the Taylor Series coefficients are computed for each time step after which a corresponding step-size is computed to stay within a certain error tolerance. The coefficients are then multiplied by the step-size as per \Cref{eq:TSexp}. This step-size is the maximum step-size that can be used to determine the next state while still staying within the error tolerance, however if a smaller step-size is chosen, it means that any value between the current time step and the next time step can be computed as well (meeting an even higher error tolerance). The current program has the option to save all the Taylor Series coefficients for each time step, which means that even after the simulation has been performed extra data points can be created in between the already chosen time steps by simply choosing a smaller time step as mentioned before. Interpolation is therefore not required and the data can have a theoretically unlimited resolution, which is a major advantage over conventional integrators.
+
+
+
+%v Ad: Unlimited order for TSI (limited by computer accuracy)\\
+%v Ad: Can easily deal with discontinuities\\
+%v Ad: No interpolation required afterwards (unlimited resolution)\\
+%v Dis: Takes a long time to set up\\
+%v Dis: Easy to make mistakes\\
+%v Dis: Requires all worked out equations\\ 
+%v Dis: Can be rather problem specific (small change in model could mean rewriting a lot of equations)
+
+
+
+
+\subsection{\ac{TSI} compared to \ac{RKF78}}
+\label{subsec:TSIcomparedToRKF78}
+- Ad: Far fewer function calls for TSI\\
+- Ad: Faster convergence for TSI\\
+- Dis: CPU time of TSI higher than RKF\\
+
+
+\subsection{Sensitivity analysis}
+\label{subsec:sensitivityAnalysis}
+- Ad: Little variation in number of evaluations as a function of tolerance
+
+\section{Recommendations}
+\label{sec:recommendations}
