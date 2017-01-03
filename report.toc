@@ -93,24 +93,34 @@
 \contentsline {subsection}{\numberline {9.1.1}Taylor Series as an integrator}{80}{subsection.9.1.1}
 \contentsline {subsection}{\numberline {9.1.2}\ac {TSI} compared to \ac {RKF78}}{81}{subsection.9.1.2}
 \contentsline {subsection}{\numberline {9.1.3}Sensitivity analysis}{81}{subsection.9.1.3}
-\contentsline {section}{\numberline {9.2}Recommendations}{81}{section.9.2}
-\contentsline {chapter}{Bibliography}{82}{chapter*.109}
-\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{85}{appendix.A}
-\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{89}{appendix.B}
-\contentsline {section}{\numberline {B.1}Temperature}{89}{section.B.1}
-\contentsline {section}{\numberline {B.2}Density}{89}{section.B.2}
-\contentsline {chapter}{\numberline {C}Program file definitions}{95}{appendix.C}
-\contentsline {chapter}{\numberline {D}All Recurrence Relations}{96}{appendix.D}
-\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{96}{section.D.1}
-\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{99}{section.D.2}
-\contentsline {section}{\numberline {D.3}Spherical case}{101}{section.D.3}
-\contentsline {chapter}{\numberline {E}Nominal case input values}{104}{appendix.E}
-\contentsline {section}{\numberline {E.1}Case 1}{105}{section.E.1}
-\contentsline {section}{\numberline {E.2}Case 2}{106}{section.E.2}
-\contentsline {chapter}{\numberline {F}Results}{107}{appendix.F}
-\contentsline {section}{\numberline {F.1}Order}{107}{section.F.1}
-\contentsline {section}{\numberline {F.2}Multiple runs}{109}{section.F.2}
-\contentsline {section}{\numberline {F.3}Launch altitude}{111}{section.F.3}
-\contentsline {section}{\numberline {F.4}Launch latitude}{113}{section.F.4}
-\contentsline {section}{\numberline {F.5}Launch longitude}{116}{section.F.5}
+\contentsline {subsubsection}{Order}{81}{subsection.9.1.3}
+\contentsline {subsubsection}{Error tolerance}{82}{subsection.9.1.3}
+\contentsline {subsubsection}{Multiple runs}{82}{subsection.9.1.3}
+\contentsline {subsubsection}{Launch altitude}{82}{subsection.9.1.3}
+\contentsline {subsubsection}{Launch latitude}{82}{subsection.9.1.3}
+\contentsline {subsubsection}{Launch longitude}{82}{subsection.9.1.3}
+\contentsline {subsubsection}{Flight-path angle}{82}{subsection.9.1.3}
+\contentsline {subsubsection}{Heading angle}{83}{subsection.9.1.3}
+\contentsline {section}{\numberline {9.2}Recommendations}{83}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Improvements to the current \ac {TSI} program}{83}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Extra tests and additions}{84}{subsection.9.2.2}
+\contentsline {chapter}{Bibliography}{85}{chapter*.111}
+\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{88}{appendix.A}
+\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{92}{appendix.B}
+\contentsline {section}{\numberline {B.1}Temperature}{92}{section.B.1}
+\contentsline {section}{\numberline {B.2}Density}{92}{section.B.2}
+\contentsline {chapter}{\numberline {C}Program file definitions}{98}{appendix.C}
+\contentsline {chapter}{\numberline {D}All Recurrence Relations}{99}{appendix.D}
+\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{99}{section.D.1}
+\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{102}{section.D.2}
+\contentsline {section}{\numberline {D.3}Spherical case}{104}{section.D.3}
+\contentsline {chapter}{\numberline {E}Nominal case input values}{107}{appendix.E}
+\contentsline {section}{\numberline {E.1}Case 1}{108}{section.E.1}
+\contentsline {section}{\numberline {E.2}Case 2}{109}{section.E.2}
+\contentsline {chapter}{\numberline {F}Results}{110}{appendix.F}
+\contentsline {section}{\numberline {F.1}Order}{110}{section.F.1}
+\contentsline {section}{\numberline {F.2}Multiple runs}{112}{section.F.2}
+\contentsline {section}{\numberline {F.3}Launch altitude}{114}{section.F.3}
+\contentsline {section}{\numberline {F.4}Launch latitude}{116}{section.F.4}
+\contentsline {section}{\numberline {F.5}Launch longitude}{119}{section.F.5}
 \contentsfinish 

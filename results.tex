@@ -169,7 +169,7 @@ The speed of convergence is important because it shows the relationship between 
 \label{fig:errorToleranceVsConsecutiveDifferenceCase1RKFTSIpositionSmall} 
 \end{figure} 
 
-A similar comparison can be done when comparing each of the end states directly to the nominal end state. The result is a nominal absolute difference graph as presented in \Cref{fig:errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIpositionSmall} for position and velocity and both cases. Here it can be seen that the accuracy of the position at an error tolerance of 10$^{-5}$ is already in cm for \ac{TSI} whereas this accuracy is only reached at an error tolerance of 10$^{-9}$ for \ac{RKF}. For the velocity the \ac{TSI} accuracy is in the order of 10 $\mu$m at this initial error tolerance which also is reached at an error tolerance of 10$^{-9}$ using \ac{TSI}. This means that \ac{TSI} is, on average, more accurate at any given error tolerance.  
+A similar comparison can be done when comparing each of the end states directly to the nominal end state. The result is a nominal absolute difference graph as presented in \Cref{fig:errorToleranceVsNominalAbsoluteDifferenceCase1RKFTSIpositionSmall} for position and velocity and both cases. Here it can be seen that the accuracy of the position at an error tolerance of 10$^{-5}$ is already in cm for \ac{TSI} whereas this accuracy is only reached at an error tolerance of 10$^{-9}$ for \ac{RKF}. For the velocity the \ac{TSI} accuracy is in the order of 10 $\mu$m at this initial error tolerance which is reached at an error tolerance of 10$^{-9}$ using \ac{RKF}. This means that \ac{TSI} is, on average, more accurate at any given error tolerance.  
 
 \begin{figure}[H]
 \centering
@@ -394,7 +394,7 @@ Randomness can also be observed when looking at the consecutive difference for t
 \end{figure} 
 
 \noindent
-Another example of the effect of the rotating Mars can be seen in the radius graphs in \Cref{fig:launchAltitudeVsRadiusCase1combined}. Because in both case 1 and 2 the \ac{MAV} is launched due East on the equator it is able to get an initial $\Delta$V boost. This increase in velocity compared to the non-rotating results in a final radius that is higher than the non-rotating Mars runs for both case 1 and case 2. It can also be observed that the radius of the final orbit increases with an increase in launch altitude. This could be a direct effect of both the drag and the gravitational acceleration, because the atmosphere becomes less dense and the gravitational acceleration becomes smaller the further away from the surface the \ac{MAV} is.
+Another example of the effect of the rotating Mars can be seen in the radius graphs in \Cref{fig:launchAltitudeVsRadiusCase1combined}. Because in both case 1 and 2 the \ac{MAV} is launched due East on the equator it is able to get an initial $\Delta$V boost. This increase in velocity compared to the non-rotating Mars results in a final radius that is higher than the non-rotating Mars runs for both case 1 and case 2. It can also be observed that the radius of the final orbit increases with an increase in launch altitude. This could be a direct effect of both the drag and the gravitational acceleration, because the atmosphere becomes less dense and the gravitational acceleration becomes smaller the further away from the surface the \ac{MAV} is.
 
 
 
@@ -407,7 +407,7 @@ Another example of the effect of the rotating Mars can be seen in the radius gra
 \end{figure} 
 
 \noindent 
-In \Cref{fig:launchAltitudeVsRadiusCase1combined} the ground and inertial velocity for both cases and both rotating and non-rotating Mars have been plotted. These are the end velocities of the \ac{MAV} before circularisation. And because an increase in final radius was observed, a decrease in end velocity was expected and this is indeed observed for both cases. 
+In \Cref{fig:launchAltitudeVsVelocityCase1combined} the ground and inertial velocity for both cases and both rotating and non-rotating Mars have been plotted. These are the end velocities of the \ac{MAV} before circularisation. And because an increase in final radius was observed, a decrease in end velocity was expected and this is indeed observed for both cases. 
 
 
 \begin{figure}[H]

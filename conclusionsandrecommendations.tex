@@ -34,14 +34,85 @@ And finally, the Taylor Series coefficients are computed for each time step afte
 
 \subsection{\ac{TSI} compared to \ac{RKF78}}
 \label{subsec:TSIcomparedToRKF78}
-- Ad: Far fewer function calls for TSI\\
-- Ad: Faster convergence for TSI\\
-- Dis: CPU time of TSI higher than RKF\\
+The main question that had to be answered in this research was: "Does \ac{TSI} show similar performance improvements over \ac{RKF} for an ascent case as was shown for orbital trajectories and (re-)entry cases?". There are a few different aspects that were compared between \ac{TSI} and \ac{RKF78}.\\
+First, the number of function calls were compared. In this thesis research, a function call is the process of going through the set of equations once. For \ac{RKF78} this has to be done 13 times in one time step, whereas it only has to be done once per time step for \ac{TSI}. The effect of this difference was made very clear when both \ac{TSI} and \ac{RKF} were run for a number of different error tolerances. Each error tolerance resulted in a different number of time steps in order to stay within the error bounds. For all tested error tolerances, \ac{TSI} required far fewer function calls than \ac{RKF}. Not only that, but as the error tolerance increased, the number of function calls required for \ac{RKF} increased rather quickly as well. This resulted in a maximum number of evaluations required for \ac{RKF} to be 7 to 8 times more than for the lowest error tolerance. This compared to \ac{TSI} where the difference in number of evaluations between the lowest and the highest error tolerance was less than twice the lowest number of evaluations.\\
+The second aspect that was compared was the accuracy. Again using the error tolerance, the accuracy of both methods at different error tolerances could be determined. For \ac{TSI} the accuracy of the position and velocity at an error tolerance of 10$^{-5}$ was 1 cm and 10 $\mu$m respectively, whereas \ac{RKF} was only able to reach these accuracies at an error tolerance of 10$^{-9}$. This clearly shows that \ac{TSI} is inherently more accurate even at lower error tolerances. Besides being more accurate, \ac{TSI} also showed a faster convergence speed compared to \ac{RKF}, which meant that the highest tolerances did not show much of a difference.\\
+Finally, the CPU time of both methods were compared as well. CPU time is measured by the time it takes the CPU to run through all the computations required for the simulation. In all tested cases \ac{TSI} turned out to be a whole order slower, on average, than \ac{RKF}. This is the complete opposite of what was expected based on previous research. The \ac{RKF78} method was provided by the \ac{Tudat} library and only required a single state derivative file in order to work. \ac{TSI} on the other hand was programmed in such a manner that is was comprehensible, but in doing so many different program files were created that all had to be called during the integration. Each of those function files contains computations that could be run at the same time, but instead they were run consecutively. Therefore, the CPU time could be decreased by using different threads. One example where this could have a large impact is the computation of the Taylor Series coefficients. Not all the coefficients are interdependent and could therefore be run in separate threads at the same time. The actual improvement on CPU time that this threading method would have is not yet clear but is definitely something that should be investigated.
+
+
+% This continuous call of those other files has a tremendous impact on the CPU time. Probably the largest contribution comes from the computation of the Taylor Series coefficients using the recurrence relations. This is because the final recurrence relations use function calls to the basic recurrence relations in each function (and often even multiple times in one function). If the basic recurrence relations were to be written out directly in the final recurrence relations, the CPU time might go down drastically. At this point this is still speculation though.
+
+
+%v Ad: Far fewer function calls for TSI\\
+%v Ad: Faster convergence for TSI\\
+%v Ad: Very accurate at a low error tolerance already\\
+%v Dis: CPU time of TSI higher than RKF\\
 
 
 \subsection{Sensitivity analysis}
 \label{subsec:sensitivityAnalysis}
-- Ad: Little variation in number of evaluations as a function of tolerance
+To be able to understand the behaviour of \ac{TSI} better and to determine the influence of different parameters on the ascent trajectory, a sensitivity analysis was performed. In this section, the conclusions will be presented per parameter starting with the \ac{TSI} order.
+
+\subsubsection{Order}
+During the different order runs for both cases it was determined that an order of 20 resulted in the lowest CPU time on average. There were also two different phases identified; one before and one after this lowest CPU time order. In the first phase, the CPU time was greatly influenced by the high number of time steps that were needed because of the inaccuracies introduced by the lower orders. The second phase showed that the CPU time was now influenced more by the number of recurrence relation computations that were introduced with each extra order. Also, the number of time steps decreased only a little between the first order of that phase and the final order of that phase and thus reduced the effect of the number of time steps on the CPU time. Finally, it was also shown that from an order of 11 the accuracy of the method did not change that much any more compared to the nominal \ac{RKF} run. But since order 20 was still faster, it was better to run the simulation at that order.
+
+\subsubsection{Error tolerance}
+As was already mentioned in \Cref{subsec:TSIcomparedToRKF78}, the number of evaluations for \ac{TSI} varied very little between the different error tolerances. In both cases an error tolerance of 10$^{-5}$ resulted in 24 evaluations (in that particular simulation run) and an error tolerance of 10$^{-15}$ resulted in 46 and 47 evaluations for case 1 and 2 respectively. On average this was an increase of 2.2 and 2.3 respective evaluations per error tolerance. Because the error tolerance has a direct correlation to the number of time steps, it also had a direct influence on the CPU time. An increase in error tolerance therefore resulted in an increase in CPU time. Also, the non-rotating Mars runs were approximately 0.2 ms faster compared to the rotating Mars runs, which was to be expected since fewer equations had to be performed. \\
+It was also found that a lower tolerance resulted in a less accurate final result compared to the higher tolerance results, which makes sense since a lower error tolerance means that a larger error is accepted making the end results less accurate.
+
+
+%v Ad: Little variation in number of evaluations as a function of tolerance
+
+\subsubsection{Multiple runs}
+The multiple nominal runs showed the influence of computer processes on the CPU time of the integration run. This influence of processes running on the background sometimes resulted in a difference in CPU time of 30\% or more, even though the exact same case was run. This influence was best shown during a rung of the non-rotating Mars scenario where a sudden spike appeared in the CPU data, indicating that another process was active at that time in the background. This does not explain the difference between the \ac{RKF} and \ac{TSI} CPU times, but it does show that CPU time is not always a good comparison parameter.
+
+
+\subsubsection{Launch altitude}
+Keeping in mind that a certain variation in CPU times is allowed due to the behaviour observed during the multiple runs, no direct influences of launch altitude on the CPU time could be identified. The launch altitude did however have a direct influence on both the final radius as well as the final velocity of the \ac{MAV}. An increase in launch altitude resulted in an increase in final radius and a decrease in the final velocity. 
+
+\subsubsection{Launch latitude}
+The CPU time of the launch latitude runs showed an undeniable influence of the different latitudes. Starting at the equator and ending up at the North-pole, the CPU time showed a convergence behaviour of the rotating and the non-rotating Mars curves. Therefore, the closer the \ac{MAV} launches to the North-pole, the smaller the influence of the rotation. The final radius also highly depends on the chosen launch latitude. Here the radius curve showed a sinusoidal behaviour in relation to the launch latitude, and a same correlation was found in the velocity curves. In the non-rotating Mars runs, the latitude had absolutely no influence on the final radius and velocity what so ever. This means that the chosen launch latitude has a large effect on the final radius and velocity due to the rotation of Mars. 
+
+
+\subsubsection{Launch longitude}
+Compared to the launch latitude, the launch longitude has virtually no influence at all on the final radius and velocity. This is due to the fact that the rotational influences do not change in the longitudinal direction. 
+
+\subsubsection{Flight-path angle}
+When running the different \ac{FPA} cases it became clear that the \ac{FPA} has a large influence on the flight trajectory of the \ac{MAV}. For these runs the cut-off criteria was a zero degree \ac{FPA}. With a decrease in launch \ac{FPA} that cut-off criteria was reached earlier in flight each time. Up until the point where a difference of 2 degrees could mean reaching the desired orbit or not even reaching an altitude of 1 km. For these runs, the orbit was also circularised (which included an inclination change to the desired inclination) once the cut-off criteria was met. This showed a massive difference in the required propellant mass required, because the required orbital velocity became more and more difficult to reach the lower the launch \ac{FPA} and because the flight was cut-off earlier, the \ac{MAV} did not have enough time to change its heading to match the desired inclination which also added to the required propellant mass.
+
+\subsubsection{Heading angle}
+Because the other parameters were all left constant in between the launch heading angle runs, a sinusoidal behaviour was observed in the altitude versus launch heading angle curve. And it was interesting to see that for both case 1 and 2 the maximum reachable altitude with those parameters was not at the nominal 90 degree angle. However, these maximum reachable altitudes also required a lot of propellant mass to get into the desired orbit with the desired inclination. Since the nominal case was calibrated for the desired orbit it was expected to required the least amount of propellant mass to reach that orbit, and this indeed turned out to be the case. However, another local minimum propellant option was identified for both case 1 and case 2. They required slightly more propellant but were still a convincing option. These two local minima are the cases where the exact same orbit is reached but then moving in the opposite direction over the equator compared to the nominal trajectory. It was interesting to see that a change in launch heading angle could identify this second local minimum, which also clearly shows that the launch heading angle has a large effect on the launch trajectory.
+
 
 \section{Recommendations}
 \label{sec:recommendations}
+The recommendations are split into two categories: recommendations to improve the current \ac{TSI} program (\Cref{subsec:improvementsToTheCurrentTSIprogram}) and recommended tests and additions that could be made (\Cref{subsec:extraTestsAndAdditions}). The improvements to the current \ac{TSI} program are needed to try to reduce the CPU time and see if the same performance can be achieved as shown by \citep{scott2008high,bergsma2016application} and also to try and make the \ac{TSI} program more robust. The extra tests and additions are either planned processes that could not be executed in the scope of this thesis or processes that were not originally planned but would still be interesting to investigate.
+
+\subsection{Improvements to the current \ac{TSI} program}
+\label{subsec:improvementsToTheCurrentTSIprogram}
+The list presented in this section suggests some steps that could be taken to maybe improve the performance of the current \ac{TSI} program. 
+
+\begin{description}
+\item[Use threads to perform simultaneous computations]The current program does not use any threads at all, instead the computations are all run one after another. However, there are many computations that could be performed in parallel because they are independent. Using threads to perform these simultaneous computations would theoretically reduce the CPU time.
+\item[Get rid of obsolete computations and functions] Even though most of the obsolete computations and functions were removed during the many rewrites of the program, it could be that some of the old code is still present but not used any more. Removing the obsolete code could theoretically reduce the CPU time.
+\item[Get rid of the separate basic recurrence relations file] In the current program, the basic recurrence relations are functions that are written in a separate file and called by the final recurrence relations file. In the reference research, the basic recurrence relations are always described completely worked out in the final recurrence relations. The improvements on the program by getting rid of the basic recurrence relations file and writing them out in the final recurrence file are yet unknown.
+\item[Use a different root finding method] The current root finding method was based on the root finding method used by \citep{bergsma2016application}, however it could be that another root finding method would work better for the tested scenarios. 
+\item[Implement a different step-size determination method] The step-size determination method worked well for the current program, but it showed some divergence issues when directly applied to the starting conditions. This is why an initial second was integrated using \ac{RKF78}. A different step-size determination method might be able to better estimate the required step-size, although it is unlikely to completely get rid of the early divergence issues in the Taylor Series coefficients.
+\item[Use a temperature model with fewer sections but higher order polynomial fits] Because \ac{TSI} had to stop with the current time step and adjust the step-size accordingly every time a new section was reached, it would be better to have use a temperature model with fewer sections. This does mean that functions fits with higher order polynomials are required, but \ac{TSI} does not seem to have an issue with those. The same goes for the drag coefficient model.
+
+
+\end{description}
+
+
+
+\subsection{Extra tests and additions}
+\label{subsec:extraTestsAndAdditions}
+The tests and additions to the program listed here are suggestions based on the experience gathered during this research and academic interest. 
+
+\begin{description}
+\item[Add optimisation] Optimisation is something that still needs to be implemented and tested. Use can be made of the \ac{Pagmo} library in combination with the \ac{SNOPT} method. Unfortunately, this could not be done during this research.
+\item[Add extra perturbing accelerations] Even though other perturbing effects such as higher order gravity terms or third body perturbations could be neglected, it would still be interesting to see what the influence on the trajectory would be.
+\item[Test the influence of the drag, thrust and gravitational acceleration] A more extensive sensitivity analysis could be performed where different scenarios could be tested that include a thrust profile instead of a constant nominal thrust, the actual influence of the drag on the trajectory and what would happen for instance if the gravitational acceleration would be different.
+\item[Include the thrust angle profile] For the complete trajectory analysis and comparison to the numerical analysis currently being performed at \ac{JPL} it would be interesting to include the thrust angle profile. This could be done in combination with the optimisation to determine the required thrust profile for the optimum trajectory.
+
+\end{description}

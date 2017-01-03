@@ -83,22 +83,24 @@
 \BOOKMARK [2][-]{subsection.9.1.2}{TSI compared to RKF78}{section.9.1}% 83
 \BOOKMARK [2][-]{subsection.9.1.3}{Sensitivity analysis}{section.9.1}% 84
 \BOOKMARK [1][-]{section.9.2}{Recommendations}{chapter.9}% 85
-\BOOKMARK [0][-]{chapter*.109}{Bibliography}{}% 86
-\BOOKMARK [0][-]{appendix.A}{Mars-GRAM 2005 input file}{}% 87
-\BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 88
-\BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 89
-\BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 90
-\BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 91
-\BOOKMARK [0][-]{appendix.D}{All Recurrence Relations}{}% 92
-\BOOKMARK [1][-]{section.D.1}{First Cartesian case: Euler angles}{appendix.D}% 93
-\BOOKMARK [1][-]{section.D.2}{Second Cartesian case: unit vectors}{appendix.D}% 94
-\BOOKMARK [1][-]{section.D.3}{Spherical case}{appendix.D}% 95
-\BOOKMARK [0][-]{appendix.E}{Nominal case input values}{}% 96
-\BOOKMARK [1][-]{section.E.1}{Case 1}{appendix.E}% 97
-\BOOKMARK [1][-]{section.E.2}{Case 2}{appendix.E}% 98
-\BOOKMARK [0][-]{appendix.F}{Results}{}% 99
-\BOOKMARK [1][-]{section.F.1}{Order}{appendix.F}% 100
-\BOOKMARK [1][-]{section.F.2}{Multiple runs}{appendix.F}% 101
-\BOOKMARK [1][-]{section.F.3}{Launch altitude}{appendix.F}% 102
-\BOOKMARK [1][-]{section.F.4}{Launch latitude}{appendix.F}% 103
-\BOOKMARK [1][-]{section.F.5}{Launch longitude}{appendix.F}% 104
+\BOOKMARK [2][-]{subsection.9.2.1}{Improvements to the current TSI program}{section.9.2}% 86
+\BOOKMARK [2][-]{subsection.9.2.2}{Extra tests and additions}{section.9.2}% 87
+\BOOKMARK [0][-]{chapter*.111}{Bibliography}{}% 88
+\BOOKMARK [0][-]{appendix.A}{Mars-GRAM 2005 input file}{}% 89
+\BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 90
+\BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 91
+\BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 92
+\BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 93
+\BOOKMARK [0][-]{appendix.D}{All Recurrence Relations}{}% 94
+\BOOKMARK [1][-]{section.D.1}{First Cartesian case: Euler angles}{appendix.D}% 95
+\BOOKMARK [1][-]{section.D.2}{Second Cartesian case: unit vectors}{appendix.D}% 96
+\BOOKMARK [1][-]{section.D.3}{Spherical case}{appendix.D}% 97
+\BOOKMARK [0][-]{appendix.E}{Nominal case input values}{}% 98
+\BOOKMARK [1][-]{section.E.1}{Case 1}{appendix.E}% 99
+\BOOKMARK [1][-]{section.E.2}{Case 2}{appendix.E}% 100
+\BOOKMARK [0][-]{appendix.F}{Results}{}% 101
+\BOOKMARK [1][-]{section.F.1}{Order}{appendix.F}% 102
+\BOOKMARK [1][-]{section.F.2}{Multiple runs}{appendix.F}% 103
+\BOOKMARK [1][-]{section.F.3}{Launch altitude}{appendix.F}% 104
+\BOOKMARK [1][-]{section.F.4}{Launch latitude}{appendix.F}% 105
+\BOOKMARK [1][-]{section.F.5}{Launch longitude}{appendix.F}% 106
