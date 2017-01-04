@@ -18,8 +18,10 @@ The formulation used in this thesis is based on the one used by \cite{scott2008h
 \ac{TSI} uses the current state and its derivatives to determine the next state by computing its Taylor Series described in \Cref{eq:general_taylor}. The state vector is represented by $\mathbf{X}$ with the corresponding vector for the initial conditions $\mathbf{X}_{0}$. Each of the variables can at any point be represented by $x_{n}\left(t\right)$. For a given step-size $h$ and an order $K \in \mathbb{R}$ (chosen by the user) the updated state $x_{n}\left(t+h\right)$ can be represented by the Taylor Series with $n=1,\dots,7$ in this case (7 variables: three position, three velocity and one mass). The exact solution is obtained by adding $T_{n,K}$, which is the truncation error for the $n^{th}$ variable using K terms. 
 
 \nomenclature[Ra7]{$\mathbf{X}$}{State vector \nomunit{-}}
-\nomenclature[Ra6]{$x_{n}$}{n$^{th}$ variable \nomunit{-}}
+\nomenclature[Ra6]{$x_{n}$}{n$^{th}$ state variable \nomunit{-}}
 \nomenclature[Ra2]{$T_{n,k}$}{Truncation error \nomunit{-}}
+\nomenclature[Ra7]{$K$}{Maximum order \nomunit{-}}
+\nomenclature[Ra7]{$k$}{Order derivative \nomunit{-}}
 
 
 \begin{equation} \label{eq:general_taylor}
@@ -27,6 +29,12 @@ x_{n}\left(t+h\right)=\displaystyle\sum_{k=0}^{K}\dfrac{x_{n}^{\left(k\right)}\l
 \end{equation}
 
 This particular \ac{TSI} method uses recurrence relations to determine the $k^{th}$ order derivatives and only requires the current state ($x_{n}$) and its first derivatives ($x'_{n} = u_{n}$). Each recurrence relation describes a certain operation in the state derivative, such as: multiplication, division, power, exponential, sines and cosines. \Cref{eq:rec_rel} shows the recurrence relations for multiplication ($w\left(t\right)=f\left(t\right)g\left(t\right)$) and division ($w\left(t\right)=\dfrac{f\left(t\right)}{g\left(t\right)}$) respectively (the other operations are described later in this chapter when they are required).
+
+\nomenclature[Ra7]{$x_{n}$}{Auxiliary equation \nomunit{-}}
+\nomenclature[Ra7]{$u_{n}$}{Auxiliary derivative \nomunit{-}}
+\nomenclature[Ra7]{$w_{n,i}$}{Auxiliary function \nomunit{-}}
+\nomenclature[Ra7]{$f_{n}$}{Auxiliary placeholder function \nomunit{-}}
+\nomenclature[Ra7]{$g_{n}$}{Auxiliary placeholder function \nomunit{-}}
 
 \begin{equation} \label{eq:rec_rel}
 \begin{split}
@@ -63,6 +71,8 @@ Now let $u_{n}^{\left(k-1\right)}=x_{n}^{k}$ for $k=1,\dots,K$, then $\dfrac{u_{
 U_{n}\left(k-1\right)=kX_{n}\left(k\right)\Rightarrow X_{n}\left(k\right)=\dfrac{U_{n}\left(k-1\right)}{k}
 \end{equation}
 
+\nomenclature[Ra7]{$X$}{Taylor Series coefficient (also $X_{n}$) \nomunit{-}}
+
 The $X_{n}\left(k\right)$ are also known as the Taylor Series coefficients of the $n^{th}$ variable for the $k^{th}$ order derivative. Also, $U_{n}\left(k\right)$ are the recurrence relation expressions for the $n^{th}$ variable which consist of all the reduced auxiliary functions ($W\left(k\right)$) that form that derivative. 
 
 
@@ -71,6 +81,8 @@ Using the expression described in \Cref{eq:def_u} all Taylor Series coefficients
 \subsection{Step-size}
 \label{subsec:stepSizeTsi}
 The step-size used for \ac{TSI} can be either set as a constant value by the user or determined using a step-size controller, giving it the variable step-size properties, which is done in this thesis. The chosen step-size method was based on the recommendation of both \cite{scott2008high} and \cite{bergsma2015application} and directly uses the chosen (or preferred) local error tolerance $\tau$ to determine the next step size. This method assures that the step-size is small enough such that all variables satisfy the error condition directly. The step-size is determined using a so-called fixed-point iteration performed using \Cref{eq:fix_point_it}. The initial step-size $h_{1}$ can be chosen to be the current step-size $h$ as an easy estimate. Then the iteration is performed over $l$ until a certain required convergence is reached.
+
+
 
 \begin{equation} \label{eq:fix_point_it}
 h_{l+1}=exp\left(\dfrac{1}{K-1}ln\left[\dfrac{\tau}{\begin{vmatrix}
@@ -97,6 +109,8 @@ First, the simulation program has to determine if the newly computed parameter (
 f = h-h_{limit}
 \end{equation}
 
+\nomenclature[Ra7]{$f$}{Limit function \nomunit{-}}
+
 \noindent
 Because this research is based on an ascent trajectory, a new section is reached if the altitude is higher than the lower limit altitude of that section. Therefore, if $f$ > 0 a new section has been reached, and the root finding method should be used to get the value of $f$ back to zero and thus identify the step-size at which the root of $f$ is located.\\
 
@@ -116,6 +130,8 @@ Next, the coefficient of the root finding curve, $\alpha$, has to be determined.
 \begin{equation} \label{eq:alphaForRoot}
 \alpha = \dfrac{f_{To}-f_{From}}{\left(t_{To}-t_{From}\right)^{2}}-\dfrac{\dot{f}_{From}}{t_{To}-t_{From}}
 \end{equation}
+
+\nomenclature[Ga7]{$\alpha$}{Root finding curve coefficient \nomunit{-}}
 
 \noindent
 With this coefficient it is possible to compute the new time of the newly computed point. This point is called the new from point because no matter if this point is before of after the root of the limit function, that point will be used as the starting or "from" point for the next point computation. This is why this time is called $t_{From,new}$ and is computed using \Cref{eq:tFromNew}. This equation has a plus sign in front of the square root because the next section has been reached when $f$ > 0.
@@ -178,6 +194,9 @@ V_{z_{I}}\\
 &
 m_{MAV}&
 \end{align}
+
+\nomenclature[Ra7]{$\textbf{r}$}{Radius vector \nomunit{-}}
+\nomenclature[Ra7]{$\textbf{V}$}{Velocity vector \nomunit{-}}
 
 The corresponding state derivatives are then described by \Cref{eq:state_derivatives}.
 
@@ -263,6 +282,10 @@ x'_{6}&=\dot{V}_{z}=a_{z}=a_{g,z}+a_{D,z}+a_{T,z}
 &
 x'_{7}=\dot{m}_{MAV}=-\dfrac{T}{g_{0}I_{sp}}
 \end{align}
+
+\nomenclature[Ra7]{$a_{g}$}{Gravitational acceleration \nomunit{km/s$^{2}$}}
+\nomenclature[Ra7]{$a_{D}$}{Drag acceleration \nomunit{km/s$^{2}$}}
+\nomenclature[Ra7]{$a_{T}$}{Thrust acceleration \nomunit{km/s$^{2}$}}
 
 In this case the thrust and specific impulse are constant, which means that $x'_{7}$ is constant and any additional derivative will be zero. Also, neither one of the thrust angles is a function of the state, which means that $a_{T}$, in the body frame, is only a function of $x_{7}$ (also see \Cref{eq:acc}). However, both $a_{g}$ and $a_{D}$ are a function of the position and velocity, where $a_{D}$ is also a function of the \ac{MAV} mass. Only $a_{g}$ is rewritten using auxiliary equations as mentioned before. 
 
@@ -977,6 +1000,8 @@ C_{3} & C_{6} & C_{9} \\
 \right]
 \end{equation}
 
+\nomenclature[Ra7]{$C$}{Transformation matrix coefficient \nomunit{-}}
+
 As was seen in \Cref{subsubsec:tsiTransAngl} the rotation from the vertical to the inertial frame is purely a function of the radius in the inertial frame ($\mathbf{r}$ or $\mathbf{r_{I}}$) Also, the transformation from the body frame to the vertical frame was purely a function of the ground velocity in the vertical frame ($\mathbf{V_{V}}$ or $\mathbf{V_{G_{V}}}$). Therefore, if this transformation is to be done in one transformation, the ground velocity in the inertial frame is required ($\mathbf{V_{G_{I}}}$), because it would transform directly to the inertial frame. This means that the coefficients in \Cref{eq:transMatCoef} will have to be a function of $\mathbf{r_{I}}$ and $\mathbf{V_{G_{I}}}$, where $\mathbf{V_{G_{I}}}$ is given by \Cref{eq:VGI}.
 
 \begin{equation} \label{eq:VGI}
@@ -1011,6 +1036,11 @@ So when looking from the inertial frame, there are two state vectors: position a
 \begin{equation} \label{eq:iHat}
 \mathbf{\hat{i}} = \dfrac{\mathbf{V_{G_{I}}}}{\| \mathbf{V_{G_{I}}}\|}
 \end{equation}
+
+\nomenclature[Ra7]{$\mathbf{\hat{i}}$}{Unit vector in x-direction \nomunit{-}}
+\nomenclature[Ra7]{$\mathbf{\hat{j}}$}{Unit vector in y-direction \nomunit{-}}
+\nomenclature[Ra7]{$\mathbf{\hat{h}}$}{Unit vector in z-direction \nomunit{-}}
+
 
 This unit vector is also shown in \Cref{fig:cartesian_transformation_mooij1994motion}.
 
@@ -1416,7 +1446,7 @@ u_{14} &= w_{14,7} \\
 \begin{align} \label{eq:auxF15}
 \begin{split}
 w_{15,0} &= T c\psi_{T} c\epsilon_{T}-D = Tw_{4,26}w_{4,27}-x_{27} \\
-w_{15,1} &= \dfrac{w_{15,0}}{m} = \dfrac{w_{15,0}}{x_{7}} \\
+w_{15,1} &= \dfrac{w_{15,0}}{m_{MAV}} = \dfrac{w_{15,0}}{x_{7}} \\
 w_{15,2} &= -\mu_{M} s\gamma_{G} = -\mu_{M}w_{4,7} \\
 w_{15,3} &= \dfrac{w_{15,2}}{w_{14,3}} \\
 \end{split}

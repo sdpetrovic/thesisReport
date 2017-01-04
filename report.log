@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.13)  4 JAN 2017 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.13)  4 JAN 2017 20:42
 entering extended mode
 **./report.tex
 (report.tex
@@ -1899,7 +1899,7 @@ LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <10> not available
 LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <24.88> not available
 (Font)              Font shape `T1/futs/b/sc' tried instead on input line 1.
 Package acronym Info: Label `acro:JPL' newly defined as it shall be overridden
-although it is yet undefined on input line 4.
+although it is yet undefined on input line 6.
 ) [2
 
 
@@ -1962,10 +1962,14 @@ File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
 \tf@toc=\write7
 \openout7 = `report.toc'.
 
- [5] (report.nls) [6
+ [5] (report.nls
+Package acronym Info: Label `acro:MOLA' newly defined as it shall be overridden
+
+although it is yet undefined on input line 17.
+ [6
 
 
-] (abbreviations.tex) [7
+] [7]) [8] (abbreviations.tex) [9
 
 
 ] (introduction.tex
@@ -1989,7 +1993,7 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.25598pt on input line 9.
 
 <figures/heritage/proposedMSRmissionArchitecture_vaughan2016technology.jpg, id=
-825, 433.62pt x 266.79675pt>
+841, 433.62pt x 266.79675pt>
 File: figures/heritage/proposedMSRmissionArchitecture_vaughan2016technology.jpg
  Graphic file (type jpg)
 
@@ -2040,7 +2044,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
 
 <figures/heritage/biPropellantSSTOMAV_vaughan2016technology-And-hybridSSTOMAV_k
-arp2016technology.jpg, id=981, 227.6505pt x 118.041pt>
+arp2016technology.jpg, id=997, 227.6505pt x 118.041pt>
 File: figures/heritage/biPropellantSSTOMAV_vaughan2016technology-And-hybridSSTO
 MAV_karp2016technology.jpg Graphic file (type jpg)
 
@@ -2051,7 +2055,7 @@ logy-And-hybridSSTOMAV_karp2016technology.jpg used on input line 111.
 (pdftex.def)             Requested size: 358.50609pt x 185.91193pt.
  [4 <./figures/heritage/biPropellantSSTOMAV_vaughan2016technology-And-hybridSST
 OMAV_karp2016technology.jpg>]
-<figures/launcher_methods/baseline_liquid2_trinidad2012.jpg, id=1010, 704.6325p
+<figures/launcher_methods/baseline_liquid2_trinidad2012.jpg, id=1027, 704.6325p
 t x 296.90926pt>
 File: figures/launcher_methods/baseline_liquid2_trinidad2012.jpg Graphic file (
 type jpg)
@@ -2060,19 +2064,8 @@ type jpg)
 Package pdftex.def Info: figures/launcher_methods/baseline_liquid2_trinidad2012
 .jpg used on input line 123.
 (pdftex.def)             Requested size: 358.50609pt x 151.0638pt.
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <8> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 124.
 
-
-Package natbib Warning: Citation `baseline_liquid2_trinidad2012' on page 5 unde
-fined on input line 124.
-
-
-Package natbib Warning: Citation `whitehead2014mars' on page 5 undefined on inp
-ut line 128.
-
-
-<figures/launcher_methods/dragcoeff_whitehead2004mars.jpg, id=1013, 796.77675pt
+<figures/launcher_methods/dragcoeff_whitehead2004mars.jpg, id=1034, 796.77675pt
  x 475.7775pt>
 File: figures/launcher_methods/dragcoeff_whitehead2004mars.jpg Graphic file (ty
 pe jpg)
@@ -2083,7 +2076,7 @@ pg used on input line 132.
 
 [5 <./figures/launcher_methods/baseline_liquid2_trinidad2012.jpg>]
 <figures/reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij
-1994motion.jpg, id=1027, 1439.3775pt x 999.735pt>
+1994motion.jpg, id=1048, 1439.3775pt x 999.735pt>
 File: figures/reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-
 mooij1994motion.jpg Graphic file (type jpg)
 
@@ -2093,302 +2086,288 @@ Package pdftex.def Info: figures/reference_frames/allFiveReferenceFrames_mooij2
 013fd-trinidad2012-mooij1994motion.jpg used on input line 153.
 (pdftex.def)             Requested size: 448.1309pt x 311.25706pt.
 
-<figures/reference_frames/xtrans_mooij2013stat.jpg, id=1036, 476.982pt x 384.23
+<figures/reference_frames/xtrans_mooij2013stat.jpg, id=1057, 476.982pt x 384.23
 55pt>
 File: figures/reference_frames/xtrans_mooij2013stat.jpg Graphic file (type jpg)
 
  <use figures/reference_frames/xtrans_mooij2013stat.jpg>
 Package pdftex.def Info: figures/reference_frames/xtrans_mooij2013stat.jpg used
- on input line 163.
+ on input line 164.
 (pdftex.def)             Requested size: 268.88127pt x 216.60097pt.
 
-
-LaTeX Warning: Reference `app:appendixAA-referenceSystemTransformations' on pag
-e 1 undefined on input line 188.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
-
- []
-
-
-<figures/reference_frames/sphertocart_noomen2013basic.jpg, id=1040, 277.035pt x
+<figures/reference_frames/sphertocart_noomen2013basic.jpg, id=1061, 277.035pt x
  322.806pt>
 File: figures/reference_frames/sphertocart_noomen2013basic.jpg Graphic file (ty
 pe jpg)
  <use figures/reference_frames/sphertocart_noomen2013basic.jpg>
 Package pdftex.def Info: figures/reference_frames/sphertocart_noomen2013basic.j
-pg used on input line 198.
+pg used on input line 200.
 (pdftex.def)             Requested size: 134.44063pt x 156.64937pt.
 
-[6 <./figures/launcher_methods/dragcoeff_whitehead2004mars.jpg>] [7 <./figures/
-reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij1994motio
-n.jpg> <./figures/reference_frames/xtrans_mooij2013stat.jpg>]
-
-LaTeX Warning: Reference `app:appendixAA-referenceSystemTransformations' on pag
-e 1 undefined on input line 223.
-
-) (models.tex [8 <./figures/reference_frames/sphertocart_noomen2013basic.jpg>]
+[6 <./figures/launcher_methods/dragcoeff_whitehead2004mars.jpg>]) (models.tex
+[7 <./figures/reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-
+mooij1994motion.jpg> <./figures/reference_frames/xtrans_mooij2013stat.jpg>]
+[8 <./figures/reference_frames/sphertocart_noomen2013basic.jpg>]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--53
+Underfull \hbox (badness 10000) in paragraph at lines 63--66
 
  []
 
 [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
 
-<figures/reference_frames/propframe_mooij1994motion.jpg, id=1111, 688.37175pt x
+<figures/reference_frames/propframe_mooij1994motion.jpg, id=1131, 688.37175pt x
  449.2785pt>
 File: figures/reference_frames/propframe_mooij1994motion.jpg Graphic file (type
  jpg)
  <use figures/reference_frames/propframe_mooij1994motion.jpg>
 Package pdftex.def Info: figures/reference_frames/propframe_mooij1994motion.jpg
- used on input line 164.
+ used on input line 191.
 (pdftex.def)             Requested size: 358.50609pt x 233.98949pt.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
  []
 
 LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <12> not available
-(Font)              Font shape `T1/futs/b/sc' tried instead on input line 201.
-Package acronym Info: Label `acro:MOLA' newly defined as it shall be overridden
-
-although it is yet undefined on input line 203.
-<figures/software/temperatureData.png, id=1140, 421.575pt x 316.18124pt>
+(Font)              Font shape `T1/futs/b/sc' tried instead on input line 256.
+[12 <./figures/reference_frames/propframe_mooij1994motion.jpg>]
+<figures/software/temperatureData.png, id=1168, 421.575pt x 316.18124pt>
 File: figures/software/temperatureData.png Graphic file (type png)
 
 <use figures/software/temperatureData.png>
 Package pdftex.def Info: figures/software/temperatureData.png used on input lin
-e 208.
+e 263.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
- [12 <./figures/reference_frames/propframe_mooij1994motion.jpg>]
-<figures/software/densityData.png, id=1152, 421.575pt x 316.18124pt>
+
+<figures/software/densityData.png, id=1170, 421.575pt x 316.18124pt>
 File: figures/software/densityData.png Graphic file (type png)
 
 <use figures/software/densityData.png>
-Package pdftex.def Info: figures/software/densityData.png used on input line 21
-5.
+Package pdftex.def Info: figures/software/densityData.png used on input line 27
+0.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
 
-<figures/software/temperatureDataSplit5.png, id=1157, 404.712pt x 266.1945pt>
+<figures/software/temperatureDataSplit5.png, id=1175, 404.712pt x 266.1945pt>
 File: figures/software/temperatureDataSplit5.png Graphic file (type png)
 
 <use figures/software/temperatureDataSplit5.png>
 Package pdftex.def Info: figures/software/temperatureDataSplit5.png used on inp
-ut line 224.
+ut line 279.
 (pdftex.def)             Requested size: 448.1309pt x 294.76857pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
+ [13 <./figures/software/temperatureData.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
 []|\T1/futs/b/n/10 Maximum poly-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
 \T1/futs/b/n/10 no-mial stan-dard
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
 []|\T1/futs/b/n/10 Maximum poly-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
 \T1/futs/b/n/10 no-mial dif-fer-ence
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
 []|\T1/futs/b/n/10 Maximum data
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
 \T1/futs/b/n/10 curves dif-fer-ence
  []
 
 
-Overfull \hbox (52.32355pt too wide) in paragraph at lines 241--249
+Overfull \hbox (52.32355pt too wide) in paragraph at lines 296--304
  [] 
  []
 
-[13 <./figures/software/temperatureData.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 261--261
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--316
 []|\T1/futs/m/n/10 -5.388
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--261
+Underfull \hbox (badness 10000) in paragraph at lines 316--316
 []|\T1/futs/m/n/10 1.785
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--261
+Underfull \hbox (badness 10000) in paragraph at lines 316--316
 []|\T1/futs/m/n/10 1.407
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--261
+Underfull \hbox (badness 10000) in paragraph at lines 316--316
 []|\T1/futs/m/n/10 -1.167
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--262
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
 []|\T1/futs/m/n/10 4.1942
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--262
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
 []|\T1/futs/m/n/10 -4.328
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--262
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
 []|\T1/futs/m/n/10 1.931
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--262
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
 []|\T1/futs/m/n/10 -4.862
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--262
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
 []|\T1/futs/m/n/10 -1.523
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--262
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
 []|\T1/futs/m/n/10 2.236
  []
 
 
-<figures/software/completePolyFitTempSplit5.png, id=1173, 421.575pt x 316.18124
+<figures/software/completePolyFitTempSplit5.png, id=1190, 421.575pt x 316.18124
 pt>
 File: figures/software/completePolyFitTempSplit5.png Graphic file (type png)
  <use figures/software/completePolyFitTempSplit5.png>
 Package pdftex.def Info: figures/software/completePolyFitTempSplit5.png used on
- input line 271.
+ input line 326.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
- [14 <./figures/software/densityData.png (PNG copy)>]
-<figures/software/lnPlotDataDen.png, id=1180, 421.575pt x 316.18124pt>
+
+<figures/software/lnPlotDataDen.png, id=1192, 421.575pt x 316.18124pt>
 File: figures/software/lnPlotDataDen.png Graphic file (type png)
 
 <use figures/software/lnPlotDataDen.png>
 Package pdftex.def Info: figures/software/lnPlotDataDen.png used on input line 
-283.
+338.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+ [14 <./figures/software/densityData.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []|\T1/futs/m/n/10 2.287
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []|\T1/futs/m/n/10 -3.724
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []|\T1/futs/m/n/10 2.559
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []|\T1/futs/m/n/10 -9.620
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []|\T1/futs/m/n/10 2.146
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []|\T1/futs/m/n/10 -2.884
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []|\T1/futs/m/n/10 2.273
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []|\T1/futs/m/n/10 -9.604
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []|\T1/futs/m/n/10 1.414
  []
 
 
-Overfull \hbox (32.94925pt too wide) in paragraph at lines 354--359
+Overfull \hbox (32.94925pt too wide) in paragraph at lines 409--414
  [] 
  []
 
 
-<figures/software/completeExpPolyFitDen.png, id=1186, 421.575pt x 316.18124pt>
+<figures/software/completeExpPolyFitDen.png, id=1206, 421.575pt x 316.18124pt>
 File: figures/software/completeExpPolyFitDen.png Graphic file (type png)
 
 <use figures/software/completeExpPolyFitDen.png>
 Package pdftex.def Info: figures/software/completeExpPolyFitDen.png used on inp
-ut line 367.
+ut line 422.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
 
-<figures/software/completeExpFitDen.png, id=1187, 421.575pt x 316.18124pt>
+<figures/software/completeExpFitDen.png, id=1207, 421.575pt x 316.18124pt>
 File: figures/software/completeExpFitDen.png Graphic file (type png)
 
 <use figures/software/completeExpFitDen.png>
 Package pdftex.def Info: figures/software/completeExpFitDen.png used on input l
-ine 374.
+ine 429.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
 
  []
 
 [15 <./figures/software/temperatureDataSplit5.png>]
-<figures/software/dragCoeffFit.png, id=1201, 421.575pt x 316.18124pt>
+<figures/software/dragCoeffFit.png, id=1219, 421.575pt x 316.18124pt>
 File: figures/software/dragCoeffFit.png Graphic file (type png)
 
 <use figures/software/dragCoeffFit.png>
 Package pdftex.def Info: figures/software/dragCoeffFit.png used on input line 4
-14.
+69.
 (pdftex.def)             Requested size: 448.1309pt x 336.10577pt.
  [16 <./figures/software/completePolyFitTempSplit5.png (PNG copy)>]
-<figures/circularisation/deltaVcircularOrbitMars_wakker2010.png, id=1211, 225.2
+<figures/circularisation/deltaVcircularOrbitMars_wakker2010.png, id=1230, 225.2
 415pt x 218.61674pt>
 File: figures/circularisation/deltaVcircularOrbitMars_wakker2010.png Graphic fi
 le (type png)
 
 <use figures/circularisation/deltaVcircularOrbitMars_wakker2010.png>
 Package pdftex.def Info: figures/circularisation/deltaVcircularOrbitMars_wakker
-2010.png used on input line 427.
+2010.png used on input line 483.
 (pdftex.def)             Requested size: 134.44063pt x 130.4872pt.
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <8> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 484.
 
 
 Package natbib Warning: Citation `deltaVcircularOrbitMars_wakker2010' on page 1
-7 undefined on input line 428.
+7 undefined on input line 484.
 
 [17 <./figures/software/lnPlotDataDen.png (PNG copy)>] [18 <./figures/software/
 completeExpPolyFitDen.png (PNG copy)> <./figures/circularisation/deltaVcircular
@@ -2409,6 +2388,12 @@ although it is yet undefined on input line 35.
 Package acronym Info: Label `acro:RKF45' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 35.
+
+Overfull \hbox (2.7617pt too wide) in paragraph at lines 34--36
+\T1/futs/m/n/10 next state. This means that the in-for-ma-tion of the pre-vi-ou
+s points is ne-glected and usu-ally not saved ([][]Noomen[][],
+ []
+
 Package acronym Info: Label `acro:AB4' newly defined as it shall be overridden
 although it is yet undefined on input line 40.
 Package acronym Info: Label `acro:AB6' newly defined as it shall be overridden
@@ -2461,7 +2446,7 @@ Package acronym Info: Label `acro:RKF56' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 76.
 [22]
-<figures/integrators/rk4_noomen2013int.jpg, id=1391, 402.303pt x 215.6055pt>
+<figures/integrators/rk4_noomen2013int.jpg, id=1410, 402.303pt x 215.6055pt>
 File: figures/integrators/rk4_noomen2013int.jpg Graphic file (type jpg)
 
 <use figures/integrators/rk4_noomen2013int.jpg>
@@ -2473,22 +2458,22 @@ Chapter 5.
 [25
 
 ] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 90--92
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
+Underfull \hbox (badness 10000) in paragraph at lines 117--119
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
 
  []
 
@@ -2497,56 +2482,55 @@ File: figures/reference_frames/sphertocart_noomen2013basic.jpg Graphic file (ty
 pe jpg)
  <use figures/reference_frames/sphertocart_noomen2013basic.jpg>
 Package pdftex.def Info: figures/reference_frames/sphertocart_noomen2013basic.j
-pg used on input line 310.
+pg used on input line 333.
 (pdftex.def)             Requested size: 313.69026pt x 365.52014pt.
 
-[30]
-<figures/reference_frames/vertical_spherical_mooij1994motion.jpg, id=1562, 526.
+[30] [31]
+<figures/reference_frames/vertical_spherical_mooij1994motion.jpg, id=1587, 526.
 96875pt x 397.485pt>
 File: figures/reference_frames/vertical_spherical_mooij1994motion.jpg Graphic f
 ile (type jpg)
 
 <use figures/reference_frames/vertical_spherical_mooij1994motion.jpg>
 Package pdftex.def Info: figures/reference_frames/vertical_spherical_mooij1994m
-otion.jpg used on input line 442.
+otion.jpg used on input line 465.
 (pdftex.def)             Requested size: 313.69026pt x 236.62477pt.
- [31]
-[32 <./figures/reference_frames/vertical_spherical_mooij1994motion.jpg>]
-[33] [34]
-Overfull \hbox (44.94644pt too wide) detected at line 783
+ [32 <./figures/reference_frames/vertical_spherical_mooij1994motion.jpg>] [33] 
+[34]
+Overfull \hbox (44.94644pt too wide) detected at line 806
 []\U/futm/m/n/10 T[] [] \FMS/futm/m/n/10 Å [] [] 
  []
 
 [35] [36]
-<figures/reference_frames/cartesian_transformation_mooij1994motion.jpg, id=1667
+<figures/reference_frames/cartesian_transformation_mooij1994motion.jpg, id=1685
 , 460.72125pt x 400.49625pt>
 File: figures/reference_frames/cartesian_transformation_mooij1994motion.jpg Gra
 phic file (type jpg)
 
 <use figures/reference_frames/cartesian_transformation_mooij1994motion.jpg>
 Package pdftex.def Info: figures/reference_frames/cartesian_transformation_mooi
-j1994motion.jpg used on input line 1019.
+j1994motion.jpg used on input line 1049.
 (pdftex.def)             Requested size: 313.69026pt x 272.68217pt.
 Package acronym Info: Label `acro:RHR' newly defined as it shall be overridden
-although it is yet undefined on input line 1024.
+although it is yet undefined on input line 1054.
 
 [37 <./figures/reference_frames/cartesian_transformation_mooij1994motion.jpg>]
 [38]
-<figures/tsi/spherical_mooij1994motion.jpg, id=1710, 337.26pt x 338.4645pt>
+<figures/tsi/spherical_mooij1994motion.jpg, id=1728, 337.26pt x 338.4645pt>
 File: figures/tsi/spherical_mooij1994motion.jpg Graphic file (type jpg)
 
 <use figures/tsi/spherical_mooij1994motion.jpg>
 Package pdftex.def Info: figures/tsi/spherical_mooij1994motion.jpg used on inpu
-t line 1216.
+t line 1246.
 (pdftex.def)             Requested size: 313.69026pt x 314.8152pt.
  [39 <./figures/tsi/spherical_mooij1994motion.jpg>] [40]
-Overfull \hbox (18.49672pt too wide) in paragraph at lines 1414--1414
+Overfull \hbox (18.49672pt too wide) in paragraph at lines 1444--1444
 [] 
  []
 
 [41] [42] [43] [44]) (programoptimisationtool.tex [45]
 Chapter 6.
-<figures/software/tudatBlock.png, id=1871, 258.36525pt x 178.86826pt>
+<figures/software/tudatBlock.png, id=1889, 258.36525pt x 178.86826pt>
 File: figures/software/tudatBlock.png Graphic file (type png)
 
 <use figures/software/tudatBlock.png>
@@ -2556,7 +2540,7 @@ Package pdftex.def Info: figures/software/tudatBlock.png used on input line 20.
  [46
 
  <./figures/software/tudatBlock.png>]
-[47] <figures/software/RK_Propagator.png, id=1930, 784.73175pt x 502.87875pt>
+[47] <figures/software/RK_Propagator.png, id=1949, 784.73175pt x 502.87875pt>
 File: figures/software/RK_Propagator.png Graphic file (type png)
 
 <use figures/software/RK_Propagator.png>
@@ -2567,7 +2551,7 @@ Package pdftex.def Info: figures/software/RK_Propagator.png used on input line
 
 LaTeX Warning: Float too large for page by 15.65628pt on input line 83.
 
-<figures/software/TSI_Propagator.png, id=1939, 790.152pt x 477.58424pt>
+<figures/software/TSI_Propagator.png, id=1958, 790.152pt x 477.58424pt>
 File: figures/software/TSI_Propagator.png Graphic file (type png)
 
 <use figures/software/TSI_Propagator.png>
@@ -2621,7 +2605,7 @@ Overfull \hbox (13.10841pt too wide) in paragraph at lines 105--125
  []
 
 
-<figures/verification/case1/PlotFigure2Zoom.png, id=2117, 1445.4pt x 785.93625p
+<figures/verification/case1/PlotFigure2Zoom.png, id=2135, 1445.4pt x 785.93625p
 t>
 File: figures/verification/case1/PlotFigure2Zoom.png Graphic file (type png)
  <use figures/verification/case1/PlotFigure2Zoom.png>
@@ -2629,7 +2613,7 @@ Package pdftex.def Info: figures/verification/case1/PlotFigure2Zoom.png used on
  input line 132.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case1/PlotFigure1SeenFromZoomXaxis.png, id=2118, 1445.4pt
+<figures/verification/case1/PlotFigure1SeenFromZoomXaxis.png, id=2136, 1445.4pt
  x 785.93625pt>
 File: figures/verification/case1/PlotFigure1SeenFromZoomXaxis.png Graphic file 
 (type png)
@@ -2639,7 +2623,7 @@ Package pdftex.def Info: figures/verification/case1/PlotFigure1SeenFromZoomXaxi
 s.png used on input line 139.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case1/PlotFigure1SeenFromZoomYaxis.png, id=2119, 1445.4pt
+<figures/verification/case1/PlotFigure1SeenFromZoomYaxis.png, id=2137, 1445.4pt
  x 785.93625pt>
 File: figures/verification/case1/PlotFigure1SeenFromZoomYaxis.png Graphic file 
 (type png)
@@ -2649,7 +2633,7 @@ Package pdftex.def Info: figures/verification/case1/PlotFigure1SeenFromZoomYaxi
 s.png used on input line 146.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case1/PlotFigure1SeenFromZoomZaxis.png, id=2120, 1445.4pt
+<figures/verification/case1/PlotFigure1SeenFromZoomZaxis.png, id=2138, 1445.4pt
  x 785.93625pt>
 File: figures/verification/case1/PlotFigure1SeenFromZoomZaxis.png Graphic file 
 (type png)
@@ -2659,7 +2643,7 @@ Package pdftex.def Info: figures/verification/case1/PlotFigure1SeenFromZoomZaxi
 s.png used on input line 153.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case2/PlotFigure2Zoom.png, id=2130, 1445.4pt x 785.93625p
+<figures/verification/case2/PlotFigure2Zoom.png, id=2148, 1445.4pt x 785.93625p
 t>
 File: figures/verification/case2/PlotFigure2Zoom.png Graphic file (type png)
  <use figures/verification/case2/PlotFigure2Zoom.png>
@@ -2667,7 +2651,7 @@ Package pdftex.def Info: figures/verification/case2/PlotFigure2Zoom.png used on
  input line 196.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case2/PlotFigure1SeenFromXaxisZoom.png, id=2131, 1445.4pt
+<figures/verification/case2/PlotFigure1SeenFromXaxisZoom.png, id=2149, 1445.4pt
  x 785.93625pt>
 File: figures/verification/case2/PlotFigure1SeenFromXaxisZoom.png Graphic file 
 (type png)
@@ -2677,7 +2661,7 @@ Package pdftex.def Info: figures/verification/case2/PlotFigure1SeenFromXaxisZoo
 m.png used on input line 203.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case2/PlotFigure1SeenFromYaxisZoom.png, id=2132, 1445.4pt
+<figures/verification/case2/PlotFigure1SeenFromYaxisZoom.png, id=2150, 1445.4pt
  x 785.93625pt>
 File: figures/verification/case2/PlotFigure1SeenFromYaxisZoom.png Graphic file 
 (type png)
@@ -2687,7 +2671,7 @@ Package pdftex.def Info: figures/verification/case2/PlotFigure1SeenFromYaxisZoo
 m.png used on input line 210.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
-<figures/verification/case2/PlotFigure1SeenFromZaxisZoom.png, id=2133, 1445.4pt
+<figures/verification/case2/PlotFigure1SeenFromZaxisZoom.png, id=2151, 1445.4pt
  x 785.93625pt>
 File: figures/verification/case2/PlotFigure1SeenFromZaxisZoom.png Graphic file 
 (type png)
@@ -2698,7 +2682,7 @@ m.png used on input line 217.
 (pdftex.def)             Requested size: 358.50609pt x 194.93655pt.
 
 <figures/verification/case2/thrustAzimuthAndElevationDerivedFromCase2Version2.p
-ng, id=2135, 427.5975pt x 308.65312pt>
+ng, id=2153, 427.5975pt x 308.65312pt>
 File: figures/verification/case2/thrustAzimuthAndElevationDerivedFromCase2Versi
 on2.png Graphic file (type png)
 
@@ -2734,7 +2718,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 [61
 
 ]
-<figures/results/Order/orderVsCPUcase1IncludingLiveDataCollection.png, id=2189,
+<figures/results/Order/orderVsCPUcase1IncludingLiveDataCollection.png, id=2207,
  414.04688pt x 293.59688pt>
 File: figures/results/Order/orderVsCPUcase1IncludingLiveDataCollection.png Grap
 hic file (type png)
@@ -2744,7 +2728,7 @@ Package pdftex.def Info: figures/results/Order/orderVsCPUcase1IncludingLiveData
 Collection.png used on input line 24.
 (pdftex.def)             Requested size: 224.03743pt x 158.86697pt.
 
-<figures/results/Order/orderVsCPUcase2IncludingLiveDataCollection.png, id=2190,
+<figures/results/Order/orderVsCPUcase2IncludingLiveDataCollection.png, id=2208,
  414.04688pt x 293.59688pt>
 File: figures/results/Order/orderVsCPUcase2IncludingLiveDataCollection.png Grap
 hic file (type png)
@@ -2759,7 +2743,7 @@ Overfull \hbox (2.01395pt too wide) in paragraph at lines 24--25
  []
 
 
-<figures/results/Order/orderVsCPUcase1NoDataCollection.png, id=2191, 421.575pt 
+<figures/results/Order/orderVsCPUcase1NoDataCollection.png, id=2209, 421.575pt 
 x 316.18124pt>
 File: figures/results/Order/orderVsCPUcase1NoDataCollection.png Graphic file (t
 ype png)
@@ -2768,7 +2752,7 @@ Package pdftex.def Info: figures/results/Order/orderVsCPUcase1NoDataCollection.
 png used on input line 27.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
-<figures/results/Order/orderVsCPUcase2NoDataCollection.png, id=2192, 421.575pt 
+<figures/results/Order/orderVsCPUcase2NoDataCollection.png, id=2210, 421.575pt 
 x 316.18124pt>
 File: figures/results/Order/orderVsCPUcase2NoDataCollection.png Graphic file (t
 ype png)
@@ -2782,7 +2766,7 @@ G copy)> <./figures/results/Order/orderVsCPUcase2IncludingLiveDataCollection.pn
 g (PNG copy)> <./figures/results/Order/orderVsCPUcase1NoDataCollection.png (PNG
  copy)> <./figures/results/Order/orderVsCPUcase2NoDataCollection.png (PNG copy)
 >]
-<figures/results/Order/orderVsCPUcase1combined.png, id=2212, 520.19344pt x 316.
+<figures/results/Order/orderVsCPUcase1combined.png, id=2230, 520.19344pt x 316.
 18124pt>
 File: figures/results/Order/orderVsCPUcase1combined.png Graphic file (type png)
 
@@ -2791,7 +2775,7 @@ Package pdftex.def Info: figures/results/Order/orderVsCPUcase1combined.png used
  on input line 119.
 (pdftex.def)             Requested size: 224.03743pt x 136.17238pt.
 
-<figures/results/Order/orderVsCPUcase2combined.png, id=2213, 502.87875pt x 316.
+<figures/results/Order/orderVsCPUcase2combined.png, id=2231, 502.87875pt x 316.
 18124pt>
 File: figures/results/Order/orderVsCPUcase2combined.png Graphic file (type png)
 
@@ -2801,7 +2785,7 @@ Package pdftex.def Info: figures/results/Order/orderVsCPUcase2combined.png used
 (pdftex.def)             Requested size: 224.03743pt x 140.86183pt.
  [63 <./figures/results/Order/orderVsCPUcase1combined.png (PNG copy)> <./figure
 s/results/Order/orderVsCPUcase2combined.png>]
-<figures/results/Order/orderVsRKFAbsoluteDifferenceCase1combined.png, id=2231, 
+<figures/results/Order/orderVsRKFAbsoluteDifferenceCase1combined.png, id=2249, 
 1396.4672pt x 753.5653pt>
 File: figures/results/Order/orderVsRKFAbsoluteDifferenceCase1combined.png Graph
 ic file (type png)
@@ -2816,7 +2800,7 @@ Overfull \hbox (44.81581pt too wide) in paragraph at lines 129--129
  []
 
 
-<figures/results/Order/orderVsRKFAbsoluteDifferenceCase2combined.png, id=2232, 
+<figures/results/Order/orderVsRKFAbsoluteDifferenceCase2combined.png, id=2250, 
 1396.4672pt x 753.5653pt>
 File: figures/results/Order/orderVsRKFAbsoluteDifferenceCase2combined.png Graph
 ic file (type png)
@@ -2834,7 +2818,7 @@ Overfull \hbox (44.81581pt too wide) in paragraph at lines 132--133
  copy)> <./figures/results/Order/orderVsRKFAbsoluteDifferenceCase2combined.png 
 (PNG copy)>]
 <figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase1RKFTS
-IpositionSmall.png, id=2254, 421.575pt x 316.18124pt>
+IpositionSmall.png, id=2273, 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase1
 RKFTSIpositionSmall.png Graphic file (type png)
 
@@ -2845,7 +2829,7 @@ tiveDifferenceCase1RKFTSIpositionSmall.png used on input line 163.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase2RKFTS
-IpositionSmall.png, id=2255, 421.575pt x 316.18124pt>
+IpositionSmall.png, id=2274, 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase2
 RKFTSIpositionSmall.png Graphic file (type png)
 
@@ -2861,7 +2845,7 @@ Overfull \hbox (2.01395pt too wide) in paragraph at lines 163--164
 
 
 <figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase1RKFTS
-IvelocitySmall.png, id=2256, 421.575pt x 316.18124pt>
+IvelocitySmall.png, id=2275, 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase1
 RKFTSIvelocitySmall.png Graphic file (type png)
 
@@ -2872,7 +2856,7 @@ tiveDifferenceCase1RKFTSIvelocitySmall.png used on input line 166.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase2RKFTS
-IvelocitySmall.png, id=2257, 421.575pt x 316.18124pt>
+IvelocitySmall.png, id=2276, 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase2
 RKFTSIvelocitySmall.png Graphic file (type png)
 
@@ -2888,7 +2872,7 @@ es/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase1RKFTSIveloc
 itySmall.png (PNG copy)> <./figures/results/errorTolerance/errorToleranceVsCons
 ecutiveDifferenceCase2RKFTSIvelocitySmall.png (PNG copy)>]
 <figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase1R
-KFTSIpositionSmall.png, id=2279, 421.575pt x 316.18124pt>
+KFTSIpositionSmall.png, id=2298, 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceC
 ase1RKFTSIpositionSmall.png Graphic file (type png)
 
@@ -2899,7 +2883,7 @@ AbsoluteDifferenceCase1RKFTSIpositionSmall.png used on input line 176.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase2R
-KFTSIpositionSmall.png, id=2280, 421.575pt x 316.18124pt>
+KFTSIpositionSmall.png, id=2299, 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceC
 ase2RKFTSIpositionSmall.png Graphic file (type png)
 
@@ -2915,7 +2899,7 @@ Overfull \hbox (2.01395pt too wide) in paragraph at lines 176--177
 
 
 <figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase1R
-KFTSIvelocitySmall.png, id=2281, 421.575pt x 316.18124pt>
+KFTSIvelocitySmall.png, id=2300, 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceC
 ase1RKFTSIvelocitySmall.png Graphic file (type png)
 
@@ -2926,7 +2910,7 @@ AbsoluteDifferenceCase1RKFTSIvelocitySmall.png used on input line 179.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase2R
-KFTSIvelocitySmall.png, id=2282, 421.575pt x 316.18124pt>
+KFTSIvelocitySmall.png, id=2301, 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceC
 ase2RKFTSIvelocitySmall.png Graphic file (type png)
 
@@ -2946,7 +2930,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--221
  []
 
 
-<figures/results/errorTolerance/errorToleranceVsCPUcase1combined.png, id=2325, 
+<figures/results/errorTolerance/errorToleranceVsCPUcase1combined.png, id=2343, 
 462.22687pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsCPUcase1combined.png Graph
 ic file (type png)
@@ -2956,7 +2940,7 @@ Package pdftex.def Info: figures/results/errorTolerance/errorToleranceVsCPUcase
 1combined.png used on input line 250.
 (pdftex.def)             Requested size: 231.11287pt x 158.09023pt.
 
-<figures/results/errorTolerance/errorToleranceVsCPUcase2combined.png, id=2326, 
+<figures/results/errorTolerance/errorToleranceVsCPUcase2combined.png, id=2344, 
 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsCPUcase2combined.png Graph
 ic file (type png)
@@ -2970,7 +2954,7 @@ Package pdftex.def Info: figures/results/errorTolerance/errorToleranceVsCPUcase
  copy)> <./figures/results/errorTolerance/errorToleranceVsCPUcase2combined.png 
 (PNG copy)>]
 <figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase1combi
-nedSmall.png, id=2337, 421.575pt x 316.18124pt>
+nedSmall.png, id=2355, 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase1
 combinedSmall.png Graphic file (type png)
 
@@ -2981,7 +2965,7 @@ tiveDifferenceCase1combinedSmall.png used on input line 261.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase2combi
-nedSmall.png, id=2338, 421.575pt x 316.18124pt>
+nedSmall.png, id=2356, 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsConsecutiveDifferenceCase2
 combinedSmall.png Graphic file (type png)
 
@@ -2992,7 +2976,7 @@ tiveDifferenceCase2combinedSmall.png used on input line 262.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase1c
-ombinedSmall.png, id=2341, 421.575pt x 316.18124pt>
+ombinedSmall.png, id=2359, 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceC
 ase1combinedSmall.png Graphic file (type png)
 
@@ -3003,7 +2987,7 @@ AbsoluteDifferenceCase1combinedSmall.png used on input line 269.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase2c
-ombinedSmall.png, id=2342, 421.575pt x 316.18124pt>
+ombinedSmall.png, id=2360, 421.575pt x 316.18124pt>
 File: figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDifferenceC
 ase2combinedSmall.png Graphic file (type png)
 
@@ -3018,7 +3002,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--285
  []
 
 
-<figures/results/multiRun/multiRunVsCPUcase1RKFTSIsmall.png, id=2357, 421.575pt
+<figures/results/multiRun/multiRunVsCPUcase1RKFTSIsmall.png, id=2375, 421.575pt
  x 316.18124pt>
 File: figures/results/multiRun/multiRunVsCPUcase1RKFTSIsmall.png Graphic file (
 type png)
@@ -3028,7 +3012,7 @@ Package pdftex.def Info: figures/results/multiRun/multiRunVsCPUcase1RKFTSIsmall
 .png used on input line 304.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
-<figures/results/multiRun/multiRunVsCPUcase2RKFTSIsmall.png, id=2358, 421.575pt
+<figures/results/multiRun/multiRunVsCPUcase2RKFTSIsmall.png, id=2376, 421.575pt
  x 316.18124pt>
 File: figures/results/multiRun/multiRunVsCPUcase2RKFTSIsmall.png Graphic file (
 type png)
@@ -3043,7 +3027,7 @@ eVsConsecutiveDifferenceCase2combinedSmall.png (PNG copy)> <./figures/results/e
 rrorTolerance/errorToleranceVsNominalAbsoluteDifferenceCase1combinedSmall.png (
 PNG copy)> <./figures/results/errorTolerance/errorToleranceVsNominalAbsoluteDif
 ferenceCase2combinedSmall.png (PNG copy)>]
-<figures/results/multiRun/multiRunVsCPUcase1combinedSmall.png, id=2375, 421.575
+<figures/results/multiRun/multiRunVsCPUcase1combinedSmall.png, id=2393, 421.575
 pt x 316.18124pt>
 File: figures/results/multiRun/multiRunVsCPUcase1combinedSmall.png Graphic file
  (type png)
@@ -3053,7 +3037,7 @@ Package pdftex.def Info: figures/results/multiRun/multiRunVsCPUcase1combinedSma
 ll.png used on input line 333.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
-<figures/results/multiRun/multiRunVsCPUcase2combinedSmall.png, id=2376, 421.575
+<figures/results/multiRun/multiRunVsCPUcase2combinedSmall.png, id=2394, 421.575
 pt x 316.18124pt>
 File: figures/results/multiRun/multiRunVsCPUcase2combinedSmall.png Graphic file
  (type png)
@@ -3076,7 +3060,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 360--364
  []
 
 
-<figures/results/launchAltitude/launchAltitudeVsCPUcase1combined.png, id=2399, 
+<figures/results/launchAltitude/launchAltitudeVsCPUcase1combined.png, id=2417, 
 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsCPUcase1combined.png Graph
 ic file (type png)
@@ -3086,7 +3070,7 @@ Package pdftex.def Info: figures/results/launchAltitude/launchAltitudeVsCPUcase
 1combined.png used on input line 369.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
-<figures/results/launchAltitude/launchAltitudeVsCPUcase2combined.png, id=2400, 
+<figures/results/launchAltitude/launchAltitudeVsCPUcase2combined.png, id=2418, 
 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsCPUcase2combined.png Graph
 ic file (type png)
@@ -3097,7 +3081,7 @@ Package pdftex.def Info: figures/results/launchAltitude/launchAltitudeVsCPUcase
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchAltitude/launchAltitudeVsConsecutiveDifferenceCase1combi
-nedSmall.png, id=2406, 421.575pt x 316.18124pt>
+nedSmall.png, id=2424, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsConsecutiveDifferenceCase1
 combinedSmall.png Graphic file (type png)
 
@@ -3108,7 +3092,7 @@ tiveDifferenceCase1combinedSmall.png used on input line 380.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchAltitude/launchAltitudeVsConsecutiveDifferenceCase2combi
-nedSmall.png, id=2407, 421.575pt x 316.18124pt>
+nedSmall.png, id=2425, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsConsecutiveDifferenceCase2
 combinedSmall.png Graphic file (type png)
 
@@ -3121,7 +3105,7 @@ tiveDifferenceCase2combinedSmall.png used on input line 381.
 G copy)> <./figures/results/launchAltitude/launchAltitudeVsCPUcase2combined.png
  (PNG copy)>]
 <figures/results/launchAltitude/launchAltitudeVsNominalAbsoluteDifferenceCase1c
-ombinedSmall.png, id=2419, 421.575pt x 325.96782pt>
+ombinedSmall.png, id=2438, 421.575pt x 325.96782pt>
 File: figures/results/launchAltitude/launchAltitudeVsNominalAbsoluteDifferenceC
 ase1combinedSmall.png Graphic file (type png)
 
@@ -3132,7 +3116,7 @@ AbsoluteDifferenceCase1combinedSmall.png used on input line 390.
 (pdftex.def)             Requested size: 224.03743pt x 173.22966pt.
 
 <figures/results/launchAltitude/launchAltitudeVsNominalAbsoluteDifferenceCase2c
-ombinedSmall.png, id=2420, 421.575pt x 330.48468pt>
+ombinedSmall.png, id=2439, 421.575pt x 330.48468pt>
 File: figures/results/launchAltitude/launchAltitudeVsNominalAbsoluteDifferenceC
 ase2combinedSmall.png Graphic file (type png)
 
@@ -3142,8 +3126,8 @@ Package pdftex.def Info: figures/results/launchAltitude/launchAltitudeVsNominal
 AbsoluteDifferenceCase2combinedSmall.png used on input line 391.
 (pdftex.def)             Requested size: 224.03743pt x 175.63007pt.
 
-<figures/results/launchAltitude/launchAltitudeVsRadiusCase1combined.png, id=242
-6, 421.575pt x 316.18124pt>
+<figures/results/launchAltitude/launchAltitudeVsRadiusCase1combined.png, id=244
+5, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsRadiusCase1combined.png Gr
 aphic file (type png)
 
@@ -3152,8 +3136,8 @@ Package pdftex.def Info: figures/results/launchAltitude/launchAltitudeVsRadiusC
 ase1combined.png used on input line 403.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
-<figures/results/launchAltitude/launchAltitudeVsRadiusCase2combined.png, id=242
-7, 421.575pt x 316.18124pt>
+<figures/results/launchAltitude/launchAltitudeVsRadiusCase2combined.png, id=244
+6, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsRadiusCase2combined.png Gr
 aphic file (type png)
 
@@ -3169,7 +3153,7 @@ unchAltitude/launchAltitudeVsNominalAbsoluteDifferenceCase1combinedSmall.png> <
 ./figures/results/launchAltitude/launchAltitudeVsNominalAbsoluteDifferenceCase2
 combinedSmall.png (PNG copy)>]
 <figures/results/launchAltitude/launchAltitudeVsVelocityCase1combined.png, id=2
-442, 491.58656pt x 316.18124pt>
+461, 491.58656pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsVelocityCase1combined.png 
 Graphic file (type png)
 
@@ -3179,7 +3163,7 @@ yCase1combined.png used on input line 415.
 (pdftex.def)             Requested size: 245.79268pt x 158.09023pt.
 
 <figures/results/launchAltitude/launchAltitudeVsVelocityCase2combined.png, id=2
-443, 421.575pt x 316.18124pt>
+462, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsVelocityCase2combined.png 
 Graphic file (type png)
 
@@ -3202,7 +3186,7 @@ PNG copy)> <./figures/results/launchAltitude/launchAltitudeVsRadiusCase2combine
 d.png (PNG copy)> <./figures/results/launchAltitude/launchAltitudeVsVelocityCas
 e1combined.png (PNG copy)> <./figures/results/launchAltitude/launchAltitudeVsVe
 locityCase2combined.png (PNG copy)>]
-<figures/results/launchLatitude/launchLatitudeVsCPUcase1combined.png, id=2464, 
+<figures/results/launchLatitude/launchLatitudeVsCPUcase1combined.png, id=2482, 
 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsCPUcase1combined.png Graph
 ic file (type png)
@@ -3212,7 +3196,7 @@ Package pdftex.def Info: figures/results/launchLatitude/launchLatitudeVsCPUcase
 1combined.png used on input line 447.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
-<figures/results/launchLatitude/launchLatitudeVsCPUcase2combined.png, id=2465, 
+<figures/results/launchLatitude/launchLatitudeVsCPUcase2combined.png, id=2483, 
 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsCPUcase2combined.png Graph
 ic file (type png)
@@ -3222,8 +3206,8 @@ Package pdftex.def Info: figures/results/launchLatitude/launchLatitudeVsCPUcase
 2combined.png used on input line 448.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
-<figures/results/launchLatitude/launchLatitudeVsRadiusCase1combined.png, id=246
-9, 421.575pt x 316.18124pt>
+<figures/results/launchLatitude/launchLatitudeVsRadiusCase1combined.png, id=248
+7, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsRadiusCase1combined.png Gr
 aphic file (type png)
 
@@ -3232,8 +3216,8 @@ Package pdftex.def Info: figures/results/launchLatitude/launchLatitudeVsRadiusC
 ase1combined.png used on input line 457.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
-<figures/results/launchLatitude/launchLatitudeVsRadiusCase2combined.png, id=247
-0, 421.575pt x 316.18124pt>
+<figures/results/launchLatitude/launchLatitudeVsRadiusCase2combined.png, id=248
+8, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsRadiusCase2combined.png Gr
 aphic file (type png)
 
@@ -3252,7 +3236,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 463--465
 ed.png (PNG copy)> <./figures/results/launchLatitude/launchLatitudeVsRadiusCase
 2combined.png (PNG copy)>]
 <figures/results/launchLatitude/launchLatitudeVsVelocityCase1combined.png, id=2
-485, 421.575pt x 316.18124pt>
+503, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsVelocityCase1combined.png 
 Graphic file (type png)
 
@@ -3262,7 +3246,7 @@ yCase1combined.png used on input line 471.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLatitude/launchLatitudeVsVelocityCase2combined.png, id=2
-486, 421.575pt x 316.18124pt>
+504, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsVelocityCase2combined.png 
 Graphic file (type png)
 
@@ -3276,7 +3260,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 510--511
  []
 
 
-<figures/results/launchLongitude/launchLongitudeVsCPUcase1combined.png, id=2493
+<figures/results/launchLongitude/launchLongitudeVsCPUcase1combined.png, id=2511
 , 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsCPUcase1combined.png Gra
 phic file (type png)
@@ -3286,7 +3270,7 @@ Package pdftex.def Info: figures/results/launchLongitude/launchLongitudeVsCPUca
 se1combined.png used on input line 539.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
-<figures/results/launchLongitude/launchLongitudeVsCPUcase2combined.png, id=2494
+<figures/results/launchLongitude/launchLongitudeVsCPUcase2combined.png, id=2512
 , 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsCPUcase2combined.png Gra
 phic file (type png)
@@ -3300,7 +3284,7 @@ se2combined.png used on input line 540.
  (PNG copy)> <./figures/results/launchLatitude/launchLatitudeVsVelocityCase2com
 bined.png (PNG copy)>]
 <figures/results/launchLongitude/launchLongitudeVsRadiusCase1combined.png, id=2
-508, 421.575pt x 316.18124pt>
+526, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsRadiusCase1combined.png 
 Graphic file (type png)
 
@@ -3310,7 +3294,7 @@ sCase1combined.png used on input line 551.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLongitude/launchLongitudeVsRadiusCase2combined.png, id=2
-509, 421.575pt x 316.18124pt>
+527, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsRadiusCase2combined.png 
 Graphic file (type png)
 
@@ -3320,7 +3304,7 @@ sCase2combined.png used on input line 552.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLongitude/launchLongitudeVsVelocityCase1combined.png, id
-=2512, 421.575pt x 316.18124pt>
+=2530, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsVelocityCase1combined.pn
 g Graphic file (type png)
 
@@ -3331,7 +3315,7 @@ ityCase1combined.png used on input line 559.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLongitude/launchLongitudeVsVelocityCase2combined.png, id
-=2513, 421.575pt x 316.18124pt>
+=2531, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsVelocityCase2combined.pn
 g Graphic file (type png)
 
@@ -3345,7 +3329,7 @@ PNG copy)> <./figures/results/launchLongitude/launchLongitudeVsCPUcase2combined
 .png (PNG copy)> <./figures/results/launchLongitude/launchLongitudeVsRadiusCase
 1combined.png (PNG copy)> <./figures/results/launchLongitude/launchLongitudeVsR
 adiusCase2combined.png (PNG copy)>]
-<figures/results/FPA/FPAvsFunctionEvaluationsCase1combined.png, id=2534, 476.53
+<figures/results/FPA/FPAvsFunctionEvaluationsCase1combined.png, id=2552, 476.53
 032pt x 316.18124pt>
 File: figures/results/FPA/FPAvsFunctionEvaluationsCase1combined.png Graphic fil
 e (type png)
@@ -3355,7 +3339,7 @@ Package pdftex.def Info: figures/results/FPA/FPAvsFunctionEvaluationsCase1combi
 ned.png used on input line 600.
 (pdftex.def)             Requested size: 238.26457pt x 158.09023pt.
 
-<figures/results/FPA/FPAvsFunctionEvaluationsCase2combined.png, id=2535, 421.57
+<figures/results/FPA/FPAvsFunctionEvaluationsCase2combined.png, id=2553, 421.57
 5pt x 316.18124pt>
 File: figures/results/FPA/FPAvsFunctionEvaluationsCase2combined.png Graphic fil
 e (type png)
@@ -3370,7 +3354,7 @@ Overfull \hbox (0.92064pt too wide) in paragraph at lines 600--602
  []
 
 
-<figures/results/FPA/FPA_functionEvaluationsVsCPUcase1combined.png, id=2539, 51
+<figures/results/FPA/FPA_functionEvaluationsVsCPUcase1combined.png, id=2557, 51
 2.66531pt x 316.18124pt>
 File: figures/results/FPA/FPA_functionEvaluationsVsCPUcase1combined.png Graphic
  file (type png)
@@ -3380,7 +3364,7 @@ Package pdftex.def Info: figures/results/FPA/FPA_functionEvaluationsVsCPUcase1c
 ombined.png used on input line 611.
 (pdftex.def)             Requested size: 256.33202pt x 158.09023pt.
 
-<figures/results/FPA/FPA_functionEvaluationsVsCPUcase2combined.png, id=2540, 42
+<figures/results/FPA/FPA_functionEvaluationsVsCPUcase2combined.png, id=2558, 42
 1.575pt x 316.18124pt>
 File: figures/results/FPA/FPA_functionEvaluationsVsCPUcase2combined.png Graphic
  file (type png)
@@ -3399,7 +3383,7 @@ ng (PNG copy)> <./figures/results/launchLongitude/launchLongitudeVsVelocityCase
 2combined.png (PNG copy)> <./figures/results/FPA/FPAvsFunctionEvaluationsCase1c
 ombined.png (PNG copy)> <./figures/results/FPA/FPAvsFunctionEvaluationsCase2com
 bined.png (PNG copy)>]
-<figures/results/FPA/FPAvsHeightFromLaunchSiteCase1combined.png, id=2561, 460.7
+<figures/results/FPA/FPAvsHeightFromLaunchSiteCase1combined.png, id=2580, 460.7
 2125pt x 316.18124pt>
 File: figures/results/FPA/FPAvsHeightFromLaunchSiteCase1combined.png Graphic fi
 le (type png)
@@ -3409,7 +3393,7 @@ Package pdftex.def Info: figures/results/FPA/FPAvsHeightFromLaunchSiteCase1comb
 ined.png used on input line 623.
 (pdftex.def)             Requested size: 230.36006pt x 158.09023pt.
 
-<figures/results/FPA/FPAvsHeightFromLaunchSiteCase2combined.png, id=2562, 421.5
+<figures/results/FPA/FPAvsHeightFromLaunchSiteCase2combined.png, id=2581, 421.5
 75pt x 316.18124pt>
 File: figures/results/FPA/FPAvsHeightFromLaunchSiteCase2combined.png Graphic fi
 le (type png)
@@ -3419,7 +3403,7 @@ Package pdftex.def Info: figures/results/FPA/FPAvsHeightFromLaunchSiteCase2comb
 ined.png used on input line 624.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 
-<figures/results/FPA/FPAvsPropellantMassCase1combined.png, id=2567, 450.9347pt 
+<figures/results/FPA/FPAvsPropellantMassCase1combined.png, id=2586, 450.9347pt 
 x 316.18124pt>
 File: figures/results/FPA/FPAvsPropellantMassCase1combined.png Graphic file (ty
 pe png)
@@ -3428,7 +3412,7 @@ Package pdftex.def Info: figures/results/FPA/FPAvsPropellantMassCase1combined.p
 ng used on input line 636.
 (pdftex.def)             Requested size: 225.4668pt x 158.09023pt.
 
-<figures/results/FPA/FPAvsPropellantMassCase2combined.png, id=2568, 421.575pt x
+<figures/results/FPA/FPAvsPropellantMassCase2combined.png, id=2587, 421.575pt x
  316.18124pt>
 File: figures/results/FPA/FPAvsPropellantMassCase2combined.png Graphic file (ty
 pe png)
@@ -3443,7 +3427,7 @@ opy)> <./figures/results/FPA/FPA_functionEvaluationsVsCPUcase2combined.png (PNG
 copy)> <./figures/results/FPA/FPAvsHeightFromLaunchSiteCase2combined.png (PNG c
 opy)>]
 <figures/results/headingAngle/headingAnglevsFunctionEvaluationsCase1combined.pn
-g, id=2588, 421.575pt x 316.18124pt>
+g, id=2607, 421.575pt x 316.18124pt>
 File: figures/results/headingAngle/headingAnglevsFunctionEvaluationsCase1combin
 ed.png Graphic file (type png)
 
@@ -3454,7 +3438,7 @@ luationsCase1combined.png used on input line 682.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 
 <figures/results/headingAngle/headingAnglevsFunctionEvaluationsCase2combined.pn
-g, id=2589, 450.18187pt x 316.18124pt>
+g, id=2608, 450.18187pt x 316.18124pt>
 File: figures/results/headingAngle/headingAnglevsFunctionEvaluationsCase2combin
 ed.png Graphic file (type png)
 
@@ -3469,7 +3453,7 @@ s/results/headingAngle/headingAnglevsFunctionEvaluationsCase1combined.png (PNG
 copy)> <./figures/results/headingAngle/headingAnglevsFunctionEvaluationsCase2co
 mbined.png (PNG copy)>]
 <figures/results/headingAngle/headingAngle_functionEvaluationsVsCPUcase1combine
-d.png, id=2603, 421.575pt x 316.18124pt>
+d.png, id=2621, 421.575pt x 316.18124pt>
 File: figures/results/headingAngle/headingAngle_functionEvaluationsVsCPUcase1co
 mbined.png Graphic file (type png)
 
@@ -3480,7 +3464,7 @@ uationsVsCPUcase1combined.png used on input line 695.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 
 <figures/results/headingAngle/headingAngle_functionEvaluationsVsCPUcase2combine
-d.png, id=2604, 421.575pt x 316.18124pt>
+d.png, id=2622, 421.575pt x 316.18124pt>
 File: figures/results/headingAngle/headingAngle_functionEvaluationsVsCPUcase2co
 mbined.png Graphic file (type png)
 
@@ -3490,7 +3474,7 @@ Package pdftex.def Info: figures/results/headingAngle/headingAngle_functionEval
 uationsVsCPUcase2combined.png used on input line 696.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 
-<figures/results/headingAngle/headingAngleVsAltitudeCase1combined.png, id=2609,
+<figures/results/headingAngle/headingAngleVsAltitudeCase1combined.png, id=2627,
  459.96844pt x 316.18124pt>
 File: figures/results/headingAngle/headingAngleVsAltitudeCase1combined.png Grap
 hic file (type png)
@@ -3500,7 +3484,7 @@ Package pdftex.def Info: figures/results/headingAngle/headingAngleVsAltitudeCas
 e1combined.png used on input line 708.
 (pdftex.def)             Requested size: 229.98366pt x 158.09023pt.
 
-<figures/results/headingAngle/headingAngleVsAltitudeCase2combined.png, id=2610,
+<figures/results/headingAngle/headingAngleVsAltitudeCase2combined.png, id=2628,
  444.15938pt x 316.18124pt>
 File: figures/results/headingAngle/headingAngleVsAltitudeCase2combined.png Grap
 hic file (type png)
@@ -3516,7 +3500,7 @@ Overfull \hbox (3.93188pt too wide) in paragraph at lines 708--710
 
 
 <figures/results/headingAngle/headingAnglevsPropellantMassCase1combined.png, id
-=2616, 447.92343pt x 316.18124pt>
+=2634, 447.92343pt x 316.18124pt>
 File: figures/results/headingAngle/headingAnglevsPropellantMassCase1combined.pn
 g Graphic file (type png)
 
@@ -3527,7 +3511,7 @@ assCase1combined.png used on input line 720.
 (pdftex.def)             Requested size: 223.96117pt x 158.09023pt.
 
 <figures/results/headingAngle/headingAnglevsPropellantMassCase2combined.png, id
-=2617, 443.40656pt x 316.18124pt>
+=2635, 443.40656pt x 316.18124pt>
 File: figures/results/headingAngle/headingAnglevsPropellantMassCase2combined.pn
 g Graphic file (type png)
 
@@ -3546,7 +3530,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 726--728
  []
 
 
-<figures/results/headingAngle/headingAngleVsVelocityCase1combined.png, id=2634,
+<figures/results/headingAngle/headingAngleVsVelocityCase1combined.png, id=2652,
  459.21562pt x 316.18124pt>
 File: figures/results/headingAngle/headingAngleVsVelocityCase1combined.png Grap
 hic file (type png)
@@ -3556,7 +3540,7 @@ Package pdftex.def Info: figures/results/headingAngle/headingAngleVsVelocityCas
 e1combined.png used on input line 735.
 (pdftex.def)             Requested size: 229.60724pt x 158.09023pt.
 
-<figures/results/headingAngle/headingAngleVsVelocityCase2combined.png, id=2635,
+<figures/results/headingAngle/headingAngleVsVelocityCase2combined.png, id=2653,
  454.69875pt x 316.18124pt>
 File: figures/results/headingAngle/headingAngleVsVelocityCase2combined.png Grap
 hic file (type png)
@@ -3656,7 +3640,7 @@ File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ] [90] [91])
 (appendixB-fittingProcessAndResults.tex [92]
 Appendix B.
-<figures/software/temperatureDataSplit6.png, id=3035, 337.26pt x 252.945pt>
+<figures/software/temperatureDataSplit6.png, id=3053, 337.26pt x 252.945pt>
 File: figures/software/temperatureDataSplit6.png Graphic file (type png)
 
 <use figures/software/temperatureDataSplit6.png>
@@ -3664,7 +3648,7 @@ Package pdftex.def Info: figures/software/temperatureDataSplit6.png used on inp
 ut line 12.
 (pdftex.def)             Requested size: 358.50609pt x 268.88463pt.
 
-<figures/software/temperatureDataSplit7.png, id=3037, 404.712pt x 266.1945pt>
+<figures/software/temperatureDataSplit7.png, id=3055, 404.712pt x 266.1945pt>
 File: figures/software/temperatureDataSplit7.png Graphic file (type png)
 
 <use figures/software/temperatureDataSplit7.png>
@@ -3672,7 +3656,7 @@ Package pdftex.def Info: figures/software/temperatureDataSplit7.png used on inp
 ut line 21.
 (pdftex.def)             Requested size: 448.1309pt x 294.76857pt.
 
-<figures/software/completePolyFitTempSplit7.png, id=3039, 421.575pt x 316.18124
+<figures/software/completePolyFitTempSplit7.png, id=3057, 421.575pt x 316.18124
 pt>
 File: figures/software/completePolyFitTempSplit7.png Graphic file (type png)
  <use figures/software/completePolyFitTempSplit7.png>
@@ -3680,7 +3664,7 @@ Package pdftex.def Info: figures/software/completePolyFitTempSplit7.png used on
  input line 30.
 (pdftex.def)             Requested size: 403.31508pt x 302.49327pt.
 
-<figures/software/densityDataSplit2.png, id=3043, 337.26pt x 252.945pt>
+<figures/software/densityDataSplit2.png, id=3061, 337.26pt x 252.945pt>
 File: figures/software/densityDataSplit2.png Graphic file (type png)
 
 <use figures/software/densityDataSplit2.png>
@@ -3688,7 +3672,7 @@ Package pdftex.def Info: figures/software/densityDataSplit2.png used on input l
 ine 46.
 (pdftex.def)             Requested size: 403.31508pt x 302.49423pt.
 
-<figures/software/densityDataSplit3.png, id=3045, 337.26pt x 252.945pt>
+<figures/software/densityDataSplit3.png, id=3063, 337.26pt x 252.945pt>
 File: figures/software/densityDataSplit3.png Graphic file (type png)
 
 <use figures/software/densityDataSplit3.png>
@@ -3698,7 +3682,7 @@ ine 55.
  [93
 
 ]
-<figures/software/completePolyFitDenSplit3.png, id=3055, 421.575pt x 316.18124p
+<figures/software/completePolyFitDenSplit3.png, id=3073, 421.575pt x 316.18124p
 t>
 File: figures/software/completePolyFitDenSplit3.png Graphic file (type png)
  <use figures/software/completePolyFitDenSplit3.png>
@@ -3716,7 +3700,7 @@ Overfull \vbox (3.94742pt too high) has occurred while \output is active []
 
 [95 <./figures/software/completePolyFitTempSplit7.png (PNG copy)> <./figures/so
 ftware/densityDataSplit2.png>]
-<figures/software/section3PolyFitDen.png, id=3069, 421.575pt x 316.18124pt>
+<figures/software/section3PolyFitDen.png, id=3088, 421.575pt x 316.18124pt>
 File: figures/software/section3PolyFitDen.png Graphic file (type png)
 
 <use figures/software/section3PolyFitDen.png>
@@ -3724,7 +3708,7 @@ Package pdftex.def Info: figures/software/section3PolyFitDen.png used on input
 line 73.
 (pdftex.def)             Requested size: 403.31508pt x 302.49327pt.
 
-<figures/software/ExpAtmFitDenZoom.png, id=3071, 421.575pt x 316.18124pt>
+<figures/software/ExpAtmFitDenZoom.png, id=3090, 421.575pt x 316.18124pt>
 File: figures/software/ExpAtmFitDenZoom.png Graphic file (type png)
 
 <use figures/software/ExpAtmFitDenZoom.png>
@@ -4543,7 +4527,7 @@ Underfull \vbox (badness 10000) detected at line 43
 ] [109]) (appendixG-Results.tex [110]
 Appendix F.
 
-<figures/results/Order/orderVsConsecutiveDifferenceCase1combined.png, id=3232, 
+<figures/results/Order/orderVsConsecutiveDifferenceCase1combined.png, id=3250, 
 1396.4672pt x 753.5653pt>
 File: figures/results/Order/orderVsConsecutiveDifferenceCase1combined.png Graph
 ic file (type png)
@@ -4553,7 +4537,7 @@ Package pdftex.def Info: figures/results/Order/orderVsConsecutiveDifferenceCase
 1combined.png used on input line 13.
 (pdftex.def)             Requested size: 358.50609pt x 193.45018pt.
 
-<figures/results/Order/orderVsConsecutiveDifferenceCase2combined.png, id=3233, 
+<figures/results/Order/orderVsConsecutiveDifferenceCase2combined.png, id=3251, 
 1396.4672pt x 753.5653pt>
 File: figures/results/Order/orderVsConsecutiveDifferenceCase2combined.png Graph
 ic file (type png)
@@ -4564,7 +4548,7 @@ Package pdftex.def Info: figures/results/Order/orderVsConsecutiveDifferenceCase
 (pdftex.def)             Requested size: 358.50609pt x 193.45018pt.
 
 <figures/results/Order/orderVsNominalAbsoluteDifferenceCase1combined.png, id=32
-36, 1396.4672pt x 753.5653pt>
+54, 1396.4672pt x 753.5653pt>
 File: figures/results/Order/orderVsNominalAbsoluteDifferenceCase1combined.png G
 raphic file (type png)
 
@@ -4579,7 +4563,7 @@ Overfull \hbox (89.6248pt too wide) in paragraph at lines 22--22
 
 
 <figures/results/Order/orderVsNominalAbsoluteDifferenceCase2combined.png, id=32
-37, 1396.4672pt x 753.5653pt>
+55, 1396.4672pt x 753.5653pt>
 File: figures/results/Order/orderVsNominalAbsoluteDifferenceCase2combined.png G
 raphic file (type png)
 
@@ -4597,7 +4581,7 @@ Overfull \hbox (89.6248pt too wide) in paragraph at lines 24--25
  <./figures/results/Order/orderVsConsecutiveDifferenceCase1combined.png (PNG co
 py)> <./figures/results/Order/orderVsConsecutiveDifferenceCase2combined.png (PN
 G copy)>]
-<figures/results/multiRun/multiRunVsCPUcase1RKFTSI.png, id=3247, 1396.4672pt x 
+<figures/results/multiRun/multiRunVsCPUcase1RKFTSI.png, id=3265, 1396.4672pt x 
 753.5653pt>
 File: figures/results/multiRun/multiRunVsCPUcase1RKFTSI.png Graphic file (type 
 png)
@@ -4611,7 +4595,7 @@ Overfull \hbox (89.6248pt too wide) in paragraph at lines 39--39
  []
 
 
-<figures/results/multiRun/multiRunVsCPUcase2RKFTSI.png, id=3248, 1396.4672pt x 
+<figures/results/multiRun/multiRunVsCPUcase2RKFTSI.png, id=3266, 1396.4672pt x 
 753.5653pt>
 File: figures/results/multiRun/multiRunVsCPUcase2RKFTSI.png Graphic file (type 
 png)
@@ -4627,7 +4611,7 @@ Overfull \hbox (89.6248pt too wide) in paragraph at lines 41--42
 [112 <./figures/results/Order/orderVsNominalAbsoluteDifferenceCase1combined.png
  (PNG copy)> <./figures/results/Order/orderVsNominalAbsoluteDifferenceCase2comb
 ined.png (PNG copy)>]
-<figures/results/multiRun/multiRunVsCPUcase1combined.png, id=3260, 1396.4672pt 
+<figures/results/multiRun/multiRunVsCPUcase1combined.png, id=3279, 1396.4672pt 
 x 753.5653pt>
 File: figures/results/multiRun/multiRunVsCPUcase1combined.png Graphic file (typ
 e png)
@@ -4641,7 +4625,7 @@ Overfull \hbox (89.6248pt too wide) in paragraph at lines 48--48
  []
 
 
-<figures/results/multiRun/multiRunVsCPUcase2combined.png, id=3261, 1396.4672pt 
+<figures/results/multiRun/multiRunVsCPUcase2combined.png, id=3280, 1396.4672pt 
 x 753.5653pt>
 File: figures/results/multiRun/multiRunVsCPUcase2combined.png Graphic file (typ
 e png)
@@ -4657,7 +4641,7 @@ Overfull \hbox (89.6248pt too wide) in paragraph at lines 50--51
 [113 <./figures/results/multiRun/multiRunVsCPUcase1RKFTSI.png (PNG copy)> <./fi
 gures/results/multiRun/multiRunVsCPUcase2RKFTSI.png (PNG copy)>]
 <figures/results/launchAltitude/launchAltitudeVsXpositionCase1combined.png, id=
-3271, 277.78781pt x 316.18124pt>
+3290, 277.78781pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsXpositionCase1combined.png
  Graphic file (type png)
 
@@ -4667,7 +4651,7 @@ onCase1combined.png used on input line 61.
 (pdftex.def)             Requested size: 138.89355pt x 158.09023pt.
 
 <figures/results/launchAltitude/launchAltitudeVsYpositionCase1combined.png, id=
-3272, 279.29344pt x 316.18124pt>
+3291, 279.29344pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsYpositionCase1combined.png
  Graphic file (type png)
 
@@ -4677,7 +4661,7 @@ onCase1combined.png used on input line 62.
 (pdftex.def)             Requested size: 139.64638pt x 158.09023pt.
 
 <figures/results/launchAltitude/launchAltitudeVsZpositionCase1combined.png, id=
-3273, 421.575pt x 316.18124pt>
+3292, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsZpositionCase1combined.png
  Graphic file (type png)
 
@@ -4692,7 +4676,7 @@ Overfull \hbox (41.196pt too wide) in paragraph at lines 61--63
 
 
 <figures/results/launchAltitude/launchAltitudeVsXvelocityCase1combined.png, id=
-3274, 277.78781pt x 316.18124pt>
+3293, 277.78781pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsXvelocityCase1combined.png
  Graphic file (type png)
 
@@ -4702,7 +4686,7 @@ tyCase1combined.png used on input line 65.
 (pdftex.def)             Requested size: 138.89355pt x 158.09023pt.
 
 <figures/results/launchAltitude/launchAltitudeVsYvelocityCase1combined.png, id=
-3275, 277.78781pt x 316.18124pt>
+3294, 277.78781pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsYvelocityCase1combined.png
  Graphic file (type png)
 
@@ -4712,7 +4696,7 @@ tyCase1combined.png used on input line 66.
 (pdftex.def)             Requested size: 138.89355pt x 158.09023pt.
 
 <figures/results/launchAltitude/launchAltitudeVsZvelocityCase1combined.png, id=
-3276, 421.575pt x 316.18124pt>
+3295, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsZvelocityCase1combined.png
  Graphic file (type png)
 
@@ -4728,7 +4712,7 @@ Overfull \hbox (40.44318pt too wide) in paragraph at lines 65--68
 [114 <./figures/results/multiRun/multiRunVsCPUcase1combined.png (PNG copy)> <./
 figures/results/multiRun/multiRunVsCPUcase2combined.png (PNG copy)>]
 <figures/results/launchAltitude/launchAltitudeVsXpositionCase2combined.png, id=
-3291, 277.78781pt x 316.18124pt>
+3309, 277.78781pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsXpositionCase2combined.png
  Graphic file (type png)
 
@@ -4738,7 +4722,7 @@ onCase2combined.png used on input line 79.
 (pdftex.def)             Requested size: 138.89355pt x 158.09023pt.
 
 <figures/results/launchAltitude/launchAltitudeVsYpositionCase2combined.png, id=
-3292, 277.78781pt x 316.18124pt>
+3310, 277.78781pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsYpositionCase2combined.png
  Graphic file (type png)
 
@@ -4748,7 +4732,7 @@ onCase2combined.png used on input line 80.
 (pdftex.def)             Requested size: 138.89355pt x 158.09023pt.
 
 <figures/results/launchAltitude/launchAltitudeVsZpositionCase2combined.png, id=
-3293, 421.575pt x 316.18124pt>
+3311, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsZpositionCase2combined.png
  Graphic file (type png)
 
@@ -4763,7 +4747,7 @@ Overfull \hbox (40.44318pt too wide) in paragraph at lines 79--81
 
 
 <figures/results/launchAltitude/launchAltitudeVsXvelocityCase2combined.png, id=
-3294, 277.78781pt x 316.18124pt>
+3312, 277.78781pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsXvelocityCase2combined.png
  Graphic file (type png)
 
@@ -4773,7 +4757,7 @@ tyCase2combined.png used on input line 83.
 (pdftex.def)             Requested size: 138.89355pt x 158.09023pt.
 
 <figures/results/launchAltitude/launchAltitudeVsYvelocityCase2combined.png, id=
-3295, 280.79906pt x 316.18124pt>
+3313, 280.79906pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsYvelocityCase2combined.png
  Graphic file (type png)
 
@@ -4783,7 +4767,7 @@ tyCase2combined.png used on input line 84.
 (pdftex.def)             Requested size: 140.39919pt x 158.09023pt.
 
 <figures/results/launchAltitude/launchAltitudeVsZvelocityCase2combined.png, id=
-3296, 421.575pt x 316.18124pt>
+3314, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsZvelocityCase2combined.png
  Graphic file (type png)
 
@@ -4804,7 +4788,7 @@ mbined.png> <./figures/results/launchAltitude/launchAltitudeVsYvelocityCase1com
 bined.png> <./figures/results/launchAltitude/launchAltitudeVsZvelocityCase1comb
 ined.png (PNG copy)>]
 <figures/results/launchAltitude/launchAltitudeVsAbsRadiusDiffCase1combined.png,
- id=3318, 421.575pt x 316.18124pt>
+ id=3336, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsAbsRadiusDiffCase1combined
 .png Graphic file (type png)
 
@@ -4815,7 +4799,7 @@ usDiffCase1combined.png used on input line 95.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchAltitude/launchAltitudeVsAbsRadiusDiffCase2combined.png,
- id=3319, 421.575pt x 316.18124pt>
+ id=3337, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsAbsRadiusDiffCase2combined
 .png Graphic file (type png)
 
@@ -4826,7 +4810,7 @@ usDiffCase2combined.png used on input line 96.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchAltitude/launchAltitudeVsAbsVGdiffCase1combined.png, id=
-3322, 421.575pt x 316.18124pt>
+3340, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsAbsVGdiffCase1combined.png
  Graphic file (type png)
 
@@ -4836,7 +4820,7 @@ ffCase1combined.png used on input line 103.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchAltitude/launchAltitudeVsAbsVGdiffCase2combined.png, id=
-3323, 421.575pt x 316.18124pt>
+3341, 421.575pt x 316.18124pt>
 File: figures/results/launchAltitude/launchAltitudeVsAbsVGdiffCase2combined.png
  Graphic file (type png)
 
@@ -4854,7 +4838,7 @@ ined.png (PNG copy)> <./figures/results/launchAltitude/launchAltitudeVsAbsRadiu
 sDiffCase1combined.png (PNG copy)> <./figures/results/launchAltitude/launchAlti
 tudeVsAbsRadiusDiffCase2combined.png (PNG copy)>]
 <figures/results/launchLatitude/launchLatitudeVsConsecutiveDifferenceCase1combi
-nedSmall.png, id=3344, 421.575pt x 316.18124pt>
+nedSmall.png, id=3362, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsConsecutiveDifferenceCase1
 combinedSmall.png Graphic file (type png)
 
@@ -4865,7 +4849,7 @@ tiveDifferenceCase1combinedSmall.png used on input line 116.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLatitude/launchLatitudeVsConsecutiveDifferenceCase2combi
-nedSmall.png, id=3345, 421.575pt x 316.18124pt>
+nedSmall.png, id=3363, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsConsecutiveDifferenceCase2
 combinedSmall.png Graphic file (type png)
 
@@ -4876,7 +4860,7 @@ tiveDifferenceCase2combinedSmall.png used on input line 117.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLatitude/launchLatitudeVsNominalAbsoluteDifferenceCase1c
-ombinedSmall.png, id=3348, 421.575pt x 316.18124pt>
+ombinedSmall.png, id=3366, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsNominalAbsoluteDifferenceC
 ase1combinedSmall.png Graphic file (type png)
 
@@ -4887,7 +4871,7 @@ AbsoluteDifferenceCase1combinedSmall.png used on input line 125.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLatitude/launchLatitudeVsNominalAbsoluteDifferenceCase2c
-ombinedSmall.png, id=3349, 421.575pt x 316.18124pt>
+ombinedSmall.png, id=3367, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsNominalAbsoluteDifferenceC
 ase2combinedSmall.png Graphic file (type png)
 
@@ -4903,7 +4887,7 @@ secutiveDifferenceCase1combinedSmall.png (PNG copy)> <./figures/results/launchL
 atitude/launchLatitudeVsConsecutiveDifferenceCase2combinedSmall.png (PNG copy)>
 ]
 <figures/results/launchLatitude/launchLatitudeVsXpositionCase1combined.png, id=
-3362, 278.54062pt x 316.18124pt>
+3380, 278.54062pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsXpositionCase1combined.png
  Graphic file (type png)
 
@@ -4913,7 +4897,7 @@ onCase1combined.png used on input line 134.
 (pdftex.def)             Requested size: 139.26996pt x 158.09023pt.
 
 <figures/results/launchLatitude/launchLatitudeVsYpositionCase1combined.png, id=
-3363, 277.78781pt x 316.18124pt>
+3381, 277.78781pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsYpositionCase1combined.png
  Graphic file (type png)
 
@@ -4923,7 +4907,7 @@ onCase1combined.png used on input line 135.
 (pdftex.def)             Requested size: 138.89355pt x 158.09023pt.
 
 <figures/results/launchLatitude/launchLatitudeVsZpositionCase1combined.png, id=
-3364, 421.575pt x 316.18124pt>
+3382, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsZpositionCase1combined.png
  Graphic file (type png)
 
@@ -4938,7 +4922,7 @@ Overfull \hbox (40.81958pt too wide) in paragraph at lines 134--136
 
 
 <figures/results/launchLatitude/launchLatitudeVsXvelocityCase1combined.png, id=
-3365, 276.28218pt x 316.18124pt>
+3383, 276.28218pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsXvelocityCase1combined.png
  Graphic file (type png)
 
@@ -4948,7 +4932,7 @@ tyCase1combined.png used on input line 138.
 (pdftex.def)             Requested size: 138.14075pt x 158.09023pt.
 
 <figures/results/launchLatitude/launchLatitudeVsYvelocityCase1combined.png, id=
-3366, 276.28218pt x 316.18124pt>
+3384, 276.28218pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsYvelocityCase1combined.png
  Graphic file (type png)
 
@@ -4958,7 +4942,7 @@ tyCase1combined.png used on input line 139.
 (pdftex.def)             Requested size: 138.14075pt x 158.09023pt.
 
 <figures/results/launchLatitude/launchLatitudeVsZvelocityCase1combined.png, id=
-3367, 421.575pt x 316.18124pt>
+3385, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsZvelocityCase1combined.png
  Graphic file (type png)
 
@@ -4973,7 +4957,7 @@ Overfull \hbox (38.93756pt too wide) in paragraph at lines 138--141
 
 
 <figures/results/launchLatitude/launchLatitudeVsXpositionCase2combined.png, id=
-3374, 276.28218pt x 316.18124pt>
+3392, 276.28218pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsXpositionCase2combined.png
  Graphic file (type png)
 
@@ -4983,7 +4967,7 @@ onCase2combined.png used on input line 152.
 (pdftex.def)             Requested size: 138.14075pt x 158.09023pt.
 
 <figures/results/launchLatitude/launchLatitudeVsYpositionCase2combined.png, id=
-3375, 279.29344pt x 316.18124pt>
+3393, 279.29344pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsYpositionCase2combined.png
  Graphic file (type png)
 
@@ -4993,7 +4977,7 @@ onCase2combined.png used on input line 153.
 (pdftex.def)             Requested size: 139.64638pt x 158.09023pt.
 
 <figures/results/launchLatitude/launchLatitudeVsZpositionCase2combined.png, id=
-3376, 421.575pt x 316.18124pt>
+3394, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsZpositionCase2combined.png
  Graphic file (type png)
 
@@ -5008,7 +4992,7 @@ Overfull \hbox (40.44319pt too wide) in paragraph at lines 152--154
 
 
 <figures/results/launchLatitude/launchLatitudeVsXvelocityCase2combined.png, id=
-3377, 280.04625pt x 316.18124pt>
+3395, 280.04625pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsXvelocityCase2combined.png
  Graphic file (type png)
 
@@ -5018,7 +5002,7 @@ tyCase2combined.png used on input line 156.
 (pdftex.def)             Requested size: 140.02277pt x 158.09023pt.
 
 <figures/results/launchLatitude/launchLatitudeVsYvelocityCase2combined.png, id=
-3378, 278.54062pt x 316.18124pt>
+3396, 278.54062pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsYvelocityCase2combined.png
  Graphic file (type png)
 
@@ -5028,7 +5012,7 @@ tyCase2combined.png used on input line 157.
 (pdftex.def)             Requested size: 139.26996pt x 158.09023pt.
 
 <figures/results/launchLatitude/launchLatitudeVsZvelocityCase2combined.png, id=
-3379, 421.575pt x 316.18124pt>
+3397, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsZvelocityCase2combined.png
  Graphic file (type png)
 
@@ -5052,7 +5036,7 @@ gures/results/launchLatitude/launchLatitudeVsYvelocityCase1combined.png> <./fig
 ures/results/launchLatitude/launchLatitudeVsZvelocityCase1combined.png (PNG cop
 y)>]
 <figures/results/launchLatitude/launchLatitudeVsAbsRadiusDiffCase1combined.png,
- id=3404, 421.575pt x 316.18124pt>
+ id=3423, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsAbsRadiusDiffCase1combined
 .png Graphic file (type png)
 
@@ -5063,7 +5047,7 @@ usDiffCase1combined.png used on input line 168.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLatitude/launchLatitudeVsAbsRadiusDiffCase2combined.png,
- id=3405, 421.575pt x 316.18124pt>
+ id=3424, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsAbsRadiusDiffCase2combined
 .png Graphic file (type png)
 
@@ -5074,7 +5058,7 @@ usDiffCase2combined.png used on input line 169.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLatitude/launchLatitudeVsAbsVGdiffCase1combined.png, id=
-3408, 421.575pt x 316.18124pt>
+3427, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsAbsVGdiffCase1combined.png
  Graphic file (type png)
 
@@ -5084,7 +5068,7 @@ ffCase1combined.png used on input line 176.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLatitude/launchLatitudeVsAbsVGdiffCase2combined.png, id=
-3409, 421.575pt x 316.18124pt>
+3428, 421.575pt x 316.18124pt>
 File: figures/results/launchLatitude/launchLatitudeVsAbsVGdiffCase2combined.png
  Graphic file (type png)
 
@@ -5102,7 +5086,7 @@ ined.png (PNG copy)> <./figures/results/launchLatitude/launchLatitudeVsAbsRadiu
 sDiffCase1combined.png (PNG copy)> <./figures/results/launchLatitude/launchLati
 tudeVsAbsRadiusDiffCase2combined.png (PNG copy)>]
 <figures/results/launchLongitude/launchLongitudeVsConsecutiveDifferenceCase1com
-binedSmall.png, id=3430, 421.575pt x 316.18124pt>
+binedSmall.png, id=3449, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsConsecutiveDifferenceCas
 e1combinedSmall.png Graphic file (type png)
 
@@ -5113,7 +5097,7 @@ cutiveDifferenceCase1combinedSmall.png used on input line 191.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLongitude/launchLongitudeVsConsecutiveDifferenceCase2com
-binedSmall.png, id=3431, 421.575pt x 316.18124pt>
+binedSmall.png, id=3450, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsConsecutiveDifferenceCas
 e2combinedSmall.png Graphic file (type png)
 
@@ -5124,7 +5108,7 @@ cutiveDifferenceCase2combinedSmall.png used on input line 192.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLongitude/launchLongitudeVsNominalAbsoluteDifferenceCase
-1combinedSmall.png, id=3434, 421.575pt x 316.18124pt>
+1combinedSmall.png, id=3453, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsNominalAbsoluteDifferenc
 eCase1combinedSmall.png Graphic file (type png)
 
@@ -5135,7 +5119,7 @@ alAbsoluteDifferenceCase1combinedSmall.png used on input line 199.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLongitude/launchLongitudeVsNominalAbsoluteDifferenceCase
-2combinedSmall.png, id=3435, 421.575pt x 316.18124pt>
+2combinedSmall.png, id=3454, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsNominalAbsoluteDifferenc
 eCase2combinedSmall.png Graphic file (type png)
 
@@ -5151,7 +5135,7 @@ onsecutiveDifferenceCase1combinedSmall.png (PNG copy)> <./figures/results/launc
 hLongitude/launchLongitudeVsConsecutiveDifferenceCase2combinedSmall.png (PNG co
 py)>]
 <figures/results/launchLongitude/launchLongitudeVsXpositionCase1combined.png, i
-d=3449, 277.035pt x 316.18124pt>
+d=3467, 277.035pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsXpositionCase1combined.p
 ng Graphic file (type png)
 
@@ -5162,7 +5146,7 @@ tionCase1combined.png used on input line 207.
 (pdftex.def)             Requested size: 138.51715pt x 158.09023pt.
 
 <figures/results/launchLongitude/launchLongitudeVsYpositionCase1combined.png, i
-d=3450, 277.78781pt x 316.18124pt>
+d=3468, 277.78781pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsYpositionCase1combined.p
 ng Graphic file (type png)
 
@@ -5173,7 +5157,7 @@ tionCase1combined.png used on input line 208.
 (pdftex.def)             Requested size: 138.89355pt x 158.09023pt.
 
 <figures/results/launchLongitude/launchLongitudeVsZpositionCase1combined.png, i
-d=3451, 421.575pt x 316.18124pt>
+d=3469, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsZpositionCase1combined.p
 ng Graphic file (type png)
 
@@ -5189,7 +5173,7 @@ Overfull \hbox (40.06677pt too wide) in paragraph at lines 207--209
 
 
 <figures/results/launchLongitude/launchLongitudeVsXvelocityCase1combined.png, i
-d=3452, 277.78781pt x 316.18124pt>
+d=3470, 277.78781pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsXvelocityCase1combined.p
 ng Graphic file (type png)
 
@@ -5200,7 +5184,7 @@ cityCase1combined.png used on input line 211.
 (pdftex.def)             Requested size: 138.89355pt x 158.09023pt.
 
 <figures/results/launchLongitude/launchLongitudeVsYvelocityCase1combined.png, i
-d=3453, 278.54062pt x 316.18124pt>
+d=3471, 278.54062pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsYvelocityCase1combined.p
 ng Graphic file (type png)
 
@@ -5211,7 +5195,7 @@ cityCase1combined.png used on input line 212.
 (pdftex.def)             Requested size: 139.26996pt x 158.09023pt.
 
 <figures/results/launchLongitude/launchLongitudeVsZvelocityCase1combined.png, i
-d=3454, 421.575pt x 316.18124pt>
+d=3472, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsZvelocityCase1combined.p
 ng Graphic file (type png)
 
@@ -5227,7 +5211,7 @@ Overfull \hbox (40.81958pt too wide) in paragraph at lines 211--214
 
 
 <figures/results/launchLongitude/launchLongitudeVsXpositionCase2combined.png, i
-d=3461, 276.28218pt x 316.18124pt>
+d=3479, 276.28218pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsXpositionCase2combined.p
 ng Graphic file (type png)
 
@@ -5238,7 +5222,7 @@ tionCase2combined.png used on input line 225.
 (pdftex.def)             Requested size: 138.14075pt x 158.09023pt.
 
 <figures/results/launchLongitude/launchLongitudeVsYpositionCase2combined.png, i
-d=3462, 277.035pt x 316.18124pt>
+d=3480, 277.035pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsYpositionCase2combined.p
 ng Graphic file (type png)
 
@@ -5249,7 +5233,7 @@ tionCase2combined.png used on input line 226.
 (pdftex.def)             Requested size: 138.51715pt x 158.09023pt.
 
 <figures/results/launchLongitude/launchLongitudeVsZpositionCase2combined.png, i
-d=3463, 421.575pt x 316.18124pt>
+d=3481, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsZpositionCase2combined.p
 ng Graphic file (type png)
 
@@ -5265,7 +5249,7 @@ Overfull \hbox (39.31396pt too wide) in paragraph at lines 225--227
 
 
 <figures/results/launchLongitude/launchLongitudeVsXvelocityCase2combined.png, i
-d=3464, 278.54062pt x 316.18124pt>
+d=3482, 278.54062pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsXvelocityCase2combined.p
 ng Graphic file (type png)
 
@@ -5276,7 +5260,7 @@ cityCase2combined.png used on input line 229.
 (pdftex.def)             Requested size: 139.26996pt x 158.09023pt.
 
 <figures/results/launchLongitude/launchLongitudeVsYvelocityCase2combined.png, i
-d=3465, 276.28218pt x 316.18124pt>
+d=3483, 276.28218pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsYvelocityCase2combined.p
 ng Graphic file (type png)
 
@@ -5287,7 +5271,7 @@ cityCase2combined.png used on input line 230.
 (pdftex.def)             Requested size: 138.14075pt x 158.09023pt.
 
 <figures/results/launchLongitude/launchLongitudeVsZvelocityCase2combined.png, i
-d=3466, 421.575pt x 316.18124pt>
+d=3484, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsZvelocityCase2combined.p
 ng Graphic file (type png)
 
@@ -5312,7 +5296,7 @@ d.png> <./figures/results/launchLongitude/launchLongitudeVsYvelocityCase1combin
 ed.png> <./figures/results/launchLongitude/launchLongitudeVsZvelocityCase1combi
 ned.png (PNG copy)>]
 <figures/results/launchLongitude/launchLongitudeVsAbsRadiusDiffCase1combined.pn
-g, id=3491, 421.575pt x 316.18124pt>
+g, id=3509, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsAbsRadiusDiffCase1combin
 ed.png Graphic file (type png)
 
@@ -5323,7 +5307,7 @@ diusDiffCase1combined.png used on input line 241.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLongitude/launchLongitudeVsAbsRadiusDiffCase2combined.pn
-g, id=3492, 421.575pt x 316.18124pt>
+g, id=3510, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsAbsRadiusDiffCase2combin
 ed.png Graphic file (type png)
 
@@ -5334,7 +5318,7 @@ diusDiffCase2combined.png used on input line 242.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLongitude/launchLongitudeVsAbsVGdiffCase1combined.png, i
-d=3495, 421.575pt x 316.18124pt>
+d=3513, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsAbsVGdiffCase1combined.p
 ng Graphic file (type png)
 
@@ -5345,7 +5329,7 @@ diffCase1combined.png used on input line 249.
 (pdftex.def)             Requested size: 224.03743pt x 168.02876pt.
 
 <figures/results/launchLongitude/launchLongitudeVsAbsVGdiffCase2combined.png, i
-d=3496, 421.575pt x 316.18124pt>
+d=3514, 421.575pt x 316.18124pt>
 File: figures/results/launchLongitude/launchLongitudeVsAbsVGdiffCase2combined.p
 ng Graphic file (type png)
 
@@ -5386,13 +5370,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  ) 
 Here is how much of TeX's memory you used:
- 31214 strings out of 493335
- 621875 string characters out of 3139257
- 869984 words of memory out of 3000000
- 32900 multiletter control sequences out of 15000+200000
+ 31215 strings out of 493335
+ 621819 string characters out of 3139257
+ 869934 words of memory out of 3000000
+ 32899 multiletter control sequences out of 15000+200000
  181279 words of font info for 169 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,24n,74p,2377b,2353s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,24n,74p,3291b,2353s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Programs (slower)/MiKTeX/fonts/enc/dvips/fontname/8r.enc}{D:/Programs (sl
 ower)/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/Users/Stacha/AppData/Roaming/MiKT
 eX/2.9/fonts/type1/public/fourier/fourier-bb.pfb><C:/Users/Stacha/AppData/Roami
@@ -5407,9 +5391,9 @@ iKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/Programs (slower)/MiKT
 eX/fonts/type1/adobe/utopia/putb8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1
 /adobe/utopia/putr8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/adobe/utopia/
 putri8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on report.pdf (130 pages, 6884312 bytes).
+Output written on report.pdf (132 pages, 6893844 bytes).
 PDF statistics:
- 3770 PDF objects out of 4296 (max. 8388607)
- 978 named destinations out of 1000 (max. 500000)
+ 3789 PDF objects out of 4296 (max. 8388607)
+ 980 named destinations out of 1000 (max. 500000)
  1734 words of extra memory for PDF output out of 10000 (max. 10000000)
 

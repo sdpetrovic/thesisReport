@@ -121,11 +121,11 @@ Unfortunately, not much has been published on the specific flight characteristic
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8 \textwidth]{figures/launcher_methods/baseline_liquid2_trinidad2012.jpg}
-\caption{Old baseline design \citep{baseline_liquid2_trinidad2012}.}
+\caption{Old baseline design \citep{trinidad2012}.}
 \label{fig:baseline_liquid2_trinidad2012}
 \end{figure}
 
-This concept had a diameter of approximately 340 mm. This results in a cross sectional area of approximately 0.09079 m$^{2}$. Unfortunately, the paper did not mention anything about the drag coefficient. However, \cite{whitehead2014mars} provided a general drag coefficient graph as a function of the Mach number for a generalized shape very similar to most \ac{MAV} concepts. Therefore, this simplified relation, shown in \Cref{fig:dragcoeff_whitehead2004mars} is used in this thesis research as well.
+This concept had a diameter of approximately 340 mm. This results in a cross sectional area of approximately 0.09079 m$^{2}$. Unfortunately, the paper did not mention anything about the drag coefficient. However, \cite{whitehead2004mars} provided a general drag coefficient graph as a function of the Mach number for a generalized shape very similar to most \ac{MAV} concepts. Therefore, this simplified relation, shown in \Cref{fig:dragcoeff_whitehead2004mars} is used in this thesis research as well.
 
 \begin{figure}[!ht]
 \centering
@@ -157,6 +157,7 @@ In this research problem, different perturbations are acting in different refere
 
 This means that the accelerations have to be translated into the inertial frame through the presented frames. This can be done using so-called transformation matrices ($\mathbb{T}$). These transformation matrices are composed of rotations around different axes over an associated angle. \Cref{fig:exampleXtrans_mooij2013stat} shows a general rotation around the x-axis. When this is set in a matrix, the transformation over the x-, y- and z-axis can be defined in the respective transformation matrices as described by \Cref{eq:allTransMatr}. 
 
+\nomenclature[Ra7]{$\mathbb{T}$}{Transformation matrix \nomunit{-}}
 
 \begin{figure}[!ht]
 \centering
@@ -184,9 +185,10 @@ This means that the accelerations have to be translated into the inertial frame 
 \end{bmatrix}
 \end{equation}
 
+\nomenclature[Ra7]{$\phi$}{General Euler angle \nomunit{rad}}
 
-More information on the different reference frames and the transformation matrices can be found in \Cref{app:appendixAA-referenceSystemTransformations}. \\
-
+%More information on the different reference frames and the transformation matrices can be found in \Cref{app:appendixAA-referenceSystemTransformations}. \\
+\noindent
 Besides different reference frames, there are also different coordinate systems in which the state of a vehicle can be expressed. Three of the most used coordinate systems in space problems are the Cartesian, spherical and Keplerian system, and all of those systems are used in this research. 
 
 
@@ -210,6 +212,16 @@ r &= \sqrt{x^{2}+y^{2}+z^{2}}\\
 \end{split}
 \end{equation}
 
+\nomenclature[Ra7]{$x$}{x-position coordinate \nomunit{km}}
+\nomenclature[Ra7]{$y$}{y-position coordinate \nomunit{km}}
+\nomenclature[Ra7]{$z$}{z-position coordinate \nomunit{km}}
+\nomenclature[Ra7]{$r$}{Radius \nomunit{km}}
+\nomenclature[Ga7]{$\delta$}{Latitude \nomunit{rad}}
+\nomenclature[Ga7]{$\lambda$}{Inertial longitude \nomunit{rad}}
+
+
+
+
 The same calculation can be done from the spherical system to the Cartesian system. The corresponding equations for that calculation are shown in \Cref{eq:spher2cart}.
 
 \begin{equation} \label{eq:spher2cart}
@@ -220,7 +232,8 @@ z &= r\sin\delta\\
 \end{split}
 \end{equation}
 
-All the coordinate transformations can be found in \Cref{app:appendixAA-referenceSystemTransformations}, which include both position and velocity vectors. These transformations are essential in defining the models and setting up the equations of motion.
+%All the coordinate transformations can be found in \Cref{app:appendixAA-referenceSystemTransformations}, which include both position and velocity vectors. 
+These transformations are essential in defining the models and setting up the equations of motion.
 
 
 %Add a section on reference systems (maybe including appendix on the transformations etc.)

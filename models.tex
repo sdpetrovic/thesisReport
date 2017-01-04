@@ -29,6 +29,11 @@ V_{z_{I}}\\
 m_{MAV}&
 \end{align}
 
+\nomenclature[Ra7]{$V$}{Velocity \nomunit{km/s}}
+\nomenclature[Ra7]{$m_{MAV}$}{\ac{MAV} mass \nomunit{kg}}
+
+
+
 In order to determine the next state, the change in the state parameters over time have to be computed. This is done by taking the time derivatives of the state as described by \Cref{eq:state_derivativesModel}.
 
 \begin{align} \label{eq:state_derivativesModel}
@@ -46,6 +51,14 @@ In order to determine the next state, the change in the state parameters over ti
 &
 \dot{m}_{MAV}=-\dfrac{T}{g_{0}I_{sp}}
 \end{align}
+
+\nomenclature[Ra7]{$a$}{Acceleration \nomunit{km/s$^{2}$}}
+\nomenclature[Ca7]{$g_{0}$}{Standard gravitational acceleration at Earth sea level \nomunit{9.80665$\cdot$10$^{-3}$ km/s$^{2}$}}
+\nomenclature[Ra7]{$T$}{Thrust \nomunit{kN}}
+\nomenclature[Ra7]{$I_{sp}$}{Specific impulse \nomunit{s}}
+
+
+
 
 From this point on, the subscript $I$ is omitted, because the state and the state derivatives are always presented in the inertial frame. If variables have to be presented in any other reference frame the corresponding subscripts will be provided and explained. The accelerations in the x-, y- and z-direction have three contributing components: gravitational acceleration, drag acceleration and thrust acceleration. In this model it is assumed that there is a homogeneous gravitational field acting on the point mass with a direction towards the centre of the inertial frame. The gravitational acceleration can therefore be directly expressed in the inertial frame. \\
 The drag is assumed to work in the opposite direction of the \ac{MAV} velocity vector, which in turn is assumed to be in the positive x-direction of the body frame associated with the \ac{MAV}. This way the \ac{MAV} velocity, or ground velocity, is acting through the nose of the ascent vehicle. The drag acceleration is therefore expressed in the body frame. This effect in the body frame has to be translated into an acceleration in the inertial frame. This can be done using transformation matrices. A traditional transformation matrix uses an Euler angle to rotate a coordinate frame in a certain reference frame to another. Using the proper Euler, or rotation, angles, the acceleration in the x-, y- and z-direction in the body frame can be transformed into acceleration components acting in the x-, y- and z-direction of the inertial frame. Once it is expressed in the inertial frame it can be added to the effect caused by the gravitational acceleration. \\
@@ -82,6 +95,18 @@ a_{Thrust}\\
 \end{pmatrix}
 \right]
 \end{multline}
+
+\nomenclature[Ca7]{$\Omega_{M}$}{Rotational velocity of Mars \nomunit{7.088$\cdot$10$^{-5}$ rad/s}}
+\nomenclature[Ra7]{$t_{O}$}{Difference between current time and the inertial frame set time \nomunit{s}}
+\nomenclature[Ga7]{$\omega_{P}$}{Off-set angle between inertial frame and zero meridian at inertial frame set time \nomunit{rad}}
+\nomenclature[Ga7]{$\chi$}{Heading angle (or azimuth) \nomunit{rad}}
+\nomenclature[Ga7]{$\gamma$}{Flight-path angle \nomunit{rad}}
+\nomenclature[Ga7]{$\tau$}{Rotational longitude \nomunit{rad}}
+\nomenclature[Ga7]{$\psi_{T}$}{Thrust azimuth angle \nomunit{rad}}
+\nomenclature[Ga7]{$\epsilon$}{Thrust elevation angle \nomunit{rad}}
+
+
+
 
 The rotations required to go from the body frame to the inertial frame are all a function of the current state. Both thrust angles are an input value that is set by the user or the program. $-\Omega_{M}t_{O}+\omega_{P}$ represents the angle between the rotating frame and the inertial frame and consists of three parts. $\Omega_{M}$ is the rotational velocity of Mars around it's own axis, $t_{O}$ is the difference between the current time and the time at which the inertial frame was set on Mars, and $\omega_{P}$ is the angle between the x-axis of the inertial frame and the zero meridian at the time that the inertial frame was set on Mars. In this thesis the inertial frame is set at the beginning of the simulation (so at $t=0$, $t_{O}=0$) and is aligned with the rotating frame (so $\omega_{P}=0$). The transformation from the vertical to the rotating frame requires the latitude and longitude of the \ac{MAV}, which is a function of the current state. \cite{mooij1994motion} provides equations to determine the different rotation angles. These expressions can be used to compute the latitude and longitude as well as shown by \Cref{eq:latAndLong}.
 
@@ -148,6 +173,8 @@ a_{z,Grav}\\
 \end{pmatrix}
 \end{equation}
 
+\nomenclature[Ca7]{$\mu$}{Mars standard gravitational parameter \nomunit{4.2828314$\cdot$10$^{-5}$km$^{3}$/s$^{2}$}}
+
 
 \section{Thrust}
 \label{sec:thrustModel}
@@ -177,13 +204,27 @@ The drag acceleration can be represented similarly to the thrust acceleration ta
 a_{drag}=-\dfrac{D}{m_{MAV}}
 \end{equation}
 
+\nomenclature[Ra7]{$D$}{Drag \nomunit{kN}}
+
+
 Here the drag is given by \Cref{eq:dragDragModel}.
 
 \begin{equation} \label{eq:dragDragModel}
 D=\dfrac{1}{2}\rho V_{G}^{2}SC_{D}
 \end{equation}
 
+\nomenclature[Ga7]{$\rho$}{Density \nomunit{kg/km$^{3}$}}
+\nomenclature[Ca7]{$S$}{Reference area \nomunit{9.1$\cdot$10$^{-8}$ km$^{2}$}}
+\nomenclature[Ra7]{$C_{D}$}{Drag coefficient \nomunit{-}}
+
+
 Where $S$ is the reference area of the \ac{MAV} set by the user, $\rho$ is the air density which is a function of the altitude $h\left(=r-R_{MOLA}\right)$ and $C_{D}$ is the drag coefficient of the \ac{MAV} which is a function of the Mach number. The Mach number in turn is a function of the speed of sound, which depends on the air temperature as can be seen in \Cref{eq:machAndSpeedOfSound}.
+
+\nomenclature[Ca7]{$R_{MOLA}$}{Mars \acs{MOLA} reference radius \nomunit{3396 km}}
+\nomenclature[Ra7]{$h$}{Altitude \nomunit{km}}
+
+
+
 
  \begin{equation} \label{eq:machAndSpeedOfSound}
 \begin{split}
@@ -191,6 +232,20 @@ M &= \dfrac{V_{G}}{a} \\
 a &= \sqrt{\gamma_{a}R_{a}^{*}T_{a}} \quad \text{where} \quad R_{a}^{*}=\dfrac{R_{a}}{M_{a}} \\
 \end{split}
 \end{equation}
+
+\nomenclature[Ra7]{$M$}{Mach number \nomunit{-}}
+\nomenclature[Ra7]{$a$}{Speed of sound \nomunit{km/s}}
+\nomenclature[Ca7]{$\gamma_{a}$}{Adiabetic index \nomunit{1.35}}
+\nomenclature[Ca7]{$R_{a}$}{Molar gas constant \nomunit{8.3144598$\cdot$10$^{-6}$ km$^{2}$ kg s$^{-2}$ K$^{-1}$ mol$^{-1}$}}
+\nomenclature[Ca7]{$M_{a}$}{Molecular mass of the Martian atmosphere \nomunit{0.04334 kg/mol}}
+\nomenclature[Ra7]{$T_{a}$}{Temperature \nomunit{K}}
+\nomenclature[Ra7]{$R_{a}^{*}$}{Specific gas constant \nomunit{km$^{s}$ s$^{2}$ K$^{-1}$}}
+\nomenclature[Ra7]{$p_{n}$}{Polynomial coefficient \nomunit{-}}
+
+
+
+
+
 
 Here, $R_{a}$ is the molar gas constant, $\gamma_{a}$ is the adiabetic index for Mars, which according to \cite{ho2002radio} can be set as $\sim$1.35. $M_{a}$ is the molecular mass of the Martian atmosphere and depends on it's composition. \cite{williams2015} mentions a volumetric composition of Mars which results in a mean molecular mass of 0.04334 kg/mol. This value has been used in this research to compute the speed of sound.\\
 
@@ -420,6 +475,7 @@ Fortunately, this curve is already an approximation and thus consists of linear 
 \label{sec:modelCircularisation}
 After the integration has been completed, a circularisation burn will take place to estimate the required propellant mass to arrive in the desired orbit. This will include the $\Delta V$ required to change the flight-path angle, change the inclination and adjust the orbital velocity. A simplified diagram of such a procedure is presented in \Cref{fig:deltaVcircularOrbitMars_wakker2010}. The equations used to perform this instantaneous burn are based on the equations presented by \cite{wakker2010}.
 
+\nomenclature[Ra7]{$\Delta V$}{Change in velocity \nomunit{km/s}}
 
 
 \begin{figure}[H]
@@ -434,6 +490,8 @@ The first step is to convert the final Cartesian state obtained at the end of th
 \begin{equation} \label{eq:visViva}
 V_{co} = \sqrt{\mu_{M}\left(\dfrac{2}{r_{co}}-\dfrac{1}{a_{co}}\right)}
 \end{equation}
+
+\nomenclature[Ra7]{$a$}{Semi-major axis \nomunit{km}}
 
 Then he required orbital velocity is a simplified representation of the vis-viva equations because it is assumed that the required orbit is always circular, see \Cref{eq:simpVisViva}. Here $do$ stands for desired orbit.
 
@@ -457,11 +515,15 @@ The required $\Delta V$ needed to reach the desired orbit can now be computed us
 \Delta V = \sqrt{V_{do}^{2}+V_{co}-2V_{do}V_{co}\cos \gamma_{co}\cos\left(i_{do}-i_{co}\right)}
 \end{equation}
 
+\nomenclature[Ra7]{$i$}{Inclination \nomunit{rad}}
+
 Finally, the required propellant mass can be computed using Tsiolkovsky's equation as shown by \Cref{eq:propellantMass}.
 
 \begin{equation} \label{eq:propellantMass}
 m_{prop} = m_{MAV}\left(1-e^{\dfrac{-\Delta V}{I_{sp}g_{0}}}\right)
 \end{equation}
+
+\nomenclature[Ra7]{$m_{prop}$}{Propellant mass \nomunit{kg}}
 %
 %m_{prop} = m_{MAV}-\dfrac{m_{MAV}}{e^{\dfrac{\Delta V}{I_{sp}g_{0}}}}
 

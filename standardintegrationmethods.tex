@@ -31,7 +31,7 @@ $\mathbf{\Phi}$ as shown by \Cref{eq:integration}, which changes depending on th
 
 \subsection{Single-step}
 \label{subsec:singleStep}
-Single-step methods solely use the information at the current point to determine the approximation of the next state. This means tht the information of the previous points is neglected and usually not saved \citep{noomen2013int}. Examples of the most simple explicit, fixed step-size, single-step methods are Euler, Mid-point and \ac{RK4} \citep{hofsteenge2013}. Euler uses the information at the current state to directly compute the estimate of the next state. Mid-point already incorporates an extra estimation where it first computes a point at half the step-size and then uses that information to approximate the next state, and \ac{RK4} takes 4 points into account and takes the weighted average of those to come up with a solution (the starting point, two mid-points and a final point). Many methods exists that are based on these simple methods, for instance the Mid-point method based high-order extrapolation (a.k.a. DIFEX2) (explicit) method \citep{deuflhard1994}.\\
+Single-step methods solely use the information at the current point to determine the approximation of the next state. This means that the information of the previous points is neglected and usually not saved \citep{noomen2013int}. Examples of the most simple explicit, fixed step-size, single-step methods are Euler, Mid-point and \ac{RK4} \citep{hofsteenge2013}. Euler uses the information at the current state to directly compute the estimate of the next state. Mid-point already incorporates an extra estimation where it first computes a point at half the step-size and then uses that information to approximate the next state, and \ac{RK4} takes 4 points into account and takes the weighted average of those to come up with a solution (the starting point, two mid-points and a final point). Many methods exists that are based on these simple methods, for instance the Mid-point method based high-order extrapolation (a.k.a. DIFEX2) (explicit) method \citep{deuflhard1994}.\\
 Many more methods however are based on the \ac{RK4} principle such as Runge-Kutta-Nystr\"{o}m (RKN, with variations such as RKN7(6)9) (implicit) \citep{montenbruck1992,dormand1987}, \ac{RKN12} (implicit) \citep{montenbruck1992}  and \acf{RKF45} and \acf{RKF78} \citep{fehlberg1969,fehlberg1968}. These last two integrators are slightly different since they are still explicit, but use a variable step-size.
 
 
@@ -111,15 +111,23 @@ k_{4}&=f'\left(t_{0}+h,\mathbf{x}_{0}+hk_{3}\right)\\
 \end{split}
 \end{equation}
 
+\nomenclature[Ra7]{$k$}{Runge-Kutta increment derivative \nomunit{-}}
+
 \Cref{eq:rk4_increment,eq:k} can also be generalized as presented by \Cref{eq:generalRK}. In this case $b_{i}$ represents the different weights for each of the points with the corresponding step-size weights $c_{i}$, $n$ is the order and $a_{i,j}$ are the coefficients of the previous time-derivatives.
 
 \begin{equation} \label{eq:generalRK}
 \begin{split}
 \Phi_{RK} &= \displaystyle \sum^{n}_{i=1}b_{i}k_{i} \\
-\text{with}\quad k_{i} &= f'\left(t+c_{n}h,y+h\displaystyle \sum^{n-1}_{j=1}a_{i,j}k_{j} \right) \\
+\text{with}\quad k_{i} &= f'\left(t+c_{i}h,x+h\displaystyle \sum^{n-1}_{j=1}a_{i,j}k_{j} \right) \\
 \end{split}
 \end{equation}
 
+\nomenclature[Ra7]{$a_{i,j}$}{\ac{RKF} coefficients of the previous time-derivatives \nomunit{-}}
+\nomenclature[Ra7]{$b_{i}$}{\ac{RKF} weights for each point  \nomunit{-}}
+\nomenclature[Ra7]{$c_{i}$}{\ac{RKF} step-size weights \nomunit{-}}
+\nomenclature[Ra7]{$n$}{Order \nomunit{-}}
+\nomenclature[Ra7]{$x$}{State variable \nomunit{-}}
+\nomenclature[Ra7]{$t$}{Time \nomunit{s}}
 
 This general formulation can now also be used to compute the higher order Runge-Kutta approximations given that $a_{i,j}$, $b_{i}$ and $c_{i}$ are provided. These sets of numbers can be found in various literature, and different people have come up with different sets. Fehlberg was one of these people. In order to get a more accurate solution he decided to use two different methods. In the case of this research, \ac{RKF78} was used, which means that a 7$^{th}$ order and 8$^{th}$ order solution can be computed using \Cref{eq:generalRK}. The 7$^{th}$ order solution is then used as the method solution and the difference between the 8$^{th}$ and the 7$^{th}$ order solution results in an error estimate which can be used to determine the next step-size. This step-size is thus computed such as to minimize this error estimate. This means that the only difference between \ac{RKF78} and \ac{RKF45} (for instance) is the coefficient set (a, b and c's). 
 
