@@ -29,98 +29,99 @@
 \contentsline {section}{\numberline {5.1}General theory}{25}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Workings of \ac {TSI}}{25}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Step-size}{26}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Associated equations}{27}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Cartesian equations, first case}{27}{subsection.5.2.1}
-\contentsline {subsubsection}{Gravitational acceleration}{28}{equation.5.2.11}
-\contentsline {subsubsection}{Transformation angles}{28}{equation.5.2.13}
-\contentsline {subsubsection}{Drag acceleration}{31}{equation.5.2.22}
-\contentsline {subsubsection}{Thrust acceleration}{32}{equation.5.2.29}
-\contentsline {subsubsection}{All accelerations combined}{33}{equation.5.2.35}
-\contentsline {subsection}{\numberline {5.2.2}Cartesian equations, second case}{35}{subsection.5.2.2}
-\contentsline {subsubsection}{Body frame unit vectors}{35}{equation.5.2.47}
-\contentsline {subsubsection}{Defining the transformation matrix coefficients}{36}{equation.5.2.50}
-\contentsline {subsubsection}{Auxiliary functions for the second case}{36}{equation.5.2.52}
-\contentsline {subsection}{\numberline {5.2.3}Spherical equations}{37}{subsection.5.2.3}
-\contentsline {subsubsection}{Auxiliary functions for the Spherical case}{38}{equation.5.2.62}
-\contentsline {subsubsection}{Drag acceleration as auxiliary variable}{40}{equation.5.2.70}
-\contentsline {subsection}{\numberline {5.2.4}Recurrence relations}{42}{subsection.5.2.4}
-\contentsline {chapter}{\numberline {6}Program simulation tool}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Existing software}{45}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}\ac {Tudat}}{45}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Eigen}{46}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Boost}{46}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Mars-\ac {GRAM}}{46}{subsection.6.1.4}
-\contentsline {section}{\numberline {6.2}Developed software}{46}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}\ac {RKF} propagator}{47}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}\ac {TSI} propagator}{47}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Completed simulation tool}{47}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Initialisation}{47}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Initial propagation}{47}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Integrator burn phase}{48}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Integrator coast phase}{48}{subsection.6.3.4}
-\contentsline {subsection}{\numberline {6.3.5}Final circularisation}{48}{subsection.6.3.5}
-\contentsline {subsection}{\numberline {6.3.6}Comparison}{48}{subsection.6.3.6}
-\contentsline {chapter}{\numberline {7}Verification and validation}{51}{chapter.7}
-\contentsline {section}{\numberline {7.1}\acs {RK4} and \acs {RKF} integrators}{51}{section.7.1}
-\contentsline {section}{\numberline {7.2}\acl {TSI}}{52}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Auxiliary equations, derivatives and functions}{52}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Computing the Taylor Series coefficients and the updated state}{52}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}Next step-size}{53}{subsection.7.2.3}
-\contentsline {section}{\numberline {7.3}Complete trajectory propagation}{53}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Phase 1: \ac {RKF} propagation}{53}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Phase 2: both \ac {RKF} and \ac {TSI}}{53}{subsection.7.3.2}
-\contentsline {subsection}{\numberline {7.3.3}Phase 3: three different models for \ac {TSI}}{54}{subsection.7.3.3}
-\contentsline {subsection}{\numberline {7.3.4}Phase 4: one final \ac {TSI} model}{54}{subsection.7.3.4}
-\contentsline {subsection}{\numberline {7.3.5}Phase 5: coasting and circularisation}{54}{subsection.7.3.5}
-\contentsline {subsection}{\numberline {7.3.6}Phase 6: tool validation}{54}{subsection.7.3.6}
-\contentsline {chapter}{\numberline {8}Results and Analysis}{60}{chapter.8}
-\contentsline {section}{\numberline {8.1}Order}{60}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Optimal order}{61}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Comparison with non-rotating Mars}{62}{subsection.8.1.2}
-\contentsline {section}{\numberline {8.2}Error tolerance}{64}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Comparison with \ac {RKF78}}{64}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Comparison with non-rotating Mars}{66}{subsection.8.2.2}
-\contentsline {section}{\numberline {8.3}Multiple runs}{67}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Comparison with \ac {RKF78}}{67}{subsection.8.3.1}
-\contentsline {subsection}{\numberline {8.3.2}Comparison with non-rotating Mars}{68}{subsection.8.3.2}
-\contentsline {section}{\numberline {8.4}Launch altitude}{69}{section.8.4}
-\contentsline {section}{\numberline {8.5}Launch latitude}{72}{section.8.5}
-\contentsline {section}{\numberline {8.6}Launch longitude}{73}{section.8.6}
-\contentsline {section}{\numberline {8.7}Flight-path angle}{75}{section.8.7}
-\contentsline {section}{\numberline {8.8}Heading angle}{77}{section.8.8}
-\contentsline {chapter}{\numberline {9}Conclusions and recommendations}{80}{chapter.9}
-\contentsline {section}{\numberline {9.1}Conclusions}{80}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Taylor Series as an integrator}{80}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}\ac {TSI} compared to \ac {RKF78}}{81}{subsection.9.1.2}
-\contentsline {subsection}{\numberline {9.1.3}Sensitivity analysis}{81}{subsection.9.1.3}
-\contentsline {subsubsection}{Order}{81}{subsection.9.1.3}
-\contentsline {subsubsection}{Error tolerance}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Multiple runs}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Launch altitude}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Launch latitude}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Launch longitude}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Flight-path angle}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Heading angle}{83}{subsection.9.1.3}
-\contentsline {section}{\numberline {9.2}Recommendations}{83}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}Improvements to the current \ac {TSI} program}{83}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}Extra tests and additions}{84}{subsection.9.2.2}
-\contentsline {chapter}{Bibliography}{85}{chapter*.111}
-\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{88}{appendix.A}
-\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{92}{appendix.B}
-\contentsline {section}{\numberline {B.1}Temperature}{92}{section.B.1}
-\contentsline {section}{\numberline {B.2}Density}{92}{section.B.2}
-\contentsline {chapter}{\numberline {C}Program file definitions}{98}{appendix.C}
-\contentsline {chapter}{\numberline {D}All Recurrence Relations}{99}{appendix.D}
-\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{99}{section.D.1}
-\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{102}{section.D.2}
-\contentsline {section}{\numberline {D.3}Spherical case}{104}{section.D.3}
-\contentsline {chapter}{\numberline {E}Nominal case input values}{107}{appendix.E}
-\contentsline {section}{\numberline {E.1}Case 1}{108}{section.E.1}
-\contentsline {section}{\numberline {E.2}Case 2}{109}{section.E.2}
-\contentsline {chapter}{\numberline {F}Results}{110}{appendix.F}
-\contentsline {section}{\numberline {F.1}Order}{110}{section.F.1}
-\contentsline {section}{\numberline {F.2}Multiple runs}{112}{section.F.2}
-\contentsline {section}{\numberline {F.3}Launch altitude}{114}{section.F.3}
-\contentsline {section}{\numberline {F.4}Launch latitude}{116}{section.F.4}
-\contentsline {section}{\numberline {F.5}Launch longitude}{119}{section.F.5}
+\contentsline {subsection}{\numberline {5.1.3}Handling model sections}{27}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Associated equations}{28}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Cartesian equations, first case}{28}{subsection.5.2.1}
+\contentsline {subsubsection}{Gravitational acceleration}{30}{equation.5.2.16}
+\contentsline {subsubsection}{Transformation angles}{30}{equation.5.2.18}
+\contentsline {subsubsection}{Drag acceleration}{32}{equation.5.2.27}
+\contentsline {subsubsection}{Thrust acceleration}{34}{equation.5.2.34}
+\contentsline {subsubsection}{All accelerations combined}{35}{equation.5.2.40}
+\contentsline {subsection}{\numberline {5.2.2}Cartesian equations, second case}{36}{subsection.5.2.2}
+\contentsline {subsubsection}{Body frame unit vectors}{37}{equation.5.2.52}
+\contentsline {subsubsection}{Defining the transformation matrix coefficients}{38}{equation.5.2.55}
+\contentsline {subsubsection}{Auxiliary functions for the second case}{38}{equation.5.2.57}
+\contentsline {subsection}{\numberline {5.2.3}Spherical equations}{39}{subsection.5.2.3}
+\contentsline {subsubsection}{Auxiliary functions for the Spherical case}{40}{equation.5.2.67}
+\contentsline {subsubsection}{Drag acceleration as auxiliary variable}{41}{equation.5.2.75}
+\contentsline {subsection}{\numberline {5.2.4}Recurrence relations}{44}{subsection.5.2.4}
+\contentsline {chapter}{\numberline {6}Program simulation tool}{46}{chapter.6}
+\contentsline {section}{\numberline {6.1}Existing software}{46}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}\ac {Tudat}}{46}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Eigen}{47}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Boost}{47}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Mars-\ac {GRAM}}{47}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Developed software}{47}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}\ac {RKF} propagator}{48}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}\ac {TSI} propagator}{48}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Completed simulation tool}{48}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Initialisation}{48}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Initial propagation}{48}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Integrator burn phase}{49}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Integrator coast phase}{49}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Final circularisation}{49}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.6}Comparison}{49}{subsection.6.3.6}
+\contentsline {chapter}{\numberline {7}Verification and validation}{52}{chapter.7}
+\contentsline {section}{\numberline {7.1}\acs {RK4} and \acs {RKF} integrators}{52}{section.7.1}
+\contentsline {section}{\numberline {7.2}\acl {TSI}}{53}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Auxiliary equations, derivatives and functions}{53}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Computing the Taylor Series coefficients and the updated state}{53}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Next step-size}{54}{subsection.7.2.3}
+\contentsline {section}{\numberline {7.3}Complete trajectory propagation}{54}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Phase 1: \ac {RKF} propagation}{54}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Phase 2: both \ac {RKF} and \ac {TSI}}{54}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Phase 3: three different models for \ac {TSI}}{55}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.4}Phase 4: one final \ac {TSI} model}{55}{subsection.7.3.4}
+\contentsline {subsection}{\numberline {7.3.5}Phase 5: coasting and circularisation}{55}{subsection.7.3.5}
+\contentsline {subsection}{\numberline {7.3.6}Phase 6: tool validation}{55}{subsection.7.3.6}
+\contentsline {chapter}{\numberline {8}Results and Analysis}{61}{chapter.8}
+\contentsline {section}{\numberline {8.1}Order}{61}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Optimal order}{62}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Comparison with non-rotating Mars}{63}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2}Error tolerance}{65}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Comparison with \ac {RKF78}}{65}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Comparison with non-rotating Mars}{67}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.3}Multiple runs}{68}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Comparison with \ac {RKF78}}{68}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Comparison with non-rotating Mars}{69}{subsection.8.3.2}
+\contentsline {section}{\numberline {8.4}Launch altitude}{70}{section.8.4}
+\contentsline {section}{\numberline {8.5}Launch latitude}{73}{section.8.5}
+\contentsline {section}{\numberline {8.6}Launch longitude}{74}{section.8.6}
+\contentsline {section}{\numberline {8.7}Flight-path angle}{76}{section.8.7}
+\contentsline {section}{\numberline {8.8}Heading angle}{78}{section.8.8}
+\contentsline {chapter}{\numberline {9}Conclusions and recommendations}{81}{chapter.9}
+\contentsline {section}{\numberline {9.1}Conclusions}{81}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Taylor Series as an integrator}{81}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}\ac {TSI} compared to \ac {RKF78}}{82}{subsection.9.1.2}
+\contentsline {subsection}{\numberline {9.1.3}Sensitivity analysis}{82}{subsection.9.1.3}
+\contentsline {subsubsection}{Order}{82}{subsection.9.1.3}
+\contentsline {subsubsection}{Error tolerance}{83}{subsection.9.1.3}
+\contentsline {subsubsection}{Multiple runs}{83}{subsection.9.1.3}
+\contentsline {subsubsection}{Launch altitude}{83}{subsection.9.1.3}
+\contentsline {subsubsection}{Launch latitude}{83}{subsection.9.1.3}
+\contentsline {subsubsection}{Launch longitude}{83}{subsection.9.1.3}
+\contentsline {subsubsection}{Flight-path angle}{83}{subsection.9.1.3}
+\contentsline {subsubsection}{Heading angle}{84}{subsection.9.1.3}
+\contentsline {section}{\numberline {9.2}Recommendations}{84}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Improvements to the current \ac {TSI} program}{84}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Extra tests and additions}{85}{subsection.9.2.2}
+\contentsline {chapter}{Bibliography}{86}{chapter*.112}
+\contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{89}{appendix.A}
+\contentsline {chapter}{\numberline {B}Atmospheric data fitting}{93}{appendix.B}
+\contentsline {section}{\numberline {B.1}Temperature}{93}{section.B.1}
+\contentsline {section}{\numberline {B.2}Density}{93}{section.B.2}
+\contentsline {chapter}{\numberline {C}Program file definitions}{99}{appendix.C}
+\contentsline {chapter}{\numberline {D}All Recurrence Relations}{100}{appendix.D}
+\contentsline {section}{\numberline {D.1}First Cartesian case: Euler angles}{100}{section.D.1}
+\contentsline {section}{\numberline {D.2}Second Cartesian case: unit vectors}{103}{section.D.2}
+\contentsline {section}{\numberline {D.3}Spherical case}{105}{section.D.3}
+\contentsline {chapter}{\numberline {E}Nominal case input values}{108}{appendix.E}
+\contentsline {section}{\numberline {E.1}Case 1}{109}{section.E.1}
+\contentsline {section}{\numberline {E.2}Case 2}{110}{section.E.2}
+\contentsline {chapter}{\numberline {F}Results}{111}{appendix.F}
+\contentsline {section}{\numberline {F.1}Order}{111}{section.F.1}
+\contentsline {section}{\numberline {F.2}Multiple runs}{113}{section.F.2}
+\contentsline {section}{\numberline {F.3}Launch altitude}{115}{section.F.3}
+\contentsline {section}{\numberline {F.4}Launch latitude}{117}{section.F.4}
+\contentsline {section}{\numberline {F.5}Launch longitude}{120}{section.F.5}
 \contentsfinish 

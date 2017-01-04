@@ -4,7 +4,7 @@
 
 \section{General theory}
 \label{sec:genTsiTheory}
-\ac{TSI} has been used to solve ordinary differential equations since the early 1960s \citep{scott2008high}. However, the first modern implementation of \ac{TSI} in a space trajectory problem was provided by \cite{montenbruck1992numerical}. \cite{scott2008high} were able to implement this \ac{TSI} method into the SNAP trajectory propagator which is the implementation that is used in this thesis. The method is described in \Cref{subsec:workTsi} and the used step-size method is discussed in \Cref{subsec:stepSizeTsi}.
+\ac{TSI} has been used to solve ordinary differential equations since the early 1960s \citep{scott2008high}. However, the first modern implementation of \ac{TSI} in a space trajectory problem was provided by \cite{montenbruck1992numerical}. \cite{scott2008high} were able to implement this \ac{TSI} method into the SNAP trajectory propagator which is the implementation that is used in this thesis. The method is described in \Cref{subsec:workTsi} and the used step-size method is discussed in \Cref{subsec:stepSizeTsi}. This step-size sometimes has to be reduced if a new section in the temperature or the drag coefficient model is reached. A root finding method is described in \Cref{subsec:handlingModelSections} that can be used to determine at what step-size the next section is reached.
 
 
 
@@ -85,7 +85,74 @@ This is then done for all variables and the smallest required step-size is chose
 \nomenclature[G3]{$\eta$}{Step multiplication factor \nomunit{-}}
 \nomenclature[G6]{$\tau$}{Local error tolerance \nomunit{-}}
 
+\subsection{Handling model sections}
+\label{subsec:handlingModelSections}
+For both the temperature and drag coefficient models, different sections have been identified with different behaviours. Each of these sections was fitted with a polynomial approximation as described in \Cref{sec:dragModel}. Because \ac{TSI} only uses data available at the current point, it could be that if the step-size is allowed to be too large, the section boundary for one of these models is crossed. At that point, the step-size has to be adjusted such that it stops at the start of the next section. This way, the next time step will start at the next model section. This also means that these sections do not necessarily have to be connected, which means that \ac{TSI} would be able to handle discontinuities in the model as well, should those occur. \\
+This section boundary is found using a root finding method. The method used in this research is based on the method described in \cite{bergsma2015application}. \\
 
+\noindent
+First, the simulation program has to determine if the newly computed parameter (either Mach number or altitude) has indeed moved into the new section. This can be done using the section limits as shown by \Cref{eq:limitFunction} which is called the limit function. From now on, the equations will be written for the altitude, but the same expressions hold for the Mach number.
+
+\begin{equation} \label{eq:limitFunction}
+f = h-h_{limit}
+\end{equation}
+
+\noindent
+Because this research is based on an ascent trajectory, a new section is reached if the altitude is higher than the lower limit altitude of that section. Therefore, if $f$ > 0 a new section has been reached, and the root finding method should be used to get the value of $f$ back to zero and thus identify the step-size at which the root of $f$ is located.\\
+
+\noindent
+At the start of the root finding procedure, two points can be identified. The first point is the starting point of the \ac{MAV} at the beginning of the integration step and the second point is the proposed end point of the \ac{MAV} as suggested by the current step-size. If the new section has been reached it means that the point that the \ac{MAV} is coming from has a limit function value that is below zero, or $f_{From}$ < 0. The mission time at that point is given by $t_{From}$. This is the original mission time ($t_{original}$) at the start of the integration and it is therefore the goal to find $h_{req}$ (required step-size) such that $t_{original}+h_{req}$ results in the final limit function value, $f_{new}$ = 0. The mission time at the second point (where the \ac{MAV} was headed when the section was crossed) is given by $t_{To}$ with the corresponding $f_{To}$ > 0. This means that $f_{new}$ and $t_{new}$ are located somewhere between these original points. The method described by \cite{bergsma2015application} should result in a spiralling motion that slowly converges to the root. This means that the root finding method is always evaluated from the "from" point to the "to" point, irrespective of on which side of the root the next starting point is. \\
+
+\noindent
+The first step is to determine the altitude derivative at the current "from" point, or $\dot{f}_{From}$. If the Taylor Series coefficients for the altitude (in this case) are available, then the derivative can directly be computed by combining \Cref{eq:general_taylor,eq:def_u} resulting in \Cref{eq:fFromDot}. Otherwise, the derivative has to be comprised of other known derivatives.
+
+\begin{equation}\label{eq:fFromDot}
+\dot{f}_{From} \approx \displaystyle\sum_{k=1}^{K}kX\left(k\right) h^{k-1}
+\end{equation}
+
+\noindent
+Next, the coefficient of the root finding curve, $\alpha$, has to be determined. This coefficient is effectively $\dfrac{\ddot{f}_{From}}{2}$ and is computed using \Cref{eq:alphaForRoot}.
+
+\begin{equation} \label{eq:alphaForRoot}
+\alpha = \dfrac{f_{To}-f_{From}}{\left(t_{To}-t_{From}\right)^{2}}-\dfrac{\dot{f}_{From}}{t_{To}-t_{From}}
+\end{equation}
+
+\noindent
+With this coefficient it is possible to compute the new time of the newly computed point. This point is called the new from point because no matter if this point is before of after the root of the limit function, that point will be used as the starting or "from" point for the next point computation. This is why this time is called $t_{From,new}$ and is computed using \Cref{eq:tFromNew}. This equation has a plus sign in front of the square root because the next section has been reached when $f$ > 0.
+
+\begin{equation} \label{eq:tFromNew}
+t_{From,new} = t_{From}+\dfrac{\left(-\dot{f}_{From}+\sqrt{\dot{f}_{From}^{2}+4\alpha f_{From}}\right)}{2\alpha}
+\end{equation}
+
+\noindent
+Now that the new time is known, the step-size can be computed by simply taking the difference between the original time and the new time. With this new step-size, the Taylor Series coefficients can be used as per \Cref{eq:general_taylor} to determine the new altitude at that new "from" point. This means that, using \Cref{eq:limitFunction} the new limit function value $f_{From,new}$ = $h_{From,new}$-$h_{limit}$. If this $f_{From,new}$ value is zero it means that the section boundary has been found and the newly computed step-size is the step-size that should be used. However, if $f_{From,new}$ is on the other side of the root compared to $f_{From}$ then the "from" and "to" points have to be updated. The conditions are shown in \Cref{eq:updatedPointsRoot}.
+
+\begin{equation}\label{eq:updatedPointsRoot}
+\begin{split}
+\text{If the signs of }f_{From}\text{ and }f_{From,new}\text{ are oposite}&\Rightarrow\begin{cases}
+f_{To}=f_{From}\\
+t_{To}=t_{From} \\
+f_{From}=f_{From,new}\\
+t_{From}=t_{From,new} \\ 
+\end{cases}\\
+\text{If the signs of }f_{From}\text{ and }f_{From,new}\text{ are the same}&\Rightarrow\begin{cases}
+f_{To}=f_{To} \quad \text{  Remains the same}\\
+t_{To}=t_{To} \quad \text{  Remains the same}\\
+f_{From}=f_{From,new}\\
+t_{From}=t_{From,new} \\ 
+\end{cases}\\
+\end{split}
+\end{equation}
+
+\noindent
+With this, the root finding process can be started again at the first step (so starting at \Cref{eq:fFromDot}).\\
+
+\noindent
+However, the condition that $f_{From,new}$ should be equal to zero before the root finding method is satisfied and the new step-size can be accepted is not realistic. This is why two conditions have to be met instead. $f_{From,new}\geq 0$ and $f_{From,new}\leq 1\cdot10^{-6}$. This means that $f_{From,new}$ has to be within an accuracy of 1 cm for the altitude and within a Mach accuracy of 1$\cdot$10$^{-6}$. If both these cases are met, it is assured that the next section will be used in the next time step calculation, because the section limits have always been set at the beginning of the section.  
+
+
+%This is where the root finding method used should be described!
+%\textbf{\textcolor{red}{This section still has to be added!!}}
 
 
 \section{Associated equations}
@@ -950,7 +1017,7 @@ This unit vector is also shown in \Cref{fig:cartesian_transformation_mooij1994mo
  \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{figures/reference_frames/cartesian_transformation_mooij1994motion.jpg}
-\caption{Definition of the body frame unit vectors based on the radius and ground velocity expressed in the inertial frame.}
+\caption{Definition of the body frame unit vectors based on the radius and ground velocity expressed in the inertial frame. \citep{mooij1994motion}}
 \label{fig:cartesian_transformation_mooij1994motion}
 \end{figure}
 

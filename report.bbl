@@ -377,6 +377,14 @@
   (\bibinfo {year} {2015}),\ \bibinfo {note} {[online database], URL:
   http://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html [cited 1
   November 2015]}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wakker}(2010)}]{wakker2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Wakker}},\ }\href@noop {} {\textit {\bibinfo {title} {{Astrodynamics-II
+  Course AE4874, part 2}},}\ }\bibinfo {howpublished} {Reader},\ \bibinfo
+  {address} {Delft University of Technology} (\bibinfo {year} {2010}),\
+  \bibinfo {note} {[Internal publication] Course: Astrodynamics-II}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Hofsteenge}(2013)}]{hofsteenge2013}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
@@ -547,12 +555,4 @@
   {[online database], URL:
   https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-1-PB.pdf?sequence=1
   [cited 10 December 2015]}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Wakker}(2010)}]{wakker2010}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
-  {Wakker}},\ }\href@noop {} {\textit {\bibinfo {title} {{Astrodynamics-II
-  Course AE4874, part 2}},}\ }\bibinfo {howpublished} {Reader},\ \bibinfo
-  {address} {Delft University of Technology} (\bibinfo {year} {2010}),\
-  \bibinfo {note} {[Internal publication] Course: Astrodynamics-II}\BibitemShut
-  {NoStop}%
 \end{thebibliography}%

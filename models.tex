@@ -418,4 +418,52 @@ Fortunately, this curve is already an approximation and thus consists of linear 
 
 \section{Circularisation}
 \label{sec:modelCircularisation}
-\textbf{\textcolor{red}{This section still has to be added!!}}
+After the integration has been completed, a circularisation burn will take place to estimate the required propellant mass to arrive in the desired orbit. This will include the $\Delta V$ required to change the flight-path angle, change the inclination and adjust the orbital velocity. A simplified diagram of such a procedure is presented in \Cref{fig:deltaVcircularOrbitMars_wakker2010}. The equations used to perform this instantaneous burn are based on the equations presented by \cite{wakker2010}.
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{figures/circularisation/deltaVcircularOrbitMars_wakker2010.png}
+\caption{Circularisation into the desired orbit \citep{deltaVcircularOrbitMars_wakker2010}.}
+\label{fig:deltaVcircularOrbitMars_wakker2010}
+\end{figure}
+
+The first step is to convert the final Cartesian state obtained at the end of the integration to Kepler elements. This conversion is a standard conversion that can be found in \cite{wakker2010} and requires the standard gravitational parameter of Mars ($\mu_{M}$), which is taken to be 4.2828314 km$^{3}$/s$^{2}$. Then using the vis-viva equation presented in \Cref{eq:visViva} the current orbital velocity of the launch trajectory can be computed. Here the subscript $co$ stands for current orbit and $a$ is the semi-major axis of the launch trajectory.
+
+\begin{equation} \label{eq:visViva}
+V_{co} = \sqrt{\mu_{M}\left(\dfrac{2}{r_{co}}-\dfrac{1}{a_{co}}\right)}
+\end{equation}
+
+Then he required orbital velocity is a simplified representation of the vis-viva equations because it is assumed that the required orbit is always circular, see \Cref{eq:simpVisViva}. Here $do$ stands for desired orbit.
+
+\begin{equation} \label{eq:simpVisViva}
+V_{do}=\sqrt{\dfrac{\mu_{M}}{R_{M}+r_{do}}}
+\end{equation} 
+
+Because a change in flight-path angle might be required, the current flight-path angle has to be included into the change in velocity as well. For this, the semi-latus rectum ($p$) of the current orbit has to be computed first and then the cosine of the flight-path angle can be computed as shown by \Cref{eq:cosFPA}.
+
+
+\begin{equation}\label{eq:cosFPA}
+\begin{split}
+p_{co}&=a_{co}\left(1-e_{co}^{2}\right)\\
+\cos \gamma_{co}&=\dfrac{\left(\dfrac{p_{co}}{r_{co}}\right)}{\left(\sqrt{2\left(\dfrac{p_{co}}{r_{co}}\right)-\left(1-e^{2}\right)}\right)}\\
+\end{split}
+\end{equation}
+
+The required $\Delta V$ needed to reach the desired orbit can now be computed using \Cref{eq:requiredDeltaV}.
+
+\begin{equation} \label{eq:requiredDeltaV}
+\Delta V = \sqrt{V_{do}^{2}+V_{co}-2V_{do}V_{co}\cos \gamma_{co}\cos\left(i_{do}-i_{co}\right)}
+\end{equation}
+
+Finally, the required propellant mass can be computed using Tsiolkovsky's equation as shown by \Cref{eq:propellantMass}.
+
+\begin{equation} \label{eq:propellantMass}
+m_{prop} = m_{MAV}\left(1-e^{\dfrac{-\Delta V}{I_{sp}g_{0}}}\right)
+\end{equation}
+%
+%m_{prop} = m_{MAV}-\dfrac{m_{MAV}}{e^{\dfrac{\Delta V}{I_{sp}g_{0}}}}
+
+%
+%\textbf{\textcolor{red}{This section still has to be added!!}}
