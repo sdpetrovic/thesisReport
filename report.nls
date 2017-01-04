@@ -3,29 +3,29 @@
  \nomgroup{G}
 
   \item [{$\eta$}]\begingroup Numerical approximation\nomunit{-}\nomeqref {4.0}
-		\nompageref{26}
+		\nompageref{27}
   \item [{$\eta$}]\begingroup Step multiplication factor \nomunit{-}\nomeqref {5.6}
-		\nompageref{31}
+		\nompageref{32}
   \item [{$\tau$}]\begingroup Local error tolerance \nomunit{-}\nomeqref {5.6}
-		\nompageref{31}
+		\nompageref{32}
   \item [{$\Phi$}]\begingroup Increment function\nomunit{-}\nomeqref {4.0}
-		\nompageref{26}
+		\nompageref{27}
 
  \nomgroup{R}
 
   \item [{$h$}]\begingroup (Current) step-size\nomunit{s}\nomeqref {4.0}
-		\nompageref{26}
+		\nompageref{27}
   \item [{$t_{0}$}]\begingroup Initial time\nomunit{s}\nomeqref {4.1}
-		\nompageref{26}
+		\nompageref{27}
   \item [{$T_{n,k}$}]\begingroup Truncation error \nomunit{-}\nomeqref {5.0}
-		\nompageref{29}
+		\nompageref{30}
   \item [{$\mathbf{x}_{i}$}]\begingroup Current data point\nomunit{-}\nomeqref {4.0}
-		\nompageref{26}
+		\nompageref{27}
   \item [{$\mathbf{x}_{i+1}$}]\begingroup Next data point\nomunit{-}\nomeqref {4.0}
-		\nompageref{26}
+		\nompageref{27}
   \item [{$x_{n}$}]\begingroup n$^{th}$ variable \nomunit{-}\nomeqref {5.0}
-		\nompageref{29}
+		\nompageref{30}
   \item [{$\mathbf{X}$}]\begingroup State vector \nomunit{-}\nomeqref {5.0}
-		\nompageref{29}
+		\nompageref{30}
 
 \end{thenomenclature}
