@@ -14,18 +14,18 @@ A number of different numerical integration methods exist, however in this secti
 The numerical approximation of the next state can be written as the current state plus the change during one time-step. This change is defined as the step-size $h$ times the increment function 
 $\mathbf{\Phi}$ as shown by \Cref{eq:integration}, which changes depending on the method used. Here, $\mathbf{\eta}$ represents the total numerical approximation. 
 
-\nomenclature[Ra5]{$\mathbf{x}_{i}$}{Current data point\nomunit{-}}
-\nomenclature[Ra6]{$\mathbf{x}_{i+1}$}{Next data point\nomunit{-}}
-\nomenclature[R4]{$h$}{(Current) step-size\nomunit{s}}
-\nomenclature[G8]{$\Phi$}{Increment function\nomunit{-}}
-\nomenclature[G3]{$\eta$}{Numerical approximation\nomunit{-}}
+\nomenclature[Rb3]{$\mathbf{x}_{i}$}{Current data point\nomunit{-}}
+\nomenclature[Rb3]{$\mathbf{x}_{i+1}$}{Next data point\nomunit{-}}
+\nomenclature[Ra1]{$h$}{(Current) step-size\nomunit{s}}
+\nomenclature[Ga5]{$\Phi$}{Increment function\nomunit{-}}
+\nomenclature[Ga3]{$\eta$}{Numerical approximation\nomunit{-}}
 
 
 \begin{equation} \label{eq:integration}
 \mathbf{x}(t_{0}+h)\approx\mathbf{x}_{0}+h\bm{\Phi}=\mathbf{\eta}(t_{0}+h)
 \end{equation}
 
-\nomenclature[Ra1]{$t_{0}$}{Initial time\nomunit{s}} 
+\nomenclature[Ra7]{$t_{0}$}{Initial time\nomunit{s}} 
 
 
 
@@ -111,7 +111,7 @@ k_{4}&=f'\left(t_{0}+h,\mathbf{x}_{0}+hk_{3}\right)\\
 \end{split}
 \end{equation}
 
-\nomenclature[Ra7]{$k$}{Runge-Kutta increment derivative \nomunit{-}}
+\nomenclature[Ra3]{$k$}{Runge-Kutta increment derivative \nomunit{-}}
 
 \Cref{eq:rk4_increment,eq:k} can also be generalized as presented by \Cref{eq:generalRK}. In this case $b_{i}$ represents the different weights for each of the points with the corresponding step-size weights $c_{i}$, $n$ is the order and $a_{i,j}$ are the coefficients of the previous time-derivatives.
 
@@ -122,11 +122,11 @@ k_{4}&=f'\left(t_{0}+h,\mathbf{x}_{0}+hk_{3}\right)\\
 \end{split}
 \end{equation}
 
-\nomenclature[Ra7]{$a_{i,j}$}{\ac{RKF} coefficients of the previous time-derivatives \nomunit{-}}
-\nomenclature[Ra7]{$b_{i}$}{\ac{RKF} weights for each point  \nomunit{-}}
-\nomenclature[Ra7]{$c_{i}$}{\ac{RKF} step-size weights \nomunit{-}}
-\nomenclature[Ra7]{$n$}{Order \nomunit{-}}
-\nomenclature[Ra7]{$x$}{State variable \nomunit{-}}
+\nomenclature[Ra1]{$a_{i,j}$}{\ac{RKF} coefficients of the previous time-derivatives \nomunit{-}}
+\nomenclature[Ra1]{$b_{i}$}{\ac{RKF} weights for each point  \nomunit{-}}
+\nomenclature[Ra1]{$c_{i}$}{\ac{RKF} step-size weights \nomunit{-}}
+\nomenclature[Ra5]{$n$}{Order \nomunit{-}}
+\nomenclature[Rb1]{$x$}{State variable \nomunit{-}}
 \nomenclature[Ra7]{$t$}{Time \nomunit{s}}
 
 This general formulation can now also be used to compute the higher order Runge-Kutta approximations given that $a_{i,j}$, $b_{i}$ and $c_{i}$ are provided. These sets of numbers can be found in various literature, and different people have come up with different sets. Fehlberg was one of these people. In order to get a more accurate solution he decided to use two different methods. In the case of this research, \ac{RKF78} was used, which means that a 7$^{th}$ order and 8$^{th}$ order solution can be computed using \Cref{eq:generalRK}. The 7$^{th}$ order solution is then used as the method solution and the difference between the 8$^{th}$ and the 7$^{th}$ order solution results in an error estimate which can be used to determine the next step-size. This step-size is thus computed such as to minimize this error estimate. This means that the only difference between \ac{RKF78} and \ac{RKF45} (for instance) is the coefficient set (a, b and c's). 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.13)  4 JAN 2017 20:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.13)  4 JAN 2017 23:27
 entering extended mode
 **./report.tex
 (report.tex
@@ -1962,11 +1962,7 @@ File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
 \tf@toc=\write7
 \openout7 = `report.toc'.
 
- [5] (report.nls
-Package acronym Info: Label `acro:MOLA' newly defined as it shall be overridden
-
-although it is yet undefined on input line 17.
- [6
+ [5] (report.nls [6
 
 
 ] [7]) [8] (abbreviations.tex) [9
@@ -1993,7 +1989,7 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.25598pt on input line 9.
 
 <figures/heritage/proposedMSRmissionArchitecture_vaughan2016technology.jpg, id=
-841, 433.62pt x 266.79675pt>
+840, 433.62pt x 266.79675pt>
 File: figures/heritage/proposedMSRmissionArchitecture_vaughan2016technology.jpg
  Graphic file (type jpg)
 
@@ -2044,7 +2040,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
 
 <figures/heritage/biPropellantSSTOMAV_vaughan2016technology-And-hybridSSTOMAV_k
-arp2016technology.jpg, id=997, 227.6505pt x 118.041pt>
+arp2016technology.jpg, id=996, 227.6505pt x 118.041pt>
 File: figures/heritage/biPropellantSSTOMAV_vaughan2016technology-And-hybridSSTO
 MAV_karp2016technology.jpg Graphic file (type jpg)
 
@@ -2055,7 +2051,7 @@ logy-And-hybridSSTOMAV_karp2016technology.jpg used on input line 111.
 (pdftex.def)             Requested size: 358.50609pt x 185.91193pt.
  [4 <./figures/heritage/biPropellantSSTOMAV_vaughan2016technology-And-hybridSST
 OMAV_karp2016technology.jpg>]
-<figures/launcher_methods/baseline_liquid2_trinidad2012.jpg, id=1027, 704.6325p
+<figures/launcher_methods/baseline_liquid2_trinidad2012.jpg, id=1026, 704.6325p
 t x 296.90926pt>
 File: figures/launcher_methods/baseline_liquid2_trinidad2012.jpg Graphic file (
 type jpg)
@@ -2065,7 +2061,7 @@ Package pdftex.def Info: figures/launcher_methods/baseline_liquid2_trinidad2012
 .jpg used on input line 123.
 (pdftex.def)             Requested size: 358.50609pt x 151.0638pt.
 
-<figures/launcher_methods/dragcoeff_whitehead2004mars.jpg, id=1034, 796.77675pt
+<figures/launcher_methods/dragcoeff_whitehead2004mars.jpg, id=1033, 796.77675pt
  x 475.7775pt>
 File: figures/launcher_methods/dragcoeff_whitehead2004mars.jpg Graphic file (ty
 pe jpg)
@@ -2076,7 +2072,7 @@ pg used on input line 132.
 
 [5 <./figures/launcher_methods/baseline_liquid2_trinidad2012.jpg>]
 <figures/reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij
-1994motion.jpg, id=1048, 1439.3775pt x 999.735pt>
+1994motion.jpg, id=1047, 1439.3775pt x 999.735pt>
 File: figures/reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-
 mooij1994motion.jpg Graphic file (type jpg)
 
@@ -2086,7 +2082,7 @@ Package pdftex.def Info: figures/reference_frames/allFiveReferenceFrames_mooij2
 013fd-trinidad2012-mooij1994motion.jpg used on input line 153.
 (pdftex.def)             Requested size: 448.1309pt x 311.25706pt.
 
-<figures/reference_frames/xtrans_mooij2013stat.jpg, id=1057, 476.982pt x 384.23
+<figures/reference_frames/xtrans_mooij2013stat.jpg, id=1056, 476.982pt x 384.23
 55pt>
 File: figures/reference_frames/xtrans_mooij2013stat.jpg Graphic file (type jpg)
 
@@ -2095,7 +2091,7 @@ Package pdftex.def Info: figures/reference_frames/xtrans_mooij2013stat.jpg used
  on input line 164.
 (pdftex.def)             Requested size: 268.88127pt x 216.60097pt.
 
-<figures/reference_frames/sphertocart_noomen2013basic.jpg, id=1061, 277.035pt x
+<figures/reference_frames/sphertocart_noomen2013basic.jpg, id=1060, 277.035pt x
  322.806pt>
 File: figures/reference_frames/sphertocart_noomen2013basic.jpg Graphic file (ty
 pe jpg)
@@ -2127,7 +2123,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--154
  []
 
 
-<figures/reference_frames/propframe_mooij1994motion.jpg, id=1131, 688.37175pt x
+<figures/reference_frames/propframe_mooij1994motion.jpg, id=1130, 688.37175pt x
  449.2785pt>
 File: figures/reference_frames/propframe_mooij1994motion.jpg Graphic file (type
  jpg)
@@ -2148,6 +2144,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
 LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <12> not available
 (Font)              Font shape `T1/futs/b/sc' tried instead on input line 256.
+Package acronym Info: Label `acro:MOLA' newly defined as it shall be overridden
+
+although it is yet undefined on input line 258.
 [12 <./figures/reference_frames/propframe_mooij1994motion.jpg>]
 <figures/software/temperatureData.png, id=1168, 421.575pt x 316.18124pt>
 File: figures/software/temperatureData.png Graphic file (type png)
@@ -5372,7 +5371,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
 Here is how much of TeX's memory you used:
  31215 strings out of 493335
  621819 string characters out of 3139257
- 869934 words of memory out of 3000000
+ 869993 words of memory out of 3000000
  32899 multiletter control sequences out of 15000+200000
  181279 words of font info for 169 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -5391,7 +5390,7 @@ iKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/Programs (slower)/MiKT
 eX/fonts/type1/adobe/utopia/putb8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1
 /adobe/utopia/putr8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/adobe/utopia/
 putri8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on report.pdf (132 pages, 6893844 bytes).
+Output written on report.pdf (132 pages, 6893822 bytes).
 PDF statistics:
  3789 PDF objects out of 4296 (max. 8388607)
  980 named destinations out of 1000 (max. 500000)
