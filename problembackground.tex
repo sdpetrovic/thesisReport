@@ -9,9 +9,9 @@
 The majority of this research was performed at NASA's \ac{JPL} in Pasadena, California. For that reason it was decided that the research of this thesis should focus on something related to either current research being done at \ac{JPL} or missions being flown by \ac{JPL}\footnote{All past, current and proposed \ac{JPL} missions: \url{http://www.jpl.nasa.gov/missions/} [Accessed 17 November 2016]}.   One of the focuses of \ac{JPL} these days is Mars and the exploration of the Martian system. There are currently two planned missions to Mars: InSight and Mars 2020. InSight is a mission similar to the Viking and the Phoenix missions and primarily based on the last one. It is a lander that will perform experiments on the surface of Mars at a fixed location. Mars 2020 is the next Mars rover and is based on the current Curiosity rover. It has a similar design but will carry different scientific instruments and will focus more on finding life on Mars. Mars 2020 is part of a larger \ac{JPL} effort to eventually return samples from the Martian surface back to Earth. This mission concepts has been on the drawing board for several years now, but seems to be getting closer to approval. This sample return mission, or \ac{MSR}, will consist of three different systems and is spread out over three different missions as shown by the proposed mission architecture in \Cref{fig:proposedMSRmissionArchitecture_vaughan2016technology}. Mars 2020 is the first step of this plan where the rover will collect samples from the surface of Mars. These samples will then be put into containment tubes and dropped on the surface of Mars. A second mission will then carry a system that will collect these samples from the surface and deliver them into a Martian orbit \citep{shotwell2016drivers}. Then a third mission, currently proposed as the Mars 2022 orbiter, will collect the sample containment sphere in orbit and eventually deliver them back to Earth \citep{woolley2011mars}. Because of the potential of the \ac{MSR} mission concept and the amount of research that can be done, the focus was put on this \ac{JPL} effort when looking at research subjects.
 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.8 \textwidth]{figures/heritage/proposedMSRmissionArchitecture_vaughan2016technology.jpg}
+\includegraphics[width=0.75 \textwidth]{figures/heritage/proposedMSRmissionArchitecture_vaughan2016technology.jpg}
 \caption{Proposed \ac{MSR} mission architecture \citep{vaughan2016technology}.}
 \label{fig:proposedMSRmissionArchitecture_vaughan2016technology}
 \end{figure}
@@ -35,7 +35,7 @@ The Mars 2020 rover is an approved mission that is currently in the design phase
 \label{sec:previousMarsAscentResearch}
 Not only \ac{JPL} but also many other institutions around the world are working on the Mars ascent problem, for instance the \ac{DLR}. A selection of reference research is provided in \Cref{tab:referenceResearch}.
 
-\begin{table}[!ht]
+\begin{table}[H]
 \begin{center}
 \caption{Previous and current Mars ascent trajectory research.}
 \label{tab:referenceResearch}
@@ -106,9 +106,9 @@ An important aspect of running an accurate simulation is making sure that the as
 
 Currently there is no clear baseline design, however, the preference leads towards the \ac{SSTO} designs. Two of those designs are shown in \Cref{fig:biPropellantSSTOMAV_vaughan2016technology-And-hybridSSTOMAV_karp2016technology}. \\ 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.8 \textwidth]{figures/heritage/biPropellantSSTOMAV_vaughan2016technology-And-hybridSSTOMAV_karp2016technology.jpg}
+\includegraphics[width=0.5 \textwidth]{figures/heritage/biPropellantSSTOMAV_vaughan2016technology-And-hybridSSTOMAV_karp2016technology.jpg}
 \caption{Current proposed designs. a) is one of the bi-liquid designs proposed by \cite{vaughan2016technology}. b) is the hybrid design proposed by \cite{karp2016technology}. Not to scale.}
 \label{fig:biPropellantSSTOMAV_vaughan2016technology-And-hybridSSTOMAV_karp2016technology}
 \end{figure}
@@ -118,18 +118,18 @@ Currently there is no clear baseline design, however, the preference leads towar
 Unfortunately, not much has been published on the specific flight characteristics such as drag coefficient and reference area of these new designs. Fortunately, the size requirements of the \ac{MAV} have not changed (much) between the 2012 studies and the current designs. Therefore these parameters can be approximated by looking at some of the previous baseline designs such as the two-stage liquid rocket shown in \Cref{fig:baseline_liquid2_trinidad2012}. 
 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.8 \textwidth]{figures/launcher_methods/baseline_liquid2_trinidad2012.jpg}
+\includegraphics[width=0.5 \textwidth]{figures/launcher_methods/baseline_liquid2_trinidad2012.jpg}
 \caption{Old baseline design \citep{trinidad2012}.}
 \label{fig:baseline_liquid2_trinidad2012}
 \end{figure}
 
 This concept had a diameter of approximately 340 mm. This results in a cross sectional area of approximately 0.09079 m$^{2}$. Unfortunately, the paper did not mention anything about the drag coefficient. However, \cite{whitehead2004mars} provided a general drag coefficient graph as a function of the Mach number for a generalized shape very similar to most \ac{MAV} concepts. Therefore, this simplified relation, shown in \Cref{fig:dragcoeff_whitehead2004mars} is used in this thesis research as well.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/launcher_methods/dragcoeff_whitehead2004mars.jpg}
+\includegraphics[width=0.5\textwidth]{figures/launcher_methods/dragcoeff_whitehead2004mars.jpg}
 \caption{Drag coefficient as a function of Mach number \cite{whitehead2004mars}}
 \label{fig:dragcoeff_whitehead2004mars}
 \end{figure}
@@ -148,7 +148,7 @@ In this research problem, different perturbations are acting in different refere
 
 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij1994motion.jpg}
 \caption{a) (Mars centred) Inertial frame, b) (Mars centred) Rotational frame, c) (Vehicle centred) Vertical frame \citep{mooij2013fd}. d) (Vehicle centred) Body frame \citep{trinidad2012}. e) (Vehicle centred) Propulsion frame \citep{mooij1994motion}.}
@@ -161,7 +161,7 @@ This means that the accelerations have to be translated into the inertial frame 
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.6\textwidth]{figures/reference_frames/xtrans_mooij2013stat.jpg}
+\includegraphics[width=0.5\textwidth]{figures/reference_frames/xtrans_mooij2013stat.jpg}
 \caption{General rotation around the x-axis \cite{mooij2013stat}.}
 \label{fig:exampleXtrans_mooij2013stat}
 \end{figure}
@@ -195,7 +195,7 @@ Besides different reference frames, there are also different coordinate systems 
 This also means that the state should be transformed between these different frames. An example of the position expressed both in the Cartesian system as well as the spherical system is shown in \Cref{fig:sphertocart_noomen2013basicFirst}.
 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.3\textwidth]{figures/reference_frames/sphertocart_noomen2013basic.jpg}
 \caption{Position expressed in the Cartesian and the spherical system \cite{noomen2013basic}.}

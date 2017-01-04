@@ -186,9 +186,9 @@ a_{Thrust}=\dfrac{T}{m_{MAV}}
 
 However, this acceleration has to be transformed to the body frame using the thrust angles. These thrust angles are the thrust elevation ($\epsilon_{T}$) and thrust azimuth ($\psi_{T}$) angle, and are defined in \Cref{fig:propframe_mooij1994motion}.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.8 \textwidth]{figures/reference_frames/propframe_mooij1994motion.jpg}
+\includegraphics[width=0.5 \textwidth]{figures/reference_frames/propframe_mooij1994motion.jpg}
 \caption{Definition of the thrust elevation and thrust azimuth angle with respect to the body frame \citep{mooij1994motion}.}
 \label{fig:propframe_mooij1994motion}
 \end{figure}
@@ -258,23 +258,23 @@ The drag coefficient changes with the Mach number, however, this change is not c
 Using Mars-\ac{GRAM} 2005, a table containing altitude, latitude and longitude dependent temperature and density data was produced. The altitude range was -0.6 to 320 km \ac{MOLA} with a step-size of 0.01 km, the latitude and longitude ranges were centred around the launch site (21.0 $^\circ$N and 74.5 $^\circ$E) with a 10 degree range in each direction and a step-size of 1 degree. The rest of the input parameters were constant and can be seen in \Cref{app:appendixA-marsGRAM-inputFile}. The temperature and density data produced is shown in \Cref{fig:temperatureData,fig:densityData} respectively for 9 latitude and longitude combinations including the launch site itself.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/software/temperatureData.png}
+\includegraphics[width=0.7\textwidth]{figures/software/temperatureData.png}
 \caption{Temperature data generated with Mars-\ac{GRAM} 2005 showing 9 different latitude and longitude combinations}
 \label{fig:temperatureData}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/software/densityData.png}
+\includegraphics[width=0.7\textwidth]{figures/software/densityData.png}
 \caption{Density data generated with Mars-\ac{GRAM} 2005 showing 9 different latitude and longitude combinations}
 \label{fig:densityData}
 \end{figure}
 
 Unfortunately discontinuous data tables cannot be used when integrating using \ac{TSI}, which is why both these data tables had to be fitted with continuous functions. The temperature data could not be smoothly fit with one continuous function.  Therefore, depending on the altitude range, a different approximation function is required. The condition to be met for a proper fit came from the differences in the temperature-altitude and density-altitude curves, where the maximum difference with respect to the launch site curve was taken. The requirement for the standard deviation of the polynomial curve fit was then to be (at least) one order lower than this maximum difference and that the maximum difference between the fit and the launch site curve was lower than the maximum difference. The temperature-altitude curve was split into 5 sections as roughly visualised in \Cref{fig:temperatureDataSplit5}. The number of sections come from both the shape of the curves and the requirement for accuracy and maximum order of the polynomial, which is set at 8 because otherwise the polynomial would get too long. Also, the number of sections were to be kept at a minimum. More information on the fitting process and early results is provided in \Cref{app:appendixB-fittingProcessAndResults}.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/software/temperatureDataSplit5.png}
 \caption{Different temperature curve sections}
@@ -289,7 +289,7 @@ y=p_{n}x^{n}+p_{n-1}x^{n-1}+\dots+p_{1}x+p_{0}
 
 A lower order is preferred, because then the fitted function will be simpler to evaluate and contain fewer terms. However the order has to be high enough to meet the accuracy requirements. \Cref{tab:fitDeviations} shows the orders that were required and the deviations to the launch site temperature-altitude curve. The actual corresponding parameters are provided in \Cref{tab:fitParameters}. It should be noted that the first few temperature data values were so different from the rest of the curve that it was assumed that this is a lack of the Mars-\ac{GRAM} program and were thus treated as outliers.
 
-\begin{table}[!ht]
+\begin{table}[H]
 \begin{center}
 \caption{Temperature curve fit data all with respect to the launch site curve (Latitude and longitude of the launch site)}
 \label{tab:fitDeviations}
@@ -304,7 +304,7 @@ A lower order is preferred, because then the fitted function will be simpler to 
 \end{center}
 \end{table}
 
-\begin{table}[!ht]
+\begin{table}[H]
 \begin{center}
 \caption{Temperature curve fit parameters (rounded to 3 decimal points)}
 \label{tab:fitParameters}
@@ -321,9 +321,9 @@ A lower order is preferred, because then the fitted function will be simpler to 
 
 The complete polynomial fit for the launch site curve for the temperature is shown in \Cref{fig:completePolyFitTempSplit5}.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/software/completePolyFitTempSplit5.png}
+\includegraphics[width=0.7\textwidth]{figures/software/completePolyFitTempSplit5.png}
 \caption{All section fits for the launch site temperature data curve}
 \label{fig:completePolyFitTempSplit5}
 \end{figure}
@@ -333,9 +333,9 @@ The complete polynomial fit for the launch site curve for the temperature is sho
 
 The density fit was slightly more difficult because the curves are all very similar and thus result in a higher accuracy requirement for the fit. At first glance it looks like a natural logarithmic function, unfortunately an ordinary exponential did not fit the curve. This is why a more extensive exponential fit was required. The natural logarithm of the data has been plotted in \Cref{fig:lnPlotDataDen}.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/software/lnPlotDataDen.png}
+\includegraphics[width=0.7\textwidth]{figures/software/lnPlotDataDen.png}
 \caption{Natural logarithmic plot of the density data}
 \label{fig:lnPlotDataDen}
 \end{figure}
@@ -350,7 +350,7 @@ y=exp\left( p_{n}x^{n}+p_{n-1}x^{n-1}+\dots+p_{1}x+p_{0}\right)
 
 % A logarithmic fit (such as an exponential atmosphere) resulted in a lower overall accuracy than the polynomial fits. In this case the curve was split into three sections, because the differences between the curves were bigger in the lower atmosphere. These sections are illustrated in \Cref{fig:densityDataSplit3}.
 %
-% \begin{figure}[!ht]
+% \begin{figure}[H]
 %\centering
 %\includegraphics[width=1.0\textwidth]{figures/software/densityDataSplit3.png}
 %\caption{Different density curve sections}
@@ -364,7 +364,7 @@ The same polynomial requirements as for the temperature curve were enforced for 
 
 %\textbf{\textcolor{red}{UPDATE THE NEXT TWO TABLE VALUES TO THE VALUES FOR DENSITY!!!}}
 
-%\begin{table}[!ht]
+%\begin{table}[H]
 %\begin{center}
 %\caption{Density curve fit data (10$^{th}$ order polynomial)}
 %\label{tab:fitDeviationsDen}
@@ -377,7 +377,7 @@ The same polynomial requirements as for the temperature curve were enforced for 
 %\end{center}
 %\end{table}
 
-\begin{table}[!ht]
+\begin{table}[H]
 \begin{center}
 \caption{Density curve fit data (10$^{th}$ order polynomial) with respect to the launch site curve (Latitude and longitude of the launch site)}
 \label{tab:fitDeviationsDen}
@@ -402,7 +402,7 @@ The same polynomial requirements as for the temperature curve were enforced for 
 
 
 
-\begin{table}[!ht]
+\begin{table}[H]
 \begin{center}
 \caption{Density curve fit parameters (rounded to 3 decimal points)}
 \label{tab:fitParametersDen}
@@ -417,27 +417,29 @@ The same polynomial requirements as for the temperature curve were enforced for 
 %The complete polynomial fit for the launch site curve for the density is shown in \Cref{fig:completePolyFitDen}.
 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/software/completeExpPolyFitDen.png}
+\includegraphics[width=0.7\textwidth]{figures/software/completeExpPolyFitDen.png}
 \caption{Polynomial fit for the launch site density data curve}
 \label{fig:completeExpPolyFitDen}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/software/completeExpFitDen.png}
+\includegraphics[width=0.7\textwidth]{figures/software/completeExpFitDen.png}
 \caption{Exponential fit for the launch site density data curve}
 \label{fig:completeExpFitDen}
 \end{figure}
 
 
-%\begin{figure}[!ht]
+%\begin{figure}[H]
 %\centering
 %\includegraphics[width=1.0\textwidth]{figures/software/pressureData.png}
 %\caption{Pressure data generated with Mars-\ac{GRAM} 2005 showing 9 different latitude and longitude combinations}
 %\label{fig:pressureData}
 %\end{figure}
+
+\pagebreak
 
 \subsection{Drag coefficient graph function fit}
 \label{subsec:dragCoefFuncFit}
@@ -447,7 +449,7 @@ Similar to the temperature and density curves, the relation between Mach number 
 Fortunately, this curve is already an approximation and thus consists of linear elements only. It can be split up into 6 different sections where the first and last section are constant ($C_{D}$ is 0.2 and 0.3 respectively). Using a similar polynomial fit as before, but now for 1 order only, a linear fit could be made for each of the remaining 4 sections. The corresponding parameters are shown in \Cref{tab:dragCoeffPara} and the curve fit is shown in \Cref{fig:dragCoeffFit}.
 
 
-\begin{table}[!ht]
+\begin{table}[H]
 \begin{center}
 \caption{Drag coefficient curve fit parameters (rounded to 3 decimal points)}
 \label{tab:dragCoeffPara}
@@ -464,12 +466,14 @@ Fortunately, this curve is already an approximation and thus consists of linear 
 
 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/software/dragCoeffFit.png}
+\includegraphics[width=0.7\textwidth]{figures/software/dragCoeffFit.png}
 \caption{All section fits for the drag coefficient - Mach curve}
 \label{fig:dragCoeffFit}
 \end{figure}
+
+\pagebreak
 
 \section{Circularisation}
 \label{sec:modelCircularisation}
@@ -481,7 +485,7 @@ After the integration has been completed, a circularisation burn will take place
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\textwidth]{figures/circularisation/deltaVcircularOrbitMars_wakker2010.png}
-\caption{Circularisation into the desired orbit \citep{deltaVcircularOrbitMars_wakker2010}.}
+\caption{Circularisation into the desired orbit \citep{wakker2010}.}
 \label{fig:deltaVcircularOrbitMars_wakker2010}
 \end{figure}
 

@@ -15,7 +15,7 @@ Verification is the process of determining whether a program meets the requireme
 The tutorial page of the \ac{Tudat} website \citep{dirkx2016tudat} offers two integration tutorials: one involving \ac{RK4} and another involving variable step-size Runge-Kutta methods including \ac{RKF}. The objective of the tutorial is to get familiar with the different integration methods available in \ac{Tudat}. At the same time, a small data table has to be reproduced, which also serves as a verification test. For each of the integrators the same problem was addressed: the computation of the velocity of a falling body after a certain amount of time assuming no drag. The results that had to be reproduced are presented in \Cref{tab:intverdat}.
 
 
-\begin{table}[!ht]
+\begin{table}[H]
 \begin{center}
 \caption{Verification data for the standard integrators}
 \label{tab:intverdat}
@@ -98,7 +98,7 @@ The most important part of this thesis is the comparison between \ac{RKF} and \a
 In \Cref{tab:validationCaseWoolley} are the validation numbers provided associated with the simulated trajectory of the case as presented by Woolley. The left columns show the inputs that were provided and the inputs that were used in the program. The right columns show the results of the simulation as provided and as computed by the program. The thrust angles in that column represent the required thrust angles that were needed as input to get the desired outcome.
 
 
-\begin{table}[!ht]
+\begin{table}[H]
 \begin{center}
 \caption{Validation case 1: \ac{SSTO} Woolley}
 \label{tab:validationCaseWoolley}
@@ -125,42 +125,48 @@ Desired inclination [deg] & 45 & 45 & & & \\ \hline
 \end{center}
 \end{table}
 
-It can be seen that there are some differences, however in this case the validation is to prove that the trajectory computed by the simulation program is indeed a viable trajectory (so close to a reference trajectory). This is because that is enough to compare the \ac{RKF} and \ac{TSI} methods. The plotted trajectories are shown in \Cref{fig:PlotFigure2Zoom,fig:PlotFigure1SeenFromZoomXaxis,fig:PlotFigure1SeenFromZoomYaxis,fig:PlotFigure1SeenFromZoomZaxis}.
+It can be seen that there are some differences, however in this case the validation is to prove that the trajectory computed by the simulation program is indeed a viable trajectory (so close to a reference trajectory). This is because that is enough to compare the \ac{RKF} and \ac{TSI} methods. The plotted trajectories are shown in \Cref{fig:PlotFigure1SeenFromZoomYaxis}.
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.8 \textwidth]{figures/verification/case1/PlotFigure2Zoom.png}
-\caption{Case 1 3-D trajectory}
-\label{fig:PlotFigure2Zoom}
-\end{figure}
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.8 \textwidth]{figures/verification/case1/PlotFigure1SeenFromZoomXaxis.png}
-\caption{Case 1 2-D trajectory as seen from the x-axis}
-\label{fig:PlotFigure1SeenFromZoomXaxis}
-\end{figure}
+%\Cref{fig:PlotFigure2Zoom,fig:PlotFigure1SeenFromZoomXaxis,fig:PlotFigure1SeenFromZoomYaxis,fig:PlotFigure1SeenFromZoomZaxis}.
 
-\begin{figure}[!ht]
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.8 \textwidth]{figures/verification/case1/PlotFigure2Zoom.png}
+%\caption{Case 1 3-D trajectory}
+%\label{fig:PlotFigure2Zoom}
+%\end{figure}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.8 \textwidth]{figures/verification/case1/PlotFigure1SeenFromZoomXaxis.png}
+%\caption{Case 1 2-D trajectory as seen from the x-axis}
+%\label{fig:PlotFigure1SeenFromZoomXaxis}
+%\end{figure}
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.8 \textwidth]{figures/verification/case1/PlotFigure1SeenFromZoomYaxis.png}
+%\includegraphics[width=1.25 \textwidth]{figures/verification/case1/PlotFigure1SeenFromZoomYaxis.png}
+\makebox[0pt]{\includegraphics[width=1.25 \textwidth]{figures/verification/case1/PlotFigure1SeenFromZoomYaxis.png}}
 \caption{Case 1 2-D trajectory as seen from the y-axis}
 \label{fig:PlotFigure1SeenFromZoomYaxis}
 \end{figure}
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.8 \textwidth]{figures/verification/case1/PlotFigure1SeenFromZoomZaxis.png}
-\caption{Case 1 2-D trajectory as seen from the z-axis}
-\label{fig:PlotFigure1SeenFromZoomZaxis}
-\end{figure}
+
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.8 \textwidth]{figures/verification/case1/PlotFigure1SeenFromZoomZaxis.png}
+%\caption{Case 1 2-D trajectory as seen from the z-axis}
+%\label{fig:PlotFigure1SeenFromZoomZaxis}
+%\end{figure}
 
 A similar validation was done using the second case. However, in this case the reference trajectory was provided. But the main difference here was that the simulation program still was only able to use a constant thrust elevation and azimuth angle. Therefore, the exact profile could not be matched. Benito also included extra perturbing effects creating another difference. However, it was possible to get a trajectory close to the one provided, which is enough for all current purposes. \Cref{tab:validationCaseBenito} shows the used values and computed parameter values for case 2 (similar to case 1).  
 
 
 
 
-\begin{table}[!ht]
+\begin{table}[H]
 \begin{center}
 \caption{Validation case 2: \ac{SSTO} Benito}
 \label{tab:validationCaseBenito}
@@ -187,43 +193,45 @@ Desired inclination [deg] & 92.69 & 92.69 & & & \\ \hline
 \end{center}
 \end{table}
 
-Again, the trajectory was visualised, however, this time the reference trajectory was also known. In the figures this is represented by a red line. These are shown in \Cref{fig:2PlotFigure2Zoom,fig:2PlotFigure1SeenFromXaxisZoom,fig:2PlotFigure1SeenFromYaxisZoom,fig:2PlotFigure1SeenFromZaxisZoom}.
+Again, the trajectory was visualised, however, this time the reference trajectory was also known. In the figures this is represented by a red line. These are shown in \Cref{fig:2PlotFigure1SeenFromXaxisZoom,fig:2PlotFigure1SeenFromYaxisZoom}.
+
+%\Cref{fig:2PlotFigure2Zoom,fig:2PlotFigure1SeenFromXaxisZoom,fig:2PlotFigure1SeenFromYaxisZoom,fig:2PlotFigure1SeenFromZaxisZoom}.
 
 
 
-\begin{figure}[!ht]
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.8 \textwidth]{figures/verification/case2/PlotFigure2Zoom.png}
+%\caption{Case 2 3-D trajectory}
+%\label{fig:2PlotFigure2Zoom}
+%\end{figure}
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.8 \textwidth]{figures/verification/case2/PlotFigure2Zoom.png}
-\caption{Case 2 3-D trajectory}
-\label{fig:2PlotFigure2Zoom}
-\end{figure}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.8 \textwidth]{figures/verification/case2/PlotFigure1SeenFromXaxisZoom.png}
+\makebox[0pt]{\includegraphics[width=1.25 \textwidth]{figures/verification/case2/PlotFigure1SeenFromXaxisZoom.png}}
 \caption{Case 2 2-D trajectory as seen from the x-axis}
 \label{fig:2PlotFigure1SeenFromXaxisZoom}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.8 \textwidth]{figures/verification/case2/PlotFigure1SeenFromYaxisZoom.png}
+\makebox[0pt]{\includegraphics[width=1.25 \textwidth]{figures/verification/case2/PlotFigure1SeenFromYaxisZoom.png}}
 \caption{Case 2 2-D trajectory as seen from the y-axis}
 \label{fig:2PlotFigure1SeenFromYaxisZoom}
 \end{figure}
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.8 \textwidth]{figures/verification/case2/PlotFigure1SeenFromZaxisZoom.png}
-\caption{Case 2 2-D trajectory as seen from the z-axis}
-\label{fig:2PlotFigure1SeenFromZaxisZoom}
-\end{figure}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.8 \textwidth]{figures/verification/case2/PlotFigure1SeenFromZaxisZoom.png}
+%\caption{Case 2 2-D trajectory as seen from the z-axis}
+%\label{fig:2PlotFigure1SeenFromZaxisZoom}
+%\end{figure}
 
 The difference in trajectory can mainly be explained by the thrust elevation and thrust azimuth angle curve of the reference trajectory. This curve was derived from the thrust data provided by Benito. This curve is shown in \Cref{fig:thrustAzimuthAndElevationDerivedFromCase2Version2}. 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.8 \textwidth]{figures/verification/case2/thrustAzimuthAndElevationDerivedFromCase2Version2.png}
+\includegraphics[width=0.7 \textwidth]{figures/verification/case2/thrustAzimuthAndElevationDerivedFromCase2Version2.png}
 \caption{Case 2 thrust elevation and azimuth angle curve.}
 \label{fig:thrustAzimuthAndElevationDerivedFromCase2Version2}
 \end{figure}

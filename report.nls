@@ -3,166 +3,166 @@
  \nomgroup{C}
 
   \item [{$\gamma_{a}$}]\begingroup Adiabetic index \nomunit{1.35}\nomeqref {3.11}
-		\nompageref{14}
-  \item [{$\mu_{M}$}]\begingroup Mars standard gravitational parameter \nomunit{4.2828314$\cdot$10$^{-5}$km$^{3}$/s$^{2}$}\nomeqref {3.7}
 		\nompageref{13}
-  \item [{$\Omega_{M}$}]\begingroup Rotational velocity of Mars \nomunit{7.088$\cdot$10$^{-5}$ rad/s}\nomeqref {3.3}
+  \item [{$\mu_{M}$}]\begingroup Mars standard gravitational parameter \nomunit{4.2828314$\cdot$10$^{-5}$km$^{3}$/s$^{2}$}\nomeqref {3.7}
 		\nompageref{12}
-  \item [{$g_{0}$}]\begingroup Standard gravitational acceleration at Earth sea level \nomunit{9.80665$\cdot$10$^{-3}$ km/s$^{2}$}\nomeqref {3.2}
+  \item [{$\Omega_{M}$}]\begingroup Rotational velocity of Mars \nomunit{7.088$\cdot$10$^{-5}$ rad/s}\nomeqref {3.3}
 		\nompageref{11}
+  \item [{$g_{0}$}]\begingroup Standard gravitational acceleration at Earth sea level \nomunit{9.80665$\cdot$10$^{-3}$ km/s$^{2}$}\nomeqref {3.2}
+		\nompageref{10}
   \item [{$M_{a}$}]\begingroup Molecular mass of the Martian atmosphere \nomunit{0.04334 kg/mol}\nomeqref {3.11}
-		\nompageref{14}
+		\nompageref{13}
   \item [{$R_{a}$}]\begingroup Molar gas constant \nomunit{8.3144598$\cdot$10$^{-6}$ km$^{2}$ kg s$^{-2}$ K$^{-1}$ mol$^{-1}$}\nomeqref {3.11}
-		\nompageref{14}
+		\nompageref{13}
   \item [{$R_{MOLA}$}]\begingroup Mars \acs{MOLA} reference radius \nomunit{3396 km}\nomeqref {3.10}
-		\nompageref{14}
+		\nompageref{13}
   \item [{$S$}]\begingroup Reference area \nomunit{9.1$\cdot$10$^{-8}$ km$^{2}$}\nomeqref {3.10}
-		\nompageref{14}
+		\nompageref{13}
 
  \nomgroup{G}
 
   \item [{$\alpha$}]\begingroup Root finding curve coefficient \nomunit{-}\nomeqref {5.9}
-		\nompageref{32}
+		\nompageref{30}
   \item [{$\gamma$}]\begingroup Flight-path angle \nomunit{rad}\nomeqref {3.3}
-		\nompageref{12}
+		\nompageref{11}
   \item [{$\delta$}]\begingroup Latitude \nomunit{rad}\nomeqref {2.2}
-		\nompageref{6}
+		\nompageref{9}
   \item [{$\epsilon_{T}$}]\begingroup Thrust elevation angle \nomunit{rad}\nomeqref {3.3}
-		\nompageref{12}
+		\nompageref{11}
   \item [{$\eta$}]\begingroup Numerical approximation\nomunit{-}\nomeqref {4.0}
-		\nompageref{26}
+		\nompageref{24}
   \item [{$\eta$}]\begingroup Step multiplication factor \nomunit{-}\nomeqref {5.6}
-		\nompageref{31}
+		\nompageref{29}
   \item [{$\lambda$}]\begingroup Inertial longitude \nomunit{rad}\nomeqref {2.2}
-		\nompageref{6}
+		\nompageref{9}
   \item [{$\rho$}]\begingroup Density \nomunit{kg/km$^{3}$}\nomeqref {3.10}
-		\nompageref{14}
+		\nompageref{13}
   \item [{$\tau$}]\begingroup Local error tolerance \nomunit{-}\nomeqref {5.6}
-		\nompageref{31}
+		\nompageref{29}
   \item [{$\tau$}]\begingroup Rotational longitude \nomunit{rad}\nomeqref {3.3}
-		\nompageref{12}
+		\nompageref{11}
   \item [{$\chi$}]\begingroup Heading angle (or azimuth) \nomunit{rad}\nomeqref {3.3}
-		\nompageref{12}
+		\nompageref{11}
   \item [{$\phi$}]\begingroup General Euler angle \nomunit{rad}\nomeqref {2.1}
-		\nompageref{5}
+		\nompageref{8}
   \item [{$\Phi$}]\begingroup Increment function\nomunit{-}\nomeqref {4.0}
-		\nompageref{26}
+		\nompageref{24}
   \item [{$\psi_{T}$}]\begingroup Thrust azimuth angle \nomunit{rad}\nomeqref {3.3}
-		\nompageref{12}
+		\nompageref{11}
   \item [{$\omega_{P}$}]\begingroup Off-set angle between inertial frame and zero meridian at inertial frame set time \nomunit{rad}\nomeqref {3.3}
-		\nompageref{12}
+		\nompageref{11}
 
  \nomgroup{R}
 
   \item [{$a$}]\begingroup Acceleration \nomunit{km/s$^{2}$}\nomeqref {3.2}
-		\nompageref{11}
+		\nompageref{10}
   \item [{$a$}]\begingroup Semi-major axis \nomunit{km}\nomeqref {3.14}
 		\nompageref{22}
   \item [{$a$}]\begingroup Speed of sound \nomunit{km/s}\nomeqref {3.11}
-		\nompageref{14}
+		\nompageref{13}
   \item [{$a_{D}$}]\begingroup Drag acceleration \nomunit{km/s$^{2}$}\nomeqref {5.16}
-		\nompageref{33}
-  \item [{$a_{g}$}]\begingroup Gravitational acceleration \nomunit{km/s$^{2}$}\nomeqref {5.16}
-		\nompageref{33}
-  \item [{$a_{i,j}$}]\begingroup \ac{RKF} coefficients of the previous time-derivatives \nomunit{-}\nomeqref {4.4}
-		\nompageref{28}
-  \item [{$a_{T}$}]\begingroup Thrust acceleration \nomunit{km/s$^{2}$}\nomeqref {5.16}
-		\nompageref{33}
-  \item [{$b_{i}$}]\begingroup \ac{RKF} weights for each point  \nomunit{-}\nomeqref {4.4}
-		\nompageref{28}
-  \item [{$C$}]\begingroup Transformation matrix coefficient \nomunit{-}\nomeqref {5.51}
-		\nompageref{40}
-  \item [{$C_{D}$}]\begingroup Drag coefficient \nomunit{-}\nomeqref {3.10}
-		\nompageref{14}
-  \item [{$c_{i}$}]\begingroup \ac{RKF} step-size weights \nomunit{-}\nomeqref {4.4}
-		\nompageref{28}
-  \item [{$D$}]\begingroup Drag \nomunit{kN}\nomeqref {3.9}
-		\nompageref{14}
-  \item [{$f$}]\begingroup Limit function \nomunit{-}\nomeqref {5.7}
 		\nompageref{31}
+  \item [{$a_{g}$}]\begingroup Gravitational acceleration \nomunit{km/s$^{2}$}\nomeqref {5.16}
+		\nompageref{31}
+  \item [{$a_{i,j}$}]\begingroup \ac{RKF} coefficients of the previous time-derivatives \nomunit{-}\nomeqref {4.4}
+		\nompageref{26}
+  \item [{$a_{T}$}]\begingroup Thrust acceleration \nomunit{km/s$^{2}$}\nomeqref {5.16}
+		\nompageref{31}
+  \item [{$b_{i}$}]\begingroup \ac{RKF} weights for each point  \nomunit{-}\nomeqref {4.4}
+		\nompageref{26}
+  \item [{$C$}]\begingroup Transformation matrix coefficient \nomunit{-}\nomeqref {5.51}
+		\nompageref{38}
+  \item [{$C_{D}$}]\begingroup Drag coefficient \nomunit{-}\nomeqref {3.10}
+		\nompageref{13}
+  \item [{$c_{i}$}]\begingroup \ac{RKF} step-size weights \nomunit{-}\nomeqref {4.4}
+		\nompageref{26}
+  \item [{$D$}]\begingroup Drag \nomunit{kN}\nomeqref {3.9}
+		\nompageref{13}
+  \item [{$f$}]\begingroup Limit function \nomunit{-}\nomeqref {5.7}
+		\nompageref{29}
   \item [{$f_{n}$}]\begingroup Auxiliary placeholder function \nomunit{-}\nomeqref {5.1}
-		\nompageref{29}
-  \item [{$g_{n}$}]\begingroup Auxiliary placeholder function \nomunit{-}\nomeqref {5.1}
-		\nompageref{29}
-  \item [{$h$}]\begingroup (Current) step-size\nomunit{s}\nomeqref {4.0}
-		\nompageref{26}
-  \item [{$h$}]\begingroup Altitude \nomunit{km}\nomeqref {3.10}
-		\nompageref{14}
-  \item [{$\mathbf{\hat{h}}$}]\begingroup Unit vector in z-direction \nomunit{-}\nomeqref {5.53}
-		\nompageref{41}
-  \item [{$i$}]\begingroup Inclination \nomunit{rad}\nomeqref {3.17}
-		\nompageref{23}
-  \item [{$I_{sp}$}]\begingroup Specific impulse \nomunit{s}\nomeqref {3.2}
-		\nompageref{11}
-  \item [{$\mathbf{\hat{i}}$}]\begingroup Unit vector in x-direction \nomunit{-}\nomeqref {5.53}
-		\nompageref{41}
-  \item [{$\mathbf{\hat{j}}$}]\begingroup Unit vector in y-direction \nomunit{-}\nomeqref {5.53}
-		\nompageref{41}
-  \item [{$k$}]\begingroup Order derivative \nomunit{-}\nomeqref {5.0}
-		\nompageref{29}
-  \item [{$k$}]\begingroup Runge-Kutta increment derivative \nomunit{-}\nomeqref {4.3}
 		\nompageref{27}
-  \item [{$K$}]\begingroup Maximum order \nomunit{-}\nomeqref {5.0}
-		\nompageref{29}
-  \item [{$m_{MAV}$}]\begingroup \ac{MAV} mass \nomunit{kg}\nomeqref {3.1}
-		\nompageref{11}
-  \item [{$m_{prop}$}]\begingroup Propellant mass \nomunit{kg}\nomeqref {3.18}
+  \item [{$g_{n}$}]\begingroup Auxiliary placeholder function \nomunit{-}\nomeqref {5.1}
+		\nompageref{27}
+  \item [{$h$}]\begingroup (Current) step-size\nomunit{s}\nomeqref {4.0}
 		\nompageref{24}
+  \item [{$h$}]\begingroup Altitude \nomunit{km}\nomeqref {3.10}
+		\nompageref{13}
+  \item [{$\mathbf{\hat{h}}$}]\begingroup Unit vector in z-direction \nomunit{-}\nomeqref {5.53}
+		\nompageref{39}
+  \item [{$i$}]\begingroup Inclination \nomunit{rad}\nomeqref {3.17}
+		\nompageref{22}
+  \item [{$I_{sp}$}]\begingroup Specific impulse \nomunit{s}\nomeqref {3.2}
+		\nompageref{10}
+  \item [{$\mathbf{\hat{i}}$}]\begingroup Unit vector in x-direction \nomunit{-}\nomeqref {5.53}
+		\nompageref{39}
+  \item [{$\mathbf{\hat{j}}$}]\begingroup Unit vector in y-direction \nomunit{-}\nomeqref {5.53}
+		\nompageref{39}
+  \item [{$k$}]\begingroup Order derivative \nomunit{-}\nomeqref {5.0}
+		\nompageref{27}
+  \item [{$k$}]\begingroup Runge-Kutta increment derivative \nomunit{-}\nomeqref {4.3}
+		\nompageref{26}
+  \item [{$K$}]\begingroup Maximum order \nomunit{-}\nomeqref {5.0}
+		\nompageref{27}
+  \item [{$m_{MAV}$}]\begingroup \ac{MAV} mass \nomunit{kg}\nomeqref {3.1}
+		\nompageref{10}
+  \item [{$m_{prop}$}]\begingroup Propellant mass \nomunit{kg}\nomeqref {3.18}
+		\nompageref{22}
   \item [{$M$}]\begingroup Mach number \nomunit{-}\nomeqref {3.11}
-		\nompageref{14}
+		\nompageref{13}
   \item [{$n$}]\begingroup Order \nomunit{-}\nomeqref {4.4}
-		\nompageref{28}
+		\nompageref{26}
   \item [{$p_{n}$}]\begingroup Polynomial coefficient \nomunit{-}\nomeqref {3.11}
-		\nompageref{14}
+		\nompageref{13}
   \item [{$r$}]\begingroup Radius \nomunit{km}\nomeqref {2.2}
-		\nompageref{6}
+		\nompageref{9}
   \item [{$\textbf{r}$}]\begingroup Radius vector \nomunit{-}\nomeqref {5.12}
-		\nompageref{33}
+		\nompageref{31}
   \item [{$R_{a}^{*}$}]\begingroup Specific gas constant \nomunit{km$^{s}$ s$^{2}$ K$^{-1}$}\nomeqref {3.11}
-		\nompageref{14}
+		\nompageref{13}
   \item [{$t$}]\begingroup Time \nomunit{s}\nomeqref {4.4}
-		\nompageref{28}
+		\nompageref{26}
   \item [{$t_{0}$}]\begingroup Initial time\nomunit{s}\nomeqref {4.1}
-		\nompageref{26}
+		\nompageref{24}
   \item [{$t_{O}$}]\begingroup Difference between current time and the inertial frame set time \nomunit{s}\nomeqref {3.3}
-		\nompageref{12}
+		\nompageref{11}
   \item [{$T$}]\begingroup Thrust \nomunit{kN}\nomeqref {3.2}
-		\nompageref{11}
+		\nompageref{10}
   \item [{$T_{a}$}]\begingroup Temperature \nomunit{K}\nomeqref {3.11}
-		\nompageref{14}
+		\nompageref{13}
   \item [{$T_{n,k}$}]\begingroup Truncation error \nomunit{-}\nomeqref {5.0}
-		\nompageref{29}
+		\nompageref{27}
   \item [{$\mathbb{T}$}]\begingroup Transformation matrix \nomunit{-}\nomeqref {2.0}
-		\nompageref{5}
+		\nompageref{8}
   \item [{$u_{n}$}]\begingroup Auxiliary derivative \nomunit{-}\nomeqref {5.1}
-		\nompageref{29}
+		\nompageref{27}
   \item [{$V$}]\begingroup Velocity \nomunit{km/s}\nomeqref {3.1}
-		\nompageref{11}
+		\nompageref{10}
   \item [{$\Delta V$}]\begingroup Change in velocity \nomunit{km/s}\nomeqref {3.13}
-		\nompageref{20}
+		\nompageref{22}
   \item [{$\textbf{V}$}]\begingroup Velocity vector \nomunit{-}\nomeqref {5.12}
-		\nompageref{33}
+		\nompageref{31}
   \item [{$w_{n,i}$}]\begingroup Auxiliary function \nomunit{-}\nomeqref {5.1}
-		\nompageref{29}
+		\nompageref{27}
   \item [{$x$}]\begingroup State variable \nomunit{-}\nomeqref {4.4}
-		\nompageref{28}
+		\nompageref{26}
   \item [{$x$}]\begingroup x-position coordinate \nomunit{km}\nomeqref {2.2}
-		\nompageref{6}
+		\nompageref{9}
   \item [{$x_{n}$}]\begingroup Auxiliary equation \nomunit{-}\nomeqref {5.1}
-		\nompageref{29}
+		\nompageref{27}
   \item [{$x_{n}$}]\begingroup n$^{th}$ state variable \nomunit{-}\nomeqref {5.0}
-		\nompageref{29}
+		\nompageref{27}
   \item [{$\mathbf{x}_{i+1}$}]\begingroup Next data point\nomunit{-}\nomeqref {4.0}
-		\nompageref{26}
+		\nompageref{24}
   \item [{$\mathbf{x}_{i}$}]\begingroup Current data point\nomunit{-}\nomeqref {4.0}
-		\nompageref{26}
+		\nompageref{24}
   \item [{$X$}]\begingroup Taylor Series coefficient (also $X_{n}$) \nomunit{-}\nomeqref {5.5}
-		\nompageref{30}
+		\nompageref{28}
   \item [{$\mathbf{X}$}]\begingroup State vector \nomunit{-}\nomeqref {5.0}
-		\nompageref{29}
+		\nompageref{27}
   \item [{$y$}]\begingroup y-position coordinate \nomunit{km}\nomeqref {2.2}
-		\nompageref{6}
+		\nompageref{9}
   \item [{$z$}]\begingroup z-position coordinate \nomunit{km}\nomeqref {2.2}
-		\nompageref{6}
+		\nompageref{9}
 
 \end{thenomenclature}

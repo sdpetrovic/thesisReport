@@ -328,9 +328,9 @@ x'_{9}&=\dfrac{3}{2}\dfrac{x_{9}x_{8}'}{x_{8}}
 The angles required for the transformation to go from the body frame to the reference frame all have to be written as a function of the state variables. The required angles are $\lambda$, $\delta$, $\chi_{G}$ and $\gamma_{G}$. Here $\lambda = \tau + \Omega_{M}t_{O}-\omega_{P}$. This means that instead of first transforming to the rotating frame completely and then transforming to the inertial frame, an inertial longitude angle $\lambda$ can be defined to directly transform to the inertial frame. The first two angles are the longitude and latitude and are spherical coordinates. Thus the relations for these angles can be found using the transformation from the Cartesian to the spherical system. However, the angles themselves are not required directly, because they are only used in transformation matrices. These matrices are comprised of the sines and cosines of these angles, which means that a direct relation between the state variables and the sines and cosines of the position angles can be used. These relations can be derived from \Cref{fig:sphertocart_noomen2013basic} and are described in \Cref{eq:transAngl}
 
 
- \begin{figure}[!ht]
+ \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/reference_frames/sphertocart_noomen2013basic.jpg}
+\includegraphics[width=0.3\textwidth]{figures/reference_frames/sphertocart_noomen2013basic.jpg}
 \caption{Spherical position variables in an inertial Cartesian frame \citep{noomen2013basic}.}
 \label{fig:sphertocart_noomen2013basic}
 \end{figure}
@@ -460,9 +460,9 @@ w_{4,12} &= V_{G}=\sqrt{w_{4,11}} \\
  
 The spherical velocity angles can now be derifed from \Cref{fig:vertical_spherical_mooij1994motion} as described by \Cref{eq:velAngl}. These were also provided by \cite{mooij1994motion}. 
 
- \begin{figure}[!ht]
+ \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/reference_frames/vertical_spherical_mooij1994motion.jpg}
+\includegraphics[width=0.5\textwidth]{figures/reference_frames/vertical_spherical_mooij1994motion.jpg}
 \caption{Spherical velocity variables in a vertical Cartesian frame \citep{mooij1994motion}.}
 \label{fig:vertical_spherical_mooij1994motion}
 \end{figure}
@@ -1044,9 +1044,9 @@ So when looking from the inertial frame, there are two state vectors: position a
 
 This unit vector is also shown in \Cref{fig:cartesian_transformation_mooij1994motion}.
 
- \begin{figure}[!ht]
+ \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/reference_frames/cartesian_transformation_mooij1994motion.jpg}
+\includegraphics[width=0.4\textwidth]{figures/reference_frames/cartesian_transformation_mooij1994motion.jpg}
 \caption{Definition of the body frame unit vectors based on the radius and ground velocity expressed in the inertial frame. \citep{mooij1994motion}}
 \label{fig:cartesian_transformation_mooij1994motion}
 \end{figure}
@@ -1241,9 +1241,9 @@ u_{6} &= w_{6,1}+w_{4,36}w_{4,15}+w_{4,37}w_{4,23}-w_{4,38}w_{4,40} \\
 \label{subsec:sphereq}
 For the Spherical case, the initial conditions are readily provided. The position comes directly from the chosen launch site and the velocity comes from the initial \ac{MAV} conditions. These are all defined in the rotating frame as depicted in \Cref{fig:spherical_mooij1994motion} and \Cref{eq:spherVecDef}.
 
- \begin{figure}[!ht]
+ \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/tsi/spherical_mooij1994motion.jpg}
+\includegraphics[width=0.4\textwidth]{figures/tsi/spherical_mooij1994motion.jpg}
 \caption{Definition of the Spherical coordinates \citep{mooij1994motion}.}
 \label{fig:spherical_mooij1994motion}
 \end{figure}
@@ -1669,7 +1669,7 @@ u_{34,5}=0, &  \text{for }  x_{31} \geq 170.05
 Now all the information that is required to compute the recurrence relation for the drag is available. Please note that there is a certain order in which these equations have to be computed, since they depend on each other. \Cref{tab:calcOrderAuxEq} shows this order.
 
 
-\begin{table}[!ht]
+\begin{table}[H]
 \begin{center}
 \caption{Order of auxiliary equations and derivatives computations}
 \label{tab:calcOrderAuxEq}
