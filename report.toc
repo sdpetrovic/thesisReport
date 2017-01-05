@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {4.1.1}Single-step}{20}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Multi-step}{20}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}Chosen method for comparison}{20}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Tudat methods}{20}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.1}\acl {Tudat} methods}{20}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Methods used in previous research}{21}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Chosen method}{21}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}Workings of \ac {RKF}}{21}{section.4.3}
@@ -105,7 +105,7 @@
 \contentsline {section}{\numberline {9.2}Recommendations}{79}{section.9.2}
 \contentsline {subsection}{\numberline {9.2.1}Improvements to the current \ac {TSI} program}{79}{subsection.9.2.1}
 \contentsline {subsection}{\numberline {9.2.2}Extra tests and additions}{80}{subsection.9.2.2}
-\contentsline {chapter}{Bibliography}{81}{chapter*.106}
+\contentsline {chapter}{Bibliography}{81}{chapter*.105}
 \contentsline {chapter}{\numberline {A}Mars-\ac {GRAM} 2005 input file}{84}{appendix.A}
 \contentsline {chapter}{\numberline {B}Atmospheric data fitting}{88}{appendix.B}
 \contentsline {section}{\numberline {B.1}Temperature}{88}{section.B.1}

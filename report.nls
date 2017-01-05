@@ -14,7 +14,7 @@
 		\nompageref{13}
   \item [{$R_{a}$}]\begingroup Molar gas constant \nomunit{8.3144598$\cdot$10$^{-6}$ km$^{2}$ kg s$^{-2}$ K$^{-1}$ mol$^{-1}$}\nomeqref {3.11}
 		\nompageref{13}
-  \item [{$R_{MOLA}$}]\begingroup Mars \acs{MOLA} reference radius \nomunit{3396 km}\nomeqref {3.10}
+  \item [{$R_{MOLA}$}]\begingroup Mars \acs{MOLA} reference radius (also $R_{M}$) \nomunit{3396 km}\nomeqref {3.10}
 		\nompageref{13}
   \item [{$S$}]\begingroup Reference area \nomunit{9.1$\cdot$10$^{-8}$ km$^{2}$}\nomeqref {3.10}
 		\nompageref{13}

@@ -1,7 +1,7 @@
 \chapter{Program file definitions} 				% Last updated 07-04-2016
 \label{app:appendixC-programFileDefinitions}
 
-Both the \ac{RKF} and \ac{TSI} propagator architectures were presented in \Cref{ch:programoptimisationtool}(\Cref{fig:RK_Propagator,fig:TSI_Propagator} respectively). These included many different operation blocks. Each block is either a separate class, a combination of a header and source file (without it being a class), a function of either of these files or a function in the main file (MAVPropagator). The different files that include several blocks are MAVPropagator.h/.cpp, TaylorSeriesIntegration.h/.cpp, ascentDragForce.h/.cpp and ascentStateDerivativeFunction.h/.cpp, where this last file is also a class. The functions that will be implemented in these files are mentioned in \Cref{tab:inclFunctions} all other blocks are described in \Cref{tab:classes}.
+Both the \ac{RKF} and \ac{TSI} propagator architectures were presented in \Cref{ch:programSimulationTool}(\Cref{fig:RK_Propagator,fig:TSI_Propagator} respectively). These included many different operation blocks. Each block is either a separate class, a combination of a header and source file (without it being a class), a function of either of these files or a function in the main file (MAVPropagator). The different files that include several blocks are MAVPropagator.h/.cpp, TaylorSeriesIntegration.h/.cpp, ascentDragForce.h/.cpp and ascentStateDerivativeFunction.h/.cpp, where this last file is also a class. The functions that will be implemented in these files are mentioned in \Cref{tab:inclFunctions} all other blocks are described in \Cref{tab:classes}.
 
 \begin{table}[H]
 \begin{center}

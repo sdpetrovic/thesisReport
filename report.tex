@@ -52,6 +52,9 @@
 %\makeglossaries
 \usepackage[printonlyused]{acronym}  %Used to make the abbreviations list. Call = \ac{}
 
+\newcommand{\acr}[1]{\acs{#1} (\aclu{#1})}
+% Used to create a reversed acronym showing the abbreviaion first and then the full lenght meaning in brackets 
+
 \usepackage{multicol} %Used to make multiple column text (for e.g. the list of abbreviations)
 
 %\usepackage[ampersand]{easylist} %Used to make an easy list with different levels. But it doesn't look as cool as the normal nested list so I will not be using this package

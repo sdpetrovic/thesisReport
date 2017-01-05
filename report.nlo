@@ -25,7 +25,7 @@
 \nomenclatureentry{Ga3$\rho$@[{$\rho$}]\begingroup Density \nomunit{kg/km$^{3}$}\nomeqref {3.10}|nompageref}{11}
 \nomenclatureentry{Ca7$S$@[{$S$}]\begingroup Reference area \nomunit{9.1$\cdot$10$^{-8}$ km$^{2}$}\nomeqref {3.10}|nompageref}{11}
 \nomenclatureentry{Ra1$C_{D}$@[{$C_{D}$}]\begingroup Drag coefficient \nomunit{-}\nomeqref {3.10}|nompageref}{11}
-\nomenclatureentry{Ca7$R_{MOLA}$@[{$R_{MOLA}$}]\begingroup Mars \acs{MOLA} reference radius \nomunit{3396 km}\nomeqref {3.10}|nompageref}{11}
+\nomenclatureentry{Ca7$R_{MOLA}$@[{$R_{MOLA}$}]\begingroup Mars \acs{MOLA} reference radius (also $R_{M}$) \nomunit{3396 km}\nomeqref {3.10}|nompageref}{11}
 \nomenclatureentry{Ra1$h$@[{$h$}]\begingroup Altitude \nomunit{km}\nomeqref {3.10}|nompageref}{11}
 \nomenclatureentry{Ra5$M$@[{$M$}]\begingroup Mach number \nomunit{-}\nomeqref {3.11}|nompageref}{11}
 \nomenclatureentry{Ra1$a$@[{$a$}]\begingroup Speed of sound \nomunit{km/s}\nomeqref {3.11}|nompageref}{11}
