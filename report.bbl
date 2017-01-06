@@ -375,7 +375,7 @@
   {http://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html} {\textit
   {\bibinfo {title} {{Mars Fact Sheet}},}\ }\bibinfo {howpublished} {website}
   (\bibinfo {year} {2015}),\ \bibinfo {note} {[online database], URL:
-  http://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html [cited 1
+  http://nssdc.gsfc.nasa.gov/planetary/ factsheet/marsfact.html [cited 1
   November 2015]}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Wakker}(2010)}]{wakker2010}%
   \BibitemOpen
@@ -463,14 +463,6 @@
   Rep.}\ (\bibinfo  {institution} {Marschall Space Flight Center, NASA},\
   \bibinfo {year} {1968})\ \bibinfo {note} {: NASA TR R-287}\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Berry}(2004)}]{berry2004}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~M.}\ \bibnamefont
-  {Berry}},\ }\emph {\bibinfo {title} {{A Variable-Step Double-Integration
-  Multi-Step Integrator}}},\ \href
-  {http://scholar.lib.vt.edu/theses/available/etd-04282004-071227/unrestricted/dissertation.pdf}
-  {Ph.D. thesis},\ \bibinfo  {school} {Virginia Polytechnic Institute and State
-  University} (\bibinfo {year} {2004})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Meijaard}(1991)}]{meijaard1991}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
@@ -482,6 +474,14 @@
   Simulation}}},\ Vol.~\bibinfo {volume} {69}\ (\bibinfo  {publisher}
   {Springer},\ \bibinfo {year} {1991})\ pp.\ \bibinfo {pages}
   {329--343}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Berry}(2004)}]{berry2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~M.}\ \bibnamefont
+  {Berry}},\ }\emph {\bibinfo {title} {{A Variable-Step Double-Integration
+  Multi-Step Integrator}}},\ \href
+  {http://scholar.lib.vt.edu/theses/available/etd-04282004-071227/unrestricted/dissertation.pdf}
+  {Ph.D. thesis},\ \bibinfo  {school} {Virginia Polytechnic Institute and State
+  University} (\bibinfo {year} {2004})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ramos}\ and\ \citenamefont
   {Vigo-Aguiar}(2005)}]{ramos2005}%
   \BibitemOpen

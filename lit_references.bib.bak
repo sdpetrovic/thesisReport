@@ -1758,6 +1758,18 @@
   Timestamp                = {2015.08.29}
 }
 
+@Conference{karp2016technology,
+  Title                    = {{Technology development and design of a hybrid Mars ascent vehicle concept}},
+  Author                   = {Karp, Ashley C and Redmond, Matt and Nakazono, Barry and Vaughan, David and Shotwell, Robert and Story, George and Jackson, Dale and Young, David},
+  Booktitle                = {{Aerospace Conference, 2016 IEEE}},
+  Year                     = {2016},
+  Organization             = {IEEE},
+  Pages                    = {1--10},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.11.18}
+}
+
 @InProceedings{kechichian2000minimum,
   Title                    = {{Minimum-Time Constant Acceleration Orbit Transfer with First-Order Oblateness Effect}},
   Author                   = {Kechichian, Jean Albert},
@@ -3644,7 +3656,8 @@
   Author                   = {D.R. Williams},
   HowPublished             = {website},
   Month                    = {August},
-  Note                     = {[online database], URL: http://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html [cited 1 November 2015]},
+  Note                     = {[online database], URL:                                                                
+http://nssdc.gsfc.nasa.gov/planetary/ factsheet/marsfact.html [cited 1 November 2015]},
   Organization             = {NASA},
   Url                      = {http://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html},
   Year                     = {2015},

@@ -71,7 +71,7 @@
   \item [{$b_{i}$}]\begingroup \ac{RKF} weights for each point  \nomunit{-}\nomeqref {4.4}
 		\nompageref{26}
   \item [{$C$}]\begingroup Transformation matrix coefficient \nomunit{-}\nomeqref {5.51}
-		\nompageref{38}
+		\nompageref{39}
   \item [{$C_{D}$}]\begingroup Drag coefficient \nomunit{-}\nomeqref {3.10}
 		\nompageref{13}
   \item [{$c_{i}$}]\begingroup \ac{RKF} step-size weights \nomunit{-}\nomeqref {4.4}

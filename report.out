@@ -1,5 +1,5 @@
-\BOOKMARK [0][-]{chapter*.10}{Nomenclature}{}% 1
-\BOOKMARK [0][-]{chapter*.10}{Abbreviations}{}% 2
+\BOOKMARK [0][-]{chapter*.9}{Nomenclature}{}% 1
+\BOOKMARK [0][-]{chapter*.9}{Abbreviations}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
 \BOOKMARK [0][-]{chapter.2}{Problem background}{}% 4
 \BOOKMARK [1][-]{section.2.1}{Chosen mission}{chapter.2}% 5
@@ -36,7 +36,7 @@
 \BOOKMARK [2][-]{subsection.5.2.4}{Recurrence relations}{section.5.2}% 36
 \BOOKMARK [0][-]{chapter.6}{Program simulation tool}{}% 37
 \BOOKMARK [1][-]{section.6.1}{Existing software}{chapter.6}% 38
-\BOOKMARK [2][-]{subsection.6.1.1}{Tudat}{section.6.1}% 39
+\BOOKMARK [2][-]{subsection.6.1.1}{TU Delft Astrodynamics Toolbox}{section.6.1}% 39
 \BOOKMARK [2][-]{subsection.6.1.2}{Eigen}{section.6.1}% 40
 \BOOKMARK [2][-]{subsection.6.1.3}{Boost}{section.6.1}% 41
 \BOOKMARK [2][-]{subsection.6.1.4}{Mars-GRAM}{section.6.1}% 42
@@ -91,17 +91,16 @@
 \BOOKMARK [0][-]{appendix.B}{Atmospheric data fitting}{}% 91
 \BOOKMARK [1][-]{section.B.1}{Temperature}{appendix.B}% 92
 \BOOKMARK [1][-]{section.B.2}{Density}{appendix.B}% 93
-\BOOKMARK [0][-]{appendix.C}{Program file definitions}{}% 94
-\BOOKMARK [0][-]{appendix.D}{All Recurrence Relations}{}% 95
-\BOOKMARK [1][-]{section.D.1}{First Cartesian case: Euler angles}{appendix.D}% 96
-\BOOKMARK [1][-]{section.D.2}{Second Cartesian case: unit vectors}{appendix.D}% 97
-\BOOKMARK [1][-]{section.D.3}{Spherical case}{appendix.D}% 98
-\BOOKMARK [0][-]{appendix.E}{Nominal case input values}{}% 99
-\BOOKMARK [1][-]{section.E.1}{Case 1}{appendix.E}% 100
-\BOOKMARK [1][-]{section.E.2}{Case 2}{appendix.E}% 101
-\BOOKMARK [0][-]{appendix.F}{Results}{}% 102
-\BOOKMARK [1][-]{section.F.1}{Order}{appendix.F}% 103
-\BOOKMARK [1][-]{section.F.2}{Multiple runs}{appendix.F}% 104
-\BOOKMARK [1][-]{section.F.3}{Launch altitude}{appendix.F}% 105
-\BOOKMARK [1][-]{section.F.4}{Launch latitude}{appendix.F}% 106
-\BOOKMARK [1][-]{section.F.5}{Launch longitude}{appendix.F}% 107
+\BOOKMARK [0][-]{appendix.C}{All Recurrence Relations}{}% 94
+\BOOKMARK [1][-]{section.C.1}{First Cartesian case: Euler angles}{appendix.C}% 95
+\BOOKMARK [1][-]{section.C.2}{Second Cartesian case: unit vectors}{appendix.C}% 96
+\BOOKMARK [1][-]{section.C.3}{Spherical case}{appendix.C}% 97
+\BOOKMARK [0][-]{appendix.D}{Nominal case input values}{}% 98
+\BOOKMARK [1][-]{section.D.1}{Case 1}{appendix.D}% 99
+\BOOKMARK [1][-]{section.D.2}{Case 2}{appendix.D}% 100
+\BOOKMARK [0][-]{appendix.E}{Results}{}% 101
+\BOOKMARK [1][-]{section.E.1}{Order}{appendix.E}% 102
+\BOOKMARK [1][-]{section.E.2}{Multiple runs}{appendix.E}% 103
+\BOOKMARK [1][-]{section.E.3}{Launch altitude}{appendix.E}% 104
+\BOOKMARK [1][-]{section.E.4}{Launch latitude}{appendix.E}% 105
+\BOOKMARK [1][-]{section.E.5}{Launch longitude}{appendix.E}% 106
