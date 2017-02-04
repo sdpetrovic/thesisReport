@@ -14,7 +14,7 @@ The parameters changed in this sensitivity analysis are: order, error tolerance,
 \label{sec:order}
 For most classic integrators the order is set and cannot be changed easily. For \ac{RKF} for instance, a whole new set of coefficients is required if a different order is desired (hence \ac{RKF45}, \ac{RKF56}, \ac{RKF78} etc.). However, for \ac{TSI} changing the order is as simple as updating the maximum order input value. Theoretically this means that an infinite order can be chosen to get the most accurate result. The question is, is this indeed the most optimal. \Cref{subsec:optimalOrder} hopes to answer this question by looking at the CPU time. In \Cref{subsec:orderCompNotRot} a range of orders has been run for both cases. Once with the nominal conditions of a rotating Mars and once assuming a non-rotating Mars. The effect of the rotating Mars will be investigated. The cut-off criteria for case 1 was an end time of 1796 seconds for the data collection run and 789 seconds without live data collection. For case 2 the cut-off criteria was 876 second for both runs.
 
-\subsection{Optimal order}
+\subsection{Optimal Order}
 \label{subsec:optimalOrder}
 To determine the optimal order an important criteria is that the outcome is accurate, however, what is often more important is that this accurate outcome is computed really fast. This is why, in order to find the optimum order, the CPU time is the most important criteria. In order to properly observe the effect of a different order, the nominal case is run for different orders. Thus the only difference will be the maximum order. This can be done for the two presented cases. During real-life simulations a user can choose to either collect all the data during the simulation or only store the final outcomes at the end of the simulation. Storing data during the integration requires a lot of computational power and will therefore increase the CPU time required, but it will provide the user with the desired trajectory data. Both runs with and without live data collection have been run for a specific range of orders depending on the case, and the results are shown in \Cref{fig:orderVsCPUcase1IncludingLiveDataCollection}.
 The first case was run with a maximum order ranging from 5 to 100, and the second case was run from 5 to 31 because of the behaviour observed during the first case runs. 
@@ -98,7 +98,7 @@ In the table and the graphs it can be seen that the minima are all situated arou
 %
 %- Zoom in numbers around Order 20 to prove it is the fastest \\
 
-\subsection{Comparison with non-rotating Mars}
+\subsection{Comparison with Non-Rotating Mars}
 \label{subsec:orderCompNotRot}
 For the comparison of the rotating and the non-rotating cases with a varying order it is again interesting to look at the differences in CPU time. \Cref{fig:orderVsCPUcase1combined} shows these plots for both cases when the trajectory data is not collected during the simulation. It can be seen that for case 1, on average, the non-rotating runs are faster. Also, for a non-rotating Mars the optimum order is 20 as well. The difference in CPU time is better shown by the case 2 run, where the non-rotating curve fits perfectly below the rotating curve. Here, the order 20 has again the second lowest CPU time (the lowest is order 17 with a time difference of 28 microseconds). The time difference between the curves of the rotating and non-rotating Mars can be explained by the fact that if Mars does not rotate, the rotating effects become zero, which reduces the number of computations.
 %Explain what you can see in the graph and why that is probably the case.
@@ -140,7 +140,7 @@ As was mentioned before, the accuracy of  the results is very important. In \Cre
 \end{figure}
 
 
-\section{Error tolerance}
+\section{Error Tolerance}
 \label{sec:errorTolerance}
 The error tolerance is used to determine the required step-size during the integration. A high error tolerance (say 10$^{-5}$) will therefore provide an end result that is less accurate than a lower error tolerance (such as 10$^{-15}$). For the \ac{RKF78} provided by \ac{Tudat} the lowest accuracy that can be used is 10$^{-15}$, which is why that accuracy is used as the nominal accuracy. When a range of error tolerances is examined the accuracy of the end state and the speed of convergence can be determined. The speed of convergence follows from the consecutive differences between the end states and the accuracy of the end states comes from the comparison to the nominal case. Both these characteristics will be examined and compared for \ac{RKF} and \ac{TSI}, see \Cref{subsec:errorToleranceCompRKF}, and for the rotating and non-rotating Mars described in \Cref{subsec:errorToleranceCompNotRot}. The cut-off criteria for case 1 was 789 seconds and 876 seconds for case 2 and both cases were run without live data collection.
 
@@ -238,7 +238,7 @@ This advantage however does not translate well to the CPU time where it can be s
 %- Either accuracy of separate velocities or simply ground velocity in metres/second \\
 
 
-\subsection{Comparison with non-rotating Mars}
+\subsection{Comparison With Non-Rotating Mars}
 \label{subsec:errorToleranceCompNotRot}
 Looking at the rotating Mars and non-rotating Mars runs, a noticeable difference in the CPU time can be observed as shown in \Cref{fig:orderVsCPUcase1combined}. In both cases the non-rotating Mars run is approximately 0.2 ms faster. This is similar to what was observed with the order runs.
 
@@ -289,7 +289,7 @@ Here it can be seen that the rotation of Mars does not have a significant influe
 %- Either accuracy of separate velocities or simply ground velocity in metres/second \\
 
 
-\section{Multiple runs}
+\section{Multiple Runs}
 \label{sec:multipleRuns}
 In \Cref{subsec:errorToleranceCompNotRot} it was shown that in this thesis research, the \ac{TSI} turned out to be slower than \ac{RKF} for both tested cases. This in contrary to the reference research. Therefore it is a good idea to look at the differences that could occur when measuring CPU time for different runs. In this section the nominal case has been run 5000 times in sequence for both \ac{RKF} and \ac{TSI} (\Cref{subsec:timeCompRKF}) using a rotating and a non-rotating Mars (\Cref{subsec:timeCompNotRot}). If the computer and the CPU measurements would be perfect, there should be no difference in CPU time and there would simply be two lines. This, interestingly enough, is not the case.\\
 
@@ -326,7 +326,7 @@ For case 1 it can be seen that there were some periods where the CPU time was sl
 
 
 
-\subsection{Comparison with non-rotating Mars}
+\subsection{Comparison with Non-Rotating Mars}
 \label{subsec:timeCompNotRot}
 The effect of a program running in the background during a simulation run becomes even more clear when looking at the rotating and non-rotating Mars CPU times shown in \Cref{fig:multiRunVsCPUcase1combinedSmall}. 
 
@@ -353,7 +353,7 @@ Here it can be seen that, on average, the non-rotating Mars runs are fasters tha
 
 
 
-\section{Launch altitude}
+\section{Launch Altitude}
 \label{sec:launchAltitude}
 From now on only the rotating runs and the non-rotating runs will be compared. This can be done because \ac{TSI} has proven to be accurate compared to \ac{RKF} producing similar results. Thus it is only interesting to look at the effect of the different parameters on the performance of \ac{TSI}. In this case the effect on CPU time, consecutive difference and absolute difference will be investigated as well as effect the on end radius and end velocity before cirularisation. Here the cut-off criteria for case 1 was an end time of 789 seconds and 856 seconds for case 2.\\
 
@@ -448,7 +448,7 @@ More position and velocity graphs can be found in \Cref{app:appendixG-Results}.
 
 
 
-\section{Launch latitude}
+\section{Launch Latitude}
 \label{sec:launchLatitude}
 For the latitude comparisons, the CPU time, radius and velocity are compared. Additional graphs for the end states are provided in \Cref{app:appendixG-Results}. The cut-off criteria was an end time of 789 seconds for the first case and 783 seconds for the second case. Again starting with the CPU time as shown in \Cref{fig:launchLatitudeVsCPUcase1combined}. Even though the curves from case 1 and case 2 might look different, they show the same behaviour. Starting at the equator and ending on the North-pole, both graphs show that the CPU time of the rotating and the non-rotating case converge until they are practically the same on the North-pole. This clearly shows the effect of the rotating Mars on both cases, because this effect becomes smaller with an increase in latitude.
 
@@ -518,7 +518,7 @@ These effects are also shown in the velocity curves presented in \Cref{fig:launc
 % 
 
 
-\section{Launch longitude}
+\section{Launch Longitude}
 \label{sec:launchLongitude}
 For the launch longitude, the cut-off criteria was an end time of 789 seconds for case 1 and 873 seconds for case 2. The longitude ($\tau$) has been varied from 0 to 330 degrees. Both the kinematic equations described in \Cref{eq:kinEqSp} and the dynamic equations described in \Cref{eq:dynEqSp} do not depend on the longitude. This means that no differences are expected between the different longitudes. \\
 
@@ -579,7 +579,7 @@ It is however more interesting to look at the differences in radius and velocity
 The difference in end radius follows from a difference in velocity. Because the only difference between case 1 and case 2 is the input, these differences can be attributed to rounding errors.  It seems that different combinations of input values could create cases where the rounding errors can have a large effect. It is interesting to note that \ac{RKF} showed the same deviations.
 
 
-\section{Flight-path angle}
+\section{Flight-Path Angle}
 \label{sec:flightPathAngle}
 Previously, the cut-off criteria was always set to be a certain end time. However, for the \ac{FPA} it is better to set the cut-off criteria as the point when the simulation reaches the zero degree \ac{FPA}. This means that not only the final altitude will be different but also the simulation run time. It is expected that a \ac{MAV} launched at a lower launch \ac{FPA} will reach the cut-off criteria earlier compared to a high flight-path angle launch. A lower simulation time will equal fewer function evaluations. This is shown in \Cref{fig:FPAvsFunctionEvaluationsCase1combined}, where it is clear that for both the rotating and the non-rotating Mars runs the number of function evaluations decrease with a decrease in \ac{FPA} for both cases. It also shows that the number of function evaluations does not differ much compared to the non-rotating runs, but the two curves do seem to diverge slightly with a higher \ac{FPA}. This is expected since the simulation run time is higher as well.  
 
@@ -664,7 +664,7 @@ For case 1 the \ac{FPA} range was from 86.5 till 89.5 degrees, and for case 2 th
 %- Ground velocity and difference with nominal case in m case 1 \\
 %- Ground velocity and difference with nominal case in m case 2 \\
 
-\section{Heading angle}
+\section{Heading Angle}
 \label{sec:headingAngle}
 The final variable that is investigated is the launch heading angle. This angle defines the direction in which the \ac{MAV} is pointed at launch. In this thesis research the heading angle is defined to be 0 degrees facing North, 90 degrees due East, 180 degrees pointed South and 270 degrees due West. Again the cut-off criteria for this angle has been set at a \ac{FPA} of 0 degrees. Thus the end time and altitude are again left free. This means that the number of function evaluations will also be different as shown in \Cref{fig:headingAnglevsFunctionEvaluationsCase1combined}.
 

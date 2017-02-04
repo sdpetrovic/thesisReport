@@ -1,4 +1,4 @@
-\chapter{Standard integration methods}
+\chapter{Numerical Integration Methods}
 % 16-11-2016 created
 
 
@@ -8,7 +8,7 @@ Numerical integration methods do have one major drawback compared to analytic me
 Another, non-method specific and not necessarily integration related, error source is the mistakes made in the physical model representing the problem in the simulation. Such errors can occur when forces and disturbances are not (properly) taken into account in the assumptions made to create the physical model.\\
 Fortunately, many of the standard integration methods already contain functions that approximate these errors and then include those approximations to come up with a better solution, or try to minimize these errors by using multiple approximations. The focus of this chapter will thus lie on the different integration methods and not the different methods of determining the different errors.
 
-\section{Different integrator types}
+\section{Different Integrator Types}
 \label{sec:differentIntegratorTypes}
 A number of different numerical integration methods exist, and in this section they will be split based on how they work. In this case they have been split into single-step (\Cref{subsec:singleStep}) and multi-step methods (\Cref{subsec:multiStep}) based on \cite{noomen2013int}. The methods can also be split based on the used step-size; either a fixed step-size that does not change during the integration, or a variable step-size that changes per step (or sometimes even during the step). Finally, the methods can also be categorised by either being explicit or implicit. An explicit method uses the information provided at the start of the integration (the current state $\mathbf{x}_{i}$ and sometimes previous states) to determine the next state $\mathbf{x}_{i+1}$. Whereas an implicit method uses the same information to determine $\mathbf{x}_{i+1}$, but once this first solution is obtained, it uses this next state as an approximation of the solution and feeds it back into the method in order to determine a more accurate solution. This requires iteration. \\
 The numerical approximation of the next state can be written as the current state plus the change during one time-step. This change is defined as the step-size $h$ times the increment function 
@@ -29,23 +29,23 @@ $\mathbf{\Phi}$ as shown by \Cref{eq:integration}, which changes depending on th
 
 
 
-\subsection{Single-step}
+\subsection{Single-Step}
 \label{subsec:singleStep}
 Single-step methods solely use the information at the current point to determine the approximation of the next state. This means that the information of the previous points is neglected and usually not saved \citep{noomen2013int}. Examples of the most simple explicit, fixed step-size, single-step methods are Euler, Mid-point and \ac{RK4} \citep{hofsteenge2013}. Euler uses the information at the current state to directly compute the estimate of the next state. Mid-point already incorporates an extra estimation where it first computes a point at half the step-size and then uses that information to approximate the next state, and \ac{RK4} takes 4 points into account and takes the weighted average of those to come up with a solution (the starting point, two mid-points and a final point). Many methods exists that are based on these simple methods, for instance the Mid-point method based high-order extrapolation (a.k.a. DIFEX2) (explicit) method \citep{deuflhard1994}.\\
 Many more methods however are based on the \ac{RK4} principle such as Runge-Kutta-Nystr\"{o}m (RKN), with variations such as RKN7(6)9) (implicit) \citep{montenbruck1992,dormand1987} and \ac{RKN12} (implicit) \citep{montenbruck1992}  as well as \ac{RKF} methods such as \acf{RKF45} and \acf{RKF78} \citep{fehlberg1969,fehlberg1968}. These last two integrators are slightly different since they are still explicit, but use a variable step-size.
 
 
-\subsection{Multi-step}
+\subsection{Multi-Step}
 \label{subsec:multiStep}
 Compared to the single-step method, the multi-step method does use the information of the previous points to estimate the next state. Usually reaching as far back as the previous three points such as the \ac{AB4} method \citep{noomen2013int}, this being the only difference between this method and the \ac{RK4} method. Extending this method creates the explicit \ac{AB6} method. An example of an implicit, fixed step-size, multi-step method is the Adams-Moulton method. It uses a polynomial to interpolate the function values in order to approximate the next state \citep{noomen2013int}. Explicit and implicit methods can also be combined to create so-called Predictor-Corrector methods. Here an initial guess is created by the explicit method, which is then fed into the implicit part in order to correct and improve the estimate. Examples of Predictor-Corrector methods are \ac{ABM4} and \ac{ABM12} \citep{montenbruck1992,noomen2013int}. \\
 All previously mentioned multi-step methods use a fixed step-size. Variable step-size methods also exist, such as \ac{SG} (explicit) \citep{meijaard1991,berry2004} and \ac{SC14} (Predictor-Corrector) \citep{berry2004,ramos2005}.
 
 
-\section{Chosen method for comparison}
+\section{Chosen Method for Comparison}
 \label{sec:chosenMethodForComparison}
 In order to choose the method that will be used to compare the performance of \ac{TSI} to, it was important to understand which methods were readily available. If a method is already validated and available for use a lot of time can be saved. Therefore, an inquiry of available methods is made in \Cref{subsec:tudatMethods}. Another important criteria is that the performance of \ac{TSI} should be able to be compared to previous study cases. The easiest way of doing that is to see what methods other researchers used to compare \ac{TSI} to (see \Cref{subsec:methodsUsedInPreviousResearch}). Using the information from \Cref{subsec:tudatMethods,subsec:methodsUsedInPreviousResearch} a decision could be made on the final comparison method as is described in \Cref{subsec:chosenMethod}.
 
-\subsection{\acl{Tudat} methods}
+\subsection{\acl{Tudat} Methods}
 \label{subsec:tudatMethods}
 One of the software tools used in this thesis is \acf{Tudat} (see \Cref{subsec:tudat} for more information). It is a computational toolbox that already comes with a number of useful functions. It also contains a number of pre-programmed validated numerical integrators. A list of the available integration methods is provided in \Cref{tab:tudatIntegrators}.
 
@@ -76,11 +76,11 @@ One of the software tools used in this thesis is \acf{Tudat} (see \Cref{subsec:t
 \noindent
 Most of these methods are very similar except \ac{RK4} which is a fixed step-size method, and \ac{DOPRIN87} which is actually a Runge-Kutta method similar to \ac{RKF} with an accuracy order 8(7) using the formulations as described by \cite{prince1981high} according to \cite{weeks2007comparison}. At the time of the research, the \ac{RKF56} method that was preprogrammed into \ac{Tudat} was unfortunately not available for use.
 
-\subsection{Methods used in previous research}
+\subsection{Methods Used in Previous Research}
 \label{subsec:methodsUsedInPreviousResearch}
 Out of the research done on integration methods for space missions, the most relevant is the research that was done using \ac{TSI}. The research performed by \cite{scott2008high} focused on orbital trajectories and used RKF8(9) and the researched performed by \cite{bergsma2016application} focussed on re-entry cases and used \ac{RKF56}. Unfortunately, RKF8(9) was not available through \ac{Tudat} and \ac{RKF56} was out of commission at the time of this thesis research. However, it is good to notice that both researchers used higher order RKF methods, which encourages the use of similar methods for this research and fortunately similar methods are available.
 
-\subsection{Chosen method}
+\subsection{Chosen Method}
 \label{subsec:chosenMethod}
 Considering the available methods and the methods used in previous \ac{TSI} research it was determined that the \ac{RKF} methods and \ac{DOPRIN87} would be tested in the early phases of the verification process. In this case \ac{RK4} would serve as a back-up. During the verification of the standard integrator it was found that \ac{RKF78} showed the best performance when dealing with these ascent problems, which is why it was chosen as the integration method to which \ac{TSI} was later compared.
 
@@ -125,9 +125,9 @@ k_{4}&=f'\left(t_{0}+h,\mathbf{x}_{0}+hk_{3}\right)\\
 \end{split}
 \end{equation}
 
-\nomenclature[Ra1]{$a_{i,j}$}{\ac{RKF} coefficients of the previous time-derivatives \nomunit{-}}
-\nomenclature[Ra1]{$b_{i}$}{\ac{RKF} weights for each point  \nomunit{-}}
-\nomenclature[Ra1]{$c_{i}$}{\ac{RKF} step-size weights \nomunit{-}}
+\nomenclature[Ra0]{$a_{i,j}$}{\ac{RKF} coefficients of the previous time-derivatives \nomunit{-}}
+\nomenclature[Ra0]{$b_{i}$}{\ac{RKF} weights for each point  \nomunit{-}}
+\nomenclature[Ra0]{$c_{i}$}{\ac{RKF} step-size weights \nomunit{-}}
 \nomenclature[Ra5]{$n$}{Order \nomunit{-}}
 \nomenclature[Rb1]{$x$}{State variable \nomunit{-}}
 \nomenclature[Ra7]{$t$}{Time \nomunit{s}}

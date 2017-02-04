@@ -8,7 +8,7 @@
 \label{ch:models}
 The \ac{MAV} and the corresponding ascent can be modelled in many different ways. Depending on the desired accuracy of the final solution compared to the real-life expected trajectory, different perturbations and freedom in motion can be defined and included, ranging from a low fidelity to a high fidelity program. The main goal of this thesis is to determine if \ac{TSI} is an integrator that can be used for ascent cases and determine its performance compared to previously established methods. Therefore, it should be close to a real-life ascent, but not include too many aspects as to make the problem too complex to test. Therefore, it was decided to design a low fidelity program to propagate the trajectory using accelerations in the x-, y- and z-direction (3DOF). The \ac{MAV} system can then be modelled as a point-mass system with different accelerations acting on it. The change in position can be described by the kinematic equations and the change in velocity by the corresponding dynamic equations. The change in mass is then described by the mass-flow. All these equations are provided in \Cref{sec:stateAndStateDerivatives}. For this model, three perturbing accelerations will be taken into account: the gravity, the thrust and the drag. The effect of third bodies can be neglected because of the short mission time. All the accelerations are described in \Cref{sec:gravityModel,sec:thrustModel,sec:dragModel} respectively. At the end of the integration, an impulsive shot is executed to circularise the orbit as described in \Cref{sec:modelCircularisation}.
 
-\section{State and state derivatives}
+\section{State And State Derivatives}
 \label{sec:stateAndStateDerivatives}
 %\textbf{\textcolor{red}{Maybe include more assumptions and corresponding explanations!!}}
 The general model is described in terms of the Cartesian state; position and velocity in the x-, y-, and z-direction and the mass. The notation is shown in \Cref{eq:stateModel}, where $m_{MAV}$ is the mass of the \ac{MAV} and the subscript $I$ refers to the inertial frame.
@@ -29,7 +29,7 @@ V_{z_{I}}\\
 m_{MAV}&
 \end{align}
 
-\nomenclature[Rb0]{$V$}{Velocity \nomunit{km/s}}
+\nomenclature[Rb0]{$V$}{Velocity \nomunit{m/s}}
 \nomenclature[Ra4]{$m_{MAV}$}{\ac{MAV} mass \nomunit{kg}}
 
 
@@ -52,9 +52,9 @@ In order to determine the next state, the change in the state parameters over ti
 \dot{m}_{MAV}=-\dfrac{T}{g_{0}I_{sp}}
 \end{align}
 
-\nomenclature[Ra1]{$a$}{Acceleration \nomunit{km/s$^{2}$}}
-\nomenclature[Ca7]{$g_{0}$}{Standard gravitational acceleration at Earth sea level \nomunit{9.80665$\cdot$10$^{-3}$ km/s$^{2}$}}
-\nomenclature[Ra8]{$T$}{Thrust \nomunit{kN}}
+\nomenclature[Ra0]{$a$}{Acceleration \nomunit{m/s$^{2}$}}
+\nomenclature[Ca7]{$g_{0}$}{Standard gravitational acceleration at Earth sea level \nomunit{9.80665 m/s$^{2}$}}
+\nomenclature[Ra8]{$T$}{Thrust \nomunit{N}}
 \nomenclature[Ra2]{$I_{sp}$}{Specific impulse \nomunit{s}}
 
 
@@ -101,8 +101,8 @@ a_{Thrust}\\
 \nomenclature[Ra7]{$t_{O}$}{Difference between current time and the inertial frame set time \nomunit{s}}
 \nomenclature[Ga6]{$\omega_{P}$}{Off-set angle between inertial frame and zero meridian at inertial frame set time \nomunit{rad}}
 \nomenclature[Ga4]{$\chi$}{Heading angle (or azimuth) \nomunit{rad}}
-\nomenclature[Ga1]{$\gamma$}{Flight-path angle \nomunit{rad}}
-\nomenclature[Ga3]{$\tau$}{Rotational longitude \nomunit{rad}}
+\nomenclature[Ga0]{$\gamma$}{Flight-path angle \nomunit{rad}}
+\nomenclature[Ga3]{$\tau$}{Central-body fixed longitude \nomunit{rad}}
 \nomenclature[Ga5]{$\psi_{T}$}{Thrust azimuth angle \nomunit{rad}}
 \nomenclature[Ga2]{$\epsilon_{T}$}{Thrust elevation angle \nomunit{rad}}
 
@@ -179,7 +179,9 @@ a_{z,Grav}\\
 \end{pmatrix}
 \end{equation}
 
-\nomenclature[Ca7]{$\mu_{M}$}{Mars standard gravitational parameter \nomunit{4.2828314$\cdot$10$^{-5}$km$^{3}$/s$^{2}$}}
+%\nomenclature[Ca7]{$\mu_{M}$}{Mars standard gravitational parameter \nomunit{4.2828314$\cdot$10$^{-5}$km$^{3}$/s$^{2}$}}
+
+\nomenclature[Ca7]{$\mu_{M}$}{Mars standard gravitational parameter \nomunit{4.2828314$\cdot$10$^{13}$m$^{3}$/s$^{2}$}}
 
 
 \section{Thrust}
@@ -212,7 +214,7 @@ The drag acceleration can be represented similarly to the thrust acceleration ta
 a_{drag}=-\dfrac{D}{m_{MAV}}
 \end{equation}
 
-\nomenclature[Ra1]{$D$}{Drag \nomunit{kN}}
+\nomenclature[Ra1]{$D$}{Drag \nomunit{N}}
 
 \noindent
 Here the drag is given by \Cref{eq:dragDragModel}.
@@ -221,15 +223,15 @@ Here the drag is given by \Cref{eq:dragDragModel}.
 D=\dfrac{1}{2}\rho V_{G}^{2}SC_{D}
 \end{equation}
 
-\nomenclature[Ga3]{$\rho$}{Density \nomunit{kg/km$^{3}$}}
-\nomenclature[Ca7]{$S$}{Reference area \nomunit{9.1$\cdot$10$^{-8}$ km$^{2}$}}
+\nomenclature[Ga3]{$\rho$}{Atmospheric density \nomunit{kg/m$^{3}$}}
+\nomenclature[Ca7]{$S$}{Reference area \nomunit{0.091 m$^{2}$}}
 \nomenclature[Ra1]{$C_{D}$}{Drag coefficient \nomunit{-}}
 
 \noindent
 Where $S$ is the reference area of the \ac{MAV} set by the user, $\rho$ is the air density which is a function of the altitude $h\left(=r-R_{MOLA}\right)$ and $C_{D}$ is the drag coefficient of the \ac{MAV} which is a function of the Mach number. The Mach number in turn is a function of the speed of sound, which depends on the air temperature as can be seen in \Cref{eq:machAndSpeedOfSound}.
 
-\nomenclature[Ca7]{$R_{MOLA}$}{Mars \acs{MOLA} reference radius (also $R_{M}$) \nomunit{3396 km}}
-\nomenclature[Ra1]{$h$}{Altitude \nomunit{km}}
+\nomenclature[Ca7]{$R_{MOLA}$}{Mars \acs{MOLA} reference radius (also $R_{M}$) \nomunit{3396$\cdot$10$^{3}$ m}}
+\nomenclature[Ra1]{$h$}{Altitude \nomunit{m}}
 
 
 
@@ -242,12 +244,12 @@ a &= \sqrt{\gamma_{a}R_{a}^{*}T_{a}} \quad \text{where} \quad R_{a}^{*}=\dfrac{R
 \end{equation}
 
 \nomenclature[Ra5]{$M$}{Mach number \nomunit{-}}
-\nomenclature[Ra1]{$a$}{Speed of sound \nomunit{km/s}}
-\nomenclature[Ca7]{$\gamma_{a}$}{Adiabetic index \nomunit{1.35}}
-\nomenclature[Ca7]{$R_{a}$}{Molar gas constant \nomunit{8.3144598$\cdot$10$^{-6}$ km$^{2}$ kg s$^{-2}$ K$^{-1}$ mol$^{-1}$}}
+\nomenclature[Ra0]{$a$}{Speed of sound \nomunit{m/s}}
+\nomenclature[Ca7]{$\gamma_{a}$}{Adiabatic index \nomunit{1.35}}
+\nomenclature[Ca7]{$R_{a}$}{Molar gas constant \nomunit{8.3144598 m$^{2}$ kg s$^{-2}$ K$^{-1}$ mol$^{-1}$}}
 \nomenclature[Ca7]{$M_{a}$}{Molecular mass of the Martian atmosphere \nomunit{0.04334 kg/mol}}
-\nomenclature[Ra8]{$T_{a}$}{Temperature \nomunit{K}}
-\nomenclature[Ra6]{$R_{a}^{*}$}{Specific gas constant \nomunit{km$^{s}$ s$^{2}$ K$^{-1}$}}
+\nomenclature[Ra8]{$T_{a}$}{Air temperature \nomunit{K}}
+\nomenclature[Ra6]{$R_{a}^{*}$}{Specific gas constant \nomunit{m$^{2}$ s$^{-2}$ K$^{-1}$}}
 \nomenclature[Ra5]{$p_{n}$}{Polynomial coefficient \nomunit{-}}
 
 
@@ -255,7 +257,7 @@ a &= \sqrt{\gamma_{a}R_{a}^{*}T_{a}} \quad \text{where} \quad R_{a}^{*}=\dfrac{R
 
 
 \noindent
-Here, $R_{a}$ is the molar gas constant, $\gamma_{a}$ is the adiabetic index for Mars, which according to \cite{ho2002radio} can be set as $\sim$1.35. $M_{a}$ is the molecular mass of the Martian atmosphere and depends on its composition. \cite{williams2015} mentions a volumetric composition of Mars which results in a mean molecular mass of 0.04334 kg/mol. This value has been used in this research to compute the speed of sound.\\
+Here, $R_{a}$ is the molar gas constant, $\gamma_{a}$ is the adiabatic index (or ratio of specific heats) for the Martian atmosphere, which according to \cite{ho2002radio} can be set to $\sim$1.35. $M_{a}$ is the molecular mass of the Martian atmosphere and depends on its composition. \cite{williams2015} mentions a volumetric composition of Mars which results in a mean molecular mass of 0.04334 kg/mol. This value has been used in this research to compute the speed of sound.\\
 
 \noindent
 The air pressure and temperature ($T_{{a}}$) change as a function of the altitude. This means that a pressure and temperature model of the atmosphere of Mars will have to be used to approximate these values as the ascent vehicle moves through the atmosphere. This is done through a function fit of an atmospheric model, as is described in \Cref{subsec:atmofuncfit}.\\
@@ -263,7 +265,7 @@ The air pressure and temperature ($T_{{a}}$) change as a function of the altitud
 \noindent
 The drag coefficient changes with the Mach number, however, this change is not constant over the entire Mach range. Therefore, this also requires a function fit in order to be used in the simulation program. This fit is presented in \Cref{subsec:dragCoefFuncFit}.
 
-\subsection{Atmospheric graph function fit}
+\subsection{Atmospheric Graph Function Fit}
 \label{subsec:atmofuncfit}
 Using the 2005 Mars-\acf{GRAM}, a table containing altitude, latitude and longitude dependent temperature and density data was produced. The altitude range was -0.6 to 320 km \acr{MOLA} with a step-size of 0.01 km, the latitude and longitude ranges were centred around the example launch site (21.0 $^\circ$N and 74.5 $^\circ$E) with a 10 degree range in each direction and a step-size of 1 degree. The rest of the input parameters were constant and can be seen in \Cref{app:appendixA-marsGRAM-inputFile}. The temperature and density data produced is shown in \Cref{fig:temperatureData,fig:densityData} respectively for 9 latitude and longitude combinations including the launch site itself.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
@@ -456,7 +458,7 @@ The same polynomial requirements as for the temperature curve were enforced for 
 
 \pagebreak
 
-\subsection{Drag coefficient graph function fit}
+\subsection{Drag Coefficient Graph Function Fit}
 \label{subsec:dragCoefFuncFit}
 Similar to the temperature and density curves, the relation between Mach number and drag coefficient, as depicted in \Cref{fig:dragcoeff_whitehead2004mars}, had to be modelled as a function as well. Again, it could not be fitted using one single function, but instead had to be modelled by different functions. \\
 
@@ -494,7 +496,10 @@ Fortunately, this curve is already an approximation and thus consists of linear 
 \label{sec:modelCircularisation}
 After the integration has been completed, a circularisation burn will take place to estimate the required propellant mass to arrive in the desired orbit. This will include the $\Delta V$ required to change the flight-path angle, change the inclination and adjust the orbital velocity. A simplified diagram of such a procedure is presented in \Cref{fig:deltaVcircularOrbitMars_wakker2010}. The equations used to perform this instantaneous burn are based on the equations presented by \cite{wakker2010}.
 
-\nomenclature[Rb1]{$\Delta V$}{Change in velocity \nomunit{km/s}}
+\nomenclature[Ga2]{$\Delta V$}{Change in velocity \nomunit{m/s}}
+\nomenclature[Rb0]{$V_{x}$}{Velocity in x-direction \nomunit{m/s}}
+\nomenclature[Rb0]{$V_{y}$}{Velocity in y-direction \nomunit{m/s}}
+\nomenclature[Rb0]{$V_{z}$}{Velocity in z-direction \nomunit{m/s}}
 
 
 \begin{figure}[H]
@@ -511,7 +516,7 @@ The first step is to convert the final Cartesian state obtained at the end of th
 V_{co} = \sqrt{\mu_{M}\left(\dfrac{2}{r_{co}}-\dfrac{1}{a_{co}}\right)}
 \end{equation}
 
-\nomenclature[Ra1]{$a$}{Semi-major axis \nomunit{km}}
+\nomenclature[Ra0]{$a$}{Semi-major axis \nomunit{m}}
 
 \noindent
 Then the required orbital velocity is a simplified representation of the vis-viva equation because it is assumed that the required orbit is always circular, see \Cref{eq:simpVisViva}. Here $do$ stands for "desired orbit".

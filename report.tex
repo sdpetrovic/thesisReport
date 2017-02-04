@@ -24,6 +24,19 @@
 \usepackage{gensymb} %Allows for the use of degree symbol and other generic symbols
 \usepackage{enumitem} %Used to create custom lists...
 
+\usepackage{afterpage} % Used for a blank page
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+%In the text before the blank page, insert the following code:
+
+%\afterpage{\blankpage}    
+    
+    
+
 \usepackage[intoc]{nomencl} \makenomenclature
 \newcommand{\nomunit}[1]{%
 \renewcommand{\nomentryend}{\hspace*{\fill}#1}}
@@ -97,21 +110,23 @@
 %% contents.
 \frontmatter
 
-\title[Master Thesis]{Mars Sample Return ascent trajectory analysis using Taylor Series integration}
+\title[Master Thesis]{Mars Sample Return Ascent Trajectory Analysis using Taylor Series Integration}
 \author{S.D. \ Petrovi\'{c}}
-\affiliation{Faculty Aerospace, Section Spaceflight}
+\affiliation{Faculty Aerospace, Track Spaceflight}
 
 \coverimage{cover_mars_4.jpg}
 \makecover[backboxheight = 2.64in] %2.64in = 6.7056cm
 
- 
+ \afterpage{\blankpage}
 %% Include an optional title page.
-%\input{title}
+\input{title}
+\afterpage{\blankpage}
 
 \input{preface}
+\afterpage{\blankpage}
 
 \tableofcontents %Crates a table of contents
-
+\afterpage{\blankpage}
 %\listoffigures %Creates a list of figures
 
 %\listoftables %Creates a list of tables
@@ -120,6 +135,7 @@
 \markboth{Nomenclature}{Nomenclature}
 %\addcontentsline{toc}{chapter}{Nomenclature}
 \printnomenclature %Create the Nomenclature
+\afterpage{\blankpage}
 
 % if nomenclature does not work anymore go to options/configure texmaker and type .nlo -s nomencl.ist -o %.nls -t %.nlg instead of .idx to make it work again. Otherwise see: https://youtu.be/Ss1XfsaAnfs for details
 
@@ -127,6 +143,7 @@
 \addcontentsline{toc}{chapter}{Abbreviations}
 \markboth{Abbreviations}{Abbreviations}
 \input{abbreviations} %Create the list of abbreviations
+\afterpage{\blankpage}
 
 %\printglossary[type=\acronymtype, title=Abbreviations] %Create a list of abbreviations
 
@@ -135,50 +152,56 @@
 \mainmatter
 
 \input{introduction} 		% Chapter 1
+\afterpage{\blankpage}
 
 %\input{overview} 			% Not thesis
 
 \input{problembackground}  % For thesis
 
 \input{models}				% For thesis
+\afterpage{\blankpage}
 
 %\input{optimisation}		% For thesis
 
 \input{standardintegrationmethods}                  % For thesis
+
 
 \input{tsi}				% For thesis
 
 \input{programoptimisationtool} % For thesis
 
 \input{verificationandvalidation} % For thesis
+\afterpage{\blankpage}
+
 
 \input{results} 			% For thesis
 
 %\input{analysis} 			% For thesis
 
 \input{conclusionsandrecommendations} % For thesis
-
+\afterpage{\blankpage}
 
 \bibliography{lit_references}
-
+\afterpage{\blankpage}
 %% Use letters for the chapter numbers of the appendices.
 \appendix
 
 %\input{appendix-a}
 
-%\input{appendixAA-referenceSystemTransformations}
+\input{appendixAA-referenceSystemTransformations}
+\afterpage{\blankpage}
 
 \input{appendixA-marsGRAM-inputFile}
 
 \input{appendixB-fittingProcessAndResults}
-
+\afterpage{\blankpage}
 %\input{appendixC-programFileDefinitions} % Outdated and unnecessary! 
 
 \input{appendixD-allRecurrenceRelations}
 
 \input{appendixF-nominalCaseInputValues}
 
-\input{appendixG-Results}
+%\input{appendixG-Results}
 
 %\input{appendixE-proposedSensitivityAnalysis}
 

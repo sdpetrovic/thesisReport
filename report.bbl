@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{49}%
+\begin{thebibliography}{56}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -377,14 +377,14 @@
   (\bibinfo {year} {2015}),\ \bibinfo {note} {[online database], URL:
   http://nssdc.gsfc.nasa.gov/planetary/ factsheet/marsfact.html [cited 1
   November 2015]}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Wakker}(2010)}]{wakker2010}%
+\bibitem [{\citenamefont {Wakker}(2010{\natexlab{a}})}]{wakker2010}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
   {Wakker}},\ }\href@noop {} {\textit {\bibinfo {title} {{Astrodynamics-II
   Course AE4874, part 2}},}\ }\bibinfo {howpublished} {Reader},\ \bibinfo
-  {address} {Delft University of Technology} (\bibinfo {year} {2010}),\
-  \bibinfo {note} {[Internal publication] Course: Astrodynamics-II}\BibitemShut
-  {NoStop}%
+  {address} {Delft University of Technology} (\bibinfo {year}
+  {2010}{\natexlab{a}}),\ \bibinfo {note} {[Internal publication] Course:
+  Astrodynamics-II}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hofsteenge}(2013)}]{hofsteenge2013}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
@@ -555,4 +555,93 @@
   {[online database], URL:
   https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-1-PB.pdf?sequence=1
   [cited 10 December 2015]}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bachman}(2014)}]{bachman2014naif}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Bachman}},\ }\href
+  {http://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/frames.html}
+  {\textit {\bibinfo {title} {{NAIF SPICE toolkit hypertext documentation,
+  required reading documents, reference frames}},}\ }\bibinfo {howpublished}
+  {website} (\bibinfo {year} {2014}),\ \bibinfo {note} {[online database], URL:
+  http://naif.jpl.nasa.gov/pub/naif/ [cited 18 December 2015]}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {del Rio}(2008)}]{diaz2008generic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont
+  {del Rio}},\ }\href
+  {http://naif.jpl.nasa.gov/pub/naif/VEX/kernels/fk/RSSD0002.TF} {\textit
+  {\bibinfo {title} {{Generic frame definition Kernel file for ESA planetary
+  missions}},}\ } (\bibinfo {year} {2008}),\ \bibinfo {note} {[online
+  database], URL: http://naif.jpl.nasa.gov/pub/naif/VEX/kernels/fk/RSSD0002.TF
+  [cited 8 December 2015]}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Archinal}\ \emph {et~al.}(2011)\citenamefont
+  {Archinal}, \citenamefont {Ahearn}, \citenamefont {Bowell}, \citenamefont
+  {Conrad}, \citenamefont {Consolmagno}, \citenamefont {Courtin}, \citenamefont
+  {Fukushima}, \citenamefont {Hestroffer}, \citenamefont {Hilton},
+  \citenamefont {Krasinsky} \emph {et~al.}}]{archinal2011report}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~A.}\ \bibnamefont
+  {Archinal}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ahearn}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Bowell}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Conrad}}, \bibinfo {author}
+  {\bibfnamefont {G.~J.}\ \bibnamefont {Consolmagno}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Courtin}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Fukushima}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Hestroffer}}, \bibinfo {author} {\bibfnamefont {J.~L.}\
+  \bibnamefont {Hilton}}, \bibinfo {author} {\bibfnamefont {G.~A.}\
+  \bibnamefont {Krasinsky}},  \emph {et~al.},\ }\bibfield  {title} {\textit
+  {\bibinfo {title} {{Report of the IAU working group on cartographic
+  coordinates and rotational elements: 2009}},}\ }in\ \href {\doibase
+  10.1007/s10569-010-9320-4} {\emph {\bibinfo {booktitle} {Celestial Mechanics
+  and Dynamical Astronomy}}},\ Vol.\ \bibinfo {volume} {109}\ (\bibinfo {year}
+  {2011})\ pp.\ \bibinfo {pages} {101--135}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Morton}(2003)}]{morton2003mapping}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Morton}},\ }\href
+  {https://books.google.com/books?hl=nl&lr=&id=-FbuqCH5h50C&oi=fnd&pg=PP2&dq=Mapping+Mars++Science,+Imagination,+and+the+Birth+of+a+World&ots=Fguf9tNipE&sig=cnZ-3RX05CZjo79Lh8gWPkkA_kw#v=onepage&q=AIRY&f=false}
+  {\emph {\bibinfo {title} {Mapping {M}ars: {S}cience, {I}magination, and the
+  {B}irth of a {W}orld}}},\ \bibinfo {edition} {1st}\ ed.\ (\bibinfo
+  {publisher} {Picador, New York},\ \bibinfo {year} {2003})\ \bibinfo {note}
+  {avaiable at JPL library}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Duxbury}\ \emph {et~al.}(2014)\citenamefont
+  {Duxbury}, \citenamefont {Christensen}, \citenamefont {Smith}, \citenamefont
+  {Neumann}, \citenamefont {Kirk}, \citenamefont {Caplinger}, \citenamefont
+  {Albee}, \citenamefont {Seregina}, \citenamefont {Neukum},\ and\
+  \citenamefont {Archinal}}]{duxbury2014location}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Duxbury}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Christensen}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Smith}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Neumann}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Kirk}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Caplinger}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Albee}}, \bibinfo {author} {\bibfnamefont
+  {N.}~\bibnamefont {Seregina}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Neukum}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Archinal}},\ }\bibfield  {title} {\textit {\bibinfo
+  {title} {{The location of Airy-0, the Mars prime meridian reference, from
+  stereo photogrammetric processing of THEMIS IR imaging and digital elevation
+  data}},}\ }in\ \href {\doibase 10.1002/2014JE004678} {\emph {\bibinfo
+  {booktitle} {Journal of Geophysical Research: Planets}}},\ Vol.\ \bibinfo
+  {volume} {119}\ (\bibinfo  {publisher} {John Wiley \& Sons},\ \bibinfo {year}
+  {2014})\ pp.\ \bibinfo {pages} {2471--2486}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Akcasu}\ and\ \citenamefont
+  {Akcay}(2013)}]{akcasu2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~E.}\ \bibnamefont
+  {Akcasu}}\ and\ \bibinfo {author} {\bibfnamefont {I.}~\bibnamefont {Akcay}},\
+  }\href {http://www.google.com/patents/WO2013070518A1?cl=en} {\textit
+  {\bibinfo {title} {Solar time using gps technology},}\ }\bibinfo
+  {howpublished} {Lonestar Inventions, L.P., Austin, TX, U.S. Patent} (\bibinfo
+  {year} {2013}),\ \bibinfo {note} {patent application, Docket No. WO
+  2013070518 A1, filed 2 Nov. 2012}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wakker}(2010{\natexlab{b}})}]{wakker2010astro1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Wakker}},\ }\href@noop {} {\textit {\bibinfo {title} {{Astrodynamics-I
+  Course AE4874, Part 1}},}\ }\bibinfo {howpublished} {Reader},\ \bibinfo
+  {address} {Delft University of Technology} (\bibinfo {year}
+  {2010}{\natexlab{b}}),\ \bibinfo {note} {[Internal publication] Course:
+  Astrodynamics I}\BibitemShut {NoStop}%
 \end{thebibliography}%

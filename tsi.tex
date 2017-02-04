@@ -1,8 +1,8 @@
-\chapter{Taylor series integration} %Last updated 18-05-2016
+\chapter{Taylor Series Integration} %Last updated 18-05-2016
 \label{ch:tsi}
 \acf{TSI} is different from the previously mentioned integrators, because it only uses the information at the current point to predict the next point. However, it does this using higher order derivatives at that point. These higher order derivatives have to be obtained as a function of the current state and the first order state derivatives. When the $K^{th}$ order derivative is found, a Taylor Series can be set up to determine the next state as a function of the chosen step-size. This is all explained and described in more detail in \Cref{sec:genTsiTheory}. In this thesis, \ac{TSI} is the main focus of the analysis, and the performance with respect to \ac{RKF78} is tested. In order to be able to do this for the given model, a number of equation sets can be identified which have to be written in such a format that it can be used by \ac{TSI}. These are described, and where needed derived, in \Cref{sec:assEq}.
 
-\section{General theory}
+\section{General Theory}
 \label{sec:genTsiTheory}
 \ac{TSI} has been used to solve ordinary differential equations since the early 1960s \citep{scott2008high}. However, the first modern implementation of \ac{TSI} in a space trajectory problem was provided by \cite{montenbruck1992numerical}. \cite{scott2008high} were able to implement this \ac{TSI} method into the SNAP trajectory propagator which is the implementation that is used in this thesis. The method is described in \Cref{subsec:workTsi} and the used step-size method is discussed in \Cref{subsec:stepSizeTsi}. This step-size sometimes has to be reduced if a new section in the temperature or the drag coefficient model is reached. A root finding method is described in \Cref{subsec:handlingModelSections} that can be used to determine at what step-size the next section is reached.
 
@@ -82,7 +82,7 @@ The $X_{n}\left(k\right)$ are also known as the Taylor Series coefficients of th
 \noindent
 Using the expression described in \Cref{eq:def_u} all Taylor Series coefficients can be found. Then \Cref{eq:general_taylor} can be used to determine the next state values at time $t+h$ for the known previous parameter values at time $t$. The same can then be done to determine the values at the time-step after that using the state values at $t+h$, etc. Going through all these different time-steps results in the final integration. 
 
-\subsection{Step-size}
+\subsection{Step-Size}
 \label{subsec:stepSizeTsi}
 The step-size used for \ac{TSI} can be either set as a constant value by the user or determined using a step-size controller, giving it the variable step-size properties, which is done in this thesis. The chosen step-size method was based on the recommendation of both \cite{scott2008high} and \cite{bergsma2015application} and directly uses the chosen (or preferred) local error tolerance $\tau$ to determine the next step size. This method assures that the step-size is small enough such that all variables satisfy the error condition directly. The step-size is determined using a so-called fixed-point iteration performed using \Cref{eq:fix_point_it}. The initial step-size $h_{1}$ can be chosen to be the current step-size $h$ as an easy estimate. Then the iteration is performed over $l$ until a certain required convergence is reached.
 
@@ -102,7 +102,7 @@ This is then done for all variables and the smallest required step-size is chose
 \nomenclature[Ga3]{$\eta$}{Step multiplication factor \nomunit{-}}
 \nomenclature[Ga3]{$\tau$}{Local error tolerance \nomunit{-}}
 
-\subsection{Handling model sections}
+\subsection{Handling Model Sections}
 \label{subsec:handlingModelSections}
 For both the temperature and drag coefficient models, different sections have been identified with different behaviours. Each of these sections was fitted with a polynomial approximation as described in \Cref{sec:dragModel}. Because \ac{TSI} only uses data available at the current point, it could be that if the step-size is allowed to be too large, the section boundary for one of these models is crossed. At that point, the step-size has to be adjusted such that it stops at the start of the next section. This way, the next time step will start at the next model section. This also means that these sections do not necessarily have to be connected, and as a result \ac{TSI} would be able to handle discontinuities in the model as well, should those occur. \\
 This section boundary is found using a root finding method. The method used in this research is based on the method described in \cite{bergsma2015application}. \\
@@ -136,7 +136,7 @@ Next, the coefficient of the root finding curve, $\alpha$, has to be determined.
 \alpha = \dfrac{f_{To}-f_{From}}{\left(t_{To}-t_{From}\right)^{2}}-\dfrac{\dot{f}_{From}}{t_{To}-t_{From}}
 \end{equation}
 
-\nomenclature[Ga1]{$\alpha$}{Root finding curve coefficient \nomunit{-}}
+\nomenclature[Ga0]{$\alpha$}{Root finding curve coefficient \nomunit{-}}
 
 \noindent
 With this coefficient it is possible to compute the new time of the newly computed point. This point is called the new "from" point because no matter if this point is before of after the root of the limit function, that point will be used as the starting or "from" point for the next point computation. This is why this time is called $t_{From,new}$ and is computed using \Cref{eq:tFromNew}. This equation has a plus sign in front of the square root because the next section has been reached when $f$ > 0.
@@ -176,11 +176,11 @@ However, the condition that $f_{From,new}$ should be equal to zero before the ro
 %\textbf{\textcolor{red}{This section still has to be added!!}}
 
 
-\section{Associated equations}
+\section{Associated Equations}
 \label{sec:assEq}
 In order for \ac{TSI} to be implemented, the state derivatives have to be modelled as a set of functions which are a function of the state only. This can be done in different ways. In this case, three cases were tested: two Cartesian cases and one spherical case. For the Cartesian cases, the initial conditions first have to be transformed into Cartesian coordinates. The Cartesian equations themselves require reference frame transformations, which can be written in two different ways. The first case is described in \Cref{subsec:careq} and the second in \Cref{subsec:careq2}. The reason for testing the spherical case is that the initial conditions are provided in spherical coordinates and the intermediate computations can be easily interpreted and checked for errors. However, the equations are highly sensitive to singularities. The spherical equations are described in \Cref{subsec:sphereq} and already include reference frame transformations. 
 
-\subsection{Cartesian equations, first case}
+\subsection{Cartesian Equations, First Case}
 \label{subsec:careq}
 The Cartesian state and derivatives were initially described in \Cref{ch:models} but are repeated and completed here.\\
 The Cartesian state is described in \Cref{eq:state}, where $m_{MAV}$ is the mass of the \ac{MAV} and the subscript $I$ refers to the inertial frame.
@@ -292,9 +292,9 @@ x'_{6}&=\dot{V}_{z}=a_{z}=a_{g,z}+a_{D,z}+a_{T,z}
 x'_{7}=\dot{m}_{MAV}=-\dfrac{T}{g_{0}I_{sp}}
 \end{align}
 
-\nomenclature[Ra1]{$a_{g}$}{Gravitational acceleration \nomunit{km/s$^{2}$}}
-\nomenclature[Ra1]{$a_{D}$}{Drag acceleration \nomunit{km/s$^{2}$}}
-\nomenclature[Ra1]{$a_{T}$}{Thrust acceleration \nomunit{km/s$^{2}$}}
+\nomenclature[Ra0]{$a_{g}$}{Gravitational acceleration \nomunit{m/s$^{2}$}}
+\nomenclature[Ra0]{$a_{D}$}{Drag acceleration \nomunit{m/s$^{2}$}}
+\nomenclature[Ra0]{$a_{T}$}{Thrust acceleration \nomunit{m/s$^{2}$}}
 
 \noindent
 In this case the thrust and specific impulse are constant, which means that $x'_{7}$ is constant and any additional derivative will be zero. Also, neither one of the thrust angles is a function of the state, which means that $a_{T}$, in the body frame, is only a function of $x_{7}$ (also see \Cref{eq:acc}). However, both $a_{g}$ and $a_{D}$ are a function of the position and velocity, where $a_{D}$ is also a function of the \ac{MAV} mass. Only $a_{g}$ is rewritten using auxiliary equations as mentioned before. 
@@ -307,7 +307,7 @@ In this case the thrust and specific impulse are constant, which means that $x'_
 %For the numbering of all the auxiliary equations goes that the order comes from the manner in which they were all written out on paper. This means that sometimes higher number parameters could contain much lower number parameters without the intermediate parameters defined yet. However, these will all be defined eventually.
 
 
-\subsubsection{Gravitational acceleration}
+\subsubsection{Gravitational Acceleration}
  \label{subsubsec:tsiGravity} 
  For the gravitational acceleration two auxiliary equations were required since $r=\sqrt{x^{2}+y^{2}+z^{2}}$. The resulting expressions for the gravitational acceleration are shown in \Cref{eq:gravAcc} with the corresponding auxiliary equations and the derivatives defined in \Cref{eq:gravAux}.
  
@@ -333,7 +333,7 @@ x'_{9}&=\dfrac{3}{2}\dfrac{x_{9}x_{8}'}{x_{8}}
  
  
  
-\subsubsection{Transformation angles}
+\subsubsection{Transformation Angles}
 \label{subsubsec:tsiTransAngl}
 The angles required for the transformation to go from the body frame to the reference frame all have to be written as a function of the state variables. The required angles are $\lambda$, $\delta$, $\chi_{G}$ and $\gamma_{G}$. Here $\lambda = \tau + \Omega_{M}t_{O}-\omega_{P}$. This means that instead of first transforming to the rotating frame completely and then transforming to the inertial frame, an inertial longitude angle $\lambda$ can be defined to directly transform to the inertial frame. The first two angles are the longitude and latitude and are spherical coordinates. Thus the relations for these angles can be found using the transformation from the Cartesian to the spherical system. However, the angles themselves are not required directly, because they are only used in transformation matrices. These matrices are comprised of the sines and cosines of these angles, which means that a direct relation between the state variables and the sines and cosines of the position angles can be used. These relations can be derived from \Cref{fig:sphertocart_noomen2013basic} and are described in \Cref{eq:transAngl}
 
@@ -537,7 +537,7 @@ w_{4,25} &= c\gamma_{G} = \dfrac{w_{4,21}}{w_{4,12}} \\
 
 
 
-\subsubsection{Drag acceleration}
+\subsubsection{Drag Acceleration}
 \label{subsubsec:tsiDrag}
 The drag acceleration is determined in the body frame by dividing the drag force ($D$) by the mass of the \ac{MAV} ($x_{7}$). The drag force itself is a function of the position and velocity. The equations associated with the drag function are described in \Cref{eq:drag} except for the $C_{D}$ equations. The polynomial coefficients for the density equation are provided in \Cref{tab:fitParametersDen} and are represented in \Cref{eq:drag} by $P_{\rho}$.
 
@@ -640,7 +640,7 @@ w_{27,19} &= D = \frac{1}{2} S w_{27,18}w_{27,12} \\
 
 
 
-\subsubsection{Thrust acceleration}
+\subsubsection{Thrust Acceleration}
 \label{subsubsec:tsiThrust}
 The only acceleration component still missing is the thrust acceleration. To be able to write the auxiliary functions for the thrust, \Cref{eq:acc} first has to be rewritten such that all the transformations are gathered into two transformation matrices (see \Cref{eq:accAux}). The transformation matrices are described by \Cref{eq:BPtrans,eq:IBtrans} for $\mathbb{T}_{\mathbf{BP}}$ and $\mathbb{T}_{\mathbf{IB}}$ respectively.
 
@@ -808,7 +808,7 @@ w_{4,37}\\
 \end{pmatrix}
 \end{equation}
 
-\subsubsection{All accelerations combined}
+\subsubsection{All Accelerations Combined}
 \label{subsubsec:allAcc}
 At this point the gravity accelerations are known in the inertial frame and the drag and thrust accelerations in the body frame. In order to get the final acceleration vector in the inertial frame, the drag and thrust accelerations have to be transformed from the body frame to the inertial frame using $\mathbb{T}_{\mathbf{IB}}$ resulting in \Cref{eq:DandTInertial}.
 
@@ -1024,7 +1024,7 @@ u_{9} &= 1.5 w_{9,1} \\
 \end{align}
 
  
-\subsection{Cartesian equations, second case}
+\subsection{Cartesian Equations, Second Case}
 \label{subsec:careq2}
 The second case (based on a method described by \citep{bergsma2015application}) is similar to the first case in terms of set-up of the dynamic equations, the gravitational acceleration, and the drag and thrust accelerations in the body frame. The only difference lies in the formulation of $\mathbb{T}_{\mathbf{IB}}$. Instead of using Euler angles and rotation transformation matrices, $\mathbb{T}_{\mathbf{IB}}$ can be set-up as one single matrix performing a direct transformation. This matrix is described in \Cref{eq:transMatCoef}, where $C$ stands for transformation matrix coefficient. 
 
@@ -1070,7 +1070,7 @@ V_{z} \\
 \end{pmatrix}
 \end{equation}
 
-\subsubsection{Body frame unit vectors}
+\subsubsection{Body Frame Unit Vectors}
 So when looking from the inertial frame, there are two state vectors: position and ground velocity. The state changes part due to the accelerations in the body frame $\mathbf{a_{B}}$, which is a vector comprised of the drag and thrust accelerations. This vector has the same length and direction in the body frame and the inertial frame when looking from the inertial frame. Also, any vector is simply a multiplication of the corresponding unit vector. The same holds for the velocity, which means that because the velocity in the body frame is defined through the x-axis of that frame, the unit vector of the ground velocity can be described as the unit vector in the x-direction $\mathbf{\hat{i}}$ as shown by \Cref{eq:iHat}.
 
 \begin{equation} \label{eq:iHat}
@@ -1079,7 +1079,7 @@ So when looking from the inertial frame, there are two state vectors: position a
 
 \nomenclature[Ra3]{$\mathbf{\hat{i}}$}{Unit vector in x-direction \nomunit{-}}
 \nomenclature[Ra3]{$\mathbf{\hat{j}}$}{Unit vector in y-direction \nomunit{-}}
-\nomenclature[Ra2]{$\mathbf{\hat{h}}$}{Unit vector in z-direction \nomunit{-}}
+\nomenclature[Ra4]{$\mathbf{\hat{k}}$}{Unit vector in z-direction \nomunit{-}}
 
 \noindent
 This unit vector is also shown in \Cref{fig:cartesian_transformation_mooij1994motion}.
@@ -1109,7 +1109,7 @@ Now $\mathbf{\hat{k}}$ can be computed by applying the \ac{RHR} to $\mathbf{\hat
 \noindent
 This leaves us with the unit vectors in the body frame defined as a function of the state in the inertial frame. 
 
-\subsubsection{Defining the transformation matrix coefficients}
+\subsubsection{Defining The Transformation Matrix Coefficients}
 \label{subsubsec:filTransMat}
 Now, if the acceleration in the x-direction in the body frame is multiplied with $\mathbf{\hat{i}}$ this $a_{x_{B}}$ is redefined in the inertial frame by providing a contribution in the x-, y- and z-direction. A similar multiplication can be done for $a_{y_{B}}$ and $\mathbf{\hat{j}}$, and $a_{z_{B}}$ and $\mathbf{\hat{k}}$. In matrix form this can be represented by \Cref{eq:firstFillEx}.
 
@@ -1167,7 +1167,7 @@ C_{9} \\
 \noindent
 Given these definitions, the corresponding auxiliary functions can now be defined. 
 
-\subsubsection{Auxiliary functions for the second case}
+\subsubsection{Auxiliary Functions For The Second Case}
 \label{subsubsec:auxFsecCase}
 With the transformation matrix now defined, \Cref{eq:acc} can be written as \Cref{eq:accAlTrans}.
 
@@ -1286,7 +1286,7 @@ u_{6} &= w_{6,1}+w_{4,36}w_{4,15}+w_{4,37}w_{4,23}-w_{4,38}w_{4,40} \\
 
 
 
-\subsection{Spherical equations}
+\subsection{Spherical Equations}
 \label{subsec:sphereq}
 For the Spherical case, the initial conditions are readily provided. The position comes directly from the chosen launch site and the velocity comes from the initial \ac{MAV} conditions. These are all defined in the rotating frame as depicted in \Cref{fig:spherical_mooij1994motion} and \Cref{eq:spherVecDef}.
 
@@ -1389,7 +1389,7 @@ x'_{13} &= \dot{\chi}_{G} = 2 \Omega_{M} \left(s\delta-\dfrac{c\delta s\gamma_{G
 \noindent
 The last term in the first two expressions of \Cref{eq:dynEqSp} correspond to the acceleration contribution of the gravity. The first expression has a drag component and all three have a thrust component similar to the Cartesian cases. The rest of the terms come from the rotational effects. In this case it was decided to define the drag as an auxiliary equation $x_{27}$, which will be discussed in more detail later in this section.
 
-\subsubsection{Auxiliary functions for the Spherical case}
+\subsubsection{Auxiliary Functions For The Spherical Case}
 \label{subsubsec:auxFspher}
 Before the auxiliary functions for \Cref{eq:kinEqSp,eq:dynEqSp} can be written, some standard auxiliary functions have to be defined first. These include $\delta$, $\gamma_{G}$ and $\chi_{G}$. The numbering is based on early derivations and do not correspond to the definitions provided for the Cartesian cases! The angle auxiliary functions are defined in \Cref{eq:SpherAnglF}.
 
@@ -1526,7 +1526,7 @@ u_{16} &= w_{16,1} \\
 
 
  
- \subsubsection{Drag acceleration as auxiliary variable}
+ \subsubsection{Drag Acceleration As Auxiliary Variable}
  \label{subsubsec:tsiDragAuxE}
 The drag acceleration for the Spherical case is similar to the Cartesian case, except this time it was chosen to use auxiliary variables to describe the drag. This means that auxiliary equations have to be defined as is shown in \Cref{eq:dragAux}. Also, this means that auxiliary derivatives are required for each of these equations. \Cref{eq:dragDerAux} shows the different derivatives corresponding to the equations.
  
@@ -1759,7 +1759,7 @@ Now all the information that is required to compute the recurrence relation for 
 
 
 
-\subsection{Recurrence relations}
+\subsection{Recurrence Relations}
 \label{subsec:recRel}
 Now that all the auxiliary functions are known, they can be used to determine the required recurrence relations. In order to write these concisely and following the same convention as used by \cite{scott2008high}, a number of extra parameters will have to be introduced. The Taylor series coefficients can be written as described by \Cref{eq:tsCoeff}. Where $n$ is the variable number and $k$ is the order of the derivative.
 
