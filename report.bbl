@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{56}%
+\begin{thebibliography}{57}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -73,11 +73,10 @@
   {Riedel}}, \ and\ \bibinfo {author} {\bibfnamefont {E.~J.}\ \bibnamefont
   {Sturm}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Mars Sample
   Return - Launch and Detection Strategies for Orbital Rendezvous}},}\ }in\
-  \href
-  {http://trs-new.jpl.nasa.gov/dspace/bitstream/2014/43457/1/11-1209_A1b.pdf}
-  {\emph {\bibinfo {booktitle} {AAS/AIAA Astrodynamics Specialist
-  Conference}}},\ Vol.\ \bibinfo {volume} {142}\ (\bibinfo  {publisher}
-  {Univelt, Inc.},\ \bibinfo {year} {2011})\BibitemShut {NoStop}%
+  \href {https://trs.jpl.nasa.gov/handle/2014/43851} {\emph {\bibinfo
+  {booktitle} {AAS/AIAA Astrodynamics Specialist Conference}}},\ Vol.\ \bibinfo
+  {volume} {142}\ (\bibinfo  {publisher} {Univelt, Inc.},\ \bibinfo {year}
+  {2011})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Vaughan}\ \emph {et~al.}(2016)\citenamefont
   {Vaughan}, \citenamefont {Nakazono}, \citenamefont {Karp}, \citenamefont
   {Shotwell}, \citenamefont {London}, \citenamefont {Mehra},\ and\
@@ -308,9 +307,11 @@
   {D.}~\bibnamefont {Jackson}}, \ and\ \bibinfo {author} {\bibfnamefont
   {D.}~\bibnamefont {Young}},\ }\bibfield  {title} {\textit {\bibinfo {title}
   {{Technology development and design of a hybrid Mars ascent vehicle
-  concept}},}\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {{Aerospace
-  Conference, 2016 IEEE}}}}\ (\bibinfo {organization} {IEEE},\ \bibinfo {year}
-  {2016})\ pp.\ \bibinfo {pages} {1--10}\BibitemShut {NoStop}%
+  concept}},}\ }in\ \href
+  {http://ieeexplore.ieee.org/abstract/document/7500835/} {\emph {\bibinfo
+  {booktitle} {{Aerospace Conference, 2016 IEEE}}}}\ (\bibinfo {organization}
+  {IEEE},\ \bibinfo {year} {2016})\ pp.\ \bibinfo {pages} {1--10}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Shotwell}(2016)}]{shotwell2016history}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
@@ -377,6 +378,14 @@
   (\bibinfo {year} {2015}),\ \bibinfo {note} {[online database], URL:
   http://nssdc.gsfc.nasa.gov/planetary/ factsheet/marsfact.html [cited 1
   November 2015]}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Justus}(1990)}]{justus1990mars}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Justus}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{A Mars Global
+  Reference Atmospheric Model (Mars-GRAM) for Mission Planning and
+  Analysis}},}\ }in\ \href {\doibase 10.2514/6.1990-4} {\emph {\bibinfo
+  {booktitle} {28th Aerospace Sciences Meeting, Reno, Nevada}}}\ (\bibinfo
+  {year} {1990})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Wakker}(2010{\natexlab{a}})}]{wakker2010}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont

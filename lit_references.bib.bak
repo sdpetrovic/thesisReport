@@ -3656,7 +3656,7 @@
   Author                   = {D.R. Williams},
   HowPublished             = {website},
   Month                    = {August},
-  Note                     = {[online database], URL:                                                                
+  Note                     = {[online database], URL: 
 http://nssdc.gsfc.nasa.gov/planetary/ factsheet/marsfact.html [cited 1 November 2015]},
   Organization             = {NASA},
   Url                      = {http://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html},
@@ -3748,7 +3748,7 @@ http://nssdc.gsfc.nasa.gov/planetary/ factsheet/marsfact.html [cited 1 November 
   Journal                  = {AAS/AIAA Astrodynamics Specialist Conference},
   Owner                    = {Stacha},
   Timestamp                = {2015.10.20},
-  Url                      = {http://trs-new.jpl.nasa.gov/dspace/bitstream/2014/43457/1/11-1209_A1b.pdf}
+  Url                      = {https://trs.jpl.nasa.gov/handle/2014/43851}
 }
 
 @InProceedings{yam2011low,
