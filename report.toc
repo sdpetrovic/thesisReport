@@ -16,11 +16,11 @@
 \contentsline {subsection}{\numberline {3.4.2}Drag Coefficient Function Fit}{20}{subsection.3.4.2}
 \contentsline {section}{\numberline {3.5}Circularisation}{21}{section.3.5}
 \contentsline {chapter}{\numberline {4}Numerical Integration Methods}{22}{chapter.4}
-\contentsline {section}{\numberline {4.1}Different Integrator Types}{22}{section.4.1}
+\contentsline {section}{\numberline {4.1}Integrator Types}{22}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Single-Step}{23}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Multi-Step}{23}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}Chosen Method for Comparison}{23}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}\acl {Tudat} Methods}{23}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.1}\acl {Tudat} Methods}{24}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Methods Used in Previous Research}{24}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Chosen Method}{24}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}Workings of \ac {RKF}}{24}{section.4.3}

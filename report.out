@@ -15,7 +15,7 @@
 \BOOKMARK [2][-]{subsection.3.4.2}{Drag Coefficient Function Fit}{section.3.4}% 15
 \BOOKMARK [1][-]{section.3.5}{Circularisation}{chapter.3}% 16
 \BOOKMARK [0][-]{chapter.4}{Numerical Integration Methods}{}% 17
-\BOOKMARK [1][-]{section.4.1}{Different Integrator Types}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.1}{Integrator Types}{chapter.4}% 18
 \BOOKMARK [2][-]{subsection.4.1.1}{Single-Step}{section.4.1}% 19
 \BOOKMARK [2][-]{subsection.4.1.2}{Multi-Step}{section.4.1}% 20
 \BOOKMARK [1][-]{section.4.2}{Chosen Method for Comparison}{chapter.4}% 21
