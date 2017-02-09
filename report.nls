@@ -21,7 +21,7 @@
 
  \nomgroup{G}
 
-  \item [{$\alpha$}]\begingroup Root finding curve coefficient \nomunit{-}\nomeqref {5.9}
+  \item [{$\alpha$}]\begingroup Root-finding curve coefficient \nomunit{-}\nomeqref {5.9}
 		\nompageref{33}
   \item [{$\gamma$}]\begingroup Flight-path angle \nomunit{rad}\nomeqref {3.4}
 		\nompageref{14}
@@ -63,13 +63,13 @@
   \item [{$a$}]\begingroup Speed of sound \nomunit{m/s}\nomeqref {3.12}
 		\nompageref{16}
   \item [{$a_{D}$}]\begingroup Drag acceleration \nomunit{m/s$^{2}$}\nomeqref {5.16}
-		\nompageref{34}
+		\nompageref{35}
   \item [{$a_{g}$}]\begingroup Gravitational acceleration \nomunit{m/s$^{2}$}\nomeqref {5.16}
-		\nompageref{34}
+		\nompageref{35}
   \item [{$a_{i,j}$}]\begingroup \ac{RKF} coefficients of the previous time-derivatives \nomunit{-}\nomeqref {4.4}
 		\nompageref{29}
   \item [{$a_{T}$}]\begingroup Thrust acceleration \nomunit{m/s$^{2}$}\nomeqref {5.16}
-		\nompageref{34}
+		\nompageref{35}
   \item [{$b_{i}$}]\begingroup \ac{RKF} weights for each point  \nomunit{-}\nomeqref {4.4}
 		\nompageref{29}
   \item [{$c_{i}$}]\begingroup \ac{RKF} step-size weights \nomunit{-}\nomeqref {4.4}
@@ -156,7 +156,7 @@
 		\nompageref{13}
   \item [{$x_{n}$}]\begingroup Auxiliary equation \nomunit{-}\nomeqref {5.1}
 		\nompageref{30}
-  \item [{$x_{n}$}]\begingroup n$^{th}$ state variable \nomunit{-}\nomeqref {5.0}
+  \item [{$x_{n}$}]\begingroup n$^{\text{th}}$ state variable \nomunit{-}\nomeqref {5.0}
 		\nompageref{30}
   \item [{$\mathbf{x}_{i+1}$}]\begingroup Next data point\nomunit{-}\nomeqref {4.0}
 		\nompageref{27}

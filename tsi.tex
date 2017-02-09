@@ -1,19 +1,22 @@
-\chapter{Taylor Series Integration} %Last updated 18-05-2016
+\chapter{Taylor Series Integration} 
+%Last updated 18-05-2016
+% 09-0-2017 updated: Implement comments
+
 \label{ch:tsi}
-\acf{TSI} is different from the previously mentioned integrators, because it only uses the information at the current point to predict the next point. However, it does this using higher order derivatives at that point. These higher order derivatives have to be obtained as a function of the current state and the first order state derivatives. When the $K^{th}$ order derivative is found, a Taylor Series can be set up to determine the next state as a function of the chosen step-size. This is all explained and described in more detail in \Cref{sec:genTsiTheory}. In this thesis, \ac{TSI} is the main focus of the analysis, and the performance with respect to \ac{RKF78} is tested. In order to be able to do this for the given model, a number of equation sets can be identified which have to be written in such a format that it can be used by \ac{TSI}. These are described, and where needed derived, in \Cref{sec:assEq}.
+\acf{TSI} is different from the previously mentioned integrators, because it only uses the information at the current point to predict the state at the next point. However, it does this using higher-order derivatives at that point. These higher-order derivatives have to be obtained as a function of the current state and the first-order state derivatives. When the $K^{\text{th}}$-order derivative is found, a Taylor Series can be set up to determine the next state as a function of the chosen step-size. This is all explained and described in more detail in \Cref{sec:genTsiTheory}. In this thesis, \ac{TSI} is the main focus of the analysis, and the performance with respect to \ac{RKF78} is tested. To able to do this for the given model, a number of equation sets can be identified which have to be written in such a format that it can be used by \ac{TSI}. These are described, and where needed derived, in \Cref{sec:assEq}.
 
 \section{General Theory}
 \label{sec:genTsiTheory}
-\ac{TSI} has been used to solve ordinary differential equations since the early 1960s \citep{scott2008high}. However, the first modern implementation of \ac{TSI} in a space trajectory problem was provided by \cite{montenbruck1992numerical}. \cite{scott2008high} were able to implement this \ac{TSI} method into the SNAP trajectory propagator which is the implementation that is used in this thesis. The method is described in \Cref{subsec:workTsi} and the used step-size method is discussed in \Cref{subsec:stepSizeTsi}. This step-size sometimes has to be reduced if a new section in the temperature or the drag coefficient model is reached. A root finding method is described in \Cref{subsec:handlingModelSections} that can be used to determine at what step-size the next section is reached.
+\ac{TSI} has been used to solve ordinary differential equations since the early 1960s \citep{scott2008high}. However, the first modern implementation of \ac{TSI} in a space-trajectory problem was provided by \cite{montenbruck1992numerical}. \cite{scott2008high} were able to implement this \ac{TSI} method into the SNAP trajectory propagator which is the implementation that is used in this thesis. The method is described in \Cref{subsec:workTsi} and the used step-size method is discussed in \Cref{subsec:stepSizeTsi}. This step-size sometimes has to be reduced if a new section in the temperature or the drag coefficient model is reached. A root-finding method is described in \Cref{subsec:handlingModelSections} that can be used to determine at what step-size the next section is reached.
 
 
 
 \subsection{Workings of \ac{TSI}}
 \label{subsec:workTsi}
-The formulation used in this thesis is based on the one used by \cite{scott2008high}. \ac{TSI} uses the current state and its derivatives to determine the next state by computing its Taylor Series described in \Cref{eq:general_taylor}. The state vector is represented by $\mathbf{X}$ with the corresponding vector for the initial conditions $\mathbf{X}_{0}$. Each of the variables can at any point be represented by $x_{n}\left(t\right)$. For a given step-size $h$ and an order $K \in \mathbb{R}$ (chosen by the user) the updated state $x_{n}\left(t+h\right)$ can be represented by the Taylor Series with $n=1,\dots,7$ in this case (7 variables: three position, three velocity and one mass). The exact solution is obtained by adding $T_{n,K}$, which is the truncation error for the $n^{th}$ variable using K terms. 
+The formulation used in this thesis is based on the one used by \cite{scott2008high}. \ac{TSI} uses the current state and its derivatives to determine the next state by computing its Taylor Series described in \Cref{eq:general_taylor}. The state vector is represented by $\mathbf{X}$ with the corresponding vector for the initial conditions $\mathbf{X}_{0}$. Each of the variables can at any point be represented by $x_{n}\left(t\right)$. For a given step-size $h$ and an order $K \in \mathbb{R}$ (chosen by the user) the updated state $x_{n}\left(t+h\right)$ can be represented by the Taylor Series with $n=1,\dots,7$ in this case (7 variables: three position, three velocity and one mass). The exact solution is obtained by adding $T_{n,K}$, which is the truncation error for the $n^{\text{th}}$ variable using K terms. 
 
 \nomenclature[Rb4]{$\mathbf{X}$}{State vector \nomunit{-}}
-\nomenclature[Rb1]{$x_{n}$}{n$^{th}$ state variable \nomunit{-}}
+\nomenclature[Rb1]{$x_{n}$}{n$^{\text{th}}$ state variable \nomunit{-}}
 \nomenclature[Ra9]{$T_{n,k}$}{Truncation error \nomunit{-}}
 \nomenclature[Ra4]{$K$}{Maximum order \nomunit{-}}
 \nomenclature[Ra3]{$k$}{Order derivative \nomunit{-}}
@@ -28,7 +31,7 @@ x_{n}\left(t+h\right)=\displaystyle\sum_{k=0}^{K}\dfrac{x_{n}^{\left(k\right)}\l
 \end{equation}
 
 \noindent
-This particular \ac{TSI} method uses recurrence relations to determine the $k^{th}$ order derivatives and only requires the current state ($x_{n}$) and its first derivatives ($x'_{n} = u_{n}$). Each recurrence relation describes a certain operation in the state derivative, such as: multiplication, division, power, exponential, sines and cosines. \Cref{eq:rec_rel} shows the recurrence relations for multiplication ($w\left(t\right)=f\left(t\right)g\left(t\right)$) and division ($w\left(t\right)=\dfrac{f\left(t\right)}{g\left(t\right)}$) respectively (the other operations are described later in this chapter when they are required).
+This particular \ac{TSI} method uses recurrence relations to determine the $k^{\text{th}}$-order derivatives ($x^{\left(k\right)}_{n}$) and only requires the current state ($x_{n}$) and its first derivatives ($x'_{n} = u_{n}$). Each recurrence relation describes a certain operation in the state derivative, such as: multiplication, division, power, exponential, sines and cosines. \Cref{eq:rec_rel} shows the recurrence relations for multiplication ($w\left(t\right)=f\left(t\right)g\left(t\right)$) and division ($w\left(t\right)=\dfrac{f\left(t\right)}{g\left(t\right)}$) respectively (the other operations are described later in this chapter when they are required).
 
 \nomenclature[Rb1]{$x_{n}$}{Auxiliary equation \nomunit{-}}
 \nomenclature[Rb0]{$u_{n}$}{Auxiliary derivative \nomunit{-}}
@@ -40,12 +43,12 @@ This particular \ac{TSI} method uses recurrence relations to determine the $k^{t
 \begin{split}
 &\text{For multiplications} \quad W\left(k\right)=\displaystyle\sum_{j=0}^{k}F\left(j\right)G\left(k-j\right)\\
 &\text{For divisions} \quad W\left(k\right)=\dfrac{1}{g\left(t_{0}\right)}\left[F\left(k\right)-\displaystyle\sum_{j=1}^{k} G\left(j\right)W\left(k-j\right)\right]\\
-& Both \ with \quad W\left(k\right)=\dfrac{w^{\left(k\right)}\left(t_{0}\right)}{k!}, \quad F\left(j\right)=\dfrac{f^{\left(j\right)}\left(t_{0}\right)}{j!} \quad \text{and} \quad G\left(k-j\right)=\dfrac{g^{\left(k-j\right)}\left(t_{0}\right)}{\left(k-j\right)!}\\
+& \text{Both with} \quad W\left(k\right)=\dfrac{w^{\left(k\right)}\left(t_{0}\right)}{k!}, \quad F\left(j\right)=\dfrac{f^{\left(j\right)}\left(t_{0}\right)}{j!} \quad \text{and} \quad G\left(k-j\right)=\dfrac{g^{\left(k-j\right)}\left(t_{0}\right)}{\left(k-j\right)!}\\
 \end{split}
 \end{equation}
 
 \noindent
-Here, both $f\left(t\right)$ and $g\left(t\right)$ are place-holder functions and $w\left(t\right)$ is called the auxiliary function which replaces the respective operation. Sometimes, the state derivative functions can be rather complex and have many operations intertwined. One can then choose to introduce extra variables to simplify the derivatives and reduce the number of operations in that particular derivative. These extra variables together with the expression that they replace then form the auxiliary equations. A random example is shown in \Cref{eq:auxEqExample}.
+Here, both $f\left(t\right)$ and $g\left(t\right)$ are place-holder functions and $w\left(t\right)$ is called the auxiliary function which replaces the respective operation. Sometimes, the state derivative functions can be rather complex and have many operations intertwined. One can then choose to introduce extra variables to simplify the derivatives and reduce the number of operations in that particular derivative. These extra variables together with the expression that they replace then form the auxiliary equations. A random example is shown in \Cref{eq:auxEqExample}. In the first line the derivative of $x_{4}$ is written out. In this equation there is an addition and a division. Within this division there is a term with an addition of two multiplications. To simplify this equation it can be chosen to write the term in the brackets as a separate variable called $x_{8}$ as shown in the second line.
 
 \begin{equation} \label{eq:auxEqExample}
 \begin{split}
@@ -55,7 +58,7 @@ x_{8} &= x_{3}x_{1}+x_{2}x_{3} \\
 \end{equation}
 
 \noindent
-However, now that the extra variable $x_{8}$ is introduced, the derivative of the corresponding auxiliary equations has to be described as well (see \Cref{eq:auxDerExample}, which in turn will use auxiliary functions to determine the $k^{th}$ derivative of $x_{8}$.
+Now that this extra variable $x_{8}$ is introduced, the derivative of the corresponding auxiliary equations has to be described as well (see \Cref{eq:auxDerExample}, which in turn will use auxiliary functions to determine the $k^{\text{th}}$ derivative of $x_{8}$. In \Cref{eq:auxDerExample} the first line shows the new derivative of $x_{4}$ using the extra variable and the second line shows the derivative of that variable.
 
 \begin{equation} \label{eq:auxDerExample}
 \begin{split}
@@ -77,7 +80,7 @@ U_{n}\left(k-1\right)=kX_{n}\left(k\right)\Rightarrow X_{n}\left(k\right)=\dfrac
 \nomenclature[Rb3]{$X$}{Taylor Series coefficient (also $X_{n}$) \nomunit{-}}
 
 \noindent
-The $X_{n}\left(k\right)$ are also known as the Taylor Series coefficients of the $n^{th}$ variable for the $k^{th}$ order derivative. Also, $U_{n}\left(k\right)$ are the recurrence relation expressions for the $n^{th}$ variable which consist of all the reduced auxiliary functions ($W\left(k\right)$) that form that derivative. 
+The $X_{n}\left(k\right)$ are also known as the Taylor Series coefficients of the $n^{\text{th}}$ variable for the $k^{\text{th}}$ order derivative (or the quotient in \Cref{eq:general_taylor}. Also, $U_{n}\left(k\right)$ are the recurrence relation expressions for the $n^{\text{th}}$ variable which consist of all the reduced auxiliary functions ($W\left(k\right)$) that form that derivative. 
 
 \noindent
 Using the expression described in \Cref{eq:def_u} all Taylor Series coefficients can be found. Then \Cref{eq:general_taylor} can be used to determine the next state values at time $t+h$ for the known previous parameter values at time $t$. The same can then be done to determine the values at the time-step after that using the state values at $t+h$, etc. Going through all these different time-steps results in the final integration. 
@@ -89,7 +92,7 @@ The step-size used for \ac{TSI} can be either set as a constant value by the use
 
 
 \begin{equation} \label{eq:fix_point_it}
-h_{l+1}=exp\left(\dfrac{1}{K-1}ln\left[\dfrac{\tau}{\begin{vmatrix}
+h_{l+1}=\exp\left(\dfrac{1}{K-1}\ln\left[\dfrac{\tau}{\begin{vmatrix}
 X_{n}\left(K-1\right)
 \end{vmatrix}+K\begin{vmatrix}
 X_{n}\left(K\right)
@@ -104,11 +107,11 @@ This is then done for all variables and the smallest required step-size is chose
 
 \subsection{Handling Model Sections}
 \label{subsec:handlingModelSections}
-For both the temperature and drag coefficient models, different sections have been identified with different behaviours. Each of these sections was fitted with a polynomial approximation as described in \Cref{sec:dragModel}. Because \ac{TSI} only uses data available at the current point, it could be that if the step-size is allowed to be too large, the section boundary for one of these models is crossed. At that point, the step-size has to be adjusted such that it stops at the start of the next section. This way, the next time step will start at the next model section. This also means that these sections do not necessarily have to be connected, and as a result \ac{TSI} would be able to handle discontinuities in the model as well, should those occur. \\
-This section boundary is found using a root finding method. The method used in this research is based on the method described in \cite{bergsma2015application}. \\
+For both the temperature and drag coefficient models, different sections have been identified with different behaviours. Each of these sections was fitted with a polynomial approximation as described in \Cref{sec:dragModel}. Because \ac{TSI} only uses data available at the current point, it could be that if the step-size is allowed to be too large, the section boundary for one of these models is crossed. At that point, the step-size has to be adjusted such that it stops at the start of the next section. In this way, the next time step will start at the next model section. This also means that these sections do not necessarily have to be connected, and as a result \ac{TSI} would be able to handle discontinuities in the model as well, should those occur. \\
+This section boundary is found using a root-finding method. The method used in this research is based on the method described in \cite{bergsma2015application}. \\
 
 \noindent
-First, the simulation program has to determine if the newly computed parameter (either Mach number or altitude) has indeed moved into the new section. This can be done using the section limits as shown by \Cref{eq:limitFunction} which is called the limit function. From now on, the equations will be written for the altitude, but the same expressions hold for the Mach number.
+First, the simulation program has to determine if the newly computed parameter (either Mach number or altitude) has indeed moved into the new section. This can be done using the section limits as shown by \Cref{eq:limitFunction} which is called the limit function. From now on, the equations will be written for altitude, but the same expressions hold for the Mach number.
 
 \begin{equation} \label{eq:limitFunction}
 f = h-h_{limit}
@@ -117,10 +120,10 @@ f = h-h_{limit}
 \nomenclature[Ra1]{$f$}{Limit function \nomunit{-}}
 
 \noindent
-Because this research is based on an ascent trajectory, a new section is reached if the altitude is higher than the lower limit altitude of that section. Therefore, if $f$ > 0 a new section has been reached, and the root finding method should be used to get the value of $f$ back to zero and thus identify the step-size at which the root of $f$ is located.\\
+Because this research is based on an ascent trajectory, a new section is reached if the altitude is higher than the lower limit altitude of that section. Therefore, if $f$ > 0 a new section has been reached, and the root-finding method should be used to get the value of $f$ back to zero and thus identify the step-size at which the root of $f$ is located.\\
 
 \noindent
-At the start of the root finding procedure, two points can be identified. The first point is the starting point of the \ac{MAV} at the beginning of the integration step and the second point is the proposed end point of the \ac{MAV} as suggested by the current step-size. If the new section has been reached it means that the point that the \ac{MAV} is coming from has a limit function value that is below zero, or $f_{From}$ < 0. The mission time at that point is given by $t_{From}$. This is the original mission time ($t_{original}$) at the start of the integration and it is therefore the goal to find $h_{req}$ (required step-size) such that $t_{original}+h_{req}$ results in the final limit function value, $f_{new}$ = 0. The mission time at the second point (where the \ac{MAV} was headed when the section was crossed) is given by $t_{To}$ with the corresponding $f_{To}$ > 0. This means that $f_{new}$ and $t_{new}$ are located somewhere between these original points. The method described by \cite{bergsma2015application} should result in a spiralling motion that slowly converges to the root. This means that the root finding method is always evaluated from the "from" point to the "to" point, irrespective of on which side of the root the next starting point is. \\
+At the start of the root-finding procedure, two points can be identified. The first point is the starting point of the \ac{MAV} at the beginning of the integration step and the second point is the proposed end point of the \ac{MAV} as suggested by the current step-size. If the new section has been reached it means that the point that the \ac{MAV} is coming from has a limit function value that is below zero, or $f_{From}$ < 0. The mission time at that point is given by $t_{From}$. This is the original mission time ($t_{original}$) at the start of the integration and it is therefore the goal to find $h_{req}$ (required step-size) such that $t_{original}+h_{req}$ results in the final limit function value, $f_{new}$ = 0. The mission time at the second point (where the \ac{MAV} was headed when the section was crossed) is given by $t_{To}$ with the corresponding $f_{To}$ > 0. This means that $f_{new}$ and $t_{new}$ are located somewhere between these original points. The method described by \cite{bergsma2015application} should result in a spiralling motion that (slowly) converges to the root. This means that the root-finding method is always evaluated from the "from" point to the "to" point, irrespective of on which side of the root the next starting point is. \\
 
 \noindent
 The first step is to determine the altitude derivative at the current "from" point, or $\dot{f}_{From}$. If the Taylor Series coefficients for the altitude (in this case) are available, then the derivative can directly be computed by combining \Cref{eq:general_taylor,eq:def_u} resulting in \Cref{eq:fFromDot}. Otherwise, the derivative has to be comprised of other known derivatives.
@@ -130,13 +133,13 @@ The first step is to determine the altitude derivative at the current "from" poi
 \end{equation}
 
 \noindent
-Next, the coefficient of the root finding curve, $\alpha$, has to be determined. This coefficient is effectively $\dfrac{\ddot{f}_{From}}{2}$ and is computed using \Cref{eq:alphaForRoot}.
+Next, the coefficient of the root-finding curve, $\alpha$, has to be determined. This coefficient is effectively $\dfrac{\ddot{f}_{From}}{2}$ and is computed using \Cref{eq:alphaForRoot}.
 
 \begin{equation} \label{eq:alphaForRoot}
 \alpha = \dfrac{f_{To}-f_{From}}{\left(t_{To}-t_{From}\right)^{2}}-\dfrac{\dot{f}_{From}}{t_{To}-t_{From}}
 \end{equation}
 
-\nomenclature[Ga0]{$\alpha$}{Root finding curve coefficient \nomunit{-}}
+\nomenclature[Ga0]{$\alpha$}{Root-finding curve coefficient \nomunit{-}}
 
 \noindent
 With this coefficient it is possible to compute the new time of the newly computed point. This point is called the new "from" point because no matter if this point is before of after the root of the limit function, that point will be used as the starting or "from" point for the next point computation. This is why this time is called $t_{From,new}$ and is computed using \Cref{eq:tFromNew}. This equation has a plus sign in front of the square root because the next section has been reached when $f$ > 0.
@@ -158,7 +161,7 @@ t_{From}=t_{From,new} \\
 \end{cases}\\
 \text{If the signs of }f_{From}\text{ and }f_{From,new}\text{ are the same}&\Rightarrow\begin{cases}
 f_{To}=f_{To} \quad \text{  Remains the same}\\
-t_{To}=t_{To} \quad \text{  Remains the same}\\
+t_{To}=t_{To} \quad \ \text{  Remains the same}\\
 f_{From}=f_{From,new}\\
 t_{From}=t_{From,new} \\ 
 \end{cases}\\
@@ -166,24 +169,25 @@ t_{From}=t_{From,new} \\
 \end{equation}
 
 \noindent
-With this, the root finding process can be started again at the first step (so starting at \Cref{eq:fFromDot}).\\
+With this, the root-finding process can be started again at the first step (so starting at \Cref{eq:fFromDot}).\\
 
 \noindent
-However, the condition that $f_{From,new}$ should be equal to zero before the root finding method is satisfied and the new step-size can be accepted is not realistic. This is why two conditions have to be met instead. $f_{From,new}\geq 0$ and $f_{From,new}\leq 1\cdot10^{-6}$. This means that $f_{From,new}$ has to be within an accuracy of 1 cm for the altitude and within a Mach accuracy of 1$\cdot$10$^{-6}$. If both these requirements are met, it is assured that the next section will be used in the next time step calculation, because the section limits are always set at the beginning of the section.  
+However, the condition that $f_{From,new}$ should be equal to zero before the root-finding method is satisfied and the new step-size can be accepted is not realistic. This is why two conditions have to be met instead: $f_{From,new}\geq 0$ and $f_{From,new}\leq 1\cdot10^{-6}$. This means that $f_{From,new}$ has to be within an accuracy of 1 cm for the altitude and within a Mach accuracy of 1$\cdot$10$^{-6}$. If both these requirements are met, it is assured that the next section will be used in the next time step calculation, because the section limits are always set at the beginning of the section.  
 
 
-%This is where the root finding method used should be described!
+%This is where the root-finding method used should be described!
 %\textbf{\textcolor{red}{This section still has to be added!!}}
 
 
 \section{Associated Equations}
 \label{sec:assEq}
-In order for \ac{TSI} to be implemented, the state derivatives have to be modelled as a set of functions which are a function of the state only. This can be done in different ways. In this case, three cases were tested: two Cartesian cases and one spherical case. For the Cartesian cases, the initial conditions first have to be transformed into Cartesian coordinates. The Cartesian equations themselves require reference frame transformations, which can be written in two different ways. The first case is described in \Cref{subsec:careq} and the second in \Cref{subsec:careq2}. The reason for testing the spherical case is that the initial conditions are provided in spherical coordinates and the intermediate computations can be easily interpreted and checked for errors. However, the equations are highly sensitive to singularities. The spherical equations are described in \Cref{subsec:sphereq} and already include reference frame transformations. 
+In order for \ac{TSI} to be implemented, the state derivatives have to be modelled as a set of functions which are a function of the state only. This can be done in different ways. In this case, three cases were tested: two cartesian cases and one spherical case. For the cartesian cases, the initial conditions first have to be transformed into cartesian coordinates. The cartesian equations themselves require reference frame transformations, which can be written in two different ways. The first case is described in \Cref{subsec:careq} and the second in \Cref{subsec:careq2}. The reason for testing the spherical case is that the initial conditions are provided in spherical coordinates and the intermediate computations can be easily interpreted and checked for errors. However, the equations are highly sensitive to singularities. The spherical equations are described in \Cref{subsec:sphereq} and already include reference frame transformations. 
 
 \subsection{Cartesian Equations, First Case}
 \label{subsec:careq}
-The Cartesian state and derivatives were initially described in \Cref{ch:models} but are repeated and completed here.\\
-The Cartesian state is described in \Cref{eq:state}, where $m_{MAV}$ is the mass of the \ac{MAV} and the subscript $I$ refers to the inertial frame.
+The cartesian state and derivatives were initially described in \Cref{ch:models} but are repeated and completed here.
+
+The cartesian state is described in \Cref{eq:state}, where $m_{MAV}$ is the mass of the \ac{MAV} and the subscript $I$ refers to the inertial frame.
 
 \begin{align} \label{eq:state}
 \mathbf{r}&=\begin{pmatrix}
@@ -209,22 +213,22 @@ The corresponding state derivatives are then described by \Cref{eq:state_derivat
 
 \begin{align} \label{eq:state_derivatives}
 \begin{split} 
-\dot{x}_{I}&=V_{x_{I}}\\
-\dot{y}_{I}&=V_{y_{I}}\\
-\dot{z}_{I}&=V_{z_{I}}
+\dot{x}&=V_{x}\\
+\dot{y}&=V_{y}\\
+\dot{z}&=V_{z}
 \end{split} 
 &
 \begin{split}
-\ddot{x}_{I}&=\dot{V}_{x_{I}}=a_{x_{I}}\\
-\ddot{y}_{I}&=\dot{V}_{y_{I}}=a_{y_{I}}\\
-\ddot{z}_{I}&=\dot{V}_{z_{I}}=a_{z_{I}}
+\ddot{x}&=\dot{V}_{x}=a_{x}\\
+\ddot{y}&=\dot{V}_{y}=a_{y}\\
+\ddot{z}&=\dot{V}_{z}=a_{z}
 \end{split}
 &
 \dot{m}_{MAV}=-\dfrac{T}{g_{0}I_{sp}}
 \end{align}
 
 \noindent
-From this point on, the subscript $I$ is omitted, because the state and the state derivatives are always presented in the inertial frame. If variables have to be presented in any other reference frame the corresponding subscripts will be provided and explained. The accelerations in the x-, y- and z-direction have three contributing components: gravitational acceleration, drag and thrust. The gravitational acceleration can be directly expressed in the inertial frame, however the drag is presented in the body frame and the thrust is expressed in the propulsion frame. Therefore, both the drag and thrust contributions have to be transformed to the inertial frame using transformation matrices. This then results in the expression for the acceleration vector as shown by \Cref{eq:acc}. The subscript $G$ shows that the parameter is a function of the ground velocity.
+The accelerations in the x-, y- and z-direction have three contributing components: gravitational acceleration, drag and thrust. The gravitational acceleration can be directly expressed in the inertial frame, however the drag is presented in the aerodynamic frame but can directly be expressed in the body frame since there is no wind and the angle of attack is zero. The thrust is expressed in the propulsion frame. Therefore, both the drag and thrust contributions have to be transformed to the inertial frame using transformation matrices. This then results in the expression for the acceleration vector as shown by \Cref{eq:acc}. The subscript $G$ shows that the parameter is a function of the ground velocity.
 
 \begin{multline} \label{eq:acc}
 \begin{pmatrix}
@@ -257,7 +261,7 @@ a_{z}\\
 \end{multline}
 
 \noindent
-It can be seen that this set of equations is a function of the current position and many other parameters. These parameters will all have to be written as a function of the current state. This can be done by writing them into auxiliary equations, forming extra variables that then also require the auxiliary derivatives. This works for certain parameters, such as the gravity, because these equations are already expressed in the inertial frame. However, the transformation angles are defined in different reference frames, which means that finding the proper auxiliary derivatives can be tricky sometimes. Therefore it was decided to directly write these parameters as auxiliary functions. Each of the auxiliary functions performs one simple algebraic operation and the collection of these auxiliary functions then form the complete set of recurrence relations using the recurrence relations for the simple algebraic operations. For the auxiliary equations, a similar notation will be used as shown by \cite{scott2008high}. Here the equations are denoted by $x_{number}$ and the corresponding derivatives $x'_{number}$. This notation will also be used for the current state and the corresponding state derivatives. This way, \Cref{eq:state} can be written as \Cref{eq:stateX} and the corresponding derivatives can be written as presented by \Cref{eq:state_derivativesX}.
+It can be seen that this set of equations is a function of the current position and many other parameters. These parameters will all have to be written as a function of the current state. This can be done by writing them into auxiliary equations, forming extra variables that then also require the auxiliary derivatives. This works for certain parameters, such as the gravity, because these equations are already expressed in the inertial frame. However, the transformation angles are defined in different reference frames, which means that finding the proper auxiliary derivatives can be tricky sometimes. Therefore it was decided to directly write these parameters as auxiliary functions. Each of the auxiliary functions performs one simple algebraic operation and the collection of these auxiliary functions then form the complete set of recurrence relations using the recurrence relations for the simple algebraic operations. For the auxiliary equations, a similar notation will be used as shown by \cite{scott2008high}. Here the equations are denoted by $x_{number}$ and the corresponding derivatives $x'_{number}$. This notation will also be used for the current state and the corresponding state derivatives. Accordingly, \Cref{eq:state} can be written as \Cref{eq:stateX} and the corresponding derivatives can be written as presented by \Cref{eq:state_derivativesX}.
 
 \begin{align} \label{eq:stateX}
 \begin{split} 
@@ -335,15 +339,15 @@ x'_{9}&=\dfrac{3}{2}\dfrac{x_{9}x_{8}'}{x_{8}}
  
 \subsubsection{Transformation Angles}
 \label{subsubsec:tsiTransAngl}
-The angles required for the transformation to go from the body frame to the reference frame all have to be written as a function of the state variables. The required angles are $\lambda$, $\delta$, $\chi_{G}$ and $\gamma_{G}$. Here $\lambda = \tau + \Omega_{M}t_{O}-\omega_{P}$. This means that instead of first transforming to the rotating frame completely and then transforming to the inertial frame, an inertial longitude angle $\lambda$ can be defined to directly transform to the inertial frame. The first two angles are the longitude and latitude and are spherical coordinates. Thus the relations for these angles can be found using the transformation from the Cartesian to the spherical system. However, the angles themselves are not required directly, because they are only used in transformation matrices. These matrices are comprised of the sines and cosines of these angles, which means that a direct relation between the state variables and the sines and cosines of the position angles can be used. These relations can be derived from \Cref{fig:sphertocart_noomen2013basic} and are described in \Cref{eq:transAngl}
+The angles required for the transformation to go from the body frame to the inertial reference frame all have to be written as a function of the state variables. The required angles are $\lambda$, $\delta$, $\chi_{G}$ and $\gamma_{G}$. Here $\lambda = \tau + \Omega_{M}t_{O}-\omega_{P}$. This means that instead of first transforming to the rotating frame completely and then transforming to the inertial frame, an inertial longitude angle $\lambda$ can be defined to directly transform to the inertial frame. The first two angles are the longitude and latitude and are spherical coordinates. Thus the relations for these angles can be found using the transformation from the cartesian to the spherical system. However, the angles themselves are not required directly, because they are only used in transformation matrices. These matrices are comprised of the sines and cosines of these angles, which means that a direct relation between the state variables and the sines and cosines of the position angles can be used. These relations can be derived from \Cref{fig:sphertocart_noomen2013basicFirst} and are described in \Cref{eq:transAngl}
 
 
- \begin{figure}[H]
-\centering
-\includegraphics[width=0.3\textwidth]{figures/reference_frames/sphertocart_noomen2013basic.jpg}
-\caption{Spherical position variables in an inertial Cartesian frame \citep{noomen2013basic}.}
-\label{fig:sphertocart_noomen2013basic}
-\end{figure}
+% \begin{figure}[H]
+%\centering
+%\includegraphics[width=0.3\textwidth]{figures/reference_frames/sphertocart_noomen2013basic.jpg}
+%\caption{spherical position variables in an inertial cartesian frame \citep{noomen2013basic}.}
+%\label{fig:sphertocart_noomen2013basic}
+%\end{figure}
 
 \begin{align} \label{eq:transAngl}
 \begin{split}
@@ -362,7 +366,7 @@ r = \sqrt{x^{2}+y^{2}+z^{2}}\\
 \end{align} 
 
 \noindent
-The corresponding auxiliary functions can then be described by \Cref{eq:auxFtransAngl} using the definitions provided in \Cref{eq:stateX,eq:state_derivativesX}. From here on out, sine will be shortened to '$s$' and cosine will be shortened to '$c$' for ease of notation.
+The corresponding auxiliary functions can then be described by \Cref{eq:auxFtransAngl} using the definitions provided in \Cref{eq:stateX,eq:state_derivativesX}. From here on, sine will be shortened to 's' and cosine will be shortened to 'c' for ease of notation.
 
 \begin{align} \label{eq:auxFtransAngl}
 \begin{split}
@@ -373,13 +377,13 @@ w_{4,4} &= \sqrt{w_{4,1}} \\
 \end{split}
 &
 \begin{split}
-w_{4,5} &= s\lambda = \dfrac{x_{2}}{w_{4,4}}\\
-w_{4,6} &= c\lambda = \dfrac{x_{1}}{w_{4,4}} \\
+w_{4,5} &= \text{s}\lambda = \dfrac{x_{2}}{w_{4,4}}\\
+w_{4,6} &= \text{c}\lambda = \dfrac{x_{1}}{w_{4,4}} \\
 \end{split}
 &
 \begin{split}
-w_{4,7} &= s\delta = \dfrac{x_{3}}{w_{4,3}} \\
-w_{4,8} &= c\delta = \dfrac{w_{4,4}}{w_{4,3}}\\
+w_{4,7} &= \text{s}\delta = \dfrac{x_{3}}{w_{4,3}} \\
+w_{4,8} &= \text{c}\delta = \dfrac{w_{4,4}}{w_{4,3}}\\
 \end{split} 
 \end{align} 
 
@@ -396,9 +400,9 @@ V_{z_{V}}\\
 =
 \left[
 \begin{matrix}
--c\lambda s\delta & -s\lambda s\delta & c\delta\\
--s\lambda & c\lambda & 0\\
--c\lambda c\delta & -s\lambda c\delta & -s\delta\\
+-\text{c}\lambda \text{s}\delta & -\text{s}\lambda \text{s}\delta & \text{c}\delta\\
+-\text{s}\lambda & \text{c}\lambda & 0\\
+-\text{c}\lambda \text{c}\delta & -\text{s}\lambda \text{c}\delta & -\text{s}\delta\\
 \end{matrix}
 \right]
 \left\lbrace
@@ -497,9 +501,9 @@ Here, $V_{x_{V}}$, $V_{y_{V}}$ and $V_{z_{V}}$ are the velocities in the vertica
 
 \begin{equation} \label{eq:VV}
 \begin{split}
-V_{x_{V}} & = -\left(V_{x}+\Omega_{M}y\right) s \delta c\lambda - \left(V_{y}-\Omega_{M}x\right) s\delta s\lambda+V_{z}c\delta \\
-V_{y_{V}} & = \left(V_{y}-\Omega_{M}x\right) c\lambda - \left(V_{x}+\Omega_{M} y \right) s\lambda \\
-V_{z_{V}} & = -\left(V_{x}+\Omega_{M}y\right)c\delta c\lambda-\left(V_{y}-\Omega_{M}x\right) c\delta s\lambda - V_{z} s\delta \\
+V_{x_{V}} & = -\left(V_{x}+\Omega_{M}y\right) s \delta \text{c}\lambda - \left(V_{y}-\Omega_{M}x\right) \text{s}\delta \text{s}\lambda+V_{z}\text{c}\delta \\
+V_{y_{V}} & = \left(V_{y}-\Omega_{M}x\right) \text{c}\lambda - \left(V_{x}+\Omega_{M} y \right) \text{s}\lambda \\
+V_{z_{V}} & = -\left(V_{x}+\Omega_{M}y\right)\text{c}\delta \text{c}\lambda-\left(V_{y}-\Omega_{M}x\right) \text{c}\delta \text{s}\lambda - V_{z} \text{s}\delta \\
 \end{split}
 \end{equation}
 
@@ -508,10 +512,10 @@ The combined auxiliary functions for \Cref{eq:velAngl,eq:VV} are described in \C
 
 \begin{align} \label{eq:auxVV}
 \begin{split}
-w_{4,13} &= -c\lambda s\delta  = -w_{4,6}w_{4,7} \\
-w_{4,14} &= -s\delta s\lambda = -w_{4,7}w_{4,5} \\
-w_{4,15} &= -c\delta c\lambda = -w_{4,8}w_{4,6} \\
-w_{4,16} &= -c\delta s\lambda = w_{4,8}w_{4,5} \\
+w_{4,13} &= -\text{c}\lambda \text{s}\delta  = -w_{4,6}w_{4,7} \\
+w_{4,14} &= -\text{s}\delta \text{s}\lambda = -w_{4,7}w_{4,5} \\
+w_{4,15} &= -\text{c}\delta \text{c}\lambda = -w_{4,8}w_{4,6} \\
+w_{4,16} &= -\text{c}\delta \text{s}\lambda = w_{4,8}w_{4,5} \\
 \end{split}
 &
 \begin{split}
@@ -523,10 +527,10 @@ w_{4,21} &= \sqrt{w_{4,20}} \\
 \end{split}
 &
 \begin{split}
-w_{4,22} &= s\chi_{G} = \dfrac{w_{4,18}}{w_{4,21}} \\
-w_{4,23} &= c\chi_{G} = \dfrac{w_{4,17}}{w_{4,21}} \\
-w_{4,24} &= s\gamma_{G} = -\dfrac{w_{4,19}}{w_{4,12}} \\
-w_{4,25} &= c\gamma_{G} = \dfrac{w_{4,21}}{w_{4,12}} \\
+w_{4,22} &= \text{s}\chi_{G} = \dfrac{w_{4,18}}{w_{4,21}} \\
+w_{4,23} &= \text{c}\chi_{G} = \dfrac{w_{4,17}}{w_{4,21}} \\
+w_{4,24} &= \text{s}\gamma_{G} = -\dfrac{w_{4,19}}{w_{4,12}} \\
+w_{4,25} &= \text{c}\gamma_{G} = \dfrac{w_{4,21}}{w_{4,12}} \\
 \end{split}
 \end{align}
 
@@ -545,7 +549,7 @@ h &= r-R_{MOLA} \\
 \end{equation}
 
 \noindent
-The numbering for the drag auxiliary functions start with 27 because it was added later on and because it used to be an auxiliary equation. The auxiliary functions for the density can then be described by \Cref{eq:dragAuxF}.
+The numbering for the drag auxiliary functions starts with 27 because it was added later on and because it used to be an auxiliary equation. The auxiliary functions for the density can then be described by \Cref{eq:dragAuxF}.
 
 \begin{align} \label{eq:dragAuxF}
 \begin{split}
@@ -568,7 +572,7 @@ w_{27,12} &= \rho = e^{w_{27,11}} \\
 \end{align}
 
 \noindent
-Since the drag coefficient is a function of Mach number as by \Cref{fig:dragcoeff_whitehead2004mars} and is consists of several functions, it has to be split into 6 different sections. Each section has a separate $C_{D}-M$ relation. Before these relations can be described, three additional expressions are required which are described in \Cref{eq:cd}.
+Since the drag coefficient is a function of Mach number as by \Cref{fig:dragcoeff_whitehead2004mars} and it consists of several functions, it has to be split into 6 different sections. Each section has a separate $C_{D}-M$ relation. Before these relations can be described, three additional expressions are required which are described in \Cref{eq:cd}.
 
  \begin{equation} \label{eq:cd}
 \begin{split}
@@ -578,7 +582,7 @@ a &= \sqrt{\gamma_{a}R_{a}^{*}T_{a}} \quad \text{where} \quad R_{a}^{*}=\dfrac{R
 \end{equation}
 
 \noindent
-Where the corresponding auxiliary functions can be described by \Cref{eq:cdAuxF}.
+The corresponding auxiliary functions can be described by \Cref{eq:cdAuxF}.
 
 \begin{align} \label{eq:cdAuxF}
 \begin{split}
@@ -605,7 +609,7 @@ P_{C_{D} 1,5}M+P_{C_{D} 0,5}, &  \text{for } 2.5\leq M < 4 \\
 In this case, the auxiliary function for $C_{D} \left( = w_{27,16}\right)$ is any of the conditional relations depending on $M \left( = w_{27,15}\right)$.
 
 \noindent
-This only leaves the temperature $T_{a} \left(= w_{27,13}\right)$ , which is a function of the altitude $h \left(= w_{27,1} \right) $ in km \ac{MOLA}. But as described in \Cref{subsec:atmofuncfit}, this parameter is split into different sections as well. The equations per section for the temperature are provided in \Cref{eq:tempCondAuxC}. Here $P_{T number,section}$ are the polynomial fit coefficients as provided in \Cref{tab:fitParameters}.
+This only leaves the temperature $T_{a} \left(= w_{27,13}\right)$ , which is a function of the altitude $h \left(= w_{27,1} \right) $ in km \ac{MOLA}. But as described in \Cref{subsec:atmofuncfit}, this parameter is split into different sections as well. The equations per section for the temperature are provided in \Cref{eq:tempCondAuxC}. Here, $P_{T number,section}$ are the polynomial fit coefficients as provided in \Cref{tab:fitParameters}.
 
 \begin{equation}\label{eq:tempCondAuxC}
 T_{a}=\begin{cases}
@@ -671,9 +675,9 @@ x'_{6}\\
 \begin{equation} \label{eq:BPtrans}
 \mathbb{T}_{\mathbf{BP}}=
 \begin{bmatrix}
-c\psi_{T}c\epsilon_{T} & -s\psi_{T} & c\psi_{T}s\epsilon_{T}\\
-s\psi_{T}c\epsilon_{T} & c\psi_{T} & s\psi_{T}s\epsilon_{T}\\
--s\epsilon_{T} & 0 & c\epsilon_{T}\\
+\text{c}\psi_{T}\text{c}\epsilon_{T} & -\text{s}\psi_{T} & \text{c}\psi_{T}\text{s}\epsilon_{T}\\
+\text{s}\psi_{T}\text{c}\epsilon_{T} & \text{c}\psi_{T} & \text{s}\psi_{T}\text{s}\epsilon_{T}\\
+-\text{s}\epsilon_{T} & 0 & \text{c}\epsilon_{T}\\
 \end{bmatrix}
 \end{equation}
 
@@ -681,9 +685,9 @@ s\psi_{T}c\epsilon_{T} & c\psi_{T} & s\psi_{T}s\epsilon_{T}\\
 \mathbb{T}_{\mathbf{IB}}=
 \left[
 \begin{matrix}
-c\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\lambda s\chi c\gamma  & c\lambda s\delta s\chi -s\lambda c\chi & c\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\lambda s\chi s\gamma \\
-s\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\lambda s\chi c\gamma & s\lambda s\delta s\chi +c\lambda c\chi & s\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\lambda s\chi s\gamma \\
-c\delta c\chi c\gamma +s\delta s\gamma &  -c\delta s\chi &  c\delta c\chi s\gamma -s\delta c\gamma \\
+\text{c}\lambda\left(-\text{s}\delta \text{c}\chi \text{c}\gamma +\text{c}\delta \text{s}\gamma \right)-\text{s}\lambda \text{s}\chi \text{c}\gamma  & \text{c}\lambda \text{s}\delta \text{s}\chi -\text{s}\lambda \text{c}\chi & \text{c}\lambda\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)-\text{s}\lambda \text{s}\chi \text{s}\gamma \\
+\text{s}\lambda\left(-\text{s}\delta \text{c}\chi \text{c}\gamma +\text{c}\delta \text{s}\gamma \right)+\text{c}\lambda \text{s}\chi \text{c}\gamma & \text{s}\lambda \text{s}\delta \text{s}\chi +\text{c}\lambda \text{c}\chi & \text{s}\lambda\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)+\text{c}\lambda \text{s}\chi \text{s}\gamma \\
+\text{c}\delta \text{c}\chi \text{c}\gamma +\text{s}\delta \text{s}\gamma &  -\text{c}\delta \text{s}\chi &  \text{c}\delta \text{c}\chi \text{s}\gamma -\text{s}\delta \text{c}\gamma \\
 \end{matrix}
 \right]\\
 \end{equation}
@@ -693,34 +697,34 @@ c\delta c\chi c\gamma +s\delta s\gamma &  -c\delta s\chi &  c\delta c\chi s\gamm
 %\end{matrix}  \right.
 %\\
 %\begin{matrix}
-%c\lambda s\delta s\chi -s\lambda c\chi\\
-%s\lambda s\delta s\chi +c\lambda c\chi \\
-% -c\delta s\chi \\
+%\text{c}\lambda \text{s}\delta \text{s}\chi -\text{s}\lambda \text{c}\chi\\
+%\text{s}\lambda \text{s}\delta \text{s}\chi +\text{c}\lambda \text{c}\chi \\
+% -\text{c}\delta \text{s}\chi \\
 %\end{matrix}
 %\\
 %\left.
 %\begin{matrix}
-%c\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\lambda s\chi s\gamma\\
-%s\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\lambda s\chi s\gamma \\
-%c\delta c\chi s\gamma -s\delta c\gamma\\
+%\text{c}\lambda\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)-\text{s}\lambda \text{s}\chi \text{s}\gamma\\
+%\text{s}\lambda\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)+\text{c}\lambda \text{s}\chi \text{s}\gamma \\
+%\text{c}\delta \text{c}\chi \text{s}\gamma -\text{s}\delta \text{c}\gamma\\
 %=
 %\left[
 %\begin{matrix}
-%c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14}    \\
-%s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}    \\
+%\text{c}\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-\text{s}\left(x_{10}+x_{11}\right) sx_{13} cx_{14}    \\
+%\text{s}\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+\text{c}\left(x_{10}+x_{11}\right) sx_{13} cx_{14}    \\
 %cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}   \\
 %\end{matrix} \right.
 %\\
 %\begin{matrix}
-%c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13} \\
-%s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \\
+%\text{c}\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -\text{s}\left(x_{10}+x_{11}\right) cx_{13} \\
+%\text{s}\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +\text{c}\left(x_{10}+x_{11}\right) cx_{13} \\
 %-cx_{12} sx_{13} \\
 %\end{matrix}
 %\\
 %\left.
 %\begin{matrix}
-%c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \\
-%s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \\
+%\text{c}\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-\text{s}\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \\
+%\text{s}\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+\text{c}\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \\
 % cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \\
 %\end{matrix}
 %\right]\\
@@ -737,9 +741,9 @@ The thrust accelerations in the x-, y- and z-directions (in the body frame) can 
 \end{pmatrix}
 =
 \begin{pmatrix}
-\dfrac{T}{x_{7}}c\psi_{T}c\epsilon_{T}\\
-\dfrac{T}{x_{7}}s\psi_{T}c\epsilon_{T}\\
--\dfrac{T}{x_{7}}s\epsilon_{T}\\
+\dfrac{T}{x_{7}}\text{c}\psi_{T}\text{c}\epsilon_{T}\\
+\dfrac{T}{x_{7}}\text{s}\psi_{T}\text{c}\epsilon_{T}\\
+-\dfrac{T}{x_{7}}\text{s}\epsilon_{T}\\
 \end{pmatrix}
 \end{equation}
 
@@ -759,16 +763,16 @@ w_{4,26} &= \cos \psi_{T} \\
 w_{4,27} &= \cos \epsilon_{T} \\
 w_{4,28} &= \sin \psi_{T} \\
 w_{4,29} &= \sin \epsilon_{T} \\
-w_{4,30} &= c\psi_{T} c\epsilon_{T} = w_{4,26}w_{4,27} \\
-w_{4,31} &= c\epsilon_{T} s\psi_{T} = w_{4,27}w_{4,28} \\
+w_{4,30} &= \text{c}\psi_{T} \text{c}\epsilon_{T} = w_{4,26}w_{4,27} \\
+w_{4,31} &= \text{c}\epsilon_{T} \text{s}\psi_{T} = w_{4,27}w_{4,28} \\
 w_{4,32} &= \dfrac{1}{x_{7}}\\
 \end{split}
 &
 \begin{split}
 w_{4,33} &= \dfrac{T}{x_{7}} = T w_{4,32}\\
-w_{4,34} &= \dfrac{T}{x_{7}} c\epsilon_{T} c\psi_{T} = w_{4,33}w_{4,30} \\
-w_{4,37} &= \dfrac{T}{x_{7}}c\epsilon_{T} s\psi_{T} = w_{4,33}w_{4,31} \\
-w_{4,38} &= \dfrac{T}{x_{7}} s\epsilon_{T} = w_{4,33}w_{4,29} \\
+w_{4,34} &= \dfrac{T}{x_{7}} \text{c}\epsilon_{T} \text{c}\psi_{T} = w_{4,33}w_{4,30} \\
+w_{4,37} &= \dfrac{T}{x_{7}}\text{c}\epsilon_{T} \text{s}\psi_{T} = w_{4,33}w_{4,31} \\
+w_{4,38} &= \dfrac{T}{x_{7}} \text{s}\epsilon_{T} = w_{4,33}w_{4,29} \\
 \end{split}
 \end{align}
 
@@ -805,26 +809,45 @@ w_{4,37}\\
 
 \subsubsection{All Accelerations Combined}
 \label{subsubsec:allAcc}
-At this point the gravity accelerations are known in the inertial frame and the drag and thrust accelerations in the body frame. In order to get the final acceleration vector in the inertial frame, the drag and thrust accelerations have to be transformed from the body frame to the inertial frame using $\mathbb{T}_{\mathbf{IB}}$ resulting in \Cref{eq:DandTInertial}.
+At this point the gravity accelerations are known in the inertial frame and the drag and thrust accelerations in the body frame. To get the final acceleration vector in the inertial frame, the drag and thrust accelerations have to be transformed from the body frame to the inertial frame using $\mathbb{T}_{\mathbf{IB}}$ resulting in \Cref{eq:DandTInertial}.
 
 
 
-\begin{equation} \label{eq:DandTInertial}
+\begin{gather} \label{eq:DandTInertial}
 \mathbb{T}_{\mathbf{IB}}
 \begin{pmatrix}
 w_{4,36}\\
 w_{4,37}\\
 -w_{4,38}\\
 \end{pmatrix}
-=
+= \nonumber \\
 \left(
 \begin{matrix}
-w_{4,36}\left( c\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\lambda s\chi c\gamma \right)  +w_{4,37} \left( c\lambda s\delta s\chi -s\lambda c\chi\right)  -w_{4,38} \left( c\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\lambda s\chi s\gamma \right) \\
-w_{4,36} \left( s\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\lambda s\chi c\gamma \right) +w_{4,37} \left( s\lambda s\delta s\chi +c\lambda c\chi \right)  -w_{4,38} \left( s\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\lambda s\chi s\gamma \right) \\
-w_{4,36} \left( c\delta c\chi c\gamma +s\delta s\gamma\right) + w_{4,37} \left(  -c\delta s\chi \right) -w_{4,38} \left(  c\delta c\chi s\gamma -s\delta c\gamma \right) \\
+w_{4,36}\left( \text{c}\lambda\left(-\text{s}\delta \text{c}\chi \text{c}\gamma +\text{c}\delta \text{s}\gamma \right)-\text{s}\lambda \text{s}\chi \text{c}\gamma \right)  +w_{4,37} \left( \text{c}\lambda \text{s}\delta \text{s}\chi -\text{s}\lambda \text{c}\chi\right)  -w_{4,38} \left( \text{c}\lambda\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)-\text{s}\lambda \text{s}\chi \text{s}\gamma \right) \\
+w_{4,36} \left( \text{s}\lambda\left(-\text{s}\delta \text{c}\chi \text{c}\gamma +\text{c}\delta \text{s}\gamma \right)+\text{c}\lambda \text{s}\chi \text{c}\gamma \right) +w_{4,37} \left( \text{s}\lambda \text{s}\delta \text{s}\chi +\text{c}\lambda \text{c}\chi \right)  -w_{4,38} \left( \text{s}\lambda\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)+\text{c}\lambda \text{s}\chi \text{s}\gamma \right) \\
+w_{4,36} \left( \text{c}\delta \text{c}\chi \text{c}\gamma +\text{s}\delta \text{s}\gamma\right) + w_{4,37} \left(  -\text{c}\delta \text{s}\chi \right) -w_{4,38} \left(  \text{c}\delta \text{c}\chi \text{s}\gamma -\text{s}\delta \text{c}\gamma \right) \\
 \end{matrix}
-\right)\\
-\end{equation}
+\right)
+\end{gather}
+
+%\begin{equation} \label{eq:DandTInertial}
+%\begin{split}
+%\mathbb{T}_{\mathbf{IB}}
+%\begin{pmatrix}
+%w_{4,36}\\
+%w_{4,37}\\
+%-w_{4,38}\\
+%\end{pmatrix}
+%= \\
+%\left(
+%\begin{matrix}
+%w_{4,36}\left( \text{c}\lambda\left(-\text{s}\delta \text{c}\chi \text{c}\gamma +\text{c}\delta \text{s}\gamma \right)-\text{s}\lambda \text{s}\chi \text{c}\gamma \right)  +w_{4,37} \left( \text{c}\lambda \text{s}\delta \text{s}\chi -\text{s}\lambda \text{c}\chi\right)  -w_{4,38} \left( \text{c}\lambda\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)-\text{s}\lambda \text{s}\chi \text{s}\gamma \right) \\
+%w_{4,36} \left( \text{s}\lambda\left(-\text{s}\delta \text{c}\chi \text{c}\gamma +\text{c}\delta \text{s}\gamma \right)+\text{c}\lambda \text{s}\chi \text{c}\gamma \right) +w_{4,37} \left( \text{s}\lambda \text{s}\delta \text{s}\chi +\text{c}\lambda \text{c}\chi \right)  -w_{4,38} \left( \text{s}\lambda\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)+\text{c}\lambda \text{s}\chi \text{s}\gamma \right) \\
+%w_{4,36} \left( \text{c}\delta \text{c}\chi \text{c}\gamma +\text{s}\delta \text{s}\gamma\right) + w_{4,37} \left(  -\text{c}\delta \text{s}\chi \right) -w_{4,38} \left(  \text{c}\delta \text{c}\chi \text{s}\gamma -\text{s}\delta \text{c}\gamma \right) \\
+%\end{matrix}
+%\right)\\
+%\end{split}
+%\end{equation}
 
 %\begin{pmatrix}
 %a_{T,D_{I},x}\\
@@ -840,21 +863,21 @@ w_{4,36} \left( c\delta c\chi c\gamma +s\delta s\gamma\right) + w_{4,37} \left( 
 %\end{pmatrix}=
 %\left(
 %\begin{matrix}
-%w_{4,2} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)  + \dots  \\
-%w_{4,2} \left( s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)  + \dots \\
+%w_{4,2} \left( \text{c}\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-\text{s}\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)  + \dots  \\
+%w_{4,2} \left( \text{s}\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+\text{c}\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)  + \dots \\
 %w_{4,2} \left(cx_{12} cx_{13} cx_{14} +sx_{12} sx_{14}  \right)  - \dots \\
 %\end{matrix} \right.
 %\\
 %\begin{matrix}
-%\dotsc  w_{4,33} \left( c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13}\right)  - \dots \\
-%\dotsc  w_{4,33} \left( s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \right)  - \dots \\
+%\dotsc  w_{4,33} \left( \text{c}\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -\text{s}\left(x_{10}+x_{11}\right) cx_{13}\right)  - \dots \\
+%\dotsc  w_{4,33} \left( \text{s}\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +\text{c}\left(x_{10}+x_{11}\right) cx_{13} \right)  - \dots \\
 %\dotsc  w_{4,33} cx_{12} sx_{13} - \dots \\
 %\end{matrix}
 %\\
 %\left.
 %\begin{matrix}
-%\dotsc w_{4,34} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right) \\
-%\dotsc w_{4,34} \left(s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right) \\
+%\dotsc w_{4,34} \left( \text{c}\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-\text{s}\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right) \\
+%\dotsc w_{4,34} \left(\text{s}\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+\text{c}\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right) \\
 %\dotsc w_{4,34} \left( cx_{12} cx_{13} sx_{14} -sx_{12} cx_{14} \right) \\
 %\end{matrix}
 %\right)\\
@@ -864,39 +887,39 @@ Now including the gravity components as well, the (lengthy) expressions for $x'_
 
 \begin{equation} \label{eq:u4Com}
 \begin{split}
-x'_{4}= -\mu_{M}\dfrac{x_{1}}{x_{9}}&+w_{4,36}\left( c\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\lambda s\chi c\gamma \right)+ \dots \\
-& \dotsc  w_{4,37} \left( c\lambda s\delta s\chi -s\lambda c\chi\right)-\dots \\
-& \dotsc w_{4,38} \left( c\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\lambda s\chi s\gamma \right)
+x'_{4}= -\mu_{M}\dfrac{x_{1}}{x_{9}}&+w_{4,36}\left( \text{c}\lambda\left(-\text{s}\delta \text{c}\chi \text{c}\gamma +\text{c}\delta \text{s}\gamma \right)-\text{s}\lambda \text{s}\chi \text{c}\gamma \right)+ \dots \\
+& \dotsc  w_{4,37} \left( \text{c}\lambda \text{s}\delta \text{s}\chi -\text{s}\lambda \text{c}\chi\right)-\dots \\
+& \dotsc w_{4,38} \left( \text{c}\lambda\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)-\text{s}\lambda \text{s}\chi \text{s}\gamma \right)
 \end{split}
 \end{equation}
 
 \begin{equation} \label{eq:u5Com}
 \begin{split}
-x'_{5}= -\mu_{M}\dfrac{x_{2}}{x_{9}}&+w_{4,36} \left( s\lambda\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\lambda s\chi c\gamma \right)+ \dots \\
-& \dotsc w_{4,37} \left( s\lambda s\delta s\chi +c\lambda c\chi \right) - \dots \\
-& \dotsc w_{4,38} \left( s\lambda\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\lambda s\chi s\gamma \right)
+x'_{5}= -\mu_{M}\dfrac{x_{2}}{x_{9}}&+w_{4,36} \left( \text{s}\lambda\left(-\text{s}\delta \text{c}\chi \text{c}\gamma +\text{c}\delta \text{s}\gamma \right)+\text{c}\lambda \text{s}\chi \text{c}\gamma \right)+ \dots \\
+& \dotsc w_{4,37} \left( \text{s}\lambda \text{s}\delta \text{s}\chi +\text{c}\lambda \text{c}\chi \right) - \dots \\
+& \dotsc w_{4,38} \left( \text{s}\lambda\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)+\text{c}\lambda \text{s}\chi \text{s}\gamma \right)
 \end{split}
 \end{equation} 
 
 \begin{equation} \label{eq:u6Com}
 \begin{split}
-x'_{6}= -\mu_{M}\dfrac{x_{3}}{x_{9}}&+w_{4,36} \left( c\delta c\chi c\gamma +s\delta s\gamma\right) +  w_{4,37} \left(  -c\delta s\chi \right)  -w_{4,38} \left(  c\delta c\chi s\gamma -s\delta c\gamma \right)
+x'_{6}= -\mu_{M}\dfrac{x_{3}}{x_{9}}&+w_{4,36} \left( \text{c}\delta \text{c}\chi \text{c}\gamma +\text{s}\delta \text{s}\gamma\right) +  w_{4,37} \left(  -\text{c}\delta \text{s}\chi \right)  -w_{4,38} \left(  \text{c}\delta \text{c}\chi \text{s}\gamma -\text{s}\delta \text{c}\gamma \right)
 \end{split}
 \end{equation}
 
 %\begin{equation} \label{eq:u4Com}
 %\begin{split}
-%x'_{4}= -\mu_{M}\dfrac{x_{1}}{x_{9}}&+w_{4,2} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)+ \dots \\
-%& \dotsc  w_{4,33} \left( c\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -s\left(x_{10}+x_{11}\right) cx_{13}\right)-\dots \\
-%& \dotsc w_{4,34} \left( c\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-s\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right)
+%x'_{4}= -\mu_{M}\dfrac{x_{1}}{x_{9}}&+w_{4,2} \left( \text{c}\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)-\text{s}\left(x_{10}+x_{11}\right) sx_{13} cx_{14} \right)+ \dots \\
+%& \dotsc  w_{4,33} \left( \text{c}\left(x_{10}+x_{11}\right) sx_{12} sx_{13} -\text{s}\left(x_{10}+x_{11}\right) cx_{13}\right)-\dots \\
+%& \dotsc w_{4,34} \left( \text{c}\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)-\text{s}\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right)
 %\end{split}
 %\end{equation}
 %
 %\begin{equation} \label{eq:u5Com}
 %\begin{split}
-%x'_{5}= -\mu_{M}\dfrac{x_{2}}{x_{9}}&+w_{4,2} \left( s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)+ \dots \\
-%& \dotsc w_{4,33} \left( s\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +c\left(x_{10}+x_{11}\right) cx_{13} \right)- \dots \\
-%& \dotsc w_{4,34} \left(s\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+c\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right)
+%x'_{5}= -\mu_{M}\dfrac{x_{2}}{x_{9}}&+w_{4,2} \left( \text{s}\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} cx_{14} +cx_{12} sx_{14} \right)+\text{c}\left(x_{10}+x_{11}\right) sx_{13} cx_{14}  \right)+ \dots \\
+%& \dotsc w_{4,33} \left( \text{s}\left(x_{10}+x_{11}\right) sx_{12} sx_{13} +\text{c}\left(x_{10}+x_{11}\right) cx_{13} \right)- \dots \\
+%& \dotsc w_{4,34} \left(\text{s}\left(x_{10}+x_{11}\right)\left(-sx_{12} cx_{13} sx_{14} -cx_{12} cx_{14} \right)+\text{c}\left(x_{10}+x_{11}\right) sx_{13} sx_{14} \right)
 %\end{split}
 %\end{equation} 
 %
@@ -929,22 +952,22 @@ The auxiliary derivatives ($u = x'$) can now be defined as the collection of aux
 
 \begin{align} \label{eq:u4AuxF}
 \begin{split}
-w_{4,40} &= -s\delta c\chi_{G} = -w_{4,7}w_{4,23} \\
-w_{4,41} &= c\delta	s\gamma_{G} = w_{4,8}w_{4,24}\\
-w_{4,42} &= -s\lambda s\chi_{G} = -w_{4,5}w_{4,22}\\
-w_{4,43} &= -s\lambda c\chi_{G} = -w_{4,5}w_{4,23} \\
-w_{4,44} &= -c\delta c\gamma_{G} = -w_{4,8}w_{4,25} \\
-w_{4,45} &= w_{4,40} c\gamma_{G} = w_{4,40}w_{4,25} \\
+w_{4,40} &= -\text{s}\delta \text{c}\chi_{G} = -w_{4,7}w_{4,23} \\
+w_{4,41} &= \text{c}\delta	\text{s}\gamma_{G} = w_{4,8}w_{4,24}\\
+w_{4,42} &= -\text{s}\lambda \text{s}\chi_{G} = -w_{4,5}w_{4,22}\\
+w_{4,43} &= -\text{s}\lambda \text{c}\chi_{G} = -w_{4,5}w_{4,23} \\
+w_{4,44} &= -\text{c}\delta \text{c}\gamma_{G} = -w_{4,8}w_{4,25} \\
+w_{4,45} &= w_{4,40} \text{c}\gamma_{G} = w_{4,40}w_{4,25} \\
 \end{split}
 &
 \begin{split}
-w_{4,46} &= w_{4,42} c\gamma_{G} = w_{4,42}w_{4,25} \\
-w_{4,47} &= -w_{4,13} s\chi_{G} = -w_{4,13}w_{4,22} \\
-w_{4,48} &= w_{4,40} s\gamma_{G} = w_{4,40}w_{4,24} \\
-w_{4,49} &= w_{4,42} s\gamma_{G} = w_{4,42}w_{4,24} \\
-w_{4,50} &= c\lambda \left(w_{4,45}+w_{4,41} \right) + w_{4,46} = 
+w_{4,46} &= w_{4,42} \text{c}\gamma_{G} = w_{4,42}w_{4,25} \\
+w_{4,47} &= -w_{4,13} \text{s}\chi_{G} = -w_{4,13}w_{4,22} \\
+w_{4,48} &= w_{4,40} \text{s}\gamma_{G} = w_{4,40}w_{4,24} \\
+w_{4,49} &= w_{4,42} \text{s}\gamma_{G} = w_{4,42}w_{4,24} \\
+w_{4,50} &= \text{c}\lambda \left(w_{4,45}+w_{4,41} \right) + w_{4,46} = 
 w_{4,6}\left(w_{4,45}+w_{4,41} \right) + w_{4,46} \\
-w_{4,51} &= c\lambda \left(w_{4,48}+w_{4,44} \right) + w_{4,49} =
+w_{4,51} &= \text{c}\lambda \left(w_{4,48}+w_{4,44} \right) + w_{4,49} =
 w_{4,6}\left(w_{4,48}+w_{4,44} \right) + w_{4,49} \\
 w_{4,52} &= w_{4,39} +w_{4,36}w_{4,50}+w_{4,37}\left(w_{4,47}+w_{4,43}\right)-w_{4,38}w_{4,51} \\
 u_{4} &= w_{4,52} \\
@@ -953,10 +976,10 @@ u_{4} &= w_{4,52} \\
 
 \begin{align} \label{eq:u5AuxF}
 \begin{split}
-w_{5,2} &= c\lambda s\chi_{G} = w_{4,6}w_{4,22} \\
-w_{5,3} &= s\lambda \left(w_{4,45}+w_{4,41}\right)+w_{5,2} c\gamma_{G} = w_{4,5} \left(w_{4,45}+w_{4,41}\right) +w_{5,2} w_{4,25} \\
-w_{5,4} &= -w_{4,14} s\chi_{G}+c\lambda c\chi_{G} = -w_{4,14}w_{4,22}+w_{4,6}w_{4,23} \\
-w_{5,5} &= s\lambda \left(w_{4,48}+w_{4,44}\right) + w_{5,2} s\gamma_{G} = w_{4,5} \left(w_{4,48}+w_{4,44}\right)+w_{5,2}w_{4,24} \\
+w_{5,2} &= \text{c}\lambda \text{s}\chi_{G} = w_{4,6}w_{4,22} \\
+w_{5,3} &= \text{s}\lambda \left(w_{4,45}+w_{4,41}\right)+w_{5,2} \text{c}\gamma_{G} = w_{4,5} \left(w_{4,45}+w_{4,41}\right) +w_{5,2} w_{4,25} \\
+w_{5,4} &= -w_{4,14} \text{s}\chi_{G}+\text{c}\lambda \text{c}\chi_{G} = -w_{4,14}w_{4,22}+w_{4,6}w_{4,23} \\
+w_{5,5} &= \text{s}\lambda \left(w_{4,48}+w_{4,44}\right) + w_{5,2} \text{s}\gamma_{G} = w_{4,5} \left(w_{4,48}+w_{4,44}\right)+w_{5,2}w_{4,24} \\
 w_{5,6} &= w_{5,1} + w_{4,36}w_{5,3}+w_{4,37}w_{5,4}-w_{4,38}w_{5,5} \\
 u_{5} &= w_{5,6} \\
 \end{split}
@@ -964,14 +987,14 @@ u_{5} &= w_{5,6} \\
 
 \begin{align} \label{eq:u6AuxF}
 \begin{split}
-w_{6,2} &= s\delta s\gamma_{G} = w_{4,7}w_{4,24} \\
-w_{6,3} &= c\delta s\chi_{G} = w_{4,8}w_{4,22} \\
-w_{6,4} &= -s\delta c\gamma_{G} = -w_{4,7}w_{4,25} \\
+w_{6,2} &= \text{s}\delta \text{s}\gamma_{G} = w_{4,7}w_{4,24} \\
+w_{6,3} &= \text{c}\delta \text{s}\chi_{G} = w_{4,8}w_{4,22} \\
+w_{6,4} &= -\text{s}\delta \text{c}\gamma_{G} = -w_{4,7}w_{4,25} \\
 \end{split}
 &
 \begin{split}
-w_{6,5} &= -w_{4,44} c\chi_{G} +w_{6,2} = -w_{4,44}w_{4,23}+w_{6,2} \\
-w_{6,6} &= w_{4,41} c\chi_{G} + w_{6,4} = w_{4,41}w_{4,23}+w_{6,4} \\
+w_{6,5} &= -w_{4,44} \text{c}\chi_{G} +w_{6,2} = -w_{4,44}w_{4,23}+w_{6,2} \\
+w_{6,6} &= w_{4,41} \text{c}\chi_{G} + w_{6,4} = w_{4,41}w_{4,23}+w_{6,4} \\
 w_{6,7} &= w_{6,1} + w_{4,36}w_{6,5}-w_{4,37}w_{6,3}-w_{4,38}w_{6,6} \\
 u_{6} &= w_{6,7} \\
 \end{split}
@@ -1082,7 +1105,7 @@ This unit vector is also shown in \Cref{fig:cartesian_transformation_mooij1994mo
  \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\textwidth]{figures/reference_frames/cartesian_transformation_mooij1994motion.jpg}
-\caption{Definition of the body frame unit vectors based on the radius and ground velocity expressed in the inertial frame. \citep{mooij1994motion}}
+\caption{Definition of the body frame unit vectors based on the radius and ground velocity expressed in the inertial frame. Adapted from a figure by  \cite{mooij1994motion}.}
 \label{fig:cartesian_transformation_mooij1994motion}
 \end{figure}
 
@@ -1104,7 +1127,7 @@ Now $\mathbf{\hat{k}}$ can be computed by applying the \ac{RHR} to $\mathbf{\hat
 \noindent
 This leaves us with the unit vectors in the body frame defined as a function of the state in the inertial frame. 
 
-\subsubsection{Defining The Transformation Matrix Coefficients}
+\subsubsection{The Transformation Matrix Coefficients}
 \label{subsubsec:filTransMat}
 Now, if the acceleration in the x-direction in the body frame is multiplied with $\mathbf{\hat{i}}$ this $a_{x_{B}}$ is redefined in the inertial frame by providing a contribution in the x-, y- and z-direction. A similar multiplication can be done for $a_{y_{B}}$ and $\mathbf{\hat{j}}$, and $a_{z_{B}}$ and $\mathbf{\hat{k}}$. In matrix form this can be represented by \Cref{eq:firstFillEx}.
 
@@ -1205,7 +1228,6 @@ a_{z}\\
 \noindent
 In this case, all the auxiliary functions involving the rotation angles and the transformations ($w_{4,5}-w_{4,8}$, $w_{4,13}-w_{4,25}$, $w_{4,40}-w_{4,52}$, $w_{5,2}-w_{5,6}$ and $w_{6,2}-w_{6,7}$) can be discarded and instead new auxiliary functions have to be defined for the new transformation matrix. Please note that the discarded numbers will be reused but now with different function definitions for the second case!
 
-\noindent
 The first auxiliary functions can found by rewriting \Cref{eq:iHat} as a function of the non-discarded auxiliary functions described in \Cref{subsec:careq} and are shown in \Cref{eq:iHatAuxF}.
 
 \begin{align} \label{eq:iHatAuxF}
@@ -1281,14 +1303,14 @@ u_{6} &= w_{6,1}+w_{4,36}w_{4,15}+w_{4,37}w_{4,23}-w_{4,38}w_{4,40} \\
 
 
 
-\subsection{Spherical Equations}
+\subsection{spherical Equations}
 \label{subsec:sphereq}
-For the Spherical case, the initial conditions are readily provided. The position comes directly from the chosen launch site and the velocity comes from the initial \ac{MAV} conditions. These are all defined in the rotating frame as depicted in \Cref{fig:spherical_mooij1994motion} and \Cref{eq:spherVecDef}.
+For the spherical case, the initial conditions are readily provided. The position comes directly from the chosen launch site and the velocity comes from the initial \ac{MAV} conditions. These are all defined in the rotating frame as depicted in \Cref{fig:spherical_mooij1994motion} and \Cref{eq:spherVecDef}.
 
  \begin{figure}[H]
 \centering
 \includegraphics[width=0.35\textwidth]{figures/tsi/spherical_mooij1994motion.jpg}
-\caption{Definition of the Spherical coordinates \citep{mooij1994motion}.}
+\caption{Definition of the spherical coordinates \citep{mooij1994motion}.}
 \label{fig:spherical_mooij1994motion}
 \end{figure}
 
@@ -1356,7 +1378,7 @@ x'_{7} &= \dot{m}_{MAV} = -\dfrac{T}{g_{0}I_{sp}} \\
 \end{align}
 
 \noindent
-The derivatives given in \Cref{eq:spherVarD} are already provided by \cite{mooij1994motion} in the rotating frame and include the rotational effects. A simplified form can be seen in \Cref{eq:kinEqSp,eq:dynEqSp}. This is why it was decided to perform the \ac{TSI} for the Spherical case in the rotating frame. At the end of the integration the variables can then be transformed to the inertial frame for comparison.
+The derivatives given in \Cref{eq:spherVarD} are already provided by \cite{mooij1994motion} in the rotating frame and include the rotational effects. A simplified form can be seen in \Cref{eq:kinEqSp,eq:dynEqSp}. This is why it was decided to perform the \ac{TSI} for the spherical case in the rotating frame. At the end of the integration the variables can then be transformed to the inertial frame for comparison.
 
 \begin{align} \label{eq:kinEqSp}
 \begin{split}
@@ -1375,30 +1397,30 @@ x'_{11} &= \dot{\tau} = \dfrac{V_{G} s \chi_{G} c \gamma_{G}}{r c \delta} \\
 
 \begin{equation} \label{eq:dynEqSp}
 \begin{split}
-x'_{15} &= \dot{V}_{G} =  \Omega_{M}^{2} r c\delta \left(s\gamma_{G}c\delta-c\gamma_{G}s\delta c\chi_{G}\right)+\dfrac{Tc\psi_{T}c\epsilon_{T}}{m}-\dfrac{D}{m}-\dfrac{\mu_{M}}{r^{2}}s\gamma_{G} \\
-x'_{14} &= \dot{\gamma}_{G} = 2\Omega_{M}c\delta s\chi_{G} + \dfrac{V_{G}}{r}c\gamma_{G}+\dfrac{\Omega_{M}^{2}r c\delta}{V_{G}}\left(c\delta c\gamma_{G}+s\gamma_{G} s\delta c\chi_{G}\right)+\dfrac{T s\epsilon_{T}}{V_{G}m}-\dfrac{\mu_{M}}{V_{G}r^{2}}c\gamma_{G} \\
-x'_{13} &= \dot{\chi}_{G} = 2 \Omega_{M} \left(s\delta-\dfrac{c\delta s\gamma_{G} c\chi_{G}}{c \gamma_{G}}\right)+\dfrac{V_{G}}{r}c\gamma_{G}\dfrac{s\delta}{c \delta}s\chi_{G}+\dfrac{\Omega_{M}^{2}r c\delta s\delta s\chi_{G}}{V_{G}c\gamma_{G}}+\dfrac{T s\psi_{T}c\epsilon_{T}}{V_{G}m c\gamma_{G}} \\
+x'_{15} &= \dot{V}_{G} =  \Omega_{M}^{2} r \text{c}\delta \left(\text{s}\gamma_{G}\text{c}\delta-\text{c}\gamma_{G}\text{s}\delta \text{c}\chi_{G}\right)+\dfrac{T\text{c}\psi_{T}\text{c}\epsilon_{T}}{m}-\dfrac{D}{m}-\dfrac{\mu_{M}}{r^{2}}\text{s}\gamma_{G} \\
+x'_{14} &= \dot{\gamma}_{G} = 2\Omega_{M}\text{c}\delta \text{s}\chi_{G} + \dfrac{V_{G}}{r}\text{c}\gamma_{G}+\dfrac{\Omega_{M}^{2}r \text{c}\delta}{V_{G}}\left(\text{c}\delta \text{c}\gamma_{G}+\text{s}\gamma_{G} \text{s}\delta \text{c}\chi_{G}\right)+\dfrac{T \text{s}\epsilon_{T}}{V_{G}m}-\dfrac{\mu_{M}}{V_{G}r^{2}}\text{c}\gamma_{G} \\
+x'_{13} &= \dot{\chi}_{G} = 2 \Omega_{M} \left(\text{s}\delta-\dfrac{\text{c}\delta \text{s}\gamma_{G} \text{c}\chi_{G}}{c \gamma_{G}}\right)+\dfrac{V_{G}}{r}\text{c}\gamma_{G}\dfrac{\text{s}\delta}{c \delta}\text{s}\chi_{G}+\dfrac{\Omega_{M}^{2}r \text{c}\delta \text{s}\delta \text{s}\chi_{G}}{V_{G}\text{c}\gamma_{G}}+\dfrac{T \text{s}\psi_{T}\text{c}\epsilon_{T}}{V_{G}m \text{c}\gamma_{G}} \\
 \end{split}
 \end{equation}
 
 \noindent
-The last term in the first two expressions of \Cref{eq:dynEqSp} correspond to the acceleration contribution of the gravity. The first expression has a drag component and all three have a thrust component similar to the Cartesian cases. The rest of the terms come from the rotational effects. In this case it was decided to define the drag as an auxiliary equation $x_{27}$, which will be discussed in more detail later in this section.
+The last term in the first two expressions of \Cref{eq:dynEqSp} correspond to the acceleration contribution of the gravity. The first expression has a drag component and all three have a thrust component similar to the cartesian cases. The rest of the terms come from the rotational effects. In this case it was decided to define the drag as an auxiliary equation $x_{27}$, which will be discussed in more detail later in this section.
 
-\subsubsection{Auxiliary Functions For The Spherical Case}
+\subsubsection{Auxiliary Functions For The spherical Case}
 \label{subsubsec:auxFspher}
-Before the auxiliary functions for \Cref{eq:kinEqSp,eq:dynEqSp} can be written, some standard auxiliary functions have to be defined first. These include $\delta$, $\gamma_{G}$ and $\chi_{G}$. The numbering is based on early derivations and do not correspond to the definitions provided for the Cartesian cases! The angle auxiliary functions are defined in \Cref{eq:SpherAnglF}.
+Before the auxiliary functions for \Cref{eq:kinEqSp,eq:dynEqSp} can be written, some standard auxiliary functions have to be defined first. These include $\delta$, $\gamma_{G}$ and $\chi_{G}$. The numbering is based on early derivations and do not correspond to the definitions provided for the cartesian cases! The angle auxiliary functions are defined in \Cref{eq:SpherAnglF}.
 
 \begin{align} \label{eq:SpherAnglF}
 \begin{split}
-w_{4,4} &= s\delta = s x_{12}  \\
-w_{4,5} &= c\chi_{G} = c x_{13} \\
-w_{4,6} &= c\delta = c x_{12} \\
+w_{4,4} &= \text{s}\delta = s x_{12}  \\
+w_{4,5} &= \text{c}\chi_{G} = c x_{13} \\
+w_{4,6} &= \text{c}\delta = c x_{12} \\
 \end{split}
 &
 \begin{split}
-w_{4,7} &= s\gamma_{G} = s x_{14} \\
-w_{4,8} &= c\gamma_{G} = c x_{14} \\
-w_{4,9} &= s\chi_{G} = s x_{13} \\
+w_{4,7} &= \text{s}\gamma_{G} = s x_{14} \\
+w_{4,8} &= \text{c}\gamma_{G} = c x_{14} \\
+w_{4,9} &= \text{s}\chi_{G} = s x_{13} \\
 \end{split}
 \end{align}
 
@@ -1426,13 +1448,13 @@ Now the auxiliary functions can be written for $x'_{11} = u_{11}$ till $x'_{16} 
 
 \begin{align} \label{eq:auxF11}
 \begin{split}
-w_{11,0} &= V_{G}c\gamma_{G} = x_{15}w_{4,8} \\
+w_{11,0} &= V_{G}\text{c}\gamma_{G} = x_{15}w_{4,8} \\
 w_{11,1} &= \dfrac{w_{11,0}}{r} = \dfrac{w_{11,0}}{x_{16}} \\
 \end{split}
 &
 \begin{split}
-w_{11,2} &= w_{11,1}s\chi_{G} = w_{11,1}w_{4,9} \\
-w_{11,3} &= \dfrac{w_{11,2}}{c\delta} = \dfrac{w_{11,2}}{w_{4,6}} \\
+w_{11,2} &= w_{11,1}\text{s}\chi_{G} = w_{11,1}w_{4,9} \\
+w_{11,3} &= \dfrac{w_{11,2}}{\text{c}\delta} = \dfrac{w_{11,2}}{w_{4,6}} \\
 \end{split}
 &
 \begin{split}
@@ -1442,7 +1464,7 @@ u_{11} &= w_{11,3} \\
 
 \begin{align} \label{eq:auxF12}
 \begin{split}
-w_{12,1} &= w_{11,1}c\chi_{G} = w_{11,1}w_{4,5} \\
+w_{12,1} &= w_{11,1}\text{c}\chi_{G} = w_{11,1}w_{4,5} \\
 \end{split}
 &
 \begin{split}
@@ -1452,19 +1474,19 @@ u_{12} &= w_{12,1} \\
 
 \begin{align} \label{eq:auxF13}
 \begin{split}
-w_{13,0} &= s\psi_{T} c\epsilon_{T} = w_{4,28}w_{4,27} \\
-w_{13,1} &= s\gamma_{G} c\chi_{G} = w_{4,7}w_{4,5} \\
-w_{13,2} &= \Omega_{M}^{2} r c\delta = \Omega_{M}^{2} x_{16} w_{4,6} \\
-w_{13,3} &= w_{13,2} s\delta = w_{13,2}w_{4,4} \\
+w_{13,0} &= \text{s}\psi_{T} \text{c}\epsilon_{T} = w_{4,28}w_{4,27} \\
+w_{13,1} &= \text{s}\gamma_{G} \text{c}\chi_{G} = w_{4,7}w_{4,5} \\
+w_{13,2} &= \Omega_{M}^{2} r \text{c}\delta = \Omega_{M}^{2} x_{16} w_{4,6} \\
+w_{13,3} &= w_{13,2} \text{s}\delta = w_{13,2}w_{4,4} \\
 w_{13,4} &= \dfrac{T w_{13,0}}{x_{7}} = T w_{13,0} w_{4,32} \\
 \end{split}
 &
 \begin{split}
-w_{13,5} &= w_{13,3} s\chi_{G}+w_{13,4} = w_{13,3}w_{4,9}+w_{13,4} \\
+w_{13,5} &= w_{13,3} \text{s}\chi_{G}+w_{13,4} = w_{13,3}w_{4,9}+w_{13,4} \\
 w_{13,6} &= \dfrac{w_{13,5}}{V_{G}} = \dfrac{w_{13,5}}{x_{15}} \\
-w_{13,7} &= -2\Omega_{M} c\delta w_{13,1}+w_{13,6} = -2\Omega_{M}w_{4,6}w_{13,1}+w_{13,6} \\
-w_{13,8} &= \dfrac{w_{13,7}}{c\gamma_{G}} = \dfrac{w_{13,7}}{w_{4,8}} \\
-w_{13,9} &= \left(2\Omega_{M}+w_{11,3} \right) s\delta+w_{13,8} = \left(2\Omega_{M}+w_{11,3} \right)w_{4,4}+w_{13,8} \\
+w_{13,7} &= -2\Omega_{M} \text{c}\delta w_{13,1}+w_{13,6} = -2\Omega_{M}w_{4,6}w_{13,1}+w_{13,6} \\
+w_{13,8} &= \dfrac{w_{13,7}}{\text{c}\gamma_{G}} = \dfrac{w_{13,7}}{w_{4,8}} \\
+w_{13,9} &= \left(2\Omega_{M}+w_{11,3} \right) \text{s}\delta+w_{13,8} = \left(2\Omega_{M}+w_{11,3} \right)w_{4,4}+w_{13,8} \\
 \end{split}
 &
 \begin{split}
@@ -1474,9 +1496,9 @@ u_{13} &= w_{13,9} \\
 
 \begin{align} \label{eq:auxF14}
 \begin{split}
-w_{14,0} &= \dfrac{T s\epsilon_{T}}{x_{7}} = T w_{4,29}w_{4,32} \\
-w_{14,1} &= c\delta c\gamma_{G}+w_{13,1} s\delta = w_{4,6}w_{4,8}+w_{13,1}w_{4,4} \\
-w_{14,2} &= -\mu_{M} c\gamma_{G} = -\mu_{M}w_{4,8} \\
+w_{14,0} &= \dfrac{T \text{s}\epsilon_{T}}{x_{7}} = T w_{4,29}w_{4,32} \\
+w_{14,1} &= \text{c}\delta \text{c}\gamma_{G}+w_{13,1} \text{s}\delta = w_{4,6}w_{4,8}+w_{13,1}w_{4,4} \\
+w_{14,2} &= -\mu_{M} \text{c}\gamma_{G} = -\mu_{M}w_{4,8} \\
 w_{14,3} &= r^{2} = x_{16}^{2} \\
 w_{14,4} &= \dfrac{w_{14,2}}{w_{14,3}} \\
 \end{split}
@@ -1484,7 +1506,7 @@ w_{14,4} &= \dfrac{w_{14,2}}{w_{14,3}} \\
 \begin{split}
 w_{14,5} &= w_{14,4}+w_{13,2}w_{14,1}+w_{14,0} \\
 w_{14,6} &= \dfrac{w_{14,5}}{V_{G}} = \dfrac{w_{14,5}}{x_{15}} \\
-w_{14,7} &= 2\Omega_{M}c\delta s\chi_{G}+w_{11,1}+w_{14,6} = 2\Omega_{M}w_{4,6}w_{4,9}+w_{11,1}+w_{14,6} \\
+w_{14,7} &= 2\Omega_{M}\text{c}\delta \text{s}\chi_{G}+w_{11,1}+w_{14,6} = 2\Omega_{M}w_{4,6}w_{4,9}+w_{11,1}+w_{14,6} \\
 \\
 u_{14} &= w_{14,7} \\
 \end{split}
@@ -1492,15 +1514,15 @@ u_{14} &= w_{14,7} \\
 
 \begin{align} \label{eq:auxF15}
 \begin{split}
-w_{15,0} &= T c\psi_{T} c\epsilon_{T}-D = Tw_{4,26}w_{4,27}-x_{27} \\
+w_{15,0} &= T \text{c}\psi_{T} \text{c}\epsilon_{T}-D = Tw_{4,26}w_{4,27}-x_{27} \\
 w_{15,1} &= \dfrac{w_{15,0}}{m_{MAV}} = \dfrac{w_{15,0}}{x_{7}} \\
-w_{15,2} &= -\mu_{M} s\gamma_{G} = -\mu_{M}w_{4,7} \\
+w_{15,2} &= -\mu_{M} \text{s}\gamma_{G} = -\mu_{M}w_{4,7} \\
 w_{15,3} &= \dfrac{w_{15,2}}{w_{14,3}} \\
 \end{split}
 &
 \begin{split}
-w_{15,4} &= c\gamma_{G}c\chi_{G} = w_{4,8}w_{4,5} \\
-w_{15,5} &= s\gamma_{G} c\delta - w_{15,4} s\delta = w_{4,7}w_{4,6}-w_{15,4}w_{4,4} \\
+w_{15,4} &= \text{c}\gamma_{G}\text{c}\chi_{G} = w_{4,8}w_{4,5} \\
+w_{15,5} &= \text{s}\gamma_{G} \text{c}\delta - w_{15,4} \text{s}\delta = w_{4,7}w_{4,6}-w_{15,4}w_{4,4} \\
 w_{15,6} &= w_{13,2}w_{15,5}+w_{15,1}+w_{15,3} \\
 \\
 u_{15} &= w_{15,6} \\
@@ -1509,7 +1531,7 @@ u_{15} &= w_{15,6} \\
 
 \begin{align} \label{eq:auxF16}
 \begin{split}
-w_{16,1} &= V_{G} s\gamma_{G} = x_{15}w_{4,7} \\
+w_{16,1} &= V_{G} \text{s}\gamma_{G} = x_{15}w_{4,7} \\
 \end{split}
 &
 \begin{split}
@@ -1523,7 +1545,7 @@ u_{16} &= w_{16,1} \\
  
  \subsubsection{Drag Acceleration As Auxiliary Variable}
  \label{subsubsec:tsiDragAuxE}
-The drag acceleration for the Spherical case is similar to the Cartesian case, except this time it was chosen to use auxiliary variables to describe the drag. This means that auxiliary equations have to be defined as is shown in \Cref{eq:dragAux}. Also, this means that auxiliary derivatives are required for each of these equations. \Cref{eq:dragDerAux} shows the different derivatives corresponding to the equations.
+The drag acceleration for the spherical case is similar to the cartesian case, except this time it was chosen to use auxiliary variables to describe the drag. This means that auxiliary equations have to be defined as is shown in \Cref{eq:dragAux}. Also, this means that auxiliary derivatives are required for each of these equations. \Cref{eq:dragDerAux} shows the different derivatives corresponding to the equations.
  
  \begin{equation} \label{eq:dragAux}
 \begin{split}
@@ -1756,7 +1778,7 @@ Now all the information that is required to compute the recurrence relation for 
 
 \subsection{Recurrence Relations}
 \label{subsec:recRel}
-Now that all the auxiliary functions are known, they can be used to determine the required recurrence relations. In order to write these concisely and following the same convention as used by \cite{scott2008high}, a number of extra parameters will have to be introduced. The Taylor series coefficients can be written as described by \Cref{eq:tsCoeff}. Where $n$ is the variable number and $k$ is the order of the derivative.
+Now that all the auxiliary functions are known, they can be used to determine the required recurrence relations. To write these concisely and following the same convention as used by \cite{scott2008high}, a number of extra parameters will have to be introduced. The Taylor series coefficients can be written as described by \Cref{eq:tsCoeff}. Where $n$ is the variable number and $k$ is the order of the derivative.
 
 \begin{equation} \label{eq:tsCoeff}
 \dfrac{x_{n}^{\left(k\right)}}{k!} \triangleq X_{n}\left(k\right) \quad \text{where} \quad k \geq 1
@@ -1819,7 +1841,7 @@ As was mentioned before, all the auxiliary functions have been defined such that
 \end{equation}
 
 \noindent
-Checking the presented equations it can be seen that \Cref{eq:recRel6,eq:recRel7} are interdependent. This means that whenever a cosine recurrence relation has to be computed, the same recurrence relation for sine (with at least order $k-1$) has to be computed at the same time (and vice versa). All these equations have been derived by \cite{jorba2005software} using the general Leibniz rule for the $k^{th}$ derivative of a multiplication as portrayed in \Cref{eq:Leibniz}.
+Checking the presented equations it can be seen that \Cref{eq:recRel6,eq:recRel7} are interdependent. This means that whenever a cosine recurrence relation has to be computed, the same recurrence relation for sine (with at least order $k-1$) has to be computed at the same time (and vice versa). All these equations have been derived by \cite{jorba2005software} using the general Leibniz rule for the $k^{\text{th}}$ derivative of a multiplication as portrayed in \Cref{eq:Leibniz}.
 
 \begin{equation} \label{eq:Leibniz}
 \left(f_{n}g_{n}\right)^{\left( k\right)}=\displaystyle\sum_{j=0}^{k}

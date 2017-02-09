@@ -30,18 +30,18 @@
 \contentsline {subsection}{\numberline {5.1.2}Step-Size}{27}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Handling Model Sections}{28}{subsection.5.1.3}
 \contentsline {section}{\numberline {5.2}Associated Equations}{29}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Cartesian Equations, First Case}{29}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.1}Cartesian Equations, First Case}{30}{subsection.5.2.1}
 \contentsline {subsubsection}{Gravitational Acceleration}{31}{equation.5.2.16}
 \contentsline {subsubsection}{Transformation Angles}{31}{equation.5.2.18}
 \contentsline {subsubsection}{Drag Acceleration}{33}{equation.5.2.27}
 \contentsline {subsubsection}{Thrust Acceleration}{34}{equation.5.2.34}
 \contentsline {subsubsection}{All Accelerations Combined}{35}{equation.5.2.40}
-\contentsline {subsection}{\numberline {5.2.2}Cartesian Equations, Second Case}{37}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.2}Cartesian Equations, Second Case}{36}{subsection.5.2.2}
 \contentsline {subsubsection}{Body Frame Unit Vectors}{37}{equation.5.2.52}
-\contentsline {subsubsection}{Defining The Transformation Matrix Coefficients}{38}{equation.5.2.55}
+\contentsline {subsubsection}{The Transformation Matrix Coefficients}{38}{equation.5.2.55}
 \contentsline {subsubsection}{Auxiliary Functions For The Second Case}{38}{equation.5.2.57}
-\contentsline {subsection}{\numberline {5.2.3}Spherical Equations}{39}{subsection.5.2.3}
-\contentsline {subsubsection}{Auxiliary Functions For The Spherical Case}{40}{equation.5.2.67}
+\contentsline {subsection}{\numberline {5.2.3}spherical Equations}{39}{subsection.5.2.3}
+\contentsline {subsubsection}{Auxiliary Functions For The spherical Case}{40}{equation.5.2.67}
 \contentsline {subsubsection}{Drag Acceleration As Auxiliary Variable}{41}{equation.5.2.75}
 \contentsline {subsection}{\numberline {5.2.4}Recurrence Relations}{44}{subsection.5.2.4}
 \contentsline {chapter}{\numberline {6}Simulation Tool}{46}{chapter.6}
@@ -104,7 +104,7 @@
 \contentsline {section}{\numberline {9.2}Recommendations}{82}{section.9.2}
 \contentsline {subsection}{\numberline {9.2.1}Improvements to the Current \ac {TSI} Program}{82}{subsection.9.2.1}
 \contentsline {subsection}{\numberline {9.2.2}Extra Tests and Additions}{83}{subsection.9.2.2}
-\contentsline {chapter}{Bibliography}{84}{chapter*.107}
+\contentsline {chapter}{Bibliography}{84}{chapter*.106}
 \contentsline {chapter}{\numberline {A}Reference System Transformations}{87}{appendix.A}
 \contentsline {section}{\numberline {A.1}Required Reference Systems}{87}{section.A.1}
 \contentsline {subsection}{\numberline {A.1.1}\acl {MCI} \ac {RF} (I-frame)}{87}{subsection.A.1.1}
