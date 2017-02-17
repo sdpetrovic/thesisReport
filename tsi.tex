@@ -1303,7 +1303,7 @@ u_{6} &= w_{6,1}+w_{4,36}w_{4,15}+w_{4,37}w_{4,23}-w_{4,38}w_{4,40} \\
 
 
 
-\subsection{spherical Equations}
+\subsection{Spherical Equations}
 \label{subsec:sphereq}
 For the spherical case, the initial conditions are readily provided. The position comes directly from the chosen launch site and the velocity comes from the initial \ac{MAV} conditions. These are all defined in the rotating frame as depicted in \Cref{fig:spherical_mooij1994motion} and \Cref{eq:spherVecDef}.
 
@@ -1378,7 +1378,7 @@ x'_{7} &= \dot{m}_{MAV} = -\dfrac{T}{g_{0}I_{sp}} \\
 \end{align}
 
 \noindent
-The derivatives given in \Cref{eq:spherVarD} are already provided by \cite{mooij1994motion} in the rotating frame and include the rotational effects. A simplified form can be seen in \Cref{eq:kinEqSp,eq:dynEqSp}. This is why it was decided to perform the \ac{TSI} for the spherical case in the rotating frame. At the end of the integration the variables can then be transformed to the inertial frame for comparison.
+The derivatives given in \Cref{eq:spherVarD} are already provided by \cite{mooij1994motion} in the rotating frame and include the rotational effects. A simplified form can be seen in \Cref{eq:kinEqSp,eq:dynEqSp}. Because of the availability of this short notation it was decided to perform the \ac{TSI} for the spherical case in the rotating frame. At the end of the integration the variables can then be transformed to the inertial frame for comparison.
 
 \begin{align} \label{eq:kinEqSp}
 \begin{split}
@@ -1425,7 +1425,7 @@ w_{4,9} &= \text{s}\chi_{G} = s x_{13} \\
 \end{align}
 
 \noindent
-Some expression for the thrust are also required. These are similar to the equations defined in \Cref{subsubsec:tsiThrust} but are repeated in \Cref{eq:thrustAuxF} for convenience. 
+Some expressions for the thrust are also required. These are similar to the equations defined in \Cref{subsubsec:tsiThrust} but are repeated in \Cref{eq:thrustAuxF} for convenience. 
 
 \begin{align} \label{eq:thrustAuxF}
 \begin{split}
@@ -1497,7 +1497,8 @@ u_{13} &= w_{13,9} \\
 \begin{align} \label{eq:auxF14}
 \begin{split}
 w_{14,0} &= \dfrac{T \text{s}\epsilon_{T}}{x_{7}} = T w_{4,29}w_{4,32} \\
-w_{14,1} &= \text{c}\delta \text{c}\gamma_{G}+w_{13,1} \text{s}\delta = w_{4,6}w_{4,8}+w_{13,1}w_{4,4} \\
+w_{14,1} &= \text{c}\delta \text{c}\gamma_{G}+w_{13,1} \text{s}\delta \\
+&= w_{4,6}w_{4,8}+w_{13,1}w_{4,4} \\
 w_{14,2} &= -\mu_{M} \text{c}\gamma_{G} = -\mu_{M}w_{4,8} \\
 w_{14,3} &= r^{2} = x_{16}^{2} \\
 w_{14,4} &= \dfrac{w_{14,2}}{w_{14,3}} \\
@@ -1506,7 +1507,8 @@ w_{14,4} &= \dfrac{w_{14,2}}{w_{14,3}} \\
 \begin{split}
 w_{14,5} &= w_{14,4}+w_{13,2}w_{14,1}+w_{14,0} \\
 w_{14,6} &= \dfrac{w_{14,5}}{V_{G}} = \dfrac{w_{14,5}}{x_{15}} \\
-w_{14,7} &= 2\Omega_{M}\text{c}\delta \text{s}\chi_{G}+w_{11,1}+w_{14,6} = 2\Omega_{M}w_{4,6}w_{4,9}+w_{11,1}+w_{14,6} \\
+w_{14,7} &= 2\Omega_{M}\text{c}\delta \text{s}\chi_{G}+w_{11,1}+w_{14,6} \\
+&= 2\Omega_{M}w_{4,6}w_{4,9}+w_{11,1}+w_{14,6} \\
 \\
 u_{14} &= w_{14,7} \\
 \end{split}
@@ -1745,7 +1747,7 @@ u_{34,5}=0, &  \text{for }  x_{31} \geq 170.05
 \end{equation}
 
 \noindent
-Now all the information that is required to compute the recurrence relation for the drag is available. Please note that there is a certain order in which these equations have to be computed, since they depend on each other. \Cref{tab:calcOrderAuxEq} shows this order.
+Now all the information that is required to compute the recurrence relation for the drag is available. Please note that there is a certain order in which these equations have to be evaluated, since they depend on each other. \Cref{tab:calcOrderAuxEq} shows this order.
 
 
 \begin{table}[H]
@@ -1754,7 +1756,7 @@ Now all the information that is required to compute the recurrence relation for 
 \label{tab:calcOrderAuxEq}
 \begin{tabular}{|l|l||l|l||l|l||l|l|}
 \hline 
-\multicolumn{4}{c}{\textbf{Auxiliary equations}} & \multicolumn{4}{c}{\textbf{Auxiliary derivatives}} \\ \hline \hline
+\multicolumn{4}{|c||}{\textbf{Auxiliary equations}} & \multicolumn{4}{c|}{\textbf{Auxiliary derivatives}} \\ \hline \hline
 \textbf{Order} & $\mathbf{x_{n}}$ &\textbf{Order} & $\mathbf{x_{n}}$ & \textbf{Order} & $\mathbf{u_{n}}$ & \textbf{Order} & $\mathbf{u_{n}}$ \\ \hline 
 0 & $ x_{7} ,x_{11}, x_{12}, x_{13}, x_{14}, x_{15}, x_{16} $ & 4 & $ x_{32}$ & 7 & $ u_{7}, u_{11}, u_{12}, u_{16} $ & 11 & $ u_{32} $  \\ \hline
 1 & $ x_{31} $ & 5 & $ x_{29} $  & 8 & $u_{31}$ &  12 &  $ u_{29} $ \\ \hline
@@ -1841,7 +1843,7 @@ As was mentioned before, all the auxiliary functions have been defined such that
 \end{equation}
 
 \noindent
-Checking the presented equations it can be seen that \Cref{eq:recRel6,eq:recRel7} are interdependent. This means that whenever a cosine recurrence relation has to be computed, the same recurrence relation for sine (with at least order $k-1$) has to be computed at the same time (and vice versa). All these equations have been derived by \cite{jorba2005software} using the general Leibniz rule for the $k^{\text{th}}$ derivative of a multiplication as portrayed in \Cref{eq:Leibniz}.
+Checking the presented equations it can be seen that \Cref{eq:recRel6,eq:recRel7} are interdependent. This means that whenever a cosine recurrence relation has to be evaluated, the same recurrence relation for sine (with at least order $k-1$) has to be evaluated at the same time (and vice versa). All these equations have been derived by \cite{jorba2005software} using the general Leibniz rule for the $k^{\text{th}}$ derivative of a multiplication as portrayed in \Cref{eq:Leibniz}.
 
 \begin{equation} \label{eq:Leibniz}
 \left(f_{n}g_{n}\right)^{\left( k\right)}=\displaystyle\sum_{j=0}^{k}
