@@ -1,656 +1,364 @@
-%merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
-%Control: key (0)
-%Control: author (72) initials jnrlst
-%Control: editor formatted (1) identically to author
-%Control: production of article title (0) allowed
-%Control: page (0) single
-%Control: year (1) truncated
-%Control: production of eprint (0) enabled
-\begin{thebibliography}{57}%
-\makeatletter
-\providecommand \@ifxundefined [1]{%
- \@ifx{#1\undefined}
-}%
-\providecommand \@ifnum [1]{%
- \ifnum #1\expandafter \@firstoftwo
- \else \expandafter \@secondoftwo
- \fi
-}%
-\providecommand \@ifx [1]{%
- \ifx #1\expandafter \@firstoftwo
- \else \expandafter \@secondoftwo
- \fi
-}%
-\providecommand \natexlab [1]{#1}%
-\providecommand \textit  [1]{``#1''}%
-\providecommand \bibnamefont  [1]{#1}%
-\providecommand \bibfnamefont [1]{#1}%
-\providecommand \citenamefont [1]{#1}%
-\providecommand \href@noop [0]{\@secondoftwo}%
-\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
-\providecommand \@href[1]{\@@startlink{#1}\@@href}%
-\providecommand \@@href[1]{\endgroup#1\@@endlink}%
-\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
-  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
-\providecommand \@@startlink[1]{}%
-\providecommand \@@endlink[0]{}%
-\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
-\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
-\providecommand \urlprefix  [0]{URL }%
-\providecommand \Eprint [0]{\href }%
-\providecommand \doibase [0]{http://dx.doi.org/}%
-\providecommand \selectlanguage [0]{\@gobble}%
-\providecommand \bibinfo  [0]{\@secondoftwo}%
-\providecommand \bibfield  [0]{\@secondoftwo}%
-\providecommand \translation [1]{[#1]}%
-\providecommand \BibitemOpen [0]{}%
-\providecommand \bibitemStop [0]{}%
-\providecommand \bibitemNoStop [0]{.\EOS\space}%
-\providecommand \EOS [0]{\spacefactor3000\relax}%
-\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
-\let\auto@bib@innerbib\@empty
-%</preamble>
-\bibitem [{\citenamefont {Shotwell}\ \emph {et~al.}(2016)\citenamefont
-  {Shotwell}, \citenamefont {Benito}, \citenamefont {Karp},\ and\ \citenamefont
-  {Dankanich}}]{shotwell2016drivers}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Shotwell}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Benito}},
-  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Karp}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {J.}~\bibnamefont {Dankanich}},\ }\bibfield  {title}
-  {\textit {\bibinfo {title} {{Drivers, developments and options under
-  consideration for a Mars ascent vehicle}},}\ }in\ \href@noop {} {\emph
-  {\bibinfo {booktitle} {{Aerospace Conference, 2016 IEEE}}}}\ (\bibinfo
-  {organization} {IEEE},\ \bibinfo {year} {2016})\ pp.\ \bibinfo {pages}
-  {1--14}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Woolley}\ \emph {et~al.}(2011)\citenamefont
-  {Woolley}, \citenamefont {Mattingly}, \citenamefont {Riedel},\ and\
-  \citenamefont {Sturm}}]{woolley2011mars}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~C.}\ \bibnamefont
-  {Woolley}}, \bibinfo {author} {\bibfnamefont {R.~L.}\ \bibnamefont
-  {Mattingly}}, \bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont
-  {Riedel}}, \ and\ \bibinfo {author} {\bibfnamefont {E.~J.}\ \bibnamefont
-  {Sturm}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Mars Sample
-  Return - Launch and Detection Strategies for Orbital Rendezvous}},}\ }in\
-  \href {https://trs.jpl.nasa.gov/handle/2014/43851} {\emph {\bibinfo
-  {booktitle} {AAS/AIAA Astrodynamics Specialist Conference}}},\ Vol.\ \bibinfo
-  {volume} {142}\ (\bibinfo  {publisher} {Univelt, Inc.},\ \bibinfo {year}
-  {2011})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Vaughan}\ \emph {et~al.}(2016)\citenamefont
-  {Vaughan}, \citenamefont {Nakazono}, \citenamefont {Karp}, \citenamefont
-  {Shotwell}, \citenamefont {London}, \citenamefont {Mehra},\ and\
-  \citenamefont {Mechentel}}]{vaughan2016technology}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
-  {Vaughan}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Nakazono}},
-  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Karp}}, \bibinfo {author}
-  {\bibfnamefont {R.}~\bibnamefont {Shotwell}}, \bibinfo {author}
-  {\bibfnamefont {A.}~\bibnamefont {London}}, \bibinfo {author} {\bibfnamefont
-  {A.}~\bibnamefont {Mehra}}, \ and\ \bibinfo {author} {\bibfnamefont
-  {F.}~\bibnamefont {Mechentel}},\ }\bibfield  {title} {\textit {\bibinfo
-  {title} {{Technology development and design of liquid bi-propellant mars
-  ascent vehicles}},}\ }in\ \href@noop {} {\emph {\bibinfo {booktitle}
-  {{Aerospace Conference, 2016 IEEE}}}}\ (\bibinfo {organization} {IEEE},\
-  \bibinfo {year} {2016})\ pp.\ \bibinfo {pages} {1--12}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Fanning}\ and\ \citenamefont
-  {Pierson}(1996)}]{fanning1996model}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Fanning}}\ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
-  {Pierson}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{A model
-  comparison for optimal Mars ascent trajectories}},}\ }in\ \href {\doibase
-  10.1080/03052159608941122} {\emph {\bibinfo {booktitle} {Engineering
-  Optimization}}},\ Vol.~\bibinfo {volume} {26}\ (\bibinfo {year} {1996})\ pp.\
-  \bibinfo {pages} {271--285}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Desai}\ \emph {et~al.}(1998)\citenamefont {Desai},
-  \citenamefont {Braun}, \citenamefont {Engelund}, \citenamefont {Cheatwood},\
-  and\ \citenamefont {Kangas}}]{desai1998}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Desai}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Braun}},
-  \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Engelund}}, \bibinfo
-  {author} {\bibfnamefont {F.}~\bibnamefont {Cheatwood}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {J.}~\bibnamefont {Kangas}},\ }\bibfield  {title}
-  {\textit {\bibinfo {title} {{Mars Ascent Vehicle Flight Analysis}},}\ }in\
-  \href {\doibase 10.2514/6.1998-2850} {\emph {\bibinfo {booktitle} {7th
-  AIAA/ASME Joint Thermophysics and Heat Transfer Conference}}}\ (\bibinfo
-  {year} {1998})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Whitehead}(2004)}]{whitehead2004mars}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
-  {Whitehead}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Mars Ascent
-  Propulsion Trades with Trajectory Analysis}},}\ }in\ \href {\doibase
-  10.2514/6.2004-4069} {\emph {\bibinfo {booktitle} {40th AIAA/ASME/SAE/ASEE
-  Joint Propulsion Conference and Exhibit}}}\ (\bibinfo  {publisher} {American
-  Institude of Aeronautics and Astronautics},\ \bibinfo {year}
-  {2004})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Whitehead}(2005)}]{whitehead2005}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
-  {Whitehead}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Trajectory
-  analysis and staging trades for smaller Mars ascent vehicles}},}\ }in\ \href
-  {\doibase 10.2514/1.10680} {\emph {\bibinfo {booktitle} {Journal of
-  spacecraft and rockets}}},\ Vol.~\bibinfo {volume} {42}\ (\bibinfo {year}
-  {2005})\ pp.\ \bibinfo {pages} {1039--1046}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Di~Sotto}\ \emph {et~al.}(2007)\citenamefont
-  {Di~Sotto}, \citenamefont {Bastante},\ and\ \citenamefont
-  {Drai}}]{di2007system}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Di~Sotto}}, \bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
-  {Bastante}}, \ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Drai}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{System and GNC
-  concept for RendezVous into elliptical Orbit for Mars Sample Return
-  mission}},}\ }in\ \href {\doibase 10.2514/6.2007-6852} {\emph {\bibinfo
-  {booktitle} {AIAA Guidance, Navigation, and Control Conference and Exhibit,
-  Colorado}}}\ (\bibinfo {year} {2007})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Trinidad}\ \emph {et~al.}(2012)\citenamefont
-  {Trinidad}, \citenamefont {Zabrensky},\ and\ \citenamefont
-  {Sengupta}}]{trinidad2012}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Trinidad}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Zabrensky}},
-  \ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Sengupta}},\
-  }\bibfield  {title} {\textit {\bibinfo {title} {{Mars Ascent Vehicle system
-  studies and baseline conceptual design}},}\ }in\ \href
-  {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6187297} {\emph
-  {\bibinfo {booktitle} {Aerospace Conference, 2012 IEEE}}}\ (\bibinfo
-  {organization} {IEEE},\ \bibinfo {year} {2012})\ pp.\ \bibinfo {pages}
-  {1--13}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Dumont}(2015)}]{dumont2015design}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Dumont}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Design of a
-  Modular Transportation System for Future Lunar Robotic Missions}},}\ }in\
-  \href@noop {} {\emph {\bibinfo {booktitle} {30th ISTS/34th IEPC/6th NSAT
-  Joint Conference, Kobe, Japan}}}\ (\bibinfo {year} {2015})\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Woolley}(2015)}]{woolley2015simple}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~C.}\ \bibnamefont
-  {Woolley}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{A simple
-  analytic model for estimating Mars Ascent Vehicle mass and performance}},}\
-  }in\ \href@noop {} {\emph {\bibinfo {booktitle} {{2015 IEEE Aerospace
-  Conference}}}}\ (\bibinfo {year} {2015})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Benito}\ and\ \citenamefont
-  {Johnson}(2016)}]{benito2016trajectory}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Benito}}\ and\ \bibinfo {author} {\bibfnamefont {B.~J.}\ \bibnamefont
-  {Johnson}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Trajectory
-  Optimization for a Mars Ascent Vehicle}},}\ }in\ \href@noop {} {\emph
-  {\bibinfo {booktitle} {{AIAA/AAS Astrodynamics SPecialist Conference}}}}\
-  (\bibinfo {year} {2016})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont
-  {Montenbruck}(1992{\natexlab{a}})}]{montenbruck1992numerical}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
-  {Montenbruck}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Numerical
-  integration of orbital motion using Taylor series}},}\ }in\ \href@noop {}
-  {\emph {\bibinfo {booktitle} {Spaceflight mechanics}}}\ (\bibinfo {year}
-  {1992})\ pp.\ \bibinfo {pages} {1217--1231},\ \bibinfo {note} {available at
-  JPL library}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Scott}\ and\ \citenamefont
-  {Martini}(2008)}]{scott2008high}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont
-  {Scott}}\ and\ \bibinfo {author} {\bibfnamefont {M.~C.}\ \bibnamefont
-  {Martini}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{High speed
-  solution of spacecraft trajectory problems using Taylor series
-  integration}},}\ }in\ \href {\doibase 10.2514/6.2008-6957} {\emph {\bibinfo
-  {booktitle} {AIAA/AAS Astrodynamics Specialist Conference and Exhibit,
-  Honolulu, Hawaii}}}\ (\bibinfo {year} {2008})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Bergsma}\ and\ \citenamefont
-  {Mooij}(2016)}]{bergsma2016application}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Bergsma}}\ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Mooij}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Application of
-  Taylor-Series Integration to Reentry Problems with Wind}},}\ }in\ \href@noop
-  {} {\emph {\bibinfo {booktitle} {{Journal of Guidance, Control, and
-  Dynamics}}}}\ (\bibinfo  {publisher} {{American Institute of Aeronautics and
-  Astronautics}},\ \bibinfo {year} {2016})\ pp.\ \bibinfo {pages}
-  {2324--2335}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Whitehead}(1997)}]{whitehead1997}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Whitehead}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Mars ascent
-  propulsion options for small sample return vehicles}},}\ }in\ \href {\doibase
-  10.2514/6.1997-2950} {\emph {\bibinfo {booktitle} {33rd AIAA/ASME/SAE/ASEE
-  Joint Propulsion Conference and Exhibit}}}\ (\bibinfo  {publisher} {AIAA
-  Joint Propulsion Conference and Exhibit},\ \bibinfo {year}
-  {1997})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Guernsey}(1998)}]{guernsey1998}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~S.}\ \bibnamefont
-  {Guernsey}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Mars Ascent
-  Propulsion System (MAPS) Technology Program: Plans and Progress}},}\ }in\
-  \href {\doibase 10.2514/6.1998-3664} {\emph {\bibinfo {booktitle} {34th
-  AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit}}}\ (\bibinfo
-  {year} {1998})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Stone}(1999)}]{stone1999}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Stone}},\ }\href {http://www.slideshare.net/cliffordstone/rice-mars-nov99}
-  {\textit {\bibinfo {title} {{Rice Mars}},}\ }\bibinfo {howpublished}
-  {presentation/website} (\bibinfo {year} {1999}),\ \bibinfo {note} {[online
-  database], URL: http://www.slideshare.net/cliffordstone/rice-mars-nov99
-  [cited 25 October 2015]}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Stephenson}(2002)}]{stephenson2002}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
-  {Stephenson}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Mars ascent
-  vehicle - Concept development}},}\ }in\ \href {\doibase 10.2514/6.2002-4318}
-  {\emph {\bibinfo {booktitle} {38th Joint Propulsion Conference and Exhibit,
-  Indianapolos, Indiana}}},\ Vol.\ \bibinfo {volume} {4318}\ (\bibinfo
-  {publisher} {AIAA},\ \bibinfo {year} {2002})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Stephenson}\ and\ \citenamefont
-  {Willenberg}(2006)}]{stephenson2006}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~D.}\ \bibnamefont
-  {Stephenson}}\ and\ \bibinfo {author} {\bibfnamefont {H.~J.}\ \bibnamefont
-  {Willenberg}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Mars ascent
-  vehicle key elements of a Mars Sample Return mission}},}\ }in\ \href
-  {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1655737} {\emph
-  {\bibinfo {booktitle} {Aerospace Conference, 2006 IEEE}}}\ (\bibinfo
-  {organization} {IEEE},\ \bibinfo {year} {2006})\ p.~\bibinfo {pages}
-  {11}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Sengupta}\ \emph {et~al.}(2012)\citenamefont
-  {Sengupta}, \citenamefont {Kennett}, \citenamefont {Pauken}, \citenamefont
-  {Trinidad},\ and\ \citenamefont {Zabrensky}}]{sengupta2012}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Sengupta}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Kennett}},
-  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Pauken}}, \bibinfo
-  {author} {\bibfnamefont {M.}~\bibnamefont {Trinidad}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {E.}~\bibnamefont {Zabrensky}},\ }\bibfield  {title}
-  {\textit {\bibinfo {title} {{Systems Engineering and Technology
-  Considerations of a Mars Ascent Vehicle}},}\ }in\ \href
-  {http://trs-new.jpl.nasa.gov/dspace/bitstream/2014/43568/1/11-5008_A1b.pdf}
-  {\emph {\bibinfo {booktitle} {2011 IEEE Aerospace Conference}}}\ (\bibinfo
-  {year} {2012})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Mungas}\ \emph {et~al.}(2012)\citenamefont {Mungas},
-  \citenamefont {Fisher}, \citenamefont {Vozoff},\ and\ \citenamefont
-  {Villa}}]{mungas2012}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
-  {Mungas}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Fisher}},
-  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Vozoff}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {M.}~\bibnamefont {Villa}},\ }\bibfield  {title}
-  {\textit {\bibinfo {title} {{NOFBX Single Stage to Orbit Mars Ascent
-  Vehicle}},}\ }in\ \href
-  {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6187299} {\emph
-  {\bibinfo {booktitle} {Aerospace Conference, 2012 IEEE}}}\ (\bibinfo
-  {organization} {IEEE},\ \bibinfo {year} {2012})\ pp.\ \bibinfo {pages}
-  {1--11}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {{Mars Program Planning Group}}(2012)}]{mppg2012}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibnamefont {{Mars Program Planning
-  Group}}},\ }\href
-  {http://www.nasa.gov/sites/default/files/files/MPPG-Summary_Report-9-25-12.pdf}
-  {\textit {\bibinfo {title} {{Summary of the Final Report}},}\ } (\bibinfo
-  {year} {2012}),\ \bibinfo {note} {[online database], URL:
-  http://www.nasa.gov//sites/default/files/files/ [cited 14 October
-  2015]}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Karp}\ \emph {et~al.}(2016)\citenamefont {Karp},
-  \citenamefont {Redmond}, \citenamefont {Nakazono}, \citenamefont {Vaughan},
-  \citenamefont {Shotwell}, \citenamefont {Story}, \citenamefont {Jackson},\
-  and\ \citenamefont {Young}}]{karp2016technology}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~C.}\ \bibnamefont
-  {Karp}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Redmond}},
-  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Nakazono}}, \bibinfo
-  {author} {\bibfnamefont {D.}~\bibnamefont {Vaughan}}, \bibinfo {author}
-  {\bibfnamefont {R.}~\bibnamefont {Shotwell}}, \bibinfo {author}
-  {\bibfnamefont {G.}~\bibnamefont {Story}}, \bibinfo {author} {\bibfnamefont
-  {D.}~\bibnamefont {Jackson}}, \ and\ \bibinfo {author} {\bibfnamefont
-  {D.}~\bibnamefont {Young}},\ }\bibfield  {title} {\textit {\bibinfo {title}
-  {{Technology development and design of a hybrid Mars ascent vehicle
-  concept}},}\ }in\ \href
-  {http://ieeexplore.ieee.org/abstract/document/7500835/} {\emph {\bibinfo
-  {booktitle} {{Aerospace Conference, 2016 IEEE}}}}\ (\bibinfo {organization}
-  {IEEE},\ \bibinfo {year} {2016})\ pp.\ \bibinfo {pages} {1--10}\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Shotwell}(2016)}]{shotwell2016history}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Shotwell}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{History of
-  Mars Ascent Vehicle development over the last 20 years}},}\ }in\ \href@noop
-  {} {\emph {\bibinfo {booktitle} {{Aerospace Conference, 2016 IEEE}}}}\
-  (\bibinfo {organization} {IEEE},\ \bibinfo {year} {2016})\ pp.\ \bibinfo
-  {pages} {1--11}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Mulder}\ \emph {et~al.}(2013)\citenamefont {Mulder},
-  \citenamefont {van Staveren}, \citenamefont {van~der Vaart}, \citenamefont
-  {de~Weerdt}, \citenamefont {in~'t Veld},\ and\ \citenamefont
-  {Mooij}}]{mooij2013fd}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Mulder}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {van
-  Staveren}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {van~der
-  Vaart}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {de~Weerdt}},
-  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {in~'t Veld}}, \ and\
-  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Mooij}},\ }\href@noop {}
-  {\textit {\bibinfo {title} {{Flight Dynamics, Lecture Notes}},}\ }\bibinfo
-  {howpublished} {Reader},\ \bibinfo {address} {Delft University of Technology}
-  (\bibinfo {year} {2013}),\ \bibinfo {note} {[Internal publication] Course:
-  Flight Dynamics}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Mooij}(1994)}]{mooij1994motion}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Mooij}},\ }\href
-  {http://repository.tudelft.nl/assets/uuid:e5fce5a0-7bce-4d8e-8249-e23293edbb55/LR-768.pdf}
-  {\emph {\bibinfo {title} {The motion of a vehicle in a planetary
-  atmosphere}}}\ (\bibinfo  {publisher} {Delft University Press},\ \bibinfo
-  {address} {Delft},\ \bibinfo {year} {1994})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Mooij}(2013)}]{mooij2013stat}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Mooij}},\ }\href@noop {} {\textit {\bibinfo {title}
-  {{AE3202-week1-lecture1b-Frames}},}\ }\bibinfo {howpublished} {Lecture
-  slides, Delft University of Technology} (\bibinfo {year} {2013}),\ \bibinfo
-  {note} {[Internal publication] Course: Flight Dynamics}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Noomen}(2013{\natexlab{a}})}]{noomen2013basic}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Noomen}},\ }\href@noop {} {\textit {\bibinfo {title}
-  {ae4-878.basics.v4-14},}\ }\bibinfo {howpublished} {Lecture slides, Delft
-  University of Technology} (\bibinfo {year} {2013}{\natexlab{a}}),\ \bibinfo
-  {note} {[Internal publication] Course: Mission Geometry and Orbit
-  Design}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Ho}\ \emph {et~al.}(2002)\citenamefont {Ho},
-  \citenamefont {Golshan},\ and\ \citenamefont {Kliore}}]{ho2002radio}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Ho}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Golshan}}, \ and\
-  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Kliore}},\ }\href
-  {http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20020039526.pdf} {\emph
-  {\bibinfo {title} {{Radio Wave Propagation Handbook for Communication on and
-  Around Mars}}}},\ \bibinfo {edition} {1st}\ ed.\ (\bibinfo  {publisher} {NASA
-  Jet Propulsion Laboratory, Pasadena, CA},\ \bibinfo {year} {2002})\ \bibinfo
-  {note} {handbook JPL Publication 02-5}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Williams}(2015)}]{williams2015}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
-  {Williams}},\ }\href
-  {http://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html} {\textit
-  {\bibinfo {title} {{Mars Fact Sheet}},}\ }\bibinfo {howpublished} {website}
-  (\bibinfo {year} {2015}),\ \bibinfo {note} {[online database], URL:
-  http://nssdc.gsfc.nasa.gov/planetary/ factsheet/marsfact.html [cited 1
-  November 2015]}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Justus}(1990)}]{justus1990mars}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Justus}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{A Mars Global
-  Reference Atmospheric Model (Mars-GRAM) for Mission Planning and
-  Analysis}},}\ }in\ \href {\doibase 10.2514/6.1990-4} {\emph {\bibinfo
-  {booktitle} {28th Aerospace Sciences Meeting, Reno, Nevada}}}\ (\bibinfo
-  {year} {1990})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Wakker}(2010{\natexlab{a}})}]{wakker2010}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
-  {Wakker}},\ }\href@noop {} {\textit {\bibinfo {title} {{Astrodynamics-II
-  Course AE4874, part 2}},}\ }\bibinfo {howpublished} {Reader},\ \bibinfo
-  {address} {Delft University of Technology} (\bibinfo {year}
-  {2010}{\natexlab{a}}),\ \bibinfo {note} {[Internal publication] Course:
-  Astrodynamics-II}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Hofsteenge}(2013)}]{hofsteenge2013}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Hofsteenge}},\ }\emph {\bibinfo {title} {{Computational Methods for the
-  Long-Term Propagation of Space Debris Orbits}}},\ \href
-  {http://repository.tudelft.nl/view/ir/uuid%3Aeee70164-4c99-470d-b8ee-5314ffcf63f8/}
-  {Master's thesis},\ \bibinfo  {school} {Delft University of Technology}
-  (\bibinfo {year} {2013})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Milani}\ and\ \citenamefont
-  {Nobili}(1987)}]{milani1987}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Milani}}\ and\ \bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
-  {Nobili}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Integration
-  error over very long time spans}},}\ }in\ \href {\doibase 10.1007/BF01234550}
-  {\emph {\bibinfo {booktitle} {Celestial mechanics}}},\ Vol.~\bibinfo {volume}
-  {43}\ (\bibinfo  {publisher} {Springer},\ \bibinfo {year} {1987})\ pp.\
-  \bibinfo {pages} {1--34}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Noomen}(2013{\natexlab{b}})}]{noomen2013int}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Noomen}},\ }\href@noop {} {\textit {\bibinfo {title}
-  {ae4-878.integrators.v4-3},}\ }\bibinfo {howpublished} {Lecture slides, Delft
-  University of Technology} (\bibinfo {year} {2013}{\natexlab{b}}),\ \bibinfo
-  {note} {[Internal publication] Course: Mission Geometry and Orbit
-  Design}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Deuflhard}\ \emph {et~al.}(1994)\citenamefont
-  {Deuflhard}, \citenamefont {Nowak},\ and\ \citenamefont
-  {Poehle}}]{deuflhard1994}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Deuflhard}}, \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont {Nowak}}, \
-  and\ \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont {Poehle}},\ }\href
-  {http://elib.zib.de/pub/elib/codelib/difex2/readme} {\textit {\bibinfo
-  {title} {{Program Descriptions of ELib}},}\ } (\bibinfo {year} {1994}),\
-  \bibinfo {note} {[online database], URL:
-  http://elib.zib.de/pub/elib/codelib/difex2/readme [cited 30 October
-  2015]}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Montenbruck}(1992{\natexlab{b}})}]{montenbruck1992}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
-  {Montenbruck}},\ }\bibfield  {title} {\textit {\bibinfo {title} {Numerical
-  integration methods for orbital motion},}\ }in\ \href@noop {} {\emph
-  {\bibinfo {booktitle} {Celestial Mechanics and Dynamical Astronomy}}},\
-  Vol.~\bibinfo {volume} {53}\ (\bibinfo {year} {1992})\ pp.\ \bibinfo {pages}
-  {59--69}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Dormand}\ \emph {et~al.}(1987)\citenamefont
-  {Dormand}, \citenamefont {El-Mikkawy},\ and\ \citenamefont
-  {Prince}}]{dormand1987}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Dormand}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {El-Mikkawy}},
-  \ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Prince}},\
-  }\bibfield  {title} {\textit {\bibinfo {title} {{Families of
-  Runge-Kutta-Nystrom formulae}},}\ }in\ \href
-  {http://imajna.oxfordjournals.org/content/7/2/235.full.pdf+html} {\emph
-  {\bibinfo {booktitle} {IMA Journal of Numerical Analysis}}},\ Vol.~\bibinfo
-  {volume} {7}\ (\bibinfo {year} {1987})\ pp.\ \bibinfo {pages}
-  {235--250}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Fehlberg}(1969)}]{fehlberg1969}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Fehlberg}},\ }\href
-  {http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19690021375.pdf} {\emph
-  {\bibinfo {title} {{Low order classical Runge-Kutta formulas with stepwise
-  control}}}},\ \bibinfo {type} {Tech. Rep.}\ (\bibinfo  {institution}
-  {Marschall Space Flight Center, NASA},\ \bibinfo {year} {1969})\ \bibinfo
-  {note} {: NASA TR R-316}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Fehlberg}(1968)}]{fehlberg1968}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Fehlberg}},\ }\href
-  {http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19680027281.pdf} {\emph
-  {\bibinfo {title} {{Classical fifth-, sixth-, seventh-, and eighth-order
-  Runge-Kutta formulas with stepsize control}}}},\ \bibinfo {type} {Tech.
-  Rep.}\ (\bibinfo  {institution} {Marschall Space Flight Center, NASA},\
-  \bibinfo {year} {1968})\ \bibinfo {note} {: NASA TR R-287}\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Meijaard}(1991)}]{meijaard1991}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Meijaard}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{A Comparison
-  of Numerical Integration Methods with a View to Fast Simulation of Mechanical
-  Dynamical Systems}},}\ }in\ \href
-  {http://link.springer.com/chapter/10.1007/978-3-642-76159-1_17} {\emph
-  {\bibinfo {booktitle} {Real-Time Integration Methods for Mechanical System
-  Simulation}}},\ Vol.~\bibinfo {volume} {69}\ (\bibinfo  {publisher}
-  {Springer},\ \bibinfo {year} {1991})\ pp.\ \bibinfo {pages}
-  {329--343}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Berry}(2004)}]{berry2004}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~M.}\ \bibnamefont
-  {Berry}},\ }\emph {\bibinfo {title} {{A Variable-Step Double-Integration
-  Multi-Step Integrator}}},\ \href
-  {http://scholar.lib.vt.edu/theses/available/etd-04282004-071227/unrestricted/dissertation.pdf}
-  {Ph.D. thesis},\ \bibinfo  {school} {Virginia Polytechnic Institute and State
-  University} (\bibinfo {year} {2004})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Ramos}\ and\ \citenamefont
-  {Vigo-Aguiar}(2005)}]{ramos2005}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
-  {Ramos}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Vigo-Aguiar}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Variable
-  stepsize St{\"o}rmer-Cowell methods}},}\ }in\ \href {\doibase
-  10.1016/j.mcm.2005.09.011} {\emph {\bibinfo {booktitle} {Mathematical and
-  Computer Modelling}}},\ Vol.~\bibinfo {volume} {42}\ (\bibinfo {year}
-  {2005})\ pp.\ \bibinfo {pages} {837--846}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Dirkx}\ \emph {et~al.}(2016)\citenamefont {Dirkx},
-  \citenamefont {Kumar}, \citenamefont {Doornbos}, \citenamefont {Mooij},\ and\
-  \citenamefont {Noomen}}]{dirkx2016tudat}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
-  {Dirkx}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Kumar}},
-  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Doornbos}}, \bibinfo
-  {author} {\bibfnamefont {E.}~\bibnamefont {Mooij}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {R.}~\bibnamefont {Noomen}},\ }\href {tudat.tudelft.nl}
-  {\textit {\bibinfo {title} {{TUDAT}},}\ } (\bibinfo {year} {2016}),\ \bibinfo
-  {note} {[online database], URL: tudat.tudelft.nl [cited 8 March
-  2016]}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Prince}\ and\ \citenamefont
-  {Dormand}(1981)}]{prince1981high}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Prince}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Dormand}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{High order
-  embedded Runge-Kutta formulae}},}\ }in\ \href@noop {} {\emph {\bibinfo
-  {booktitle} {{Journal of Computational and Applied Mathematics}}}},\
-  Vol.~\bibinfo {volume} {7}\ (\bibinfo  {publisher} {Elsevier},\ \bibinfo
-  {year} {1981})\ pp.\ \bibinfo {pages} {67--75}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Weeks}\ and\ \citenamefont
-  {Thrasher}(2007)}]{weeks2007comparison}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Weeks}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
-  {Thrasher}},\ }\bibfield  {title} {\textit {\bibinfo {title} {{Comparison of
-  Fixed and Variable Time Step Trajectory Integration Methods for Cislunar
-  Trajectories}},}\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {{AAS/AIAA
-  Space Flight Mechanics Meeting}}}}\ (\bibinfo {year} {2007})\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Bergsma}(2015)}]{bergsma2015application}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~C.~W.}\
-  \bibnamefont {Bergsma}},\ }\emph {\bibinfo {title} {{Application of Taylor
-  Series Integration to Reentry Problems}}},\ \href@noop {} {Master's thesis},\
-  \bibinfo  {school} {Delft University of Technology} (\bibinfo {year}
-  {2015})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Jorba}\ and\ \citenamefont
-  {Zou}(2005)}]{jorba2005software}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Jorba}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Zou}},\
-  }\bibfield  {title} {\textit {\bibinfo {title} {{A Software Package for the
-  Numerical Integration of ODEs by Means of High-Order Taylor Methods}},}\ }in\
-  \href {\doibase 10.1080/10586458.2005.10128904} {\emph {\bibinfo {booktitle}
-  {Experimental Mathematics}}},\ Vol.~\bibinfo {volume} {14}\ (\bibinfo
-  {publisher} {Taylor \& Francis},\ \bibinfo {year} {2005})\ pp.\ \bibinfo
-  {pages} {99--117}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Justh}\ and\ \citenamefont
-  {Justus}(2008)}]{justus2008utilizing}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~L.}\ \bibnamefont
-  {Justh}}\ and\ \bibinfo {author} {\bibfnamefont {C.~G.}\ \bibnamefont
-  {Justus}},\ }\href
-  {https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-1-PB.pdf?sequence=1}
-  {\textit {\bibinfo {title} {{Utilizing Mars global reference atmospheric
-  model (Mars-GRAM 2005) to evaluate entry probe mission sites}},}\ }\bibinfo
-  {howpublished} {Presentation} (\bibinfo {year} {2008}),\ \bibinfo {note}
-  {[online database], URL:
-  https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-1-PB.pdf?sequence=1
-  [cited 10 December 2015]}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Bachman}(2014)}]{bachman2014naif}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
-  {Bachman}},\ }\href
-  {http://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/frames.html}
-  {\textit {\bibinfo {title} {{NAIF SPICE toolkit hypertext documentation,
-  required reading documents, reference frames}},}\ }\bibinfo {howpublished}
-  {website} (\bibinfo {year} {2014}),\ \bibinfo {note} {[online database], URL:
-  http://naif.jpl.nasa.gov/pub/naif/ [cited 18 December 2015]}\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {del Rio}(2008)}]{diaz2008generic}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont
-  {del Rio}},\ }\href
-  {http://naif.jpl.nasa.gov/pub/naif/VEX/kernels/fk/RSSD0002.TF} {\textit
-  {\bibinfo {title} {{Generic frame definition Kernel file for ESA planetary
-  missions}},}\ } (\bibinfo {year} {2008}),\ \bibinfo {note} {[online
-  database], URL: http://naif.jpl.nasa.gov/pub/naif/VEX/kernels/fk/RSSD0002.TF
-  [cited 8 December 2015]}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Archinal}\ \emph {et~al.}(2011)\citenamefont
-  {Archinal}, \citenamefont {Ahearn}, \citenamefont {Bowell}, \citenamefont
-  {Conrad}, \citenamefont {Consolmagno}, \citenamefont {Courtin}, \citenamefont
-  {Fukushima}, \citenamefont {Hestroffer}, \citenamefont {Hilton},
-  \citenamefont {Krasinsky} \emph {et~al.}}]{archinal2011report}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~A.}\ \bibnamefont
-  {Archinal}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ahearn}},
-  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Bowell}}, \bibinfo
-  {author} {\bibfnamefont {A.}~\bibnamefont {Conrad}}, \bibinfo {author}
-  {\bibfnamefont {G.~J.}\ \bibnamefont {Consolmagno}}, \bibinfo {author}
-  {\bibfnamefont {R.}~\bibnamefont {Courtin}}, \bibinfo {author} {\bibfnamefont
-  {T.}~\bibnamefont {Fukushima}}, \bibinfo {author} {\bibfnamefont
-  {D.}~\bibnamefont {Hestroffer}}, \bibinfo {author} {\bibfnamefont {J.~L.}\
-  \bibnamefont {Hilton}}, \bibinfo {author} {\bibfnamefont {G.~A.}\
-  \bibnamefont {Krasinsky}},  \emph {et~al.},\ }\bibfield  {title} {\textit
-  {\bibinfo {title} {{Report of the IAU working group on cartographic
-  coordinates and rotational elements: 2009}},}\ }in\ \href {\doibase
-  10.1007/s10569-010-9320-4} {\emph {\bibinfo {booktitle} {Celestial Mechanics
-  and Dynamical Astronomy}}},\ Vol.\ \bibinfo {volume} {109}\ (\bibinfo {year}
-  {2011})\ pp.\ \bibinfo {pages} {101--135}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Morton}(2003)}]{morton2003mapping}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
-  {Morton}},\ }\href
-  {https://books.google.com/books?hl=nl&lr=&id=-FbuqCH5h50C&oi=fnd&pg=PP2&dq=Mapping+Mars++Science,+Imagination,+and+the+Birth+of+a+World&ots=Fguf9tNipE&sig=cnZ-3RX05CZjo79Lh8gWPkkA_kw#v=onepage&q=AIRY&f=false}
-  {\emph {\bibinfo {title} {Mapping {M}ars: {S}cience, {I}magination, and the
-  {B}irth of a {W}orld}}},\ \bibinfo {edition} {1st}\ ed.\ (\bibinfo
-  {publisher} {Picador, New York},\ \bibinfo {year} {2003})\ \bibinfo {note}
-  {avaiable at JPL library}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Duxbury}\ \emph {et~al.}(2014)\citenamefont
-  {Duxbury}, \citenamefont {Christensen}, \citenamefont {Smith}, \citenamefont
-  {Neumann}, \citenamefont {Kirk}, \citenamefont {Caplinger}, \citenamefont
-  {Albee}, \citenamefont {Seregina}, \citenamefont {Neukum},\ and\
-  \citenamefont {Archinal}}]{duxbury2014location}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
-  {Duxbury}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Christensen}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Smith}},
-  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Neumann}}, \bibinfo
-  {author} {\bibfnamefont {R.}~\bibnamefont {Kirk}}, \bibinfo {author}
-  {\bibfnamefont {M.}~\bibnamefont {Caplinger}}, \bibinfo {author}
-  {\bibfnamefont {A.}~\bibnamefont {Albee}}, \bibinfo {author} {\bibfnamefont
-  {N.}~\bibnamefont {Seregina}}, \bibinfo {author} {\bibfnamefont
-  {G.}~\bibnamefont {Neukum}}, \ and\ \bibinfo {author} {\bibfnamefont
-  {B.}~\bibnamefont {Archinal}},\ }\bibfield  {title} {\textit {\bibinfo
-  {title} {{The location of Airy-0, the Mars prime meridian reference, from
+\begin{thebibliography}{}
+
+\bibitem[Akcasu \& Akcay, 2013]{akcasu2013}
+Akcasu, O.~E. \& Akcay, I. (2013).
+\newblock Solar time using gps technology.
+\newblock Lonestar Inventions, L.P., Austin, TX, U.S. Patent.
+\newblock Patent application, Docket No. WO 2013070518 A1, filed 2 Nov. 2012.
+
+\bibitem[Archinal et~al., 2011]{archinal2011report}
+Archinal, B.~A., Ahearn, M., Bowell, E., Conrad, A., Consolmagno, G.~J.,
+  Courtin, R., Fukushima, T., Hestroffer, D., Hilton, J.~L., Krasinsky, G.~A.,
+  et~al. (2011).
+\newblock {Report of the IAU working group on cartographic coordinates and
+  rotational elements: 2009}.
+\newblock In {\em Celestial Mechanics and Dynamical Astronomy}, volume 109
+  (pp.\ 101--135).
+
+\bibitem[Bachman, 2014]{bachman2014naif}
+Bachman, N. (2014).
+\newblock {NAIF SPICE toolkit hypertext documentation, required reading
+  documents, reference frames}.
+\newblock website.
+\newblock [online database], URL: http://naif.jpl.nasa.gov/pub/naif/ [cited 18
+  December 2015].
+
+\bibitem[Benito \& Johnson, 2016]{benito2016trajectory}
+Benito, J. \& Johnson, B.~J. (2016).
+\newblock {Trajectory Optimization for a Mars Ascent Vehicle}.
+\newblock In {\em {AIAA/AAS Astrodynamics SPecialist Conference}}.
+
+\bibitem[Bergsma \& Mooij, 2016]{bergsma2016application}
+Bergsma, M. \& Mooij, E. (2016).
+\newblock {Application of Taylor-Series Integration to Reentry Problems with
+  Wind}.
+\newblock In {\em {Journal of Guidance, Control, and Dynamics}}  (pp.\
+  2324--2335).: {American Institute of Aeronautics and Astronautics}.
+
+\bibitem[Bergsma, 2015]{bergsma2015application}
+Bergsma, M. C.~W. (2015).
+\newblock {Application of Taylor Series Integration to Reentry Problems}.
+\newblock Master's thesis, Delft University of Technology.
+
+\bibitem[Berry, 2004]{berry2004}
+Berry, M.~M. (2004).
+\newblock {\em {A Variable-Step Double-Integration Multi-Step Integrator}}.
+\newblock PhD thesis, Virginia Polytechnic Institute and State University.
+
+\bibitem[del Rio, 2008]{diaz2008generic}
+del Rio, J.~D. (2008).
+\newblock {Generic frame definition Kernel file for ESA planetary missions}.
+\newblock [online database], URL:
+  http://naif.jpl.nasa.gov/pub/naif/VEX/kernels/fk/RSSD0002.TF [cited 8
+  December 2015].
+
+\bibitem[Desai et~al., 1998]{desai1998}
+Desai, P., Braun, R., Engelund, W., Cheatwood, F., \& Kangas, J. (1998).
+\newblock {Mars Ascent Vehicle Flight Analysis}.
+\newblock In {\em 7th AIAA/ASME Joint Thermophysics and Heat Transfer
+  Conference}.
+
+\bibitem[Deuflhard et~al., 1994]{deuflhard1994}
+Deuflhard, P., Nowak, U., \& Poehle, U. (1994).
+\newblock {Program Descriptions of ELib}.
+\newblock [online database], URL:
+  http://elib.zib.de/pub/elib/codelib/difex2/readme [cited 30 October 2015].
+
+\bibitem[Di~Sotto et~al., 2007]{di2007system}
+Di~Sotto, E., Bastante, J.~C., \& Drai, R. (2007).
+\newblock {System and GNC concept for RendezVous into elliptical Orbit for Mars
+  Sample Return mission}.
+\newblock In {\em AIAA Guidance, Navigation, and Control Conference and
+  Exhibit, Colorado}.
+
+\bibitem[Dirkx et~al., 2016]{dirkx2016tudat}
+Dirkx, D., Kumar, K., Doornbos, E., Mooij, E., \& Noomen, R. (2016).
+\newblock {TUDAT}.
+\newblock [online database], URL: tudat.tudelft.nl [cited 8 March 2016].
+
+\bibitem[Dormand et~al., 1987]{dormand1987}
+Dormand, J., El-Mikkawy, M., \& Prince, P. (1987).
+\newblock {Families of Runge-Kutta-Nystrom formulae}.
+\newblock In {\em IMA Journal of Numerical Analysis}, volume~7  (pp.\
+  235--250).
+
+\bibitem[Dumont, 2015]{dumont2015design}
+Dumont, E. (2015).
+\newblock {Design of a Modular Transportation System for Future Lunar Robotic
+  Missions}.
+\newblock In {\em 30th ISTS/34th IEPC/6th NSAT Joint Conference, Kobe, Japan}.
+
+\bibitem[Duxbury et~al., 2014]{duxbury2014location}
+Duxbury, T., Christensen, P., Smith, D., Neumann, G., Kirk, R., Caplinger, M.,
+  Albee, A., Seregina, N., Neukum, G., \& Archinal, B. (2014).
+\newblock {The location of Airy-0, the Mars prime meridian reference, from
   stereo photogrammetric processing of THEMIS IR imaging and digital elevation
-  data}},}\ }in\ \href {\doibase 10.1002/2014JE004678} {\emph {\bibinfo
-  {booktitle} {Journal of Geophysical Research: Planets}}},\ Vol.\ \bibinfo
-  {volume} {119}\ (\bibinfo  {publisher} {John Wiley \& Sons},\ \bibinfo {year}
-  {2014})\ pp.\ \bibinfo {pages} {2471--2486}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Akcasu}\ and\ \citenamefont
-  {Akcay}(2013)}]{akcasu2013}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~E.}\ \bibnamefont
-  {Akcasu}}\ and\ \bibinfo {author} {\bibfnamefont {I.}~\bibnamefont {Akcay}},\
-  }\href {http://www.google.com/patents/WO2013070518A1?cl=en} {\textit
-  {\bibinfo {title} {Solar time using gps technology},}\ }\bibinfo
-  {howpublished} {Lonestar Inventions, L.P., Austin, TX, U.S. Patent} (\bibinfo
-  {year} {2013}),\ \bibinfo {note} {patent application, Docket No. WO
-  2013070518 A1, filed 2 Nov. 2012}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Wakker}(2010{\natexlab{b}})}]{wakker2010astro1}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
-  {Wakker}},\ }\href@noop {} {\textit {\bibinfo {title} {{Astrodynamics-I
-  Course AE4874, Part 1}},}\ }\bibinfo {howpublished} {Reader},\ \bibinfo
-  {address} {Delft University of Technology} (\bibinfo {year}
-  {2010}{\natexlab{b}}),\ \bibinfo {note} {[Internal publication] Course:
-  Astrodynamics I}\BibitemShut {NoStop}%
-\end{thebibliography}%
+  data}.
+\newblock In {\em Journal of Geophysical Research: Planets}, volume 119  (pp.\
+  2471--2486).: John Wiley \& Sons.
+
+\bibitem[Fanning \& Pierson, 1996]{fanning1996model}
+Fanning, J. \& Pierson, B. (1996).
+\newblock {A model comparison for optimal Mars ascent trajectories}.
+\newblock In {\em Engineering Optimization}, volume~26  (pp.\ 271--285).
+
+\bibitem[Fehlberg, 1968]{fehlberg1968}
+Fehlberg, E. (1968).
+\newblock {\em {Classical fifth-, sixth-, seventh-, and eighth-order
+  Runge-Kutta formulas with stepsize control}}.
+\newblock Technical report, Marschall Space Flight Center, NASA.
+\newblock : NASA TR R-287.
+
+\bibitem[Fehlberg, 1969]{fehlberg1969}
+Fehlberg, E. (1969).
+\newblock {\em {Low order classical Runge-Kutta formulas with stepwise
+  control}}.
+\newblock Technical report, Marschall Space Flight Center, NASA.
+\newblock : NASA TR R-316.
+
+\bibitem[Guernsey, 1998]{guernsey1998}
+Guernsey, C.~S. (1998).
+\newblock {Mars Ascent Propulsion System (MAPS) Technology Program: Plans and
+  Progress}.
+\newblock In {\em 34th AIAA/ASME/SAE/ASEE Joint Propulsion Conference and
+  Exhibit}.
+
+\bibitem[Ho et~al., 2002]{ho2002radio}
+Ho, C., Golshan, N., \& Kliore, A. (2002).
+\newblock {\em {Radio Wave Propagation Handbook for Communication on and Around
+  Mars}}.
+\newblock NASA Jet Propulsion Laboratory, Pasadena, CA, 1 edition.
+\newblock handbook JPL Publication 02-5.
+
+\bibitem[Hofsteenge, 2013]{hofsteenge2013}
+Hofsteenge, R. (2013).
+\newblock {Computational Methods for the Long-Term Propagation of Space Debris
+  Orbits}.
+\newblock Master's thesis, Delft University of Technology.
+
+\bibitem[Jorba \& Zou, 2005]{jorba2005software}
+Jorba, A. \& Zou, M. (2005).
+\newblock {A Software Package for the Numerical Integration of ODEs by Means of
+  High-Order Taylor Methods}.
+\newblock In {\em Experimental Mathematics}, volume~14  (pp.\ 99--117).: Taylor
+  \& Francis.
+
+\bibitem[Justh \& Justus, 2008]{justus2008utilizing}
+Justh, H.~L. \& Justus, C.~G. (2008).
+\newblock {Utilizing Mars global reference atmospheric model (Mars-GRAM 2005)
+  to evaluate entry probe mission sites}.
+\newblock Presentation.
+\newblock [online database], URL:
+  https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-1-PB.pdf?sequence=1
+  [cited 10 December 2015].
+
+\bibitem[Justus, 1990]{justus1990mars}
+Justus, C. (1990).
+\newblock {A Mars Global Reference Atmospheric Model (Mars-GRAM) for Mission
+  Planning and Analysis}.
+\newblock In {\em 28th Aerospace Sciences Meeting, Reno, Nevada}.
+
+\bibitem[Karp et~al., 2016]{karp2016technology}
+Karp, A.~C., Redmond, M., Nakazono, B., Vaughan, D., Shotwell, R., Story, G.,
+  Jackson, D., \& Young, D. (2016).
+\newblock {Technology development and design of a hybrid Mars ascent vehicle
+  concept}.
+\newblock In {\em {Aerospace Conference, 2016 IEEE}}  (pp.\ 1--10).: IEEE.
+
+\bibitem[{Mars Program Planning Group}, 2012]{mppg2012}
+{Mars Program Planning Group} (2012).
+\newblock {Summary of the Final Report}.
+\newblock [online database], URL:
+  http://www.nasa.gov//sites/default/files/files/ [cited 14 October 2015].
+
+\bibitem[Meijaard, 1991]{meijaard1991}
+Meijaard, J. (1991).
+\newblock {A Comparison of Numerical Integration Methods with a View to Fast
+  Simulation of Mechanical Dynamical Systems}.
+\newblock In {\em Real-Time Integration Methods for Mechanical System
+  Simulation}, volume~69  (pp.\ 329--343).: Springer.
+
+\bibitem[Milani \& Nobili, 1987]{milani1987}
+Milani, A. \& Nobili, A.~M. (1987).
+\newblock {Integration error over very long time spans}.
+\newblock In {\em Celestial mechanics}, volume~43  (pp.\ 1--34).: Springer.
+
+\bibitem[Montenbruck, 1992a]{montenbruck1992}
+Montenbruck, O. (1992a).
+\newblock Numerical integration methods for orbital motion.
+\newblock In {\em Celestial Mechanics and Dynamical Astronomy}, volume~53
+  (pp.\ 59--69).
+
+\bibitem[Montenbruck, 1992b]{montenbruck1992numerical}
+Montenbruck, O. (1992b).
+\newblock {Numerical integration of orbital motion using Taylor series}.
+\newblock In {\em Spaceflight mechanics}  (pp.\ 1217--1231).
+\newblock Available at JPL library.
+
+\bibitem[Mooij, 1994]{mooij1994motion}
+Mooij, E. (1994).
+\newblock {\em The motion of a vehicle in a planetary atmosphere}.
+\newblock Delft: Delft University Press.
+
+\bibitem[Mooij, 2013]{mooij2013stat}
+Mooij, E. (2013).
+\newblock {AE3202-week1-lecture1b-Frames}.
+\newblock Lecture slides, Delft University of Technology.
+\newblock [Internal publication] Course: Flight Dynamics.
+
+\bibitem[Morton, 2003]{morton2003mapping}
+Morton, O. (2003).
+\newblock {\em Mapping {M}ars: {S}cience, {I}magination, and the {B}irth of a
+  {W}orld}.
+\newblock Picador, New York, 1 edition.
+\newblock avaiable at JPL library.
+
+\bibitem[Mulder et~al., 2013]{mooij2013fd}
+Mulder, J., van Staveren, W., van~der Vaart, J., de~Weerdt, E., in~'t Veld, A.,
+  \& Mooij, E. (2013).
+\newblock {Flight Dynamics, Lecture Notes}.
+\newblock Reader, Delft University of Technology.
+\newblock [Internal publication] Course: Flight Dynamics.
+
+\bibitem[Mungas et~al., 2012]{mungas2012}
+Mungas, G., Fisher, D., Vozoff, J., \& Villa, M. (2012).
+\newblock {NOFBX Single Stage to Orbit Mars Ascent Vehicle}.
+\newblock In {\em Aerospace Conference, 2012 IEEE}  (pp.\ 1--11).: IEEE.
+
+\bibitem[Noomen, 2013a]{noomen2013basic}
+Noomen, R. (2013a).
+\newblock ae4-878.basics.v4-14.
+\newblock Lecture slides, Delft University of Technology.
+\newblock [Internal publication] Course: Mission Geometry and Orbit Design.
+
+\bibitem[Noomen, 2013b]{noomen2013int}
+Noomen, R. (2013b).
+\newblock ae4-878.integrators.v4-3.
+\newblock Lecture slides, Delft University of Technology.
+\newblock [Internal publication] Course: Mission Geometry and Orbit Design.
+
+\bibitem[Prince \& Dormand, 1981]{prince1981high}
+Prince, P. \& Dormand, J. (1981).
+\newblock {High order embedded Runge-Kutta formulae}.
+\newblock In {\em {Journal of Computational and Applied Mathematics}}, volume~7
+   (pp.\ 67--75).: Elsevier.
+
+\bibitem[Ramos \& Vigo-Aguiar, 2005]{ramos2005}
+Ramos, H. \& Vigo-Aguiar, J. (2005).
+\newblock {Variable stepsize St{\"o}rmer-Cowell methods}.
+\newblock In {\em Mathematical and Computer Modelling}, volume~42  (pp.\
+  837--846).
+
+\bibitem[Scott \& Martini, 2008]{scott2008high}
+Scott, J.~R. \& Martini, M.~C. (2008).
+\newblock {High speed solution of spacecraft trajectory problems using Taylor
+  series integration}.
+\newblock In {\em AIAA/AAS Astrodynamics Specialist Conference and Exhibit,
+  Honolulu, Hawaii}.
+
+\bibitem[Sengupta et~al., 2012]{sengupta2012}
+Sengupta, A., Kennett, A., Pauken, M., Trinidad, M., \& Zabrensky, E. (2012).
+\newblock {Systems Engineering and Technology Considerations of a Mars Ascent
+  Vehicle}.
+\newblock In {\em 2011 IEEE Aerospace Conference}.
+
+\bibitem[Shotwell, 2016]{shotwell2016history}
+Shotwell, R. (2016).
+\newblock {History of Mars Ascent Vehicle development over the last 20 years}.
+\newblock In {\em {Aerospace Conference, 2016 IEEE}}  (pp.\ 1--11).: IEEE.
+
+\bibitem[Shotwell et~al., 2016]{shotwell2016drivers}
+Shotwell, R., Benito, J., Karp, A., \& Dankanich, J. (2016).
+\newblock {Drivers, developments and options under consideration for a Mars
+  ascent vehicle}.
+\newblock In {\em {Aerospace Conference, 2016 IEEE}}  (pp.\ 1--14).: IEEE.
+
+\bibitem[Stephenson, 2002]{stephenson2002}
+Stephenson, D. (2002).
+\newblock {Mars ascent vehicle - Concept development}.
+\newblock In {\em 38th Joint Propulsion Conference and Exhibit, Indianapolos,
+  Indiana}, volume 4318: AIAA.
+
+\bibitem[Stephenson \& Willenberg, 2006]{stephenson2006}
+Stephenson, D.~D. \& Willenberg, H.~J. (2006).
+\newblock {Mars ascent vehicle key elements of a Mars Sample Return mission}.
+\newblock In {\em Aerospace Conference, 2006 IEEE}  (pp.\~11).: IEEE.
+
+\bibitem[Stone, 1999]{stone1999}
+Stone, C. (1999).
+\newblock {Rice Mars}.
+\newblock presentation/website.
+\newblock [online database], URL:
+  http://www.slideshare.net/cliffordstone/rice-mars-nov99 [cited 25 October
+  2015].
+
+\bibitem[Trinidad et~al., 2012]{trinidad2012}
+Trinidad, M., Zabrensky, E., \& Sengupta, A. (2012).
+\newblock {Mars Ascent Vehicle system studies and baseline conceptual design}.
+\newblock In {\em Aerospace Conference, 2012 IEEE}  (pp.\ 1--13).: IEEE.
+
+\bibitem[Vaughan et~al., 2016]{vaughan2016technology}
+Vaughan, D., Nakazono, B., Karp, A., Shotwell, R., London, A., Mehra, A., \&
+  Mechentel, F. (2016).
+\newblock {Technology development and design of liquid bi-propellant mars
+  ascent vehicles}.
+\newblock In {\em {Aerospace Conference, 2016 IEEE}}  (pp.\ 1--12).: IEEE.
+
+\bibitem[Wakker, 2010a]{wakker2010astro1}
+Wakker, K. (2010a).
+\newblock {Astrodynamics-I Course AE4874, Part 1}.
+\newblock Reader, Delft University of Technology.
+\newblock [Internal publication] Course: Astrodynamics I.
+
+\bibitem[Wakker, 2010b]{wakker2010}
+Wakker, K. (2010b).
+\newblock {Astrodynamics-II Course AE4874, part 2}.
+\newblock Reader, Delft University of Technology.
+\newblock [Internal publication] Course: Astrodynamics-II.
+
+\bibitem[Weeks \& Thrasher, 2007]{weeks2007comparison}
+Weeks, M. \& Thrasher, S. (2007).
+\newblock {Comparison of Fixed and Variable Time Step Trajectory Integration
+  Methods for Cislunar Trajectories}.
+\newblock In {\em {AAS/AIAA Space Flight Mechanics Meeting}}.
+
+\bibitem[Whitehead, 1997]{whitehead1997}
+Whitehead, J. (1997).
+\newblock {Mars ascent propulsion options for small sample return vehicles}.
+\newblock In {\em 33rd AIAA/ASME/SAE/ASEE Joint Propulsion Conference and
+  Exhibit}: AIAA Joint Propulsion Conference and Exhibit.
+
+\bibitem[Whitehead, 2004]{whitehead2004mars}
+Whitehead, J.~C. (2004).
+\newblock {Mars Ascent Propulsion Trades with Trajectory Analysis}.
+\newblock In {\em 40th AIAA/ASME/SAE/ASEE Joint Propulsion Conference and
+  Exhibit}: American Institude of Aeronautics and Astronautics.
+
+\bibitem[Whitehead, 2005]{whitehead2005}
+Whitehead, J.~C. (2005).
+\newblock {Trajectory analysis and staging trades for smaller Mars ascent
+  vehicles}.
+\newblock In {\em Journal of spacecraft and rockets}, volume~42  (pp.\
+  1039--1046).
+
+\bibitem[Williams, 2015]{williams2015}
+Williams, D. (2015).
+\newblock {Mars Fact Sheet}.
+\newblock website.
+\newblock [online database], URL: http://nssdc.gsfc.nasa.gov/planetary/
+  factsheet/marsfact.html [cited 1 November 2015].
+
+\bibitem[Woolley, 2015]{woolley2015simple}
+Woolley, R.~C. (2015).
+\newblock {A simple analytic model for estimating Mars Ascent Vehicle mass and
+  performance}.
+\newblock In {\em {2015 IEEE Aerospace Conference}}.
+
+\bibitem[Woolley et~al., 2011]{woolley2011mars}
+Woolley, R.~C., Mattingly, R.~L., Riedel, J.~E., \& Sturm, E.~J. (2011).
+\newblock {Mars Sample Return - Launch and Detection Strategies for Orbital
+  Rendezvous}.
+\newblock In {\em AAS/AIAA Astrodynamics Specialist Conference}, volume 142:
+  Univelt, Inc.
+
+\end{thebibliography}

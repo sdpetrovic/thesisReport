@@ -78,55 +78,55 @@
 \contentsline {subsection}{\numberline {8.1.1}Optimal Order}{61}{subsection.8.1.1}
 \contentsline {subsection}{\numberline {8.1.2}Comparison with Non-Rotating Mars}{62}{subsection.8.1.2}
 \contentsline {section}{\numberline {8.2}Error Tolerance}{64}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Comparison with \ac {RKF78}}{64}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Comparison With Non-Rotating Mars}{66}{subsection.8.2.2}
-\contentsline {section}{\numberline {8.3}Multiple Runs}{67}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Comparison with \ac {RKF78}}{67}{subsection.8.3.1}
-\contentsline {subsection}{\numberline {8.3.2}Comparison with Non-Rotating Mars}{68}{subsection.8.3.2}
-\contentsline {section}{\numberline {8.4}Launch Altitude}{69}{section.8.4}
-\contentsline {section}{\numberline {8.5}Launch Latitude}{72}{section.8.5}
-\contentsline {section}{\numberline {8.6}Launch Longitude}{73}{section.8.6}
-\contentsline {section}{\numberline {8.7}Flight-Path Angle}{75}{section.8.7}
-\contentsline {section}{\numberline {8.8}Heading Angle}{77}{section.8.8}
-\contentsline {chapter}{\numberline {9}Conclusions and Recommendations}{80}{chapter.9}
-\contentsline {section}{\numberline {9.1}Conclusions}{80}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Taylor Series as an Integrator}{80}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}\ac {TSI} Compared to \ac {RKF78}}{81}{subsection.9.1.2}
-\contentsline {subsection}{\numberline {9.1.3}Sensitivity Analysis}{81}{subsection.9.1.3}
-\contentsline {subsubsection}{Order}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Error Tolerance}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Multiple Runs}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Launch Altitude}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Launch Latitude}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Launch Longitude}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Flight-Path Angle}{82}{subsection.9.1.3}
-\contentsline {subsubsection}{Heading Angle}{83}{subsection.9.1.3}
-\contentsline {section}{\numberline {9.2}Recommendations}{83}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}Improvements to the Current \ac {TSI} Program}{83}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}Extra Tests and Additions}{84}{subsection.9.2.2}
-\contentsline {chapter}{Bibliography}{85}{chapter*.106}
-\contentsline {chapter}{\numberline {A}Reference System Transformations}{88}{appendix.A}
-\contentsline {section}{\numberline {A.1}Required Reference Systems}{88}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}\acl {MCI} \ac {RF} (I-frame)}{88}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {A.1.2}\acl {MCMF} \ac {RF} (R-frame)}{89}{subsection.A.1.2}
-\contentsline {subsection}{\numberline {A.1.3}Vertical \ac {RF} (V-frame)}{89}{subsection.A.1.3}
-\contentsline {subsection}{\numberline {A.1.4}\acl {BF} \ac {RF} (B-frame)}{90}{subsection.A.1.4}
-\contentsline {subsection}{\numberline {A.1.5}Propulsion \ac {RF} (P-frame)}{90}{subsection.A.1.5}
-\contentsline {section}{\numberline {A.2}Transformation Between Reference Frames}{91}{section.A.2}
-\contentsline {section}{\numberline {A.3}Transformation Between Different Coordinate Systems}{93}{section.A.3}
-\contentsline {subsection}{\numberline {A.3.1}Spherical and Cartesian}{93}{subsection.A.3.1}
-\contentsline {subsection}{\numberline {A.3.2}Keplerian and Cartesian}{94}{subsection.A.3.2}
-\contentsline {subsection}{\numberline {A.3.3}Spherical and Keplerian}{97}{subsection.A.3.3}
-\contentsline {subsection}{\numberline {A.3.4}Non-Singular Kepler Elements}{98}{subsection.A.3.4}
-\contentsline {chapter}{\numberline {B}Mars-\ac {GRAM} 2005 Input File}{99}{appendix.B}
-\contentsline {chapter}{\numberline {C}Atmospheric Data Fitting}{103}{appendix.C}
-\contentsline {section}{\numberline {C.1}Temperature}{103}{section.C.1}
-\contentsline {section}{\numberline {C.2}Density}{105}{section.C.2}
-\contentsline {chapter}{\numberline {D}All Recurrence Relations}{108}{appendix.D}
-\contentsline {section}{\numberline {D.1}First Cartesian Case: Euler Angles}{108}{section.D.1}
-\contentsline {section}{\numberline {D.2}Second Cartesian Case: Unit Vectors}{111}{section.D.2}
-\contentsline {section}{\numberline {D.3}Spherical Case}{113}{section.D.3}
-\contentsline {chapter}{\numberline {E}Nominal Case Input Values}{116}{appendix.E}
-\contentsline {section}{\numberline {E.1}Case 1}{117}{section.E.1}
-\contentsline {section}{\numberline {E.2}Case 2}{118}{section.E.2}
+\contentsline {subsection}{\numberline {8.2.1}Comparison with \ac {RKF78}}{65}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Comparison With Non-Rotating Mars}{67}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.3}Multiple Runs}{69}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Comparison with \ac {RKF78}}{69}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Comparison with Non-Rotating Mars}{69}{subsection.8.3.2}
+\contentsline {section}{\numberline {8.4}Launch Altitude}{70}{section.8.4}
+\contentsline {section}{\numberline {8.5}Launch Latitude}{73}{section.8.5}
+\contentsline {section}{\numberline {8.6}Launch Longitude}{75}{section.8.6}
+\contentsline {section}{\numberline {8.7}Flight-Path Angle}{76}{section.8.7}
+\contentsline {section}{\numberline {8.8}Heading Angle}{78}{section.8.8}
+\contentsline {chapter}{\numberline {9}Conclusions and Recommendations}{82}{chapter.9}
+\contentsline {section}{\numberline {9.1}Conclusions}{82}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Taylor Series as an Integrator}{82}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}\ac {TSI} Compared to \ac {RKF78}}{83}{subsection.9.1.2}
+\contentsline {subsection}{\numberline {9.1.3}Sensitivity Analysis}{83}{subsection.9.1.3}
+\contentsline {subsubsection}{Order}{84}{subsection.9.1.3}
+\contentsline {subsubsection}{Error Tolerance}{84}{subsection.9.1.3}
+\contentsline {subsubsection}{Multiple Runs}{84}{subsection.9.1.3}
+\contentsline {subsubsection}{Launch Altitude}{84}{subsection.9.1.3}
+\contentsline {subsubsection}{Launch Latitude}{84}{subsection.9.1.3}
+\contentsline {subsubsection}{Launch Longitude}{84}{subsection.9.1.3}
+\contentsline {subsubsection}{Flight-Path Angle}{84}{subsection.9.1.3}
+\contentsline {subsubsection}{Heading Angle}{85}{subsection.9.1.3}
+\contentsline {section}{\numberline {9.2}Recommendations}{85}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Improvements to the Current \ac {TSI} Program}{85}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Extra Tests and Additions}{86}{subsection.9.2.2}
+\contentsline {chapter}{Bibliography}{87}{chapter*.106}
+\contentsline {chapter}{\numberline {A}Reference System Transformations}{90}{appendix.A}
+\contentsline {section}{\numberline {A.1}Required Reference Systems}{90}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}\acl {MCI} \ac {RF} (I-frame)}{90}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}\acl {MCMF} \ac {RF} (R-frame)}{91}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {A.1.3}Vertical \ac {RF} (V-frame)}{91}{subsection.A.1.3}
+\contentsline {subsection}{\numberline {A.1.4}\acl {BF} \ac {RF} (B-frame)}{92}{subsection.A.1.4}
+\contentsline {subsection}{\numberline {A.1.5}Propulsion \ac {RF} (P-frame)}{92}{subsection.A.1.5}
+\contentsline {section}{\numberline {A.2}Transformation Between Reference Frames}{93}{section.A.2}
+\contentsline {section}{\numberline {A.3}Transformation Between Different Coordinate Systems}{95}{section.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Spherical and Cartesian}{95}{subsection.A.3.1}
+\contentsline {subsection}{\numberline {A.3.2}Keplerian and Cartesian}{96}{subsection.A.3.2}
+\contentsline {subsection}{\numberline {A.3.3}Spherical and Keplerian}{99}{subsection.A.3.3}
+\contentsline {subsection}{\numberline {A.3.4}Non-Singular Kepler Elements}{100}{subsection.A.3.4}
+\contentsline {chapter}{\numberline {B}Mars-\ac {GRAM} 2005 Input File}{101}{appendix.B}
+\contentsline {chapter}{\numberline {C}Atmospheric Data Fitting}{105}{appendix.C}
+\contentsline {section}{\numberline {C.1}Temperature}{105}{section.C.1}
+\contentsline {section}{\numberline {C.2}Density}{107}{section.C.2}
+\contentsline {chapter}{\numberline {D}All Recurrence Relations}{110}{appendix.D}
+\contentsline {section}{\numberline {D.1}First Cartesian Case: Euler Angles}{110}{section.D.1}
+\contentsline {section}{\numberline {D.2}Second Cartesian Case: Unit Vectors}{113}{section.D.2}
+\contentsline {section}{\numberline {D.3}Spherical Case}{115}{section.D.3}
+\contentsline {chapter}{\numberline {E}Nominal Case Input Values}{118}{appendix.E}
+\contentsline {section}{\numberline {E.1}Case 1}{119}{section.E.1}
+\contentsline {section}{\numberline {E.2}Case 2}{120}{section.E.2}
 \contentsfinish 

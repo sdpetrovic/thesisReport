@@ -51,7 +51,7 @@
 \fi
 \RequirePackage{metalogo}
 %\RequirePackage[numbers,sort&compress]{natbib}	% Change to author and year!
-\RequirePackage[round, sort]{natbib}
+\RequirePackage[round, sort&compress]{natbib}
 \RequirePackage{tikz}
 \RequirePackage[noindentafter]{titlesec}
 \RequirePackage{titletoc}
@@ -496,7 +496,8 @@
 \renewcommand*\labelitemiv{\color{title}\textperiodcentered}
 
 %% Use a custom bibliography style based on apsrev4-1.
-\bibliographystyle{tudelft-report}
+%\bibliographystyle{tudelft-report}
+
 
 %% Hyperlinks are cyan, except in print mode, when they are all black.
 \hypersetup{
