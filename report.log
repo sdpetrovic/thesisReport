@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.13)  20 FEB 2017 23:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.13)  21 FEB 2017 22:02
 entering extended mode
 **./report.tex
 (report.tex
@@ -3611,27 +3611,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
 [82
 
-] [83] [84] [85]
-Overfull \hbox (4.65831pt too wide) in paragraph at lines 102--103
-[]\T1/futs/m/n/10 Because [][] had to stop with
+] [83] [84]
+Overfull \hbox (2.16843pt too wide) in paragraph at lines 109--110
+[]\T1/futs/m/n/10 The cur-rent root-finding method was based on the root-findin
+g method
  []
 
-
-Overfull \hbox (11.41193pt too wide) in paragraph at lines 103--104
-[]
+[85]
+Overfull \hbox (1.69186pt too wide) in paragraph at lines 113--114
+[]\T1/futs/m/n/10 Currently,
  []
 
 Package acronym Info: Label `acro:PaGMO' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 114.
+although it is yet undefined on input line 124.
 Package acronym Info: Label `acro:SNOPT' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 114.
-
-Overfull \hbox (15.42787pt too wide) in paragraph at lines 116--117
-[]\T1/futs/m/n/10 A more ex-ten-sive sen-si-tiv-ity anal-y-sis could
- []
-
+although it is yet undefined on input line 124.
 ) (report.bbl [86]pdfTeX warning (ext4): destination with the same identifier (
 name{page.86}) has been already used, duplicate ignored
 <to be read again> 
@@ -4659,7 +4655,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 216.
 Here is how much of TeX's memory you used:
  30689 strings out of 493335
  579463 string characters out of 3139257
- 861114 words of memory out of 3000000
+ 862114 words of memory out of 3000000
  32451 multiletter control sequences out of 15000+200000
  200226 words of font info for 174 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -4679,7 +4675,7 @@ eX/fonts/type1/adobe/utopia/putb8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1
 /adobe/utopia/putbi8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/adobe/utopia
 /putr8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb><
 D:/Programs (slower)/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on report.pdf (143 pages, 5099803 bytes).
+Output written on report.pdf (143 pages, 5098933 bytes).
 PDF statistics:
  4057 PDF objects out of 4296 (max. 8388607)
  953 named destinations out of 1000 (max. 500000)
