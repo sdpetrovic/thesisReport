@@ -26,19 +26,19 @@ Bachman, N. (2014).
 \bibitem[Benito \& Johnson, 2016]{benito2016trajectory}
 Benito, J. \& Johnson, B.~J. (2016).
 \newblock {Trajectory Optimization for a Mars Ascent Vehicle}.
-\newblock In {\em {AIAA/AAS Astrodynamics SPecialist Conference}}.
-
-\bibitem[Bergsma \& Mooij, 2016]{bergsma2016application}
-Bergsma, M. \& Mooij, E. (2016).
-\newblock {Application of Taylor-Series Integration to Reentry Problems with
-  Wind}.
-\newblock In {\em {Journal of Guidance, Control, and Dynamics}}  (pp.\
-  2324--2335).: {American Institute of Aeronautics and Astronautics}.
+\newblock In {\em {AIAA/AAS Astrodynamics Specialist Conference}}.
 
 \bibitem[Bergsma, 2015]{bergsma2015application}
 Bergsma, M. C.~W. (2015).
 \newblock {Application of Taylor Series Integration to Reentry Problems}.
 \newblock Master's thesis, Delft University of Technology.
+
+\bibitem[Bergsma \& Mooij, 2016]{bergsma2016application}
+Bergsma, M. C.~W. \& Mooij, E. (2016).
+\newblock {Application of Taylor-Series Integration to Reentry Problems with
+  Wind}.
+\newblock In {\em {Journal of Guidance, Control, and Dynamics}}  (pp.\
+  2324--2335).: AIAA.
 
 \bibitem[Berry, 2004]{berry2004}
 Berry, M.~M. (2004).
@@ -57,12 +57,6 @@ Desai, P., Braun, R., Engelund, W., Cheatwood, F., \& Kangas, J. (1998).
 \newblock {Mars Ascent Vehicle Flight Analysis}.
 \newblock In {\em 7th AIAA/ASME Joint Thermophysics and Heat Transfer
   Conference}.
-
-\bibitem[Deuflhard et~al., 1994]{deuflhard1994}
-Deuflhard, P., Nowak, U., \& Poehle, U. (1994).
-\newblock {Program Descriptions of ELib}.
-\newblock [online database], URL:
-  http://elib.zib.de/pub/elib/codelib/difex2/readme [cited 30 October 2015].
 
 \bibitem[Di~Sotto et~al., 2007]{di2007system}
 Di~Sotto, E., Bastante, J.~C., \& Drai, R. (2007).
@@ -143,15 +137,6 @@ Jorba, A. \& Zou, M. (2005).
 \newblock In {\em Experimental Mathematics}, volume~14  (pp.\ 99--117).: Taylor
   \& Francis.
 
-\bibitem[Justh \& Justus, 2008]{justus2008utilizing}
-Justh, H.~L. \& Justus, C.~G. (2008).
-\newblock {Utilizing Mars global reference atmospheric model (Mars-GRAM 2005)
-  to evaluate entry probe mission sites}.
-\newblock Presentation.
-\newblock [online database], URL:
-  https://smartech.gatech.edu/bitstream/handle/1853/26375/34-186-1-PB.pdf?sequence=1
-  [cited 10 December 2015].
-
 \bibitem[Justus, 1990]{justus1990mars}
 Justus, C. (1990).
 \newblock {A Mars Global Reference Atmospheric Model (Mars-GRAM) for Mission
@@ -181,7 +166,7 @@ Meijaard, J. (1991).
 \bibitem[Milani \& Nobili, 1987]{milani1987}
 Milani, A. \& Nobili, A.~M. (1987).
 \newblock {Integration error over very long time spans}.
-\newblock In {\em Celestial mechanics}, volume~43  (pp.\ 1--34).: Springer.
+\newblock In {\em {Celestial Mechanics}}, volume~43  (pp.\ 1--34).: Springer.
 
 \bibitem[Montenbruck, 1992a]{montenbruck1992}
 Montenbruck, O. (1992a).
@@ -193,7 +178,6 @@ Montenbruck, O. (1992a).
 Montenbruck, O. (1992b).
 \newblock {Numerical integration of orbital motion using Taylor series}.
 \newblock In {\em Spaceflight mechanics}  (pp.\ 1217--1231).
-\newblock Available at JPL library.
 
 \bibitem[Mooij, 1994]{mooij1994motion}
 Mooij, E. (1994).
@@ -204,7 +188,7 @@ Mooij, E. (1994).
 Mooij, E. (2013).
 \newblock {AE3202-week1-lecture1b-Frames}.
 \newblock Lecture slides, Delft University of Technology.
-\newblock [Internal publication] Course: Flight Dynamics.
+\newblock Course: Flight Dynamics.
 
 \bibitem[Morton, 2003]{morton2003mapping}
 Morton, O. (2003).
@@ -218,7 +202,7 @@ Mulder, J., van Staveren, W., van~der Vaart, J., de~Weerdt, E., in~'t Veld, A.,
   \& Mooij, E. (2013).
 \newblock {Flight Dynamics, Lecture Notes}.
 \newblock Reader, Delft University of Technology.
-\newblock [Internal publication] Course: Flight Dynamics.
+\newblock Course: Flight Dynamics AE3202.
 
 \bibitem[Mungas et~al., 2012]{mungas2012}
 Mungas, G., Fisher, D., Vozoff, J., \& Villa, M. (2012).
@@ -229,7 +213,7 @@ Mungas, G., Fisher, D., Vozoff, J., \& Villa, M. (2012).
 Noomen, R. (2013a).
 \newblock ae4-878.basics.v4-14.
 \newblock Lecture slides, Delft University of Technology.
-\newblock [Internal publication] Course: Mission Geometry and Orbit Design.
+\newblock Course: Mission Geometry and Orbit Design.
 
 \bibitem[Noomen, 2013b]{noomen2013int}
 Noomen, R. (2013b).
@@ -274,7 +258,7 @@ Shotwell, R., Benito, J., Karp, A., \& Dankanich, J. (2016).
 \newblock In {\em {Aerospace Conference, 2016 IEEE}}  (pp.\ 1--14).: IEEE.
 
 \bibitem[Stephenson, 2002]{stephenson2002}
-Stephenson, D. (2002).
+Stephenson, D.~D. (2002).
 \newblock {Mars ascent vehicle - Concept development}.
 \newblock In {\em 38th Joint Propulsion Conference and Exhibit, Indianapolos,
   Indiana}, volume 4318: AIAA.
@@ -283,14 +267,6 @@ Stephenson, D. (2002).
 Stephenson, D.~D. \& Willenberg, H.~J. (2006).
 \newblock {Mars ascent vehicle key elements of a Mars Sample Return mission}.
 \newblock In {\em Aerospace Conference, 2006 IEEE}  (pp.\~11).: IEEE.
-
-\bibitem[Stone, 1999]{stone1999}
-Stone, C. (1999).
-\newblock {Rice Mars}.
-\newblock presentation/website.
-\newblock [online database], URL:
-  http://www.slideshare.net/cliffordstone/rice-mars-nov99 [cited 25 October
-  2015].
 
 \bibitem[Trinidad et~al., 2012]{trinidad2012}
 Trinidad, M., Zabrensky, E., \& Sengupta, A. (2012).
@@ -326,7 +302,7 @@ Weeks, M. \& Thrasher, S. (2007).
 Whitehead, J. (1997).
 \newblock {Mars ascent propulsion options for small sample return vehicles}.
 \newblock In {\em 33rd AIAA/ASME/SAE/ASEE Joint Propulsion Conference and
-  Exhibit}: AIAA Joint Propulsion Conference and Exhibit.
+  Exhibit}: AIAA.
 
 \bibitem[Whitehead, 2004]{whitehead2004mars}
 Whitehead, J.~C. (2004).

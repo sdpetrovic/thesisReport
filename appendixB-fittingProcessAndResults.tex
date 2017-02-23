@@ -24,8 +24,7 @@ Unfortunately, the fourth quarter of section 3 caused this section to not meet t
 \label{fig:temperatureDataSplit7}
 \end{figure}
 
-\noindent
-These sections all met the requirements and thus provided a proper fit to the data. This fit is shown in \Cref{fig:completePolyFitTempSplit7}.
+
 
 \begin{figure}[H]
 \centering
@@ -35,6 +34,9 @@ These sections all met the requirements and thus provided a proper fit to the da
 \end{figure}
 
 \noindent
+These sections all met the requirements and thus provided a proper fit to the data. This fit is shown in \Cref{fig:completePolyFitTempSplit7}.
+
+
 However, because fewer sections were preferred, an attempt was made to reduce the number of sections. Because of the inaccuracy in the Mars-\ac{GRAM} model close to the planet surface, it was decided to delete the outliers near the surface (section 1) and stretch the outcome of the second polynomial fit to the surface instead. Also, it turned out that section 4 and 5 could be combined in such a way that the requirements were still met. This reduced the number of sections from 7 to 5. The final fit was presented in \Cref{subsec:atmofuncfit} as well as the corresponding errors and polynomial coefficients.                                                                                      
 
 
@@ -51,18 +53,19 @@ For the density curve, because the data represents a logarithmic curve, initiall
 \label{fig:densityDataSplit2}
 \end{figure}
 
-\noindent
-However, the second section could not meet the requirements because of the initial part. This is why it was split into three sections as presented in \Cref{fig:densityDataSplit3}.
+
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8 \textwidth]{figures/software/densityDataSplit3.png}
+\includegraphics[width=0.7 \textwidth]{figures/software/densityDataSplit3.png}
 \caption{Three different density curve sections}
 \label{fig:densityDataSplit3}
 \end{figure}
 
 \noindent
-This did meet the error requirements and resulted in the fit as shown in \Cref{fig:completePolyFitDenSplit3} with section 1 being the lower part, section 2 the middle and section 3 the upper part.
+However, the second section could not meet the requirements because of the initial part. This is why it was split into three sections as presented in \Cref{fig:densityDataSplit3}. This did meet the error requirements and resulted in the fit as shown in \Cref{fig:completePolyFitDenSplit3} with section 1 being the lower part, section 2 the middle and section 3 the upper part. However, in this case the fit for section three resulted in an oscillating behaviour around the actual data which caused the density values to drop below zero as shown in \Cref{fig:section3PolyFitDen}. Since this is unrealistic, an exponential atmospheric fit for only the third section was attempted (also shown in \Cref{fig:section3PolyFitDen}) however, this resulted in the same behaviour as the attempt for the entire curve. Therefore, it was decided to try a different exponential approach which eventually resulted in the fit described in \Cref{subsec:atmofuncfit}.
+
+\Cref{fig:ExpAtmFitDenZoom} clearly shows that both the full exponential atmospheric fit and the polynomial fits were not a proper choice here. The figure shows the curved part of the curve.
 
 \begin{figure}[H]
 \centering
@@ -71,8 +74,7 @@ This did meet the error requirements and resulted in the fit as shown in \Cref{f
 \label{fig:completePolyFitDenSplit3}
 \end{figure}
 
-\noindent
-However, in this case the fit for section three resulted in an oscillating behaviour around the actual data which caused the density values to drop below zero as shown in \Cref{fig:section3PolyFitDen}. Since this is unrealistic, an exponential atmospheric fit for only the third section was attempted (also shown in \Cref{fig:section3PolyFitDen}) however, this resulted in the same behaviour as the attempt for the entire curve. Therefore, it was decided to try a different exponential approach which eventually resulted in the fit described in \Cref{subsec:atmofuncfit}. 
+ 
 
 \begin{figure}[H]
 \centering
@@ -81,8 +83,7 @@ However, in this case the fit for section three resulted in an oscillating behav
 \label{fig:section3PolyFitDen}
 \end{figure}
 
-\noindent
-\Cref{fig:ExpAtmFitDenZoom} clearly shows that both the full exponential atmospheric fit and the polynomial fits were not a proper choice here. The figure shows the curved part of the curve.
+
 
 \begin{figure}[H]
 \centering

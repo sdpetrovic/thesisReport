@@ -124,9 +124,9 @@
 \contentsline {section}{\numberline {C.2}Density}{107}{section.C.2}
 \contentsline {chapter}{\numberline {D}All Recurrence Relations}{110}{appendix.D}
 \contentsline {section}{\numberline {D.1}First Cartesian Case: Euler Angles}{110}{section.D.1}
-\contentsline {section}{\numberline {D.2}Second Cartesian Case: Unit Vectors}{113}{section.D.2}
+\contentsline {section}{\numberline {D.2}Second Cartesian Case: Unit Vectors}{112}{section.D.2}
 \contentsline {section}{\numberline {D.3}Spherical Case}{115}{section.D.3}
-\contentsline {chapter}{\numberline {E}Nominal Case Input Values}{118}{appendix.E}
-\contentsline {section}{\numberline {E.1}Case 1}{119}{section.E.1}
-\contentsline {section}{\numberline {E.2}Case 2}{120}{section.E.2}
+\contentsline {chapter}{\numberline {E}Nominal Case Input Values}{117}{appendix.E}
+\contentsline {section}{\numberline {E.1}Case 1}{118}{section.E.1}
+\contentsline {section}{\numberline {E.2}Case 2}{119}{section.E.2}
 \contentsfinish 

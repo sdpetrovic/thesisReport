@@ -239,7 +239,7 @@
 @Conference{benito2016trajectory,
   Title                    = {{Trajectory Optimization for a Mars Ascent Vehicle}},
   Author                   = {Joel Benito and Breanna J. Johnson},
-  Booktitle                = {{AIAA/AAS Astrodynamics SPecialist Conference}},
+  Booktitle                = {{AIAA/AAS Astrodynamics Specialist Conference}},
   Year                     = {2016},
 
   Owner                    = {Stacha},
@@ -256,18 +256,6 @@
   Timestamp                = {2016.11.10}
 }
 
-@InProceedings{bergsma2016application,
-  Title                    = {{Application of Taylor-Series Integration to Reentry Problems with Wind}},
-  Author                   = {Bergsma, MCW and Mooij, E},
-  Booktitle                = {{Journal of Guidance, Control, and Dynamics}},
-  Year                     = {2016},
-  Pages                    = {2324--2335},
-  Publisher                = {{American Institute of Aeronautics and Astronautics}},
-
-  Owner                    = {Stacha},
-  Timestamp                = {2016.11.16}
-}
-
 @MastersThesis{bergsma2015application,
   Title                    = {{Application of Taylor Series Integration to Reentry Problems}},
   Author                   = {M C W Bergsma},
@@ -277,6 +265,18 @@
 
   Owner                    = {Stacha},
   Timestamp                = {2016.08.12}
+}
+
+@InProceedings{bergsma2016application,
+  Title                    = {{Application of Taylor-Series Integration to Reentry Problems with Wind}},
+  Author                   = {Bergsma, M C W and Mooij, E},
+  Booktitle                = {{Journal of Guidance, Control, and Dynamics}},
+  Year                     = {2016},
+  Pages                    = {2324--2335},
+  Publisher                = {AIAA},
+
+  Owner                    = {Stacha},
+  Timestamp                = {2016.11.16}
 }
 
 @PhdThesis{berry2004,
@@ -1767,7 +1767,8 @@
   Pages                    = {1--10},
 
   Owner                    = {Stacha},
-  Timestamp                = {2016.11.18}
+  Timestamp                = {2016.11.18},
+  Url                      = {http://ieeexplore.ieee.org/abstract/document/7500835/}
 }
 
 @InProceedings{kechichian2000minimum,
@@ -2249,7 +2250,7 @@
 @InProceedings{milani1987,
   Title                    = {{Integration error over very long time spans}},
   Author                   = {Milani, Andrea and Nobili, Anna M},
-  Booktitle                = {Celestial mechanics},
+  Booktitle                = {{Celestial Mechanics}},
   Year                     = {1987},
   Month                    = {March},
   Number                   = {1},
@@ -2307,7 +2308,6 @@
   Author                   = {O. Montenbruck},
   Booktitle                = {Spaceflight mechanics},
   Year                     = {1992},
-  Note                     = {Available at JPL library},
   Pages                    = {1217--1231},
 
   Comment                  = {From the JPL library},
@@ -2361,7 +2361,7 @@
   Author                   = {E. Mooij},
   HowPublished             = {Lecture slides, Delft University of Technology},
   Month                    = {February},
-  Note                     = {[Internal publication] Course: Flight Dynamics},
+  Note                     = {Course: Flight Dynamics},
   Year                     = {2013},
 
   Owner                    = {Stacha},
@@ -2413,7 +2413,7 @@
   Author                   = {J.A. Mulder and W.H.J.J. van Staveren and J.C. van der Vaart and E. de Weerdt and A.C. in 't Veld and E. Mooij},
   HowPublished             = {Reader},
   Month                    = {February},
-  Note                     = {[Internal publication] Course: Flight Dynamics},
+  Note                     = {Course: Flight Dynamics AE3202},
   Year                     = {2013},
 
   Owner                    = {Stacha},
@@ -2558,7 +2558,7 @@
   Author                   = {R. Noomen},
   HowPublished             = {Lecture slides, Delft University of Technology},
   Month                    = {September},
-  Note                     = {[Internal publication] Course: Mission Geometry and Orbit Design},
+  Note                     = {Course: Mission Geometry and Orbit Design},
   Year                     = {2013},
 
   Owner                    = {Stacha},
@@ -3249,7 +3249,7 @@
 
 @Conference{stephenson2002,
   Title                    = {{Mars ascent vehicle - Concept development}},
-  Author                   = {D.D. Stephenson},
+  Author                   = {Stephenson, David D},
   Booktitle                = {38th Joint Propulsion Conference and Exhibit, Indianapolos, Indiana},
   Year                     = {2002},
   Publisher                = {AIAA},
@@ -3614,7 +3614,7 @@
   Booktitle                = {33rd AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit},
   Year                     = {1997},
   Month                    = {July},
-  Publisher                = {AIAA Joint Propulsion Conference and Exhibit},
+  Publisher                = {AIAA},
 
   Doi                      = {10.2514/6.1997-2950},
   Owner                    = {Stacha},

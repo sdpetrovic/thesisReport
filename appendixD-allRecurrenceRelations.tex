@@ -6,7 +6,7 @@ In this appendix, all the reduced auxiliary functions that form the complete rec
 \label{sec:firCartApp}
 The first Cartesian case requires a large number of reduced auxiliary functions. These are all provided in \Cref{tab:auxFunc1}. For each function, the number, the equations and the category is provided.
 
-
+{\small
 \begin{longtable}{|p{1.5cm}|l|p{2cm}|}
 \caption{Reduced auxiliary functions for the first Cartesian case}
 \label{tab:auxFunc1}
@@ -132,6 +132,7 @@ $W_{27,19}=$ & $ \frac{1}{2} S W_{27,18}W_{27,12} $ & Multiplication \\ \hline
 % $W_{•,•}=$ & $  $ & \\ \hline
  
 \end{longtable}
+}
 
 \noindent
 The complete recurrence relation for each of the auxiliary variables can now be written as a function of the reduced auxiliary functions. These are shown by \Cref{eq:allRecRel1} and hold for $k\geq 1$.
@@ -163,9 +164,9 @@ These equations are now all a function of the recurrence relations corresponding
 
 \section{Second Cartesian Case: Unit Vectors}
 \label{sec:secCartApp}
-The second Cartesian case is similar to the first one, however fewer reduced auxiliary functions are needed. These are all provided in \Cref{tab:auxFunc2}. For each function, the number, the equations and the category is provided. The numbers are not always the same as in the first case, so these should be read as completely new reduced auxiliary functions. In this case, $u4$, $u5$ and $u6$ are included in the table, because they were defined as recurrence multiplication relations.
+The second Cartesian case is similar to the first one, however fewer reduced auxiliary functions are needed. These are all provided in \Cref{tab:auxFunc2}. For each function, the number, the equations and the category is provided. The numbers are not always the same as in the first case, so these should be read as completely new reduced auxiliary functions. In this case, $u4$, $u5$ and $u6$ are included in the table, because they were defined as recurrence multiplication relations. The complete recurrence relation for each of the auxiliary variables can again be written as a function of the reduced auxiliary functions. These are shown by \Cref{eq:allRecRel2}.
 
-
+{\small
 \begin{longtable}{|p{1.5cm}|l|p{2cm}|}
 \caption{Reduced auxiliary functions for the second Cartesian case}
 \label{tab:auxFunc2}
@@ -267,10 +268,10 @@ $W_{27,19}=$ & $ \frac{1}{2} S W_{27,18}W_{27,12} $ & Multiplication \\ \hline
 % $W_{•,•}=$ & $  $ & \\ \hline
  
 \end{longtable}
+}
 
-\noindent
-The complete recurrence relation for each of the auxiliary variables can again be written as a function of the reduced auxiliary functions. These are shown by \Cref{eq:allRecRel2}.
 
+{\small
 \begin{align} \label{eq:allRecRel2}
 \begin{split}
 U_{1}\left(k\right)&=X_{4}\left(k\right)=\dfrac{U_{4}\left(k-1\right)}{k}\\
@@ -284,13 +285,14 @@ U_{8}\left(k\right)&=2W_{8,1}\left(k\right)+2W_{8,2}\left(k\right)+2W_{8,3}\left
 U_{9}\left(k\right)&=\dfrac{3}{2}W_{9,1}\left(k\right)\\
 \end{split}
 \end{align}
-
+}
 
 
 \section{Spherical Case}
 \label{sec:spherApp}
 Since the Spherical case is very different from the Cartesian cases, it comes with its own auxiliary functions. The reduced versions are shown in \Cref{tab:auxFunc3}.
 
+{\small
 \begin{longtable}{|p{1.5cm}|l|p{2cm}|}
 \caption{Reduced auxiliary functions for the Spherical case.}
 \label{tab:auxFunc3}
@@ -299,16 +301,16 @@ Since the Spherical case is very different from the Cartesian cases, it comes wi
 \hline
 \textbf{Auxiliary function} & \textbf{Equation} & \textbf{Category}  \\ \hline \hline
 \hline 
-$W_{4,4}=$ & $ s X_{12} $ & Sine \\ \hline 
-$W_{4,5}=$ & $ c X_{13} $ & Cosine \\ \hline 
-$W_{4,6}=$ & $ c X_{12} $ & Cosine \\ \hline 
-$W_{4,7}=$ & $ s X_{14} $ & Sine \\ \hline 
-$W_{4,8}=$ & $ c X_{14} $ & Cosine \\ \hline 
-$W_{4,9}=$ & $ s X_{13} $ & Sine \\ \hline 
-$W_{4,26}=$ & $ c \psi_{T} $ & Cosine \\ \hline 
-$W_{4,27}=$ & $ c \epsilon_{T} $ & Cosine \\ \hline 
-$W_{4,28}=$ & $ s \psi_{T} $ & Sine \\ \hline 
-$W_{4,29}=$ & $ s \epsilon_{T} $ & Sine \\ \hline 
+$W_{4,4}=$ & $ \text{s} X_{12} $ & Sine \\ \hline 
+$W_{4,5}=$ & $ \text{c} X_{13} $ & Cosine \\ \hline 
+$W_{4,6}=$ & $ \text{c} X_{12} $ & Cosine \\ \hline 
+$W_{4,7}=$ & $ \text{s} X_{14} $ & Sine \\ \hline 
+$W_{4,8}=$ & $ \text{c} X_{14} $ & Cosine \\ \hline 
+$W_{4,9}=$ & $ \text{s} X_{13} $ & Sine \\ \hline 
+$W_{4,26}=$ & $ \text{c} \psi_{T} $ & Cosine \\ \hline 
+$W_{4,27}=$ & $ \text{c} \epsilon_{T} $ & Cosine \\ \hline 
+$W_{4,28}=$ & $ \text{s} \psi_{T} $ & Sine \\ \hline 
+$W_{4,29}=$ & $ \text{s} \epsilon_{T} $ & Sine \\ \hline 
 $W_{4,32}=$ & $ \dfrac{1}{X_{7}} $ & Division \\ \hline 
 $W_{11,0}=$ & $ X_{15}W_{4,8} $ & Multiplication \\ \hline
 $W_{11,1}=$ & $ \dfrac{W_{11,0}}{X_{16}} $ & Division \\ \hline
@@ -380,8 +382,9 @@ P_{T 1,1}U_{31}, & \text{for } -0.6 \leq h < 5.04  \\
 \right. \\
 \qquad\  \left. \dotsc +3P_{T 3,3}W_{30,8}+2P_{T 2,3}X_{31}\right)U_{31}+P_{T 1,3}U_{31}, &  \text{for } 35.53\leq h < 75.07   \\
 \left(8 P_{T 8,4}W_{30,3}+7P_{T 7,4}W_{30,4}+6P_{T 6,4}W_{30,5}
-+5P_{T 5,4}W_{30,6}+ \dots \right. \\
-\qquad\  \left. \dotsc +4P_{T 4,4}W_{30,7}+3P_{T 3,4}W_{30,8}+2P_{T 2,4}X_{31}\right)U_{31}+P_{T 1,4}U_{31}, &  \text{for } 75.07\leq h < 170.05   \\
++ \dots \right. \\
+\qquad\  \left. \dotsc +5P_{T 5,4}W_{30,6}+4P_{T 4,4}W_{30,7}+3P_{T 3,4}W_{30,8}+ \dots \right. \\
+\qquad\  \left. \dotsc +2P_{T 2,4}X_{31}\right)U_{31}+P_{T 1,4}U_{31}, &  \text{for } 75.07\leq h < 170.05   \\
 0, &  \text{for }  h \geq 170.05   
 \end{cases}
  $ & Multiplication \\ \hline
@@ -389,7 +392,7 @@ P_{T 1,1}U_{31}, & \text{for } -0.6 \leq h < 5.04  \\
 
 % $W_{•,•}=$ & $  $ & \\ \hline 
 \end{longtable}
-
+}
 
 
 \noindent
