@@ -15,7 +15,7 @@ In the example of the car, the \acf{RF} is fixed to the Earth. However, when con
 
 \subsection{\acl{MCI} \ac{RF} (I-frame)}
 \label{subsec:ECI}
-The \acf{MCI} reference frame is an \ac{RF} that is, as the name implies, fixed to the centre of mass of Mars \citep{mooij2013fd}. It is a frame in which Mars still rotates with respect to that frame, or in other words it is an inertial frame with respect to Mars. The x-axis is defined through a certain point which can be set by the user. This means that the user can determine his or her own inertial frame. A frame that is often used (and which is based on J2000\footnote{J2000 is an Earth referenced inertial frame that was set through the rotational axis of Earth (z-axis) and through the vernal equinox (x-axis). The reference was set on the Julian date of 2451545.0 or 01-01-2000 at 12:00 \ac{GMT}.}) is the MARSIAU frame \citep{bachman2014naif,diaz2008generic}. This is a Mars inertial frame that is translated from the Earth J2000 frame. For the translation of J2000 a point through the mean equator of Mars is specified where the equator ascends through the mean equator of Earth. The x-axis is defined through this point. The z-axis is then defined through the rotational axis of Mars and the y-axis completes the frame through the \ac{RHR}. 
+The \acf{MCI} reference frame is an \ac{RF} that is, as the name implies, fixed to the centre of mass of Mars \citep{mooij2013fd}. It is a frame in which Mars still rotates with respect to that frame, or in other words it is an inertial frame with respect to Mars. The x-axis is defined through a certain point which can be set by the user. This means that the user can determine his or her own inertial frame. A frame that is often used (and which is based on J2000\footnote{J2000 is an Earth referenced inertial frame that was set through the rotational axis of Earth (z-axis) and through the vernal equinox (x-axis). The reference was set on the Julian date of 2451545.0 or 01-01-2000 at 12:00 \ac{GMT}.}) is the MARSIAU frame \citep{bachman2014naif,diaz2008generic}. This is a Mars inertial frame that is translated from the Earth J2000 frame. For the translation of J2000, a point through the mean equator of Mars is specified where the equator ascends through the mean equator of Earth. The x-axis is defined through this point. The z-axis is then defined through the rotational axis of Mars and the y-axis completes the frame through the \ac{RHR}. 
 
 The translation is described by \cite{bachman2014naif,diaz2008generic} using the J2000 numbers from \cite{archinal2011report}. The generic inertial frame is shown in \Cref{subfig:eci_mooij2013fd_noBox}. The centre of the frame is represented by the letter 'A'. The MARSIAU frame is required if certain data from outside sources will have to be incorporated into the simulation, however for the actual simulation it was easier and much more straightforward to define a custom Mars inertial reference frame at the start of the simulation. This reference system is very useful if the motion of the \ac{s/c} with respect to the ground-track is not important.
 
@@ -28,7 +28,7 @@ The translation is described by \cite{bachman2014naif,diaz2008generic} using the
 %\label{fig:eci_mooij2013fd}
 %\end{figure}
 
-%\nomenclature{$\Omega_{t}$}{Rotational velocity of Mars\nomunit{rad/s or deg/s}}
+%\nomenclature{$\Omega_{t}$}{Rotational velocity of Mar\text{s}\nomunit{rad/s or deg/s}}
 %\nomenclature{x$_{I}$}{x-axis of the Mars-centred inertial frame\nomunit{-}}
 %\nomenclature{y$_{I}$}{y-axis of the Mars-centred inertial frame\nomunit{-}}
 %\nomenclature{z$_{I}$}{z-axis of the Mars-centred inertial frame\nomunit{-}}
@@ -40,7 +40,7 @@ The translation is described by \cite{bachman2014naif,diaz2008generic} using the
 
 \subsection{\acl{MCMF} \ac{RF} (R-frame)}
 \label{subsec:ECEF}
-The \acf{MCMF} frame is the same as the \ac{MCI} frame except for one distinct difference. The x-axis of the \ac{MCMF} frame (x$_{R}$) is defined through the 0.5 km wide Airy-0 crater \citep{morton2003mapping} which has a latitude of 5.07829$^{\circ}$S \citep{duxbury2014location}. The associated meridian is called the prime meridian. On 1 January 2000 at 12:00 the prime meridian of Mars was 176.630$^{\circ}$ east of the x-axis in the MARSIAU frame (which is important when transforming from the MARSIAU frame to the current \ac{MCMF} frame)\citep{diaz2008generic,archinal2011report}. Because the Airy-0 crater is fixed to the surface of Mars and rotates around the Martian rotational axis (in both \ac{MCI} and \ac{MCMF} the z-axis), the \ac{MCMF} is also a rotational frame. This frame rotates with Mars and can therefore be very useful for ground observation purposes. 
+The \acf{MCMF} frame is the same as the \ac{MCI} frame except for one distinct difference. The x-axis of the \ac{MCMF} frame (x$_{R}$) is defined through the 0.5 km wide Airy-0 crater \citep{morton2003mapping}, which has a latitude of 5.07829$^{\circ}$S \citep{duxbury2014location}. The associated meridian is called the prime meridian. On the 1$^{\text{st}}$ of January 2000 at 12:00 the prime meridian of Mars was 176.630$^{\circ}$ east of the x-axis in the MARSIAU frame (which is important when transforming from the MARSIAU frame to the current \ac{MCMF} frame)\citep{diaz2008generic,archinal2011report}. Because the Airy-0 crater is fixed to the surface of Mars and rotates around the Martian rotational axis (in both \ac{MCI} and \ac{MCMF} the z-axis), the \ac{MCMF} frame is also a rotational frame. This frame rotates with Mars and can therefore be very useful for ground observation purposes. 
 
 In the case of the \ac{MAV} it is important to take the rotational velocity of Mars into account, since Mars will be rotating underneath the \ac{MAV} causing rotational effects. A graphical representation of the \ac{MCMF} frame is provided in \Cref{subfig:ecef_mooij2013fd_noBox}. Here, $\Omega_{t}$ represents the general rotational velocity of the reference body, which is called $\Omega_{M}$ when talking about the rotational velocity of Mars. An angle $\omega_{P}$ is defined as the relative angle between the prime meridian and the x-axis of the \ac{MCI} frame at the time that the inertial frame was defined.
 
@@ -78,9 +78,9 @@ This next \ac{RF} can be used to describe the motion of an \ac{s/c} in orbit aro
 
 \subsection{\acl{BF} \ac{RF} (B-frame)}
 \label{subsec:BF}
-The body-fixed \acsu{BF} frame is fixed to the \ac{s/c} body and therefore rotates with the \ac{s/c} as well. The origin of the \ac{BF} \ac{RF} can be defined in the centre of symmetry (or the middle of the \ac{s/c}). The axis orientation can be chosen to be in any direction. In this case the x-axis is defined through the vehicle-centre line and goes through the "nose" of the \ac{s/c}, the z-axis is defined towards the orbiting body (when assuming an orbiting vehicle) and the y-axis completes the frame through the \ac{RHR}. An example of a body frame that can be applied to the \ac{MAV} is provided in \Cref{subfig:baseline_liquid_trinidad2012_bframe}. 
+The \acf{BF} frame is fixed to the \ac{s/c} body and therefore rotates with the \ac{s/c} as well. The origin of the \ac{BF} \ac{RF} can be defined in the centre of symmetry (or the middle of the \ac{s/c}). The axis orientation can be chosen to be in any direction. In this case the x-axis is defined through the vehicle-centre line and goes through the "nose" of the \ac{s/c}, the z-axis is defined towards the orbiting body (when assuming an orbiting vehicle) and the y-axis completes the frame through the \ac{RHR}. An example of a body frame that can be applied to the \ac{MAV} is provided in \Cref{subfig:baseline_liquid_trinidad2012_bframe}. 
 
-The axes of the body frame are denoted by a 'B' in this report. In the thesis problem the body frame relates directly to the vertical frame through the flight-path angle $\gamma$ and the heading (or azimuth) angle $\chi$, because the x-axis of the body frame coincides with the velocity vector of the \ac{s/c}. 
+The axes of the body frame are denoted by a 'B' in this report. In the thesis problem the body frame relates directly to the vertical frame through the flight-path angle $\gamma$ and the heading (or azimuth) angle $\chi$, because it is assumed that the x-axis of the body frame coincides with the velocity vector of the \ac{s/c}. 
 
 %An example of a body frame used for the Apollo Command and Service module is provided in \Cref{fig:csmaxes_woods2009}\footnote{Source: NASA}. In this case the z-axis was however defined by the main hatch of the vehicle.
 
@@ -191,16 +191,19 @@ z\\
 \noindent
 This rotation described by \Cref{fig:exampleXtrans_mooij2013stat} and \Cref{eq:xaxistransmatr} can also be described for rotations around the y-axis and the z-axis. The complete set of axis transformation matrices is then presented in \Cref{eq:allTransMatr}.
 
-Using the cosine notation 'c' and the sine notation 's' the transformation matrices will become more comprehensible. Also, because the matrices are orthogonal, the inverse of the matrix is simply the transpose of the matrix. The inverse of a rotation matrix is the rotation in the other direction.\\
+Using the cosine notation 'c' and the sine notation 's' the transformation matrices will become more comprehensible. Also, because the matrices are orthogonal, the inverse of the matrix is simply the transpose of the matrix. The inverse of a rotation matrix is the rotation in the other direction.
+
 The order, or sequence, in which these transformations are performed is very important. This is because the sequence results in a matrix multiplication equation, and from linear algebra it is known that $\mathbf{A}\cdot\mathbf{B}\neq\mathbf{B}\cdot\mathbf{A}$. Therefore, if the sequence of transformations is not correct, the resulting \ac{RF} will not be the desired \ac{RF}.  Also, as mentioned before, it is not always possible or easy to transform from one \ac{RF} directly into the other. So usually one of the afore mentioned \ac{RF}s is used as an intermediate \ac{RF}. It is therefore possible to transform from the P-frame all the way to the I-frame using all the other mentioned \ac{RF}s with a maximum of three rotations between each frame. 
 
-For convenience it has been chosen to adopt the convention mentioned by \cite{mooij2013fd} and \cite{mooij2013stat} to describe the transformations. Therefore the I-frame, R-frame, V-frame, B-frame and P-frame will be known as $F_{I}$, $F_{R}$, $F_{V}$, $F_{B}$ and $F_{P}$ respectively when used to indicate the \ac{RF}s in equations. And because these equations involve matrix multiplications, they have to be executed from right to left. Therefore it can be said that the transformation matrix to go from $F_{B} \rightarrow F_{R}$ is $\mathbb{T}_{\mathbf{RB}}=\mathbb{T}_{\mathbf{RV}}\mathbb{T}_{\mathbf{VB}}$. This is one of the transformations required for the \ac{MAV} trajectory. The other two transformations are more straightforward: $F_{P} \rightarrow F_{B}$ is $\mathbb{T}_{\mathbf{BP}}$ and $F_{R} \rightarrow F_{I}$ is $\mathbb{T}_{\mathbf{IR}}$. For the $\mathbb{T}_{\mathbf{IR}}$ matrix , a transition is performed from $F_{R} \rightarrow F_{I}$. This is done over the angle $\Omega_{M}t_{O}$ ( or $\Omega_{t}t_{O}$ in the general case as defined in \Cref{subfig:ecef_mooij2013fd_noBox}). $\Omega_{M}$ is the rotational velocity of Mars and $t_{O}$ is the time from the set inertial frame. This is also where $\omega_{P0}$ is required (not depicted) since this angle describes the position of the prime meridian at the time that the inertial frame was set. Because the angle is defined east of the x$_{I}$-axis, it has to be subtracted from $\Omega_{M}t_{O}$ since $\omega_{P0}$ is defined positive in the same direction as $\Omega_{M}t_{O}$ which is defined to be positive going from x$_{I}$ to x$_{R}$. The rotation around the z-axis is positive in the same direction according to the \ac{RHR} for rotation. In this case the rotation is performed in the negative direction around the z-axis with an angle $-\Omega_{M}t_{O}+\omega_{P}$. The complete \ac{RF} transformation with the written out matrix for this rotation is given by \Cref{eq:IRtrans}. Please note that the signs of the angles changed in the matrix due to the sine and cosine functions. In \Cref{eq:IRtrans} the vertical lines with the letter designations depict when a certain reference frame is reached. The transformations for $\mathbb{T}_{\mathbf{RB}}$ and $\mathbb{T}_{\mathbf{BP}}$ can now be written in a similar manner and are described in \Cref{eq:RBtrans,eq:BPtrans} respectively.
+For convenience it has been chosen to adopt the convention mentioned by \cite{mooij2013fd} and \cite{mooij2013stat} to describe the transformations. Therefore the I-frame, R-frame, V-frame, B-frame and P-frame will be known as $F_{I}$, $F_{R}$, $F_{V}$, $F_{B}$ and $F_{P}$ respectively when used to indicate the \ac{RF}s in equations. And because these equations involve matrix multiplications, they have to be executed from right to left. Therefore it can be said that the transformation matrix to go from $F_{B} \rightarrow F_{R}$ is $\mathbb{T}_{\mathbf{RB}}=\mathbb{T}_{\mathbf{RV}}\mathbb{T}_{\mathbf{VB}}$. This is one of the transformations required for the \ac{MAV} trajectory. The other two transformations are more straightforward: $F_{P} \rightarrow F_{B}$ is $\mathbb{T}_{\mathbf{BP}}$ and $F_{R} \rightarrow F_{I}$ is $\mathbb{T}_{\mathbf{IR}}$. 
+
+For the $\mathbb{T}_{\mathbf{IR}}$ matrix , a transition is performed from $F_{R} \rightarrow F_{I}$. This is done over the angle $\Omega_{M}t_{O}$ ( or $\Omega_{t}t_{O}$ in the general case as defined in \Cref{subfig:ecef_mooij2013fd_noBox}). $\Omega_{M}$ is the rotational velocity of Mars and $t_{O}$ is the time from the set inertial frame. This is also where $\omega_{P}$ is required (not depicted) since this angle describes the position of the prime meridian at the time that the inertial frame was set. Because the angle is defined east of the x$_{I}$-axis, it has to be subtracted from $\Omega_{M}t_{O}$ since $\omega_{P}$ is defined positive in the same direction as $\Omega_{M}t_{O}$ which is defined to be positive going from x$_{I}$ to x$_{R}$. The rotation around the z-axis is positive in the same direction according to the \ac{RHR} for rotation. In this case the rotation is performed in the negative direction around the z-axis with an angle $-\Omega_{M}t_{O}+\omega_{P}$. The complete \ac{RF} transformation with the written out matrix for this rotation is given by \Cref{eq:IRtrans}. Please note that the signs of the angles changed in the matrix due to the sine and cosine functions. In \Cref{eq:IRtrans} the vertical lines with the letter designations depict when a certain reference frame is reached. The transformations for $\mathbb{T}_{\mathbf{RB}}$ and $\mathbb{T}_{\mathbf{BP}}$ can now be written in a similar manner and are described in \Cref{eq:RBtrans,eq:BPtrans} respectively.
 
 \begin{equation} \label{eq:IRtrans}
 \mathbb{T}_{\mathbf{IR}}=\Bigg|_{\mathbf{I}}\mathbb{T}_{\mathbf{z}}\left(-\Omega_{M}t_{O}+\omega_{P}\right)\Bigg|_{\mathbf{R}}=
 \begin{bmatrix}
-c\left(\Omega_{M}t_{O}-\omega_{P}\right) & -s\left(\Omega_{M}t_{O}-\omega_{P}\right) & 0\\
-s\left(\Omega_{M}t_{O}-\omega_{P}\right) & c\left(\Omega_{M}t_{O}-\omega_{P}\right) & 0\\
+\text{c}\left(\Omega_{M}t_{O}-\omega_{P}\right) & -\text{s}\left(\Omega_{M}t_{O}-\omega_{P}\right) & 0\\
+\text{s}\left(\Omega_{M}t_{O}-\omega_{P}\right) & \text{c}\left(\Omega_{M}t_{O}-\omega_{P}\right) & 0\\
 0& 0& 1\\
 \end{bmatrix}
 \end{equation}
@@ -212,9 +215,9 @@ s\left(\Omega_{M}t_{O}-\omega_{P}\right) & c\left(\Omega_{M}t_{O}-\omega_{P}\rig
 \mathbb{T}_{\mathbf{RB}}=\Bigg|_{\mathbf{R}}\mathbb{T}_{\mathbf{z}}\left(-\tau\right)\mathbb{T}_{\mathbf{y}}\left(\dfrac{\pi}{2}+\delta\right)\Bigg|_{\mathbf{V}}\mathbb{T}_{\mathbf{z}}\left(-\chi\right)\mathbb{T}_{\mathbf{y}}\left(-\gamma\right)\Bigg|_{\mathbf{B}}\\
 =
 \begin{bmatrix}
-c\tau\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)-s\tau s\chi c\gamma  & c\tau s\delta s\chi -s\tau c\chi & c\tau\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)-s\tau s\chi s\gamma \\
-s\tau\left(-s\delta c\chi c\gamma +c\delta s\gamma \right)+c\tau s\chi c\gamma  & s\tau s\delta s\chi +c\tau c\chi & s\tau\left(-s\delta c\chi s\gamma -c\delta c\gamma \right)+c\tau s\chi s\gamma \\
-c\delta c\chi c\gamma -c\delta s\gamma  & -c\delta s\chi &  c\delta c\chi s\gamma -s\delta c\gamma \\
+\text{c}\tau\left(-\text{s}\delta \text{c}\chi \text{c}\gamma +\text{c}\delta \text{s}\gamma \right)-\text{s}\tau \text{s}\chi \text{c}\gamma  & \text{c}\tau \text{s}\delta \text{s}\chi -\text{s}\tau \text{c}\chi & \text{c}\tau\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)-\text{s}\tau \text{s}\chi \text{s}\gamma \\
+\text{s}\tau\left(-\text{s}\delta \text{c}\chi \text{c}\gamma +\text{c}\delta \text{s}\gamma \right)+\text{c}\tau \text{s}\chi \text{c}\gamma  & \text{s}\tau \text{s}\delta \text{s}\chi +\text{c}\tau \text{c}\chi & \text{s}\tau\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)+\text{c}\tau \text{s}\chi \text{s}\gamma \\
+\text{c}\delta \text{c}\chi \text{c}\gamma -\text{c}\delta \text{s}\gamma  & -\text{c}\delta \text{s}\chi &  \text{c}\delta \text{c}\chi \text{s}\gamma -\text{s}\delta \text{c}\gamma \\
 \end{bmatrix}
 \end{multline}
 
@@ -223,9 +226,9 @@ c\delta c\chi c\gamma -c\delta s\gamma  & -c\delta s\chi &  c\delta c\chi s\gamm
 \begin{equation} \label{eq:BPtrans}
 \mathbb{T}_{\mathbf{BP}}=\Bigg|_{\mathbf{B}}\mathbb{T}_{\mathbf{z}}\left(-\psi_{T}\right)\mathbb{T}_{\mathbf{y}}\left(-\epsilon_{T}\right)\Bigg|_{\mathbf{P}}=
 \begin{bmatrix}
-c\psi_{T}c\epsilon_{T} & -s\psi_{T} & c\psi_{T}s\epsilon_{T}\\
-s\psi_{T}c\epsilon_{T} & c\psi_{T} & s\psi_{T}s\epsilon_{T}\\
--s\epsilon_{T} & 0 & c\epsilon_{T}
+\text{c}\psi_{T}\text{c}\epsilon_{T} & -\text{s}\psi_{T} & \text{c}\psi_{T}\text{s}\epsilon_{T}\\
+\text{s}\psi_{T}\text{c}\epsilon_{T} & \text{c}\psi_{T} & \text{s}\psi_{T}\text{s}\epsilon_{T}\\
+-\text{s}\epsilon_{T} & 0 & \text{c}\epsilon_{T}
 \end{bmatrix}
 \end{equation}
 
@@ -233,7 +236,7 @@ s\psi_{T}c\epsilon_{T} & c\psi_{T} & s\psi_{T}s\epsilon_{T}\\
 
 \section{Transformation Between Different Coordinate Systems}
 \label{sec:transsys}
-In the previous sections the different \ac{RF} and transformations were expressed using x, y and z-axes. These x, y and z-coordinates belong to the cartesian coordinate system. However, during an integration, simulation or analysis it might be more useful and meaningful to express position (and velocity) in a different coordinate system. Two other systems are the spherical and Keplerian coordinate systems. How to transform back and forth from the cartesian system to these other two systems will be explained in \Cref{subsec:sphercart,subsec:keplcart} respectively and are based on \cite{noomen2013basic}. The transformation from the spherical coordinate system to Kepler elements is described in \Cref{subsec:spherkepl}. 
+In the previous sections the different \ac{RF}s and transformations were expressed using the x, y and z-axes. These x, y and z-coordinates belong to the cartesian coordinate system. However, during an integration, simulation or analysis it might be more useful and meaningful to express position (and velocity) in a different coordinate system. Two other systems are the spherical and Keplerian coordinate systems. How to transform back and forth from the cartesian system to these other two systems will be explained in \Cref{subsec:sphercart,subsec:keplcart} respectively and are based on \cite{noomen2013basic}. The transformation from the spherical coordinate system to Kepler elements is described in \Cref{subsec:spherkepl}. 
 
 %Kepler elements are very useful for orbit computations, unfortunately singularities can occur if this coordinate system is used for certain situations. Therefore \Cref{subsec:nosingkep} will discuss a non-singular form of the Kepler elements. 
 
@@ -248,7 +251,7 @@ Spherical coordinates can be useful to determine the location of a satellite abo
 %\label{fig:sphertocart_noomen2013basic}
 %\end{figure}
 
-%\nomenclature{$r$}{Radius\nomunit{m}}
+%\nomenclature{$r$}{Radiu\text{s}\nomunit{m}}
 
 \begin{equation} \label{eq:sphertocartp}
 \begin{split}
@@ -281,7 +284,7 @@ The transformation from cartesian coordinates to spherical coordinates can again
 \end{equation}
 
 \noindent
-However, the expression for $\lambda$ only results in a value between $-\pi/2$ and $\pi/2$. Also, if x = 0, a singularity occurs. To solve this issue, the so-called 'atan2' function can be used. This function incorporates both sin and cosine values to provide a value for $\lambda$ between 0 and 2$\pi$ \citep{noomen2013basic}. $\lambda$ can then be expressed by \Cref{eq:simpatan2} where atan2 is defined by \Cref{fig:atan2_guilhaire2013}\footnote{Online blog: \url{http://guihaire.com/code/?p=1168} [Accessed 13 November 2015]}.
+However, the expression for $\lambda$ only results in a value between $-\pi/2$ and $\pi/2$. Also, if x = 0, a singularity occurs. To solve this issue, the so-called 'atan2' function can be used. This function incorporates both sine and cosine values to provide a value for $\lambda$ between 0 and 2$\pi$ \citep{noomen2013basic}. $\lambda$ can then be expressed by \Cref{eq:simpatan2} where atan2 is defined by \Cref{fig:atan2_guilhaire2013}\footnote{Online blog: \url{http://guihaire.com/code/?p=1168} [Accessed 13 November 2015]}.
 
 \begin{equation} \label{eq:simpatan2}
 \lambda=\text{atan}2\left(y,x\right)

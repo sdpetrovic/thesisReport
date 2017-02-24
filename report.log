@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.13)  23 FEB 2017 21:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.13)  24 FEB 2017 22:08
 entering extended mode
 **./report.tex
 (report.tex
@@ -3658,23 +3658,26 @@ although it is yet undefined on input line 18.
 Package acronym Info: Label `acro:MCMF' newly defined as it shall be overridden
 
 although it is yet undefined on input line 43.
-[90] [91] [92]
-<figures/reference_frames/atan2_guilhaire2013.jpg, id=3257, 218.61674pt x 142.7
+[90]
+Package acronym Info: Label `acro:BF' newly defined as it shall be overridden
+although it is yet undefined on input line 81.
+ [91] [92]
+<figures/reference_frames/atan2_guilhaire2013.jpg, id=3258, 218.61674pt x 142.7
 3325pt>
 File: figures/reference_frames/atan2_guilhaire2013.jpg Graphic file (type jpg)
  <use figures/reference_frames/atan2_guilhaire2013.jpg>
 Package pdftex.def Info: figures/reference_frames/atan2_guilhaire2013.jpg used 
-on input line 294.
+on input line 297.
 (pdftex.def)             Requested size: 224.06544pt x 146.2938pt.
  [93]
-<figures/reference_frames/kepler_noomen2013basic_akcasu2013.jpg, id=3270, 657.6
+<figures/reference_frames/kepler_noomen2013basic_akcasu2013.jpg, id=3271, 657.6
 57pt x 271.61475pt>
 File: figures/reference_frames/kepler_noomen2013basic_akcasu2013.jpg Graphic fi
 le (type jpg)
 
 <use figures/reference_frames/kepler_noomen2013basic_akcasu2013.jpg>
 Package pdftex.def Info: figures/reference_frames/kepler_noomen2013basic_akcasu
-2013.jpg used on input line 344.
+2013.jpg used on input line 347.
 (pdftex.def)             Requested size: 448.1309pt x 185.08516pt.
  [94 <./figures/reference_frames/atan2_guilhaire2013.jpg> <./figures/reference_
 frames/kepler_noomen2013basic_akcasu2013.jpg>] [95] [96])
@@ -3693,7 +3696,7 @@ File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ) [98] [99] [100])
 (appendixB-fittingProcessAndResults.tex [101]
 Appendix C.
-<figures/software/temperatureDataSplit6.png, id=3575, 337.26pt x 252.945pt>
+<figures/software/temperatureDataSplit6.png, id=3576, 337.26pt x 252.945pt>
 File: figures/software/temperatureDataSplit6.png Graphic file (type png)
 
 <use figures/software/temperatureDataSplit6.png>
@@ -3701,7 +3704,7 @@ Package pdftex.def Info: figures/software/temperatureDataSplit6.png used on inp
 ut line 12.
 (pdftex.def)             Requested size: 358.50609pt x 268.88463pt.
 
-<figures/software/temperatureDataSplit7.png, id=3577, 404.712pt x 266.1945pt>
+<figures/software/temperatureDataSplit7.png, id=3578, 404.712pt x 266.1945pt>
 File: figures/software/temperatureDataSplit7.png Graphic file (type png)
 
 <use figures/software/temperatureDataSplit7.png>
@@ -3711,7 +3714,7 @@ ut line 22.
  [102
 
 ]
-<figures/software/completePolyFitTempSplit7.png, id=3584, 421.575pt x 316.18124
+<figures/software/completePolyFitTempSplit7.png, id=3585, 421.575pt x 316.18124
 pt>
 File: figures/software/completePolyFitTempSplit7.png Graphic file (type png)
  <use figures/software/completePolyFitTempSplit7.png>
@@ -3720,7 +3723,7 @@ Package pdftex.def Info: figures/software/completePolyFitTempSplit7.png used on
 (pdftex.def)             Requested size: 268.88127pt x 201.66539pt.
  [103 <./figures/software/temperatureDataSplit6.png> <./figures/software/temper
 atureDataSplit7.png>]
-<figures/software/densityDataSplit2.png, id=3593, 337.26pt x 252.945pt>
+<figures/software/densityDataSplit2.png, id=3594, 337.26pt x 252.945pt>
 File: figures/software/densityDataSplit2.png Graphic file (type png)
 
 <use figures/software/densityDataSplit2.png>
@@ -3728,7 +3731,7 @@ Package pdftex.def Info: figures/software/densityDataSplit2.png used on input l
 ine 51.
 (pdftex.def)             Requested size: 309.21141pt x 231.91328pt.
 
-<figures/software/densityDataSplit3.png, id=3594, 337.26pt x 252.945pt>
+<figures/software/densityDataSplit3.png, id=3595, 337.26pt x 252.945pt>
 File: figures/software/densityDataSplit3.png Graphic file (type png)
 
 <use figures/software/densityDataSplit3.png>
@@ -3737,7 +3740,7 @@ ine 60.
 (pdftex.def)             Requested size: 313.69026pt x 235.27115pt.
  [104 <./figures/software/completePolyFitTempSplit7.png (PNG copy)> <./figures/
 software/densityDataSplit2.png>]
-<figures/software/completePolyFitDenSplit3.png, id=3607, 421.575pt x 316.18124p
+<figures/software/completePolyFitDenSplit3.png, id=3608, 421.575pt x 316.18124p
 t>
 File: figures/software/completePolyFitDenSplit3.png Graphic file (type png)
  <use figures/software/completePolyFitDenSplit3.png>
@@ -3745,7 +3748,7 @@ Package pdftex.def Info: figures/software/completePolyFitDenSplit3.png used on
 input line 72.
 (pdftex.def)             Requested size: 313.69026pt x 235.27307pt.
 
-<figures/software/section3PolyFitDen.png, id=3608, 421.575pt x 316.18124pt>
+<figures/software/section3PolyFitDen.png, id=3609, 421.575pt x 316.18124pt>
 File: figures/software/section3PolyFitDen.png Graphic file (type png)
 
 <use figures/software/section3PolyFitDen.png>
@@ -3754,7 +3757,7 @@ line 81.
 (pdftex.def)             Requested size: 313.69026pt x 235.27307pt.
  [105 <./figures/software/densityDataSplit3.png> <./figures/software/completePo
 lyFitDenSplit3.png (PNG copy)>]
-<figures/software/ExpAtmFitDenZoom.png, id=3618, 421.575pt x 316.18124pt>
+<figures/software/ExpAtmFitDenZoom.png, id=3619, 421.575pt x 316.18124pt>
 File: figures/software/ExpAtmFitDenZoom.png Graphic file (type png)
 
 <use figures/software/ExpAtmFitDenZoom.png>
@@ -3854,7 +3857,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 216.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 216.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 216.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 59B0B2E1DEB471453B13772D8E93DD1D;7908.
+(rerunfilecheck)             Checksum: F8159BF6479020657CC7AAE564972055;7908.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3862,10 +3865,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 216.
  ) 
 Here is how much of TeX's memory you used:
- 30624 strings out of 493335
- 577405 string characters out of 3139257
- 859617 words of memory out of 3000000
- 32398 multiletter control sequences out of 15000+200000
+ 30629 strings out of 493335
+ 577463 string characters out of 3139257
+ 859639 words of memory out of 3000000
+ 32402 multiletter control sequences out of 15000+200000
  207724 words of font info for 191 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,25n,74p,2479b,2355s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3884,9 +3887,9 @@ eX/fonts/type1/adobe/utopia/putb8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1
 /adobe/utopia/putbi8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/adobe/utopia
 /putr8a.pfb><D:/Programs (slower)/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb><
 D:/Programs (slower)/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on report.pdf (139 pages, 4888735 bytes).
+Output written on report.pdf (139 pages, 4888939 bytes).
 PDF statistics:
- 3997 PDF objects out of 4296 (max. 8388607)
- 937 named destinations out of 1000 (max. 500000)
+ 3998 PDF objects out of 4296 (max. 8388607)
+ 938 named destinations out of 1000 (max. 500000)
  1456 words of extra memory for PDF output out of 10000 (max. 10000000)
 

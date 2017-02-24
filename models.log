@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=latex 2016.6.13)  5 FEB 2017 21:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.13)  24 FEB 2017 22:07
 entering extended mode
 **./models.tex
 (models.tex
@@ -12003,6 +12003,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 \newlabel{sec:stateAndStateDerivatives}{{}{}}
+{C:/Users/Stacha/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 ! Undefined control sequence.
 <write> ...fig:eci_mooij2013fd_noBox}{{}{\thepage 
                                                   }}
@@ -29302,11 +29303,11 @@ Overfull \hbox (45.4003pt too wide) in paragraph at lines 685--688
 
  
 Here is how much of TeX's memory you used:
- 39 strings out of 493336
- 393 string characters out of 3139283
- 81438 words of memory out of 3000000
+ 40 strings out of 493335
+ 403 string characters out of 3139257
+ 81441 words of memory out of 3000000
  3665 multiletter control sequences out of 15000+200000
  4567 words of font info for 17 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  18i,12n,21p,1500b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on models.dvi (3 pages, 14284 bytes).
+!  ==> Fatal error occurred, no output PDF file produced!

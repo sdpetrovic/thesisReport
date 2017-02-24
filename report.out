@@ -88,10 +88,10 @@
 \BOOKMARK [0][-]{chapter*.106}{Bibliography}{}% 88
 \BOOKMARK [0][-]{appendix.A}{Reference System Transformations}{}% 89
 \BOOKMARK [1][-]{section.A.1}{Required Reference Systems}{appendix.A}% 90
-\BOOKMARK [2][-]{subsection.A.1.1}{Mars-centred inertial RF \(I-frame\)}{section.A.1}% 91
-\BOOKMARK [2][-]{subsection.A.1.2}{Mars-centred Mars-fixed RF \(R-frame\)}{section.A.1}% 92
+\BOOKMARK [2][-]{subsection.A.1.1}{Mars-Centred Inertial RF \(I-frame\)}{section.A.1}% 91
+\BOOKMARK [2][-]{subsection.A.1.2}{Mars-Centred Mars-Fixed RF \(R-frame\)}{section.A.1}% 92
 \BOOKMARK [2][-]{subsection.A.1.3}{Vertical RF \(V-frame\)}{section.A.1}% 93
-\BOOKMARK [2][-]{subsection.A.1.4}{Body-fixed RF \(B-frame\)}{section.A.1}% 94
+\BOOKMARK [2][-]{subsection.A.1.4}{Body-Fixed RF \(B-frame\)}{section.A.1}% 94
 \BOOKMARK [2][-]{subsection.A.1.5}{Propulsion RF \(P-frame\)}{section.A.1}% 95
 \BOOKMARK [1][-]{section.A.2}{Transformation Between Reference Frames}{appendix.A}% 96
 \BOOKMARK [1][-]{section.A.3}{Transformation Between Different Coordinate Systems}{appendix.A}% 97
