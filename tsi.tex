@@ -7,9 +7,16 @@
 
 \section{General Theory}
 \label{sec:genTsiTheory}
-\ac{TSI} has been used to solve ordinary differential equations since the early 1960s \citep{scott2008high}. However, the first modern implementation of \ac{TSI} in a space-trajectory problem was provided by \cite{montenbruck1992numerical}. \cite{scott2008high} were able to implement this \ac{TSI} method into the SNAP trajectory propagator which is the implementation that is used in this thesis. The method is described in \Cref{subsec:workTsi} and the used step-size method is discussed in \Cref{subsec:stepSizeTsi}. This step-size sometimes has to be reduced if a new section in the temperature or the drag coefficient model is reached. A root-finding method is described in \Cref{subsec:handlingModelSections} that can be used to determine at what step-size the next section is reached.
+\ac{TSI} has been used to solve ordinary differential equations since the early 1960s \citep{scott2008high}. However, the first modern implementation of \ac{TSI} in a space-trajectory problem was provided by \cite{montenbruck1992numerical}. \cite{scott2008high} were able to implement this \ac{TSI} method into the SNAP trajectory propagator which is the implementation that is used in this thesis. The method is described in \Cref{subsec:workTsi} and the used step-size method is discussed in \Cref{subsec:stepSizeTsi}. This step-size sometimes has to be reduced if a new section in the temperature or the drag coefficient model is reached. A root-finding method is described in \Cref{subsec:handlingModelSections} that can be used to determine at what step-size the next section is reached. The process of completing one integration step is shown in \Cref{fig:TSIintegrationStep} and can be used as a reference throughout this chapter. A more detailed architecture of \ac{TSI} is provided in \Cref{ch:programSimulationTool}.
 
 
+
+ \begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/tsi/TSIintegrationStep.png}
+\caption{Simplified flow chart of one integration step for \ac{TSI}.}
+\label{fig:TSIintegrationStep}
+\end{figure}
 
 \subsection{Workings of \ac{TSI}}
 \label{subsec:workTsi}
@@ -219,7 +226,7 @@ The corresponding state derivatives are then described by \Cref{eq:state_derivat
 \end{split} 
 &
 \begin{split}
-\ddot{x}&=\dot{V}_{x}=a_{x}\\
+\ddot{x}&=\dot{V}_{x}=a_{x} \vspace{5pt} \\ \vspace{5pt}
 \ddot{y}&=\dot{V}_{y}=a_{y}\\
 \ddot{z}&=\dot{V}_{z}=a_{z}
 \end{split}
@@ -641,7 +648,7 @@ w_{27,19} &= D = \frac{1}{2} S w_{27,18}w_{27,12} \\
 
 \subsubsection{Thrust Acceleration}
 \label{subsubsec:tsiThrust}
-The only acceleration component still missing is the thrust acceleration. To be able to write the auxiliary functions for the thrust, \Cref{eq:acc} first has to be rewritten such that all the transformations are gathered into two transformation matrices (see \Cref{eq:accAux}). The transformation matrices are described by \Cref{eq:BPtrans,eq:IBtrans} for $\mathbb{T}_{\mathbf{BP}}$ and $\mathbb{T}_{\mathbf{IB}}$ respectively.
+The only acceleration component still missing is the thrust acceleration. To be able to write the auxiliary functions for the thrust, \Cref{eq:acc} first has to be rewritten such that all the transformations are gathered into two transformation matrices (see \Cref{eq:accAux}). The transformation matrices are described by \Cref{eq:BPtrans,eq:IBtransTSI} for $\mathbb{T}_{\mathbf{BP}}$ and $\mathbb{T}_{\mathbf{IB}}$ respectively.
 
 \begin{equation} \label{eq:accAux}
 \begin{pmatrix}
@@ -651,20 +658,20 @@ x'_{6}\\
 \end{pmatrix}
 =
 \begin{pmatrix}
--\mu_{M}\dfrac{x_{1}}{x_{9}}\\
+-\mu_{M}\dfrac{x_{1}}{x_{9}} \vspace{5pt} \\ \vspace{5pt}
 -\mu_{M}\dfrac{x_{2}}{x_{9}}\\
 -\mu_{M}\dfrac{x_{3}}{x_{9}}\\
 \end{pmatrix}+
 \mathbb{T}_{\mathbf{IB}}\left[
 \begin{pmatrix}
--\dfrac{w_{27,19}}{x_{7}}\\
+-\dfrac{w_{27,19}}{x_{7}} \vspace{5pt} \\ \vspace{5pt}
 0\\
 0\\
 \end{pmatrix}
 + 
 \mathbb{T}_{\mathbf{BP}}
 \begin{pmatrix}
-\dfrac{T}{x_{7}}\\
+\dfrac{T}{x_{7}} \vspace{5pt} \\ \vspace{5pt}
 0\\
 0\\
 \end{pmatrix}
@@ -681,7 +688,7 @@ x'_{6}\\
 \end{bmatrix}
 \end{equation}
 
-\begin{equation} \label{eq:IBtrans}
+\begin{equation} \label{eq:IBtransTSI}
 \mathbb{T}_{\mathbf{IB}}=
 \left[
 \begin{matrix}
@@ -730,18 +737,18 @@ x'_{6}\\
 %\right]\\
 
 \noindent
-The thrust accelerations in the x-, y- and z-directions (in the body frame) can now be found by rewriting the last part of \Cref{eq:accAux} to \Cref{eq:aTB} using \Cref{eq:BPtrans}.
+The thrust accelerations in the x-, y- and z-directions (in the body frame) can now be found by rewriting the last part of \Cref{eq:accAux} to \Cref{eq:aTB} using \Cref{eq:BPtransTSI}.
 
 \begin{equation} \label{eq:aTB}
 \mathbb{T}_{\mathbf{BP}}
 \begin{pmatrix}
-\dfrac{T}{x_{7}}\\
+\dfrac{T}{x_{7}} \vspace{5pt} \\ \vspace{5pt}
 0\\
 0\\
 \end{pmatrix}
 =
 \begin{pmatrix}
-\dfrac{T}{x_{7}}\text{c}\psi_{T}\text{c}\epsilon_{T}\\
+\dfrac{T}{x_{7}}\text{c}\psi_{T}\text{c}\epsilon_{T} \vspace{5pt} \\ \vspace{5pt}
 \dfrac{T}{x_{7}}\text{s}\psi_{T}\text{c}\epsilon_{T}\\
 -\dfrac{T}{x_{7}}\text{s}\epsilon_{T}\\
 \end{pmatrix}
@@ -935,13 +942,13 @@ These equations now have to be written as a collection of auxiliary functions fo
 \begin{equation} \label{eq:gravAuxF}
 \mathbf{a_{g}} =
 \begin{pmatrix}
--\mu_{M}\dfrac{x_{1}}{x_{9}} \\
+-\mu_{M}\dfrac{x_{1}}{x_{9}} \vspace{5pt} \\ \vspace{5pt}
 -\mu_{M}\dfrac{x_{2}}{x_{9}} \\
 -\mu_{M}\dfrac{x_{3}}{x_{9}} \\
 \end{pmatrix}
 = 
 \begin{pmatrix}
-w_{4,39} \\
+w_{4,39} \vspace{5pt} \\ \vspace{5pt}
 w_{5,1} \\
 w_{6,1} \\
 \end{pmatrix}
@@ -1197,7 +1204,7 @@ a_{z}\\
 \end{pmatrix}
 =
 \begin{pmatrix}
--\mu_{M}\dfrac{x}{r^{3}}\\
+-\mu_{M}\dfrac{x}{r^{3}} \vspace{5pt} \\ \vspace{5pt}
 -\mu_{M}\dfrac{y}{r^{3}}\\
 -\mu_{M}\dfrac{z}{r^{3}}\\
 \end{pmatrix}+

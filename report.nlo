@@ -1,81 +1,81 @@
-\nomenclatureentry{Rb0$\mathbb{T}$@[{$\mathbb{T}$}]\begingroup Transformation matrix \nomunit{-}\nomeqref {3.0}|nompageref}{10}
-\nomenclatureentry{Ga4$\phi$@[{$\phi$}]\begingroup General Euler angle \nomunit{rad}\nomeqref {3.1}|nompageref}{10}
-\nomenclatureentry{Rb1$x$@[{$x$}]\begingroup x-position coordinate \nomunit{m}\nomeqref {3.1}|nompageref}{10}
-\nomenclatureentry{Rb5$y$@[{$y$}]\begingroup y-position coordinate \nomunit{m}\nomeqref {3.1}|nompageref}{10}
-\nomenclatureentry{Rb5$z$@[{$z$}]\begingroup z-position coordinate \nomunit{m}\nomeqref {3.1}|nompageref}{10}
-\nomenclatureentry{Ra5$r$@[{$r$}]\begingroup Radius \nomunit{m}\nomeqref {3.1}|nompageref}{10}
-\nomenclatureentry{Ga1$\delta$@[{$\delta$}]\begingroup Latitude \nomunit{rad}\nomeqref {3.1}|nompageref}{10}
-\nomenclatureentry{Ga3$\lambda$@[{$\lambda$}]\begingroup Inertial longitude \nomunit{rad}\nomeqref {3.1}|nompageref}{10}
-\nomenclatureentry{Rb0$V$@[{$V$}]\begingroup Velocity \nomunit{m/s}\nomeqref {3.2}|nompageref}{11}
-\nomenclatureentry{Ra4$m_{MAV}$@[{$m_{MAV}$}]\begingroup \ac{MAV} mass \nomunit{kg}\nomeqref {3.2}|nompageref}{11}
-\nomenclatureentry{Ra0$a$@[{$a$}]\begingroup Acceleration \nomunit{m/s$^{2}$}\nomeqref {3.3}|nompageref}{11}
-\nomenclatureentry{Ca7$g_{0}$@[{$g_{0}$}]\begingroup Standard gravitational acceleration at Earth sea level \nomunit{9.80665 m/s$^{2}$}\nomeqref {3.3}|nompageref}{11}
-\nomenclatureentry{Ra8$T$@[{$T$}]\begingroup Thrust \nomunit{N}\nomeqref {3.3}|nompageref}{11}
-\nomenclatureentry{Ra2$I_{sp}$@[{$I_{sp}$}]\begingroup Specific impulse \nomunit{s}\nomeqref {3.3}|nompageref}{11}
-\nomenclatureentry{Ca7$\Omega_{M}$@[{$\Omega_{M}$}]\begingroup Rotational velocity of Mars \nomunit{7.088$\cdot$10$^{-5}$ rad/s}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{Ra7$t_{O}$@[{$t_{O}$}]\begingroup Difference between current time and the inertial frame set time \nomunit{s}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{Ga6$\omega_{P}$@[{$\omega_{P}$}]\begingroup Off-set angle between inertial frame and zero meridian at inertial frame set time \nomunit{rad}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{Ga4$\chi$@[{$\chi$}]\begingroup Heading angle (or azimuth) \nomunit{rad}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{Ga0$\gamma$@[{$\gamma$}]\begingroup Flight-path angle \nomunit{rad}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{Ga3$\tau$@[{$\tau$}]\begingroup Central-body fixed longitude \nomunit{rad}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{Ga5$\psi_{T}$@[{$\psi_{T}$}]\begingroup Thrust azimuth angle \nomunit{rad}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{Ga2$\epsilon_{T}$@[{$\epsilon_{T}$}]\begingroup Thrust elevation angle \nomunit{rad}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{Ca7$\mu$@[{$\mu$}]\begingroup Mars standard gravitational parameter \nomunit{4.2828314$\cdot$10$^{13}$m$^{3}$/s$^{2}$}\nomeqref {3.8}|nompageref}{13}
-\nomenclatureentry{Ra1$D$@[{$D$}]\begingroup Drag \nomunit{N}\nomeqref {3.10}|nompageref}{13}
-\nomenclatureentry{Ga3$\rho$@[{$\rho$}]\begingroup Atmospheric density \nomunit{kg/m$^{3}$}\nomeqref {3.11}|nompageref}{13}
-\nomenclatureentry{Ca7$S$@[{$S$}]\begingroup Reference area \nomunit{0.091 m$^{2}$}\nomeqref {3.11}|nompageref}{13}
-\nomenclatureentry{Ra1$C_{D}$@[{$C_{D}$}]\begingroup Drag coefficient \nomunit{-}\nomeqref {3.11}|nompageref}{13}
-\nomenclatureentry{Ca7$R_{MOLA}$@[{$R_{MOLA}$}]\begingroup Mars \acs{MOLA} reference radius (also $R_{M}$) \nomunit{3396$\cdot$10$^{3}$ m}\nomeqref {3.11}|nompageref}{14}
-\nomenclatureentry{Ra1$h$@[{$h$}]\begingroup Altitude \nomunit{m}\nomeqref {3.11}|nompageref}{14}
-\nomenclatureentry{Ra5$M$@[{$M$}]\begingroup Mach number \nomunit{-}\nomeqref {3.12}|nompageref}{14}
-\nomenclatureentry{Ra0$a$@[{$a$}]\begingroup Speed of sound \nomunit{m/s}\nomeqref {3.12}|nompageref}{14}
-\nomenclatureentry{Ca7$\gamma_{a}$@[{$\gamma_{a}$}]\begingroup Ratio of specific heats \nomunit{1.35}\nomeqref {3.12}|nompageref}{14}
-\nomenclatureentry{Ca7$R_{a}$@[{$R_{a}$}]\begingroup Molar gas constant \nomunit{8.3144598 m$^{2}$ kg s$^{-2}$ K$^{-1}$ mol$^{-1}$}\nomeqref {3.12}|nompageref}{14}
-\nomenclatureentry{Ca7$M_{a}$@[{$M_{a}$}]\begingroup Molecular mass of the Martian atmosphere \nomunit{0.04334 kg/mol}\nomeqref {3.12}|nompageref}{14}
-\nomenclatureentry{Ra8$T_{a}$@[{$T_{a}$}]\begingroup Atmospheric temperature \nomunit{K}\nomeqref {3.12}|nompageref}{14}
-\nomenclatureentry{Ra6$R_{a}^{*}$@[{$R_{a}^{*}$}]\begingroup Specific gas constant \nomunit{m$^{2}$ s$^{-2}$ K$^{-1}$}\nomeqref {3.12}|nompageref}{14}
-\nomenclatureentry{Ra5$p_{n}$@[{$p_{n}$}]\begingroup Polynomial coefficient \nomunit{-}\nomeqref {3.12}|nompageref}{14}
-\nomenclatureentry{Ga2$\Delta V$@[{$\Delta V$}]\begingroup Change in velocity \nomunit{m/s}\nomeqref {3.14}|nompageref}{21}
-\nomenclatureentry{Rb0$V_{x}$@[{$V_{x}$}]\begingroup Velocity in x-direction \nomunit{m/s}\nomeqref {3.14}|nompageref}{21}
-\nomenclatureentry{Rb0$V_{y}$@[{$V_{y}$}]\begingroup Velocity in y-direction \nomunit{m/s}\nomeqref {3.14}|nompageref}{21}
-\nomenclatureentry{Rb0$V_{z}$@[{$V_{z}$}]\begingroup Velocity in z-direction \nomunit{m/s}\nomeqref {3.14}|nompageref}{21}
-\nomenclatureentry{Ra0$a$@[{$a$}]\begingroup Semi-major axis \nomunit{m}\nomeqref {3.15}|nompageref}{21}
-\nomenclatureentry{Ra2$i$@[{$i$}]\begingroup Inclination \nomunit{rad}\nomeqref {3.18}|nompageref}{21}
-\nomenclatureentry{Ra4$m_{prop}$@[{$m_{prop}$}]\begingroup Propellant mass \nomunit{kg}\nomeqref {3.19}|nompageref}{21}
-\nomenclatureentry{Rb3$\mathbf{x}_{i}$@[{$\mathbf{x}_{i}$}]\begingroup Current data point\nomunit{-}\nomeqref {4.0}|nompageref}{23}
-\nomenclatureentry{Rb3$\mathbf{x}_{i+1}$@[{$\mathbf{x}_{i+1}$}]\begingroup Next data point\nomunit{-}\nomeqref {4.0}|nompageref}{23}
-\nomenclatureentry{Ra1$h$@[{$h$}]\begingroup (Current) step-size\nomunit{s}\nomeqref {4.0}|nompageref}{23}
-\nomenclatureentry{Ga5$\Phi$@[{$\Phi$}]\begingroup Increment function\nomunit{-}\nomeqref {4.0}|nompageref}{23}
-\nomenclatureentry{Ga3$\eta$@[{$\eta$}]\begingroup Numerical approximation\nomunit{-}\nomeqref {4.0}|nompageref}{23}
-\nomenclatureentry{Ra7$t_{0}$@[{$t_{0}$}]\begingroup Initial time\nomunit{s}\nomeqref {4.1}|nompageref}{23}
-\nomenclatureentry{Ra3$k$@[{$k$}]\begingroup Runge-Kutta increment derivative \nomunit{-}\nomeqref {4.3}|nompageref}{25}
-\nomenclatureentry{Ra0$a_{i,j}$@[{$a_{i,j}$}]\begingroup \ac{RKF} coefficients of the previous time-derivatives \nomunit{-}\nomeqref {4.4}|nompageref}{25}
-\nomenclatureentry{Ra0$b_{i}$@[{$b_{i}$}]\begingroup \ac{RKF} weights for each point  \nomunit{-}\nomeqref {4.4}|nompageref}{25}
-\nomenclatureentry{Ra0$c_{i}$@[{$c_{i}$}]\begingroup \ac{RKF} step-size weights \nomunit{-}\nomeqref {4.4}|nompageref}{25}
-\nomenclatureentry{Ra5$n$@[{$n$}]\begingroup Order \nomunit{-}\nomeqref {4.4}|nompageref}{25}
-\nomenclatureentry{Rb1$x$@[{$x$}]\begingroup State variable \nomunit{-}\nomeqref {4.4}|nompageref}{25}
-\nomenclatureentry{Ra7$t$@[{$t$}]\begingroup Time \nomunit{s}\nomeqref {4.4}|nompageref}{25}
-\nomenclatureentry{Rb4$\mathbf{X}$@[{$\mathbf{X}$}]\begingroup State vector \nomunit{-}\nomeqref {5.0}|nompageref}{26}
-\nomenclatureentry{Rb1$x_{n}$@[{$x_{n}$}]\begingroup n$^{\text{th}}$ state variable \nomunit{-}\nomeqref {5.0}|nompageref}{26}
-\nomenclatureentry{Ra9$T_{n,k}$@[{$T_{n,k}$}]\begingroup Truncation error \nomunit{-}\nomeqref {5.0}|nompageref}{26}
-\nomenclatureentry{Ra4$K$@[{$K$}]\begingroup Maximum order \nomunit{-}\nomeqref {5.0}|nompageref}{26}
-\nomenclatureentry{Ra3$k$@[{$k$}]\begingroup Order derivative \nomunit{-}\nomeqref {5.0}|nompageref}{26}
-\nomenclatureentry{Rb1$x_{n}$@[{$x_{n}$}]\begingroup Auxiliary equation \nomunit{-}\nomeqref {5.1}|nompageref}{26}
-\nomenclatureentry{Rb0$u_{n}$@[{$u_{n}$}]\begingroup Auxiliary derivative \nomunit{-}\nomeqref {5.1}|nompageref}{26}
-\nomenclatureentry{Rb1$w_{n,i}$@[{$w_{n,i}$}]\begingroup Auxiliary function \nomunit{-}\nomeqref {5.1}|nompageref}{26}
-\nomenclatureentry{Ra1$f_{n}$@[{$f_{n}$}]\begingroup Auxiliary placeholder function \nomunit{-}\nomeqref {5.1}|nompageref}{26}
-\nomenclatureentry{Ra1$g_{n}$@[{$g_{n}$}]\begingroup Auxiliary placeholder function \nomunit{-}\nomeqref {5.1}|nompageref}{26}
-\nomenclatureentry{Rb3$X$@[{$X$}]\begingroup Taylor Series coefficient (also $X_{n}$) \nomunit{-}\nomeqref {5.5}|nompageref}{27}
-\nomenclatureentry{Ga3$\eta$@[{$\eta$}]\begingroup Step multiplication factor \nomunit{-}\nomeqref {5.6}|nompageref}{28}
-\nomenclatureentry{Ga3$\tau$@[{$\tau$}]\begingroup Local error tolerance \nomunit{-}\nomeqref {5.6}|nompageref}{28}
-\nomenclatureentry{Ra1$f$@[{$f$}]\begingroup Limit function \nomunit{-}\nomeqref {5.7}|nompageref}{28}
-\nomenclatureentry{Ga0$\alpha$@[{$\alpha$}]\begingroup Root-finding curve coefficient \nomunit{-}\nomeqref {5.9}|nompageref}{29}
-\nomenclatureentry{Ra6$\textbf{r}$@[{$\textbf{r}$}]\begingroup Radius vector \nomunit{-}\nomeqref {5.12}|nompageref}{30}
-\nomenclatureentry{Rb1$\textbf{V}$@[{$\textbf{V}$}]\begingroup Velocity vector \nomunit{-}\nomeqref {5.12}|nompageref}{30}
-\nomenclatureentry{Ra0$a_{g}$@[{$a_{g}$}]\begingroup Gravitational acceleration \nomunit{m/s$^{2}$}\nomeqref {5.16}|nompageref}{31}
-\nomenclatureentry{Ra0$a_{D}$@[{$a_{D}$}]\begingroup Drag acceleration \nomunit{m/s$^{2}$}\nomeqref {5.16}|nompageref}{31}
-\nomenclatureentry{Ra0$a_{T}$@[{$a_{T}$}]\begingroup Thrust acceleration \nomunit{m/s$^{2}$}\nomeqref {5.16}|nompageref}{31}
-\nomenclatureentry{Ra1$C$@[{$C$}]\begingroup Transformation matrix coefficient \nomunit{-}\nomeqref {5.51}|nompageref}{37}
-\nomenclatureentry{Ra3$\mathbf{\hat{i}}$@[{$\mathbf{\hat{i}}$}]\begingroup Unit vector in x-direction \nomunit{-}\nomeqref {5.53}|nompageref}{37}
-\nomenclatureentry{Ra3$\mathbf{\hat{j}}$@[{$\mathbf{\hat{j}}$}]\begingroup Unit vector in y-direction \nomunit{-}\nomeqref {5.53}|nompageref}{37}
-\nomenclatureentry{Ra4$\mathbf{\hat{k}}$@[{$\mathbf{\hat{k}}$}]\begingroup Unit vector in z-direction \nomunit{-}\nomeqref {5.53}|nompageref}{37}
+\nomenclatureentry{Rb0$\mathbb{T}$@[{$\mathbb{T}$}]\begingroup Transformation matrix \nomunit{-}\nomeqref {3.0}|nompageref}{11}
+\nomenclatureentry{Ga4$\phi$@[{$\phi$}]\begingroup General Euler angle \nomunit{rad}\nomeqref {3.1}|nompageref}{11}
+\nomenclatureentry{Rb1$x$@[{$x$}]\begingroup x-position coordinate \nomunit{m}\nomeqref {3.1}|nompageref}{11}
+\nomenclatureentry{Rb5$y$@[{$y$}]\begingroup y-position coordinate \nomunit{m}\nomeqref {3.1}|nompageref}{11}
+\nomenclatureentry{Rb5$z$@[{$z$}]\begingroup z-position coordinate \nomunit{m}\nomeqref {3.1}|nompageref}{11}
+\nomenclatureentry{Ra5$r$@[{$r$}]\begingroup Radius \nomunit{m}\nomeqref {3.1}|nompageref}{11}
+\nomenclatureentry{Ga1$\delta$@[{$\delta$}]\begingroup Latitude \nomunit{rad}\nomeqref {3.1}|nompageref}{11}
+\nomenclatureentry{Ga3$\lambda$@[{$\lambda$}]\begingroup Inertial longitude \nomunit{rad}\nomeqref {3.1}|nompageref}{11}
+\nomenclatureentry{Rb0$V$@[{$V$}]\begingroup Velocity \nomunit{m/s}\nomeqref {3.2}|nompageref}{12}
+\nomenclatureentry{Ra4$m_{MAV}$@[{$m_{MAV}$}]\begingroup \ac{MAV} mass \nomunit{kg}\nomeqref {3.2}|nompageref}{12}
+\nomenclatureentry{Ra0$a$@[{$a$}]\begingroup Acceleration \nomunit{m/s$^{2}$}\nomeqref {3.3}|nompageref}{12}
+\nomenclatureentry{Ca7$g_{0}$@[{$g_{0}$}]\begingroup Standard gravitational acceleration at Earth sea level \nomunit{9.80665 m/s$^{2}$}\nomeqref {3.3}|nompageref}{12}
+\nomenclatureentry{Ra8$T$@[{$T$}]\begingroup Thrust \nomunit{N}\nomeqref {3.3}|nompageref}{12}
+\nomenclatureentry{Ra2$I_{sp}$@[{$I_{sp}$}]\begingroup Specific impulse \nomunit{s}\nomeqref {3.3}|nompageref}{12}
+\nomenclatureentry{Ca7$\Omega_{M}$@[{$\Omega_{M}$}]\begingroup Rotational velocity of Mars \nomunit{7.088$\cdot$10$^{-5}$ rad/s}\nomeqref {3.4}|nompageref}{13}
+\nomenclatureentry{Ra7$t_{O}$@[{$t_{O}$}]\begingroup Difference between current time and the inertial frame set time \nomunit{s}\nomeqref {3.4}|nompageref}{13}
+\nomenclatureentry{Ga6$\omega_{P}$@[{$\omega_{P}$}]\begingroup Off-set angle between inertial frame and zero meridian at inertial frame set time \nomunit{rad}\nomeqref {3.4}|nompageref}{13}
+\nomenclatureentry{Ga4$\chi$@[{$\chi$}]\begingroup Heading angle (or azimuth) \nomunit{rad}\nomeqref {3.4}|nompageref}{13}
+\nomenclatureentry{Ga0$\gamma$@[{$\gamma$}]\begingroup Flight-path angle \nomunit{rad}\nomeqref {3.4}|nompageref}{13}
+\nomenclatureentry{Ga3$\tau$@[{$\tau$}]\begingroup Central-body fixed longitude \nomunit{rad}\nomeqref {3.4}|nompageref}{13}
+\nomenclatureentry{Ga5$\psi_{T}$@[{$\psi_{T}$}]\begingroup Thrust azimuth angle \nomunit{rad}\nomeqref {3.4}|nompageref}{13}
+\nomenclatureentry{Ga2$\epsilon_{T}$@[{$\epsilon_{T}$}]\begingroup Thrust elevation angle \nomunit{rad}\nomeqref {3.4}|nompageref}{13}
+\nomenclatureentry{Ca7$\mu$@[{$\mu$}]\begingroup Mars standard gravitational parameter \nomunit{4.2828314$\cdot$10$^{13}$m$^{3}$/s$^{2}$}\nomeqref {3.8}|nompageref}{14}
+\nomenclatureentry{Ra1$D$@[{$D$}]\begingroup Drag \nomunit{N}\nomeqref {3.10}|nompageref}{14}
+\nomenclatureentry{Ga3$\rho$@[{$\rho$}]\begingroup Atmospheric density \nomunit{kg/m$^{3}$}\nomeqref {3.11}|nompageref}{14}
+\nomenclatureentry{Ca7$S$@[{$S$}]\begingroup Reference area \nomunit{0.091 m$^{2}$}\nomeqref {3.11}|nompageref}{14}
+\nomenclatureentry{Ra1$C_{D}$@[{$C_{D}$}]\begingroup Drag coefficient \nomunit{-}\nomeqref {3.11}|nompageref}{14}
+\nomenclatureentry{Ca7$R_{MOLA}$@[{$R_{MOLA}$}]\begingroup Mars \acs{MOLA} reference radius (also $R_{M}$) \nomunit{3396$\cdot$10$^{3}$ m}\nomeqref {3.11}|nompageref}{15}
+\nomenclatureentry{Ra1$h$@[{$h$}]\begingroup Altitude \nomunit{m}\nomeqref {3.11}|nompageref}{15}
+\nomenclatureentry{Ra5$M$@[{$M$}]\begingroup Mach number \nomunit{-}\nomeqref {3.12}|nompageref}{15}
+\nomenclatureentry{Ra0$a$@[{$a$}]\begingroup Speed of sound \nomunit{m/s}\nomeqref {3.12}|nompageref}{15}
+\nomenclatureentry{Ca7$\gamma_{a}$@[{$\gamma_{a}$}]\begingroup Ratio of specific heats \nomunit{1.35}\nomeqref {3.12}|nompageref}{15}
+\nomenclatureentry{Ca7$R_{a}$@[{$R_{a}$}]\begingroup Molar gas constant \nomunit{8.3144598 m$^{2}$ kg s$^{-2}$ K$^{-1}$ mol$^{-1}$}\nomeqref {3.12}|nompageref}{15}
+\nomenclatureentry{Ca7$M_{a}$@[{$M_{a}$}]\begingroup Molecular mass of the Martian atmosphere \nomunit{0.04334 kg/mol}\nomeqref {3.12}|nompageref}{15}
+\nomenclatureentry{Ra8$T_{a}$@[{$T_{a}$}]\begingroup Atmospheric temperature \nomunit{K}\nomeqref {3.12}|nompageref}{15}
+\nomenclatureentry{Ra6$R_{a}^{*}$@[{$R_{a}^{*}$}]\begingroup Specific gas constant \nomunit{m$^{2}$ s$^{-2}$ K$^{-1}$}\nomeqref {3.12}|nompageref}{15}
+\nomenclatureentry{Ra5$p_{n}$@[{$p_{n}$}]\begingroup Polynomial coefficient \nomunit{-}\nomeqref {3.12}|nompageref}{15}
+\nomenclatureentry{Ga2$\Delta V$@[{$\Delta V$}]\begingroup Change in velocity \nomunit{m/s}\nomeqref {3.14}|nompageref}{22}
+\nomenclatureentry{Rb0$V_{x}$@[{$V_{x}$}]\begingroup Velocity in x-direction \nomunit{m/s}\nomeqref {3.14}|nompageref}{22}
+\nomenclatureentry{Rb0$V_{y}$@[{$V_{y}$}]\begingroup Velocity in y-direction \nomunit{m/s}\nomeqref {3.14}|nompageref}{22}
+\nomenclatureentry{Rb0$V_{z}$@[{$V_{z}$}]\begingroup Velocity in z-direction \nomunit{m/s}\nomeqref {3.14}|nompageref}{22}
+\nomenclatureentry{Ra0$a$@[{$a$}]\begingroup Semi-major axis \nomunit{m}\nomeqref {3.15}|nompageref}{22}
+\nomenclatureentry{Ra2$i$@[{$i$}]\begingroup Inclination \nomunit{rad}\nomeqref {3.18}|nompageref}{22}
+\nomenclatureentry{Ra4$m_{prop}$@[{$m_{prop}$}]\begingroup Propellant mass \nomunit{kg}\nomeqref {3.19}|nompageref}{22}
+\nomenclatureentry{Rb3$\mathbf{x}_{i}$@[{$\mathbf{x}_{i}$}]\begingroup Current data point\nomunit{-}\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{Rb3$\mathbf{x}_{i+1}$@[{$\mathbf{x}_{i+1}$}]\begingroup Next data point\nomunit{-}\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{Ra1$h$@[{$h$}]\begingroup (Current) step-size\nomunit{s}\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{Ga5$\Phi$@[{$\Phi$}]\begingroup Increment function\nomunit{-}\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{Ga3$\eta$@[{$\eta$}]\begingroup Numerical approximation\nomunit{-}\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{Ra7$t_{0}$@[{$t_{0}$}]\begingroup Initial time\nomunit{s}\nomeqref {4.1}|nompageref}{24}
+\nomenclatureentry{Ra3$k$@[{$k$}]\begingroup Runge-Kutta increment derivative \nomunit{-}\nomeqref {4.3}|nompageref}{26}
+\nomenclatureentry{Ra0$a_{i,j}$@[{$a_{i,j}$}]\begingroup \ac{RKF} coefficients of the previous time-derivatives \nomunit{-}\nomeqref {4.4}|nompageref}{26}
+\nomenclatureentry{Ra0$b_{i}$@[{$b_{i}$}]\begingroup \ac{RKF} weights for each point  \nomunit{-}\nomeqref {4.4}|nompageref}{26}
+\nomenclatureentry{Ra0$c_{i}$@[{$c_{i}$}]\begingroup \ac{RKF} step-size weights \nomunit{-}\nomeqref {4.4}|nompageref}{26}
+\nomenclatureentry{Ra5$n$@[{$n$}]\begingroup Order \nomunit{-}\nomeqref {4.4}|nompageref}{26}
+\nomenclatureentry{Rb1$x$@[{$x$}]\begingroup State variable \nomunit{-}\nomeqref {4.4}|nompageref}{26}
+\nomenclatureentry{Ra7$t$@[{$t$}]\begingroup Time \nomunit{s}\nomeqref {4.4}|nompageref}{26}
+\nomenclatureentry{Rb4$\mathbf{X}$@[{$\mathbf{X}$}]\begingroup State vector \nomunit{-}\nomeqref {5.0}|nompageref}{27}
+\nomenclatureentry{Rb1$x_{n}$@[{$x_{n}$}]\begingroup n$^{\text{th}}$ state variable \nomunit{-}\nomeqref {5.0}|nompageref}{27}
+\nomenclatureentry{Ra9$T_{n,k}$@[{$T_{n,k}$}]\begingroup Truncation error \nomunit{-}\nomeqref {5.0}|nompageref}{27}
+\nomenclatureentry{Ra4$K$@[{$K$}]\begingroup Maximum order \nomunit{-}\nomeqref {5.0}|nompageref}{27}
+\nomenclatureentry{Ra3$k$@[{$k$}]\begingroup Order derivative \nomunit{-}\nomeqref {5.0}|nompageref}{27}
+\nomenclatureentry{Rb1$x_{n}$@[{$x_{n}$}]\begingroup Auxiliary equation \nomunit{-}\nomeqref {5.1}|nompageref}{28}
+\nomenclatureentry{Rb0$u_{n}$@[{$u_{n}$}]\begingroup Auxiliary derivative \nomunit{-}\nomeqref {5.1}|nompageref}{28}
+\nomenclatureentry{Rb1$w_{n,i}$@[{$w_{n,i}$}]\begingroup Auxiliary function \nomunit{-}\nomeqref {5.1}|nompageref}{28}
+\nomenclatureentry{Ra1$f_{n}$@[{$f_{n}$}]\begingroup Auxiliary placeholder function \nomunit{-}\nomeqref {5.1}|nompageref}{28}
+\nomenclatureentry{Ra1$g_{n}$@[{$g_{n}$}]\begingroup Auxiliary placeholder function \nomunit{-}\nomeqref {5.1}|nompageref}{28}
+\nomenclatureentry{Rb3$X$@[{$X$}]\begingroup Taylor Series coefficient (also $X_{n}$) \nomunit{-}\nomeqref {5.5}|nompageref}{28}
+\nomenclatureentry{Ga3$\eta$@[{$\eta$}]\begingroup Step multiplication factor \nomunit{-}\nomeqref {5.6}|nompageref}{29}
+\nomenclatureentry{Ga3$\tau$@[{$\tau$}]\begingroup Local error tolerance \nomunit{-}\nomeqref {5.6}|nompageref}{29}
+\nomenclatureentry{Ra1$f$@[{$f$}]\begingroup Limit function \nomunit{-}\nomeqref {5.7}|nompageref}{29}
+\nomenclatureentry{Ga0$\alpha$@[{$\alpha$}]\begingroup Root-finding curve coefficient \nomunit{-}\nomeqref {5.9}|nompageref}{30}
+\nomenclatureentry{Ra6$\textbf{r}$@[{$\textbf{r}$}]\begingroup Radius vector \nomunit{-}\nomeqref {5.12}|nompageref}{31}
+\nomenclatureentry{Rb1$\textbf{V}$@[{$\textbf{V}$}]\begingroup Velocity vector \nomunit{-}\nomeqref {5.12}|nompageref}{31}
+\nomenclatureentry{Ra0$a_{g}$@[{$a_{g}$}]\begingroup Gravitational acceleration \nomunit{m/s$^{2}$}\nomeqref {5.16}|nompageref}{32}
+\nomenclatureentry{Ra0$a_{D}$@[{$a_{D}$}]\begingroup Drag acceleration \nomunit{m/s$^{2}$}\nomeqref {5.16}|nompageref}{32}
+\nomenclatureentry{Ra0$a_{T}$@[{$a_{T}$}]\begingroup Thrust acceleration \nomunit{m/s$^{2}$}\nomeqref {5.16}|nompageref}{32}
+\nomenclatureentry{Ra1$C$@[{$C$}]\begingroup Transformation matrix coefficient \nomunit{-}\nomeqref {5.51}|nompageref}{38}
+\nomenclatureentry{Ra3$\mathbf{\hat{i}}$@[{$\mathbf{\hat{i}}$}]\begingroup Unit vector in x-direction \nomunit{-}\nomeqref {5.53}|nompageref}{38}
+\nomenclatureentry{Ra3$\mathbf{\hat{j}}$@[{$\mathbf{\hat{j}}$}]\begingroup Unit vector in y-direction \nomunit{-}\nomeqref {5.53}|nompageref}{38}
+\nomenclatureentry{Ra4$\mathbf{\hat{k}}$@[{$\mathbf{\hat{k}}$}]\begingroup Unit vector in z-direction \nomunit{-}\nomeqref {5.53}|nompageref}{38}
