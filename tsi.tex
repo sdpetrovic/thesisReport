@@ -130,7 +130,17 @@ f = h-h_{limit}
 Because this research is based on an ascent trajectory, a new section is reached if the altitude is higher than the lower limit altitude of that section. Therefore, if $f$ > 0 a new section has been reached, and the root-finding method should be used to get the value of $f$ back to zero and thus identify the step-size at which the root of $f$ is located.\\
 
 \noindent
-At the start of the root-finding procedure, two points can be identified. The first point is the starting point of the \ac{MAV} at the beginning of the integration step and the second point is the proposed end point of the \ac{MAV} as suggested by the current step-size. If the new section has been reached it means that the point that the \ac{MAV} is coming from has a limit function value that is below zero, or $f_{From}$ < 0. The mission time at that point is given by $t_{From}$. This is the original mission time ($t_{original}$) at the start of the integration and it is therefore the goal to find $h_{req}$ (required step-size) such that $t_{original}+h_{req}$ results in the final limit function value, $f_{new}$ = 0. The mission time at the second point (where the \ac{MAV} was headed when the section was crossed) is given by $t_{To}$ with the corresponding $f_{To}$ > 0. This means that $f_{new}$ and $t_{new}$ are located somewhere between these original points. The method described by \cite{bergsma2015application} should result in a spiralling motion that (slowly) converges to the root. This means that the root-finding method is always evaluated from the "from" point to the "to" point, irrespective of on which side of the root the next starting point is. \\
+At the start of the root-finding procedure, two points can be identified. The first point is the starting point of the \ac{MAV} at the beginning of the integration step and the second point is the proposed end point of the \ac{MAV} as suggested by the current step-size. If the new section has been reached it means that the point that the \ac{MAV} is coming from has a limit function value that is below zero, or $f_{From}$ < 0. The mission time at that point is given by $t_{From}$. This is the original mission time ($t_{original}$) at the start of the integration and it is therefore the goal to find $h_{req}$ (required step-size) such that $t_{original}+h_{req}$ results in the final limit function value, $f_{new}$ = 0. The mission time at the second point (where the \ac{MAV} was headed when the section was crossed) is given by $t_{To}$ with the corresponding $f_{To}$ > 0. This means that $f_{new}$ and $t_{new}$ are located somewhere between these original points. The method described by \cite{bergsma2015application} should result in a spiralling motion that (slowly) converges to the root. This means that the root-finding method is always evaluated from the "from" point to the "to" point, irrespective of on which side of the root the next starting point is as depicted by \Cref{fig:rootFindingMethod_bergsma2015application}. \\
+
+
+
+
+ \begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/tsi/rootFindingMethod_bergsma2015application.png}
+\caption{Root-finding method based on \cite{bergsma2015application}.}
+\label{fig:rootFindingMethod_bergsma2015application}
+\end{figure}
 
 \noindent
 The first step is to determine the altitude derivative at the current "from" point, or $\dot{f}_{From}$. If the Taylor Series coefficients for the altitude (in this case) are available, then the derivative can directly be computed by combining \Cref{eq:general_taylor,eq:def_u} resulting in \Cref{eq:fFromDot}. Otherwise, the derivative has to be comprised of other known derivatives.

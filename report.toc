@@ -31,10 +31,10 @@
 \contentsline {subsection}{\numberline {5.1.1}Workings of \ac {TSI}}{27}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Step-Size}{29}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Handling Model Sections}{29}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Associated Equations}{30}{section.5.2}
+\contentsline {section}{\numberline {5.2}Associated Equations}{31}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Cartesian Equations, First Case}{31}{subsection.5.2.1}
 \contentsline {subsubsection}{Gravitational Acceleration}{32}{equation.5.2.16}
-\contentsline {subsubsection}{Transformation Angles}{32}{equation.5.2.18}
+\contentsline {subsubsection}{Transformation Angles}{33}{equation.5.2.18}
 \contentsline {subsubsection}{Drag Acceleration}{34}{equation.5.2.27}
 \contentsline {subsubsection}{Thrust Acceleration}{35}{equation.5.2.34}
 \contentsline {subsubsection}{All Accelerations Combined}{36}{equation.5.2.40}
@@ -106,7 +106,7 @@
 \contentsline {section}{\numberline {9.2}Recommendations}{86}{section.9.2}
 \contentsline {subsection}{\numberline {9.2.1}Improvements to the Current \ac {TSI} Program}{86}{subsection.9.2.1}
 \contentsline {subsection}{\numberline {9.2.2}Extra Tests and Additions}{87}{subsection.9.2.2}
-\contentsline {chapter}{Bibliography}{88}{chapter*.108}
+\contentsline {chapter}{Bibliography}{88}{chapter*.109}
 \contentsline {chapter}{\numberline {A}Reference System Transformations}{91}{appendix.A}
 \contentsline {section}{\numberline {A.1}Required Reference Systems}{91}{section.A.1}
 \contentsline {subsection}{\numberline {A.1.1}\acl {MCI} \ac {RF} (I-frame)}{91}{subsection.A.1.1}

@@ -76,6 +76,6 @@
 \nomenclatureentry{Ra0$a_{D}$@[{$a_{D}$}]\begingroup Drag acceleration \nomunit{m/s$^{2}$}\nomeqref {5.16}|nompageref}{32}
 \nomenclatureentry{Ra0$a_{T}$@[{$a_{T}$}]\begingroup Thrust acceleration \nomunit{m/s$^{2}$}\nomeqref {5.16}|nompageref}{32}
 \nomenclatureentry{Ra1$C$@[{$C$}]\begingroup Transformation matrix coefficient \nomunit{-}\nomeqref {5.51}|nompageref}{38}
-\nomenclatureentry{Ra3$\mathbf{\hat{i}}$@[{$\mathbf{\hat{i}}$}]\begingroup Unit vector in x-direction \nomunit{-}\nomeqref {5.53}|nompageref}{38}
-\nomenclatureentry{Ra3$\mathbf{\hat{j}}$@[{$\mathbf{\hat{j}}$}]\begingroup Unit vector in y-direction \nomunit{-}\nomeqref {5.53}|nompageref}{38}
-\nomenclatureentry{Ra4$\mathbf{\hat{k}}$@[{$\mathbf{\hat{k}}$}]\begingroup Unit vector in z-direction \nomunit{-}\nomeqref {5.53}|nompageref}{38}
+\nomenclatureentry{Ra3$\mathbf{\hat{i}}$@[{$\mathbf{\hat{i}}$}]\begingroup Unit vector in x-direction \nomunit{-}\nomeqref {5.53}|nompageref}{39}
+\nomenclatureentry{Ra3$\mathbf{\hat{j}}$@[{$\mathbf{\hat{j}}$}]\begingroup Unit vector in y-direction \nomunit{-}\nomeqref {5.53}|nompageref}{39}
+\nomenclatureentry{Ra4$\mathbf{\hat{k}}$@[{$\mathbf{\hat{k}}$}]\begingroup Unit vector in z-direction \nomunit{-}\nomeqref {5.53}|nompageref}{39}
