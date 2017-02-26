@@ -137,7 +137,7 @@ At the start of the root-finding procedure, two points can be identified. The fi
 
  \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/tsi/rootFindingMethod_bergsma2015application.png}
+\includegraphics[width=0.75\textwidth]{figures/tsi/rootFindingMethod_bergsma2015application.png}
 \caption{Root-finding method based on \cite{bergsma2015application}.}
 \label{fig:rootFindingMethod_bergsma2015application}
 \end{figure}
@@ -658,7 +658,7 @@ w_{27,19} &= D = \frac{1}{2} S w_{27,18}w_{27,12} \\
 
 \subsubsection{Thrust Acceleration}
 \label{subsubsec:tsiThrust}
-The only acceleration component still missing is the thrust acceleration. To be able to write the auxiliary functions for the thrust, \Cref{eq:acc} first has to be rewritten such that all the transformations are gathered into two transformation matrices (see \Cref{eq:accAux}). The transformation matrices are described by \Cref{eq:BPtrans,eq:IBtransTSI} for $\mathbb{T}_{\mathbf{BP}}$ and $\mathbb{T}_{\mathbf{IB}}$ respectively.
+The only acceleration component still missing is the thrust acceleration. To be able to write the auxiliary functions for the thrust, \Cref{eq:acc} first has to be rewritten such that all the transformations are gathered into two transformation matrices (see \Cref{eq:accAux}). The transformation matrices are described by \Cref{eq:BPtransTSI,eq:IBtransTSI} for $\mathbb{T}_{\mathbf{BP}}$ and $\mathbb{T}_{\mathbf{IB}}$ respectively.
 
 \begin{equation} \label{eq:accAux}
 \begin{pmatrix}
@@ -689,7 +689,7 @@ x'_{6}\\
 \end{equation}
 
 
-\begin{equation} \label{eq:BPtrans}
+\begin{equation} \label{eq:BPtransTSI}
 \mathbb{T}_{\mathbf{BP}}=
 \begin{bmatrix}
 \text{c}\psi_{T}\text{c}\epsilon_{T} & -\text{s}\psi_{T} & \text{c}\psi_{T}\text{s}\epsilon_{T}\\
@@ -826,26 +826,27 @@ w_{4,37}\\
 
 \subsubsection{All Accelerations Combined}
 \label{subsubsec:allAcc}
-At this point the gravity accelerations are known in the inertial frame and the drag and thrust accelerations in the body frame. To get the final acceleration vector in the inertial frame, the drag and thrust accelerations have to be transformed from the body frame to the inertial frame using $\mathbb{T}_{\mathbf{IB}}$ resulting in \Cref{eq:DandTInertial}.
+At this point the gravity accelerations are known in the inertial frame and the drag and thrust accelerations in the body frame. To get the final acceleration vector in the inertial frame, the drag and thrust accelerations have to be transformed from the body frame to the inertial frame using $\mathbb{T}_{\mathbf{IB}}$ resulting in \Cref{eq:DandTInertial}.\\
 
+\noindent
+Now including the gravity components as well, the (lengthy) expressions for $x'_{4}$, $x'_{5}$ and $x'_{6}$ become \Cref{eq:u4Com,eq:u5Com,eq:u6Com} respectively.
 
-
-\begin{gather} \label{eq:DandTInertial}
-\mathbb{T}_{\mathbf{IB}}
+\begin{align} \label{eq:DandTInertial}
+&\mathbb{T}_{\mathbf{IB}}
 \begin{pmatrix}
 w_{4,36}\\
 w_{4,37}\\
 -w_{4,38}\\
 \end{pmatrix}
 = \nonumber \\
-\left(
+&\left(
 \begin{matrix}
 w_{4,36}\left( \text{c}\lambda\left(-\text{s}\delta \text{c}\chi \text{c}\gamma +\text{c}\delta \text{s}\gamma \right)-\text{s}\lambda \text{s}\chi \text{c}\gamma \right)  +w_{4,37} \left( \text{c}\lambda \text{s}\delta \text{s}\chi -\text{s}\lambda \text{c}\chi\right)  -w_{4,38} \left( \text{c}\lambda\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)-\text{s}\lambda \text{s}\chi \text{s}\gamma \right) \\
 w_{4,36} \left( \text{s}\lambda\left(-\text{s}\delta \text{c}\chi \text{c}\gamma +\text{c}\delta \text{s}\gamma \right)+\text{c}\lambda \text{s}\chi \text{c}\gamma \right) +w_{4,37} \left( \text{s}\lambda \text{s}\delta \text{s}\chi +\text{c}\lambda \text{c}\chi \right)  -w_{4,38} \left( \text{s}\lambda\left(-\text{s}\delta \text{c}\chi \text{s}\gamma -\text{c}\delta \text{c}\gamma \right)+\text{c}\lambda \text{s}\chi \text{s}\gamma \right) \\
 w_{4,36} \left( \text{c}\delta \text{c}\chi \text{c}\gamma +\text{s}\delta \text{s}\gamma\right) + w_{4,37} \left(  -\text{c}\delta \text{s}\chi \right) -w_{4,38} \left(  \text{c}\delta \text{c}\chi \text{s}\gamma -\text{s}\delta \text{c}\gamma \right) \\
 \end{matrix}
 \right)
-\end{gather}
+\end{align}
 
 %\begin{equation} \label{eq:DandTInertial}
 %\begin{split}
@@ -899,8 +900,7 @@ w_{4,36} \left( \text{c}\delta \text{c}\chi \text{c}\gamma +\text{s}\delta \text
 %\end{matrix}
 %\right)\\
 
-\noindent
-Now including the gravity components as well, the (lengthy) expressions for $x'_{4}$, $x'_{5}$ and $x'_{6}$ become \Cref{eq:u4Com,eq:u5Com,eq:u6Com} respectively.
+
 
 \begin{equation} \label{eq:u4Com}
 \begin{split}
@@ -1106,7 +1106,7 @@ V_{z} \\
 \end{equation}
 
 \subsubsection{Body Frame Unit Vectors}
-So when looking from the inertial frame, there are two state vectors: position and ground velocity. The state changes part due to the accelerations in the body frame $\mathbf{a_{B}}$, which is a vector comprised of the drag and thrust accelerations. This vector has the same length and direction in the body frame and the inertial frame when looking from the inertial frame. Also, any vector is simply a multiplication of the corresponding unit vector. The same holds for the velocity, which means that because the velocity in the body frame is defined through the x-axis of that frame, the unit vector of the ground velocity can be described as the unit vector in the x-direction $\mathbf{\hat{i}}$ as shown by \Cref{eq:iHat}.
+So when looking from the inertial frame, there are two state vectors: position and ground velocity. The state changes part due to the accelerations in the body frame $\mathbf{a_{B}}$, which is a vector comprised of the drag and thrust accelerations. This vector has the same length and direction in the body frame and the inertial frame when looking from the inertial frame. Also, any vector is simply a multiplication of the corresponding unit vector. The same holds for the velocity, which means that because the velocity in the body frame is defined through the x-axis of that frame, the unit vector of the ground velocity can be described as the unit vector in the x-direction $\mathbf{\hat{i}}$ as shown by \Cref{eq:iHat}. This unit vector is also shown in \Cref{fig:cartesian_transformation_mooij1994motion}.
 
 \begin{equation} \label{eq:iHat}
 \mathbf{\hat{i}} = \dfrac{\mathbf{V_{G_{I}}}}{\| \mathbf{V_{G_{I}}}\|}
@@ -1116,8 +1116,7 @@ So when looking from the inertial frame, there are two state vectors: position a
 \nomenclature[Ra3]{$\mathbf{\hat{j}}$}{Unit vector in y-direction \nomunit{-}}
 \nomenclature[Ra4]{$\mathbf{\hat{k}}$}{Unit vector in z-direction \nomunit{-}}
 
-\noindent
-This unit vector is also shown in \Cref{fig:cartesian_transformation_mooij1994motion}.
+
 
  \begin{figure}[H]
 \centering

@@ -27,9 +27,9 @@ The tutorial page of the \ac{Tudat} website\footnote{\label{foot:tudatWiki2} Tud
 \end{table}
 
 \noindent
-The first script was written using the instructions from the tutorial and is called numericalintegrators.cpp. This script uses the rungeKutta4Integrator.h header file and the RungeKutta4IntegratorXd function from this header file. This function requires three inputs: the state derivative function (problem specific), the initial time and the initial state. Using the .integrateTo extension the end state at a certain end time can be computed. This requires the end time and the step-size. For \ac{RK4} the step-size is constant. This resulted in the same values as presented in \Cref{tab:intverdat}.\\
+The first script was written using the instructions from the tutorial and is called numericalintegrators.cpp. This script uses the rungeKutta4Integrator.h header file and the RungeKutta4IntegratorXd function from this header file. This function requires three inputs: the state derivative function (problem specific), the initial time and the initial state. Using the .integrateTo extension the end state at a certain end time can be computed. This requires the end time and the step-size. For \ac{RK4} the step-size is constant. This resulted in the same values as presented in \Cref{tab:intverdat}.
 
-\noindent
+
 The second script was used to test the \ac{RKF} methods. This script is called rungekuttavariable.cpp and uses the rungeKuttaCoefficients.h and rungeKuttaVariableStepSizeIntegrator.h header files. In this case the RungeKuttaVariableStepSizeIntegratorXd function was used which requires the Runge-Kutta coefficients (from the respective header file), the state derivative function (problem specific), the initial time, initial state, zero minimum step-size, infinite maximum step-size, relative tolerance and the absolute tolerance as inputs. In this case the integration can be done in individual steps using .performIntegrationStep with the current step-size as the only input. The current step-size is computed in the integration method itself, but in this case it is checked to make sure that the step-size does not take the function beyond the specified end time. The integration steps are then repeated until the end time is met. Running this script again resulted in the same results as presented in \Cref{tab:intverdat}. \\
 
 \noindent
@@ -95,10 +95,7 @@ Because the circularisation is treated as an instantaneous burn, this only affec
 
 \subsection{Phase 6: Tool Validation}
 \label{subsec:phase6com}
-The most important part of this thesis is the comparison between \ac{RKF78} (from now on simply refered to as the general \ac{RKF}) and \ac{TSI}, therefore these two methods should produce results that can be compared and where the only difference is the manner in which they were computed. Provided that the \ac{RKF} method is verified and validated and the corresponding model validated (as was done in phase 2), \ac{TSI} could be validated using \ac{RKF} with this purpose as mentioned before. However, besides this validation, it should also be checked if these solutions represent a real-life solution to the problem. This means validating both methods against other validated simulation outcomes from other people. Unfortunately, no flight data is available for a Mars ascent case yet. Two \ac{JPL} sources were found that could potentially be used to validate the software: \cite{woolley2015simple} and \cite{benito2016trajectory}. Woolley used an analytical model to approximate an ascent trajectory for different launch cases and conditions, one of which was an \ac{SSTO} launcher which was used for validation. Benito on the other hand used a high-fidelity simulation program to simulate the ascent trajectory of some of the newer concept \ac{MAV} designs numerically. Some of the latest data were provided and were also used for the validation.\\
-
-\noindent
-\Cref{tab:validationCaseWoolley} gives the validation numbers associated with the simulated trajectory of the case as presented by \cite{woolley2015simple}. The left columns show the inputs that were provided and the inputs that were used in the program. The right columns show the results of the simulation as provided and as computed by the program. The thrust angles in that column represent the required thrust angles that were needed as input to get the desired outcome.
+The most important part of this thesis is the comparison between \ac{RKF78} (from now on simply refered to as the general \ac{RKF}) and \ac{TSI}, therefore these two methods should produce results that can be compared and where the only difference is the manner in which they were computed. Provided that the \ac{RKF} method is verified and validated and the corresponding model validated (as was done in phase 2), \ac{TSI} could be validated using \ac{RKF} with this purpose as mentioned before. However, besides this validation, it should also be checked if these solutions represent a real-life solution to the problem. This means validating both methods against other validated simulation outcomes from other people. Unfortunately, no flight data is available for a Mars ascent case yet. Two \ac{JPL} sources were found that could potentially be used to validate the software: \cite{woolley2015simple} and \cite{benito2016trajectory}. Woolley used an analytical model to approximate an ascent trajectory for different launch cases and conditions, one of which was an \ac{SSTO} launcher which was used for validation. Benito on the other hand used a high-fidelity simulation program to simulate the ascent trajectory of some of the newer concept \ac{MAV} designs numerically. Some of the latest data were provided and were also used for the validation. \Cref{tab:validationCaseWoolley} gives the validation values associated with the simulated trajectory of the case as presented by \cite{woolley2015simple}. The left columns show the inputs that were provided and the inputs that were used in the program. The right columns show the results of the simulation as provided and as computed by the program. The thrust angles in that column represent the required thrust angles that were needed as input to get the desired outcome.
 
 
 \begin{table}[H]
@@ -116,7 +113,7 @@ Launch altitude [km \ac{MOLA}] & - & -0.6 & Thrust azimuth [deg] & - & -0.299 \\
 Launch latitude [deg] & 0.0 & 0.0 & Thrust elevation [deg] & - & -0.184 \\ \hline
 Launch longitude [deg] & - & 74.5 & & & \\ \hline
 Launch ground velocity [km/s] & - & 1$\cdot $ 10$^{-5}$ & & & \\ \hline
-Launch \ac{FPA} [deg] & 90 & 89 & & & \\ \hline
+Launch Flight-path angle [deg] & 90 & 89 & & & \\ \hline
 Launch Azimuth [deg] & 90 & 90 & & & \\ \hline
 Desired altitude [km \ac{MOLA}] & 390 & 390 & & & \\ \hline
 Desired inclination [deg] & 45 & 45 & & & \\ \hline
@@ -151,12 +148,32 @@ It can be seen that there are some differences which are caused by the fact that
 \begin{figure}[H]
 \centering
 %\includegraphics[width=1.25 \textwidth]{figures/verification/case1/PlotFigure1SeenFromZoomYaxis.png}
-\makebox[0pt]{\includegraphics[width=1.25 \textwidth]{figures/verification/case1/PlotFigure1SeenFromZoomYaxis.png}}
+\makebox[0pt]{\includegraphics[width=1.15 \textwidth]{figures/verification/case1/TrajectoryCase1SeenFromZoomYaxisReadable.png}}
 \caption{Case 1 trajectory as seen from the y-axis.}
 \label{fig:PlotFigure1SeenFromZoomYaxis}
 \end{figure}
 
 
+
+\begin{table}[H]
+\begin{center}
+\caption{Differences in state between simulation performed using \ac{RKF} and using \ac{TSI} for case 1.}
+\label{tab:differenceEndStateCase1}
+\begin{tabular}{|l|l|l|}
+\hline 
+\textbf{State parameter} & \textbf{Difference} & \textbf{Order of difference} \\ \hline \hline
+x-position [km] & -5.55$\cdot$10$^{-10}$ & less than $\mu$m \\ \hline
+y-position [km] & -5.25$\cdot$10$^{-10}$ & less than $\mu$m \\ \hline
+z-position [km] & 5.06$\cdot$10$^{-10}$ & less than $\mu$m \\ \hline
+x-velocity [km/s] & -3.86$\cdot$10$^{-13}$ & less than nm/s \\ \hline
+y-velocity [km/s] & 1.75$\cdot$10$^{-13}$ & less than nm/s \\ \hline
+z-velocity [km/s] & 4.02$\cdot$10$^{-13}$ & less than nm/s \\ \hline
+Mass [kg] &  -6.25$\cdot$10$^{-13}$ & less than ng \\ \hline
+		
+
+\end{tabular}
+\end{center}
+\end{table}
 
 %\begin{figure}[H]
 %\centering
@@ -165,9 +182,15 @@ It can be seen that there are some differences which are caused by the fact that
 %\label{fig:PlotFigure1SeenFromZoomZaxis}
 %\end{figure}
 
-\noindent
-A similar validation was done using the second case. However, in this case the reference trajectory was provided. The main difference here was that the simulation program is only able to use a constant thrust elevation and azimuth angle at this point. Therefore, the exact profile could not be matched. \cite{benito2016trajectory} also included extra perturbing effects creating another difference. However, it was possible to get a trajectory close to the one provided, which is enough for all current purposes. \Cref{tab:validationCaseBenito} shows the used values and computed parameter values for case 2 (similar to case 1).  
 
+\noindent
+For a proper comparison, the final solution of both \ac{RKF} and \ac{TSI} have to be representative of the same end state. This means that the difference between the end states of both simulations has to be very small. In \Cref{tab:differenceEndStateCase1} the difference in end state between the two integrators is presented. \\
+
+\noindent
+A similar validation was done using the second case. However, in this case the reference trajectory was provided. The main difference here was that the simulation program is only able to use a constant thrust elevation and azimuth angle at this point. Therefore, the exact profile could not be matched. \cite{benito2016trajectory} also included extra perturbing effects creating another difference. However, it was possible to get a trajectory close to the one provided, which is enough for all current purposes. \Cref{tab:validationCaseBenito} shows the used values and computed parameter values for case 2 (similar to case 1). \\ 
+
+\noindent
+Again, the trajectory was visualised, however, this time the reference trajectory was also known. In the figures this is represented by a red line. These are shown in \Cref{fig:2PlotFigure1SeenFromXaxisZoom,fig:2PlotFigure1SeenFromYaxisZoom}.
 
 
 
@@ -186,7 +209,7 @@ Launch altitude [km \ac{MOLA}] & -0.8 & -0.6 & Thrust azimuth [deg] & - & -0.727
 Launch latitude [deg] & 0.0 & 0.0 & Thrust elevation [deg] & - & -0.674 \\ \hline
 Launch longitude [deg] & 90 & 90 & & & \\ \hline
 Launch ground velocity [km/s] & 1$\cdot $ 10$^{-6}$ & 1$\cdot $ 10$^{-6}$ & & & \\ \hline
-Launch \ac{FPA} [deg] & 90 & 89 & & & \\ \hline
+Launch Flight-path angle [deg] & 90 & 89 & & & \\ \hline
 Launch Azimuth [deg] & 90 & 90 & & & \\ \hline
 Desired altitude [km \ac{MOLA}] & 479.19 & 479.19 & & & \\ \hline
 Desired inclination [deg] & 92.69 & 92.69 & & & \\ \hline
@@ -198,8 +221,12 @@ Desired inclination [deg] & 92.69 & 92.69 & & & \\ \hline
 \end{center}
 \end{table}
 
+
 \noindent
-Again, the trajectory was visualised, however, this time the reference trajectory was also known. In the figures this is represented by a red line. These are shown in \Cref{fig:2PlotFigure1SeenFromXaxisZoom,fig:2PlotFigure1SeenFromYaxisZoom}.
+Again, the difference between the outcomes of the two integration methods has to be very small. The differences are presented in \Cref{tab:differenceEndStateCase2}.\\
+
+\noindent
+The difference between the computed (using \ac{RKF} and \ac{TSI}) and provided trajectory (red) can mainly be explained by the thrust elevation and thrust azimuth angle curve of the reference trajectory. This curve was derived from the thrust data provided by \cite{benito2016trajectory} and is shown in \Cref{fig:thrustAzimuthAndElevationDerivedFromCase2Version2}. 
 
 %\Cref{fig:2PlotFigure2Zoom,fig:2PlotFigure1SeenFromXaxisZoom,fig:2PlotFigure1SeenFromYaxisZoom,fig:2PlotFigure1SeenFromZaxisZoom}.
 
@@ -214,27 +241,44 @@ Again, the trajectory was visualised, however, this time the reference trajector
 
 \begin{figure}[H]
 \centering
-\makebox[0pt]{\includegraphics[width=1.25 \textwidth]{figures/verification/case2/PlotFigure1SeenFromXaxisZoom.png}}
+\makebox[0pt]{\includegraphics[width=1.2 \textwidth]{figures/verification/case2/TrajectoryCase2SeenFromXaxisZoomReadable.png}}
 \caption{Case 2 trajectory as seen from the x-axis.}
 \label{fig:2PlotFigure1SeenFromXaxisZoom}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\makebox[0pt]{\includegraphics[width=1.25 \textwidth]{figures/verification/case2/PlotFigure1SeenFromYaxisZoom.png}}
+\makebox[0pt]{\includegraphics[width=1.2 \textwidth]{figures/verification/case2/TrajectoryCase2SeenFromYaxisZoomReadable.png}}
 \caption{Case 2 trajectory as seen from the y-axis.}
 \label{fig:2PlotFigure1SeenFromYaxisZoom}
 \end{figure}
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.8 \textwidth]{figures/verification/case2/PlotFigure1SeenFromZaxisZoom.png}
-%\caption{Case 2 2-D trajectory as seen from the z-axis}
-%\label{fig:2PlotFigure1SeenFromZaxisZoom}
-%\end{figure}
+ 
 
-\noindent
-The difference in trajectory can mainly be explained by the thrust elevation and thrust azimuth angle curve of the reference trajectory. This curve was derived from the thrust data provided by \cite{benito2016trajectory} and is shown in \Cref{fig:thrustAzimuthAndElevationDerivedFromCase2Version2}. 
+\begin{table}[H]
+\begin{center}
+\caption{Differences in state between simulation performed using \ac{RKF} and using \ac{TSI} for case 2.}
+\label{tab:differenceEndStateCase2}
+\begin{tabular}{|l|l|l|}
+\hline 
+\textbf{State parameter} & \textbf{Difference} & \textbf{Order of difference} \\ \hline \hline
+x-position [km] & -3.23$\cdot$10$^{-11}$ & less than $\mu$m \\ \hline
+y-position [km] & 2.26$\cdot$10$^{-10}$ & less than $\mu$m \\ \hline
+z-position [km] & 2.77$\cdot$10$^{-10}$ & less than $\mu$m \\ \hline
+x-velocity [km/s] & -2.02$\cdot$10$^{-14}$ & less than nm/s \\ \hline
+y-velocity [km/s] & 1.46$\cdot$10$^{-13}$ & less than nm/s \\ \hline
+z-velocity [km/s] & 1.77$\cdot$10$^{-13}$ & less than nm/s \\ \hline
+Mass [kg] &  4.26$\cdot$10$^{-14}$ & less than ng \\ \hline
+		
+
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+
+
 
 \begin{figure}[H]
 \centering

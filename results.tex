@@ -16,24 +16,28 @@ For most classic integrators the order is set and cannot be changed easily. For 
 
 \subsection{Optimal Order}
 \label{subsec:optimalOrder}
-To determine the optimal order an important criterion is that the outcome is accurate, however, what is often more important is that this accurate outcome is computed really fast. This is why, to find the optimum order, the CPU time is the most important criterion. To properly observe the effect of a different order, the nominal case is run for different orders. Thus the only difference will be the maximum order. This can be done for the two presented cases. During real-life simulations a user can choose to either collect all the data during the simulation or only store the final outcomes at the end of the simulation. Storing data during the integration requires a large amount of computational power and will therefore increase the CPU time required, but it will provide the user with the desired trajectory data. Both runs with and without live data collection have been run for a specific range of orders depending on the case, and the results are shown in \Cref{fig:orderVsCPUcase1IncludingLiveDataCollection}.
-The first case was run with a maximum order ranging from 5 to 100, and the second case was run from 5 to 31, because of the behaviour observed during the first case runs. 
+To determine the optimal order an important criterion is that the outcome is accurate, however, what is often more important is that this accurate outcome is computed really fast. This is why, to find the optimum order, the CPU time is the most important criterion. 
+
+To properly observe the effect of a different order, the nominal case is run for different orders. Thus the only difference will be the maximum order. This can be done for the two presented cases. During real-life simulations a user can choose to either collect all the data during the simulation or only store the final outcomes at the end of the simulation. Storing data during the integration requires a large amount of computational power and will therefore increase the CPU time required, but it will provide the user with the desired trajectory data. Both runs with and without live data collection have been run for a specific range of orders depending on the case, and the results are shown in \Cref{fig:orderVsCPUcase1IncludingLiveDataCollection}.
+The first case was run with a maximum order ranging from 5 to 100, and the second case was run from 5 to 31, because of the behaviour observed during the first case runs. The number of function evaluations has been plotted in the same graph on a logarithmic scale. It should be noted that any intersections between the CPU curve and the function evaluations curve is meaningless since they use different axes.
 
 
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1IncludingLiveDataCollection.png}\label{subfig:orderVsCPUcase1IncludingLiveDataCollection}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2IncludingLiveDataCollection.png} \label{subfig:orderVsCPUcase2IncludingLiveDataCollection}}\\
+\subfloat[]{\includegraphics[width=3.0in]{figures/results/Order/orderVsCPUandFunctionEvaluatinsCase1LiveDataCollection.png}\label{subfig:orderVsCPUcase1IncludingLiveDataCollection}}
+\hfill 
+\subfloat[]{\includegraphics[width=3.0in]{figures/results/Order/orderVsCPUandFunctionEvaluatinsCase2LiveDataCollection.png} \label{subfig:orderVsCPUcase2IncludingLiveDataCollection}}\\
  
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1NoDataCollection.png}\label{subfig:orderVsCPUcase1NoDataCollection}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2NoDataCollection.png}\label{subfig:orderVsCPUcase2NoDataCollection}}
-\caption{Order versus CPU time \protect\subref{subfig:orderVsCPUcase1IncludingLiveDataCollection} case 1 including live data collection, \protect\subref{subfig:orderVsCPUcase2IncludingLiveDataCollection} case 2 including live data collection, \protect\subref{subfig:orderVsCPUcase1NoDataCollection} case 1 without live data collection, \protect\subref{subfig:orderVsCPUcase2NoDataCollection} case 2 without live data collection. } 
+\subfloat[]{\includegraphics[width=3.0in]{figures/results/Order/orderVsCPUandFunctionEvaluatinsCase1NoLiveDataCollection.png}\label{subfig:orderVsCPUcase1NoDataCollection}} 
+\hfill
+\subfloat[]{\includegraphics[width=3.0in]{figures/results/Order/orderVsCPUandFunctionEvaluatinsCase2NoLiveDataCollection.png}\label{subfig:orderVsCPUcase2NoDataCollection}}
+\caption{Order versus CPU time and number of function evaluations \protect\subref{subfig:orderVsCPUcase1IncludingLiveDataCollection} case 1 including live data collection, \protect\subref{subfig:orderVsCPUcase2IncludingLiveDataCollection} case 2 including live data collection, \protect\subref{subfig:orderVsCPUcase1NoDataCollection} case 1 without live data collection, \protect\subref{subfig:orderVsCPUcase2NoDataCollection} case 2 without live data collection. } 
 \label{fig:orderVsCPUcase1IncludingLiveDataCollection} 
 \end{figure} 
 
 \noindent
-Looking at \Cref{subfig:orderVsCPUcase1IncludingLiveDataCollection} it is clear that the order versus CPU curve can be split up into two phases that have different properties that influence the CPU time. The first phase shows a rapid decrease in the CPU time until order 20 is reached, the second phase continues from that point until the final order is reached. The order has a direct relation to the chosen step-size that \ac{TSI} computes automatically because the step-size is determined by the error tolerance and the difference between the penultimate Taylor series coefficient and the final one (as described in \Cref{subsec:stepSizeTsi}). This means that if these last two coefficients show a large difference, which can happen at lower orders because fewer derivatives are taken into account, the step-size will be lowered; increasing the number of steps. In the first phase, this large number of steps result in a high CPU time. Another factor that affects the CPU time is the number of derivatives taken into account, which is directly related to the order (e.g., 10 as maximum order equals 10 derivatives that are taken into account). At a certain point, an increase in order does not affect the number of steps that much any more, resulting in a decrease of 3 to 1 steps with every order increase. The result is that the number of steps remains approximately the same but the number of derivatives that are taken into account keeps increasing. Every extra derivative means an extra computation per auxiliary equation/variable. This is what is observed in the second phase. Here the effect of adding more computations on the CPU time becomes clear, showing a corresponding increase in CPU time. This tipping point between the two phases can be observed around the lowest CPU time, where the effect of the number of steps and the number of derivative computations equal out. This is therefore the optimum order for the \ac{TSI} method. The two phases can be observed in each of the four graphs, however, because the increase of CPU time, the higher orders were not required and were thus left out in the simulations for case 2. For each of the simulation runs, the two orders which resulted in the lowest CPU time have been recorded in \Cref{tab:orderAndCPUtimes}. This was done because the CPU time measurements had a guaranteed accuracy of three decimal figures.
+Looking at \Cref{subfig:orderVsCPUcase1IncludingLiveDataCollection} it is clear that the order versus CPU curve can be split up into two phases that have different properties that influence the CPU time. The first phase shows a rapid decrease in the CPU time until order 20 is reached, the second phase continues from that point until the final order is reached. The order has a direct relation to the chosen step-size that \ac{TSI} computes automatically because the step-size is determined by the error tolerance and the difference between the penultimate Taylor series coefficient and the final one (as described in \Cref{subsec:stepSizeTsi}). This means that if these last two coefficients show a large difference, which can happen at lower orders because fewer derivatives are taken into account, the step-size will be lowered; increasing the number of steps. In the first phase, this large number of steps result in a high CPU time as can be seen in each of the graphs. Another factor that affects the CPU time is the number of derivatives taken into account, which is directly related to the order (e.g., 10 as maximum order equals 10 derivatives that are taken into account). At a certain point, an increase in order does not affect the number of steps that much any more (the function evaluation curve flattens out), resulting in a decrease of 3 to 1 steps with every order increase. The result is that the number of steps remains approximately the same but the number of derivatives that are taken into account keeps increasing. Every extra derivative means an extra computation per auxiliary equation/variable. This is what is observed in the second phase. Here the effect of adding more computations on the CPU time becomes clear, showing a corresponding increase in CPU time. This tipping point between the two phases can be observed around the lowest CPU time, where the effect of the number of steps and the number of derivative computations equal out. This is therefore the optimum order for the \ac{TSI} method. The two phases can be observed in each of the four graphs, however, because the increase of CPU time, the higher orders were not required and were thus left out in the simulations for case 2. For each of the simulation runs, the two orders which resulted in the lowest CPU time have been recorded in \Cref{tab:orderAndCPUtimes}. This was done because the CPU time measurements had a guaranteed accuracy of three decimal figures.
 
 \begin{table}[H]
 \begin{center}
@@ -120,8 +124,8 @@ For the comparison of the rotating and the non-rotating cases with a varying ord
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase1combined.png}\label{subfig:orderVsCPUcase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/Order/orderVsCPUcase2combined.png}\label{subfig:orderVsCPUcase2combined}}
+\subfloat[]{\includegraphics[width=0.7\textwidth]{figures/results/Order/orderVsCPUcase1combined.png}\label{subfig:orderVsCPUcase1combined}} \\
+\subfloat[]{\includegraphics[width=0.7\textwidth]{figures/results/Order/orderVsCPUcase2combined.png}\label{subfig:orderVsCPUcase2combined}}
 \caption{Order versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:orderVsCPUcase1combined} case 1,  \protect\subref{subfig:orderVsCPUcase2combined} case 2. } 
 \label{fig:orderVsCPUcase1combined} 
 \end{figure} 
@@ -129,18 +133,14 @@ For the comparison of the rotating and the non-rotating cases with a varying ord
 \noindent
 As was mentioned before, the accuracy of  the results is very important. In \Cref{fig:orderVsRKFAbsoluteDifferenceCase1combined} the absolute difference between the nominal end state of \ac{RKF} before circularisation and \ac{TSI} for both the rotating and non-rotating Mars are plotted. A trend can be identified where it is shown that an order of 11 or higher will result in a difference of $\mu$m in position and nm/s in velocity. Even the lowest order of 5 results in an accuracy of less than 10 cm for position and 10 mm/s for velocity. The spikes in the first case are caused by a slight error resulting from the combination of variables that result at those specific orders.
 
-The Taylor series coefficients show that the time steps are similar until approximately 10 seconds. Order 25, 27 and 29 then have a time step resulting in a step end-time of 12.7 - 12.9 seconds, whereas the other orders have a larger time step here. This points to an error in the step-size determination and a combination of variables or state for which the Taylor series coefficients run amok. 
-
-This unfortunately proves that the simulator is not yet robust enough and could still use some improvements. One improvement that might solve this problem is a change in the manner in which the step-size is computed. 
-
-The figures also show that the order at which both \ac{RKF} and \ac{TSI} show the best correlation is at approximately order 20, which is also the minimum CPU time order. Providing extra proof that an order of 20 is optimal.
+The Taylor series coefficients show that the time steps are similar until approximately 10 seconds. Order 25, 27 and 29 then have a time step resulting in a step end-time of 12.7 - 12.9 seconds, whereas the other orders have a larger time step here. This points to an error in the step-size determination and a combination of variables or state for which the Taylor series coefficients run amok. This unfortunately proves that the simulator is not yet robust enough and could still use some improvements. One improvement that might solve this problem is a change in the manner in which the step-size is computed. The figures also show that the order at which both \ac{RKF} and \ac{TSI} show the best correlation is at approximately order 20, which is also the minimum CPU time order. Providing extra proof that an order of 20 is optimal.
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=1.1\textwidth]{figures/results/Order/orderVsRKFAbsoluteDifferenceCase1combined.png}\label{subfig:orderVsRKFAbsoluteDifferenceCase1combined}}\\
+\subfloat[]{\includegraphics[width=1.0\textwidth]{figures/results/Order/orderVsRKFAbsoluteDifferenceCase1combined.png}\label{subfig:orderVsRKFAbsoluteDifferenceCase1combined}}\\
  
  
-\subfloat[]{\includegraphics[width=1.1\textwidth]{figures/results/Order/orderVsRKFAbsoluteDifferenceCase2combined.png}\label{subfig:orderVsRKFAbsoluteDifferenceCase2combined}}
+\subfloat[]{\includegraphics[width=1.0\textwidth]{figures/results/Order/orderVsRKFAbsoluteDifferenceCase2combined.png}\label{subfig:orderVsRKFAbsoluteDifferenceCase2combined}}
 \caption{Difference with respect to \ac{RKF} case for rotating and non-rotating Mars \protect\subref{subfig:orderVsRKFAbsoluteDifferenceCase1combined} case 1,  \protect\subref{subfig:orderVsRKFAbsoluteDifferenceCase2combined} case 2. } 
 \label{fig:orderVsRKFAbsoluteDifferenceCase1combined} 
 \end{figure}
@@ -266,7 +266,8 @@ Here it can be seen that the rotation of Mars does not have a significant influe
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[scale=0.5]{figures/results/errorTolerance/errorToleranceVsCPUcase1combined.png}\label{subfig:errorToleranceVsCPUcase1combined}} 
+\subfloat[]{\includegraphics[scale=0.5]{figures/results/errorTolerance/errorToleranceVsCPUcase1combined.png}\label{subfig:errorToleranceVsCPUcase1combined}} \\
+
 \subfloat[]{\includegraphics[scale=0.5]{figures/results/errorTolerance/errorToleranceVsCPUcase2combined.png}\label{subfig:errorToleranceVsCPUcase2combined}}
 \caption{Error tolerance versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:errorToleranceVsCPUcase1combined} case 1,  \protect\subref{subfig:errorToleranceVsCPUcase2combined} case 2. } 
 \label{fig:orderVsCPUcase1combined} 
@@ -384,14 +385,16 @@ In \Cref{fig:launchAltitudeVsCPUcase1combined} the launch altitude is plotted ag
 
 \begin{figure}[H]
 \centering
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsCPUcase1combined.png}\label{subfig:launchAltitudeVsCPUcase1combined}} 
-\subfloat[]{\includegraphics[width=3.1in]{figures/results/launchAltitude/launchAltitudeVsCPUcase2combined.png}\label{subfig:launchAltitudeVsCPUcase2combined}}
+\subfloat[]{\includegraphics[width=0.5\textwidth]{figures/results/launchAltitude/launchAltitudeVsCPUcase1combined.png}\label{subfig:launchAltitudeVsCPUcase1combined}} 
+\subfloat[]{\includegraphics[width=0.5\textwidth]{figures/results/launchAltitude/launchAltitudeVsCPUcase2combined.png}\label{subfig:launchAltitudeVsCPUcase2combined}}
 \caption{Launch altitude versus CPU time for rotating and non-rotating Mars \protect\subref{subfig:launchAltitudeVsCPUcase1combined} case 1,  \protect\subref{subfig:launchAltitudeVsCPUcase2combined} case 2. } 
 \label{fig:launchAltitudeVsCPUcase1combined} 
 \end{figure} 
 
 \noindent
 Randomness can also be observed when looking at the consecutive difference for the rotating runs in \Cref{fig:launchAltitudeVsConsecutiveDifferenceCase1combinedSmall}. Here the z-position and z-velocity show some slight deviations for case 1, and in the curves of case 2 the rotating states all show deviations. However, it is interesting to notice that no deviations are observed for the non-rotating runs, which means that all the deviations are caused by rotating effects. A similar behaviour can be observed in the nominal absolute difference graphs presented in \Cref{fig:launchAltitudeVsNominalAbsoluteDifferenceCase1combinedSmall}. Here case 1 shows almost no deviations except for the z-position and z-velocity. However, again large deviations can be observed for case 2. These deviations can be caused by the fact that for case 2 the \ac{MAV} is launched due east but quickly heads south therefore going against the rotation of Mars and creating variations that are not observed for the non-rotating Mars.
+
+Another example of the effect of the rotating Mars can be seen in the radius graphs in \Cref{fig:launchAltitudeVsRadiusCase1combined}. Because in both case 1 and 2 the \ac{MAV} is launched due east on the equator it is able to get an initial $\Delta$V boost. This increase in velocity compared to the non-rotating Mars results in a final radius that is higher than the non-rotating Mars runs for both case 1 and case 2. It can also be observed that the radius of the final orbit increases with an increase in launch altitude. This could be a direct effect of both the drag and the gravitational acceleration, because the atmosphere becomes less dense and the gravitational acceleration becomes smaller the further away from the surface the \ac{MAV} is, which is independent of the latitude and the longitude.
 
 \begin{figure}[H]
 \centering
@@ -411,8 +414,7 @@ Randomness can also be observed when looking at the consecutive difference for t
 \label{fig:launchAltitudeVsNominalAbsoluteDifferenceCase1combinedSmall} 
 \end{figure} 
 
-\noindent
-Another example of the effect of the rotating Mars can be seen in the radius graphs in \Cref{fig:launchAltitudeVsRadiusCase1combined}. Because in both case 1 and 2 the \ac{MAV} is launched due east on the equator it is able to get an initial $\Delta$V boost. This increase in velocity compared to the non-rotating Mars results in a final radius that is higher than the non-rotating Mars runs for both case 1 and case 2. It can also be observed that the radius of the final orbit increases with an increase in launch altitude. This could be a direct effect of both the drag and the gravitational acceleration, because the atmosphere becomes less dense and the gravitational acceleration becomes smaller the further away from the surface the \ac{MAV} is, which is independent of the latitude and the longitude.
+
 
 
 
@@ -462,6 +464,7 @@ For the latitude comparisons, the CPU time, radius and velocity are compared.  T
 
 The difference in trend is explained by the different ascent trajectories. Case 1 is tuned for a north-east trajectory and case 2 is tuned for a south-south-west trajectory.
 
+\Cref{fig:launchLatitudeVsRadiusCase1combined} shows the radius for each of the launch latitudes for both cases. Again, as expected the launch latitude does not have an effect on the non-rotating runs, however it does seem to have a large effect on the rotating runs. 
 
 \begin{figure}[H]
 \centering
@@ -471,8 +474,7 @@ The difference in trend is explained by the different ascent trajectories. Case 
 \label{fig:launchLatitudeVsCPUcase1combined} 
 \end{figure} 
 
-\noindent
-\Cref{fig:launchLatitudeVsRadiusCase1combined} shows the radius for each of the launch latitudes for both cases. Again, as expected the launch latitude does not have an effect on the non-rotating runs, however it does seem to have a large effect on the rotating runs. 
+
 
 \begin{figure}[H]
 \centering
@@ -590,8 +592,7 @@ The difference in end radius follows from a difference in velocity. Because the 
 
 \section{Flight-Path Angle}
 \label{sec:flightPathAngle}
-Previously, the cut-off criterion was always set to be a certain end time. However, for the \ac{FPA} it is better to set the cut-off criterion as the point when the simulation reaches the zero degree \ac{FPA}. This means that not only the final altitude will be different but also the simulation run time. It is expected that an \ac{MAV} launched at a lower launch \ac{FPA} will reach the cut-off criterion earlier compared to a high flight-path angle launch. A lower simulation time will equal fewer function evaluations. This is shown in \Cref{fig:FPAvsFunctionEvaluationsCase1combined}, where it is clear that for both the rotating and the non-rotating Mars runs the number of function evaluations decrease with a decrease in \ac{FPA} for both cases. It also shows that the number of function evaluations does not differ much compared to the non-rotating runs, but the two curves do seem to diverge slightly with a higher \ac{FPA}. This is expected since the simulation run time is higher as well.  
-
+Previously, the cut-off criterion was always set to be a certain end time. However, for the \ac{FPA} it is better to set the cut-off criterion as the point when the simulation reaches the zero degree \ac{FPA}. This means that not only the final altitude will be different but also the simulation run time. It is expected that an \ac{MAV} launched at a lower launch \ac{FPA} will reach the cut-off criterion earlier compared to a high flight-path angle launch. A lower simulation time will equal fewer function evaluations. This is shown in \Cref{fig:FPAvsFunctionEvaluationsCase1combined}, where it is clear that for both the rotating and the non-rotating Mars runs the number of function evaluations decrease with a decrease in \ac{FPA} for both cases. It also shows that the number of function evaluations does not differ much compared to the non-rotating runs, but the two curves do seem to diverge slightly with a higher \ac{FPA}. This is expected since the simulation run time is higher as well. This divergent behaviour can also be spotted in \Cref{fig:FPA_functionEvaluationsVsCPUcase1combined}, where the curve of the non-rotating runs is always below the rotating runs. These graphs also show that there is a clear relationship between the number of function evaluations and the required CPU time.
 
 
 
@@ -625,8 +626,7 @@ Previously, the cut-off criterion was always set to be a certain end time. Howev
 \label{fig:FPAvsFunctionEvaluationsCase1combined} 
 \end{figure}
 
-\noindent
-This divergent behaviour can also be spotted in \Cref{fig:FPA_functionEvaluationsVsCPUcase1combined}, where the curve of the non-rotating runs is always below the rotating runs. These graphs also show that there is a clear relationship between the number of function evaluations and the required CPU time. 
+ 
 
 \begin{figure}[H]
 \centering
@@ -636,8 +636,7 @@ This divergent behaviour can also be spotted in \Cref{fig:FPA_functionEvaluation
 \label{fig:FPA_functionEvaluationsVsCPUcase1combined} 
 \end{figure}
 
-\noindent
-As was mentioned in the introduction of this section, the \ac{MAV} launching at a lower \ac{FPA} is expected to reach a lower altitude because the zero degree cut-off criterion is reached earlier in time. This is precisely what is shown in \Cref{fig:FPAvsHeightFromLaunchSiteCase1combined} where the lower \ac{FPA} only reach an effective altitude of a few metres, whereas the higher \ac{FPA}s are able to reached an altitude of a few hundred kilometres. This is also due to the fact that besides the \ac{FPA} nothing else changed in between runs, which in turn means that every run uses the same thrust profile. The nominal thrust profile was set for a \ac{FPA} of 89 degrees. So if the \ac{MAV} is set at a much shallower angle at launch it means that this thrust is directed in a more horizontal direction (in comparison) and will therefore have a much larger effect on the horizontal flight profile.
+
 
 
 \begin{figure}[H]
@@ -648,6 +647,8 @@ As was mentioned in the introduction of this section, the \ac{MAV} launching at 
 \label{fig:FPAvsHeightFromLaunchSiteCase1combined} 
 \end{figure}
 
+\noindent
+As was mentioned in the introduction of this section, the \ac{MAV} launching at a lower \ac{FPA} is expected to reach a lower altitude because the zero degree cut-off criterion is reached earlier in time. This is precisely what is shown in \Cref{fig:FPAvsHeightFromLaunchSiteCase1combined} where the lower \ac{FPA} only reach an effective altitude of a few metres, whereas the higher \ac{FPA}s are able to reached an altitude of a few hundred kilometres. This is also due to the fact that besides the \ac{FPA} nothing else changed in between runs, which in turn means that every run uses the same thrust profile. The nominal thrust profile was set for a \ac{FPA} of 89 degrees. So if the \ac{MAV} is set at a much shallower angle at launch it means that this thrust is directed in a more horizontal direction (in comparison) and will therefore have a much larger effect on the horizontal flight profile.\\
 
 \noindent
 Because each of the runs is cut-off at the zero \ac{FPA}, it is interesting to look at the required propellant mass to reach a circular orbit with the desired inclination at that particular point. Please note that these circularisation burns are assumed to be impulsive and thus only results in an approximation of the required propellant mass. In \Cref{fig:FPAvsPropellantMassCase1combined} the non-rotating Mars curve is situated above the rotating Mars curve. This indicates that, even though it might not be much, the non-rotating Mars case requires more propellant mass to circularise the orbit due to the fact that it is lacking the initial boost of the rotating Mars.
@@ -711,6 +712,7 @@ The final variable that is investigated is the launch heading angle. This angle 
 For case 2 it appears that the heading angle does not have any influence on the number of function evaluations required for the non-rotating runs. This is expected since the rotation of Mars is not included which negates any arbitrary rotational influences. Therefore, the zero degree \ac{FPA} will be reached at the same simulation time. However, case 1 shows that sometimes the number of function evaluations is 46 (between 300 and 0 degrees) and sometimes it is 45. That could only happen if the values are close to the boundary values of the allowed precision which determines the step-size. Therefore, an end time difference of 1 $\mu$s can result in having to perform one more simulation step. 
 For the rotating cases, the effect of the heading angle can clearly be seen, and are almost opposite between the two cases. This again has to do with the programmed trajectory heading. Case 1 has to go north-east which means that a heading angle in the opposite direction will require extra steps to get the \ac{MAV} in the right direction, whereas a heading angle that is more directly pointed to the south pole is beneficial for case 2 and thus decreasing the number of evaluations required.
 
+In \Cref{fig:headingAngle_functionEvaluationsVsCPUcase1combined} the function evaluations are again plotted against the CPU time and here the same trend can be observed as was seen for the \ac{FPA} results.
 
 
 
@@ -723,8 +725,7 @@ For the rotating cases, the effect of the heading angle can clearly be seen, and
 \end{figure}
 
 
-\noindent
-In \Cref{fig:headingAngle_functionEvaluationsVsCPUcase1combined} the function evaluations are again plotted against the CPU time and here the same trend can be observed as was seen for the \ac{FPA} results.
+
 
 
 \begin{figure}[H]
@@ -748,9 +749,8 @@ Because only the heading angle changes but the rest of the variables remain the 
 \end{figure}
 
 \noindent
-The reached altitude might be higher, but the propellant mass required to reach the desired orbit inclination and circularise the orbit at that altitude might be very high as well. In fact, \Cref{fig:headingAnglevsPropellantMassCase1combined} shows that there are only two local minima when it comes to propellant use. And one of these local minima is the global minimum at 90 degrees for which the nominal case was adjusted. These second minima were however a bit unexpected at first. For the first case it lies at 180 degrees and the second case at 270 degrees. When taking a closer look it becomes clear that these are the cases where the \ac{MAV} is able to get into the same orbit but then passing over the equator from north to south in case 1 and from south to north in case 2. Effectively thus not requiring much energy for the change in inclination.\\
+The reached altitude might be higher, but the propellant mass required to reach the desired orbit inclination and circularise the orbit at that altitude might be very high as well. In fact, \Cref{fig:headingAnglevsPropellantMassCase1combined} shows that there are only two local minima when it comes to propellant use. And one of these local minima is the global minimum at 90 degrees for which the nominal case was adjusted. These second minima were however a bit unexpected at first. For the first case it lies at 180 degrees and the second case at 270 degrees. When taking a closer look it becomes clear that these are the cases where the \ac{MAV} is able to get into the same orbit but then passing over the equator from north to south in case 1 and from south to north in case 2. Effectively thus not requiring much energy for the change in inclination.
 
-\noindent
 This same behaviour can be seen in the inertial velocity curves for both cases shown in \Cref{fig:headingAngleVsVelocityCase1combined}. 
 
 

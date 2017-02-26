@@ -271,9 +271,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="413.20618"
-     inkscape:cy="761.90691"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="518.38348"
+     inkscape:cy="755.85128"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -321,18 +321,6 @@
          id="tspan4248"
          x="176.77669"
          y="268.38229"
-         style="font-size:20px;line-height:9.00000632%">0</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:9.00000632%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="195.66331"
-       y="505.05408"
-       id="text4246-5"
-       sodipodi:linespacing="9.0000063%"><tspan
-         sodipodi:role="line"
-         id="tspan4248-6"
-         x="195.66331"
-         y="505.05408"
          style="font-size:20px;line-height:9.00000632%">0</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#0000ff;stroke-width:2.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
@@ -397,10 +385,10 @@
          id="tspan6246"
          x="578.43445"
          y="499.80878"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle">original</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle">computed</tspan><tspan
          sodipodi:role="line"
          x="578.43445"
-         y="524.80872"
+         y="524.80878"
          id="tspan6248"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle">h</tspan></text>
     <text
@@ -516,14 +504,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="145.787"
-       y="451.53055"
+       x="135.787"
+       y="446.53055"
        id="text12590-4"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan12592-9"
-         x="145.787"
-         y="451.53055"
+         x="135.787"
+         y="446.53055"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
    style="font-size:20px;fill:#ff0000;stroke:none"
    id="tspan12600-3">f</tspan><tspan
@@ -533,5 +521,22 @@
    id="tspan12606-5">f</tspan><tspan
    style="font-size:12.5px;fill:#008000"
    id="tspan12598-49">to</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="202.33322"
+       y="501.13275"
+       id="text6244-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="202.33322"
+         y="501.13275"
+         id="tspan6248-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle">original</tspan><tspan
+         sodipodi:role="line"
+         x="202.33322"
+         y="526.13275"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle"
+         id="tspan13128">h</tspan></text>
   </g>
 </svg>

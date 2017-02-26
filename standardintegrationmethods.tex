@@ -98,21 +98,25 @@ During the early verification process \ac{RKF45}, \ac{RKF78} and \ac{DOPRIN87} w
 
 \section{Workings of \ac{RKF}}
 \label{sec:rkf}
-The principle behind \ac{RKF} is perhaps best explained by first looking at a simpler Runge-Kutta method such as \ac{RK4}. \cite{noomen2013int} provides a simple explanation of the workings of \ac{RK4} that have been adapted here. In this case, use is made of the general formulation for the numerical approximation as was shown in \Cref{eq:integration}. The increment function for \ac{RK4} is then presented by \Cref{eq:rk4_increment}. In this case four points are used to approximate the next state as visualised in \Cref{fig:rk4_noomen2013int}. 
+The principle behind \ac{RKF} is perhaps best explained by first looking at a simpler Runge-Kutta method such as \ac{RK4}. \cite{noomen2013int} provides a simple explanation of the workings of \ac{RK4} that have been adapted here. 
+
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/integrators/rk4_noomen2013int.jpg}
+\caption{Principle of \ac{RK4} for a single parameter \cite{noomen2013int}.}
+\label{fig:rk4_noomen2013int}
+\end{figure}
 
 \begin{equation} \label{eq:rk4_increment}
 \Phi_{RK4}=\dfrac{1}{6}\left(k_{1}+2k_{2}+2k_{3}+k_{4}\right)
 \end{equation}
 
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.3\textwidth]{figures/integrators/rk4_noomen2013int.jpg}
-\caption{Principle of \ac{RK4} for a single parameter \cite{noomen2013int}.}
-\label{fig:rk4_noomen2013int}
-\end{figure}
-
 \noindent
+In this case, use is made of the general formulation for the numerical approximation as was shown in \Cref{eq:integration}. The increment function for \ac{RK4} is then presented by \Cref{eq:rk4_increment}. In this case four points are used to approximate the next state as visualised in \Cref{fig:rk4_noomen2013int}. 
+
 Runge-Kutta works with the time-derivatives at those points. The derivative at the first point is called $k_{1}$, at the second point $k_{2}$ etcetera. These time derivatives are used both in the increment function but also in the process of determining the derivative of the next intermediate point as shown by \Cref{eq:k}.
 
 \begin{equation} \label{eq:k}

@@ -17,41 +17,13 @@ The main goal of this thesis is to determine if \ac{TSI} is an integrator that c
 
 In this research problem, different perturbations are best modelled in different reference frames. One example is the drag acceleration acting in the aerodynamic frame. However, the integration will be performed in the inertial frame. A collection of all the different frames required is shown in \Cref{fig:allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij1994motion}.
 
-\begin{figure}[H]
-\centering
-\subfloat[]{\includegraphics[width=0.5\textwidth]{figures/reference_frames/eci_mooij2013fd_noBox.jpg}\label{subfig:eci_mooij2013fd_noBox}} 
-\subfloat[]{\includegraphics[width=0.5\textwidth]{figures/reference_frames/ecef_mooij2013fd_noBox.jpg} \label{subfig:ecef_mooij2013fd_noBox}}\\
- 
-\subfloat[]{\includegraphics[width=0.5\textwidth]{figures/reference_frames/vcne_mooij2013fd_noBox.jpg}\label{subfig:vcne_mooij2013fd_noBox}} 
-\subfloat[]{\includegraphics[width=0.5\textwidth]{figures/reference_frames/baseline_liquid_trinidad2012_bframe.jpg}\label{subfig:baseline_liquid_trinidad2012_bframe}}\\
-
-\subfloat[]{\includegraphics[width=0.5\textwidth]{figures/reference_frames/propframe_mooij1994motion.jpg}\label{subfig:propframe_mooij1994motion}}
 
 
-
-\caption{Used reference frames \protect\subref{subfig:eci_mooij2013fd_noBox} (Mars centred) Inertial frame, \protect\subref{subfig:ecef_mooij2013fd_noBox} (Mars centred) Rotational frame, \protect\subref{subfig:vcne_mooij2013fd_noBox} (Vehicle centred) Vertical frame \citep{mooij2013fd}, \protect\subref{subfig:baseline_liquid_trinidad2012_bframe} (Vehicle centred) Body frame \citep{trinidad2012} and \protect\subref{subfig:propframe_mooij1994motion} (Vehicle centred) Propulsion frame \citep{mooij1994motion}. } 
-\label{fig:allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij1994motion} 
-\end{figure} 
-
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=1.0\textwidth]{figures/reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij1994motion.jpg}
-%\caption{a) (Mars centred) Inertial frame, b) (Mars centred) Rotational frame, c) (Vehicle centred) Vertical frame \citep{mooij2013fd}. d) (Vehicle centred) Body frame \citep{trinidad2012}. e) (Vehicle centred) Propulsion frame \citep{mooij1994motion}.}
-%\label{fig:allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij1994motion}
-%\end{figure}
-
-\noindent
 This means that the accelerations have to be translated into the inertial frame through the presented frames. One way to do this is by using so-called transformation matrices ($\mathbb{T}$). These transformation matrices are composed of rotations around different axes over an associated angle $\phi$. An alternative would be to use quaternions instead, which make use of complex numbers. However, due to the workings of \ac{TSI} this was not easily implemented here which is why normal Euler angle transformations were used as the baseline for the rotation equations.  \Cref{fig:exampleXtrans_mooij2013stat} shows a general rotation around the x-axis. When this is set in a matrix, the transformation over the x-, y- and z-axis can be defined in the respective transformation matrices as described by \Cref{eq:allTransMatr}. 
 
 \nomenclature[Rb0]{$\mathbb{T}$}{Transformation matrix \nomunit{-}}
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.5\textwidth]{figures/reference_frames/xtrans_mooij2013stat.jpg}
-\caption{General rotation around the x-axis \citep{mooij2013stat}.}
-\label{fig:exampleXtrans_mooij2013stat}
-\end{figure}
+
 
 
 \begin{equation} \label{eq:allTransMatr}
@@ -78,6 +50,37 @@ This means that the accelerations have to be translated into the inertial frame 
 \noindent
 Besides different reference frames, there are also different coordinate systems in which the state of a vehicle can be expressed. Three of the most used coordinate systems in space flight problems are the cartesian, spherical and keplerian system, and all of those systems (or formulations) are used in this research.\\ 
 This also means that the state should be transformed between these different coordinate sets. In \Cref{fig:sphertocart_noomen2013basicFirst} it is shown how the position of a point can be described in either spherical coordinates or cartesian coordinates.
+
+\begin{figure}[H]
+\centering
+\subfloat[]{\includegraphics[width=0.5\textwidth]{figures/reference_frames/eci_mooij2013fd_noBox.jpg}\label{subfig:eci_mooij2013fd_noBox}} 
+\subfloat[]{\includegraphics[width=0.5\textwidth]{figures/reference_frames/ecef_mooij2013fd_noBox.jpg} \label{subfig:ecef_mooij2013fd_noBox}}\\
+ 
+\subfloat[]{\includegraphics[width=0.5\textwidth]{figures/reference_frames/vcne_mooij2013fd_noBox.jpg}\label{subfig:vcne_mooij2013fd_noBox}} 
+\subfloat[]{\includegraphics[width=0.5\textwidth]{figures/reference_frames/baseline_liquid_trinidad2012_bframe.jpg}\label{subfig:baseline_liquid_trinidad2012_bframe}}\\
+
+\subfloat[]{\includegraphics[width=0.7\textwidth]{figures/reference_frames/propframe_mooij1994motion.jpg}\label{subfig:propframe_mooij1994motion}}
+
+
+
+\caption{Used reference frames \protect\subref{subfig:eci_mooij2013fd_noBox} (Mars centred) Inertial frame, \protect\subref{subfig:ecef_mooij2013fd_noBox} (Mars centred) Rotational frame, \protect\subref{subfig:vcne_mooij2013fd_noBox} (Vehicle centred) Vertical frame \citep{mooij2013fd}, \protect\subref{subfig:baseline_liquid_trinidad2012_bframe} (Vehicle centred) Body frame \citep{trinidad2012} and \protect\subref{subfig:propframe_mooij1994motion} (Vehicle centred) Propulsion frame \citep{mooij1994motion}. } 
+\label{fig:allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij1994motion} 
+\end{figure} 
+
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=1.0\textwidth]{figures/reference_frames/allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij1994motion.jpg}
+%\caption{a) (Mars centred) Inertial frame, b) (Mars centred) Rotational frame, c) (Vehicle centred) Vertical frame \citep{mooij2013fd}. d) (Vehicle centred) Body frame \citep{trinidad2012}. e) (Vehicle centred) Propulsion frame \citep{mooij1994motion}.}
+%\label{fig:allFiveReferenceFrames_mooij2013fd-trinidad2012-mooij1994motion}
+%\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/reference_frames/xtrans_mooij2013stat.jpg}
+\caption{General rotation around the x-axis \citep{mooij2013stat}.}
+\label{fig:exampleXtrans_mooij2013stat}
+\end{figure}
 
 
 \begin{figure}[H]
@@ -109,6 +112,8 @@ From this figure the relation can be described between the two different systems
 
 The general model is described in the Mars centred inertial frame in terms of the cartesian state (position and velocity in the x-, y-, and z-direction) and the mass. This is done because the cartesian state formulation in itself does not contain any singularities and will be used in the numerical integrator that will be compared to \ac{TSI}. However, different formulations based on the general model will be used for the propagation tool using \ac{TSI} as will be described in \Cref{ch:tsi}. The general cartesian notation is shown in \Cref{eq:stateModel}, where $m_{MAV}$ is the mass of the \ac{MAV} and the subscript $I$ refers to the inertial frame. This frame is used because the target orbit is a circular orbit around Mars described in the Mars centred inertial frame.
 
+To determine the next state, the change in the state parameters over time have to be computed. This is done by taking the time derivatives of the state as described by \Cref{eq:state_derivativesModel}.
+
 \begin{align} \label{eq:stateModel}
 \mathbf{r}&=\begin{pmatrix}
 x_{I}\\
@@ -129,8 +134,7 @@ m_{MAV}&
 \nomenclature[Ra4]{$m_{MAV}$}{\ac{MAV} mass \nomunit{kg}}
 
 
-\noindent
-To determine the next state, the change in the state parameters over time have to be computed. This is done by taking the time derivatives of the state as described by \Cref{eq:state_derivativesModel}.
+
 
 \begin{align} \label{eq:state_derivativesModel}
 \begin{split} 
@@ -228,6 +232,11 @@ It can be seen that to compute the longitude in the rotating frame ($\tau$) the 
 \noindent
 Similarly, the flight-path angle $\gamma_{G}$ and the azimuth angle $\chi_{G}$ can be described as a function of the current state. For this, some intermediate parameters have to be computed first, which are given by \Cref{eq:intermediateParameters}. Here $V_{I}$ is the velocity in the inertial frame, $V_{G}$ is the velocity in the rotating frame and $V_{x,V}$, $V_{y,V}$ and $V_{z,V}$ are the respective x-, y- and z-velocity components in the vertical frame as depicted by \Cref{fig:vertical_spherical_mooij1994motion}.
 
+Then the angles can be computed using these parameters as shown by \Cref{eq:fpaAndazimuth}.
+
+
+In this case, a transformation from the inertial frame to the vertical frame was required to get information on the velocity in the vertical frame. This transformation was written out in sines and cosines in \Cref{eq:intermediateParameters} resulting in lengthy expressions. 
+
 \begin{equation} \label{eq:intermediateParameters}
 \begin{split}
 V_{I}=&\sqrt{V_{x}^{2}+V_{y}^{2}+V_{z}^{2}}\\
@@ -248,8 +257,7 @@ V_{z,V}=&\left(V_{x}+\Omega_{M}y\right)\cdot \left(\cos\left(\delta\right)\sin\l
 \label{fig:vertical_spherical_mooij1994motion}
 \end{figure}
 
-\noindent
-Then the angles can be computed using these parameters as shown by \Cref{eq:fpaAndazimuth}.
+
 
 
 \begin{equation} \label{eq:fpaAndazimuth}
@@ -259,8 +267,7 @@ Then the angles can be computed using these parameters as shown by \Cref{eq:fpaA
 \end{split}
 \end{equation}
 
-\noindent
-In this case, a transformation from the inertial frame to the vertical frame was required to get information on the velocity in the vertical frame. This transformation was written out in sines and cosines in \Cref{eq:intermediateParameters} resulting in lengthy expressions. \\
+
 
 \noindent
 Now that the rotation angles from the body frame to the inertial frame are known, only the thrust angles and the different accelerations have yet to be defined. This is done in the next sections.
@@ -335,7 +342,7 @@ D=\dfrac{1}{2}\rho V_{A}^{2}SC_{D}
 \nomenclature[Ra1]{$C_{D}$}{Drag coefficient \nomunit{-}}
 
 \noindent
-Also, $S$ is the reference area of the \ac{MAV} set by the user, $\rho$ is the atmospheric density which is a function of the altitude $h\left(=r-R_{MOLA}\right)$ and $C_{D}$ is the drag coefficient of the \ac{MAV} which is a function of the Mach number. The Mach number in turn is a function of the speed of sound, which depends on the air temperature as can be seen in \Cref{eq:machAndSpeedOfSound}.
+Also, $S$ is the reference area of the \ac{MAV} set by the user, $\rho$ is the atmospheric density which is a function of the altitude $h\left(=r-R_{MOLA}\right)$ and $C_{D}$ is the drag coefficient of the \ac{MAV} which is a function of the Mach number. The Mach number in turn is a function of the speed of sound, which depends on the air temperature as can be seen in \Cref{eq:machAndSpeedOfSound}. Here, $R_{a}$ is the molar gas constant, $\gamma_{a}$ is the ratio of specific heats for the Martian atmosphere, which according to \cite{ho2002radio} can be set to $\sim$1.35. $M_{a}$ is the molecular mass of the Martian atmosphere and depends on its composition. \cite{williams2015} mentions a volumetric composition of Mars which results in a mean molecular mass of 0.04334 kg/mol. This value has been used in this research to compute the Specific gas constant $R_{a}^{*}$.
 
 \nomenclature[Ca7]{$R_{MOLA}$}{Mars \acs{MOLA} reference radius (also $R_{M}$) \nomunit{3396$\cdot$10$^{3}$ m}}
 \nomenclature[Ra1]{$h$}{Altitude \nomunit{m}}
@@ -363,39 +370,37 @@ a &= \sqrt{\gamma_{a}R_{a}^{*}T_{a}} \quad \text{where} \quad R_{a}^{*}=\dfrac{R
 
 
 
-\noindent
-Here, $R_{a}$ is the molar gas constant, $\gamma_{a}$ is the ratio of specific heats for the Martian atmosphere, which according to \cite{ho2002radio} can be set to $\sim$1.35. $M_{a}$ is the molecular mass of the Martian atmosphere and depends on its composition. \cite{williams2015} mentions a volumetric composition of Mars which results in a mean molecular mass of 0.04334 kg/mol. This value has been used in this research to compute the Specific gas constant $R_{a}^{*}$.\\
+
 
 \noindent
-The temperature ($T_{{a}}$) change as a function of the altitude. This means that a temperature model of the atmosphere of Mars will have to be used to approximate these values as the ascent vehicle moves through the atmosphere. This is done through a function fit of an atmospheric model, as is described in \Cref{subsec:atmofuncfit}.\\
+The temperature ($T_{{a}}$) changes as a function of the altitude. This means that a temperature model of the atmosphere of Mars will have to be used to approximate these values as the ascent vehicle moves through the atmosphere. This is done through a function fit of an atmospheric model, as is described in \Cref{subsec:atmofuncfit}.
 
-\noindent
 The drag coefficient changes with the Mach number. Therefore, this also requires a function fit to be used in the simulation program. This fit is presented in \Cref{subsec:dragCoefFuncFit}.
 
 \subsection{Atmospheric Density and Temperature Function Fit}
 \label{subsec:atmofuncfit}
 Several commercially available Mars atmospheric models are available that can be used to simulate the Martian atmosphere for use in, for instance, trajectory calculations. One of these models is the 2005 Mars-\acf{GRAM} \citep{justus1990mars} of which the 2005 version is free to use. This model is often used by the TU Delft and \ac{JPL} and has also been used by some of the reference research such as \cite{desai1998} and \cite{trinidad2012}.
-Using Mars-\ac{GRAM} 2005, a table containing altitude, latitude and longitude dependent temperature and density data was produced. The altitude range was -0.6 to 320 km \acr{MOLA} with a step-size of 0.01 km, the latitude and longitude ranges were centred around the example launch site (21.0 $^\circ$N and 74.5 $^\circ$E) with a 10-degree range in each direction and a step-size of 1 degree. The rest of the input parameters were constant and can be seen in \Cref{app:appendixA-marsGRAM-inputFile}. The temperature and density data produced are shown in \Cref{fig:temperatureData,fig:densityData} respectively for nine latitude and longitude combinations including the reference launch site itself. This is therefore a sub-set of the full data volume available in Mars-\ac{GRAM} 2005.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+Using Mars-\ac{GRAM} 2005, a table containing altitude, latitude and longitude dependent temperature and density data was produced. The altitude range was -0.6 to 320 km \acr{MOLA} with a step-size of 0.01 km, the latitude and longitude ranges were centred around the example launch site (21.0 $^\circ$N and 74.5 $^\circ$E) with a 10-degree range in each direction and a step-size of 1 degree. The rest of the input parameters were constant and can be seen in \Cref{app:appendixA-marsGRAM-inputFile}. The temperature and density data produced are shown in \Cref{fig:temperatureData,fig:densityData} respectively for nine latitude and longitude combinations including the reference launch site itself. This is therefore a sub-set of the full data volume available in Mars-\ac{GRAM} 2005. 
+
+Unfortunately, data tables cannot be used when integrating using \ac{TSI}, which is why both these data sets had to be fitted with differentiable functions. The temperature data cannot be fitted smoothly with one function.  Therefore, depending on the altitude range, a different approximation function is required. 
+
+This calls for a polynomial function fitting for different sections of the temperature curve. Polynomial functions are easily differentiated and can be set-up with a large approximation precision of the curve section. The condition to be met for a proper fit came from the differences in the temperature-altitude and density-altitude curves, where the maximum difference with respect to the launch site curve was taken. The first requirement for the standard deviation of the polynomial curve fit was then to be (at least) one order lower than this maximum difference. The second requirement is that the maximum difference between the fit and the nominal launch site curve is lower than the initial maximum difference. The temperature-altitude curve was split into 5 sections as roughly visualised in \Cref{fig:temperatureDataSplit5}. The number of sections comes from both the shape of the curves and the requirement for accuracy and maximum order of the polynomial, which is set at 8 because otherwise the polynomial would get too long. This could result in longer run times and under-representation of certain parts of the curve. Also, the number of sections were to be kept at a minimum to avoid having to switch between too many sections slowing down the computation process. More information on the fitting process is provided in \Cref{app:appendixB-fittingProcessAndResults}.
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/software/temperatureData.png}
+\includegraphics[width=0.65\textwidth]{figures/software/temperatureData.png}
 \caption{Temperature data generated with Mars-\ac{GRAM} 2005 showing different latitude and longitude combinations.}
 \label{fig:temperatureData}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/software/densityData.png}
+\includegraphics[width=0.9\textwidth]{figures/software/densityData.png}
 \caption{Density data generated with Mars-\ac{GRAM} 2005 showing different latitude and longitude combinations.}
 \label{fig:densityData}
 \end{figure}
 
-\noindent
-Unfortunately, data tables cannot be used when integrating using \ac{TSI}, which is why both these data sets had to be fitted with differentiable functions. The temperature data cannot be fitted smoothly with one function.  Therefore, depending on the altitude range, a different approximation function is required. 
-
-This calls for a polynomial function fitting for different sections of the temperature curve. Polynomial functions are easily differentiated and can be set-up with a large approximation precision of the curve section. The condition to be met for a proper fit came from the differences in the temperature-altitude and density-altitude curves, where the maximum difference with respect to the launch site curve was taken. The first requirement for the standard deviation of the polynomial curve fit was then to be (at least) one order lower than this maximum difference. The second requirement is that the maximum difference between the fit and the nominal launch site curve is lower than the initial maximum difference. The temperature-altitude curve was split into 5 sections as roughly visualised in \Cref{fig:temperatureDataSplit5}. The number of sections comes from both the shape of the curves and the requirement for accuracy and maximum order of the polynomial, which is set at 8 because otherwise the polynomial would get too long. This could result in longer run times and under-representation of certain parts of the curve. Also, the number of sections were to be kept at a minimum to avoid having to switch between too many sections slowing down the computation process. More information on the fitting process is provided in \Cref{app:appendixB-fittingProcessAndResults}.
 
 \begin{figure}[H]
 \centering
@@ -430,6 +435,7 @@ A low order is preferred, because then the fitted function will be simpler to ev
 \end{center}
 \end{table}
 
+
 \begin{table}[H]
 \begin{center}
 \caption{Temperature curve fit parameters (rounded to 3 decimal points)}
@@ -446,34 +452,18 @@ A low order is preferred, because then the fitted function will be simpler to ev
 \end{center}
 \end{table}
 
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{figures/software/completePolyFitTempSplit5.png}
-\caption{All section fits for the launch site temperature data curve}
-\label{fig:completePolyFitTempSplit5}
-\end{figure}
-
-
-
 \noindent
 The density fit was slightly more difficult because the curves are all very similar and thus result in a higher accuracy requirement for the fit. At first glance it looks like a natural logarithmic function, unfortunately an ordinary exponential did not fit the curve. This is why a more extensive exponential fit was required. The natural logarithm of the data has been plotted in \Cref{fig:lnPlotDataDen}.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{figures/software/lnPlotDataDen.png}
-\caption{Natural logarithmic plot of the density data}
-\label{fig:lnPlotDataDen}
-\end{figure}
-
-\noindent
 With the data represented in the logarithmic domain, again a polynomial function can be fitted. The total fit then satisfies \Cref{eq:expPoly}.
+
 
 \begin{equation} \label{eq:expPoly}
 y=\exp\left(p_{0}+p_{1}x+\dots+p_{n-1}x^{n-1}+p_{n}x^{n}\right)
 \end{equation}
 
-
+\noindent
+The same polynomial requirements as for the temperature curve were enforced for the density curve as well. However, because the polynomial is used in an exponential, some extra requirements are needed to assure the accuracy of the fit. One requirement is that the maximum difference between the final exponential fit and the normal launch site density curve is smaller than the maximum difference between all the data curves. Also, in this case the standard deviation of the difference between the exponential fit and the normal launch site curve had to be within the range of standard deviations of the difference between the different data curves. This meant that even though an 8$^{\text{th}}$-order polynomial fit could be achieved for the natural logarithmic data with the required accuracy, when converted to the exponential fit, the last two requirements were not met. Earlier it was mentioned that an order higher than 8 was not desirable. However, in this case, a single exponential fit could be achieved using a 10$^\text{th}$-order polynomial. This fit meant that the density curve did not have to be split up at all, which makes the integration slightly easier. Therefore, it was decided that a 10$^\text{th}$-order polynomial was acceptable in this case. The results of the fit are presented in \Cref{tab:fitDeviationsDen,tab:fitParametersDen} and the polynomial and exponential fit curves are shown in \Cref{fig:completeExpPolyFitDen,fig:completeExpFitDen} respectively.
 
 % A logarithmic fit (such as an exponential atmosphere) resulted in a lower overall accuracy than the polynomial fits. In this case the curve was split into three sections, because the differences between the curves were bigger in the lower atmosphere. These sections are illustrated in \Cref{fig:densityDataSplit3}.
 %
@@ -484,8 +474,28 @@ y=\exp\left(p_{0}+p_{1}x+\dots+p_{n-1}x^{n-1}+p_{n}x^{n}\right)
 %\label{fig:densityDataSplit3}
 %\end{figure} 
 
-\noindent
-The same polynomial requirements as for the temperature curve were enforced for the density curve as well. However, because the polynomial is used in an exponential, some extra requirements are needed to assure the accuracy of the fit. One requirement is that the maximum difference between the final exponential fit and the normal launch site density curve is smaller than the maximum difference between all the data curves. Also, in this case the standard deviation of the difference between the exponential fit and the normal launch site curve had to be within the range of standard deviations of the difference between the different data curves. This meant that even though an 8$^{\text{th}}$-order polynomial fit could be achieved for the natural logarithmic data with the required accuracy, when converted to the exponential fit, the last two requirements were not met. Earlier it was mentioned that an order higher than 8 was not desirable. However, in this case, a single exponential fit could be achieved using a 10$^\text{th}$-order polynomial. This fit meant that the density curve did not have to be split up at all, which makes the integration slightly easier. Therefore, it was decided that a 10$^\text{th}$-order polynomial was acceptable in this case. The results of the fit are presented in \Cref{tab:fitDeviationsDen,tab:fitParametersDen} and the polynomial and exponential fit curves are shown in \Cref{fig:completeExpPolyFitDen,fig:completeExpFitDen} respectively.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/software/completePolyFitTempSplit5.png}
+\caption{All section fits for the launch site temperature data curve}
+\label{fig:completePolyFitTempSplit5}
+\end{figure}
+
+
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/software/lnPlotDataDen.png}
+\caption{Natural logarithmic plot of the density data}
+\label{fig:lnPlotDataDen}
+\end{figure}
+
+
+
+
 
 %
 % This results in the density polynomial fit data and the polynomial parameters as presented in \Cref{tab:fitDeviationsDen,tab:fitParametersDen} respectively. 
@@ -564,14 +574,14 @@ Maximum standard deviation data curves difference [kg/m$^{3}$] & 2.106$\cdot$10$
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/software/completeExpPolyFitDen.png}
+\includegraphics[width=0.9\textwidth]{figures/software/completeExpPolyFitDen.png}
 \caption{Polynomial fit for the launch site density data curve.}
 \label{fig:completeExpPolyFitDen}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/software/completeExpFitDen.png}
+\includegraphics[width=0.9\textwidth]{figures/software/completeExpFitDen.png}
 \caption{Exponential fit for the launch site density data curve.}
 \label{fig:completeExpFitDen}
 \end{figure}
@@ -584,15 +594,11 @@ Maximum standard deviation data curves difference [kg/m$^{3}$] & 2.106$\cdot$10$
 %\label{fig:pressureData}
 %\end{figure}
 
-\pagebreak
+%\pagebreak
 
 \subsection{Drag Coefficient Function Fit}
 \label{subsec:dragCoefFuncFit}
-Similar to the temperature and density curves, the relation between Mach number and drag coefficient, as depicted in \Cref{fig:dragcoeff_whitehead2004mars}, had to be modelled as a function as well. Again, it cannot be fitted using one single function, but instead had to be modelled by different functions. \\
-
-\noindent
-Fortunately, this curve is already an approximation and thus consists of linear elements only. It can be split up into six different sections where the first and last section are constant ($C_{D}$ is 0.2 and 0.3 respectively). Using a similar polynomial fit as before, but now for 1 order only, a linear fit could be made for each of the remaining four sections. The corresponding parameters are shown in \Cref{tab:dragCoeffPara} and the curve fit is shown in \Cref{fig:dragCoeffFit}.
-
+Similar to the temperature and density curves, the relation between Mach number and drag coefficient, as depicted in \Cref{fig:dragcoeff_whitehead2004mars}, had to be modelled as a function as well. Again, it cannot be fitted using one single function, but instead had to be modelled by different functions. Fortunately, this curve is already an approximation and thus consists of linear elements only. It can be split up into six different sections where the first and last section are constant ($C_{D}$ is 0.2 and 0.3 respectively). Using a similar polynomial fit as before, but now for 1 order only, a linear fit could be made for each of the remaining four sections. The corresponding parameters are shown in \Cref{tab:dragCoeffPara} and the curve fit is shown in \Cref{fig:dragCoeffFit}.
 
 \begin{table}[H]
 \begin{center}
@@ -620,7 +626,7 @@ Fortunately, this curve is already an approximation and thus consists of linear 
 \label{fig:dragCoeffFit}
 \end{figure}
 
-\pagebreak
+%\pagebreak
 
 \section{Circularisation}
 \label{sec:modelCircularisation}
