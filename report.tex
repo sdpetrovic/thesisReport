@@ -27,10 +27,22 @@
 
 \usepackage{afterpage} % Used for a blank page
 
+
 \newcommand\blankpage{%
+    \null
+    \addtocounter{page}{0}%
+    \newpage}
+    
+    \newcommand\blankpagenothing{%
     \null
     \thispagestyle{empty}%
     \addtocounter{page}{-1}%
+    \newpage}
+    
+    \newcommand\blankpagecount{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{0}%
     \newpage}
 %In the text before the blank page, insert the following code:
 
@@ -120,16 +132,17 @@
 \coverimage{cover_mars_4.jpg}
 \makecover[backboxheight = 2.64in] %2.64in = 6.7056cm
 
- \afterpage{\blankpage}
+ \afterpage{\blankpagenothing}
 %% Include an optional title page.
 \input{title}
-\afterpage{\blankpage}
+\afterpage{\blankpagenothing}
+
 
 \input{preface}
-\afterpage{\blankpage}
+\afterpage{\blankpagecount}
 
 \input{abstract}
-\afterpage{\blankpage}
+\afterpage{\blankpagecount}
 
 \tableofcontents %Crates a table of contents
 \afterpage{\blankpage}
